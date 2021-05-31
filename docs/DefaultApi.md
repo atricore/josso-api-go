@@ -6,19 +6,24 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
+[**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
+[**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
+[**GetIdSourceLdap**](DefaultApi.md#GetIdSourceLdap) | **Get** /iam-deploy/idsourceldap | 
+[**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
+[**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
 
 
@@ -136,6 +141,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdPRes**](StoreIdPRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIdSourceLdap
+
+> StoreIdSourceLdapRes CreateIdSourceLdap(ctx).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdSourceLdapReq := *openapiclient.NewStoreIdSourceLdapReq() // StoreIdSourceLdapReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdSourceLdap``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdSourceLdap`: StoreIdSourceLdapRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdSourceLdap`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdSourceLdapRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdSourceLdapReq** | [**StoreIdSourceLdapReq**](StoreIdSourceLdapReq.md) |  | 
+
+### Return type
+
+[**StoreIdSourceLdapRes**](StoreIdSourceLdapRes.md)
 
 ### Authorization
 
@@ -319,6 +388,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteIdPRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIdSourceLdap
+
+> DeleteRes DeleteIdSourceLdap(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteIdSourceLdap(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdSourceLdap``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdSourceLdap`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdSourceLdap`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdSourceLdapRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -663,6 +796,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIdSourceLdap
+
+> GetIdSourceLdapRes GetIdSourceLdap(ctx).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourceLdapReq := *openapiclient.NewGetIdSourceLdapReq() // GetIdSourceLdapReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdSourceLdap(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceLdap``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSourceLdap`: GetIdSourceLdapRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSourceLdap`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourceLdapRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourceLdapReq** | [**GetIdSourceLdapReq**](GetIdSourceLdapReq.md) |  | 
+
+### Return type
+
+[**GetIdSourceLdapRes**](GetIdSourceLdapRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdSourceLdaps
+
+> GetIdSourceLdapsRes GetIdSourceLdaps(ctx).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourceLdapReq := *openapiclient.NewGetIdSourceLdapReq() // GetIdSourceLdapReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdSourceLdaps(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceLdaps``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSourceLdaps`: GetIdSourceLdapsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSourceLdaps`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourceLdapsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourceLdapReq** | [**GetIdSourceLdapReq**](GetIdSourceLdapReq.md) |  | 
+
+### Return type
+
+[**GetIdSourceLdapsRes**](GetIdSourceLdapsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetIdVault
 
 > GetIdVaultRes GetIdVault(ctx).GetIdVaultReq(getIdVaultReq).Execute()
@@ -968,6 +1229,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdPRes**](StoreIdPRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdSourceLdap
+
+> StoreIdSourceLdapRes UpdateIdSourceLdap(ctx).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdSourceLdapReq := *openapiclient.NewStoreIdSourceLdapReq() // StoreIdSourceLdapReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdSourceLdap``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdSourceLdap`: StoreIdSourceLdapRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdSourceLdap`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdSourceLdapRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdSourceLdapReq** | [**StoreIdSourceLdapReq**](StoreIdSourceLdapReq.md) |  | 
+
+### Return type
+
+[**StoreIdSourceLdapRes**](StoreIdSourceLdapRes.md)
 
 ### Authorization
 

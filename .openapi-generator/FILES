@@ -13,6 +13,8 @@ docs/AuthenticationAssertionEmissionPolicyDTO.md
 docs/AuthenticationContractDTO.md
 docs/AuthenticationMechanismDTO.md
 docs/AuthenticationServiceDTO.md
+docs/CustomClassDTO.md
+docs/CustomClassPropertyDTO.md
 docs/DefaultApi.md
 docs/DelegatedAuthenticationDTO.md
 docs/DeleteReq.md
@@ -30,6 +32,9 @@ docs/GetAppliancesRes.md
 docs/GetIdPReq.md
 docs/GetIdPRes.md
 docs/GetIdPsRes.md
+docs/GetIdSourceLdapReq.md
+docs/GetIdSourceLdapRes.md
+docs/GetIdSourceLdapsRes.md
 docs/GetIdVaultReq.md
 docs/GetIdVaultRes.md
 docs/GetIdVaultsRes.md
@@ -42,6 +47,7 @@ docs/IdentityProviderDTO.md
 docs/IdentitySourceDTO.md
 docs/InternalSaml2ServiceProviderDTO.md
 docs/KeystoreDTO.md
+docs/LdapIdentitySourceDTO.md
 docs/LocationDTO.md
 docs/OAuth2ClientDTO.md
 docs/OIDCSignOnRequest.md
@@ -59,6 +65,8 @@ docs/StoreApplianceReq.md
 docs/StoreApplianceRes.md
 docs/StoreIdPReq.md
 docs/StoreIdPRes.md
+docs/StoreIdSourceLdapReq.md
+docs/StoreIdSourceLdapRes.md
 docs/StoreIdVaultReq.md
 docs/StoreIdVaultRes.md
 docs/SubjectAuthenticationPolicyDTO.md
@@ -76,6 +84,8 @@ model_authentication_assertion_emission_policy_dto.go
 model_authentication_contract_dto.go
 model_authentication_mechanism_dto.go
 model_authentication_service_dto.go
+model_custom_class_dto.go
+model_custom_class_property_dto.go
 model_delegated_authentication_dto.go
 model_delete_req.go
 model_delete_res.go
@@ -92,6 +102,9 @@ model_get_appliances_res.go
 model_get_id_p_req.go
 model_get_id_p_res.go
 model_get_id_ps_res.go
+model_get_id_source_ldap_req.go
+model_get_id_source_ldap_res.go
+model_get_id_source_ldaps_res.go
 model_get_id_vault_req.go
 model_get_id_vault_res.go
 model_get_id_vaults_res.go
@@ -104,6 +117,7 @@ model_identity_provider_dto.go
 model_identity_source_dto.go
 model_internal_saml2_service_provider_dto.go
 model_keystore_dto.go
+model_ldap_identity_source_dto.go
 model_location_dto.go
 model_o_auth2_client_dto.go
 model_oidc_sign_on_request.go
@@ -121,6 +135,8 @@ model_store_appliance_req.go
 model_store_appliance_res.go
 model_store_id_p_req.go
 model_store_id_p_res.go
+model_store_id_source_ldap_req.go
+model_store_id_source_ldap_res.go
 model_store_id_vault_req.go
 model_store_id_vault_res.go
 model_subject_authentication_policy_dto.go
