@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IdaName** | Pointer to **string** |  | [optional] 
-**IdpName** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetIdaName sets IdaName field to given value.
 
 HasIdaName returns a boolean if a field has been set.
 
-### GetIdpName
+### GetName
 
-`func (o *GetIdPReq) GetIdpName() string`
+`func (o *GetIdPReq) GetName() string`
 
-GetIdpName returns the IdpName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIdpNameOk
+### GetNameOk
 
-`func (o *GetIdPReq) GetIdpNameOk() (*string, bool)`
+`func (o *GetIdPReq) GetNameOk() (*string, bool)`
 
-GetIdpNameOk returns a tuple with the IdpName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpName
+### SetName
 
-`func (o *GetIdPReq) SetIdpName(v string)`
+`func (o *GetIdPReq) SetName(v string)`
 
-SetIdpName sets IdpName field to given value.
+SetName sets Name field to given value.
 
-### HasIdpName
+### HasName
 
-`func (o *GetIdPReq) HasIdpName() bool`
+`func (o *GetIdPReq) HasName() bool`
 
-HasIdpName returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -17,6 +17,7 @@ import (
 
 // GetIdPRes struct for GetIdPRes
 type GetIdPRes struct {
+	Config *SamlR2IDPConfigDTO `json:"config,omitempty"`
 	Error *string `json:"error,omitempty"`
 	Idp *IdentityProviderDTO `json:"idp,omitempty"`
 	ValidationErrors *[]string `json:"validationErrors,omitempty"`
@@ -40,6 +41,38 @@ func NewGetIdPRes() *GetIdPRes {
 func NewGetIdPResWithDefaults() *GetIdPRes {
 	this := GetIdPRes{}
 	return &this
+}
+
+// GetConfig returns the Config field value if set, zero value otherwise.
+func (o *GetIdPRes) GetConfig() SamlR2IDPConfigDTO {
+	if o == nil || o.Config == nil {
+		var ret SamlR2IDPConfigDTO
+		return ret
+	}
+	return *o.Config
+}
+
+// GetConfigOk returns a tuple with the Config field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetIdPRes) GetConfigOk() (*SamlR2IDPConfigDTO, bool) {
+	if o == nil || o.Config == nil {
+		return nil, false
+	}
+	return o.Config, true
+}
+
+// HasConfig returns a boolean if a field has been set.
+func (o *GetIdPRes) HasConfig() bool {
+	if o != nil && o.Config != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetConfig gets a reference to the given SamlR2IDPConfigDTO and assigns it to the Config field.
+func (o *GetIdPRes) SetConfig(v SamlR2IDPConfigDTO) {
+	o.Config = &v
 }
 
 // GetError returns the Error field value if set, zero value otherwise.
@@ -140,6 +173,9 @@ func (o *GetIdPRes) SetValidationErrors(v []string) {
 
 func (o GetIdPRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.Config != nil {
+		toSerialize["config"] = o.Config
+	}
 	if o.Error != nil {
 		toSerialize["error"] = o.Error
 	}
@@ -167,6 +203,7 @@ func (o *GetIdPRes) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+		delete(additionalProperties, "config")
 		delete(additionalProperties, "error")
 		delete(additionalProperties, "idp")
 		delete(additionalProperties, "validationErrors")

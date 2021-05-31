@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Config** | Pointer to [**SamlR2IDPConfigDTO**](SamlR2IDPConfigDTO.md) |  | [optional] 
 **Error** | Pointer to **string** |  | [optional] 
 **Idp** | Pointer to [**IdentityProviderDTO**](IdentityProviderDTO.md) |  | [optional] 
 **ValidationErrors** | Pointer to **[]string** |  | [optional] 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewGetIdPResWithDefaults instantiates a new GetIdPRes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetConfig
+
+`func (o *GetIdPRes) GetConfig() SamlR2IDPConfigDTO`
+
+GetConfig returns the Config field if non-nil, zero value otherwise.
+
+### GetConfigOk
+
+`func (o *GetIdPRes) GetConfigOk() (*SamlR2IDPConfigDTO, bool)`
+
+GetConfigOk returns a tuple with the Config field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfig
+
+`func (o *GetIdPRes) SetConfig(v SamlR2IDPConfigDTO)`
+
+SetConfig sets Config field to given value.
+
+### HasConfig
+
+`func (o *GetIdPRes) HasConfig() bool`
+
+HasConfig returns a boolean if a field has been set.
 
 ### GetError
 

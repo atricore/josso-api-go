@@ -18,7 +18,7 @@ import (
 // GetIdPReq struct for GetIdPReq
 type GetIdPReq struct {
 	IdaName *string `json:"idaName,omitempty"`
-	IdpName *string `json:"idpName,omitempty"`
+	Name *string `json:"name,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -73,36 +73,36 @@ func (o *GetIdPReq) SetIdaName(v string) {
 	o.IdaName = &v
 }
 
-// GetIdpName returns the IdpName field value if set, zero value otherwise.
-func (o *GetIdPReq) GetIdpName() string {
-	if o == nil || o.IdpName == nil {
+// GetName returns the Name field value if set, zero value otherwise.
+func (o *GetIdPReq) GetName() string {
+	if o == nil || o.Name == nil {
 		var ret string
 		return ret
 	}
-	return *o.IdpName
+	return *o.Name
 }
 
-// GetIdpNameOk returns a tuple with the IdpName field value if set, nil otherwise
+// GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdPReq) GetIdpNameOk() (*string, bool) {
-	if o == nil || o.IdpName == nil {
+func (o *GetIdPReq) GetNameOk() (*string, bool) {
+	if o == nil || o.Name == nil {
 		return nil, false
 	}
-	return o.IdpName, true
+	return o.Name, true
 }
 
-// HasIdpName returns a boolean if a field has been set.
-func (o *GetIdPReq) HasIdpName() bool {
-	if o != nil && o.IdpName != nil {
+// HasName returns a boolean if a field has been set.
+func (o *GetIdPReq) HasName() bool {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetIdpName gets a reference to the given string and assigns it to the IdpName field.
-func (o *GetIdPReq) SetIdpName(v string) {
-	o.IdpName = &v
+// SetName gets a reference to the given string and assigns it to the Name field.
+func (o *GetIdPReq) SetName(v string) {
+	o.Name = &v
 }
 
 func (o GetIdPReq) MarshalJSON() ([]byte, error) {
@@ -110,8 +110,8 @@ func (o GetIdPReq) MarshalJSON() ([]byte, error) {
 	if o.IdaName != nil {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.IdpName != nil {
-		toSerialize["idpName"] = o.IdpName
+	if o.Name != nil {
+		toSerialize["name"] = o.Name
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -132,7 +132,7 @@ func (o *GetIdPReq) UnmarshalJSON(bytes []byte) (err error) {
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "idaName")
-		delete(additionalProperties, "idpName")
+		delete(additionalProperties, "name")
 		o.AdditionalProperties = additionalProperties
 	}
 

@@ -6,21 +6,26 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
+[**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
+[**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
+[**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
+[**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
+[**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
 
 
 
 ## CreateAppliance
 
-> CreateApplianceRes CreateAppliance(ctx).CreateApplianceReq(createApplianceReq).Execute()
+> StoreApplianceRes CreateAppliance(ctx).StoreApplianceReq(storeApplianceReq).Execute()
 
 
 
@@ -37,16 +42,16 @@ import (
 )
 
 func main() {
-    createApplianceReq := *openapiclient.NewCreateApplianceReq() // CreateApplianceReq |  (optional)
+    storeApplianceReq := *openapiclient.NewStoreApplianceReq() // StoreApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateAppliance(context.Background()).CreateApplianceReq(createApplianceReq).Execute()
+    resp, r, err := api_client.DefaultApi.CreateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateAppliance`: CreateApplianceRes
+    // response from `CreateAppliance`: StoreApplianceRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateAppliance`: %v\n", resp)
 }
 ```
@@ -62,11 +67,11 @@ Other parameters are passed through a pointer to a apiCreateApplianceRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createApplianceReq** | [**CreateApplianceReq**](CreateApplianceReq.md) |  | 
+ **storeApplianceReq** | [**StoreApplianceReq**](StoreApplianceReq.md) |  | 
 
 ### Return type
 
-[**CreateApplianceRes**](CreateApplianceRes.md)
+[**StoreApplianceRes**](StoreApplianceRes.md)
 
 ### Authorization
 
@@ -84,7 +89,7 @@ No authorization required
 
 ## CreateIdP
 
-> CreateIdPRes CreateIdP(ctx).CreateIdPReq(createIdPReq).Execute()
+> StoreIdPRes CreateIdP(ctx).StoreIdPReq(storeIdPReq).Execute()
 
 
 
@@ -101,16 +106,16 @@ import (
 )
 
 func main() {
-    createIdPReq := *openapiclient.NewCreateIdPReq() // CreateIdPReq |  (optional)
+    storeIdPReq := *openapiclient.NewStoreIdPReq() // StoreIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIdP(context.Background()).CreateIdPReq(createIdPReq).Execute()
+    resp, r, err := api_client.DefaultApi.CreateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateIdP`: CreateIdPRes
+    // response from `CreateIdP`: StoreIdPRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdP`: %v\n", resp)
 }
 ```
@@ -126,11 +131,75 @@ Other parameters are passed through a pointer to a apiCreateIdPRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createIdPReq** | [**CreateIdPReq**](CreateIdPReq.md) |  | 
+ **storeIdPReq** | [**StoreIdPReq**](StoreIdPReq.md) |  | 
 
 ### Return type
 
-[**CreateIdPRes**](CreateIdPRes.md)
+[**StoreIdPRes**](StoreIdPRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIdVault
+
+> StoreIdVaultRes CreateIdVault(ctx).StoreIdVaultReq(storeIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdVaultReq := *openapiclient.NewStoreIdVaultReq() // StoreIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdVault`: StoreIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdVaultReq** | [**StoreIdVaultReq**](StoreIdVaultReq.md) |  | 
+
+### Return type
+
+[**StoreIdVaultRes**](StoreIdVaultRes.md)
 
 ### Authorization
 
@@ -148,7 +217,7 @@ No authorization required
 
 ## DeleteAppliance
 
-> DeleteApplianceRes DeleteAppliance(ctx).DeleteApplianceReq(deleteApplianceReq).Execute()
+> DeleteRes DeleteAppliance(ctx).DeleteReq(deleteReq).Execute()
 
 
 
@@ -165,16 +234,16 @@ import (
 )
 
 func main() {
-    deleteApplianceReq := *openapiclient.NewDeleteApplianceReq() // DeleteApplianceReq |  (optional)
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteAppliance(context.Background()).DeleteApplianceReq(deleteApplianceReq).Execute()
+    resp, r, err := api_client.DefaultApi.DeleteAppliance(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteAppliance`: DeleteApplianceRes
+    // response from `DeleteAppliance`: DeleteRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteAppliance`: %v\n", resp)
 }
 ```
@@ -190,11 +259,11 @@ Other parameters are passed through a pointer to a apiDeleteApplianceRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteApplianceReq** | [**DeleteApplianceReq**](DeleteApplianceReq.md) |  | 
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
 
 ### Return type
 
-[**DeleteApplianceRes**](DeleteApplianceRes.md)
+[**DeleteRes**](DeleteRes.md)
 
 ### Authorization
 
@@ -212,7 +281,7 @@ No authorization required
 
 ## DeleteIdP
 
-> DeleteIdPRes DeleteIdP(ctx).DeleteIdPReq(deleteIdPReq).Execute()
+> DeleteRes DeleteIdP(ctx).DeleteReq(deleteReq).Execute()
 
 
 
@@ -229,16 +298,16 @@ import (
 )
 
 func main() {
-    deleteIdPReq := *openapiclient.NewDeleteIdPReq() // DeleteIdPReq |  (optional)
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIdP(context.Background()).DeleteIdPReq(deleteIdPReq).Execute()
+    resp, r, err := api_client.DefaultApi.DeleteIdP(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteIdP`: DeleteIdPRes
+    // response from `DeleteIdP`: DeleteRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdP`: %v\n", resp)
 }
 ```
@@ -254,11 +323,75 @@ Other parameters are passed through a pointer to a apiDeleteIdPRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteIdPReq** | [**DeleteIdPReq**](DeleteIdPReq.md) |  | 
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
 
 ### Return type
 
-[**DeleteIdPRes**](DeleteIdPRes.md)
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIdVault
+
+> DeleteRes DeleteIdVault(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteIdVault(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdVault`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
 
 ### Authorization
 
@@ -340,7 +473,7 @@ No authorization required
 
 ## GetAppliances
 
-> GetAppliancesRes GetAppliances(ctx).GetAppliancesReq(getAppliancesReq).Execute()
+> GetAppliancesRes GetAppliances(ctx).GetApplianceReq(getApplianceReq).Execute()
 
 
 
@@ -357,11 +490,11 @@ import (
 )
 
 func main() {
-    getAppliancesReq := *openapiclient.NewGetAppliancesReq() // GetAppliancesReq |  (optional)
+    getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetAppliances(context.Background()).GetAppliancesReq(getAppliancesReq).Execute()
+    resp, r, err := api_client.DefaultApi.GetAppliances(context.Background()).GetApplianceReq(getApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetAppliances``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -382,7 +515,7 @@ Other parameters are passed through a pointer to a apiGetAppliancesRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **getAppliancesReq** | [**GetAppliancesReq**](GetAppliancesReq.md) |  | 
+ **getApplianceReq** | [**GetApplianceReq**](GetApplianceReq.md) |  | 
 
 ### Return type
 
@@ -468,7 +601,7 @@ No authorization required
 
 ## GetIdPs
 
-> GetIdPsRes GetIdPs(ctx).GetIdPsReq(getIdPsReq).Execute()
+> GetIdPsRes GetIdPs(ctx).GetIdPReq(getIdPReq).Execute()
 
 
 
@@ -485,11 +618,11 @@ import (
 )
 
 func main() {
-    getIdPsReq := *openapiclient.NewGetIdPsReq() // GetIdPsReq |  (optional)
+    getIdPReq := *openapiclient.NewGetIdPReq() // GetIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdPs(context.Background()).GetIdPsReq(getIdPsReq).Execute()
+    resp, r, err := api_client.DefaultApi.GetIdPs(context.Background()).GetIdPReq(getIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdPs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -510,11 +643,139 @@ Other parameters are passed through a pointer to a apiGetIdPsRequest struct via 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **getIdPsReq** | [**GetIdPsReq**](GetIdPsReq.md) |  | 
+ **getIdPReq** | [**GetIdPReq**](GetIdPReq.md) |  | 
 
 ### Return type
 
 [**GetIdPsRes**](GetIdPsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdVault
+
+> GetIdVaultRes GetIdVault(ctx).GetIdVaultReq(getIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdVaultReq := *openapiclient.NewGetIdVaultReq() // GetIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdVault(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdVault`: GetIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdVaultReq** | [**GetIdVaultReq**](GetIdVaultReq.md) |  | 
+
+### Return type
+
+[**GetIdVaultRes**](GetIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdVaults
+
+> GetIdVaultsRes GetIdVaults(ctx).GetIdVaultReq(getIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdVaultReq := *openapiclient.NewGetIdVaultReq() // GetIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdVaults(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdVaults``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdVaults`: GetIdVaultsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdVaults`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdVaultsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdVaultReq** | [**GetIdVaultReq**](GetIdVaultReq.md) |  | 
+
+### Return type
+
+[**GetIdVaultsRes**](GetIdVaultsRes.md)
 
 ### Authorization
 
@@ -596,7 +857,7 @@ No authorization required
 
 ## UpdateAppliance
 
-> UpdateApplianceRes UpdateAppliance(ctx).UpdateApplianceReq(updateApplianceReq).Execute()
+> StoreApplianceRes UpdateAppliance(ctx).StoreApplianceReq(storeApplianceReq).Execute()
 
 
 
@@ -613,16 +874,16 @@ import (
 )
 
 func main() {
-    updateApplianceReq := *openapiclient.NewUpdateApplianceReq() // UpdateApplianceReq |  (optional)
+    storeApplianceReq := *openapiclient.NewStoreApplianceReq() // StoreApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateAppliance(context.Background()).UpdateApplianceReq(updateApplianceReq).Execute()
+    resp, r, err := api_client.DefaultApi.UpdateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateAppliance`: UpdateApplianceRes
+    // response from `UpdateAppliance`: StoreApplianceRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateAppliance`: %v\n", resp)
 }
 ```
@@ -638,11 +899,11 @@ Other parameters are passed through a pointer to a apiUpdateApplianceRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateApplianceReq** | [**UpdateApplianceReq**](UpdateApplianceReq.md) |  | 
+ **storeApplianceReq** | [**StoreApplianceReq**](StoreApplianceReq.md) |  | 
 
 ### Return type
 
-[**UpdateApplianceRes**](UpdateApplianceRes.md)
+[**StoreApplianceRes**](StoreApplianceRes.md)
 
 ### Authorization
 
@@ -660,7 +921,7 @@ No authorization required
 
 ## UpdateIdP
 
-> UpdateIdPRes UpdateIdP(ctx).UpdateIdPReq(updateIdPReq).Execute()
+> StoreIdPRes UpdateIdP(ctx).StoreIdPReq(storeIdPReq).Execute()
 
 
 
@@ -677,16 +938,16 @@ import (
 )
 
 func main() {
-    updateIdPReq := *openapiclient.NewUpdateIdPReq() // UpdateIdPReq |  (optional)
+    storeIdPReq := *openapiclient.NewStoreIdPReq() // StoreIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIdP(context.Background()).UpdateIdPReq(updateIdPReq).Execute()
+    resp, r, err := api_client.DefaultApi.UpdateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateIdP`: UpdateIdPRes
+    // response from `UpdateIdP`: StoreIdPRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdP`: %v\n", resp)
 }
 ```
@@ -702,11 +963,75 @@ Other parameters are passed through a pointer to a apiUpdateIdPRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateIdPReq** | [**UpdateIdPReq**](UpdateIdPReq.md) |  | 
+ **storeIdPReq** | [**StoreIdPReq**](StoreIdPReq.md) |  | 
 
 ### Return type
 
-[**UpdateIdPRes**](UpdateIdPRes.md)
+[**StoreIdPRes**](StoreIdPRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdVault
+
+> StoreIdVaultRes UpdateIdVault(ctx).StoreIdVaultReq(storeIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdVaultReq := *openapiclient.NewStoreIdVaultReq() // StoreIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdVault`: StoreIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdVaultReq** | [**StoreIdVaultReq**](StoreIdVaultReq.md) |  | 
+
+### Return type
+
+[**StoreIdVaultRes**](StoreIdVaultRes.md)
 
 ### Authorization
 
