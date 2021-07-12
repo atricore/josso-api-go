@@ -5,17 +5,21 @@ All URIs are relative to *http://localhost:8081/atricore-res/services*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
+[**CreateExtSaml2Sp**](DefaultApi.md#CreateExtSaml2Sp) | **Post** /iam-deploy/extsaml2sp | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
+[**DeleteExtSaml2Sp**](DefaultApi.md#DeleteExtSaml2Sp) | **Delete** /iam-deploy/extsaml2sp | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
+[**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
+[**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
 [**GetIdSourceLdap**](DefaultApi.md#GetIdSourceLdap) | **Get** /iam-deploy/idsourceldap | 
@@ -24,7 +28,9 @@ Method | HTTP request | Description
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
+[**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
@@ -82,6 +88,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreApplianceRes**](StoreApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateExtSaml2Sp
+
+> StoreExtSaml2SpRes CreateExtSaml2Sp(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateExtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateExtSaml2Sp`: StoreExtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateExtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateExtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreExtSaml2SpRes**](StoreExtSaml2SpRes.md)
 
 ### Authorization
 
@@ -393,6 +463,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteExtSaml2Sp
+
+> DeleteRes DeleteExtSaml2Sp(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteExtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteExtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteExtSaml2Sp`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteExtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteExtSaml2SpRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -786,6 +920,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAppliancesRes**](GetAppliancesRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetExtSaml2Sp
+
+> GetExtSaml2SpRes GetExtSaml2Sp(ctx).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getExtSaml2SpReq := *openapiclient.NewGetExtSaml2SpReq() // GetExtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetExtSaml2Sp(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetExtSaml2Sp`: GetExtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetExtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetExtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getExtSaml2SpReq** | [**GetExtSaml2SpReq**](GetExtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetExtSaml2SpRes**](GetExtSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetExtSaml2Sps
+
+> GetExtSaml2SpsRes GetExtSaml2Sps(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetExtSaml2Sps(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExtSaml2Sps``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetExtSaml2Sps`: GetExtSaml2SpsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetExtSaml2Sps`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetExtSaml2SpsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetExtSaml2SpsRes**](GetExtSaml2SpsRes.md)
 
 ### Authorization
 
@@ -1313,6 +1575,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## ImportAppliance
+
+> ImportApplianceRes ImportAppliance(ctx).ImportApplianceReq(importApplianceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    importApplianceReq := *openapiclient.NewImportApplianceReq() // ImportApplianceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.ImportAppliance(context.Background()).ImportApplianceReq(importApplianceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ImportAppliance``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ImportAppliance`: ImportApplianceRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ImportAppliance`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImportApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **importApplianceReq** | [**ImportApplianceReq**](ImportApplianceReq.md) |  | 
+
+### Return type
+
+[**ImportApplianceRes**](ImportApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SignOn
 
 > OIDCSignOnResponse SignOn(ctx).OIDCSignOnRequest(oIDCSignOnRequest).Execute()
@@ -1362,6 +1688,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OIDCSignOnResponse**](OIDCSignOnResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UdpateExtSaml2Sp
+
+> StoreExtSaml2SpRes UdpateExtSaml2Sp(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UdpateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateExtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UdpateExtSaml2Sp`: StoreExtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateExtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUdpateExtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreExtSaml2SpRes**](StoreExtSaml2SpRes.md)
 
 ### Authorization
 

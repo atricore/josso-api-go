@@ -25,7 +25,6 @@ Name | Type | Description | Notes
 **FederatedConnectionsA** | Pointer to [**[]FederatedConnectionDTO**](FederatedConnectionDTO.md) |  | [optional] 
 **FederatedConnectionsB** | Pointer to [**[]FederatedConnectionDTO**](FederatedConnectionDTO.md) |  | [optional] 
 **Id** | Pointer to **int64** |  | [optional] 
-**IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
 **IdentityAppliance** | Pointer to [**IdentityApplianceDefinitionDTO**](IdentityApplianceDefinitionDTO.md) |  | [optional] 
 **IdentityConfirmationEnabled** | Pointer to **bool** |  | [optional] 
 **IdentityConfirmationOAuth2AuthorizationServerEndpoint** | Pointer to **string** |  | [optional] 
@@ -612,31 +611,6 @@ SetId sets Id field to given value.
 `func (o *IdentityProviderDTO) HasId() bool`
 
 HasId returns a boolean if a field has been set.
-
-### GetIdentityLookups
-
-`func (o *IdentityProviderDTO) GetIdentityLookups() []IdentityLookupDTO`
-
-GetIdentityLookups returns the IdentityLookups field if non-nil, zero value otherwise.
-
-### GetIdentityLookupsOk
-
-`func (o *IdentityProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool)`
-
-GetIdentityLookupsOk returns a tuple with the IdentityLookups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdentityLookups
-
-`func (o *IdentityProviderDTO) SetIdentityLookups(v []IdentityLookupDTO)`
-
-SetIdentityLookups sets IdentityLookups field to given value.
-
-### HasIdentityLookups
-
-`func (o *IdentityProviderDTO) HasIdentityLookups() bool`
-
-HasIdentityLookups returns a boolean if a field has been set.
 
 ### GetIdentityAppliance
 
