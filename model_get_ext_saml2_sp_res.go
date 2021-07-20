@@ -19,7 +19,7 @@ import (
 type GetExtSaml2SpRes struct {
 	Config *SamlR2SPConfigDTO `json:"config,omitempty"`
 	Error *string `json:"error,omitempty"`
-	Isp *ExternalSaml2ServiceProviderDTO `json:"isp,omitempty"`
+	Sp *ExternalSaml2ServiceProviderDTO `json:"sp,omitempty"`
 	ValidationErrors *[]string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -107,36 +107,36 @@ func (o *GetExtSaml2SpRes) SetError(v string) {
 	o.Error = &v
 }
 
-// GetIsp returns the Isp field value if set, zero value otherwise.
-func (o *GetExtSaml2SpRes) GetIsp() ExternalSaml2ServiceProviderDTO {
-	if o == nil || o.Isp == nil {
+// GetSp returns the Sp field value if set, zero value otherwise.
+func (o *GetExtSaml2SpRes) GetSp() ExternalSaml2ServiceProviderDTO {
+	if o == nil || o.Sp == nil {
 		var ret ExternalSaml2ServiceProviderDTO
 		return ret
 	}
-	return *o.Isp
+	return *o.Sp
 }
 
-// GetIspOk returns a tuple with the Isp field value if set, nil otherwise
+// GetSpOk returns a tuple with the Sp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetExtSaml2SpRes) GetIspOk() (*ExternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Isp == nil {
+func (o *GetExtSaml2SpRes) GetSpOk() (*ExternalSaml2ServiceProviderDTO, bool) {
+	if o == nil || o.Sp == nil {
 		return nil, false
 	}
-	return o.Isp, true
+	return o.Sp, true
 }
 
-// HasIsp returns a boolean if a field has been set.
-func (o *GetExtSaml2SpRes) HasIsp() bool {
-	if o != nil && o.Isp != nil {
+// HasSp returns a boolean if a field has been set.
+func (o *GetExtSaml2SpRes) HasSp() bool {
+	if o != nil && o.Sp != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetIsp gets a reference to the given ExternalSaml2ServiceProviderDTO and assigns it to the Isp field.
-func (o *GetExtSaml2SpRes) SetIsp(v ExternalSaml2ServiceProviderDTO) {
-	o.Isp = &v
+// SetSp gets a reference to the given ExternalSaml2ServiceProviderDTO and assigns it to the Sp field.
+func (o *GetExtSaml2SpRes) SetSp(v ExternalSaml2ServiceProviderDTO) {
+	o.Sp = &v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -179,8 +179,8 @@ func (o GetExtSaml2SpRes) MarshalJSON() ([]byte, error) {
 	if o.Error != nil {
 		toSerialize["error"] = o.Error
 	}
-	if o.Isp != nil {
-		toSerialize["isp"] = o.Isp
+	if o.Sp != nil {
+		toSerialize["sp"] = o.Sp
 	}
 	if o.ValidationErrors != nil {
 		toSerialize["validationErrors"] = o.ValidationErrors
@@ -205,7 +205,7 @@ func (o *GetExtSaml2SpRes) UnmarshalJSON(bytes []byte) (err error) {
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "config")
 		delete(additionalProperties, "error")
-		delete(additionalProperties, "isp")
+		delete(additionalProperties, "sp")
 		delete(additionalProperties, "validationErrors")
 		o.AdditionalProperties = additionalProperties
 	}

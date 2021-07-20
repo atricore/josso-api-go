@@ -1001,7 +1001,7 @@ No authorization required
 
 ## GetExtSaml2Sps
 
-> GetExtSaml2SpsRes GetExtSaml2Sps(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+> GetExtSaml2SpsRes GetExtSaml2Sps(ctx).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
 
 
 
@@ -1018,11 +1018,11 @@ import (
 )
 
 func main() {
-    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
+    getExtSaml2SpReq := *openapiclient.NewGetExtSaml2SpReq() // GetExtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetExtSaml2Sps(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    resp, r, err := api_client.DefaultApi.GetExtSaml2Sps(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExtSaml2Sps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1043,7 +1043,7 @@ Other parameters are passed through a pointer to a apiGetExtSaml2SpsRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
+ **getExtSaml2SpReq** | [**GetExtSaml2SpReq**](GetExtSaml2SpReq.md) |  | 
 
 ### Return type
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Config** | Pointer to [**SamlR2SPConfigDTO**](SamlR2SPConfigDTO.md) |  | [optional] 
 **Error** | Pointer to **string** |  | [optional] 
-**Isp** | Pointer to [**ExternalSaml2ServiceProviderDTO**](ExternalSaml2ServiceProviderDTO.md) |  | [optional] 
+**Sp** | Pointer to [**ExternalSaml2ServiceProviderDTO**](ExternalSaml2ServiceProviderDTO.md) |  | [optional] 
 **ValidationErrors** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
@@ -78,30 +78,30 @@ SetError sets Error field to given value.
 
 HasError returns a boolean if a field has been set.
 
-### GetIsp
+### GetSp
 
-`func (o *GetExtSaml2SpRes) GetIsp() ExternalSaml2ServiceProviderDTO`
+`func (o *GetExtSaml2SpRes) GetSp() ExternalSaml2ServiceProviderDTO`
 
-GetIsp returns the Isp field if non-nil, zero value otherwise.
+GetSp returns the Sp field if non-nil, zero value otherwise.
 
-### GetIspOk
+### GetSpOk
 
-`func (o *GetExtSaml2SpRes) GetIspOk() (*ExternalSaml2ServiceProviderDTO, bool)`
+`func (o *GetExtSaml2SpRes) GetSpOk() (*ExternalSaml2ServiceProviderDTO, bool)`
 
-GetIspOk returns a tuple with the Isp field if it's non-nil, zero value otherwise
+GetSpOk returns a tuple with the Sp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsp
+### SetSp
 
-`func (o *GetExtSaml2SpRes) SetIsp(v ExternalSaml2ServiceProviderDTO)`
+`func (o *GetExtSaml2SpRes) SetSp(v ExternalSaml2ServiceProviderDTO)`
 
-SetIsp sets Isp field to given value.
+SetSp sets Sp field to given value.
 
-### HasIsp
+### HasSp
 
-`func (o *GetExtSaml2SpRes) HasIsp() bool`
+`func (o *GetExtSaml2SpRes) HasSp() bool`
 
-HasIsp returns a boolean if a field has been set.
+HasSp returns a boolean if a field has been set.
 
 ### GetValidationErrors
 
