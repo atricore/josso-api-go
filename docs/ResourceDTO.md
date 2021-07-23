@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **int64** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Uri** | Pointer to **string** |  | [optional] 
-**Value** | Pointer to **[]string** |  | [optional] 
+**Value** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -157,20 +157,20 @@ HasUri returns a boolean if a field has been set.
 
 ### GetValue
 
-`func (o *ResourceDTO) GetValue() []string`
+`func (o *ResourceDTO) GetValue() string`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *ResourceDTO) GetValueOk() (*[]string, bool)`
+`func (o *ResourceDTO) GetValueOk() (*string, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *ResourceDTO) SetValue(v []string)`
+`func (o *ResourceDTO) SetValue(v string)`
 
 SetValue sets Value field to given value.
 
