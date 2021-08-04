@@ -261,6 +261,78 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetIdPsRes'
+  /iam-deploy/idsourcedb:
+    get:
+      operationId: getIdSourceDb
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetIdSourceDbReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIdSourceDbRes'
+    put:
+      operationId: updateIdSourceDb
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreIdSourceDbReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreIdSourceDbRes'
+    post:
+      operationId: createIdSourceDb
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreIdSourceDbReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreIdSourceDbRes'
+    delete:
+      operationId: deleteIdSourceDb
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteRes'
+  /iam-deploy/idsourcedbs:
+    get:
+      operationId: getIdSourceDbs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetIdSourceDbReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIdSourceDbsRes'
   /iam-deploy/idsourceldap:
     get:
       operationId: getIdSourceLdap
@@ -405,6 +477,64 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetIdVaultsRes'
+  /iam-deploy/intsaml2sp:
+    get:
+      operationId: getIntSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetIntSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntSaml2SpRes'
+    put:
+      operationId: udpateIntSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreIntSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreIntSaml2SpRes'
+    post:
+      operationId: createIntSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreIntSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreIntSaml2SpRes'
+  /iam-deploy/intsaml2sps:
+    get:
+      operationId: getIntSaml2Sps
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetIntSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetIntSaml2SpsRes'
   /iam-deploy/oidcrp:
     get:
       operationId: getOidcRp
@@ -477,6 +607,78 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetOidcRpsRes'
+  /iam-deploy/virtsaml2sp:
+    get:
+      operationId: getVirtSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVirtSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVirtSaml2SpRes'
+    put:
+      operationId: udpateVirtSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreVirtSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreVirtSaml2SpRes'
+    post:
+      operationId: createVirtSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreVirtSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreVirtSaml2SpRes'
+    delete:
+      operationId: deleteVirtSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteRes'
+  /iam-deploy/virtsaml2sps:
+    get:
+      operationId: getVirtSaml2Sps
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetVirtSaml2SpReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVirtSaml2SpsRes'
 components:
   schemas:
     AccountLinkagePolicyDTO:
@@ -637,6 +839,70 @@ components:
           type: string
         value:
           type: string
+    DbIdentitySourceDTO:
+      type: object
+      properties:
+        acquireIncrement:
+          type: integer
+          format: int32
+        admin:
+          type: string
+        connectionUrl:
+          type: string
+        credentialsQueryString:
+          type: string
+        customClass:
+          $ref: '#/components/schemas/CustomClassDTO'
+        description:
+          type: string
+        driver:
+          $ref: '#/components/schemas/ResourceDTO'
+        driverName:
+          type: string
+        elementId:
+          type: string
+        id:
+          type: integer
+          format: int64
+        idleConnectionTestPeriod:
+          type: integer
+          format: int32
+        initialPoolSize:
+          type: integer
+          format: int32
+        maxIdleTime:
+          type: integer
+          format: int32
+        maxPoolSize:
+          type: integer
+          format: int32
+        minPoolSize:
+          type: integer
+          format: int32
+        name:
+          type: string
+        password:
+          type: string
+        pooledDatasource:
+          type: boolean
+        relayCredentialQueryString:
+          type: string
+        resetCredentialDml:
+          type: string
+        rolesQueryString:
+          type: string
+        useColumnNamesAsPropertyNames:
+          type: boolean
+        userPropertiesQueryString:
+          type: string
+        userQueryString:
+          type: string
+        x:
+          type: number
+          format: double
+        "y":
+          type: number
+          format: double
     DelegatedAuthenticationDTO:
       type: object
       properties:
@@ -1278,6 +1544,37 @@ components:
           type: array
           items:
             type: string
+    GetIdSourceDbReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        name:
+          type: string
+    GetIdSourceDbRes:
+      type: object
+      properties:
+        error:
+          type: string
+        idSourceDb:
+          $ref: '#/components/schemas/DbIdentitySourceDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetIdSourceDbsRes:
+      type: object
+      properties:
+        error:
+          type: string
+        idSourceDbs:
+          type: array
+          items:
+            $ref: '#/components/schemas/DbIdentitySourceDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
     GetIdSourceLdapReq:
       type: object
       properties:
@@ -1340,6 +1637,39 @@ components:
           type: array
           items:
             type: string
+    GetIntSaml2SpReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        name:
+          type: string
+    GetIntSaml2SpRes:
+      type: object
+      properties:
+        config:
+          $ref: '#/components/schemas/SamlR2SPConfigDTO'
+        error:
+          type: string
+        sp:
+          $ref: '#/components/schemas/InternalSaml2ServiceProviderDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetIntSaml2SpsRes:
+      type: object
+      properties:
+        error:
+          type: string
+        sps:
+          type: array
+          items:
+            $ref: '#/components/schemas/InternalSaml2ServiceProviderDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
     GetOidcRpReq:
       type: object
       properties:
@@ -1367,6 +1697,39 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ExternalOpenIDConnectRelayingPartyDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetVirtSaml2SpReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        name:
+          type: string
+    GetVirtSaml2SpRes:
+      type: object
+      properties:
+        config:
+          $ref: '#/components/schemas/SamlR2SPConfigDTO'
+        error:
+          type: string
+        sp:
+          $ref: '#/components/schemas/VirtualSaml2ServiceProviderDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetVirtSaml2SpsRes:
+      type: object
+      properties:
+        error:
+          type: string
+        sps:
+          type: array
+          items:
+            $ref: '#/components/schemas/VirtualSaml2ServiceProviderDTO'
         validationErrors:
           type: array
           items:
@@ -2187,10 +2550,7 @@ components:
         uri:
           type: string
         value:
-          type: array
-          items:
-            type: string
-            format: byte
+          type: string
     SamlR2IDPConfigDTO:
       type: object
       properties:
@@ -2348,6 +2708,26 @@ components:
           type: array
           items:
             type: string
+    StoreIdSourceDbReq:
+      type: object
+      properties:
+        idSourceDb:
+          $ref: '#/components/schemas/DbIdentitySourceDTO'
+        idSourceLdap:
+          $ref: '#/components/schemas/DbIdentitySourceDTO'
+        idaName:
+          type: string
+    StoreIdSourceDbRes:
+      type: object
+      properties:
+        error:
+          type: string
+        idSourceDb:
+          $ref: '#/components/schemas/DbIdentitySourceDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
     StoreIdSourceLdapReq:
       type: object
       properties:
@@ -2384,6 +2764,24 @@ components:
           type: array
           items:
             type: string
+    StoreIntSaml2SpReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        sp:
+          $ref: '#/components/schemas/InternalSaml2ServiceProviderDTO'
+    StoreIntSaml2SpRes:
+      type: object
+      properties:
+        error:
+          type: string
+        sp:
+          $ref: '#/components/schemas/InternalSaml2ServiceProviderDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
     StoreOidcRpReq:
       type: object
       properties:
@@ -2398,6 +2796,24 @@ components:
           type: string
         oidcRp:
           $ref: '#/components/schemas/ExternalOpenIDConnectRelayingPartyDTO'
+        validationErrors:
+          type: array
+          items:
+            type: string
+    StoreVirtSaml2SpReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        sp:
+          $ref: '#/components/schemas/VirtualSaml2ServiceProviderDTO'
+    StoreVirtSaml2SpRes:
+      type: object
+      properties:
+        error:
+          type: string
+        sp:
+          $ref: '#/components/schemas/VirtualSaml2ServiceProviderDTO'
         validationErrors:
           type: array
           items:
@@ -2535,3 +2951,177 @@ components:
           type: string
         name:
           type: string
+    VirtualSaml2ServiceProviderDTO:
+      type: object
+      properties:
+        accountLinkagePolicy:
+          $ref: '#/components/schemas/AccountLinkagePolicyDTO'
+        activeBindings:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+            enum:
+            - SAMLR2_HTTP_POST
+            - SAMLR2_ARTIFACT
+            - SAMLR2_HTTP_REDIRECT
+            - SAMLR2_SOAP
+            - SAMLR2_LOCAL
+            - SSO_ARTIFACT
+            - SSO_REDIRECT
+            - SSO_POST
+            - JOSSO_REDIRECT
+            - JOSSO_SOAP
+            - JOSSO_ARTIFACT
+            - OAUTH2_SOAP
+            - OAUTH2_HTTP_RESTFUL
+        activeProfiles:
+          uniqueItems: true
+          type: array
+          items:
+            type: string
+            enum:
+            - SSO
+            - SSO_ECP
+            - SSO_SLO
+            - SSO_NAMEID
+            - ARTIFACT
+            - ASSERTION_QUERY
+            - NAMEID
+            - ATTR_BASIC
+            - ATTR_X500
+            - ATTR_UUID
+            - ATTR_DCE
+            - ATTR_XACML
+            - OAUTH2_USERNAMEPWD_FLOW
+        attributeProfile:
+          $ref: '#/components/schemas/AttributeProfileDTO'
+        config:
+          $ref: '#/components/schemas/ProviderConfigDTO'
+        dashboardUrl:
+          type: string
+        description:
+          type: string
+        displayName:
+          type: string
+        elementId:
+          type: string
+        enableMetadataEndpoint:
+          type: boolean
+        enableProxyExtension:
+          type: boolean
+        encryptAssertion:
+          type: boolean
+        encryptAssertionAlgorithm:
+          type: string
+        errorBinding:
+          type: string
+          enum:
+          - ARTIFACT
+          - JSON
+          - GET
+        federatedConnectionsA:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/FederatedConnectionDTO'
+        federatedConnectionsB:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/FederatedConnectionDTO'
+        id:
+          type: integer
+          format: int64
+        identityAppliance:
+          $ref: '#/components/schemas/IdentityApplianceDefinitionDTO'
+        identityLookups:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/IdentityLookupDTO'
+        identityMappingPolicy:
+          $ref: '#/components/schemas/IdentityMappingPolicyDTO'
+        idpSignatureHash:
+          type: string
+        ignoreRequestedNameIDPolicy:
+          type: boolean
+        isRemote:
+          type: boolean
+        location:
+          $ref: '#/components/schemas/LocationDTO'
+        messageTtl:
+          type: integer
+          format: int32
+        messageTtlTolerance:
+          type: integer
+          format: int32
+        metadata:
+          $ref: '#/components/schemas/ResourceDTO'
+        name:
+          type: string
+        oauth2Enabled:
+          type: boolean
+        oauth2Key:
+          type: string
+        oauth2RememberMeTokenValidity:
+          type: integer
+          format: int64
+        oauth2TokenValidity:
+          type: integer
+          format: int64
+        oidcAccessTokenTimeToLive:
+          type: integer
+          format: int32
+        oidcAuthzCodeTimeToLive:
+          type: integer
+          format: int32
+        oidcIdTokenTimeToLive:
+          type: integer
+          format: int32
+        openIdEnabled:
+          type: boolean
+        remote:
+          type: boolean
+        role:
+          type: string
+          enum:
+          - SSOIdentityProvider
+          - SSOServiceProvider
+          - AuthenticationAuthority
+          - AttributeAuthority
+          - PolicyDecisionPoint
+          - Affiliation
+          - Provisioning
+          - Binding
+        sessionManagerFactory:
+          $ref: '#/components/schemas/SessionManagerFactoryDTO'
+        signAuthenticationRequests:
+          type: boolean
+        signRequests:
+          type: boolean
+        spSignatureHash:
+          type: string
+        ssoSessionTimeout:
+          type: integer
+          format: int32
+        subjectAuthnPolicies:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubjectAuthenticationPolicyDTO'
+        subjectNameIDPolicy:
+          $ref: '#/components/schemas/SubjectNameIdentifierPolicyDTO'
+        wantAssertionSigned:
+          type: boolean
+        wantAuthnRequestsSigned:
+          type: boolean
+        wantSLOResponseSigned:
+          type: boolean
+        wantSignedRequests:
+          type: boolean
+        x:
+          type: number
+          format: double
+        "y":
+          type: number
+          format: double

@@ -7,32 +7,46 @@ Method | HTTP request | Description
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
 [**CreateExtSaml2Sp**](DefaultApi.md#CreateExtSaml2Sp) | **Post** /iam-deploy/extsaml2sp | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
+[**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
+[**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
+[**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
 [**DeleteExtSaml2Sp**](DefaultApi.md#DeleteExtSaml2Sp) | **Delete** /iam-deploy/extsaml2sp | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
+[**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
+[**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
 [**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
 [**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
+[**GetIdSourceDb**](DefaultApi.md#GetIdSourceDb) | **Get** /iam-deploy/idsourcedb | 
+[**GetIdSourceDbs**](DefaultApi.md#GetIdSourceDbs) | **Get** /iam-deploy/idsourcedbs | 
 [**GetIdSourceLdap**](DefaultApi.md#GetIdSourceLdap) | **Get** /iam-deploy/idsourceldap | 
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
+[**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
+[**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetVirtSaml2Sp**](DefaultApi.md#GetVirtSaml2Sp) | **Get** /iam-deploy/virtsaml2sp | 
+[**GetVirtSaml2Sps**](DefaultApi.md#GetVirtSaml2Sps) | **Get** /iam-deploy/virtsaml2sps | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
+[**UdpateIntSaml2Sp**](DefaultApi.md#UdpateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
+[**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
+[**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
@@ -231,6 +245,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreateIdSourceDb
+
+> StoreIdSourceDbRes CreateIdSourceDb(ctx).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdSourceDbReq := *openapiclient.NewStoreIdSourceDbReq() // StoreIdSourceDbReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdSourceDb``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdSourceDb`: StoreIdSourceDbRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdSourceDb`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdSourceDbRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdSourceDbReq** | [**StoreIdSourceDbReq**](StoreIdSourceDbReq.md) |  | 
+
+### Return type
+
+[**StoreIdSourceDbRes**](StoreIdSourceDbRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateIdSourceLdap
 
 > StoreIdSourceLdapRes CreateIdSourceLdap(ctx).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
@@ -359,6 +437,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreateIntSaml2Sp
+
+> StoreIntSaml2SpRes CreateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIntSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIntSaml2Sp`: StoreIntSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIntSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIntSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIntSaml2SpReq** | [**StoreIntSaml2SpReq**](StoreIntSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreIntSaml2SpRes**](StoreIntSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateOidcRp
 
 > StoreOidcRpRes CreateOidcRp(ctx).StoreOidcRpReq(storeOidcRpReq).Execute()
@@ -408,6 +550,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateVirtSaml2Sp
+
+> StoreVirtSaml2SpRes CreateVirtSaml2Sp(ctx).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateVirtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateVirtSaml2Sp`: StoreVirtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateVirtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateVirtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeVirtSaml2SpReq** | [**StoreVirtSaml2SpReq**](StoreVirtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreVirtSaml2SpRes**](StoreVirtSaml2SpRes.md)
 
 ### Authorization
 
@@ -615,6 +821,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeleteIdSourceDb
+
+> DeleteRes DeleteIdSourceDb(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteIdSourceDb(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdSourceDb``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdSourceDb`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdSourceDb`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdSourceDbRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeleteIdSourceLdap
 
 > DeleteRes DeleteIdSourceLdap(ctx).DeleteReq(deleteReq).Execute()
@@ -783,6 +1053,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteOidcRpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteVirtSaml2Sp
+
+> DeleteRes DeleteVirtSaml2Sp(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteVirtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteVirtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteVirtSaml2Sp`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteVirtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteVirtSaml2SpRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1191,6 +1525,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIdSourceDb
+
+> GetIdSourceDbRes GetIdSourceDb(ctx).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourceDbReq := *openapiclient.NewGetIdSourceDbReq() // GetIdSourceDbReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdSourceDb(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceDb``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSourceDb`: GetIdSourceDbRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSourceDb`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourceDbRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourceDbReq** | [**GetIdSourceDbReq**](GetIdSourceDbReq.md) |  | 
+
+### Return type
+
+[**GetIdSourceDbRes**](GetIdSourceDbRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdSourceDbs
+
+> GetIdSourceDbsRes GetIdSourceDbs(ctx).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourceDbReq := *openapiclient.NewGetIdSourceDbReq() // GetIdSourceDbReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIdSourceDbs(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceDbs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSourceDbs`: GetIdSourceDbsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSourceDbs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourceDbsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourceDbReq** | [**GetIdSourceDbReq**](GetIdSourceDbReq.md) |  | 
+
+### Return type
+
+[**GetIdSourceDbsRes**](GetIdSourceDbsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetIdSourceLdap
 
 > GetIdSourceLdapRes GetIdSourceLdap(ctx).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
@@ -1447,6 +1909,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIntSaml2Sp
+
+> GetIntSaml2SpRes GetIntSaml2Sp(ctx).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIntSaml2SpReq := *openapiclient.NewGetIntSaml2SpReq() // GetIntSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIntSaml2Sp(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIntSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIntSaml2Sp`: GetIntSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIntSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIntSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIntSaml2SpReq** | [**GetIntSaml2SpReq**](GetIntSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetIntSaml2SpRes**](GetIntSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIntSaml2Sps
+
+> GetIntSaml2SpsRes GetIntSaml2Sps(ctx).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIntSaml2SpReq := *openapiclient.NewGetIntSaml2SpReq() // GetIntSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetIntSaml2Sps(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIntSaml2Sps``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIntSaml2Sps`: GetIntSaml2SpsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIntSaml2Sps`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIntSaml2SpsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIntSaml2SpReq** | [**GetIntSaml2SpReq**](GetIntSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetIntSaml2SpsRes**](GetIntSaml2SpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetOidcRp
 
 > GetOidcRpRes GetOidcRp(ctx).GetOidcRpReq(getOidcRpReq).Execute()
@@ -1560,6 +2150,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOidcRpsRes**](GetOidcRpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetVirtSaml2Sp
+
+> GetVirtSaml2SpRes GetVirtSaml2Sp(ctx).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getVirtSaml2SpReq := *openapiclient.NewGetVirtSaml2SpReq() // GetVirtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetVirtSaml2Sp(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetVirtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetVirtSaml2Sp`: GetVirtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetVirtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetVirtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getVirtSaml2SpReq** | [**GetVirtSaml2SpReq**](GetVirtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetVirtSaml2SpRes**](GetVirtSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetVirtSaml2Sps
+
+> GetVirtSaml2SpsRes GetVirtSaml2Sps(ctx).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getVirtSaml2SpReq := *openapiclient.NewGetVirtSaml2SpReq() // GetVirtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetVirtSaml2Sps(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetVirtSaml2Sps``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetVirtSaml2Sps`: GetVirtSaml2SpsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetVirtSaml2Sps`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetVirtSaml2SpsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getVirtSaml2SpReq** | [**GetVirtSaml2SpReq**](GetVirtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**GetVirtSaml2SpsRes**](GetVirtSaml2SpsRes.md)
 
 ### Authorization
 
@@ -1767,6 +2485,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UdpateIntSaml2Sp
+
+> StoreIntSaml2SpRes UdpateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UdpateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateIntSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UdpateIntSaml2Sp`: StoreIntSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateIntSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUdpateIntSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIntSaml2SpReq** | [**StoreIntSaml2SpReq**](StoreIntSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreIntSaml2SpRes**](StoreIntSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UdpateVirtSaml2Sp
+
+> StoreVirtSaml2SpRes UdpateVirtSaml2Sp(ctx).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UdpateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateVirtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UdpateVirtSaml2Sp`: StoreVirtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateVirtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUdpateVirtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeVirtSaml2SpReq** | [**StoreVirtSaml2SpReq**](StoreVirtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreVirtSaml2SpRes**](StoreVirtSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateAppliance
 
 > StoreApplianceRes UpdateAppliance(ctx).StoreApplianceReq(storeApplianceReq).Execute()
@@ -1880,6 +2726,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdPRes**](StoreIdPRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdSourceDb
+
+> StoreIdSourceDbRes UpdateIdSourceDb(ctx).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdSourceDbReq := *openapiclient.NewStoreIdSourceDbReq() // StoreIdSourceDbReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdSourceDb``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdSourceDb`: StoreIdSourceDbRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdSourceDb`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdSourceDbRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdSourceDbReq** | [**StoreIdSourceDbReq**](StoreIdSourceDbReq.md) |  | 
+
+### Return type
+
+[**StoreIdSourceDbRes**](StoreIdSourceDbRes.md)
 
 ### Authorization
 
