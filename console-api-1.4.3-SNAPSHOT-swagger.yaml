@@ -520,6 +520,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StoreIntSaml2SpRes'
+    delete:
+      operationId: deleteIntSaml2Sp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteRes'
   /iam-deploy/intsaml2sps:
     get:
       operationId: getIntSaml2Sps
