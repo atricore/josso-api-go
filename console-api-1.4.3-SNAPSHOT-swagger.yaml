@@ -117,6 +117,63 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetAppliancesRes'
+  /iam-deploy/dbidvault:
+    get:
+      operationId: getDbIdVaults
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetDbIdVaultReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetDbIdVaultsRes'
+    put:
+      operationId: updateDbIdVault
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreDbIdVaultReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreDbIdVaultRes'
+    post:
+      operationId: createDbIdVault
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreDbIdVaultReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreDbIdVaultRes'
+    delete:
+      operationId: deleteDbIdVault
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteRes'
   /iam-deploy/extsaml2sp:
     get:
       operationId: getExtSaml2Sp
@@ -917,6 +974,63 @@ components:
         "y":
           type: number
           format: double
+    DbIdentityVaultDTO:
+      type: object
+      properties:
+        acquireIncrement:
+          type: integer
+          format: int32
+        connectionUrl:
+          type: string
+        description:
+          type: string
+        driverName:
+          type: string
+        elementId:
+          type: string
+        externalDB:
+          type: boolean
+        hashAlgorithm:
+          type: string
+        hashEncoding:
+          type: string
+        id:
+          type: integer
+          format: int64
+        idleConnectionTestPeriod:
+          type: integer
+          format: int32
+        initialPoolSize:
+          type: integer
+          format: int32
+        maxIdleTime:
+          type: integer
+          format: int32
+        maxPoolSize:
+          type: integer
+          format: int32
+        minPoolSize:
+          type: integer
+          format: int32
+        name:
+          type: string
+        password:
+          type: string
+        pooledDatasource:
+          type: boolean
+        saltLength:
+          type: integer
+          format: int32
+        saltValue:
+          type: string
+        username:
+          type: string
+        x:
+          type: number
+          format: double
+        "y":
+          type: number
+          format: double
     DelegatedAuthenticationDTO:
       type: object
       properties:
@@ -1486,6 +1600,39 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/IdentityApplianceDefinitionDTO'
+        error:
+          type: string
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetDbIdVaultReq:
+      type: object
+      properties:
+        idaName:
+          type: string
+        name:
+          type: string
+    GetDbIdVaultRes:
+      type: object
+      properties:
+        config:
+          $ref: '#/components/schemas/SamlR2SPConfigDTO'
+        dbIdVault:
+          $ref: '#/components/schemas/DbIdentityVaultDTO'
+        error:
+          type: string
+        validationErrors:
+          type: array
+          items:
+            type: string
+    GetDbIdVaultsRes:
+      type: object
+      properties:
+        dbIdVaults:
+          type: array
+          items:
+            $ref: '#/components/schemas/DbIdentityVaultDTO'
         error:
           type: string
         validationErrors:
@@ -2680,6 +2827,24 @@ components:
       properties:
         appliance:
           $ref: '#/components/schemas/IdentityApplianceDefinitionDTO'
+        error:
+          type: string
+        validationErrors:
+          type: array
+          items:
+            type: string
+    StoreDbIdVaultReq:
+      type: object
+      properties:
+        dbIdVault:
+          $ref: '#/components/schemas/DbIdentityVaultDTO'
+        idaName:
+          type: string
+    StoreDbIdVaultRes:
+      type: object
+      properties:
+        dbIdVault:
+          $ref: '#/components/schemas/DbIdentityVaultDTO'
         error:
           type: string
         validationErrors:
