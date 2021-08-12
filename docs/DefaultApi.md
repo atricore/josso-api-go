@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:8081/atricore-res/services*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
+[**CreateDbIdVault**](DefaultApi.md#CreateDbIdVault) | **Post** /iam-deploy/dbidvault | 
 [**CreateExtSaml2Sp**](DefaultApi.md#CreateExtSaml2Sp) | **Post** /iam-deploy/extsaml2sp | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
 [**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
@@ -14,6 +15,7 @@ Method | HTTP request | Description
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
+[**DeleteDbIdVault**](DefaultApi.md#DeleteDbIdVault) | **Delete** /iam-deploy/dbidvault | 
 [**DeleteExtSaml2Sp**](DefaultApi.md#DeleteExtSaml2Sp) | **Delete** /iam-deploy/extsaml2sp | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
 [**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
@@ -24,6 +26,7 @@ Method | HTTP request | Description
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
+[**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvault | 
 [**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
 [**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
@@ -46,6 +49,7 @@ Method | HTTP request | Description
 [**UdpateIntSaml2Sp**](DefaultApi.md#UdpateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
+[**UpdateDbIdVault**](DefaultApi.md#UpdateDbIdVault) | **Put** /iam-deploy/dbidvault | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
@@ -103,6 +107,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreApplianceRes**](StoreApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateDbIdVault
+
+> StoreDbIdVaultRes CreateDbIdVault(ctx).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeDbIdVaultReq := *openapiclient.NewStoreDbIdVaultReq() // StoreDbIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateDbIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDbIdVault`: StoreDbIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateDbIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDbIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeDbIdVaultReq** | [**StoreDbIdVaultReq**](StoreDbIdVaultReq.md) |  | 
+
+### Return type
+
+[**StoreDbIdVaultRes**](StoreDbIdVaultRes.md)
 
 ### Authorization
 
@@ -670,6 +738,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteDbIdVault
+
+> DeleteRes DeleteDbIdVault(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteDbIdVault(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteDbIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteDbIdVault`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteDbIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteDbIdVaultRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1319,6 +1451,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAppliancesRes**](GetAppliancesRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDbIdVaults
+
+> GetDbIdVaultsRes GetDbIdVaults(ctx).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getDbIdVaultReq := *openapiclient.NewGetDbIdVaultReq() // GetDbIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetDbIdVaults(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetDbIdVaults``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDbIdVaults`: GetDbIdVaultsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetDbIdVaults`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDbIdVaultsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getDbIdVaultReq** | [**GetDbIdVaultReq**](GetDbIdVaultReq.md) |  | 
+
+### Return type
+
+[**GetDbIdVaultsRes**](GetDbIdVaultsRes.md)
 
 ### Authorization
 
@@ -2727,6 +2923,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreApplianceRes**](StoreApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateDbIdVault
+
+> StoreDbIdVaultRes UpdateDbIdVault(ctx).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeDbIdVaultReq := *openapiclient.NewStoreDbIdVaultReq() // StoreDbIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateDbIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateDbIdVault`: StoreDbIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateDbIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateDbIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeDbIdVaultReq** | [**StoreDbIdVaultReq**](StoreDbIdVaultReq.md) |  | 
+
+### Return type
+
+[**StoreDbIdVaultRes**](StoreDbIdVaultRes.md)
 
 ### Authorization
 
