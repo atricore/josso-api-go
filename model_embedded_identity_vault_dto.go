@@ -17,14 +17,14 @@ import (
 
 // EmbeddedIdentityVaultDTO struct for EmbeddedIdentityVaultDTO
 type EmbeddedIdentityVaultDTO struct {
-	Description *string `json:"description,omitempty"`
-	ElementId *string `json:"elementId,omitempty"`
-	Id *int64 `json:"id,omitempty"`
-	IdentityConnectorName *string `json:"identityConnectorName,omitempty"`
-	Name *string `json:"name,omitempty"`
-	X *float64 `json:"x,omitempty"`
-	Y *float64 `json:"y,omitempty"`
-	AdditionalProperties map[string]interface{}
+	Description           *string  `json:"description,omitempty"`
+	ElementId             *string  `json:"elementId,omitempty"`
+	Id                    *int64   `json:"id,omitempty"`
+	IdentityConnectorName *string  `json:"identityConnectorName,omitempty"`
+	Name                  *string  `json:"name,omitempty"`
+	X                     *float64 `json:"x,omitempty"`
+	Y                     *float64 `json:"y,omitempty"`
+	AdditionalProperties  map[string]interface{}
 }
 
 type _EmbeddedIdentityVaultDTO EmbeddedIdentityVaultDTO
@@ -101,7 +101,6 @@ func (o *EmbeddedIdentityVaultDTO) HasElementId() bool {
 	if o != nil && o.ElementId != nil {
 		return true
 	}
-
 	return false
 }
 
@@ -359,5 +358,3 @@ func (v *NullableEmbeddedIdentityVaultDTO) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-
