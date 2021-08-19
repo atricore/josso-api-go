@@ -119,7 +119,7 @@ paths:
                 $ref: '#/components/schemas/GetAppliancesRes'
   /iam-deploy/dbidvault:
     get:
-      operationId: getDbIdVaults
+      operationId: getDbIdVault
       requestBody:
         content:
           application/json:
@@ -131,7 +131,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetDbIdVaultsRes'
+                $ref: '#/components/schemas/GetDbIdVaultRes'
     put:
       operationId: updateDbIdVault
       requestBody:
@@ -174,6 +174,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DeleteRes'
+  /iam-deploy/dbidvaults:
+    get:
+      operationId: getDbIdVaults
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetDbIdVaultReq'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetDbIdVaultsRes'
   /iam-deploy/extsaml2sp:
     get:
       operationId: getExtSaml2Sp

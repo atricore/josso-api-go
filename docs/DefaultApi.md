@@ -26,7 +26,8 @@ Method | HTTP request | Description
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
-[**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvault | 
+[**GetDbIdVault**](DefaultApi.md#GetDbIdVault) | **Get** /iam-deploy/dbidvault | 
+[**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvaults | 
 [**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
 [**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
@@ -1451,6 +1452,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAppliancesRes**](GetAppliancesRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDbIdVault
+
+> GetDbIdVaultRes GetDbIdVault(ctx).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getDbIdVaultReq := *openapiclient.NewGetDbIdVaultReq() // GetDbIdVaultReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetDbIdVault(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetDbIdVault``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDbIdVault`: GetDbIdVaultRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetDbIdVault`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDbIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getDbIdVaultReq** | [**GetDbIdVaultReq**](GetDbIdVaultReq.md) |  | 
+
+### Return type
+
+[**GetDbIdVaultRes**](GetDbIdVaultRes.md)
 
 ### Authorization
 
