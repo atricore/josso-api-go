@@ -47,7 +47,6 @@ Method | HTTP request | Description
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
-[**UdpateIntSaml2Sp**](DefaultApi.md#UdpateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateDbIdVault**](DefaultApi.md#UpdateDbIdVault) | **Put** /iam-deploy/dbidvault | 
@@ -55,6 +54,7 @@ Method | HTTP request | Description
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
+[**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 
 
@@ -2811,70 +2811,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UdpateIntSaml2Sp
-
-> StoreIntSaml2SpRes UdpateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UdpateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateIntSaml2Sp``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UdpateIntSaml2Sp`: StoreIntSaml2SpRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateIntSaml2Sp`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUdpateIntSaml2SpRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeIntSaml2SpReq** | [**StoreIntSaml2SpReq**](StoreIntSaml2SpReq.md) |  | 
-
-### Return type
-
-[**StoreIntSaml2SpRes**](StoreIntSaml2SpRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## UdpateVirtSaml2Sp
 
 > StoreVirtSaml2SpRes UdpateVirtSaml2Sp(ctx).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
@@ -3308,6 +3244,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdVaultRes**](StoreIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIntSaml2Sp
+
+> StoreIntSaml2SpRes UpdateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIntSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIntSaml2Sp`: StoreIntSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIntSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIntSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIntSaml2SpReq** | [**StoreIntSaml2SpReq**](StoreIntSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreIntSaml2SpRes**](StoreIntSaml2SpRes.md)
 
 ### Authorization
 
