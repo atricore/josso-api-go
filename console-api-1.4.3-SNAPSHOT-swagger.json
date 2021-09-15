@@ -170,6 +170,56 @@
         }
       }
     },
+    "/iam-deploy/appliance/state" : {
+      "get" : {
+        "operationId" : "getApplianceState",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceStateRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "setApplianceState",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/SetApplianceStateReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceStateRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliances" : {
       "get" : {
         "operationId" : "getAppliances",
@@ -2315,6 +2365,24 @@
           }
         }
       },
+      "GetApplianceStateRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "string",
+            "enum" : [ "PROJECTED", "STAGED", "DEPLOYED", "STARTED", "DISPOSED" ]
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetAppliancesRes" : {
         "type" : "object",
         "properties" : {
@@ -3933,6 +4001,21 @@
           },
           "name" : {
             "type" : "string"
+          }
+        }
+      },
+      "SetApplianceStateReq" : {
+        "type" : "object",
+        "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
+          "idaName" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "string",
+            "enum" : [ "PROJECTED", "STAGED", "DEPLOYED", "STARTED", "DISPOSED" ]
           }
         }
       },
