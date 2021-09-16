@@ -1,17 +1,37 @@
 package jossoappi
 
-func (*FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, error) {
-	return nil, nil
+// Ignore ConnectionA and ConnectionB properties
+
+func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, error) {
+
+	c := f.GetChannelB()
+	var idpc IdentityProviderChannelDTO
+
+	idpc.SetId(c.GetId())
+	//idpFc.SetEnableProxyExtension()
+
+	return &idpc, nil
 }
 
-func (*FederatedConnectionDTO) SetIDPChannel(idpChannel *IdentityProviderChannelDTO) error {
+func (f *FederatedConnectionDTO) SetIDPChannel(idpChannel *IdentityProviderChannelDTO) error {
 	return nil
 }
 
-func (*FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderChannelDTO, error) {
-	return nil, nil
+func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderChannelDTO, error) {
+	c := f.GetChannelA()
+	var spc InternalSaml2ServiceProviderChannelDTO
+
+	spc.SetId(c.GetId())
+	/// ....
+
+	// requiredRoles
+	spc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
+
+	//idpFc.SetEnableProxyExtension()
+
+	return &spc, nil
 }
 
-func (*FederatedConnectionDTO) SetSPChannel(idpChannel *InternalSaml2ServiceProviderChannelDTO) error {
+func (f *FederatedConnectionDTO) SetSPChannel(idpChannel *InternalSaml2ServiceProviderChannelDTO) error {
 	return nil
 }
