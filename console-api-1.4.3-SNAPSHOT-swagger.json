@@ -1114,6 +1114,23 @@
         }
       }
     },
+    "/iam-deploy/noop/types" : {
+      "get" : {
+        "operationId" : "getTypes",
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetTypesRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/oidcrp" : {
       "get" : {
         "operationId" : "getOidcRp",
@@ -2799,6 +2816,17 @@
           }
         }
       },
+      "GetTypesRes" : {
+        "type" : "object",
+        "properties" : {
+          "idpc" : {
+            "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
+          },
+          "spc" : {
+            "$ref" : "#/components/schemas/InternalSaml2ServiceProviderChannelDTO"
+          }
+        }
+      },
       "GetVirtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
@@ -3066,6 +3094,88 @@
             "type" : "string"
           },
           "useLocalId" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "IdentityProviderChannelDTO" : {
+        "type" : "object",
+        "properties" : {
+          "accountLinkagePolicy" : {
+            "$ref" : "#/components/schemas/AccountLinkagePolicyDTO"
+          },
+          "activeBindings" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SAMLR2_HTTP_POST", "SAMLR2_ARTIFACT", "SAMLR2_HTTP_REDIRECT", "SAMLR2_SOAP", "SAMLR2_LOCAL", "SSO_ARTIFACT", "SSO_REDIRECT", "SSO_POST", "JOSSO_REDIRECT", "JOSSO_SOAP", "JOSSO_ARTIFACT", "OAUTH2_SOAP", "OAUTH2_HTTP_RESTFUL" ]
+            }
+          },
+          "activeProfiles" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SSO", "SSO_ECP", "SSO_SLO", "SSO_NAMEID", "ARTIFACT", "ASSERTION_QUERY", "NAMEID", "ATTR_BASIC", "ATTR_X500", "ATTR_UUID", "ATTR_DCE", "ATTR_XACML", "OAUTH2_USERNAMEPWD_FLOW" ]
+            }
+          },
+          "authenticationContract" : {
+            "$ref" : "#/components/schemas/AuthenticationContractDTO"
+          },
+          "authenticationMechanism" : {
+            "$ref" : "#/components/schemas/AuthenticationMechanismDTO"
+          },
+          "connectionA" : {
+            "$ref" : "#/components/schemas/FederatedConnectionDTO"
+          },
+          "connectionB" : {
+            "$ref" : "#/components/schemas/FederatedConnectionDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "enableProxyExtension" : {
+            "type" : "boolean"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "identityMappingPolicy" : {
+            "$ref" : "#/components/schemas/IdentityMappingPolicyDTO"
+          },
+          "location" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "messageTtl" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "messageTtlTolerance" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overrideProviderSetup" : {
+            "type" : "boolean"
+          },
+          "preferred" : {
+            "type" : "boolean"
+          },
+          "signAuthenticationRequests" : {
+            "type" : "boolean"
+          },
+          "signatureHash" : {
+            "type" : "string"
+          },
+          "wantAssertionSigned" : {
             "type" : "boolean"
           }
         }
@@ -3377,6 +3487,111 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "InternalSaml2ServiceProviderChannelDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activeBindings" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SAMLR2_HTTP_POST", "SAMLR2_ARTIFACT", "SAMLR2_HTTP_REDIRECT", "SAMLR2_SOAP", "SAMLR2_LOCAL", "SSO_ARTIFACT", "SSO_REDIRECT", "SSO_POST", "JOSSO_REDIRECT", "JOSSO_SOAP", "JOSSO_ARTIFACT", "OAUTH2_SOAP", "OAUTH2_HTTP_RESTFUL" ]
+            }
+          },
+          "activeProfiles" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SSO", "SSO_ECP", "SSO_SLO", "SSO_NAMEID", "ARTIFACT", "ASSERTION_QUERY", "NAMEID", "ATTR_BASIC", "ATTR_X500", "ATTR_UUID", "ATTR_DCE", "ATTR_XACML", "OAUTH2_USERNAMEPWD_FLOW" ]
+            }
+          },
+          "attributeProfile" : {
+            "$ref" : "#/components/schemas/AttributeProfileDTO"
+          },
+          "authenticationContract" : {
+            "$ref" : "#/components/schemas/AuthenticationContractDTO"
+          },
+          "authenticationMechanism" : {
+            "$ref" : "#/components/schemas/AuthenticationMechanismDTO"
+          },
+          "connectionA" : {
+            "$ref" : "#/components/schemas/FederatedConnectionDTO"
+          },
+          "connectionB" : {
+            "$ref" : "#/components/schemas/FederatedConnectionDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "emissionPolicy" : {
+            "$ref" : "#/components/schemas/AuthenticationAssertionEmissionPolicyDTO"
+          },
+          "encryptAssertion" : {
+            "type" : "boolean"
+          },
+          "encryptAssertionAlgorithm" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "ignoreRequestedNameIDPolicy" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "messageTtl" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "messageTtlTolerance" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overrideProviderSetup" : {
+            "type" : "boolean"
+          },
+          "requiredRoles" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "requiredRolesMatchMode" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "restrictedRoles" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "restrictedRolesMatchMode" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "signatureHash" : {
+            "type" : "string"
+          },
+          "subjectNameIDPolicy" : {
+            "$ref" : "#/components/schemas/SubjectNameIdentifierPolicyDTO"
+          },
+          "wantAuthnRequestsSigned" : {
+            "type" : "boolean"
           }
         }
       },

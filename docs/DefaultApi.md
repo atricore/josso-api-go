@@ -43,6 +43,7 @@ Method | HTTP request | Description
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetTypes**](DefaultApi.md#GetTypes) | **Get** /iam-deploy/noop/types | 
 [**GetVirtSaml2Sp**](DefaultApi.md#GetVirtSaml2Sp) | **Get** /iam-deploy/virtsaml2sp | 
 [**GetVirtSaml2Sps**](DefaultApi.md#GetVirtSaml2Sps) | **Get** /iam-deploy/virtsaml2sps | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
@@ -2550,6 +2551,65 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetTypes
+
+> GetTypesRes GetTypes(ctx).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetTypes(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTypes``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetTypes`: GetTypesRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetTypes`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetTypesRequest struct via the builder pattern
+
+
+### Return type
+
+[**GetTypesRes**](GetTypesRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
