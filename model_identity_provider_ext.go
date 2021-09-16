@@ -50,10 +50,10 @@ SAMPLE DUMP OF PROVIDERDTO TYPE
 */
 
 func (p *IdentityProviderDTO) GetSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
-	return getSamlR2IDPConfig(p.GetConfig())
+	return toSamlR2IDPConfig(p.GetConfig())
 }
 
-func getSamlR2IDPConfig(cfg ProviderConfigDTO) (*SamlR2IDPConfigDTO, error) {
+func toSamlR2IDPConfig(cfg ProviderConfigDTO) (*SamlR2IDPConfigDTO, error) {
 
 	var idpCfg *SamlR2IDPConfigDTO
 
@@ -135,8 +135,7 @@ func getSamlR2IDPConfig(cfg ProviderConfigDTO) (*SamlR2IDPConfigDTO, error) {
 	return idpCfg, nil
 }
 
-func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) error {
-
+func toProviderConfig(idpCfg SamlR2IDPConfigDTO) (*ProviderConfigDTO, error) {
 	var cfg ProviderConfigDTO
 	cfg.AdditionalProperties = make(map[string]interface{})
 	// Build specific type
@@ -179,8 +178,18 @@ func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) err
 
 	}
 
-	p.SetConfig(cfg)
+	return &cfg, nil
 
+}
+
+func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) error {
+
+	cfg, err := toProviderConfig(*idpCfg)
+
+	if err != nil {
+		return err
+	}
+	p.SetConfig(*cfg)
 	return nil
 
 }
