@@ -1,5 +1,6 @@
 package jossoappi
 
+// Transforms the federated connection's channelA (FederatedChannelDTO) into a IdentityProviderChannelDTO
 func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, error) {
 	c := f.GetChannelA()
 	var idpc IdentityProviderChannelDTO
@@ -14,21 +15,76 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 	idpc.SetName(c.GetName())
 	idpc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
 
-	idpc.SetSignatureHash(c.AdditionalProperties["signaturehash"].(string))
-	idpc.SetMessageTtl(c.AdditionalProperties["messagettl"].(int32))
-	idpc.SetMessageTtlTolerance(c.AdditionalProperties["messagettltolerance"].(int32))
-	AccountLinkagePolicyDTO := toAccountLinkagePolicy(c.AdditionalProperties["accountlinkagepolicy"].(map[string]interface{}))
-	idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
-	idpc.SetEnableProxyExtension(c.AdditionalProperties["enableproxyextension"].(bool))
-	IdentityMappingPolicyDTO := toIdentityMappingPolicy(c.AdditionalProperties["identitymappingpolicy"].(map[string]interface{}))
-	idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
 	idpc.SetPreferred(c.AdditionalProperties["preferred"].(bool))
-	idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signauthenticationrequests"].(bool))
-	idpc.SetWantAssertionSigned(c.AdditionalProperties["wantassertionsigned"].(bool))
+
+	if idpc.GetOverrideProviderSetup() {
+		idpc.SetSignatureHash(c.AdditionalProperties["signaturehash"].(string))
+		idpc.SetMessageTtl(c.AdditionalProperties["messagettl"].(int32))
+		idpc.SetMessageTtlTolerance(c.AdditionalProperties["messagettltolerance"].(int32))
+		AccountLinkagePolicyDTO := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountlinkagepolicy"].(map[string]interface{}))
+		idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
+		idpc.SetEnableProxyExtension(c.AdditionalProperties["enableproxyextension"].(bool))
+		IdentityMappingPolicyDTO := toIdentityMappingPolicyDTO(c.AdditionalProperties["identitymappingpolicy"].(map[string]interface{}))
+		idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
+		idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signauthenticationrequests"].(bool))
+		idpc.SetWantAssertionSigned(c.AdditionalProperties["wantassertionsigned"].(bool))
+	}
 	return &idpc, nil
 }
 
-func toIdentityMappingPolicy(props map[string]interface{}) IdentityMappingPolicyDTO {
+// Transforms the IdentityProviderChannelDTO into a FederatedChannel and sets it into channelA
+func (f *FederatedConnectionDTO) SetIDPChannel(idpc *IdentityProviderChannelDTO) error {
+
+	var c FederatedChannelDTO
+
+	// TODO
+	c.SetActiveBindings(idpc.GetActiveBindings())
+	c.SetActiveProfiles(idpc.GetActiveProfiles())
+	c.SetDescription(idpc.GetDescription())
+	c.SetDisplayName(c.GetDisplayName())
+	c.SetElementId(c.GetElementId())
+	c.SetId(c.GetId())
+	c.SetLocation(c.GetLocation())
+	c.SetName(c.GetName())
+	c.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
+
+	c.AdditionalProperties["preferred"] = idpc.GetPreferred()
+
+	if idpc.GetOverrideProviderSetup() {
+		c.AdditionalProperties["signaturehash"] = idpc.GetSignatureHash()
+		// TODO.(string))
+		/*
+			idpc.SetMessageTtl(c.AdditionalProperties["messagettl"].(int32))
+			idpc.SetMessageTtlTolerance(c.AdditionalProperties["messagettltolerance"].(int32))
+			AccountLinkagePolicyDTO := toAccountLinkagePolicy(c.AdditionalProperties["accountlinkagepolicy"].(map[string]interface{}))
+			idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
+			idpc.SetEnableProxyExtension(c.AdditionalProperties["enableproxyextension"].(bool))
+			IdentityMappingPolicyDTO := toIdentityMappingPolicy(c.AdditionalProperties["identitymappingpolicy"].(map[string]interface{}))
+			idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
+			idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signauthenticationrequests"].(bool))
+			idpc.SetWantAssertionSigned(c.AdditionalProperties["wantassertionsigned"].(bool))
+		*/
+	}
+
+	f.SetChannelA(c)
+	return nil
+}
+
+// Transforms IdentityMappingPolicyDTO a map
+func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) *map[string]interface{} {
+
+	props := make(map[string]interface{})
+
+	props["custommapper"] = dto.GetCustomMapper()
+
+	// TODO :
+
+	return &props
+
+}
+
+// Transforms a map into an IdentityMappingPolicyDTO
+func toIdentityMappingPolicyDTO(props map[string]interface{}) IdentityMappingPolicyDTO {
 	dto := NewIdentityMappingPolicyDTO()
 	dto.SetCustomMapper((props["custommapper"].(string)))
 	dto.SetElementId((props["elementid"].(string)))
@@ -39,7 +95,12 @@ func toIdentityMappingPolicy(props map[string]interface{}) IdentityMappingPolicy
 	return *dto
 }
 
-func toAccountLinkagePolicy(props map[string]interface{}) AccountLinkagePolicyDTO {
+func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) *map[string]interface{} {
+	// TODO
+	return nil
+}
+
+func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolicyDTO {
 	dto := NewAccountLinkagePolicyDTO()
 	dto.SetCustomLinkEmitter((props["customlinkemitter"].(string)))
 	dto.SetElementId((props["elementid"].(string)))
@@ -47,10 +108,6 @@ func toAccountLinkagePolicy(props map[string]interface{}) AccountLinkagePolicyDT
 	dto.SetLinkEmitterType((props["linkemittertype"].(string)))
 	dto.SetName((props["name"].(string)))
 	return *dto
-}
-
-func (f *FederatedConnectionDTO) SetIDPChannel(idpChannel *IdentityProviderChannelDTO) error {
-	return nil
 }
 
 // IDP Side, has an SP channel
