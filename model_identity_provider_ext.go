@@ -59,3 +59,21 @@ func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) err
 	return nil
 
 }
+
+func (p *IdentityProviderDTO) AddIdentityLookup(name string) IdentityLookupDTO {
+	var l IdentityLookupDTO
+	l.SetName(name)
+	l.AdditionalProperties["@c"] = ".IdentityLookupDTO"
+
+	// TODO : Add a new element to : p.IdentityLookups
+
+	return l
+
+}
+
+// Return true if the element was deleted, false otherwise
+func (p *IdentityProviderDTO) RemoveIdentityLookup(name string) bool {
+	// TODO : Remove an element from : p.IdentityLookups
+	
+	return false
+}
