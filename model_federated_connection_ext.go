@@ -18,16 +18,16 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 	idpc.SetPreferred(c.AdditionalProperties["preferred"].(bool))
 
 	if idpc.GetOverrideProviderSetup() {
-		idpc.SetSignatureHash(c.AdditionalProperties["signaturehash"].(string))
-		idpc.SetMessageTtl(c.AdditionalProperties["messagettl"].(int32))
-		idpc.SetMessageTtlTolerance(c.AdditionalProperties["messagettltolerance"].(int32))
-		AccountLinkagePolicyDTO := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountlinkagepolicy"].(map[string]interface{}))
+		idpc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
+		idpc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
+		idpc.SetMessageTtlTolerance(c.AdditionalProperties["messageTtlTolerance"].(int32))
+		AccountLinkagePolicyDTO := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountLinkagePolicy"].(map[string]interface{}))
 		idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
-		idpc.SetEnableProxyExtension(c.AdditionalProperties["enableproxyextension"].(bool))
-		IdentityMappingPolicyDTO := toIdentityMappingPolicyDTO(c.AdditionalProperties["identitymappingpolicy"].(map[string]interface{}))
+		idpc.SetEnableProxyExtension(c.AdditionalProperties["enableProxyExtension"].(bool))
+		IdentityMappingPolicyDTO := toIdentityMappingPolicyDTO(c.AdditionalProperties["identityMappingPolicy"].(map[string]interface{}))
 		idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
-		idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signauthenticationrequests"].(bool))
-		idpc.SetWantAssertionSigned(c.AdditionalProperties["wantassertionsigned"].(bool))
+		idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signAuthenticationRequests"].(bool))
+		idpc.SetWantAssertionSigned(c.AdditionalProperties["wantAssertionSigned"].(bool))
 	}
 	return &idpc, nil
 }
@@ -37,33 +37,27 @@ func (f *FederatedConnectionDTO) SetIDPChannel(idpc *IdentityProviderChannelDTO)
 
 	var c FederatedChannelDTO
 
-	// TODO
 	c.SetActiveBindings(idpc.GetActiveBindings())
 	c.SetActiveProfiles(idpc.GetActiveProfiles())
 	c.SetDescription(idpc.GetDescription())
-	c.SetDisplayName(c.GetDisplayName())
-	c.SetElementId(c.GetElementId())
-	c.SetId(c.GetId())
-	c.SetLocation(c.GetLocation())
-	c.SetName(c.GetName())
-	c.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
+	c.SetDisplayName(idpc.GetDisplayName())
+	c.SetElementId(idpc.GetElementId())
+	c.SetId(idpc.GetId())
+	c.SetLocation(idpc.GetLocation())
+	c.SetName(idpc.GetName())
+	c.SetOverrideProviderSetup(idpc.GetOverrideProviderSetup())
 
 	c.AdditionalProperties["preferred"] = idpc.GetPreferred()
 
 	if idpc.GetOverrideProviderSetup() {
-		c.AdditionalProperties["signaturehash"] = idpc.GetSignatureHash()
-		// TODO.(string))
-		/*
-			idpc.SetMessageTtl(c.AdditionalProperties["messagettl"].(int32))
-			idpc.SetMessageTtlTolerance(c.AdditionalProperties["messagettltolerance"].(int32))
-			AccountLinkagePolicyDTO := toAccountLinkagePolicy(c.AdditionalProperties["accountlinkagepolicy"].(map[string]interface{}))
-			idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
-			idpc.SetEnableProxyExtension(c.AdditionalProperties["enableproxyextension"].(bool))
-			IdentityMappingPolicyDTO := toIdentityMappingPolicy(c.AdditionalProperties["identitymappingpolicy"].(map[string]interface{}))
-			idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
-			idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signauthenticationrequests"].(bool))
-			idpc.SetWantAssertionSigned(c.AdditionalProperties["wantassertionsigned"].(bool))
-		*/
+		c.AdditionalProperties["signatureHash"] = idpc.GetSignatureHash()
+		c.AdditionalProperties["messageTtl"] = idpc.GetMessageTtl()
+		c.AdditionalProperties["messageTtlTolerance"] = idpc.GetMessageTtlTolerance()
+		c.AdditionalProperties["accountLinkagePolicy"] = toAccountLinkagePolicyMap(idpc.GetAccountLinkagePolicy())
+		c.AdditionalProperties["enableProxyExtension"] = idpc.GetEnableProxyExtension()
+		c.AdditionalProperties["identityMappingPolicy"] = toIdentityMappingPolicyMap(idpc.GetIdentityMappingPolicy())
+		c.AdditionalProperties["signAuthenticationRequests"] = idpc.GetSignAuthenticationRequests()
+		c.AdditionalProperties["wantAssertionSigned"] = idpc.GetWantAssertionSigned()
 	}
 
 	f.SetChannelA(c)
@@ -75,37 +69,46 @@ func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) *map[string]interf
 
 	props := make(map[string]interface{})
 
-	props["custommapper"] = dto.GetCustomMapper()
-
-	// TODO :
-
+	props["customMapper"] = dto.GetCustomMapper()
+	props["elementId"] = dto.GetElementId()
+	props["id"] = dto.GetId()
+	props["mappingType"] = dto.GetMappingType()
+	props["name"] = dto.GetName()
+	props["useLocalId"] = dto.GetUseLocalId()
 	return &props
-
 }
 
 // Transforms a map into an IdentityMappingPolicyDTO
 func toIdentityMappingPolicyDTO(props map[string]interface{}) IdentityMappingPolicyDTO {
 	dto := NewIdentityMappingPolicyDTO()
-	dto.SetCustomMapper((props["custommapper"].(string)))
-	dto.SetElementId((props["elementid"].(string)))
+	dto.SetCustomMapper((props["customMapper"].(string)))
+	dto.SetElementId((props["elementId"].(string)))
 	dto.SetId((props["id"].(int64)))
-	dto.SetMappingType((props["mappingtype"].(string)))
+	dto.SetMappingType((props["mappingType"].(string)))
 	dto.SetName((props["name"].(string)))
-	dto.SetUseLocalId((props["uselocalid"].(bool)))
+	dto.SetUseLocalId((props["useLocalId"].(bool)))
 	return *dto
 }
 
+// Transforms AccountLinkagePolicy a map
 func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) *map[string]interface{} {
-	// TODO
-	return nil
+	props := make(map[string]interface{})
+
+	props["customLinkEmitter"] = dto.GetCustomLinkEmitter()
+	props["elementId"] = dto.GetElementId()
+	props["id"] = dto.GetId()
+	props["linkEmitterType"] = dto.GetLinkEmitterType()
+	props["name"] = dto.GetName()
+	return &props
 }
 
+// Transforms a map into an AccountLinkagePolicyDTO
 func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolicyDTO {
 	dto := NewAccountLinkagePolicyDTO()
-	dto.SetCustomLinkEmitter((props["customlinkemitter"].(string)))
-	dto.SetElementId((props["elementid"].(string)))
+	dto.SetCustomLinkEmitter((props["customLinkEmitter"].(string)))
+	dto.SetElementId((props["elementId"].(string)))
 	dto.SetId((props["id"].(int64)))
-	dto.SetLinkEmitterType((props["linkemittertype"].(string)))
+	dto.SetLinkEmitterType((props["linkEmitterType"].(string)))
 	dto.SetName((props["name"].(string)))
 	return *dto
 }
@@ -125,65 +128,139 @@ func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderCh
 	spc.SetName(c.GetName())
 	spc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
 
-	AuthenticationAssertionEmissionPolicyDTO := toEmissionPolicy(c.AdditionalProperties["emissionpolicy"].(map[string]interface{}))
+	AuthenticationAssertionEmissionPolicyDTO := toEmissionPolicyDTO(c.AdditionalProperties["emissionPolicy"].(map[string]interface{}))
 	spc.SetEmissionPolicy(AuthenticationAssertionEmissionPolicyDTO)
-	spc.SetRestrictedRoles(c.AdditionalProperties["restrictedroles"].([]string))
-	spc.SetRequiredRoles(c.AdditionalProperties["requiredroles"].([]string))
+	spc.SetRestrictedRoles(c.AdditionalProperties["restrictedRoles"].([]string))
+	spc.SetRequiredRoles(c.AdditionalProperties["requiredRoles"].([]string))
 	spc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
-	spc.SetRequiredRolesMatchMode(c.AdditionalProperties["requiredrolesmatchmode"].(int32))
-	spc.SetRestrictedRolesMatchMode(c.AdditionalProperties["restrictedrolesmatchmode"].(int32))
-	spc.SetEncryptAssertionAlgorithm(c.AdditionalProperties["encryptassertionalgorithm"].(string))
-	spc.SetIgnoreRequestedNameIDPolicy(c.AdditionalProperties["ignorerequestednameidpolicy"].(bool))
-	subjectNameIdDTO := toSubjectNameIDPolicy(c.AdditionalProperties["subjectnameidpolicy"].(map[string]interface{}))
+	spc.SetRequiredRolesMatchMode(c.AdditionalProperties["requiredRolesMatchMode"].(int32))
+	spc.SetRestrictedRolesMatchMode(c.AdditionalProperties["restrictedRolesMatchMode"].(int32))
+	spc.SetEncryptAssertionAlgorithm(c.AdditionalProperties["encryptAssertionAlgorithm"].(string))
+	spc.SetIgnoreRequestedNameIDPolicy(c.AdditionalProperties["ignoreRequestedNameIDPolicy"].(bool))
+	subjectNameIdDTO := toSubjectNameIDPolicyDTO(c.AdditionalProperties["subjectNameIDPolicy"].(map[string]interface{}))
 	spc.SetSubjectNameIDPolicy(subjectNameIdDTO)
-	spc.SetEncryptAssertion(c.AdditionalProperties["encryptassertion"].(bool))
-	spc.SetSignatureHash(c.AdditionalProperties["signaturehash"].(string))
-	AttributeProfileDTO := toAttributeProfile(c.AdditionalProperties["attributeprofile"].(map[string]interface{}))
+	spc.SetEncryptAssertion(c.AdditionalProperties["encryptAssertion"].(bool))
+	spc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
+	AttributeProfileDTO := toAttributeProfileDTO(c.AdditionalProperties["attributeProfile"].(map[string]interface{}))
 	spc.SetAttributeProfile(AttributeProfileDTO)
-	AuthenticationContractDTO := toAuthenticationContract(c.AdditionalProperties["authenticationcontract"].(map[string]interface{}))
+	AuthenticationContractDTO := toAuthenticationContractDTO(c.AdditionalProperties["authenticationContract"].(map[string]interface{}))
 	spc.SetAuthenticationContract(AuthenticationContractDTO)
-	spc.SetWantAuthnRequestsSigned(c.AdditionalProperties["wantauthnrequestssigned"].(bool))
+	spc.SetWantAuthnRequestsSigned(c.AdditionalProperties["wantAuthnRequestsSigned"].(bool))
 
 	return &spc, nil
 }
 
-func toEmissionPolicy(props map[string]interface{}) AuthenticationAssertionEmissionPolicyDTO {
+// Transforms a map into an EmissionPolicyDTO
+func toEmissionPolicyDTO(props map[string]interface{}) AuthenticationAssertionEmissionPolicyDTO {
 	dto := NewAuthenticationAssertionEmissionPolicyDTO()
-	dto.SetElementId(props["elementid"].(string))
+	dto.SetElementId(props["elementId"].(string))
 	dto.SetId(props["id"].(int64))
 	dto.SetName(props["name"].(string))
 	return *dto
 }
 
-func toAuthenticationContract(props map[string]interface{}) AuthenticationContractDTO {
+// Transforms a map into an AuthenticationContractDTO
+func toAuthenticationContractDTO(props map[string]interface{}) AuthenticationContractDTO {
 	dto := NewAuthenticationContractDTO()
-	dto.SetElementId(props["elementid"].(string))
+	dto.SetElementId(props["elementId"].(string))
 	dto.SetId(props["id"].(int64))
 	dto.SetName(props["name"].(string))
 	return *dto
 }
 
-func toAttributeProfile(props map[string]interface{}) AttributeProfileDTO {
+// Transforms a map into an AttributeProfileDTO
+func toAttributeProfileDTO(props map[string]interface{}) AttributeProfileDTO {
 	dto := NewAttributeProfileDTO()
-	dto.SetElementId(props["elementid"].(string))
+	dto.SetElementId(props["elementId"].(string))
 	dto.SetId(props["id"].(int64))
 	dto.SetName(props["name"].(string))
-	dto.SetProfileType(props["profiletype"].(string))
+	dto.SetProfileType(props["profileType"].(string))
 	return *dto
 }
 
-func toSubjectNameIDPolicy(props map[string]interface{}) SubjectNameIdentifierPolicyDTO {
+// Transforms a map into an SubjectNameIDPolicyDTO
+func toSubjectNameIDPolicyDTO(props map[string]interface{}) SubjectNameIdentifierPolicyDTO {
 	dto := NewSubjectNameIdentifierPolicyDTO()
-	dto.SetDescriptionKey(props["descriptionkey"].(string))
+	dto.SetDescriptionKey(props["descriptionKey"].(string))
 	dto.SetId(props["id"].(string))
 	dto.SetName(props["name"].(string))
-	dto.SetSubjectAttribute(props["subjectattribute"].(string))
+	dto.SetSubjectAttribute(props["subjectAttribute"].(string))
 	dto.SetType(props["type"].(string))
 	return *dto
 }
 
-func (f *FederatedConnectionDTO) SetSPChannel(idpChannel *InternalSaml2ServiceProviderChannelDTO) error {
+// Transforms the InternalSaml2ServiceProviderChannelDTO into a FederatedChannel and sets it into channelA
+func (f *FederatedConnectionDTO) SetSPChannel(spc *InternalSaml2ServiceProviderChannelDTO) error {
+
+	var c FederatedChannelDTO
+
+	c.SetId(spc.GetId())
+	c.SetActiveBindings(spc.GetActiveBindings())
+	c.SetActiveProfiles(spc.GetActiveProfiles())
+	c.SetDescription(spc.GetDescription())
+	c.SetDisplayName(spc.GetDisplayName())
+	c.SetElementId(spc.GetElementId())
+	c.SetLocation(spc.GetLocation())
+	c.SetName(spc.GetName())
+	c.SetOverrideProviderSetup(spc.GetOverrideProviderSetup())
+
+	c.AdditionalProperties["emissionPolicy"] = toEmissionPolicyMap(spc.GetEmissionPolicy())
+	c.AdditionalProperties["restrictedRoles"] = spc.GetRestrictedRoles()
+	c.AdditionalProperties["requiredRoles"] = spc.GetRequiredRoles()
+	c.AdditionalProperties["messageTtl"] = spc.GetMessageTtl()
+	c.AdditionalProperties["requiredRolesMatchMode"] = spc.GetRequiredRolesMatchMode()
+	c.AdditionalProperties["restrictedRolesMatchMode"] = spc.GetRestrictedRolesMatchMode()
+	c.AdditionalProperties["encryptAssertionAlgorithm"] = spc.GetEncryptAssertionAlgorithm()
+	c.AdditionalProperties["ignoreRequestedNameIDPolicy"] = spc.GetIgnoreRequestedNameIDPolicy()
+	c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(spc.GetSubjectNameIDPolicy())
+	c.AdditionalProperties["encryptAssertion"] = spc.GetEncryptAssertion()
+	c.AdditionalProperties["signatureHash"] = spc.GetSignatureHash()
+	c.AdditionalProperties["attributeProfile"] = toAttributeProfilemap(spc.GetAttributeProfile())
+	c.AdditionalProperties["authenticationContract"] = toAuthenticationContractmap(spc.GetAuthenticationContract())
+	c.AdditionalProperties["wantAuthnRequestsSigned"] = spc.GetWantAuthnRequestsSigned()
+
+	f.SetChannelA(c)
 	return nil
+
+}
+
+// Transforms AuthenticationContract a map
+func toAuthenticationContractmap(dto AuthenticationContractDTO) *map[string]interface{} {
+	props := make(map[string]interface{})
+	props["elementId"] = dto.GetElementId()
+	props["id"] = dto.GetId()
+	props["name"] = dto.GetName()
+	return &props
+}
+
+// Transforms AttributeProfile a map
+func toAttributeProfilemap(dto AttributeProfileDTO) *map[string]interface{} {
+	props := make(map[string]interface{})
+	props["elementId"] = dto.GetElementId()
+	props["id"] = dto.GetId()
+	props["name"] = dto.GetName()
+	props["profileType"] = dto.GetProfileType()
+	return &props
+}
+
+// Transforms EmissionPolicy a map
+func toEmissionPolicyMap(dto AuthenticationAssertionEmissionPolicyDTO) *map[string]interface{} {
+	props := make(map[string]interface{})
+	props["elementId"] = dto.GetElementId()
+	props["id"] = dto.GetId()
+	props["name"] = dto.GetName()
+	return &props
+}
+
+// Transforms SubjectNameIDPolicy a map
+func toSubjectNameIDPolicyMap(dto SubjectNameIdentifierPolicyDTO) *map[string]interface{} {
+	props := make(map[string]interface{})
+	props["descriptionKey"] = dto.GetDescriptionKey()
+	props["id"] = dto.GetId()
+	props["name"] = dto.GetName()
+	props["subjectAttribute"] = dto.GetSubjectAttribute()
+	props["type"] = dto.GetType()
+	return &props
 }
 
 func addFederatedConnection(fcs []FederatedConnectionDTO,
