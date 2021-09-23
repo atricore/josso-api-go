@@ -1,11 +1,11 @@
 package jossoappi
 
 func (p *VirtualSaml2ServiceProviderDTO) GetSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
-	return toSamlR2IDPConfig(p.GetConfig())
+	return p.GetConfig().ToSamlR2IDPConfig()
 }
 
 func (p *VirtualSaml2ServiceProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) error {
-	cfg, err := toProviderConfig(*idpCfg)
+	cfg, err := idpCfg.ToProviderConfig()
 
 	if err != nil {
 		return err

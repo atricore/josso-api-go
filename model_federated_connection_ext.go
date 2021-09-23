@@ -21,11 +21,11 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 		idpc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
 		idpc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
 		idpc.SetMessageTtlTolerance(c.AdditionalProperties["messageTtlTolerance"].(int32))
-		AccountLinkagePolicyDTO := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountLinkagePolicy"].(map[string]interface{}))
-		idpc.SetAccountLinkagePolicy(AccountLinkagePolicyDTO)
+		accountLinkage := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountLinkagePolicy"].(map[string]interface{}))
+		idpc.SetAccountLinkagePolicy(accountLinkage)
 		idpc.SetEnableProxyExtension(c.AdditionalProperties["enableProxyExtension"].(bool))
-		IdentityMappingPolicyDTO := toIdentityMappingPolicyDTO(c.AdditionalProperties["identityMappingPolicy"].(map[string]interface{}))
-		idpc.SetIdentityMappingPolicy(IdentityMappingPolicyDTO)
+		idMapping := toIdentityMappingPolicyDTO(c.AdditionalProperties["identityMappingPolicy"].(map[string]interface{}))
+		idpc.SetIdentityMappingPolicy(idMapping)
 		idpc.SetSignAuthenticationRequests(c.AdditionalProperties["signAuthenticationRequests"].(bool))
 		idpc.SetWantAssertionSigned(c.AdditionalProperties["wantAssertionSigned"].(bool))
 	}
@@ -113,43 +113,6 @@ func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolic
 	return *dto
 }
 
-// IDP Side, has an SP channel
-func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderChannelDTO, error) {
-	c := f.GetChannelA()
-	var spc InternalSaml2ServiceProviderChannelDTO
-
-	spc.SetId(c.GetId())
-	spc.SetActiveBindings(c.GetActiveBindings())
-	spc.SetActiveProfiles(c.GetActiveProfiles())
-	spc.SetDescription(c.GetDescription())
-	spc.SetDisplayName(c.GetDisplayName())
-	spc.SetElementId(c.GetElementId())
-	spc.SetLocation(c.GetLocation())
-	spc.SetName(c.GetName())
-	spc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
-
-	AuthenticationAssertionEmissionPolicyDTO := toEmissionPolicyDTO(c.AdditionalProperties["emissionPolicy"].(map[string]interface{}))
-	spc.SetEmissionPolicy(AuthenticationAssertionEmissionPolicyDTO)
-	spc.SetRestrictedRoles(c.AdditionalProperties["restrictedRoles"].([]string))
-	spc.SetRequiredRoles(c.AdditionalProperties["requiredRoles"].([]string))
-	spc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
-	spc.SetRequiredRolesMatchMode(c.AdditionalProperties["requiredRolesMatchMode"].(int32))
-	spc.SetRestrictedRolesMatchMode(c.AdditionalProperties["restrictedRolesMatchMode"].(int32))
-	spc.SetEncryptAssertionAlgorithm(c.AdditionalProperties["encryptAssertionAlgorithm"].(string))
-	spc.SetIgnoreRequestedNameIDPolicy(c.AdditionalProperties["ignoreRequestedNameIDPolicy"].(bool))
-	subjectNameIdDTO := toSubjectNameIDPolicyDTO(c.AdditionalProperties["subjectNameIDPolicy"].(map[string]interface{}))
-	spc.SetSubjectNameIDPolicy(subjectNameIdDTO)
-	spc.SetEncryptAssertion(c.AdditionalProperties["encryptAssertion"].(bool))
-	spc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
-	AttributeProfileDTO := toAttributeProfileDTO(c.AdditionalProperties["attributeProfile"].(map[string]interface{}))
-	spc.SetAttributeProfile(AttributeProfileDTO)
-	AuthenticationContractDTO := toAuthenticationContractDTO(c.AdditionalProperties["authenticationContract"].(map[string]interface{}))
-	spc.SetAuthenticationContract(AuthenticationContractDTO)
-	spc.SetWantAuthnRequestsSigned(c.AdditionalProperties["wantAuthnRequestsSigned"].(bool))
-
-	return &spc, nil
-}
-
 // Transforms a map into an EmissionPolicyDTO
 func toEmissionPolicyDTO(props map[string]interface{}) AuthenticationAssertionEmissionPolicyDTO {
 	dto := NewAuthenticationAssertionEmissionPolicyDTO()
@@ -204,24 +167,65 @@ func (f *FederatedConnectionDTO) SetSPChannel(spc *InternalSaml2ServiceProviderC
 	c.SetName(spc.GetName())
 	c.SetOverrideProviderSetup(spc.GetOverrideProviderSetup())
 
-	c.AdditionalProperties["emissionPolicy"] = toEmissionPolicyMap(spc.GetEmissionPolicy())
-	c.AdditionalProperties["restrictedRoles"] = spc.GetRestrictedRoles()
-	c.AdditionalProperties["requiredRoles"] = spc.GetRequiredRoles()
-	c.AdditionalProperties["messageTtl"] = spc.GetMessageTtl()
-	c.AdditionalProperties["requiredRolesMatchMode"] = spc.GetRequiredRolesMatchMode()
-	c.AdditionalProperties["restrictedRolesMatchMode"] = spc.GetRestrictedRolesMatchMode()
-	c.AdditionalProperties["encryptAssertionAlgorithm"] = spc.GetEncryptAssertionAlgorithm()
-	c.AdditionalProperties["ignoreRequestedNameIDPolicy"] = spc.GetIgnoreRequestedNameIDPolicy()
-	c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(spc.GetSubjectNameIDPolicy())
-	c.AdditionalProperties["encryptAssertion"] = spc.GetEncryptAssertion()
-	c.AdditionalProperties["signatureHash"] = spc.GetSignatureHash()
-	c.AdditionalProperties["attributeProfile"] = toAttributeProfilemap(spc.GetAttributeProfile())
-	c.AdditionalProperties["authenticationContract"] = toAuthenticationContractmap(spc.GetAuthenticationContract())
-	c.AdditionalProperties["wantAuthnRequestsSigned"] = spc.GetWantAuthnRequestsSigned()
+	if spc.GetOverrideProviderSetup() {
+		c.AdditionalProperties["emissionPolicy"] = toEmissionPolicyMap(spc.GetEmissionPolicy())
+		c.AdditionalProperties["restrictedRoles"] = spc.GetRestrictedRoles()
+		c.AdditionalProperties["requiredRoles"] = spc.GetRequiredRoles()
+		c.AdditionalProperties["messageTtl"] = spc.GetMessageTtl()
+		c.AdditionalProperties["requiredRolesMatchMode"] = spc.GetRequiredRolesMatchMode()
+		c.AdditionalProperties["restrictedRolesMatchMode"] = spc.GetRestrictedRolesMatchMode()
+		c.AdditionalProperties["encryptAssertionAlgorithm"] = spc.GetEncryptAssertionAlgorithm()
+		c.AdditionalProperties["ignoreRequestedNameIDPolicy"] = spc.GetIgnoreRequestedNameIDPolicy()
+		c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(spc.GetSubjectNameIDPolicy())
+		c.AdditionalProperties["encryptAssertion"] = spc.GetEncryptAssertion()
+		c.AdditionalProperties["signatureHash"] = spc.GetSignatureHash()
+		c.AdditionalProperties["attributeProfile"] = toAttributeProfilemap(spc.GetAttributeProfile())
+		c.AdditionalProperties["authenticationContract"] = toAuthenticationContractmap(spc.GetAuthenticationContract())
+		c.AdditionalProperties["wantAuthnRequestsSigned"] = spc.GetWantAuthnRequestsSigned()
+	}
 
 	f.SetChannelA(c)
 	return nil
 
+}
+
+// IDP Side, has an SP channel
+func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderChannelDTO, error) {
+	c := f.GetChannelA()
+	var spc InternalSaml2ServiceProviderChannelDTO
+
+	spc.SetId(c.GetId())
+	spc.SetActiveBindings(c.GetActiveBindings())
+	spc.SetActiveProfiles(c.GetActiveProfiles())
+	spc.SetDescription(c.GetDescription())
+	spc.SetDisplayName(c.GetDisplayName())
+	spc.SetElementId(c.GetElementId())
+	spc.SetLocation(c.GetLocation())
+	spc.SetName(c.GetName())
+	spc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
+
+	if c.GetOverrideProviderSetup() {
+		emissionPolicy := toEmissionPolicyDTO(c.AdditionalProperties["emissionPolicy"].(map[string]interface{}))
+		spc.SetEmissionPolicy(emissionPolicy)
+		spc.SetRestrictedRoles(c.AdditionalProperties["restrictedRoles"].([]string))
+		spc.SetRequiredRoles(c.AdditionalProperties["requiredRoles"].([]string))
+		spc.SetMessageTtl(c.AdditionalProperties["messageTtl"].(int32))
+		spc.SetRequiredRolesMatchMode(c.AdditionalProperties["requiredRolesMatchMode"].(int32))
+		spc.SetRestrictedRolesMatchMode(c.AdditionalProperties["restrictedRolesMatchMode"].(int32))
+		spc.SetEncryptAssertionAlgorithm(c.AdditionalProperties["encryptAssertionAlgorithm"].(string))
+		spc.SetIgnoreRequestedNameIDPolicy(c.AdditionalProperties["ignoreRequestedNameIDPolicy"].(bool))
+		subjectNameId := toSubjectNameIDPolicyDTO(c.AdditionalProperties["subjectNameIDPolicy"].(map[string]interface{}))
+		spc.SetSubjectNameIDPolicy(subjectNameId)
+		spc.SetEncryptAssertion(c.AdditionalProperties["encryptAssertion"].(bool))
+		spc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
+		attrProfile := toAttributeProfileDTO(c.AdditionalProperties["attributeProfile"].(map[string]interface{}))
+		spc.SetAttributeProfile(attrProfile)
+		authnContract := toAuthenticationContractDTO(c.AdditionalProperties["authenticationContract"].(map[string]interface{}))
+		spc.SetAuthenticationContract(authnContract)
+		spc.SetWantAuthnRequestsSigned(c.AdditionalProperties["wantAuthnRequestsSigned"].(bool))
+	}
+
+	return &spc, nil
 }
 
 // Transforms AuthenticationContract a map

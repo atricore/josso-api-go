@@ -1,88 +1,68 @@
 package jossoappi
 
-func (i *InternalSaml2ServiceProviderDTO) GetSamlR2SPConfig() *SamlR2SPConfigDTO {
+import "fmt"
 
-	c := i.GetConfig()
-	var saml2sp SamlR2SPConfigDTO
-	saml2sp.SetDescription(c.GetDescription())
-	saml2sp.SetDisplayName(c.GetDisplayName())
-	saml2sp.SetElementId(c.GetElementId())
-	saml2sp.SetId(c.GetId())
-	saml2sp.SetName(c.GetName())
+func (i *InternalSaml2ServiceProviderDTO) GetSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 
-	KeystoreDTO := toKeyStoreDTO((c.AdditionalProperties["keyStoreDTO"].(map[string]interface{})))
-	saml2sp.SetSigner(*KeystoreDTO)
-	saml2sp.SetUseSampleStore(c.AdditionalProperties["useSampleStore"].(bool))
-	saml2sp.SetUseSystemStore(c.AdditionalProperties["useSystemStore"].(bool))
+	cfg := i.GetConfig()
+	var spCfg *SamlR2SPConfigDTO
+	spCfg.SetDescription(cfg.GetDescription())
+	spCfg.SetDisplayName(cfg.GetDisplayName())
+	spCfg.SetElementId(cfg.GetElementId())
+	spCfg.SetId(cfg.GetId())
+	spCfg.SetName(cfg.GetName())
+	spCfg.SetUseSampleStore(cfg.AdditionalProperties["useSampleStore"].(bool))
+	spCfg.SetUseSystemStore(cfg.AdditionalProperties["useSystemStore"].(bool))
 
-	return &saml2sp
+	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
+		// Get signer/encrypter
+		var storeProps map[string]interface{}
+		var storeId int
+		var ok bool
+
+		if storeId, ok = cfg.AdditionalProperties["encrypter"].(int); ok {
+			storeProps = cfg.AdditionalProperties["signer"].(map[string]interface{})
+		} else if storeId, ok = cfg.AdditionalProperties["signer"].(int); ok {
+			storeProps = cfg.AdditionalProperties["encrypter"].(map[string]interface{})
+		} else {
+			return spCfg, fmt.Errorf("config does not have encrypter/signer ?")
+		}
+
+		if storeProps["@id"].(int) != storeId {
+			return spCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
+		}
+
+		store := toKeyStoreDTO(storeId, storeProps)
+		spCfg.Signer = store
+		spCfg.Encrypter = store
+
+	}
+
+	return spCfg, nil
 
 }
 
-func toKeyStoremap(dto KeystoreDTO) *map[string]interface{} {
+func (i *InternalSaml2ServiceProviderDTO) SetSamlR2SPConfig(spCfg *SamlR2SPConfigDTO) error {
 
-	props := make(map[string]interface{})
+	var cfg ProviderConfigDTO
+	cfg.AdditionalProperties = make(map[string]interface{})
+	// Build specific type
+	cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
+	cfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
 
-	props["certificateAlias"] = dto.GetCertificateAlias()
-	props["displayName"] = dto.GetDisplayName()
-	props["elementId"] = dto.GetElementId()
-	props["id"] = dto.GetId()
-	props["keystorePassOnly"] = dto.GetKeystorePassOnly()
-	props["name"] = dto.GetName()
-	props["password"] = dto.GetPassword()
-	props["privateKeyName"] = dto.GetPrivateKeyName()
-	props["privateKeyPassword"] = dto.GetPrivateKeyPassword()
-	props["store"] = dto.GetStore()
-	props["type"] = dto.GetType()
+	cfg.Description = spCfg.Description
+	cfg.DisplayName = spCfg.DisplayName
+	cfg.ElementId = spCfg.ElementId
+	cfg.Name = spCfg.Name
+	cfg.AdditionalProperties["useSampleStore"] = spCfg.UseSampleStore
+	cfg.AdditionalProperties["useSystemStore"] = spCfg.UseSystemStore
 
-	return &props
-}
+	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
+		storeProps := toKeyStoreMap(spCfg.GetSigner()) // Assuming that both signer and encrypter have the same store
+		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
+		cfg.AdditionalProperties["signer"] = storeProps
+	}
 
-// Transforms a map into an KeyStoreDTO
-func toKeyStoreDTO(props map[string]interface{}) *KeystoreDTO {
-	var storeProps map[string]interface{}
-	Key := NewKeystoreDTO()
-	Key.AdditionalProperties = make(map[string]interface{})
+	return nil
 
-	//¿?Key.AdditionalProperties["@id"] = storeId
-	Key.SetCertificateAlias((props["certificateAlias"].(string)))
-	Key.SetDisplayName((props["displayName"].(string)))
-	Key.SetElementId((props["elementId"].(string)))
-	Key.SetId((props["id"].(int64)))
-	Key.SetKeystorePassOnly((props["keystorePassOnly"].(bool)))
-	Key.SetName((props["name"].(string)))
-	Key.SetPassword((props["password"].(string)))
-	Key.SetPrivateKeyName((props["privateKeyName"].(string)))
-	Key.SetPrivateKeyPassword((props["privateKeyPassword"].(string)))
-	Key.SetPrivateKeyPassword((props["privateKeyPassword"].(string)))
-
-	Key.SetType((props["type"].(string)))
-
-	resourceProps := storeProps["store"].(map[string]interface{})
-	Key.Store = NewResourceDTO()
-	Key.Store.AdditionalProperties = map[string]interface{}{}
-	Key.Store.AdditionalProperties["@id"] = resourceProps["@id"]
-	Key.Store.DisplayName = IPtrString(resourceProps["displayName"])
-	Key.Store.ElementId = IPtrString(resourceProps["elementId"])
-	Key.Store.Name = IPtrString(resourceProps["name"])
-	Key.Store.Uri = IPtrString(resourceProps["uri"])
-
-	return Key
-}
-
-func (i *InternalSaml2ServiceProviderDTO) SetProviderConfig(saml2sp *SamlR2SPConfigDTO) {
-
-	var c SamlR2SPConfigDTO
-
-	c.SetDescription(saml2sp.GetDescription())
-	c.SetDisplayName(saml2sp.GetDisplayName())
-	c.SetElementId(saml2sp.GetElementId())
-	c.SetId(saml2sp.GetId())
-	c.SetName(saml2sp.GetName())
-	c.SetSigner(saml2sp.GetSigner())
-	c.SetUseSampleStore(saml2sp.GetUseSampleStore())
-	c.SetUseSystemStore(saml2sp.GetUseSystemStore())
-	c.AdditionalProperties["keyStore"] = toKeyStoremap(c.GetSigner())
-
-	
 }

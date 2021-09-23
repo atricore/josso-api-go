@@ -1,10 +1,5 @@
 package jossoappi
 
-import (
-	"errors"
-	"fmt"
-)
-
 /*
 
 This builds a specific type for the IdP configuration.
@@ -50,141 +45,12 @@ SAMPLE DUMP OF PROVIDERDTO TYPE
 */
 
 func (p *IdentityProviderDTO) GetSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
-	return toSamlR2IDPConfig(p.GetConfig())
-}
-
-func toSamlR2IDPConfig(cfg ProviderConfigDTO) (*SamlR2IDPConfigDTO, error) {
-
-	var idpCfg *SamlR2IDPConfigDTO
-
-	idpCfg.AdditionalProperties = make(map[string]interface{})
-
-	// @id and @c properties
-	class := cfg.AdditionalProperties["@c"]
-	if class == nil {
-		return idpCfg, errors.New("class property not found (@c)")
-	}
-
-	if class != ".SamlR2IDPConfigDTO" {
-		return idpCfg, fmt.Errorf("invalid class %s", class)
-	}
-
-	// Build specific type
-	idpCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
-	idpCfg.AdditionalProperties["@c"] = class
-
-	idpCfg.Description = cfg.Description
-	idpCfg.DisplayName = cfg.DisplayName
-	idpCfg.ElementId = cfg.ElementId
-	idpCfg.Name = cfg.Name
-	idpCfg.UseSampleStore = PtrBool(cfg.AdditionalProperties["useSampleStore"].(bool))
-	idpCfg.UseSystemStore = PtrBool(cfg.AdditionalProperties["useSystemStore"].(bool))
-
-	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
-		// Get signer/encrypter
-		var storeProps map[string]interface{}
-		var storeId float64
-		var ok bool
-
-		store := NewKeystoreDTO()
-		store.AdditionalProperties = make(map[string]interface{})
-
-		i := cfg.AdditionalProperties["encrypter"].(float64)
-		fmt.Printf("POINTER TO ?! %v", i)
-
-		if storeId, ok = cfg.AdditionalProperties["encrypter"].(float64); ok {
-			storeProps = cfg.AdditionalProperties["signer"].(map[string]interface{})
-		} else if storeId, ok = cfg.AdditionalProperties["signer"].(float64); ok {
-			storeProps = cfg.AdditionalProperties["encrypter"].(map[string]interface{})
-		} else {
-			return idpCfg, fmt.Errorf("config does not have encrypter/signer ?")
-		}
-
-		if storeProps["@id"].(float64) != storeId {
-			return idpCfg, fmt.Errorf("inconsistent config Ids %f, %f", storeId, storeProps["@id"].(float64))
-		}
-
-		store.AdditionalProperties["@id"] = storeId
-		store.CertificateAlias = IPtrString(storeProps["certificateAlias"])
-		store.DisplayName = IPtrString(storeProps["displayName"])
-		store.ElementId = IPtrString(storeProps["elementId"])
-		store.KeystorePassOnly = IPtrBool(storeProps["KeystorePassOnly"])
-		store.Name = IPtrString(storeProps["name"])
-		store.Password = IPtrString(storeProps["password"])
-		store.PrivateKeyName = IPtrString(storeProps["privateKeyName"])
-		store.PrivateKeyPassword = IPtrString(storeProps["privateKeyPassword"])
-
-		resourceProps := storeProps["store"].(map[string]interface{})
-		store.Store = NewResourceDTO()
-		store.Store.AdditionalProperties = map[string]interface{}{}
-		store.Store.AdditionalProperties["@id"] = resourceProps["@id"]
-		store.Store.DisplayName = IPtrString(resourceProps["displayName"])
-		store.Store.ElementId = IPtrString(resourceProps["elementId"])
-		store.Store.Name = IPtrString(resourceProps["name"])
-		store.Store.Uri = IPtrString(resourceProps["uri"])
-
-		// TODO : Check for nil
-		//store.Store.Value = &[]string{resourceProps["value"].(string)}
-		store.Store.Value = IPtrString(resourceProps["value"])
-
-		idpCfg.Signer = store
-		idpCfg.Encrypter = store
-
-	}
-
-	return idpCfg, nil
-}
-
-func toProviderConfig(idpCfg SamlR2IDPConfigDTO) (*ProviderConfigDTO, error) {
-	var cfg ProviderConfigDTO
-	cfg.AdditionalProperties = make(map[string]interface{})
-	// Build specific type
-	cfg.AdditionalProperties["@id"] = idpCfg.AdditionalProperties["@id"]
-	cfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
-
-	cfg.Description = idpCfg.Description
-	cfg.DisplayName = idpCfg.DisplayName
-	cfg.ElementId = idpCfg.ElementId
-	cfg.Name = idpCfg.Name
-	cfg.AdditionalProperties["useSampleStore"] = idpCfg.UseSampleStore
-	cfg.AdditionalProperties["useSystemStore"] = idpCfg.UseSystemStore
-
-	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
-		store := idpCfg.Signer
-		storeProps := make(map[string]interface{})
-
-		cfg.AdditionalProperties["encrypter"] = store.AdditionalProperties["@id"]
-		cfg.AdditionalProperties["signer"] = storeProps
-
-		storeProps["certificateAlias"] = &store.CertificateAlias
-		storeProps["displayName"] = &store.DisplayName
-		storeProps["elementId"] = &store.ElementId
-		storeProps["KeystorePassOnly"] = &store.KeystorePassOnly
-		storeProps["name"] = &store.Name
-		storeProps["password"] = &store.Password
-		storeProps["privateKeyName"] = &store.PrivateKeyName
-		storeProps["privateKeyPassword"] = &store.PrivateKeyPassword
-
-		resourceProps := make(map[string]interface{})
-		storeProps["store"] = resourceProps
-
-		resourceProps["@id"] = store.Store.AdditionalProperties["@id"]
-		resourceProps["displayName"] = &store.Store.DisplayName
-		resourceProps["elementId"] = &store.Store.ElementId
-		resourceProps["name"] = &store.Store.Name
-		resourceProps["uri"] = &store.Store.Uri
-		//resourceProps["value"] = strings.Join(*store.Store.Value, "")
-		resourceProps["value"] = &store.Store.Value
-
-	}
-
-	return &cfg, nil
-
+	return p.GetConfig().ToSamlR2IDPConfig()
 }
 
 func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) error {
 
-	cfg, err := toProviderConfig(*idpCfg)
+	cfg, err := idpCfg.ToProviderConfig()
 
 	if err != nil {
 		return err
