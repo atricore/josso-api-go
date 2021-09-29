@@ -14,3 +14,5 @@ func (p *VirtualSaml2ServiceProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPCon
 	return nil
 
 }
+
+// TODO : Add/Remove federated connection (see External SAML 2 SP)
