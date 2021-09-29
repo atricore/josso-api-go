@@ -277,6 +277,7 @@ func addFederatedConnection(fcs []FederatedConnectionDTO,
 	fc.SetName(target)
 	fc.SetIDPChannel(idpChannel)
 	fc.SetSPChannel(spChannel)
+	// TODO : Add additional properites w/ @c attribute using proper fed.conn. class
 
 	fcs = append(fcs, fc)
 
