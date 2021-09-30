@@ -47,8 +47,9 @@ Method | HTTP request | Description
 [**GetVirtSaml2Sp**](DefaultApi.md#GetVirtSaml2Sp) | **Get** /iam-deploy/virtsaml2sp | 
 [**GetVirtSaml2Sps**](DefaultApi.md#GetVirtSaml2Sps) | **Get** /iam-deploy/virtsaml2sps | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
-[**SetApplianceState**](DefaultApi.md#SetApplianceState) | **Put** /iam-deploy/appliance/state | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
+[**StartAppliance**](DefaultApi.md#StartAppliance) | **Get** /iam-deploy/appliance/start | 
+[**StopAppliance**](DefaultApi.md#StopAppliance) | **Get** /iam-deploy/appliance/stop | 
 [**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
 [**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
@@ -2809,70 +2810,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SetApplianceState
-
-> GetApplianceStateRes SetApplianceState(ctx).SetApplianceStateReq(setApplianceStateReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.SetApplianceState(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.SetApplianceState``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SetApplianceState`: GetApplianceStateRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.SetApplianceState`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSetApplianceStateRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setApplianceStateReq** | [**SetApplianceStateReq**](SetApplianceStateReq.md) |  | 
-
-### Return type
-
-[**GetApplianceStateRes**](GetApplianceStateRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## SignOn
 
 > OIDCSignOnResponse SignOn(ctx).OIDCSignOnRequest(oIDCSignOnRequest).Execute()
@@ -2922,6 +2859,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OIDCSignOnResponse**](OIDCSignOnResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## StartAppliance
+
+> GetApplianceStateRes StartAppliance(ctx).SetApplianceStateReq(setApplianceStateReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.StartAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.StartAppliance``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `StartAppliance`: GetApplianceStateRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.StartAppliance`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiStartApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setApplianceStateReq** | [**SetApplianceStateReq**](SetApplianceStateReq.md) |  | 
+
+### Return type
+
+[**GetApplianceStateRes**](GetApplianceStateRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## StopAppliance
+
+> GetApplianceStateRes StopAppliance(ctx).SetApplianceStateReq(setApplianceStateReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.StopAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.StopAppliance``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `StopAppliance`: GetApplianceStateRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.StopAppliance`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiStopApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setApplianceStateReq** | [**SetApplianceStateReq**](SetApplianceStateReq.md) |  | 
+
+### Return type
+
+[**GetApplianceStateRes**](GetApplianceStateRes.md)
 
 ### Authorization
 

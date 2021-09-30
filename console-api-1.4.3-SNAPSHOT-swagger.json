@@ -170,6 +170,32 @@
         }
       }
     },
+    "/iam-deploy/appliance/start" : {
+      "get" : {
+        "operationId" : "startAppliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/SetApplianceStateReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceStateRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliance/state" : {
       "get" : {
         "operationId" : "getApplianceState",
@@ -194,9 +220,11 @@
             }
           }
         }
-      },
-      "put" : {
-        "operationId" : "setApplianceState",
+      }
+    },
+    "/iam-deploy/appliance/stop" : {
+      "get" : {
+        "operationId" : "stopAppliance",
         "requestBody" : {
           "content" : {
             "application/json" : {
