@@ -15,4 +15,25 @@ func (p *VirtualSaml2ServiceProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPCon
 
 }
 
-// TODO : Add/Remove federated connection (see External SAML 2 SP)
+//Add federated connection
+func (p *ExternalSaml2ServiceProviderDTO) AddFedConnection(target string,
+	spChannel *InternalSaml2ServiceProviderChannelDTO,
+	idpChannel *IdentityProviderChannelDTO) error {
+
+	fcs, err := addFederatedConnection(p.GetFederatedConnectionsB(), target, spChannel, idpChannel)
+	if err != nil {
+		return err
+	}
+	p.SetFederatedConnectionsB(fcs)
+	return nil
+}
+
+//Remove federated connection
+func (p *ExternalSaml2ServiceProviderDTO) RemoveFedConnection(target string) error {
+	fcs, err := removeFederatedConnection(p.GetFederatedConnectionsB(), target)
+	if err != nil {
+		return err
+	}
+	p.SetFederatedConnectionsB(fcs)
+	return nil
+}
