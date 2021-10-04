@@ -15,7 +15,11 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 	idpc.SetName(c.GetName())
 	idpc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
 
-	idpc.SetPreferred(c.AdditionalProperties["preferred"].(bool))
+	prefered := false
+	if c.AdditionalProperties["preferred"] != nil {
+		prefered = (c.AdditionalProperties["preferred"].(bool))
+	}
+	idpc.SetPreferred(prefered)
 
 	if idpc.GetOverrideProviderSetup() {
 		idpc.SetSignatureHash(c.AdditionalProperties["signatureHash"].(string))
