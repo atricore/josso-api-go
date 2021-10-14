@@ -17,7 +17,6 @@ import (
 
 // SetApplianceStateReq struct for SetApplianceStateReq
 type SetApplianceStateReq struct {
-	IdOrName *string `json:"idOrName,omitempty"`
 	IdaName *string `json:"idaName,omitempty"`
 	State *string `json:"state,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -40,38 +39,6 @@ func NewSetApplianceStateReq() *SetApplianceStateReq {
 func NewSetApplianceStateReqWithDefaults() *SetApplianceStateReq {
 	this := SetApplianceStateReq{}
 	return &this
-}
-
-// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
-func (o *SetApplianceStateReq) GetIdOrName() string {
-	if o == nil || o.IdOrName == nil {
-		var ret string
-		return ret
-	}
-	return *o.IdOrName
-}
-
-// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *SetApplianceStateReq) GetIdOrNameOk() (*string, bool) {
-	if o == nil || o.IdOrName == nil {
-		return nil, false
-	}
-	return o.IdOrName, true
-}
-
-// HasIdOrName returns a boolean if a field has been set.
-func (o *SetApplianceStateReq) HasIdOrName() bool {
-	if o != nil && o.IdOrName != nil {
-		return true
-	}
-
-	return false
-}
-
-// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
-func (o *SetApplianceStateReq) SetIdOrName(v string) {
-	o.IdOrName = &v
 }
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
@@ -140,9 +107,6 @@ func (o *SetApplianceStateReq) SetState(v string) {
 
 func (o SetApplianceStateReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdOrName != nil {
-		toSerialize["idOrName"] = o.IdOrName
-	}
 	if o.IdaName != nil {
 		toSerialize["idaName"] = o.IdaName
 	}
@@ -167,7 +131,6 @@ func (o *SetApplianceStateReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "idaName")
 		delete(additionalProperties, "state")
 		o.AdditionalProperties = additionalProperties

@@ -3320,6 +3320,13 @@
           "identityConfirmationPolicy" : {
             "$ref" : "#/components/schemas/ExtensionDTO"
           },
+          "identityLookups" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityLookupDTO"
+            }
+          },
           "ignoreRequestedNameIDPolicy" : {
             "type" : "boolean"
           },
@@ -4250,9 +4257,6 @@
       "SetApplianceStateReq" : {
         "type" : "object",
         "properties" : {
-          "idOrName" : {
-            "type" : "string"
-          },
           "idaName" : {
             "type" : "string"
           },
