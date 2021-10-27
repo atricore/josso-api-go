@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **AuthenticationMechanisms** | Pointer to [**[]AuthenticationMechanismDTO**](AuthenticationMechanismDTO.md) |  | [optional] 
 **Config** | Pointer to [**ProviderConfigDTO**](ProviderConfigDTO.md) |  | [optional] 
 **DashboardUrl** | Pointer to **string** |  | [optional] 
-**DelegatedAuthentications** | Pointer to [**[]DelegatedAuthenticationDTO**](DelegatedAuthenticationDTO.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **DestroyPreviousSession** | Pointer to **bool** |  | [optional] 
 **DisplayName** | Pointer to **string** |  | [optional] 
@@ -262,31 +261,6 @@ SetDashboardUrl sets DashboardUrl field to given value.
 `func (o *IdentityProviderDTO) HasDashboardUrl() bool`
 
 HasDashboardUrl returns a boolean if a field has been set.
-
-### GetDelegatedAuthentications
-
-`func (o *IdentityProviderDTO) GetDelegatedAuthentications() []DelegatedAuthenticationDTO`
-
-GetDelegatedAuthentications returns the DelegatedAuthentications field if non-nil, zero value otherwise.
-
-### GetDelegatedAuthenticationsOk
-
-`func (o *IdentityProviderDTO) GetDelegatedAuthenticationsOk() (*[]DelegatedAuthenticationDTO, bool)`
-
-GetDelegatedAuthenticationsOk returns a tuple with the DelegatedAuthentications field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDelegatedAuthentications
-
-`func (o *IdentityProviderDTO) SetDelegatedAuthentications(v []DelegatedAuthenticationDTO)`
-
-SetDelegatedAuthentications sets DelegatedAuthentications field to given value.
-
-### HasDelegatedAuthentications
-
-`func (o *IdentityProviderDTO) HasDelegatedAuthentications() bool`
-
-HasDelegatedAuthentications returns a boolean if a field has been set.
 
 ### GetDescription
 

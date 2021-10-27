@@ -1283,6 +1283,130 @@
         }
       }
     },
+    "/iam-deploy/tomcatexecenv" : {
+      "get" : {
+        "operationId" : "getTomcatExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetTomcatExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetTomcatExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateTomcatExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreTomcatExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreTomcatExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createTomcatExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreTomcatExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreTomcatExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteTomcatExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/tomcatexecenvs" : {
+      "get" : {
+        "operationId" : "getTomcatExecEnvs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetTomcatExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetTomcatExecEnvsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/virtsaml2sp" : {
       "get" : {
         "operationId" : "getVirtSaml2Sp",
@@ -1907,13 +2031,6 @@
       "ExecutionEnvironmentDTO" : {
         "type" : "object",
         "properties" : {
-          "activations" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/ActivationDTO"
-            }
-          },
           "active" : {
             "type" : "boolean"
           },
@@ -2844,6 +2961,54 @@
           }
         }
       },
+      "GetTomcatExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetTomcatExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "tomcatExecEnv" : {
+            "$ref" : "#/components/schemas/TomcatExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetTomcatExecEnvsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "tomcatExecEnv" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/TomcatExecutionEnvironmentDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetTypesRes" : {
         "type" : "object",
         "properties" : {
@@ -3245,13 +3410,6 @@
           },
           "dashboardUrl" : {
             "type" : "string"
-          },
-          "delegatedAuthentications" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
-            }
           },
           "description" : {
             "type" : "string"
@@ -3700,6 +3858,13 @@
           },
           "identityAppliance" : {
             "$ref" : "#/components/schemas/IdentityApplianceDefinitionDTO"
+          },
+          "identityLookups" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityLookupDTO"
+            }
           },
           "identityMappingPolicy" : {
             "$ref" : "#/components/schemas/IdentityMappingPolicyDTO"
@@ -4521,6 +4686,34 @@
           }
         }
       },
+      "StoreTomcatExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "tomcatExecEnv" : {
+            "$ref" : "#/components/schemas/TomcatExecutionEnvironmentDTO"
+          }
+        }
+      },
+      "StoreTomcatExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "tomcatExecEnv" : {
+            "$ref" : "#/components/schemas/TomcatExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "StoreVirtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
@@ -4578,6 +4771,70 @@
           "type" : {
             "type" : "string",
             "enum" : [ "EMAIL", "PRINCIPAL", "ATTRIBUTE", "CUSTOM" ]
+          }
+        }
+      },
+      "TomcatExecutionEnvironmentDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activations" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ActivationDTO"
+            }
+          },
+          "active" : {
+            "type" : "boolean"
+          },
+          "bindingLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "installDemoApps" : {
+            "type" : "boolean"
+          },
+          "installUri" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overwriteOriginalSetup" : {
+            "type" : "boolean"
+          },
+          "platformId" : {
+            "type" : "string"
+          },
+          "targetJDK" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "LOCAL", "REMOTE" ]
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
           }
         }
       },

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **FederatedConnectionsB** | Pointer to [**[]FederatedConnectionDTO**](FederatedConnectionDTO.md) |  | [optional] 
 **Id** | Pointer to **int64** |  | [optional] 
 **IdentityAppliance** | Pointer to [**IdentityApplianceDefinitionDTO**](IdentityApplianceDefinitionDTO.md) |  | [optional] 
+**IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
 **IdentityMappingPolicy** | Pointer to [**IdentityMappingPolicyDTO**](IdentityMappingPolicyDTO.md) |  | [optional] 
 **IsRemote** | Pointer to **bool** |  | [optional] 
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
@@ -457,6 +458,31 @@ SetIdentityAppliance sets IdentityAppliance field to given value.
 `func (o *InternalSaml2ServiceProviderDTO) HasIdentityAppliance() bool`
 
 HasIdentityAppliance returns a boolean if a field has been set.
+
+### GetIdentityLookups
+
+`func (o *InternalSaml2ServiceProviderDTO) GetIdentityLookups() []IdentityLookupDTO`
+
+GetIdentityLookups returns the IdentityLookups field if non-nil, zero value otherwise.
+
+### GetIdentityLookupsOk
+
+`func (o *InternalSaml2ServiceProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool)`
+
+GetIdentityLookupsOk returns a tuple with the IdentityLookups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentityLookups
+
+`func (o *InternalSaml2ServiceProviderDTO) SetIdentityLookups(v []IdentityLookupDTO)`
+
+SetIdentityLookups sets IdentityLookups field to given value.
+
+### HasIdentityLookups
+
+`func (o *InternalSaml2ServiceProviderDTO) HasIdentityLookups() bool`
+
+HasIdentityLookups returns a boolean if a field has been set.
 
 ### GetIdentityMappingPolicy
 

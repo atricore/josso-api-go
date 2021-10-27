@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Activations** | Pointer to [**[]ActivationDTO**](ActivationDTO.md) |  | [optional] 
 **Active** | Pointer to **bool** |  | [optional] 
 **BindingLocation** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -40,31 +39,6 @@ will change when the set of required properties is changed
 NewExecutionEnvironmentDTOWithDefaults instantiates a new ExecutionEnvironmentDTO object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetActivations
-
-`func (o *ExecutionEnvironmentDTO) GetActivations() []ActivationDTO`
-
-GetActivations returns the Activations field if non-nil, zero value otherwise.
-
-### GetActivationsOk
-
-`func (o *ExecutionEnvironmentDTO) GetActivationsOk() (*[]ActivationDTO, bool)`
-
-GetActivationsOk returns a tuple with the Activations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActivations
-
-`func (o *ExecutionEnvironmentDTO) SetActivations(v []ActivationDTO)`
-
-SetActivations sets Activations field to given value.
-
-### HasActivations
-
-`func (o *ExecutionEnvironmentDTO) HasActivations() bool`
-
-HasActivations returns a boolean if a field has been set.
 
 ### GetActive
 

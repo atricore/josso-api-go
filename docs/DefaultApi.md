@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
+[**CreateTomcatExecEnv**](DefaultApi.md#CreateTomcatExecEnv) | **Post** /iam-deploy/tomcatexecenv | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
 [**DeleteDbIdVault**](DefaultApi.md#DeleteDbIdVault) | **Delete** /iam-deploy/dbidvault | 
@@ -23,6 +24,7 @@ Method | HTTP request | Description
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
+[**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetApplianceState**](DefaultApi.md#GetApplianceState) | **Get** /iam-deploy/appliance/state | 
@@ -43,6 +45,8 @@ Method | HTTP request | Description
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
+[**GetTomcatExecEnvs**](DefaultApi.md#GetTomcatExecEnvs) | **Get** /iam-deploy/tomcatexecenvs | 
 [**GetTypes**](DefaultApi.md#GetTypes) | **Get** /iam-deploy/noop/types | 
 [**GetVirtSaml2Sp**](DefaultApi.md#GetVirtSaml2Sp) | **Get** /iam-deploy/virtsaml2sp | 
 [**GetVirtSaml2Sps**](DefaultApi.md#GetVirtSaml2Sps) | **Get** /iam-deploy/virtsaml2sps | 
@@ -60,6 +64,7 @@ Method | HTTP request | Description
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
+[**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
 
 
 
@@ -624,6 +629,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateTomcatExecEnv
+
+> StoreTomcatExecEnvRes CreateTomcatExecEnv(ctx).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeTomcatExecEnvReq := *openapiclient.NewStoreTomcatExecEnvReq() // StoreTomcatExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.CreateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateTomcatExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateTomcatExecEnv`: StoreTomcatExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateTomcatExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateTomcatExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeTomcatExecEnvReq** | [**StoreTomcatExecEnvReq**](StoreTomcatExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreTomcatExecEnvRes**](StoreTomcatExecEnvRes.md)
 
 ### Authorization
 
@@ -1255,6 +1324,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteOidcRpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteTomcatExecEnv
+
+> DeleteRes DeleteTomcatExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.DeleteTomcatExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteTomcatExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteTomcatExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteTomcatExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteTomcatExecEnvRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -2559,6 +2692,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetTomcatExecEnv
+
+> GetTomcatExecEnvRes GetTomcatExecEnv(ctx).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getTomcatExecEnvReq := *openapiclient.NewGetTomcatExecEnvReq() // GetTomcatExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetTomcatExecEnv(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTomcatExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetTomcatExecEnv`: GetTomcatExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetTomcatExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetTomcatExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getTomcatExecEnvReq** | [**GetTomcatExecEnvReq**](GetTomcatExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetTomcatExecEnvRes**](GetTomcatExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetTomcatExecEnvs
+
+> GetTomcatExecEnvsRes GetTomcatExecEnvs(ctx).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getTomcatExecEnvReq := *openapiclient.NewGetTomcatExecEnvReq() // GetTomcatExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.GetTomcatExecEnvs(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTomcatExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetTomcatExecEnvs`: GetTomcatExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetTomcatExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetTomcatExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getTomcatExecEnvReq** | [**GetTomcatExecEnvReq**](GetTomcatExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetTomcatExecEnvsRes**](GetTomcatExecEnvsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetTypes
 
 > GetTypesRes GetTypes(ctx).Execute()
@@ -3627,6 +3888,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateTomcatExecEnv
+
+> StoreTomcatExecEnvRes UpdateTomcatExecEnv(ctx).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeTomcatExecEnvReq := *openapiclient.NewStoreTomcatExecEnvReq() // StoreTomcatExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.UpdateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateTomcatExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateTomcatExecEnv`: StoreTomcatExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateTomcatExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateTomcatExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeTomcatExecEnvReq** | [**StoreTomcatExecEnvReq**](StoreTomcatExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreTomcatExecEnvRes**](StoreTomcatExecEnvRes.md)
 
 ### Authorization
 
