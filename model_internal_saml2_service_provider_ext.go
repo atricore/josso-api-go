@@ -70,23 +70,18 @@ func (i *InternalSaml2ServiceProviderDTO) SetSamlR2SPConfig(spCfg *SamlR2SPConfi
 
 }
 
-func (idpCfg *SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
-	return nil, errors.New("not implemented: ")
-}
-
-func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
-	return nil, errors.New("not implemented: ")
-}
-
 func (p *InternalSaml2ServiceProviderDTO) GetIdentityLookup(name string) *IdentityLookupDTO {
+	// TODO : implment me
 	return nil
 }
 
 func (p *InternalSaml2ServiceProviderDTO) AddIdentityLookup(name string) (IdentityLookupDTO, error) {
+	// TODO : implment me
 	var result IdentityLookupDTO
 	return result, errors.New("not implemented: ")
 }
 
 func (p *InternalSaml2ServiceProviderDTO) RemoveIdentityLookup(name string) bool {
+	// TODO : implment me
 	return false
 }
