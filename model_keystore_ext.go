@@ -4,7 +4,9 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 
 	storeProps := make(map[string]interface{})
 
-	storeProps["@id"] = store.AdditionalProperties["@id"].(int)
+	if store.AdditionalProperties["@id"] != nil {
+		storeProps["@id"] = store.AdditionalProperties["@id"].(int)
+	}
 	storeProps["certificateAlias"] = store.GetCertificateAlias
 	storeProps["displayName"] = store.GetDisplayName()
 	storeProps["elementId"] = store.GetElementId()
@@ -37,14 +39,23 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 
 	store := NewKeystoreDTO()
 	store.AdditionalProperties = make(map[string]interface{})
-
 	store.AdditionalProperties["@id"] = storeId
+
+	if props["displayName"] != nil {
+		store.SetDisplayName((props["displayName"].(string)))
+	}
+	if props["elementId"] != nil {
+		store.SetElementId((props["elementId"].(string)))
+	}
+	if props["id"] != nil {
+		store.SetId((props["id"].(int64)))
+	}
+	if props["name"] != nil {
+		store.SetName((props["name"].(string)))
+	}
+
 	store.SetCertificateAlias((props["certificateAlias"].(string)))
-	store.SetDisplayName((props["displayName"].(string)))
-	store.SetElementId((props["elementId"].(string)))
-	store.SetId((props["id"].(int64)))
 	store.SetKeystorePassOnly((props["keystorePassOnly"].(bool)))
-	store.SetName((props["name"].(string)))
 	store.SetPassword((props["password"].(string)))
 	store.SetPrivateKeyName((props["privateKeyName"].(string)))
 	store.SetPrivateKeyPassword((props["privateKeyPassword"].(string)))
