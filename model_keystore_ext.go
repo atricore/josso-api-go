@@ -63,3 +63,15 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 
 	return store
 }
+
+func NewKeystoreDTOWithOK() *KeystoreDTO {
+	this := KeystoreDTO{}
+	this.AdditionalProperties = make(map[string]interface{})
+	this.AdditionalProperties["@c"] = ".KeystoreDTO"
+
+	this.Store = NewResourceDTO()
+	this.Store.AdditionalProperties = map[string]interface{}{}
+	this.Store.AdditionalProperties["@c"] = ".ResourceDTO"
+
+	return &this
+}

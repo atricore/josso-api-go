@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct 29 13:45:39 2021
+# Make data base, printed on Fri Oct 29 14:50:38 2021
 
 # Variables
 
@@ -23,7 +23,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-45514847-6e71-4424-bfc9-ca9555ae7587.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-55b6923d-d44f-4304-85b5-2d91f89acd3f.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -111,7 +111,7 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 11954
+VSCODE_PID = 196720
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -235,6 +235,7 @@ XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
+ 
 HOME = /home/sgonzalez
 # environment
 ELECTRON_RUN_AS_NODE = 1
@@ -269,9 +270,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 152 files, no impossibilities.
+# . (device 2065, inode 9188680): 153 files, no impossibilities.
 
-# 152 files, no impossibilities in 1 directories.
+# 153 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -303,7 +304,6 @@ dep:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 16):
- 
 	go mod tidy
 	go mod vendor
 
@@ -342,12 +342,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 162 / storage = 4385 B / avg = 27 B
-# current buf: size = 8162 B / used = 4385 B / count = 162 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 163 / storage = 4416 B / avg = 27 B
+# current buf: size = 8162 B / used = 4416 B / count = 163 / avg = 27 B
 
-# strcache performance: lookups = 172 / hit rate = 5%
+# strcache performance: lookups = 173 / hit rate = 5%
 # hash-table stats:
-# Load=162/8192=2%, Rehash=0, Collisions=2/172=1%
-# Finished Make data base on Fri Oct 29 13:45:39 2021
+# Load=163/8192=2%, Rehash=0, Collisions=2/173=1%
+# Finished Make data base on Fri Oct 29 14:50:38 2021
 
  
