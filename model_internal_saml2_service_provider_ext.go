@@ -1,6 +1,9 @@
 package jossoappi
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func (i *InternalSaml2ServiceProviderDTO) GetSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 
@@ -65,4 +68,25 @@ func (i *InternalSaml2ServiceProviderDTO) SetSamlR2SPConfig(spCfg *SamlR2SPConfi
 
 	return nil
 
+}
+
+func (idpCfg *SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
+	return nil, errors.New("not implemented: ")
+}
+
+func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
+	return nil, errors.New("not implemented: ")
+}
+
+func (p *InternalSaml2ServiceProviderDTO) GetIdentityLookup(name string) *IdentityLookupDTO {
+	return nil
+}
+
+func (p *InternalSaml2ServiceProviderDTO) AddIdentityLookup(name string) (IdentityLookupDTO, error) {
+	var result IdentityLookupDTO
+	return result, errors.New("not implemented: ")
+}
+
+func (p *InternalSaml2ServiceProviderDTO) RemoveIdentityLookup(name string) bool {
+	return false
 }
