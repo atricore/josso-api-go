@@ -7,7 +7,7 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 	if store.AdditionalProperties["@id"] != nil {
 		storeProps["@id"] = store.AdditionalProperties["@id"].(int)
 	}
-	storeProps["certificateAlias"] = store.GetCertificateAlias
+	storeProps["certificateAlias"] = store.GetCertificateAlias()
 	storeProps["displayName"] = store.GetDisplayName()
 	storeProps["elementId"] = store.GetElementId()
 	storeProps["id"] = store.GetId()
