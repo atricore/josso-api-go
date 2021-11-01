@@ -33,6 +33,12 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 	smlr2.Id = cfg.Id
 	smlr2.Name = cfg.Name
 
+	if !*smlr2.UseSampleStore && !*smlr2.UseSystemStore {
+		storeProps := toKeyStoreMap(smlr2.GetSigner())
+		smlr2.AdditionalProperties["signer"] = storeProps
+		smlr2.AdditionalProperties["encrypter"] = storeProps["@id"]
+	}
+
 	return &smlr2, nil
 
 }
