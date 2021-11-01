@@ -22,8 +22,19 @@ func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error
 }
 
 func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
-	// TODO : implment me
-	return nil, errors.New("not implemented: ")
+	var smlr2 SamlR2SPConfigDTO
+	smlr2.AdditionalProperties = make(map[string]interface{})
+	// Build specific type
+	smlr2.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
+	smlr2.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
+
+	smlr2.Description = cfg.Description
+	smlr2.ElementId = cfg.ElementId
+	smlr2.Id = cfg.Id
+	smlr2.Name = cfg.Name
+
+	return &smlr2, nil
+
 }
 
 func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
