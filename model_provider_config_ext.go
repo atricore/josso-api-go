@@ -22,24 +22,49 @@ func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error
 }
 
 func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
-	var smlr2 SamlR2SPConfigDTO
-	smlr2.AdditionalProperties = make(map[string]interface{})
-	// Build specific type
-	smlr2.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
-	smlr2.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
+	var spCfg *SamlR2SPConfigDTO
 
-	smlr2.Description = cfg.Description
-	smlr2.ElementId = cfg.ElementId
-	smlr2.Id = cfg.Id
-	smlr2.Name = cfg.Name
+	spCfg.AdditionalProperties = make(map[string]interface{})
 
-	if !*smlr2.UseSampleStore && !*smlr2.UseSystemStore {
-		storeProps := toKeyStoreMap(smlr2.GetSigner())
-		smlr2.AdditionalProperties["signer"] = storeProps
-		smlr2.AdditionalProperties["encrypter"] = storeProps["@id"]
+	// @id and @c properties
+	class := cfg.AdditionalProperties["@c"]
+	if class == nil {
+		return spCfg, errors.New("class property not found (@c)")
 	}
 
-	return &smlr2, nil
+	if class != ".SamlR2SPConfigDTO" {
+		return spCfg, fmt.Errorf("invalid class %s", class)
+	}
+
+	// Build specific type
+	spCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
+	spCfg.AdditionalProperties["@c"] = class
+
+	spCfg.Description = cfg.Description
+	spCfg.DisplayName = cfg.DisplayName
+	spCfg.ElementId = cfg.ElementId
+	spCfg.Name = cfg.Name
+	spCfg.UseSampleStore = PtrBool(cfg.AdditionalProperties["useSampleStore"].(bool))
+	spCfg.UseSystemStore = PtrBool(cfg.AdditionalProperties["useSystemStore"].(bool))
+
+	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
+		// Get signer/encrypter
+		storeProps, storeId, err := cfg.GetStoreProps()
+		if err != nil {
+			return spCfg, err
+		}
+
+		if storeProps["@id"].(int) != storeId {
+			return spCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
+		}
+
+		store := toKeyStoreDTO(storeId, storeProps)
+		spCfg.Signer = store
+		spCfg.Encrypter = store
+
+	}
+
+	return spCfg, nil
 
 }
 

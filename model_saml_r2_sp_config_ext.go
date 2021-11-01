@@ -1,25 +1,25 @@
 package jossoappi
 
-func (idpCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
-	var prc ProviderConfigDTO
-	prc.AdditionalProperties = make(map[string]interface{})
+func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
+	var cfg ProviderConfigDTO
+	cfg.AdditionalProperties = make(map[string]interface{})
 	// Build specific type
-	prc.AdditionalProperties["@id"] = idpCfg.AdditionalProperties["@id"]
-	prc.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
+	cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
+	cfg.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
 
-	prc.Description = idpCfg.Description
-	prc.DisplayName = idpCfg.DisplayName
-	prc.ElementId = idpCfg.ElementId
-	prc.Name = idpCfg.Name
-	prc.AdditionalProperties["useSampleStore"] = idpCfg.UseSampleStore
-	prc.AdditionalProperties["useSystemStore"] = idpCfg.UseSystemStore
+	cfg.Description = spCfg.Description
+	cfg.DisplayName = spCfg.DisplayName
+	cfg.ElementId = spCfg.ElementId
+	cfg.Name = spCfg.Name
+	cfg.AdditionalProperties["useSampleStore"] = spCfg.UseSampleStore
+	cfg.AdditionalProperties["useSystemStore"] = spCfg.UseSystemStore
 
-	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
-		storeProps := toKeyStoreMap(idpCfg.GetSigner())
-		prc.AdditionalProperties["signer"] = storeProps
-		prc.AdditionalProperties["encrypter"] = storeProps["@id"]
+	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
+		storeProps := toKeyStoreMap(spCfg.GetSigner())
+		cfg.AdditionalProperties["signer"] = storeProps
+		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
 	}
 
-	return &prc, nil
+	return &cfg, nil
 
 }

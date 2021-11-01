@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct 29 14:50:38 2021
+# Make data base, printed on Mon Nov  1 13:02:18 2021
 
 # Variables
 
@@ -23,7 +21,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-55b6923d-d44f-4304-85b5-2d91f89acd3f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2b59f257-91cb-49e4-9fa5-e48b825d716a.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -111,7 +109,7 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 196720
+VSCODE_PID = 363587
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -235,7 +233,6 @@ XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
- 
 HOME = /home/sgonzalez
 # environment
 ELECTRON_RUN_AS_NODE = 1
@@ -285,6 +282,9 @@ generate:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
+ 
+make: *** No rule to make target 'all'.  Stop.
+ 
 	$(GENERATOR) generate -i $(SWAGGER_FILE) -g go -o . --additional-properties=packageName=$(PGK_NAME) --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
 
 default: build
@@ -348,6 +348,6 @@ test:
 # strcache performance: lookups = 173 / hit rate = 5%
 # hash-table stats:
 # Load=163/8192=2%, Rehash=0, Collisions=2/173=1%
-# Finished Make data base on Fri Oct 29 14:50:38 2021
+# Finished Make data base on Mon Nov  1 13:02:18 2021
 
  
