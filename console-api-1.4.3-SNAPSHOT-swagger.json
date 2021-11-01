@@ -248,6 +248,32 @@
         }
       }
     },
+    "/iam-deploy/appliance/validate" : {
+      "get" : {
+        "operationId" : "validateAppliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceStateRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliances" : {
       "get" : {
         "operationId" : "getAppliances",
@@ -1135,6 +1161,130 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/GetIntSaml2SpsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/jossors" : {
+      "get" : {
+        "operationId" : "getJossoRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetJossoRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetJossoRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "udpateJossoRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreJossoRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreJossoRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createJossoRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreJossoRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreJossoRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteJossoRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/jossorss" : {
+      "get" : {
+        "operationId" : "getJossoRss",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetJossoRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetJossoRssRes"
                 }
               }
             }
@@ -2913,6 +3063,54 @@
           }
         }
       },
+      "GetJossoRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetJossoRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/JOSSO1ResourceDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetJossoRssRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resources" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/JOSSO1ResourceDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetOidcRpReq" : {
         "type" : "object",
         "properties" : {
@@ -3927,6 +4125,57 @@
           }
         }
       },
+      "JOSSO1ResourceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activation" : {
+            "$ref" : "#/components/schemas/ActivationDTO"
+          },
+          "defaultResource" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "ignoredWebResources" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "partnerAppLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "serviceConnection" : {
+            "$ref" : "#/components/schemas/ServiceConnectionDTO"
+          },
+          "sloLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "sloLocationEnabled" : {
+            "type" : "boolean"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "KeystoreDTO" : {
         "type" : "object",
         "properties" : {
@@ -4649,6 +4898,34 @@
           },
           "sp" : {
             "$ref" : "#/components/schemas/InternalSaml2ServiceProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StoreJossoRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/JOSSO1ResourceDTO"
+          }
+        }
+      },
+      "StoreJossoRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/JOSSO1ResourceDTO"
           },
           "validationErrors" : {
             "type" : "array",

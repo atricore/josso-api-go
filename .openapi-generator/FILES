@@ -55,6 +55,9 @@ docs/GetIdVaultsRes.md
 docs/GetIntSaml2SpReq.md
 docs/GetIntSaml2SpRes.md
 docs/GetIntSaml2SpsRes.md
+docs/GetJossoRsReq.md
+docs/GetJossoRsRes.md
+docs/GetJossoRssRes.md
 docs/GetOidcRpReq.md
 docs/GetOidcRpRes.md
 docs/GetOidcRpsRes.md
@@ -77,6 +80,7 @@ docs/ImportApplianceReq.md
 docs/ImportApplianceRes.md
 docs/InternalSaml2ServiceProviderChannelDTO.md
 docs/InternalSaml2ServiceProviderDTO.md
+docs/JOSSO1ResourceDTO.md
 docs/KeystoreDTO.md
 docs/LdapIdentitySourceDTO.md
 docs/LocationDTO.md
@@ -110,6 +114,8 @@ docs/StoreIdVaultReq.md
 docs/StoreIdVaultRes.md
 docs/StoreIntSaml2SpReq.md
 docs/StoreIntSaml2SpRes.md
+docs/StoreJossoRsReq.md
+docs/StoreJossoRsRes.md
 docs/StoreOidcRpReq.md
 docs/StoreOidcRpRes.md
 docs/StoreTomcatExecEnvReq.md
@@ -174,6 +180,9 @@ model_get_id_vaults_res.go
 model_get_int_saml2_sp_req.go
 model_get_int_saml2_sp_res.go
 model_get_int_saml2_sps_res.go
+model_get_josso_rs_req.go
+model_get_josso_rs_res.go
+model_get_josso_rss_res.go
 model_get_oidc_rp_req.go
 model_get_oidc_rp_res.go
 model_get_oidc_rps_res.go
@@ -196,6 +205,7 @@ model_import_appliance_req.go
 model_import_appliance_res.go
 model_internal_saml2_service_provider_channel_dto.go
 model_internal_saml2_service_provider_dto.go
+model_josso1_resource_dto.go
 model_keystore_dto.go
 model_ldap_identity_source_dto.go
 model_location_dto.go
@@ -229,6 +239,8 @@ model_store_id_vault_req.go
 model_store_id_vault_res.go
 model_store_int_saml2_sp_req.go
 model_store_int_saml2_sp_res.go
+model_store_josso_rs_req.go
+model_store_josso_rs_res.go
 model_store_oidc_rp_req.go
 model_store_oidc_rp_res.go
 model_store_tomcat_exec_env_req.go
