@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov  2 15:25:05 2021
+# Make data base, printed on Tue Nov  2 15:26:23 2021
 
 # Variables
 
@@ -21,7 +23,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bc9fe64f-1c59-4a13-890d-91fe70c19dad.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0c45eccb-f800-441e-87dc-54bd49c7231a.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -109,7 +111,7 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 664158
+VSCODE_PID = 670132
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -277,6 +279,7 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Files
 
+ 
 generate:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -286,9 +289,6 @@ generate:
 
 default: build
 #  Implicit rule search has not been done.
- 
-make: *** No rule to make target 'all'.  Stop.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -348,6 +348,6 @@ test:
 # strcache performance: lookups = 180 / hit rate = 5%
 # hash-table stats:
 # Load=170/8192=2%, Rehash=0, Collisions=2/180=1%
-# Finished Make data base on Tue Nov  2 15:25:05 2021
+# Finished Make data base on Tue Nov  2 15:26:23 2021
 
  
