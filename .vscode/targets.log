@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Nov  1 13:02:18 2021
+# Make data base, printed on Tue Nov  2 15:13:13 2021
 
 # Variables
 
@@ -21,7 +21,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2b59f257-91cb-49e4-9fa5-e48b825d716a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-333e1a61-e7c1-4b73-935f-987bb5699099.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -109,7 +109,7 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 363587
+VSCODE_PID = 623163
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -225,8 +225,6 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 1)
 GENERATOR = /opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh
 # environment
-GOMODCACHE = /home/sgonzalez/wa/git/go/pkg/mod
-# environment
 VISUAL = nano
 # environment
 XDG_SESSION_CLASS = user
@@ -240,8 +238,6 @@ ELECTRON_RUN_AS_NODE = 1
 VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.61.2-main.sock
 # environment
 XDG_SESSION_ID = 2
-# environment
-GOPROXY = https://proxy.golang.org,direct
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -259,7 +255,7 @@ WEBLOGIC_14_HOME = /opt/atricore/3rdparty/weblogic/14
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=124/1024=12%, Rehash=0, Collisions=10/154=6%
+# Load=122/1024=12%, Rehash=0, Collisions=10/152=7%
 
 # Pattern-specific Variable Values
 
@@ -267,9 +263,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 153 files, no impossibilities.
+# . (device 2065, inode 9188680): 159 files, no impossibilities.
 
-# 153 files, no impossibilities in 1 directories.
+# 159 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -281,10 +277,10 @@ generate:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 23):
  
 make: *** No rule to make target 'all'.  Stop.
  
+#  recipe to execute (from 'Makefile', line 23):
 	$(GENERATOR) generate -i $(SWAGGER_FILE) -g go -o . --additional-properties=packageName=$(PGK_NAME) --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
 
 default: build
@@ -342,12 +338,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 163 / storage = 4416 B / avg = 27 B
-# current buf: size = 8162 B / used = 4416 B / count = 163 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 169 / storage = 4580 B / avg = 27 B
+# current buf: size = 8162 B / used = 4580 B / count = 169 / avg = 27 B
 
-# strcache performance: lookups = 173 / hit rate = 5%
+# strcache performance: lookups = 179 / hit rate = 5%
 # hash-table stats:
-# Load=163/8192=2%, Rehash=0, Collisions=2/173=1%
-# Finished Make data base on Mon Nov  1 13:02:18 2021
+# Load=169/8192=2%, Rehash=0, Collisions=2/179=1%
+# Finished Make data base on Tue Nov  2 15:13:13 2021
 
  
