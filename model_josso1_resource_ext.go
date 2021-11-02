@@ -21,3 +21,25 @@ func (rs *JOSSO1ResourceDTO) RemoveActivation() bool {
 
 	return true
 }
+
+func (rs *JOSSO1ResourceDTO) NewServiceConnection(name string) (ServiceConnectionDTO, error) {
+	var sc ServiceConnectionDTO
+	sc.AdditionalProperties = make(map[string]interface{})
+	sc.AdditionalProperties["@c"] = ".ServiceConnectionDTO"
+	sc.SetName(name)
+	rs.SetServiceConnection(sc)
+
+	return sc, nil
+}
+
+func (rs *JOSSO1ResourceDTO) RemoveServiceConnection() bool {
+	// Remove an element from : p.IdentityLookups
+
+	if rs.ServiceConnection == nil {
+		return false
+	}
+
+	rs.ServiceConnection = nil
+
+	return true
+}
