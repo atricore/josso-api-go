@@ -3,7 +3,7 @@ package jossoappi
 func (rs *JOSSO1ResourceDTO) NewActivation(name string) (ActivationDTO, error) {
 	var ac ActivationDTO
 	ac.AdditionalProperties = make(map[string]interface{})
-	ac.AdditionalProperties["@c"] = ".ServiceConnectionDTO"
+	ac.AdditionalProperties["@c"] = ".ActivationDTO"
 	ac.SetName(name)
 	rs.SetActivation(ac)
 
