@@ -19,7 +19,7 @@ import (
 type DeleteRes struct {
 	Error *string `json:"error,omitempty"`
 	Removed *bool `json:"removed,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -112,12 +112,12 @@ func (o *DeleteRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DeleteRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *DeleteRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *DeleteRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *DeleteRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o DeleteRes) MarshalJSON() ([]byte, error) {

@@ -20,6 +20,9 @@ Name | Type | Description | Notes
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
 **MessageTtl** | Pointer to **int32** |  | [optional] 
 **MessageTtlTolerance** | Pointer to **int32** |  | [optional] 
+**MultivaluedAttrGroups** | Pointer to **bool** |  | [optional] 
+**MultivaluedAttrInternal** | Pointer to **bool** |  | [optional] 
+**MultivaluedAttrUserDefined** | Pointer to **bool** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **OverrideProviderSetup** | Pointer to **bool** |  | [optional] 
 **Preferred** | Pointer to **bool** |  | [optional] 
@@ -445,6 +448,81 @@ SetMessageTtlTolerance sets MessageTtlTolerance field to given value.
 `func (o *IdentityProviderChannelDTO) HasMessageTtlTolerance() bool`
 
 HasMessageTtlTolerance returns a boolean if a field has been set.
+
+### GetMultivaluedAttrGroups
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroups() bool`
+
+GetMultivaluedAttrGroups returns the MultivaluedAttrGroups field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrGroupsOk
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroupsOk() (*bool, bool)`
+
+GetMultivaluedAttrGroupsOk returns a tuple with the MultivaluedAttrGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrGroups
+
+`func (o *IdentityProviderChannelDTO) SetMultivaluedAttrGroups(v bool)`
+
+SetMultivaluedAttrGroups sets MultivaluedAttrGroups field to given value.
+
+### HasMultivaluedAttrGroups
+
+`func (o *IdentityProviderChannelDTO) HasMultivaluedAttrGroups() bool`
+
+HasMultivaluedAttrGroups returns a boolean if a field has been set.
+
+### GetMultivaluedAttrInternal
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternal() bool`
+
+GetMultivaluedAttrInternal returns the MultivaluedAttrInternal field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrInternalOk
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternalOk() (*bool, bool)`
+
+GetMultivaluedAttrInternalOk returns a tuple with the MultivaluedAttrInternal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrInternal
+
+`func (o *IdentityProviderChannelDTO) SetMultivaluedAttrInternal(v bool)`
+
+SetMultivaluedAttrInternal sets MultivaluedAttrInternal field to given value.
+
+### HasMultivaluedAttrInternal
+
+`func (o *IdentityProviderChannelDTO) HasMultivaluedAttrInternal() bool`
+
+HasMultivaluedAttrInternal returns a boolean if a field has been set.
+
+### GetMultivaluedAttrUserDefined
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefined() bool`
+
+GetMultivaluedAttrUserDefined returns the MultivaluedAttrUserDefined field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrUserDefinedOk
+
+`func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefinedOk() (*bool, bool)`
+
+GetMultivaluedAttrUserDefinedOk returns a tuple with the MultivaluedAttrUserDefined field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrUserDefined
+
+`func (o *IdentityProviderChannelDTO) SetMultivaluedAttrUserDefined(v bool)`
+
+SetMultivaluedAttrUserDefined sets MultivaluedAttrUserDefined field to given value.
+
+### HasMultivaluedAttrUserDefined
+
+`func (o *IdentityProviderChannelDTO) HasMultivaluedAttrUserDefined() bool`
+
+HasMultivaluedAttrUserDefined returns a boolean if a field has been set.
 
 ### GetName
 

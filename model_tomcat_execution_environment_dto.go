@@ -17,7 +17,7 @@ import (
 
 // TomcatExecutionEnvironmentDTO struct for TomcatExecutionEnvironmentDTO
 type TomcatExecutionEnvironmentDTO struct {
-	Activations *[]ActivationDTO `json:"activations,omitempty"`
+	Activations []ActivationDTO `json:"activations,omitempty"`
 	Active *bool `json:"active,omitempty"`
 	BindingLocation *LocationDTO `json:"bindingLocation,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -62,12 +62,12 @@ func (o *TomcatExecutionEnvironmentDTO) GetActivations() []ActivationDTO {
 		var ret []ActivationDTO
 		return ret
 	}
-	return *o.Activations
+	return o.Activations
 }
 
 // GetActivationsOk returns a tuple with the Activations field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *TomcatExecutionEnvironmentDTO) GetActivationsOk() (*[]ActivationDTO, bool) {
+func (o *TomcatExecutionEnvironmentDTO) GetActivationsOk() ([]ActivationDTO, bool) {
 	if o == nil || o.Activations == nil {
 		return nil, false
 	}
@@ -85,7 +85,7 @@ func (o *TomcatExecutionEnvironmentDTO) HasActivations() bool {
 
 // SetActivations gets a reference to the given []ActivationDTO and assigns it to the Activations field.
 func (o *TomcatExecutionEnvironmentDTO) SetActivations(v []ActivationDTO) {
-	o.Activations = &v
+	o.Activations = v
 }
 
 // GetActive returns the Active field value if set, zero value otherwise.

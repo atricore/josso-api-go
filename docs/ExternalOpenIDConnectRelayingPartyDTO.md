@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AccountLinkagePolicy** | Pointer to [**AccountLinkagePolicyDTO**](AccountLinkagePolicyDTO.md) |  | [optional] 
 **ActiveBindings** | Pointer to **[]string** |  | [optional] 
 **ActiveProfiles** | Pointer to **[]string** |  | [optional] 
 **AuthorizedURIs** | Pointer to **[]string** |  | [optional] 
@@ -27,6 +28,7 @@ Name | Type | Description | Notes
 **IdTokenSigningAlg** | Pointer to **string** |  | [optional] 
 **IdentityAppliance** | Pointer to [**IdentityApplianceDefinitionDTO**](IdentityApplianceDefinitionDTO.md) |  | [optional] 
 **IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
+**IdentityMappingPolicy** | Pointer to [**IdentityMappingPolicyDTO**](IdentityMappingPolicyDTO.md) |  | [optional] 
 **IsRemote** | Pointer to **bool** |  | [optional] 
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
 **Metadata** | Pointer to [**ResourceDTO**](ResourceDTO.md) |  | [optional] 
@@ -57,6 +59,31 @@ will change when the set of required properties is changed
 NewExternalOpenIDConnectRelayingPartyDTOWithDefaults instantiates a new ExternalOpenIDConnectRelayingPartyDTO object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAccountLinkagePolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicy() AccountLinkagePolicyDTO`
+
+GetAccountLinkagePolicy returns the AccountLinkagePolicy field if non-nil, zero value otherwise.
+
+### GetAccountLinkagePolicyOk
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicyOk() (*AccountLinkagePolicyDTO, bool)`
+
+GetAccountLinkagePolicyOk returns a tuple with the AccountLinkagePolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountLinkagePolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) SetAccountLinkagePolicy(v AccountLinkagePolicyDTO)`
+
+SetAccountLinkagePolicy sets AccountLinkagePolicy field to given value.
+
+### HasAccountLinkagePolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) HasAccountLinkagePolicy() bool`
+
+HasAccountLinkagePolicy returns a boolean if a field has been set.
 
 ### GetActiveBindings
 
@@ -632,6 +659,31 @@ SetIdentityLookups sets IdentityLookups field to given value.
 `func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityLookups() bool`
 
 HasIdentityLookups returns a boolean if a field has been set.
+
+### GetIdentityMappingPolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicy() IdentityMappingPolicyDTO`
+
+GetIdentityMappingPolicy returns the IdentityMappingPolicy field if non-nil, zero value otherwise.
+
+### GetIdentityMappingPolicyOk
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicyOk() (*IdentityMappingPolicyDTO, bool)`
+
+GetIdentityMappingPolicyOk returns a tuple with the IdentityMappingPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentityMappingPolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityMappingPolicy(v IdentityMappingPolicyDTO)`
+
+SetIdentityMappingPolicy sets IdentityMappingPolicy field to given value.
+
+### HasIdentityMappingPolicy
+
+`func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityMappingPolicy() bool`
+
+HasIdentityMappingPolicy returns a boolean if a field has been set.
 
 ### GetIsRemote
 

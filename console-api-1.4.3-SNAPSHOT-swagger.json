@@ -1864,6 +1864,70 @@
           }
         }
       },
+      "BasicAuthenticationDTO" : {
+        "type" : "object",
+        "properties" : {
+          "delegatedAuthentication" : {
+            "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "enabled" : {
+            "type" : "boolean"
+          },
+          "hashAlgorithm" : {
+            "type" : "string"
+          },
+          "hashEncoding" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "ignorePasswordCase" : {
+            "type" : "boolean"
+          },
+          "ignoreUsernameCase" : {
+            "type" : "boolean"
+          },
+          "impersonateUserPolicy" : {
+            "$ref" : "#/components/schemas/ImpersonateUserPolicyDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "priority" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "saltLength" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "saltPrefix" : {
+            "type" : "string"
+          },
+          "saltSuffix" : {
+            "type" : "string"
+          },
+          "simpleAuthnSaml2AuthnCtxClass" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "CustomClassDTO" : {
         "type" : "object",
         "properties" : {
@@ -2261,6 +2325,9 @@
       "ExternalOpenIDConnectRelayingPartyDTO" : {
         "type" : "object",
         "properties" : {
+          "accountLinkagePolicy" : {
+            "$ref" : "#/components/schemas/AccountLinkagePolicyDTO"
+          },
           "activeBindings" : {
             "uniqueItems" : true,
             "type" : "array",
@@ -2362,6 +2429,9 @@
             "items" : {
               "$ref" : "#/components/schemas/IdentityLookupDTO"
             }
+          },
+          "identityMappingPolicy" : {
+            "$ref" : "#/components/schemas/IdentityMappingPolicyDTO"
           },
           "isRemote" : {
             "type" : "boolean"
@@ -3210,6 +3280,9 @@
       "GetTypesRes" : {
         "type" : "object",
         "properties" : {
+          "basicAuthnMechanism" : {
+            "$ref" : "#/components/schemas/BasicAuthenticationDTO"
+          },
           "idpc" : {
             "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
           },
@@ -3551,6 +3624,15 @@
             "type" : "integer",
             "format" : "int32"
           },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
+          },
           "name" : {
             "type" : "string"
           },
@@ -3838,6 +3920,28 @@
           }
         }
       },
+      "ImpersonateUserPolicyDTO" : {
+        "type" : "object",
+        "properties" : {
+          "customImpersonateUserPolicy" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "impersonateUserPolicyType" : {
+            "type" : "string",
+            "enum" : [ "DISABLED", "CUSTOM" ]
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
       "ImportApplianceReq" : {
         "type" : "object",
         "properties" : {
@@ -4083,6 +4187,15 @@
           },
           "metadata" : {
             "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string"
@@ -4511,7 +4624,7 @@
           },
           "value" : {
             "type" : "string"
-          }
+            }
         }
       },
       "SamlR2IDPConfigDTO" : {
@@ -5384,6 +5497,15 @@
           },
           "metadata" : {
             "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string"

@@ -17,17 +17,17 @@ import (
 
 // ExternalSaml2ServiceProviderDTO struct for ExternalSaml2ServiceProviderDTO
 type ExternalSaml2ServiceProviderDTO struct {
-	ActiveBindings *[]string `json:"activeBindings,omitempty"`
-	ActiveProfiles *[]string `json:"activeProfiles,omitempty"`
+	ActiveBindings []string `json:"activeBindings,omitempty"`
+	ActiveProfiles []string `json:"activeProfiles,omitempty"`
 	Config *ProviderConfigDTO `json:"config,omitempty"`
 	Description *string `json:"description,omitempty"`
 	DisplayName *string `json:"displayName,omitempty"`
 	ElementId *string `json:"elementId,omitempty"`
-	FederatedConnectionsA *[]FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
-	FederatedConnectionsB *[]FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
+	FederatedConnectionsA []FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
+	FederatedConnectionsB []FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
 	Id *int64 `json:"id,omitempty"`
 	IdentityAppliance *IdentityApplianceDefinitionDTO `json:"identityAppliance,omitempty"`
-	IdentityLookups *[]IdentityLookupDTO `json:"identityLookups,omitempty"`
+	IdentityLookups []IdentityLookupDTO `json:"identityLookups,omitempty"`
 	IsRemote *bool `json:"isRemote,omitempty"`
 	Location *LocationDTO `json:"location,omitempty"`
 	Metadata *ResourceDTO `json:"metadata,omitempty"`
@@ -64,12 +64,12 @@ func (o *ExternalSaml2ServiceProviderDTO) GetActiveBindings() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveBindings
+	return o.ActiveBindings
 }
 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalSaml2ServiceProviderDTO) GetActiveBindingsOk() (*[]string, bool) {
+func (o *ExternalSaml2ServiceProviderDTO) GetActiveBindingsOk() ([]string, bool) {
 	if o == nil || o.ActiveBindings == nil {
 		return nil, false
 	}
@@ -87,7 +87,7 @@ func (o *ExternalSaml2ServiceProviderDTO) HasActiveBindings() bool {
 
 // SetActiveBindings gets a reference to the given []string and assigns it to the ActiveBindings field.
 func (o *ExternalSaml2ServiceProviderDTO) SetActiveBindings(v []string) {
-	o.ActiveBindings = &v
+	o.ActiveBindings = v
 }
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
@@ -96,12 +96,12 @@ func (o *ExternalSaml2ServiceProviderDTO) GetActiveProfiles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveProfiles
+	return o.ActiveProfiles
 }
 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalSaml2ServiceProviderDTO) GetActiveProfilesOk() (*[]string, bool) {
+func (o *ExternalSaml2ServiceProviderDTO) GetActiveProfilesOk() ([]string, bool) {
 	if o == nil || o.ActiveProfiles == nil {
 		return nil, false
 	}
@@ -119,7 +119,7 @@ func (o *ExternalSaml2ServiceProviderDTO) HasActiveProfiles() bool {
 
 // SetActiveProfiles gets a reference to the given []string and assigns it to the ActiveProfiles field.
 func (o *ExternalSaml2ServiceProviderDTO) SetActiveProfiles(v []string) {
-	o.ActiveProfiles = &v
+	o.ActiveProfiles = v
 }
 
 // GetConfig returns the Config field value if set, zero value otherwise.
@@ -256,12 +256,12 @@ func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsA() []Federated
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsA
+	return o.FederatedConnectionsA
 }
 
 // GetFederatedConnectionsAOk returns a tuple with the FederatedConnectionsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsAOk() (*[]FederatedConnectionDTO, bool) {
+func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsAOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsA == nil {
 		return nil, false
 	}
@@ -279,7 +279,7 @@ func (o *ExternalSaml2ServiceProviderDTO) HasFederatedConnectionsA() bool {
 
 // SetFederatedConnectionsA gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsA field.
 func (o *ExternalSaml2ServiceProviderDTO) SetFederatedConnectionsA(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsA = &v
+	o.FederatedConnectionsA = v
 }
 
 // GetFederatedConnectionsB returns the FederatedConnectionsB field value if set, zero value otherwise.
@@ -288,12 +288,12 @@ func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsB() []Federated
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsB
+	return o.FederatedConnectionsB
 }
 
 // GetFederatedConnectionsBOk returns a tuple with the FederatedConnectionsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsBOk() (*[]FederatedConnectionDTO, bool) {
+func (o *ExternalSaml2ServiceProviderDTO) GetFederatedConnectionsBOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsB == nil {
 		return nil, false
 	}
@@ -311,7 +311,7 @@ func (o *ExternalSaml2ServiceProviderDTO) HasFederatedConnectionsB() bool {
 
 // SetFederatedConnectionsB gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsB field.
 func (o *ExternalSaml2ServiceProviderDTO) SetFederatedConnectionsB(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsB = &v
+	o.FederatedConnectionsB = v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
@@ -384,12 +384,12 @@ func (o *ExternalSaml2ServiceProviderDTO) GetIdentityLookups() []IdentityLookupD
 		var ret []IdentityLookupDTO
 		return ret
 	}
-	return *o.IdentityLookups
+	return o.IdentityLookups
 }
 
 // GetIdentityLookupsOk returns a tuple with the IdentityLookups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalSaml2ServiceProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool) {
+func (o *ExternalSaml2ServiceProviderDTO) GetIdentityLookupsOk() ([]IdentityLookupDTO, bool) {
 	if o == nil || o.IdentityLookups == nil {
 		return nil, false
 	}
@@ -407,7 +407,7 @@ func (o *ExternalSaml2ServiceProviderDTO) HasIdentityLookups() bool {
 
 // SetIdentityLookups gets a reference to the given []IdentityLookupDTO and assigns it to the IdentityLookups field.
 func (o *ExternalSaml2ServiceProviderDTO) SetIdentityLookups(v []IdentityLookupDTO) {
-	o.IdentityLookups = &v
+	o.IdentityLookups = v
 }
 
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.

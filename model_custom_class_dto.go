@@ -21,7 +21,7 @@ type CustomClassDTO struct {
 	Fqcn *string `json:"fqcn,omitempty"`
 	OsgiFilter *string `json:"osgiFilter,omitempty"`
 	OsgiService *bool `json:"osgiService,omitempty"`
-	Properties *[]CustomClassPropertyDTO `json:"properties,omitempty"`
+	Properties []CustomClassPropertyDTO `json:"properties,omitempty"`
 	TimeoutSecs *int32 `json:"timeoutSecs,omitempty"`
 	Type *string `json:"type,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -180,12 +180,12 @@ func (o *CustomClassDTO) GetProperties() []CustomClassPropertyDTO {
 		var ret []CustomClassPropertyDTO
 		return ret
 	}
-	return *o.Properties
+	return o.Properties
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CustomClassDTO) GetPropertiesOk() (*[]CustomClassPropertyDTO, bool) {
+func (o *CustomClassDTO) GetPropertiesOk() ([]CustomClassPropertyDTO, bool) {
 	if o == nil || o.Properties == nil {
 		return nil, false
 	}
@@ -203,7 +203,7 @@ func (o *CustomClassDTO) HasProperties() bool {
 
 // SetProperties gets a reference to the given []CustomClassPropertyDTO and assigns it to the Properties field.
 func (o *CustomClassDTO) SetProperties(v []CustomClassPropertyDTO) {
-	o.Properties = &v
+	o.Properties = v
 }
 
 // GetTimeoutSecs returns the TimeoutSecs field value if set, zero value otherwise.

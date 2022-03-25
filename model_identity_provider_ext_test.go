@@ -24,13 +24,13 @@ func TestAddIdLookup(t *testing.T) {
 		return
 	}
 
-	for _, l = range *p.IdentityLookups {
+	for _, l = range p.IdentityLookups {
 		fmt.Printf("%s\n", l.GetName())
 	}
 
 	// 3. verify id lookups size and names
-	if len(*p.IdentityLookups) != 2 {
-		t.Errorf("Invalid number of identity lookups %d", len(*p.IdentityLookups))
+	if len(p.IdentityLookups) != 2 {
+		t.Errorf("Invalid number of identity lookups %d", len(p.IdentityLookups))
 		return
 	}
 
@@ -47,8 +47,8 @@ func TestRemoveIdLookup(t *testing.T) {
 	p.AddIdentityLookup("ilk-2")
 
 	// 3. verify id lookups size and names
-	if len(*p.IdentityLookups) != 2 {
-		t.Errorf("Invalid number of identity lookups %d", len(*p.IdentityLookups))
+	if len(p.IdentityLookups) != 2 {
+		t.Errorf("Invalid number of identity lookups %d", len(p.IdentityLookups))
 		return
 	}
 
@@ -61,13 +61,13 @@ func TestRemoveIdLookup(t *testing.T) {
 		return
 	}
 
-	if len(*p.IdentityLookups) != 1 {
-		t.Errorf("Invalid number of identity lookups %d", len(*p.IdentityLookups))
+	if len(p.IdentityLookups) != 1 {
+		t.Errorf("Invalid number of identity lookups %d", len(p.IdentityLookups))
 		return
 	}
 
-	if (*p.IdentityLookups)[0].GetName() != "ilk-2" {
-		t.Errorf("Invalid name %s", (*p.IdentityLookups)[0].GetName())
+	if (p.IdentityLookups)[0].GetName() != "ilk-2" {
+		t.Errorf("Invalid name %s", (p.IdentityLookups)[0].GetName())
 		return
 
 	}
@@ -77,8 +77,8 @@ func TestRemoveIdLookup(t *testing.T) {
 		t.Errorf("Sould have deleted ilk-2")
 		return
 	}
-	if len(*p.IdentityLookups) != 0 {
-		t.Errorf("Invalid number of identity lookups %d", len(*p.IdentityLookups))
+	if len(p.IdentityLookups) != 0 {
+		t.Errorf("Invalid number of identity lookups %d", len(p.IdentityLookups))
 		return
 	}
 

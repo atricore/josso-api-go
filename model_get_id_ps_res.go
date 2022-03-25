@@ -18,8 +18,8 @@ import (
 // GetIdPsRes struct for GetIdPsRes
 type GetIdPsRes struct {
 	Error *string `json:"error,omitempty"`
-	Idps *[]IdentityProviderDTO `json:"idps,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	Idps []IdentityProviderDTO `json:"idps,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetIdPsRes) GetIdps() []IdentityProviderDTO {
 		var ret []IdentityProviderDTO
 		return ret
 	}
-	return *o.Idps
+	return o.Idps
 }
 
 // GetIdpsOk returns a tuple with the Idps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdPsRes) GetIdpsOk() (*[]IdentityProviderDTO, bool) {
+func (o *GetIdPsRes) GetIdpsOk() ([]IdentityProviderDTO, bool) {
 	if o == nil || o.Idps == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetIdPsRes) HasIdps() bool {
 
 // SetIdps gets a reference to the given []IdentityProviderDTO and assigns it to the Idps field.
 func (o *GetIdPsRes) SetIdps(v []IdentityProviderDTO) {
-	o.Idps = &v
+	o.Idps = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetIdPsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdPsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIdPsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetIdPsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIdPsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIdPsRes) MarshalJSON() ([]byte, error) {

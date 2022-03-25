@@ -17,6 +17,7 @@ import (
 
 // GetTypesRes struct for GetTypesRes
 type GetTypesRes struct {
+	BasicAuthnMechanism *BasicAuthenticationDTO `json:"basicAuthnMechanism,omitempty"`
 	Idpc *IdentityProviderChannelDTO `json:"idpc,omitempty"`
 	Spc *InternalSaml2ServiceProviderChannelDTO `json:"spc,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -39,6 +40,38 @@ func NewGetTypesRes() *GetTypesRes {
 func NewGetTypesResWithDefaults() *GetTypesRes {
 	this := GetTypesRes{}
 	return &this
+}
+
+// GetBasicAuthnMechanism returns the BasicAuthnMechanism field value if set, zero value otherwise.
+func (o *GetTypesRes) GetBasicAuthnMechanism() BasicAuthenticationDTO {
+	if o == nil || o.BasicAuthnMechanism == nil {
+		var ret BasicAuthenticationDTO
+		return ret
+	}
+	return *o.BasicAuthnMechanism
+}
+
+// GetBasicAuthnMechanismOk returns a tuple with the BasicAuthnMechanism field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetBasicAuthnMechanismOk() (*BasicAuthenticationDTO, bool) {
+	if o == nil || o.BasicAuthnMechanism == nil {
+		return nil, false
+	}
+	return o.BasicAuthnMechanism, true
+}
+
+// HasBasicAuthnMechanism returns a boolean if a field has been set.
+func (o *GetTypesRes) HasBasicAuthnMechanism() bool {
+	if o != nil && o.BasicAuthnMechanism != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetBasicAuthnMechanism gets a reference to the given BasicAuthenticationDTO and assigns it to the BasicAuthnMechanism field.
+func (o *GetTypesRes) SetBasicAuthnMechanism(v BasicAuthenticationDTO) {
+	o.BasicAuthnMechanism = &v
 }
 
 // GetIdpc returns the Idpc field value if set, zero value otherwise.
@@ -107,6 +140,9 @@ func (o *GetTypesRes) SetSpc(v InternalSaml2ServiceProviderChannelDTO) {
 
 func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.BasicAuthnMechanism != nil {
+		toSerialize["basicAuthnMechanism"] = o.BasicAuthnMechanism
+	}
 	if o.Idpc != nil {
 		toSerialize["idpc"] = o.Idpc
 	}
@@ -131,6 +167,7 @@ func (o *GetTypesRes) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+		delete(additionalProperties, "basicAuthnMechanism")
 		delete(additionalProperties, "idpc")
 		delete(additionalProperties, "spc")
 		o.AdditionalProperties = additionalProperties

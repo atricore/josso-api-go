@@ -18,8 +18,8 @@ import (
 // GetJossoRssRes struct for GetJossoRssRes
 type GetJossoRssRes struct {
 	Error *string `json:"error,omitempty"`
-	Resources *[]JOSSO1ResourceDTO `json:"resources,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	Resources []JOSSO1ResourceDTO `json:"resources,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetJossoRssRes) GetResources() []JOSSO1ResourceDTO {
 		var ret []JOSSO1ResourceDTO
 		return ret
 	}
-	return *o.Resources
+	return o.Resources
 }
 
 // GetResourcesOk returns a tuple with the Resources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetJossoRssRes) GetResourcesOk() (*[]JOSSO1ResourceDTO, bool) {
+func (o *GetJossoRssRes) GetResourcesOk() ([]JOSSO1ResourceDTO, bool) {
 	if o == nil || o.Resources == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetJossoRssRes) HasResources() bool {
 
 // SetResources gets a reference to the given []JOSSO1ResourceDTO and assigns it to the Resources field.
 func (o *GetJossoRssRes) SetResources(v []JOSSO1ResourceDTO) {
-	o.Resources = &v
+	o.Resources = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetJossoRssRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetJossoRssRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetJossoRssRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetJossoRssRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetJossoRssRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetJossoRssRes) MarshalJSON() ([]byte, error) {

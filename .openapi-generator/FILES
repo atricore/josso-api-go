@@ -13,6 +13,7 @@ docs/AuthenticationAssertionEmissionPolicyDTO.md
 docs/AuthenticationContractDTO.md
 docs/AuthenticationMechanismDTO.md
 docs/AuthenticationServiceDTO.md
+docs/BasicAuthenticationDTO.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
 docs/DbIdentitySourceDTO.md
@@ -76,6 +77,7 @@ docs/IdentityMappingPolicyDTO.md
 docs/IdentityProviderChannelDTO.md
 docs/IdentityProviderDTO.md
 docs/IdentitySourceDTO.md
+docs/ImpersonateUserPolicyDTO.md
 docs/ImportApplianceReq.md
 docs/ImportApplianceRes.md
 docs/InternalSaml2ServiceProviderChannelDTO.md
@@ -139,6 +141,7 @@ model_authentication_assertion_emission_policy_dto.go
 model_authentication_contract_dto.go
 model_authentication_mechanism_dto.go
 model_authentication_service_dto.go
+model_basic_authentication_dto.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go
 model_db_identity_source_dto.go
@@ -201,6 +204,7 @@ model_identity_mapping_policy_dto.go
 model_identity_provider_channel_dto.go
 model_identity_provider_dto.go
 model_identity_source_dto.go
+model_impersonate_user_policy_dto.go
 model_import_appliance_req.go
 model_import_appliance_res.go
 model_internal_saml2_service_provider_channel_dto.go
