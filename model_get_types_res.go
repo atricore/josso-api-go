@@ -20,6 +20,7 @@ type GetTypesRes struct {
 	BasicAuthnMechanism *BasicAuthenticationDTO `json:"basicAuthnMechanism,omitempty"`
 	Idpc *IdentityProviderChannelDTO `json:"idpc,omitempty"`
 	Spc *InternalSaml2ServiceProviderChannelDTO `json:"spc,omitempty"`
+	TotpAuthnSvc *TOTPAuthenticationServiceDTO `json:"totpAuthnSvc,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -138,6 +139,38 @@ func (o *GetTypesRes) SetSpc(v InternalSaml2ServiceProviderChannelDTO) {
 	o.Spc = &v
 }
 
+// GetTotpAuthnSvc returns the TotpAuthnSvc field value if set, zero value otherwise.
+func (o *GetTypesRes) GetTotpAuthnSvc() TOTPAuthenticationServiceDTO {
+	if o == nil || o.TotpAuthnSvc == nil {
+		var ret TOTPAuthenticationServiceDTO
+		return ret
+	}
+	return *o.TotpAuthnSvc
+}
+
+// GetTotpAuthnSvcOk returns a tuple with the TotpAuthnSvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetTotpAuthnSvcOk() (*TOTPAuthenticationServiceDTO, bool) {
+	if o == nil || o.TotpAuthnSvc == nil {
+		return nil, false
+	}
+	return o.TotpAuthnSvc, true
+}
+
+// HasTotpAuthnSvc returns a boolean if a field has been set.
+func (o *GetTypesRes) HasTotpAuthnSvc() bool {
+	if o != nil && o.TotpAuthnSvc != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetTotpAuthnSvc gets a reference to the given TOTPAuthenticationServiceDTO and assigns it to the TotpAuthnSvc field.
+func (o *GetTypesRes) SetTotpAuthnSvc(v TOTPAuthenticationServiceDTO) {
+	o.TotpAuthnSvc = &v
+}
+
 func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.BasicAuthnMechanism != nil {
@@ -148,6 +181,9 @@ func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	}
 	if o.Spc != nil {
 		toSerialize["spc"] = o.Spc
+	}
+	if o.TotpAuthnSvc != nil {
+		toSerialize["totpAuthnSvc"] = o.TotpAuthnSvc
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -170,6 +206,7 @@ func (o *GetTypesRes) UnmarshalJSON(bytes []byte) (err error) {
 		delete(additionalProperties, "basicAuthnMechanism")
 		delete(additionalProperties, "idpc")
 		delete(additionalProperties, "spc")
+		delete(additionalProperties, "totpAuthnSvc")
 		o.AdditionalProperties = additionalProperties
 	}
 
