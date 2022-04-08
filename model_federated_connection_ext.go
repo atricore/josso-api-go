@@ -53,7 +53,7 @@ func (f *FederatedConnectionDTO) SetIDPChannel(idpc *IdentityProviderChannelDTO)
 
 	c.AdditionalProperties = make(map[string]interface{})
 	c.AdditionalProperties["preferred"] = idpc.GetPreferred()
-	c.AdditionalProperties["@c"] = ".IdentityProviderChannel"
+	c.AdditionalProperties["@c"] = ".IdentityProviderChannelDTO"
 
 	if idpc.GetOverrideProviderSetup() {
 		c.AdditionalProperties["signatureHash"] = idpc.GetSignatureHash()
@@ -174,7 +174,7 @@ func (f *FederatedConnectionDTO) SetSPChannel(spc *InternalSaml2ServiceProviderC
 	c.SetOverrideProviderSetup(spc.GetOverrideProviderSetup())
 
 	c.AdditionalProperties = make(map[string]interface{})
-	c.AdditionalProperties["@c"] = ".InternalSaml2ServiceProviderChannel"
+	c.AdditionalProperties["@c"] = ".InternalSaml2ServiceProviderChannelDTO"
 
 	if spc.GetOverrideProviderSetup() {
 		c.AdditionalProperties["emissionPolicy"] = toEmissionPolicyMap(spc.GetEmissionPolicy())
