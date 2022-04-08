@@ -144,6 +144,58 @@
         }
       }
     },
+    "/iam-deploy/appliance-container" : {
+      "get" : {
+        "operationId" : "getApplianceContainer",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceContainerRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/appliance-containers" : {
+      "get" : {
+        "operationId" : "getApplianceContainers",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceContainersRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliance/import" : {
       "post" : {
         "operationId" : "importAppliance",
@@ -1864,6 +1916,70 @@
           }
         }
       },
+      "BasicAuthenticationDTO" : {
+        "type" : "object",
+        "properties" : {
+          "delegatedAuthentication" : {
+            "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "enabled" : {
+            "type" : "boolean"
+          },
+          "hashAlgorithm" : {
+            "type" : "string"
+          },
+          "hashEncoding" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "ignorePasswordCase" : {
+            "type" : "boolean"
+          },
+          "ignoreUsernameCase" : {
+            "type" : "boolean"
+          },
+          "impersonateUserPolicy" : {
+            "$ref" : "#/components/schemas/ImpersonateUserPolicyDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "priority" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "saltLength" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "saltPrefix" : {
+            "type" : "string"
+          },
+          "saltSuffix" : {
+            "type" : "string"
+          },
+          "simpleAuthnSaml2AuthnCtxClass" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "CustomClassDTO" : {
         "type" : "object",
         "properties" : {
@@ -2261,6 +2377,9 @@
       "ExternalOpenIDConnectRelayingPartyDTO" : {
         "type" : "object",
         "properties" : {
+          "accountLinkagePolicy" : {
+            "$ref" : "#/components/schemas/AccountLinkagePolicyDTO"
+          },
           "activeBindings" : {
             "uniqueItems" : true,
             "type" : "array",
@@ -2362,6 +2481,9 @@
             "items" : {
               "$ref" : "#/components/schemas/IdentityLookupDTO"
             }
+          },
+          "identityMappingPolicy" : {
+            "$ref" : "#/components/schemas/IdentityMappingPolicyDTO"
           },
           "isRemote" : {
             "type" : "boolean"
@@ -2646,6 +2768,43 @@
           "y" : {
             "type" : "number",
             "format" : "double"
+          }
+        }
+      },
+      "GetApplianceContainerRes" : {
+        "type" : "object",
+        "properties" : {
+          "appliance" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDTO"
+          },
+          "error" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetApplianceContainersRes" : {
+        "type" : "object",
+        "properties" : {
+          "appliances" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityApplianceDTO"
+            }
+          },
+          "error" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },
@@ -3210,11 +3369,17 @@
       "GetTypesRes" : {
         "type" : "object",
         "properties" : {
+          "basicAuthnMechanism" : {
+            "$ref" : "#/components/schemas/BasicAuthenticationDTO"
+          },
           "idpc" : {
             "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
           },
           "spc" : {
             "$ref" : "#/components/schemas/InternalSaml2ServiceProviderChannelDTO"
+          },
+          "totpAuthnSvc" : {
+            "$ref" : "#/components/schemas/TOTPAuthenticationServiceDTO"
           }
         }
       },
@@ -3285,6 +3450,42 @@
             "type" : "string"
           },
           "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "IdentityApplianceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "idApplianceDefinition" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDefinitionDTO"
+          },
+          "idApplianceDefinitionBin" : {
+            "type" : "string"
+          },
+          "idApplianceDeployment" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDeploymentDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "state" : {
             "type" : "string"
           }
         }
@@ -3392,6 +3593,45 @@
           }
         }
       },
+      "IdentityApplianceDeploymentDTO" : {
+        "type" : "object",
+        "properties" : {
+          "deployedRevision" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "deploymentTime" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "featureName" : {
+            "type" : "string"
+          },
+          "featureUri" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "idaus" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityApplianceUnitDTO"
+            }
+          },
+          "state" : {
+            "type" : "string"
+          }
+        }
+      },
       "IdentityApplianceSecurityConfigDTO" : {
         "type" : "object",
         "properties" : {
@@ -3429,6 +3669,43 @@
             "type" : "string"
           },
           "saltValue" : {
+            "type" : "string"
+          }
+        }
+      },
+      "IdentityApplianceUnitDTO" : {
+        "type" : "object",
+        "properties" : {
+          "bundleName" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "group" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "providers" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ProviderDTO"
+            }
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "FEDERATION_UNIT", "PROVISIONING_UNIT" ]
+          },
+          "version" : {
             "type" : "string"
           }
         }
@@ -3550,6 +3827,15 @@
           "messageTtlTolerance" : {
             "type" : "integer",
             "format" : "int32"
+          },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string"
@@ -3838,6 +4124,28 @@
           }
         }
       },
+      "ImpersonateUserPolicyDTO" : {
+        "type" : "object",
+        "properties" : {
+          "customImpersonateUserPolicy" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "impersonateUserPolicyType" : {
+            "type" : "string",
+            "enum" : [ "DISABLED", "CUSTOM" ]
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
       "ImportApplianceReq" : {
         "type" : "object",
         "properties" : {
@@ -4083,6 +4391,15 @@
           },
           "metadata" : {
             "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string"
@@ -5051,6 +5368,52 @@
           }
         }
       },
+      "TOTPAuthenticationServiceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "crypto" : {
+            "type" : "string"
+          },
+          "delegatedAuthentications" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "returnDigits" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "secretCredential" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "TomcatExecutionEnvironmentDTO" : {
         "type" : "object",
         "properties" : {
@@ -5384,6 +5747,15 @@
           },
           "metadata" : {
             "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "multivaluedAttrGroups" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrInternal" : {
+            "type" : "boolean"
+          },
+          "multivaluedAttrUserDefined" : {
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string"

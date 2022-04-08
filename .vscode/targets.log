@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,10 +8,14 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov  2 16:06:09 2021
+# Make data base, printed on Thu Mar 31 13:43:47 2022
 
 # Variables
 
+# environment
+TMUX_PANE = %16
+# environment
+RUSTUP_HOME = /opt/atricore/tools/rust/rustup
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-openjdk
 # environment
@@ -21,13 +27,17 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-3a62aa97-8c00-4261-9522-1a3a085cd8ab.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-35398875-1799-4a97-b03a-bf3678c19dba.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
 LC_NUMERIC = en_US.UTF-8
 # environment
-VSCODE_CWD = /home/sgonzalez
+VSCODE_CWD = /wa/git/go/src/josso-api-go
+# environment
+WINDOWID = 4194306
+# environment
+DIRENV_WATCHES = eJxszs1KxDAQAOB3mXPZSTL57d2j4F08jJtZW8g2kMRWKr67R0H2AT74Xr_hhccCM-DBeJFtb1eY4Lnmsd4FZu2tt4YU6QmevtY-OsyjfcrP9AeXehfsH3U7uciJl1KvXLAv3ATz2mTbkUupB4pRViK9e3JJ6HZLTDFllSKLtpo4Zk7eRCYOLohXWufkQ_KaxBhy4VHMmX-xt98AAAD__yiyP_c=
 # environment
 LC_ADDRESS = en_US.UTF-8
 # default
@@ -43,7 +53,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /wa/git/go/src/josso-api-go
+PWD = /home/sgonzalez/wa/git/go/src/josso-api-go
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -61,13 +71,17 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/6cba118ac49a1b88332f312a8f67186f7f3c1643
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1764.sock
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
 # environment
 LANG = C
 # environment
 XAUTHORITY = /home/sgonzalez/.Xauthority
+# environment
+MY_VAR = x
 # default
 .LOADED := 
 # default
@@ -98,8 +112,6 @@ MFLAGS = -pqrR
 P9K_SSH = 0
 # environment
 XDG_SESSION_DESKTOP = 
-# environment
-VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=db4c294d-ca49-43af-a824-42cd80904202&iid=db4c294d-ca49-43af-a824-42cd80904202&sid=db4c294d-ca49-43af-a824-42cd80904202","uploadToServer":true}
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
 # automatic
@@ -109,9 +121,11 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 740264
+VSCODE_PID = 741279
 # environment
 XDG_SESSION_TYPE = x11
+# environment
+TMUX = /tmp/tmux-1000/default,1895,6
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -127,9 +141,9 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+P9K_TTY = old
 # environment
-BREAKPAD_DUMP_LOCATION = /home/sgonzalez/.config/Code/exthost Crash Reports
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile
@@ -137,13 +151,15 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 2
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/usr/lib/jvm/default/bin
+PATH = /data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/opt/atricore/tools/rust/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+# environment
+NIX_SSL_CERT_FILE = /etc/ssl/certs/ca-certificates.crt
 # default
 MAKEFILES := 
 # environment
@@ -155,11 +171,15 @@ MOTD_SHOWN = pam
 # environment
 LC_TIME = en_US.UTF-8
 # environment
+CARGO_HOME = /opt/atricore/tools/rust/cargo
+# environment
+tmux_conf_copy_to_os_clipboard = true
+# environment
 VSCODE_LOG_NATIVE = false
 # environment
-LINES = 24
+TERM_PROGRAM = tmux
 # environment
-GOPRIVATE = github.com/atricore/josso-api-go,github.com/atricore/josso-sdk-go
+GOPRIVATE = github.com/atricore/*,github.com/atricore/josso-api-go,github.com/atricore/josso-sdk-go,github.com/atricore/terraform-provider-siteminder,github.com/atricore/siteminder-rest-api
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # automatic
@@ -169,9 +189,9 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-WEBLOGIC_10_HOME = /opt/atricore/3rdparty/weblogic/10
+ALACRITTY_LOG = /tmp/Alacritty-1764.log
 # environment
-LS_COLORS = 
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
 MAVEN_OPTS = -Xmx4096m -XX:MaxPermSize=256m -Dmaven.test.skip=true
 # automatic
@@ -183,15 +203,13 @@ LESS = -R
 # environment
 DESKTOP_SESSION = qtile
 # environment
-WEBLOGIC_12_HOME = /opt/atricore/3rdparty/weblogic/12
-# environment
 ORIGINAL_XDG_CURRENT_DESKTOP = 
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 JOSSO_API_CLIENT_ID = idbus-f2f7244e-bbce-44ca-8b33-f5c0bde339f7
 # environment
-WEBLOGIC_9_2_HOME = /opt/atricore/3rdparty/weblogic/9.2
+DIRENV_FILE = /wa/.envrc
 # environment
 LOGNAME = sgonzalez
 # environment
@@ -201,7 +219,7 @@ XDG_VTNR = 1
 # environment
 HISTCONTROL = ignoreboth:erasedups
 # environment
-EDITOR = nano
+EDITOR = vim
 # environment
 DISPLAY = :0
 # environment
@@ -210,6 +228,10 @@ GTK_MODULES = canberra-gtk-module
 USER = sgonzalez
 # default
 MAKE_VERSION := 4.3
+# environment
+NIX_PROFILES = /nix/var/nix/profiles/default /home/sgonzalez/.nix-profile
+# environment
+DIRENV_DIR = -/wa
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
@@ -225,41 +247,54 @@ XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile', line 1)
 GENERATOR = /opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh
 # environment
+COLORTERM = truecolor
+# environment
+DIRENV_DIFF = eJxE0MGOqjAYQOF3-ddyVegVJZlFEQlCGRURCptGax0UUQIFQeO7T2Yxme05u-8FJRiv9wBuYLzAWgaLz4hZywAMUIaPPQx-m70kCzBg-NgP_4lbW_G_FeNw7iy2YIBwu_pZj73Owhu8MrWCrtNtSP7rR_WC7NH04so0nn6puR_EXjXRg5Gj4lBHtGJZxvncVyxTuLY8jEWCyK2oj8hOG1VKlOwmm0K0MlFWdX858Wo9w4KK7FQ72k5v-Nm9jr2WEtxqOHyqRXjId01pojKIzt5MaK47cVISWvb1uvWILO8ozXURzJMVuWc0bk75hnn7zsx6FDl-QZVOzqYYY4ux_tyvGf-AAfgJi_APTQfv93cAAAD__zetY10=
+# environment
 GOMODCACHE = /home/sgonzalez/wa/git/go/pkg/mod
 # environment
-VISUAL = nano
+VISUAL = vim
 # environment
 XDG_SESSION_CLASS = user
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/sgonzalez
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.61.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.65.2-main.sock
+# environment
+TERM = tmux-256color
 # environment
 XDG_SESSION_ID = 2
 # environment
 GOPROXY = https://proxy.golang.org,direct
+# environment
+is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+\/)?g?(view|n?vim?x?)(diff)?$'
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
-# environment
-COLUMNS = 80
 # default
 SUFFIXES := 
+# environment
+_P9K_TTY = /dev/pts/5
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # makefile (from 'Makefile', line 6)
 SWAGGER_FILE = ./console-api-1.4.3-SNAPSHOT-swagger.json
 # environment
-WEBLOGIC_14_HOME = /opt/atricore/3rdparty/weblogic/14
+TERM_PROGRAM_VERSION = 3.2a
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=124/1024=12%, Rehash=0, Collisions=10/154=6%
+# Load=140/1024=14%, Rehash=0, Collisions=14/170=8%
 
 # Pattern-specific Variable Values
 
@@ -267,9 +302,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 160 files, no impossibilities.
+# . (device 2065, inode 9188680): 163 files, no impossibilities.
 
-# 160 files, no impossibilities in 1 directories.
+# 163 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -292,9 +327,6 @@ default: build
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-make: *** No rule to make target 'all'.  Stop.
- 
 #  Last modified 2021-09-30 15:55:52.607027753
 #  File has been updated.
 #  Successfully updated.
@@ -342,12 +374,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 170 / storage = 4609 B / avg = 27 B
-# current buf: size = 8162 B / used = 4609 B / count = 170 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 173 / storage = 4720 B / avg = 27 B
+# current buf: size = 8162 B / used = 4720 B / count = 173 / avg = 27 B
 
-# strcache performance: lookups = 180 / hit rate = 5%
+# strcache performance: lookups = 183 / hit rate = 5%
 # hash-table stats:
-# Load=170/8192=2%, Rehash=0, Collisions=2/180=1%
-# Finished Make data base on Tue Nov  2 16:06:09 2021
+# Load=173/8192=2%, Rehash=0, Collisions=2/183=1%
+# Finished Make data base on Thu Mar 31 13:43:47 2022
 
  

@@ -18,8 +18,8 @@ import (
 // GetTomcatExecEnvsRes struct for GetTomcatExecEnvsRes
 type GetTomcatExecEnvsRes struct {
 	Error *string `json:"error,omitempty"`
-	TomcatExecEnv *[]TomcatExecutionEnvironmentDTO `json:"tomcatExecEnv,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	TomcatExecEnv []TomcatExecutionEnvironmentDTO `json:"tomcatExecEnv,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetTomcatExecEnvsRes) GetTomcatExecEnv() []TomcatExecutionEnvironmentDT
 		var ret []TomcatExecutionEnvironmentDTO
 		return ret
 	}
-	return *o.TomcatExecEnv
+	return o.TomcatExecEnv
 }
 
 // GetTomcatExecEnvOk returns a tuple with the TomcatExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTomcatExecEnvsRes) GetTomcatExecEnvOk() (*[]TomcatExecutionEnvironmentDTO, bool) {
+func (o *GetTomcatExecEnvsRes) GetTomcatExecEnvOk() ([]TomcatExecutionEnvironmentDTO, bool) {
 	if o == nil || o.TomcatExecEnv == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetTomcatExecEnvsRes) HasTomcatExecEnv() bool {
 
 // SetTomcatExecEnv gets a reference to the given []TomcatExecutionEnvironmentDTO and assigns it to the TomcatExecEnv field.
 func (o *GetTomcatExecEnvsRes) SetTomcatExecEnv(v []TomcatExecutionEnvironmentDTO) {
-	o.TomcatExecEnv = &v
+	o.TomcatExecEnv = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetTomcatExecEnvsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTomcatExecEnvsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetTomcatExecEnvsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetTomcatExecEnvsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetTomcatExecEnvsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetTomcatExecEnvsRes) MarshalJSON() ([]byte, error) {

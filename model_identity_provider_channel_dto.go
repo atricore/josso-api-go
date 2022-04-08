@@ -18,8 +18,8 @@ import (
 // IdentityProviderChannelDTO struct for IdentityProviderChannelDTO
 type IdentityProviderChannelDTO struct {
 	AccountLinkagePolicy *AccountLinkagePolicyDTO `json:"accountLinkagePolicy,omitempty"`
-	ActiveBindings *[]string `json:"activeBindings,omitempty"`
-	ActiveProfiles *[]string `json:"activeProfiles,omitempty"`
+	ActiveBindings []string `json:"activeBindings,omitempty"`
+	ActiveProfiles []string `json:"activeProfiles,omitempty"`
 	AuthenticationContract *AuthenticationContractDTO `json:"authenticationContract,omitempty"`
 	AuthenticationMechanism *AuthenticationMechanismDTO `json:"authenticationMechanism,omitempty"`
 	ConnectionA *FederatedConnectionDTO `json:"connectionA,omitempty"`
@@ -33,6 +33,9 @@ type IdentityProviderChannelDTO struct {
 	Location *LocationDTO `json:"location,omitempty"`
 	MessageTtl *int32 `json:"messageTtl,omitempty"`
 	MessageTtlTolerance *int32 `json:"messageTtlTolerance,omitempty"`
+	MultivaluedAttrGroups *bool `json:"multivaluedAttrGroups,omitempty"`
+	MultivaluedAttrInternal *bool `json:"multivaluedAttrInternal,omitempty"`
+	MultivaluedAttrUserDefined *bool `json:"multivaluedAttrUserDefined,omitempty"`
 	Name *string `json:"name,omitempty"`
 	OverrideProviderSetup *bool `json:"overrideProviderSetup,omitempty"`
 	Preferred *bool `json:"preferred,omitempty"`
@@ -99,12 +102,12 @@ func (o *IdentityProviderChannelDTO) GetActiveBindings() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveBindings
+	return o.ActiveBindings
 }
 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *IdentityProviderChannelDTO) GetActiveBindingsOk() (*[]string, bool) {
+func (o *IdentityProviderChannelDTO) GetActiveBindingsOk() ([]string, bool) {
 	if o == nil || o.ActiveBindings == nil {
 		return nil, false
 	}
@@ -122,7 +125,7 @@ func (o *IdentityProviderChannelDTO) HasActiveBindings() bool {
 
 // SetActiveBindings gets a reference to the given []string and assigns it to the ActiveBindings field.
 func (o *IdentityProviderChannelDTO) SetActiveBindings(v []string) {
-	o.ActiveBindings = &v
+	o.ActiveBindings = v
 }
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
@@ -131,12 +134,12 @@ func (o *IdentityProviderChannelDTO) GetActiveProfiles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveProfiles
+	return o.ActiveProfiles
 }
 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *IdentityProviderChannelDTO) GetActiveProfilesOk() (*[]string, bool) {
+func (o *IdentityProviderChannelDTO) GetActiveProfilesOk() ([]string, bool) {
 	if o == nil || o.ActiveProfiles == nil {
 		return nil, false
 	}
@@ -154,7 +157,7 @@ func (o *IdentityProviderChannelDTO) HasActiveProfiles() bool {
 
 // SetActiveProfiles gets a reference to the given []string and assigns it to the ActiveProfiles field.
 func (o *IdentityProviderChannelDTO) SetActiveProfiles(v []string) {
-	o.ActiveProfiles = &v
+	o.ActiveProfiles = v
 }
 
 // GetAuthenticationContract returns the AuthenticationContract field value if set, zero value otherwise.
@@ -573,6 +576,102 @@ func (o *IdentityProviderChannelDTO) SetMessageTtlTolerance(v int32) {
 	o.MessageTtlTolerance = &v
 }
 
+// GetMultivaluedAttrGroups returns the MultivaluedAttrGroups field value if set, zero value otherwise.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroups() bool {
+	if o == nil || o.MultivaluedAttrGroups == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrGroups
+}
+
+// GetMultivaluedAttrGroupsOk returns a tuple with the MultivaluedAttrGroups field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroupsOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrGroups == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrGroups, true
+}
+
+// HasMultivaluedAttrGroups returns a boolean if a field has been set.
+func (o *IdentityProviderChannelDTO) HasMultivaluedAttrGroups() bool {
+	if o != nil && o.MultivaluedAttrGroups != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrGroups gets a reference to the given bool and assigns it to the MultivaluedAttrGroups field.
+func (o *IdentityProviderChannelDTO) SetMultivaluedAttrGroups(v bool) {
+	o.MultivaluedAttrGroups = &v
+}
+
+// GetMultivaluedAttrInternal returns the MultivaluedAttrInternal field value if set, zero value otherwise.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternal() bool {
+	if o == nil || o.MultivaluedAttrInternal == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrInternal
+}
+
+// GetMultivaluedAttrInternalOk returns a tuple with the MultivaluedAttrInternal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternalOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrInternal == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrInternal, true
+}
+
+// HasMultivaluedAttrInternal returns a boolean if a field has been set.
+func (o *IdentityProviderChannelDTO) HasMultivaluedAttrInternal() bool {
+	if o != nil && o.MultivaluedAttrInternal != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrInternal gets a reference to the given bool and assigns it to the MultivaluedAttrInternal field.
+func (o *IdentityProviderChannelDTO) SetMultivaluedAttrInternal(v bool) {
+	o.MultivaluedAttrInternal = &v
+}
+
+// GetMultivaluedAttrUserDefined returns the MultivaluedAttrUserDefined field value if set, zero value otherwise.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefined() bool {
+	if o == nil || o.MultivaluedAttrUserDefined == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrUserDefined
+}
+
+// GetMultivaluedAttrUserDefinedOk returns a tuple with the MultivaluedAttrUserDefined field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefinedOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrUserDefined == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrUserDefined, true
+}
+
+// HasMultivaluedAttrUserDefined returns a boolean if a field has been set.
+func (o *IdentityProviderChannelDTO) HasMultivaluedAttrUserDefined() bool {
+	if o != nil && o.MultivaluedAttrUserDefined != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrUserDefined gets a reference to the given bool and assigns it to the MultivaluedAttrUserDefined field.
+func (o *IdentityProviderChannelDTO) SetMultivaluedAttrUserDefined(v bool) {
+	o.MultivaluedAttrUserDefined = &v
+}
+
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetName() string {
 	if o == nil || o.Name == nil {
@@ -815,6 +914,15 @@ func (o IdentityProviderChannelDTO) MarshalJSON() ([]byte, error) {
 	if o.MessageTtlTolerance != nil {
 		toSerialize["messageTtlTolerance"] = o.MessageTtlTolerance
 	}
+	if o.MultivaluedAttrGroups != nil {
+		toSerialize["multivaluedAttrGroups"] = o.MultivaluedAttrGroups
+	}
+	if o.MultivaluedAttrInternal != nil {
+		toSerialize["multivaluedAttrInternal"] = o.MultivaluedAttrInternal
+	}
+	if o.MultivaluedAttrUserDefined != nil {
+		toSerialize["multivaluedAttrUserDefined"] = o.MultivaluedAttrUserDefined
+	}
 	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
@@ -867,6 +975,9 @@ func (o *IdentityProviderChannelDTO) UnmarshalJSON(bytes []byte) (err error) {
 		delete(additionalProperties, "location")
 		delete(additionalProperties, "messageTtl")
 		delete(additionalProperties, "messageTtlTolerance")
+		delete(additionalProperties, "multivaluedAttrGroups")
+		delete(additionalProperties, "multivaluedAttrInternal")
+		delete(additionalProperties, "multivaluedAttrUserDefined")
 		delete(additionalProperties, "name")
 		delete(additionalProperties, "overrideProviderSetup")
 		delete(additionalProperties, "preferred")

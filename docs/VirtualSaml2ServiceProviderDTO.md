@@ -31,6 +31,9 @@ Name | Type | Description | Notes
 **MessageTtl** | Pointer to **int32** |  | [optional] 
 **MessageTtlTolerance** | Pointer to **int32** |  | [optional] 
 **Metadata** | Pointer to [**ResourceDTO**](ResourceDTO.md) |  | [optional] 
+**MultivaluedAttrGroups** | Pointer to **bool** |  | [optional] 
+**MultivaluedAttrInternal** | Pointer to **bool** |  | [optional] 
+**MultivaluedAttrUserDefined** | Pointer to **bool** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Oauth2Enabled** | Pointer to **bool** |  | [optional] 
 **Oauth2Key** | Pointer to **string** |  | [optional] 
@@ -749,6 +752,81 @@ SetMetadata sets Metadata field to given value.
 `func (o *VirtualSaml2ServiceProviderDTO) HasMetadata() bool`
 
 HasMetadata returns a boolean if a field has been set.
+
+### GetMultivaluedAttrGroups
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrGroups() bool`
+
+GetMultivaluedAttrGroups returns the MultivaluedAttrGroups field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrGroupsOk
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrGroupsOk() (*bool, bool)`
+
+GetMultivaluedAttrGroupsOk returns a tuple with the MultivaluedAttrGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrGroups
+
+`func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrGroups(v bool)`
+
+SetMultivaluedAttrGroups sets MultivaluedAttrGroups field to given value.
+
+### HasMultivaluedAttrGroups
+
+`func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrGroups() bool`
+
+HasMultivaluedAttrGroups returns a boolean if a field has been set.
+
+### GetMultivaluedAttrInternal
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrInternal() bool`
+
+GetMultivaluedAttrInternal returns the MultivaluedAttrInternal field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrInternalOk
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrInternalOk() (*bool, bool)`
+
+GetMultivaluedAttrInternalOk returns a tuple with the MultivaluedAttrInternal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrInternal
+
+`func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrInternal(v bool)`
+
+SetMultivaluedAttrInternal sets MultivaluedAttrInternal field to given value.
+
+### HasMultivaluedAttrInternal
+
+`func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrInternal() bool`
+
+HasMultivaluedAttrInternal returns a boolean if a field has been set.
+
+### GetMultivaluedAttrUserDefined
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrUserDefined() bool`
+
+GetMultivaluedAttrUserDefined returns the MultivaluedAttrUserDefined field if non-nil, zero value otherwise.
+
+### GetMultivaluedAttrUserDefinedOk
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrUserDefinedOk() (*bool, bool)`
+
+GetMultivaluedAttrUserDefinedOk returns a tuple with the MultivaluedAttrUserDefined field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultivaluedAttrUserDefined
+
+`func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrUserDefined(v bool)`
+
+SetMultivaluedAttrUserDefined sets MultivaluedAttrUserDefined field to given value.
+
+### HasMultivaluedAttrUserDefined
+
+`func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrUserDefined() bool`
+
+HasMultivaluedAttrUserDefined returns a boolean if a field has been set.
 
 ### GetName
 

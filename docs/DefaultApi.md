@@ -29,6 +29,8 @@ Method | HTTP request | Description
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
+[**GetApplianceContainer**](DefaultApi.md#GetApplianceContainer) | **Get** /iam-deploy/appliance-container | 
+[**GetApplianceContainers**](DefaultApi.md#GetApplianceContainers) | **Get** /iam-deploy/appliance-containers | 
 [**GetApplianceState**](DefaultApi.md#GetApplianceState) | **Get** /iam-deploy/appliance/state | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
 [**GetDbIdVault**](DefaultApi.md#GetDbIdVault) | **Get** /iam-deploy/dbidvault | 
@@ -96,8 +98,8 @@ func main() {
     storeApplianceReq := *openapiclient.NewStoreApplianceReq() // StoreApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -160,8 +162,8 @@ func main() {
     storeDbIdVaultReq := *openapiclient.NewStoreDbIdVaultReq() // StoreDbIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateDbIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -224,8 +226,8 @@ func main() {
     storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateExtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -288,8 +290,8 @@ func main() {
     storeIdPReq := *openapiclient.NewStoreIdPReq() // StoreIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -352,8 +354,8 @@ func main() {
     storeIdSourceDbReq := *openapiclient.NewStoreIdSourceDbReq() // StoreIdSourceDbReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdSourceDb``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -416,8 +418,8 @@ func main() {
     storeIdSourceLdapReq := *openapiclient.NewStoreIdSourceLdapReq() // StoreIdSourceLdapReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdSourceLdap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -480,8 +482,8 @@ func main() {
     storeIdVaultReq := *openapiclient.NewStoreIdVaultReq() // StoreIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -544,8 +546,8 @@ func main() {
     storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIntSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -608,8 +610,8 @@ func main() {
     storeJossoRsReq := *openapiclient.NewStoreJossoRsReq() // StoreJossoRsReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateJossoRs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -672,8 +674,8 @@ func main() {
     storeOidcRpReq := *openapiclient.NewStoreOidcRpReq() // StoreOidcRpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateOidcRp(context.Background()).StoreOidcRpReq(storeOidcRpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateOidcRp(context.Background()).StoreOidcRpReq(storeOidcRpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateOidcRp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -736,8 +738,8 @@ func main() {
     storeTomcatExecEnvReq := *openapiclient.NewStoreTomcatExecEnvReq() // StoreTomcatExecEnvReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateTomcatExecEnv``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -800,8 +802,8 @@ func main() {
     storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.CreateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateVirtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -864,8 +866,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteAppliance(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteAppliance(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -928,8 +930,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteDbIdVault(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteDbIdVault(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteDbIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -992,8 +994,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteExtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteExtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteExtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1056,8 +1058,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIdP(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdP(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1120,8 +1122,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIdSourceDb(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdSourceDb(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdSourceDb``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1184,8 +1186,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIdSourceLdap(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdSourceLdap(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdSourceLdap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1248,8 +1250,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIdVault(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdVault(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1312,8 +1314,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteIntSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIntSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIntSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1376,8 +1378,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteJossoRs(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteJossoRs(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteJossoRs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1440,8 +1442,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteOidcRp(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteOidcRp(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteOidcRp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1504,8 +1506,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteTomcatExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteTomcatExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteTomcatExecEnv``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1568,8 +1570,8 @@ func main() {
     deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.DeleteVirtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteVirtSaml2Sp(context.Background()).DeleteReq(deleteReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteVirtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1632,8 +1634,8 @@ func main() {
     getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetAppliance(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetAppliance(context.Background()).GetApplianceReq(getApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1674,6 +1676,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetApplianceContainer
+
+> GetApplianceContainerRes GetApplianceContainer(ctx).GetApplianceReq(getApplianceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetApplianceContainer(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetApplianceContainer``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetApplianceContainer`: GetApplianceContainerRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetApplianceContainer`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetApplianceContainerRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getApplianceReq** | [**GetApplianceReq**](GetApplianceReq.md) |  | 
+
+### Return type
+
+[**GetApplianceContainerRes**](GetApplianceContainerRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetApplianceContainers
+
+> GetApplianceContainersRes GetApplianceContainers(ctx).GetApplianceReq(getApplianceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetApplianceContainers(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetApplianceContainers``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetApplianceContainers`: GetApplianceContainersRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetApplianceContainers`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetApplianceContainersRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getApplianceReq** | [**GetApplianceReq**](GetApplianceReq.md) |  | 
+
+### Return type
+
+[**GetApplianceContainersRes**](GetApplianceContainersRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetApplianceState
 
 > GetApplianceStateRes GetApplianceState(ctx).GetApplianceReq(getApplianceReq).Execute()
@@ -1696,8 +1826,8 @@ func main() {
     getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetApplianceState(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetApplianceState(context.Background()).GetApplianceReq(getApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetApplianceState``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1760,8 +1890,8 @@ func main() {
     getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetAppliances(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetAppliances(context.Background()).GetApplianceReq(getApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetAppliances``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1824,8 +1954,8 @@ func main() {
     getDbIdVaultReq := *openapiclient.NewGetDbIdVaultReq() // GetDbIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetDbIdVault(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetDbIdVault(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetDbIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1888,8 +2018,8 @@ func main() {
     getDbIdVaultReq := *openapiclient.NewGetDbIdVaultReq() // GetDbIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetDbIdVaults(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetDbIdVaults(context.Background()).GetDbIdVaultReq(getDbIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetDbIdVaults``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1952,8 +2082,8 @@ func main() {
     getExtSaml2SpReq := *openapiclient.NewGetExtSaml2SpReq() // GetExtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetExtSaml2Sp(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetExtSaml2Sp(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2016,8 +2146,8 @@ func main() {
     getExtSaml2SpReq := *openapiclient.NewGetExtSaml2SpReq() // GetExtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetExtSaml2Sps(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetExtSaml2Sps(context.Background()).GetExtSaml2SpReq(getExtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExtSaml2Sps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2080,8 +2210,8 @@ func main() {
     getIdPReq := *openapiclient.NewGetIdPReq() // GetIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdP(context.Background()).GetIdPReq(getIdPReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdP(context.Background()).GetIdPReq(getIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2144,8 +2274,8 @@ func main() {
     getIdPReq := *openapiclient.NewGetIdPReq() // GetIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdPs(context.Background()).GetIdPReq(getIdPReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdPs(context.Background()).GetIdPReq(getIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdPs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2208,8 +2338,8 @@ func main() {
     getIdSourceDbReq := *openapiclient.NewGetIdSourceDbReq() // GetIdSourceDbReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdSourceDb(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSourceDb(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceDb``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2272,8 +2402,8 @@ func main() {
     getIdSourceDbReq := *openapiclient.NewGetIdSourceDbReq() // GetIdSourceDbReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdSourceDbs(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSourceDbs(context.Background()).GetIdSourceDbReq(getIdSourceDbReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceDbs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2336,8 +2466,8 @@ func main() {
     getIdSourceLdapReq := *openapiclient.NewGetIdSourceLdapReq() // GetIdSourceLdapReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdSourceLdap(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSourceLdap(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceLdap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2400,8 +2530,8 @@ func main() {
     getIdSourceLdapReq := *openapiclient.NewGetIdSourceLdapReq() // GetIdSourceLdapReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdSourceLdaps(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSourceLdaps(context.Background()).GetIdSourceLdapReq(getIdSourceLdapReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSourceLdaps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2464,8 +2594,8 @@ func main() {
     getIdVaultReq := *openapiclient.NewGetIdVaultReq() // GetIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdVault(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdVault(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2528,8 +2658,8 @@ func main() {
     getIdVaultReq := *openapiclient.NewGetIdVaultReq() // GetIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIdVaults(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdVaults(context.Background()).GetIdVaultReq(getIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdVaults``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2592,8 +2722,8 @@ func main() {
     getIntSaml2SpReq := *openapiclient.NewGetIntSaml2SpReq() // GetIntSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIntSaml2Sp(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIntSaml2Sp(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIntSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2656,8 +2786,8 @@ func main() {
     getIntSaml2SpReq := *openapiclient.NewGetIntSaml2SpReq() // GetIntSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetIntSaml2Sps(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIntSaml2Sps(context.Background()).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIntSaml2Sps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2720,8 +2850,8 @@ func main() {
     getJossoRsReq := *openapiclient.NewGetJossoRsReq() // GetJossoRsReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetJossoRs(context.Background()).GetJossoRsReq(getJossoRsReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetJossoRs(context.Background()).GetJossoRsReq(getJossoRsReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetJossoRs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2784,8 +2914,8 @@ func main() {
     getJossoRsReq := *openapiclient.NewGetJossoRsReq() // GetJossoRsReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetJossoRss(context.Background()).GetJossoRsReq(getJossoRsReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetJossoRss(context.Background()).GetJossoRsReq(getJossoRsReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetJossoRss``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2848,8 +2978,8 @@ func main() {
     getOidcRpReq := *openapiclient.NewGetOidcRpReq() // GetOidcRpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetOidcRp(context.Background()).GetOidcRpReq(getOidcRpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetOidcRp(context.Background()).GetOidcRpReq(getOidcRpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetOidcRp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2912,8 +3042,8 @@ func main() {
     getOidcRpReq := *openapiclient.NewGetOidcRpReq() // GetOidcRpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetOidcRps(context.Background()).GetOidcRpReq(getOidcRpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetOidcRps(context.Background()).GetOidcRpReq(getOidcRpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetOidcRps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2976,8 +3106,8 @@ func main() {
     getTomcatExecEnvReq := *openapiclient.NewGetTomcatExecEnvReq() // GetTomcatExecEnvReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetTomcatExecEnv(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetTomcatExecEnv(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTomcatExecEnv``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3040,8 +3170,8 @@ func main() {
     getTomcatExecEnvReq := *openapiclient.NewGetTomcatExecEnvReq() // GetTomcatExecEnvReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetTomcatExecEnvs(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetTomcatExecEnvs(context.Background()).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTomcatExecEnvs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3103,8 +3233,8 @@ import (
 func main() {
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetTypes(context.Background()).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetTypes(context.Background()).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3163,8 +3293,8 @@ func main() {
     getVirtSaml2SpReq := *openapiclient.NewGetVirtSaml2SpReq() // GetVirtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetVirtSaml2Sp(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetVirtSaml2Sp(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetVirtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3227,8 +3357,8 @@ func main() {
     getVirtSaml2SpReq := *openapiclient.NewGetVirtSaml2SpReq() // GetVirtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.GetVirtSaml2Sps(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetVirtSaml2Sps(context.Background()).GetVirtSaml2SpReq(getVirtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetVirtSaml2Sps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3291,8 +3421,8 @@ func main() {
     importApplianceReq := *openapiclient.NewImportApplianceReq() // ImportApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.ImportAppliance(context.Background()).ImportApplianceReq(importApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ImportAppliance(context.Background()).ImportApplianceReq(importApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ImportAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3355,8 +3485,8 @@ func main() {
     oIDCSignOnRequest := *openapiclient.NewOIDCSignOnRequest() // OIDCSignOnRequest |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.SignOn(context.Background()).OIDCSignOnRequest(oIDCSignOnRequest).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.SignOn(context.Background()).OIDCSignOnRequest(oIDCSignOnRequest).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.SignOn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3419,8 +3549,8 @@ func main() {
     setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.StartAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.StartAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.StartAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3483,8 +3613,8 @@ func main() {
     setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.StopAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.StopAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.StopAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3547,8 +3677,8 @@ func main() {
     storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UdpateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UdpateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateExtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3611,8 +3741,8 @@ func main() {
     storeJossoRsReq := *openapiclient.NewStoreJossoRsReq() // StoreJossoRsReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UdpateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UdpateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateJossoRs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3675,8 +3805,8 @@ func main() {
     storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UdpateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UdpateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateVirtSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3739,8 +3869,8 @@ func main() {
     storeApplianceReq := *openapiclient.NewStoreApplianceReq() // StoreApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateAppliance(context.Background()).StoreApplianceReq(storeApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3803,8 +3933,8 @@ func main() {
     storeDbIdVaultReq := *openapiclient.NewStoreDbIdVaultReq() // StoreDbIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateDbIdVault(context.Background()).StoreDbIdVaultReq(storeDbIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateDbIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3867,8 +3997,8 @@ func main() {
     storeIdPReq := *openapiclient.NewStoreIdPReq() // StoreIdPReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdP(context.Background()).StoreIdPReq(storeIdPReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdP``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3931,8 +4061,8 @@ func main() {
     storeIdSourceDbReq := *openapiclient.NewStoreIdSourceDbReq() // StoreIdSourceDbReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdSourceDb(context.Background()).StoreIdSourceDbReq(storeIdSourceDbReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdSourceDb``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -3995,8 +4125,8 @@ func main() {
     storeIdSourceLdapReq := *openapiclient.NewStoreIdSourceLdapReq() // StoreIdSourceLdapReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdSourceLdap(context.Background()).StoreIdSourceLdapReq(storeIdSourceLdapReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdSourceLdap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4059,8 +4189,8 @@ func main() {
     storeIdVaultReq := *openapiclient.NewStoreIdVaultReq() // StoreIdVaultReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdVault(context.Background()).StoreIdVaultReq(storeIdVaultReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdVault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4123,8 +4253,8 @@ func main() {
     storeIntSaml2SpReq := *openapiclient.NewStoreIntSaml2SpReq() // StoreIntSaml2SpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIntSaml2Sp(context.Background()).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIntSaml2Sp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4187,8 +4317,8 @@ func main() {
     storeOidcRpReq := *openapiclient.NewStoreOidcRpReq() // StoreOidcRpReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateOidcRp(context.Background()).StoreOidcRpReq(storeOidcRpReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateOidcRp(context.Background()).StoreOidcRpReq(storeOidcRpReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateOidcRp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4251,8 +4381,8 @@ func main() {
     storeTomcatExecEnvReq := *openapiclient.NewStoreTomcatExecEnvReq() // StoreTomcatExecEnvReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.UpdateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateTomcatExecEnv(context.Background()).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateTomcatExecEnv``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -4315,8 +4445,8 @@ func main() {
     getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.ValidateAppliance(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ValidateAppliance(context.Background()).GetApplianceReq(getApplianceReq).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ValidateAppliance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

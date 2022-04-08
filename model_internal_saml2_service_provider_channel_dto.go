@@ -17,8 +17,8 @@ import (
 
 // InternalSaml2ServiceProviderChannelDTO struct for InternalSaml2ServiceProviderChannelDTO
 type InternalSaml2ServiceProviderChannelDTO struct {
-	ActiveBindings *[]string `json:"activeBindings,omitempty"`
-	ActiveProfiles *[]string `json:"activeProfiles,omitempty"`
+	ActiveBindings []string `json:"activeBindings,omitempty"`
+	ActiveProfiles []string `json:"activeProfiles,omitempty"`
 	AttributeProfile *AttributeProfileDTO `json:"attributeProfile,omitempty"`
 	AuthenticationContract *AuthenticationContractDTO `json:"authenticationContract,omitempty"`
 	AuthenticationMechanism *AuthenticationMechanismDTO `json:"authenticationMechanism,omitempty"`
@@ -37,9 +37,9 @@ type InternalSaml2ServiceProviderChannelDTO struct {
 	MessageTtlTolerance *int32 `json:"messageTtlTolerance,omitempty"`
 	Name *string `json:"name,omitempty"`
 	OverrideProviderSetup *bool `json:"overrideProviderSetup,omitempty"`
-	RequiredRoles *[]string `json:"requiredRoles,omitempty"`
+	RequiredRoles []string `json:"requiredRoles,omitempty"`
 	RequiredRolesMatchMode *int32 `json:"requiredRolesMatchMode,omitempty"`
-	RestrictedRoles *[]string `json:"restrictedRoles,omitempty"`
+	RestrictedRoles []string `json:"restrictedRoles,omitempty"`
 	RestrictedRolesMatchMode *int32 `json:"restrictedRolesMatchMode,omitempty"`
 	SignatureHash *string `json:"signatureHash,omitempty"`
 	SubjectNameIDPolicy *SubjectNameIdentifierPolicyDTO `json:"subjectNameIDPolicy,omitempty"`
@@ -72,12 +72,12 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindings() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveBindings
+	return o.ActiveBindings
 }
 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindingsOk() (*[]string, bool) {
+func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindingsOk() ([]string, bool) {
 	if o == nil || o.ActiveBindings == nil {
 		return nil, false
 	}
@@ -95,7 +95,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) HasActiveBindings() bool {
 
 // SetActiveBindings gets a reference to the given []string and assigns it to the ActiveBindings field.
 func (o *InternalSaml2ServiceProviderChannelDTO) SetActiveBindings(v []string) {
-	o.ActiveBindings = &v
+	o.ActiveBindings = v
 }
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
@@ -104,12 +104,12 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfiles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveProfiles
+	return o.ActiveProfiles
 }
 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfilesOk() (*[]string, bool) {
+func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfilesOk() ([]string, bool) {
 	if o == nil || o.ActiveProfiles == nil {
 		return nil, false
 	}
@@ -127,7 +127,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) HasActiveProfiles() bool {
 
 // SetActiveProfiles gets a reference to the given []string and assigns it to the ActiveProfiles field.
 func (o *InternalSaml2ServiceProviderChannelDTO) SetActiveProfiles(v []string) {
-	o.ActiveProfiles = &v
+	o.ActiveProfiles = v
 }
 
 // GetAttributeProfile returns the AttributeProfile field value if set, zero value otherwise.
@@ -712,12 +712,12 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRoles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.RequiredRoles
+	return o.RequiredRoles
 }
 
 // GetRequiredRolesOk returns a tuple with the RequiredRoles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesOk() (*[]string, bool) {
+func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesOk() ([]string, bool) {
 	if o == nil || o.RequiredRoles == nil {
 		return nil, false
 	}
@@ -735,7 +735,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) HasRequiredRoles() bool {
 
 // SetRequiredRoles gets a reference to the given []string and assigns it to the RequiredRoles field.
 func (o *InternalSaml2ServiceProviderChannelDTO) SetRequiredRoles(v []string) {
-	o.RequiredRoles = &v
+	o.RequiredRoles = v
 }
 
 // GetRequiredRolesMatchMode returns the RequiredRolesMatchMode field value if set, zero value otherwise.
@@ -776,12 +776,12 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRoles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.RestrictedRoles
+	return o.RestrictedRoles
 }
 
 // GetRestrictedRolesOk returns a tuple with the RestrictedRoles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesOk() (*[]string, bool) {
+func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesOk() ([]string, bool) {
 	if o == nil || o.RestrictedRoles == nil {
 		return nil, false
 	}
@@ -799,7 +799,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) HasRestrictedRoles() bool {
 
 // SetRestrictedRoles gets a reference to the given []string and assigns it to the RestrictedRoles field.
 func (o *InternalSaml2ServiceProviderChannelDTO) SetRestrictedRoles(v []string) {
-	o.RestrictedRoles = &v
+	o.RestrictedRoles = v
 }
 
 // GetRestrictedRolesMatchMode returns the RestrictedRolesMatchMode field value if set, zero value otherwise.

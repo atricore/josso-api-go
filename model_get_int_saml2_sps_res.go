@@ -18,8 +18,8 @@ import (
 // GetIntSaml2SpsRes struct for GetIntSaml2SpsRes
 type GetIntSaml2SpsRes struct {
 	Error *string `json:"error,omitempty"`
-	Sps *[]InternalSaml2ServiceProviderDTO `json:"sps,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	Sps []InternalSaml2ServiceProviderDTO `json:"sps,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetIntSaml2SpsRes) GetSps() []InternalSaml2ServiceProviderDTO {
 		var ret []InternalSaml2ServiceProviderDTO
 		return ret
 	}
-	return *o.Sps
+	return o.Sps
 }
 
 // GetSpsOk returns a tuple with the Sps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIntSaml2SpsRes) GetSpsOk() (*[]InternalSaml2ServiceProviderDTO, bool) {
+func (o *GetIntSaml2SpsRes) GetSpsOk() ([]InternalSaml2ServiceProviderDTO, bool) {
 	if o == nil || o.Sps == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetIntSaml2SpsRes) HasSps() bool {
 
 // SetSps gets a reference to the given []InternalSaml2ServiceProviderDTO and assigns it to the Sps field.
 func (o *GetIntSaml2SpsRes) SetSps(v []InternalSaml2ServiceProviderDTO) {
-	o.Sps = &v
+	o.Sps = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetIntSaml2SpsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIntSaml2SpsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIntSaml2SpsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetIntSaml2SpsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIntSaml2SpsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIntSaml2SpsRes) MarshalJSON() ([]byte, error) {

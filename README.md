@@ -23,7 +23,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import sw "./jossoappi"
+import jossoappi "github.com/atricore/josso-api-go"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -41,7 +41,7 @@ Default configuration comes with `Servers` field that contains server objects as
 For using other server than the one defined on index 0 set context value `sw.ContextServerIndex` of type `int`.
 
 ```golang
-ctx := context.WithValue(context.Background(), sw.ContextServerIndex, 1)
+ctx := context.WithValue(context.Background(), jossoappi.ContextServerIndex, 1)
 ```
 
 ### Templated Server URL
@@ -49,7 +49,7 @@ ctx := context.WithValue(context.Background(), sw.ContextServerIndex, 1)
 Templated server URL is formatted using default variables from configuration or from context value `sw.ContextServerVariables` of type `map[string]string`.
 
 ```golang
-ctx := context.WithValue(context.Background(), sw.ContextServerVariables, map[string]string{
+ctx := context.WithValue(context.Background(), jossoappi.ContextServerVariables, map[string]string{
 	"basePath": "v2",
 })
 ```
@@ -63,10 +63,10 @@ An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
 Similar rules for overriding default operation server index and variables applies by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
 
 ```
-ctx := context.WithValue(context.Background(), sw.ContextOperationServerIndices, map[string]int{
+ctx := context.WithValue(context.Background(), jossoappi.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
-ctx = context.WithValue(context.Background(), sw.ContextOperationServerVariables, map[string]map[string]string{
+ctx = context.WithValue(context.Background(), jossoappi.ContextOperationServerVariables, map[string]map[string]string{
 	"{classname}Service.{nickname}": {
 		"port": "8443",
 	},
@@ -104,6 +104,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**GetAppliance**](docs/DefaultApi.md#getappliance) | **Get** /iam-deploy/appliance | 
+*DefaultApi* | [**GetApplianceContainer**](docs/DefaultApi.md#getappliancecontainer) | **Get** /iam-deploy/appliance-container | 
+*DefaultApi* | [**GetApplianceContainers**](docs/DefaultApi.md#getappliancecontainers) | **Get** /iam-deploy/appliance-containers | 
 *DefaultApi* | [**GetApplianceState**](docs/DefaultApi.md#getappliancestate) | **Get** /iam-deploy/appliance/state | 
 *DefaultApi* | [**GetAppliances**](docs/DefaultApi.md#getappliances) | **Get** /iam-deploy/appliances | 
 *DefaultApi* | [**GetDbIdVault**](docs/DefaultApi.md#getdbidvault) | **Get** /iam-deploy/dbidvault | 
@@ -158,6 +160,7 @@ Class | Method | HTTP request | Description
  - [AuthenticationContractDTO](docs/AuthenticationContractDTO.md)
  - [AuthenticationMechanismDTO](docs/AuthenticationMechanismDTO.md)
  - [AuthenticationServiceDTO](docs/AuthenticationServiceDTO.md)
+ - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [CustomClassDTO](docs/CustomClassDTO.md)
  - [CustomClassPropertyDTO](docs/CustomClassPropertyDTO.md)
  - [DbIdentitySourceDTO](docs/DbIdentitySourceDTO.md)
@@ -174,6 +177,8 @@ Class | Method | HTTP request | Description
  - [FederatedChannelDTO](docs/FederatedChannelDTO.md)
  - [FederatedConnectionDTO](docs/FederatedConnectionDTO.md)
  - [FederatedProviderDTO](docs/FederatedProviderDTO.md)
+ - [GetApplianceContainerRes](docs/GetApplianceContainerRes.md)
+ - [GetApplianceContainersRes](docs/GetApplianceContainersRes.md)
  - [GetApplianceReq](docs/GetApplianceReq.md)
  - [GetApplianceRes](docs/GetApplianceRes.md)
  - [GetApplianceStateRes](docs/GetApplianceStateRes.md)
@@ -213,13 +218,17 @@ Class | Method | HTTP request | Description
  - [GetVirtSaml2SpRes](docs/GetVirtSaml2SpRes.md)
  - [GetVirtSaml2SpsRes](docs/GetVirtSaml2SpsRes.md)
  - [GroupDTO](docs/GroupDTO.md)
+ - [IdentityApplianceDTO](docs/IdentityApplianceDTO.md)
  - [IdentityApplianceDefinitionDTO](docs/IdentityApplianceDefinitionDTO.md)
+ - [IdentityApplianceDeploymentDTO](docs/IdentityApplianceDeploymentDTO.md)
  - [IdentityApplianceSecurityConfigDTO](docs/IdentityApplianceSecurityConfigDTO.md)
+ - [IdentityApplianceUnitDTO](docs/IdentityApplianceUnitDTO.md)
  - [IdentityLookupDTO](docs/IdentityLookupDTO.md)
  - [IdentityMappingPolicyDTO](docs/IdentityMappingPolicyDTO.md)
  - [IdentityProviderChannelDTO](docs/IdentityProviderChannelDTO.md)
  - [IdentityProviderDTO](docs/IdentityProviderDTO.md)
  - [IdentitySourceDTO](docs/IdentitySourceDTO.md)
+ - [ImpersonateUserPolicyDTO](docs/ImpersonateUserPolicyDTO.md)
  - [ImportApplianceReq](docs/ImportApplianceReq.md)
  - [ImportApplianceRes](docs/ImportApplianceRes.md)
  - [InternalSaml2ServiceProviderChannelDTO](docs/InternalSaml2ServiceProviderChannelDTO.md)
@@ -268,6 +277,7 @@ Class | Method | HTTP request | Description
  - [StoreVirtSaml2SpRes](docs/StoreVirtSaml2SpRes.md)
  - [SubjectAuthenticationPolicyDTO](docs/SubjectAuthenticationPolicyDTO.md)
  - [SubjectNameIdentifierPolicyDTO](docs/SubjectNameIdentifierPolicyDTO.md)
+ - [TOTPAuthenticationServiceDTO](docs/TOTPAuthenticationServiceDTO.md)
  - [TomcatExecutionEnvironmentDTO](docs/TomcatExecutionEnvironmentDTO.md)
  - [UserDTO](docs/UserDTO.md)
  - [UserDashboardBrandingDTO](docs/UserDashboardBrandingDTO.md)

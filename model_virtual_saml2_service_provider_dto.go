@@ -18,8 +18,8 @@ import (
 // VirtualSaml2ServiceProviderDTO struct for VirtualSaml2ServiceProviderDTO
 type VirtualSaml2ServiceProviderDTO struct {
 	AccountLinkagePolicy *AccountLinkagePolicyDTO `json:"accountLinkagePolicy,omitempty"`
-	ActiveBindings *[]string `json:"activeBindings,omitempty"`
-	ActiveProfiles *[]string `json:"activeProfiles,omitempty"`
+	ActiveBindings []string `json:"activeBindings,omitempty"`
+	ActiveProfiles []string `json:"activeProfiles,omitempty"`
 	AttributeProfile *AttributeProfileDTO `json:"attributeProfile,omitempty"`
 	Config *ProviderConfigDTO `json:"config,omitempty"`
 	DashboardUrl *string `json:"dashboardUrl,omitempty"`
@@ -31,11 +31,11 @@ type VirtualSaml2ServiceProviderDTO struct {
 	EncryptAssertion *bool `json:"encryptAssertion,omitempty"`
 	EncryptAssertionAlgorithm *string `json:"encryptAssertionAlgorithm,omitempty"`
 	ErrorBinding *string `json:"errorBinding,omitempty"`
-	FederatedConnectionsA *[]FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
-	FederatedConnectionsB *[]FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
+	FederatedConnectionsA []FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
+	FederatedConnectionsB []FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
 	Id *int64 `json:"id,omitempty"`
 	IdentityAppliance *IdentityApplianceDefinitionDTO `json:"identityAppliance,omitempty"`
-	IdentityLookups *[]IdentityLookupDTO `json:"identityLookups,omitempty"`
+	IdentityLookups []IdentityLookupDTO `json:"identityLookups,omitempty"`
 	IdentityMappingPolicy *IdentityMappingPolicyDTO `json:"identityMappingPolicy,omitempty"`
 	IdpSignatureHash *string `json:"idpSignatureHash,omitempty"`
 	IgnoreRequestedNameIDPolicy *bool `json:"ignoreRequestedNameIDPolicy,omitempty"`
@@ -44,6 +44,9 @@ type VirtualSaml2ServiceProviderDTO struct {
 	MessageTtl *int32 `json:"messageTtl,omitempty"`
 	MessageTtlTolerance *int32 `json:"messageTtlTolerance,omitempty"`
 	Metadata *ResourceDTO `json:"metadata,omitempty"`
+	MultivaluedAttrGroups *bool `json:"multivaluedAttrGroups,omitempty"`
+	MultivaluedAttrInternal *bool `json:"multivaluedAttrInternal,omitempty"`
+	MultivaluedAttrUserDefined *bool `json:"multivaluedAttrUserDefined,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Oauth2Enabled *bool `json:"oauth2Enabled,omitempty"`
 	Oauth2Key *string `json:"oauth2Key,omitempty"`
@@ -60,7 +63,7 @@ type VirtualSaml2ServiceProviderDTO struct {
 	SignRequests *bool `json:"signRequests,omitempty"`
 	SpSignatureHash *string `json:"spSignatureHash,omitempty"`
 	SsoSessionTimeout *int32 `json:"ssoSessionTimeout,omitempty"`
-	SubjectAuthnPolicies *[]SubjectAuthenticationPolicyDTO `json:"subjectAuthnPolicies,omitempty"`
+	SubjectAuthnPolicies []SubjectAuthenticationPolicyDTO `json:"subjectAuthnPolicies,omitempty"`
 	SubjectNameIDPolicy *SubjectNameIdentifierPolicyDTO `json:"subjectNameIDPolicy,omitempty"`
 	WantAssertionSigned *bool `json:"wantAssertionSigned,omitempty"`
 	WantAuthnRequestsSigned *bool `json:"wantAuthnRequestsSigned,omitempty"`
@@ -128,12 +131,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetActiveBindings() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveBindings
+	return o.ActiveBindings
 }
 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetActiveBindingsOk() (*[]string, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetActiveBindingsOk() ([]string, bool) {
 	if o == nil || o.ActiveBindings == nil {
 		return nil, false
 	}
@@ -151,7 +154,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasActiveBindings() bool {
 
 // SetActiveBindings gets a reference to the given []string and assigns it to the ActiveBindings field.
 func (o *VirtualSaml2ServiceProviderDTO) SetActiveBindings(v []string) {
-	o.ActiveBindings = &v
+	o.ActiveBindings = v
 }
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
@@ -160,12 +163,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetActiveProfiles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveProfiles
+	return o.ActiveProfiles
 }
 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetActiveProfilesOk() (*[]string, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetActiveProfilesOk() ([]string, bool) {
 	if o == nil || o.ActiveProfiles == nil {
 		return nil, false
 	}
@@ -183,7 +186,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasActiveProfiles() bool {
 
 // SetActiveProfiles gets a reference to the given []string and assigns it to the ActiveProfiles field.
 func (o *VirtualSaml2ServiceProviderDTO) SetActiveProfiles(v []string) {
-	o.ActiveProfiles = &v
+	o.ActiveProfiles = v
 }
 
 // GetAttributeProfile returns the AttributeProfile field value if set, zero value otherwise.
@@ -544,12 +547,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsA() []FederatedC
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsA
+	return o.FederatedConnectionsA
 }
 
 // GetFederatedConnectionsAOk returns a tuple with the FederatedConnectionsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsAOk() (*[]FederatedConnectionDTO, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsAOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsA == nil {
 		return nil, false
 	}
@@ -567,7 +570,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasFederatedConnectionsA() bool {
 
 // SetFederatedConnectionsA gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsA field.
 func (o *VirtualSaml2ServiceProviderDTO) SetFederatedConnectionsA(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsA = &v
+	o.FederatedConnectionsA = v
 }
 
 // GetFederatedConnectionsB returns the FederatedConnectionsB field value if set, zero value otherwise.
@@ -576,12 +579,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsB() []FederatedC
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsB
+	return o.FederatedConnectionsB
 }
 
 // GetFederatedConnectionsBOk returns a tuple with the FederatedConnectionsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsBOk() (*[]FederatedConnectionDTO, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetFederatedConnectionsBOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsB == nil {
 		return nil, false
 	}
@@ -599,7 +602,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasFederatedConnectionsB() bool {
 
 // SetFederatedConnectionsB gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsB field.
 func (o *VirtualSaml2ServiceProviderDTO) SetFederatedConnectionsB(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsB = &v
+	o.FederatedConnectionsB = v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
@@ -672,12 +675,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetIdentityLookups() []IdentityLookupDT
 		var ret []IdentityLookupDTO
 		return ret
 	}
-	return *o.IdentityLookups
+	return o.IdentityLookups
 }
 
 // GetIdentityLookupsOk returns a tuple with the IdentityLookups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetIdentityLookupsOk() ([]IdentityLookupDTO, bool) {
 	if o == nil || o.IdentityLookups == nil {
 		return nil, false
 	}
@@ -695,7 +698,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasIdentityLookups() bool {
 
 // SetIdentityLookups gets a reference to the given []IdentityLookupDTO and assigns it to the IdentityLookups field.
 func (o *VirtualSaml2ServiceProviderDTO) SetIdentityLookups(v []IdentityLookupDTO) {
-	o.IdentityLookups = &v
+	o.IdentityLookups = v
 }
 
 // GetIdentityMappingPolicy returns the IdentityMappingPolicy field value if set, zero value otherwise.
@@ -952,6 +955,102 @@ func (o *VirtualSaml2ServiceProviderDTO) HasMetadata() bool {
 // SetMetadata gets a reference to the given ResourceDTO and assigns it to the Metadata field.
 func (o *VirtualSaml2ServiceProviderDTO) SetMetadata(v ResourceDTO) {
 	o.Metadata = &v
+}
+
+// GetMultivaluedAttrGroups returns the MultivaluedAttrGroups field value if set, zero value otherwise.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrGroups() bool {
+	if o == nil || o.MultivaluedAttrGroups == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrGroups
+}
+
+// GetMultivaluedAttrGroupsOk returns a tuple with the MultivaluedAttrGroups field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrGroupsOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrGroups == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrGroups, true
+}
+
+// HasMultivaluedAttrGroups returns a boolean if a field has been set.
+func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrGroups() bool {
+	if o != nil && o.MultivaluedAttrGroups != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrGroups gets a reference to the given bool and assigns it to the MultivaluedAttrGroups field.
+func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrGroups(v bool) {
+	o.MultivaluedAttrGroups = &v
+}
+
+// GetMultivaluedAttrInternal returns the MultivaluedAttrInternal field value if set, zero value otherwise.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrInternal() bool {
+	if o == nil || o.MultivaluedAttrInternal == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrInternal
+}
+
+// GetMultivaluedAttrInternalOk returns a tuple with the MultivaluedAttrInternal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrInternalOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrInternal == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrInternal, true
+}
+
+// HasMultivaluedAttrInternal returns a boolean if a field has been set.
+func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrInternal() bool {
+	if o != nil && o.MultivaluedAttrInternal != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrInternal gets a reference to the given bool and assigns it to the MultivaluedAttrInternal field.
+func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrInternal(v bool) {
+	o.MultivaluedAttrInternal = &v
+}
+
+// GetMultivaluedAttrUserDefined returns the MultivaluedAttrUserDefined field value if set, zero value otherwise.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrUserDefined() bool {
+	if o == nil || o.MultivaluedAttrUserDefined == nil {
+		var ret bool
+		return ret
+	}
+	return *o.MultivaluedAttrUserDefined
+}
+
+// GetMultivaluedAttrUserDefinedOk returns a tuple with the MultivaluedAttrUserDefined field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VirtualSaml2ServiceProviderDTO) GetMultivaluedAttrUserDefinedOk() (*bool, bool) {
+	if o == nil || o.MultivaluedAttrUserDefined == nil {
+		return nil, false
+	}
+	return o.MultivaluedAttrUserDefined, true
+}
+
+// HasMultivaluedAttrUserDefined returns a boolean if a field has been set.
+func (o *VirtualSaml2ServiceProviderDTO) HasMultivaluedAttrUserDefined() bool {
+	if o != nil && o.MultivaluedAttrUserDefined != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMultivaluedAttrUserDefined gets a reference to the given bool and assigns it to the MultivaluedAttrUserDefined field.
+func (o *VirtualSaml2ServiceProviderDTO) SetMultivaluedAttrUserDefined(v bool) {
+	o.MultivaluedAttrUserDefined = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
@@ -1472,12 +1571,12 @@ func (o *VirtualSaml2ServiceProviderDTO) GetSubjectAuthnPolicies() []SubjectAuth
 		var ret []SubjectAuthenticationPolicyDTO
 		return ret
 	}
-	return *o.SubjectAuthnPolicies
+	return o.SubjectAuthnPolicies
 }
 
 // GetSubjectAuthnPoliciesOk returns a tuple with the SubjectAuthnPolicies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VirtualSaml2ServiceProviderDTO) GetSubjectAuthnPoliciesOk() (*[]SubjectAuthenticationPolicyDTO, bool) {
+func (o *VirtualSaml2ServiceProviderDTO) GetSubjectAuthnPoliciesOk() ([]SubjectAuthenticationPolicyDTO, bool) {
 	if o == nil || o.SubjectAuthnPolicies == nil {
 		return nil, false
 	}
@@ -1495,7 +1594,7 @@ func (o *VirtualSaml2ServiceProviderDTO) HasSubjectAuthnPolicies() bool {
 
 // SetSubjectAuthnPolicies gets a reference to the given []SubjectAuthenticationPolicyDTO and assigns it to the SubjectAuthnPolicies field.
 func (o *VirtualSaml2ServiceProviderDTO) SetSubjectAuthnPolicies(v []SubjectAuthenticationPolicyDTO) {
-	o.SubjectAuthnPolicies = &v
+	o.SubjectAuthnPolicies = v
 }
 
 // GetSubjectNameIDPolicy returns the SubjectNameIDPolicy field value if set, zero value otherwise.
@@ -1805,6 +1904,15 @@ func (o VirtualSaml2ServiceProviderDTO) MarshalJSON() ([]byte, error) {
 	if o.Metadata != nil {
 		toSerialize["metadata"] = o.Metadata
 	}
+	if o.MultivaluedAttrGroups != nil {
+		toSerialize["multivaluedAttrGroups"] = o.MultivaluedAttrGroups
+	}
+	if o.MultivaluedAttrInternal != nil {
+		toSerialize["multivaluedAttrInternal"] = o.MultivaluedAttrInternal
+	}
+	if o.MultivaluedAttrUserDefined != nil {
+		toSerialize["multivaluedAttrUserDefined"] = o.MultivaluedAttrUserDefined
+	}
 	if o.Name != nil {
 		toSerialize["name"] = o.Name
 	}
@@ -1922,6 +2030,9 @@ func (o *VirtualSaml2ServiceProviderDTO) UnmarshalJSON(bytes []byte) (err error)
 		delete(additionalProperties, "messageTtl")
 		delete(additionalProperties, "messageTtlTolerance")
 		delete(additionalProperties, "metadata")
+		delete(additionalProperties, "multivaluedAttrGroups")
+		delete(additionalProperties, "multivaluedAttrInternal")
+		delete(additionalProperties, "multivaluedAttrUserDefined")
 		delete(additionalProperties, "name")
 		delete(additionalProperties, "oauth2Enabled")
 		delete(additionalProperties, "oauth2Key")

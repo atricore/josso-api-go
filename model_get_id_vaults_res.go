@@ -18,8 +18,8 @@ import (
 // GetIdVaultsRes struct for GetIdVaultsRes
 type GetIdVaultsRes struct {
 	Error *string `json:"error,omitempty"`
-	IdVaults *[]EmbeddedIdentityVaultDTO `json:"idVaults,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	IdVaults []EmbeddedIdentityVaultDTO `json:"idVaults,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetIdVaultsRes) GetIdVaults() []EmbeddedIdentityVaultDTO {
 		var ret []EmbeddedIdentityVaultDTO
 		return ret
 	}
-	return *o.IdVaults
+	return o.IdVaults
 }
 
 // GetIdVaultsOk returns a tuple with the IdVaults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdVaultsRes) GetIdVaultsOk() (*[]EmbeddedIdentityVaultDTO, bool) {
+func (o *GetIdVaultsRes) GetIdVaultsOk() ([]EmbeddedIdentityVaultDTO, bool) {
 	if o == nil || o.IdVaults == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetIdVaultsRes) HasIdVaults() bool {
 
 // SetIdVaults gets a reference to the given []EmbeddedIdentityVaultDTO and assigns it to the IdVaults field.
 func (o *GetIdVaultsRes) SetIdVaults(v []EmbeddedIdentityVaultDTO) {
-	o.IdVaults = &v
+	o.IdVaults = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetIdVaultsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdVaultsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIdVaultsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetIdVaultsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIdVaultsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIdVaultsRes) MarshalJSON() ([]byte, error) {

@@ -18,8 +18,8 @@ import (
 // GetOidcRpsRes struct for GetOidcRpsRes
 type GetOidcRpsRes struct {
 	Error *string `json:"error,omitempty"`
-	OidcRps *[]ExternalOpenIDConnectRelayingPartyDTO `json:"oidcRps,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	OidcRps []ExternalOpenIDConnectRelayingPartyDTO `json:"oidcRps,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetOidcRpsRes) GetOidcRps() []ExternalOpenIDConnectRelayingPartyDTO {
 		var ret []ExternalOpenIDConnectRelayingPartyDTO
 		return ret
 	}
-	return *o.OidcRps
+	return o.OidcRps
 }
 
 // GetOidcRpsOk returns a tuple with the OidcRps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetOidcRpsRes) GetOidcRpsOk() (*[]ExternalOpenIDConnectRelayingPartyDTO, bool) {
+func (o *GetOidcRpsRes) GetOidcRpsOk() ([]ExternalOpenIDConnectRelayingPartyDTO, bool) {
 	if o == nil || o.OidcRps == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetOidcRpsRes) HasOidcRps() bool {
 
 // SetOidcRps gets a reference to the given []ExternalOpenIDConnectRelayingPartyDTO and assigns it to the OidcRps field.
 func (o *GetOidcRpsRes) SetOidcRps(v []ExternalOpenIDConnectRelayingPartyDTO) {
-	o.OidcRps = &v
+	o.OidcRps = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetOidcRpsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetOidcRpsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetOidcRpsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetOidcRpsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetOidcRpsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetOidcRpsRes) MarshalJSON() ([]byte, error) {

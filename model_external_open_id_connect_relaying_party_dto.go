@@ -17,9 +17,10 @@ import (
 
 // ExternalOpenIDConnectRelayingPartyDTO struct for ExternalOpenIDConnectRelayingPartyDTO
 type ExternalOpenIDConnectRelayingPartyDTO struct {
-	ActiveBindings *[]string `json:"activeBindings,omitempty"`
-	ActiveProfiles *[]string `json:"activeProfiles,omitempty"`
-	AuthorizedURIs *[]string `json:"authorizedURIs,omitempty"`
+	AccountLinkagePolicy *AccountLinkagePolicyDTO `json:"accountLinkagePolicy,omitempty"`
+	ActiveBindings []string `json:"activeBindings,omitempty"`
+	ActiveProfiles []string `json:"activeProfiles,omitempty"`
+	AuthorizedURIs []string `json:"authorizedURIs,omitempty"`
 	ClientAuthnMethod *string `json:"clientAuthnMethod,omitempty"`
 	ClientCert *string `json:"clientCert,omitempty"`
 	ClientId *string `json:"clientId,omitempty"`
@@ -31,22 +32,23 @@ type ExternalOpenIDConnectRelayingPartyDTO struct {
 	ElementId *string `json:"elementId,omitempty"`
 	EncryptionAlg *string `json:"encryptionAlg,omitempty"`
 	EncryptionMethod *string `json:"encryptionMethod,omitempty"`
-	FederatedConnectionsA *[]FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
-	FederatedConnectionsB *[]FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
-	Grants *[]string `json:"grants,omitempty"`
+	FederatedConnectionsA []FederatedConnectionDTO `json:"federatedConnectionsA,omitempty"`
+	FederatedConnectionsB []FederatedConnectionDTO `json:"federatedConnectionsB,omitempty"`
+	Grants []string `json:"grants,omitempty"`
 	Id *int64 `json:"id,omitempty"`
 	IdTokenEncryptionAlg *string `json:"idTokenEncryptionAlg,omitempty"`
 	IdTokenEncryptionMethod *string `json:"idTokenEncryptionMethod,omitempty"`
 	IdTokenSigningAlg *string `json:"idTokenSigningAlg,omitempty"`
 	IdentityAppliance *IdentityApplianceDefinitionDTO `json:"identityAppliance,omitempty"`
-	IdentityLookups *[]IdentityLookupDTO `json:"identityLookups,omitempty"`
+	IdentityLookups []IdentityLookupDTO `json:"identityLookups,omitempty"`
+	IdentityMappingPolicy *IdentityMappingPolicyDTO `json:"identityMappingPolicy,omitempty"`
 	IsRemote *bool `json:"isRemote,omitempty"`
 	Location *LocationDTO `json:"location,omitempty"`
 	Metadata *ResourceDTO `json:"metadata,omitempty"`
 	Name *string `json:"name,omitempty"`
-	PostLogoutRedirectionURIs *[]string `json:"postLogoutRedirectionURIs,omitempty"`
+	PostLogoutRedirectionURIs []string `json:"postLogoutRedirectionURIs,omitempty"`
 	Remote *bool `json:"remote,omitempty"`
-	ResponseTypes *[]string `json:"responseTypes,omitempty"`
+	ResponseTypes []string `json:"responseTypes,omitempty"`
 	Role *string `json:"role,omitempty"`
 	SigningAlg *string `json:"signingAlg,omitempty"`
 	X *float64 `json:"x,omitempty"`
@@ -73,18 +75,50 @@ func NewExternalOpenIDConnectRelayingPartyDTOWithDefaults() *ExternalOpenIDConne
 	return &this
 }
 
+// GetAccountLinkagePolicy returns the AccountLinkagePolicy field value if set, zero value otherwise.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicy() AccountLinkagePolicyDTO {
+	if o == nil || o.AccountLinkagePolicy == nil {
+		var ret AccountLinkagePolicyDTO
+		return ret
+	}
+	return *o.AccountLinkagePolicy
+}
+
+// GetAccountLinkagePolicyOk returns a tuple with the AccountLinkagePolicy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicyOk() (*AccountLinkagePolicyDTO, bool) {
+	if o == nil || o.AccountLinkagePolicy == nil {
+		return nil, false
+	}
+	return o.AccountLinkagePolicy, true
+}
+
+// HasAccountLinkagePolicy returns a boolean if a field has been set.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) HasAccountLinkagePolicy() bool {
+	if o != nil && o.AccountLinkagePolicy != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAccountLinkagePolicy gets a reference to the given AccountLinkagePolicyDTO and assigns it to the AccountLinkagePolicy field.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) SetAccountLinkagePolicy(v AccountLinkagePolicyDTO) {
+	o.AccountLinkagePolicy = &v
+}
+
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindings() []string {
 	if o == nil || o.ActiveBindings == nil {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveBindings
+	return o.ActiveBindings
 }
 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindingsOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindingsOk() ([]string, bool) {
 	if o == nil || o.ActiveBindings == nil {
 		return nil, false
 	}
@@ -102,7 +136,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasActiveBindings() bool {
 
 // SetActiveBindings gets a reference to the given []string and assigns it to the ActiveBindings field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetActiveBindings(v []string) {
-	o.ActiveBindings = &v
+	o.ActiveBindings = v
 }
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
@@ -111,12 +145,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfiles() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ActiveProfiles
+	return o.ActiveProfiles
 }
 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfilesOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfilesOk() ([]string, bool) {
 	if o == nil || o.ActiveProfiles == nil {
 		return nil, false
 	}
@@ -134,7 +168,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasActiveProfiles() bool {
 
 // SetActiveProfiles gets a reference to the given []string and assigns it to the ActiveProfiles field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetActiveProfiles(v []string) {
-	o.ActiveProfiles = &v
+	o.ActiveProfiles = v
 }
 
 // GetAuthorizedURIs returns the AuthorizedURIs field value if set, zero value otherwise.
@@ -143,12 +177,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIs() []string {
 		var ret []string
 		return ret
 	}
-	return *o.AuthorizedURIs
+	return o.AuthorizedURIs
 }
 
 // GetAuthorizedURIsOk returns a tuple with the AuthorizedURIs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIsOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIsOk() ([]string, bool) {
 	if o == nil || o.AuthorizedURIs == nil {
 		return nil, false
 	}
@@ -166,7 +200,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasAuthorizedURIs() bool {
 
 // SetAuthorizedURIs gets a reference to the given []string and assigns it to the AuthorizedURIs field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetAuthorizedURIs(v []string) {
-	o.AuthorizedURIs = &v
+	o.AuthorizedURIs = v
 }
 
 // GetClientAuthnMethod returns the ClientAuthnMethod field value if set, zero value otherwise.
@@ -527,12 +561,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsA() []Fed
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsA
+	return o.FederatedConnectionsA
 }
 
 // GetFederatedConnectionsAOk returns a tuple with the FederatedConnectionsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsAOk() (*[]FederatedConnectionDTO, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsAOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsA == nil {
 		return nil, false
 	}
@@ -550,7 +584,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasFederatedConnectionsA() bool 
 
 // SetFederatedConnectionsA gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsA field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetFederatedConnectionsA(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsA = &v
+	o.FederatedConnectionsA = v
 }
 
 // GetFederatedConnectionsB returns the FederatedConnectionsB field value if set, zero value otherwise.
@@ -559,12 +593,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsB() []Fed
 		var ret []FederatedConnectionDTO
 		return ret
 	}
-	return *o.FederatedConnectionsB
+	return o.FederatedConnectionsB
 }
 
 // GetFederatedConnectionsBOk returns a tuple with the FederatedConnectionsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsBOk() (*[]FederatedConnectionDTO, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsBOk() ([]FederatedConnectionDTO, bool) {
 	if o == nil || o.FederatedConnectionsB == nil {
 		return nil, false
 	}
@@ -582,7 +616,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasFederatedConnectionsB() bool 
 
 // SetFederatedConnectionsB gets a reference to the given []FederatedConnectionDTO and assigns it to the FederatedConnectionsB field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetFederatedConnectionsB(v []FederatedConnectionDTO) {
-	o.FederatedConnectionsB = &v
+	o.FederatedConnectionsB = v
 }
 
 // GetGrants returns the Grants field value if set, zero value otherwise.
@@ -591,12 +625,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrants() []string {
 		var ret []string
 		return ret
 	}
-	return *o.Grants
+	return o.Grants
 }
 
 // GetGrantsOk returns a tuple with the Grants field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrantsOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrantsOk() ([]string, bool) {
 	if o == nil || o.Grants == nil {
 		return nil, false
 	}
@@ -614,7 +648,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasGrants() bool {
 
 // SetGrants gets a reference to the given []string and assigns it to the Grants field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetGrants(v []string) {
-	o.Grants = &v
+	o.Grants = v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
@@ -783,12 +817,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookups() []IdentityL
 		var ret []IdentityLookupDTO
 		return ret
 	}
-	return *o.IdentityLookups
+	return o.IdentityLookups
 }
 
 // GetIdentityLookupsOk returns a tuple with the IdentityLookups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookupsOk() ([]IdentityLookupDTO, bool) {
 	if o == nil || o.IdentityLookups == nil {
 		return nil, false
 	}
@@ -806,7 +840,39 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityLookups() bool {
 
 // SetIdentityLookups gets a reference to the given []IdentityLookupDTO and assigns it to the IdentityLookups field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityLookups(v []IdentityLookupDTO) {
-	o.IdentityLookups = &v
+	o.IdentityLookups = v
+}
+
+// GetIdentityMappingPolicy returns the IdentityMappingPolicy field value if set, zero value otherwise.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicy() IdentityMappingPolicyDTO {
+	if o == nil || o.IdentityMappingPolicy == nil {
+		var ret IdentityMappingPolicyDTO
+		return ret
+	}
+	return *o.IdentityMappingPolicy
+}
+
+// GetIdentityMappingPolicyOk returns a tuple with the IdentityMappingPolicy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicyOk() (*IdentityMappingPolicyDTO, bool) {
+	if o == nil || o.IdentityMappingPolicy == nil {
+		return nil, false
+	}
+	return o.IdentityMappingPolicy, true
+}
+
+// HasIdentityMappingPolicy returns a boolean if a field has been set.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityMappingPolicy() bool {
+	if o != nil && o.IdentityMappingPolicy != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetIdentityMappingPolicy gets a reference to the given IdentityMappingPolicyDTO and assigns it to the IdentityMappingPolicy field.
+func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityMappingPolicy(v IdentityMappingPolicyDTO) {
+	o.IdentityMappingPolicy = &v
 }
 
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.
@@ -943,12 +1009,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIs() [
 		var ret []string
 		return ret
 	}
-	return *o.PostLogoutRedirectionURIs
+	return o.PostLogoutRedirectionURIs
 }
 
 // GetPostLogoutRedirectionURIsOk returns a tuple with the PostLogoutRedirectionURIs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIsOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIsOk() ([]string, bool) {
 	if o == nil || o.PostLogoutRedirectionURIs == nil {
 		return nil, false
 	}
@@ -966,7 +1032,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasPostLogoutRedirectionURIs() b
 
 // SetPostLogoutRedirectionURIs gets a reference to the given []string and assigns it to the PostLogoutRedirectionURIs field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetPostLogoutRedirectionURIs(v []string) {
-	o.PostLogoutRedirectionURIs = &v
+	o.PostLogoutRedirectionURIs = v
 }
 
 // GetRemote returns the Remote field value if set, zero value otherwise.
@@ -1007,12 +1073,12 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypes() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ResponseTypes
+	return o.ResponseTypes
 }
 
 // GetResponseTypesOk returns a tuple with the ResponseTypes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypesOk() (*[]string, bool) {
+func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypesOk() ([]string, bool) {
 	if o == nil || o.ResponseTypes == nil {
 		return nil, false
 	}
@@ -1030,7 +1096,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) HasResponseTypes() bool {
 
 // SetResponseTypes gets a reference to the given []string and assigns it to the ResponseTypes field.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) SetResponseTypes(v []string) {
-	o.ResponseTypes = &v
+	o.ResponseTypes = v
 }
 
 // GetRole returns the Role field value if set, zero value otherwise.
@@ -1163,6 +1229,9 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetY(v float64) {
 
 func (o ExternalOpenIDConnectRelayingPartyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.AccountLinkagePolicy != nil {
+		toSerialize["accountLinkagePolicy"] = o.AccountLinkagePolicy
+	}
 	if o.ActiveBindings != nil {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
@@ -1232,6 +1301,9 @@ func (o ExternalOpenIDConnectRelayingPartyDTO) MarshalJSON() ([]byte, error) {
 	if o.IdentityLookups != nil {
 		toSerialize["identityLookups"] = o.IdentityLookups
 	}
+	if o.IdentityMappingPolicy != nil {
+		toSerialize["identityMappingPolicy"] = o.IdentityMappingPolicy
+	}
 	if o.IsRemote != nil {
 		toSerialize["isRemote"] = o.IsRemote
 	}
@@ -1283,6 +1355,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) UnmarshalJSON(bytes []byte) (err
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+		delete(additionalProperties, "accountLinkagePolicy")
 		delete(additionalProperties, "activeBindings")
 		delete(additionalProperties, "activeProfiles")
 		delete(additionalProperties, "authorizedURIs")
@@ -1306,6 +1379,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) UnmarshalJSON(bytes []byte) (err
 		delete(additionalProperties, "idTokenSigningAlg")
 		delete(additionalProperties, "identityAppliance")
 		delete(additionalProperties, "identityLookups")
+		delete(additionalProperties, "identityMappingPolicy")
 		delete(additionalProperties, "isRemote")
 		delete(additionalProperties, "location")
 		delete(additionalProperties, "metadata")

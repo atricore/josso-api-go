@@ -74,7 +74,7 @@ func (p *InternalSaml2ServiceProviderDTO) GetIdentityLookup(name string) *Identi
 		return nil
 	}
 
-	for _, l := range *p.IdentityLookups {
+	for _, l := range p.IdentityLookups {
 		if l.GetName() == name {
 			return &l
 		}
@@ -99,13 +99,13 @@ func (p *InternalSaml2ServiceProviderDTO) AddIdentityLookup(name string) (Identi
 		if p.GetIdentityLookup(name) != nil {
 			return *l, fmt.Errorf("name already in use for identity lookup %s", name)
 		}
-		ls = *p.IdentityLookups
+		ls = p.IdentityLookups
 	}
 
 	// Add a new element to : p.IdentityLookups
 	ls = append(ls, *l)
 
-	p.IdentityLookups = &ls
+	p.IdentityLookups = ls
 
 	return *l, nil
 }
@@ -118,7 +118,7 @@ func (p *InternalSaml2ServiceProviderDTO) RemoveIdentityLookup(name string) bool
 		return false
 	}
 
-	ls := *p.IdentityLookups
+	ls := p.IdentityLookups
 	var newLs []IdentityLookupDTO
 	deleted := false
 
@@ -133,7 +133,7 @@ func (p *InternalSaml2ServiceProviderDTO) RemoveIdentityLookup(name string) bool
 
 	}
 
-	p.IdentityLookups = &newLs
+	p.IdentityLookups = newLs
 
 	return deleted
 }

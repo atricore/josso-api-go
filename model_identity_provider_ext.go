@@ -70,7 +70,7 @@ func (p *IdentityProviderDTO) GetIdentityLookup(name string) *IdentityLookupDTO 
 		return nil
 	}
 
-	for _, l := range *p.IdentityLookups {
+	for _, l := range p.IdentityLookups {
 		if l.GetName() == name {
 			return &l
 		}
@@ -96,13 +96,13 @@ func (p *IdentityProviderDTO) AddIdentityLookup(name string) (IdentityLookupDTO,
 		if p.GetIdentityLookup(name) != nil {
 			return *l, fmt.Errorf("name already in use for identity lookup %s", name)
 		}
-		ls = *p.IdentityLookups
+		ls = p.IdentityLookups
 	}
 
 	// Add a new element to : p.IdentityLookups
 	ls = append(ls, *l)
 
-	p.IdentityLookups = &ls
+	p.IdentityLookups = ls
 
 	return *l, nil
 
@@ -116,7 +116,7 @@ func (p *IdentityProviderDTO) RemoveIdentityLookup(name string) bool {
 		return false
 	}
 
-	ls := *p.IdentityLookups
+	ls := p.IdentityLookups
 	var newLs []IdentityLookupDTO
 	deleted := false
 
@@ -131,7 +131,7 @@ func (p *IdentityProviderDTO) RemoveIdentityLookup(name string) bool {
 
 	}
 
-	p.IdentityLookups = &newLs
+	p.IdentityLookups = newLs
 
 	return deleted
 }

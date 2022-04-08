@@ -18,8 +18,8 @@ import (
 // GetIdSourceLdapsRes struct for GetIdSourceLdapsRes
 type GetIdSourceLdapsRes struct {
 	Error *string `json:"error,omitempty"`
-	IdSourceLdaps *[]LdapIdentitySourceDTO `json:"idSourceLdaps,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	IdSourceLdaps []LdapIdentitySourceDTO `json:"idSourceLdaps,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -80,12 +80,12 @@ func (o *GetIdSourceLdapsRes) GetIdSourceLdaps() []LdapIdentitySourceDTO {
 		var ret []LdapIdentitySourceDTO
 		return ret
 	}
-	return *o.IdSourceLdaps
+	return o.IdSourceLdaps
 }
 
 // GetIdSourceLdapsOk returns a tuple with the IdSourceLdaps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdSourceLdapsRes) GetIdSourceLdapsOk() (*[]LdapIdentitySourceDTO, bool) {
+func (o *GetIdSourceLdapsRes) GetIdSourceLdapsOk() ([]LdapIdentitySourceDTO, bool) {
 	if o == nil || o.IdSourceLdaps == nil {
 		return nil, false
 	}
@@ -103,7 +103,7 @@ func (o *GetIdSourceLdapsRes) HasIdSourceLdaps() bool {
 
 // SetIdSourceLdaps gets a reference to the given []LdapIdentitySourceDTO and assigns it to the IdSourceLdaps field.
 func (o *GetIdSourceLdapsRes) SetIdSourceLdaps(v []LdapIdentitySourceDTO) {
-	o.IdSourceLdaps = &v
+	o.IdSourceLdaps = v
 }
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
@@ -112,12 +112,12 @@ func (o *GetIdSourceLdapsRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdSourceLdapsRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIdSourceLdapsRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetIdSourceLdapsRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIdSourceLdapsRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIdSourceLdapsRes) MarshalJSON() ([]byte, error) {

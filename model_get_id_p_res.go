@@ -20,7 +20,7 @@ type GetIdPRes struct {
 	Config *SamlR2IDPConfigDTO `json:"config,omitempty"`
 	Error *string `json:"error,omitempty"`
 	Idp *IdentityProviderDTO `json:"idp,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -145,12 +145,12 @@ func (o *GetIdPRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdPRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIdPRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -168,7 +168,7 @@ func (o *GetIdPRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIdPRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIdPRes) MarshalJSON() ([]byte, error) {

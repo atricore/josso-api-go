@@ -19,7 +19,7 @@ import (
 type GetIdSourceLdapRes struct {
 	Error *string `json:"error,omitempty"`
 	IdSourceLdap *LdapIdentitySourceDTO `json:"idSourceLdap,omitempty"`
-	ValidationErrors *[]string `json:"validationErrors,omitempty"`
+	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -112,12 +112,12 @@ func (o *GetIdSourceLdapRes) GetValidationErrors() []string {
 		var ret []string
 		return ret
 	}
-	return *o.ValidationErrors
+	return o.ValidationErrors
 }
 
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdSourceLdapRes) GetValidationErrorsOk() (*[]string, bool) {
+func (o *GetIdSourceLdapRes) GetValidationErrorsOk() ([]string, bool) {
 	if o == nil || o.ValidationErrors == nil {
 		return nil, false
 	}
@@ -135,7 +135,7 @@ func (o *GetIdSourceLdapRes) HasValidationErrors() bool {
 
 // SetValidationErrors gets a reference to the given []string and assigns it to the ValidationErrors field.
 func (o *GetIdSourceLdapRes) SetValidationErrors(v []string) {
-	o.ValidationErrors = &v
+	o.ValidationErrors = v
 }
 
 func (o GetIdSourceLdapRes) MarshalJSON() ([]byte, error) {

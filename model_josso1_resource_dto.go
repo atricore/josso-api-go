@@ -22,7 +22,7 @@ type JOSSO1ResourceDTO struct {
 	Description *string `json:"description,omitempty"`
 	ElementId *string `json:"elementId,omitempty"`
 	Id *int64 `json:"id,omitempty"`
-	IgnoredWebResources *[]string `json:"ignoredWebResources,omitempty"`
+	IgnoredWebResources []string `json:"ignoredWebResources,omitempty"`
 	Name *string `json:"name,omitempty"`
 	PartnerAppLocation *LocationDTO `json:"partnerAppLocation,omitempty"`
 	ServiceConnection *ServiceConnectionDTO `json:"serviceConnection,omitempty"`
@@ -218,12 +218,12 @@ func (o *JOSSO1ResourceDTO) GetIgnoredWebResources() []string {
 		var ret []string
 		return ret
 	}
-	return *o.IgnoredWebResources
+	return o.IgnoredWebResources
 }
 
 // GetIgnoredWebResourcesOk returns a tuple with the IgnoredWebResources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *JOSSO1ResourceDTO) GetIgnoredWebResourcesOk() (*[]string, bool) {
+func (o *JOSSO1ResourceDTO) GetIgnoredWebResourcesOk() ([]string, bool) {
 	if o == nil || o.IgnoredWebResources == nil {
 		return nil, false
 	}
@@ -241,7 +241,7 @@ func (o *JOSSO1ResourceDTO) HasIgnoredWebResources() bool {
 
 // SetIgnoredWebResources gets a reference to the given []string and assigns it to the IgnoredWebResources field.
 func (o *JOSSO1ResourceDTO) SetIgnoredWebResources(v []string) {
-	o.IgnoredWebResources = &v
+	o.IgnoredWebResources = v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
