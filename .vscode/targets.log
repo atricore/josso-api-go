@@ -8,12 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Mar 31 13:43:47 2022
+# Make data base, printed on Fri Apr  8 17:32:13 2022
 
 # Variables
 
 # environment
-TMUX_PANE = %16
+TMUX_PANE = %5
 # environment
 RUSTUP_HOME = /opt/atricore/tools/rust/rustup
 # environment
@@ -27,7 +27,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-35398875-1799-4a97-b03a-bf3678c19dba.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a10e65a4-326a-410f-9a1f-9eb6ebd5acd1.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -37,7 +37,7 @@ VSCODE_CWD = /wa/git/go/src/josso-api-go
 # environment
 WINDOWID = 4194306
 # environment
-DIRENV_WATCHES = eJxszs1KxDAQAOB3mXPZSTL57d2j4F08jJtZW8g2kMRWKr67R0H2AT74Xr_hhccCM-DBeJFtb1eY4Lnmsd4FZu2tt4YU6QmevtY-OsyjfcrP9AeXehfsH3U7uciJl1KvXLAv3ATz2mTbkUupB4pRViK9e3JJ6HZLTDFllSKLtpo4Zk7eRCYOLohXWufkQ_KaxBhy4VHMmX-xt98AAAD__yiyP_c=
+DIRENV_WATCHES = eJxszsFKxDAQANB_mXPZySTT1PTuUfAuHibJ2BayDTRxVyr-u0dB9gMevLdveJW-wgx4F1y2jkvFi-63I8EALzX37aowk-fA9skFO8Dz19Z6g7kfn_oz_Pm1XhXbUvdTip54KTVJwbbKoZi3Q_cbSin1jomDJSLjonchSYiRWZRJ2VufJ5mSjca5MTomO5pMIdsP78hPoxcR8yDGxvyLvf8GAAD__zpyQqc=
 # environment
 LC_ADDRESS = en_US.UTF-8
 # default
@@ -53,7 +53,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/sgonzalez/wa/git/go/src/josso-api-go
+PWD = /wa/git/go/src/josso-api-go
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -63,7 +63,7 @@ MAIL = /var/spool/mail/sgonzalez
 # environment
 XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/sgonzalez
+OLDPWD = /wa/git/go/src/terraform-provider-josso
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -71,11 +71,11 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1764.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1747.sock
 # environment
-VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1
+VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/e18005f0f1b33c29e81d732535d8c0e47cafb0b5
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
 LANG = C
 # environment
@@ -97,7 +97,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 JOSSO_API_PASSWORD = atricore
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 JPDA_OPTS = -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
 # automatic
@@ -121,11 +121,11 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 741279
+VSCODE_PID = 4219
 # environment
 XDG_SESSION_TYPE = x11
 # environment
-TMUX = /tmp/tmux-1000/default,1895,6
+TMUX = /tmp/tmux-1000/default,1998,0
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -189,7 +189,7 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-1764.log
+ALACRITTY_LOG = /tmp/Alacritty-1747.log
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
@@ -209,7 +209,7 @@ GNUMAKEFLAGS :=
 # environment
 JOSSO_API_CLIENT_ID = idbus-f2f7244e-bbce-44ca-8b33-f5c0bde339f7
 # environment
-DIRENV_FILE = /wa/.envrc
+DIRENV_FILE = /wa/git/go/.envrc
 # environment
 LOGNAME = sgonzalez
 # environment
@@ -231,7 +231,7 @@ MAKE_VERSION := 4.3
 # environment
 NIX_PROFILES = /nix/var/nix/profiles/default /home/sgonzalez/.nix-profile
 # environment
-DIRENV_DIR = -/wa
+DIRENV_DIR = -/wa/git/go
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
@@ -249,7 +249,7 @@ GENERATOR = /opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh
 # environment
 COLORTERM = truecolor
 # environment
-DIRENV_DIFF = eJxE0MGOqjAYQOF3-ddyVegVJZlFEQlCGRURCptGax0UUQIFQeO7T2Yxme05u-8FJRiv9wBuYLzAWgaLz4hZywAMUIaPPQx-m70kCzBg-NgP_4lbW_G_FeNw7iy2YIBwu_pZj73Owhu8MrWCrtNtSP7rR_WC7NH04so0nn6puR_EXjXRg5Gj4lBHtGJZxvncVyxTuLY8jEWCyK2oj8hOG1VKlOwmm0K0MlFWdX858Wo9w4KK7FQ72k5v-Nm9jr2WEtxqOHyqRXjId01pojKIzt5MaK47cVISWvb1uvWILO8ozXURzJMVuWc0bk75hnn7zsx6FDl-QZVOzqYYY4ux_tyvGf-AAfgJi_APTQfv93cAAAD__zetY10=
+DIRENV_DIFF = eJxEystyqjAAANB_yVouFxVFZrqIDSiIihCRsmF4GxgIlRIIjv_eVcf1OU_QAvX5moEGqE-ADEc7eSEyHKACQRwisSA_YkHB7I90w9KACt4k_ssa9kje4wbx515zgQoyc-ymTj-MCF7gaRvWvh1wF2PJxv01h_2exOZ8G3GEndHjD6H_n243xTFjVsoy8yYMxbjUJT4vK6YTYbUwFA1ak79YR3SohBxuuko_K2iSNsGqWFd5E9IptGvJv_vxlaWYtPLygD1ziOMDDcjiEiaxSxqppDUyXaukTXJ3v4hzCxxz7vW5KddumUTyEdP6LLdHI-3stXK36Zg4Cke7kXGL5coOQhSGU8sv38kHeL1-AwAA__-nHWor
 # environment
 GOMODCACHE = /home/sgonzalez/wa/git/go/pkg/mod
 # environment
@@ -263,7 +263,7 @@ HOME = /home/sgonzalez
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.65.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.66.0-main.sock
 # environment
 TERM = tmux-256color
 # environment
@@ -284,8 +284,8 @@ _P9K_TTY = /dev/pts/5
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
-# default
  
+# default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # makefile (from 'Makefile', line 6)
 SWAGGER_FILE = ./console-api-1.4.3-SNAPSHOT-swagger.json
@@ -302,9 +302,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 163 files, no impossibilities.
+# . (device 2065, inode 9188680): 168 files, no impossibilities.
 
-# 163 files, no impossibilities in 1 directories.
+# 168 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -374,12 +374,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 173 / storage = 4720 B / avg = 27 B
-# current buf: size = 8162 B / used = 4720 B / count = 173 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 178 / storage = 4908 B / avg = 27 B
+# current buf: size = 8162 B / used = 4908 B / count = 178 / avg = 27 B
 
-# strcache performance: lookups = 183 / hit rate = 5%
+# strcache performance: lookups = 188 / hit rate = 5%
 # hash-table stats:
-# Load=173/8192=2%, Rehash=0, Collisions=2/183=1%
-# Finished Make data base on Thu Mar 31 13:43:47 2022
+# Load=178/8192=2%, Rehash=0, Collisions=2/188=1%
+# Finished Make data base on Fri Apr  8 17:32:13 2022
 
  
