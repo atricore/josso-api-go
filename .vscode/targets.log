@@ -8,12 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Apr  8 17:32:13 2022
+# Make data base, printed on Mon Apr 11 17:36:05 2022
 
 # Variables
 
 # environment
-TMUX_PANE = %5
+TMUX_PANE = %9
 # environment
 RUSTUP_HOME = /opt/atricore/tools/rust/rustup
 # environment
@@ -27,7 +27,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a10e65a4-326a-410f-9a1f-9eb6ebd5acd1.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7504f65f-54b8-4091-a11c-1283ac09314f.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -35,7 +35,7 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CWD = /wa/git/go/src/josso-api-go
 # environment
-WINDOWID = 4194306
+WINDOWID = 125829122
 # environment
 DIRENV_WATCHES = eJxszsFKxDAQANB_mXPZySTT1PTuUfAuHibJ2BayDTRxVyr-u0dB9gMevLdveJW-wgx4F1y2jkvFi-63I8EALzX37aowk-fA9skFO8Dz19Z6g7kfn_oz_Pm1XhXbUvdTip54KTVJwbbKoZi3Q_cbSin1jomDJSLjonchSYiRWZRJ2VufJ5mSjca5MTomO5pMIdsP78hPoxcR8yDGxvyLvf8GAAD__zpyQqc=
 # environment
@@ -49,11 +49,13 @@ GOPATH = /home/sgonzalez/wa/git/go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
+TF_CLI_ARGS_apply = -parallelism=1
+# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /wa/git/go/src/josso-api-go
+PWD = /home/sgonzalez/wa/git/go/src/josso-api-go
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -63,7 +65,7 @@ MAIL = /var/spool/mail/sgonzalez
 # environment
 XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /wa/git/go/src/terraform-provider-josso
+OLDPWD = /home/sgonzalez/wa/git/go/src/terraform-provider-josso
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -71,7 +73,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1747.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-23283.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/e18005f0f1b33c29e81d732535d8c0e47cafb0b5
 # environment
@@ -80,8 +82,6 @@ XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 LANG = C
 # environment
 XAUTHORITY = /home/sgonzalez/.Xauthority
-# environment
-MY_VAR = x
 # default
 .LOADED := 
 # default
@@ -121,11 +121,11 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4219
+VSCODE_PID = 378947
 # environment
 XDG_SESSION_TYPE = x11
 # environment
-TMUX = /tmp/tmux-1000/default,1998,0
+TMUX = /tmp/tmux-1000/default,23368,2
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -151,13 +151,13 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 2
+SHLVL = 3
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/opt/atricore/tools/rust/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+PATH = /data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/opt/atricore/tools/rust/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
 # environment
 NIX_SSL_CERT_FILE = /etc/ssl/certs/ca-certificates.crt
 # default
@@ -189,7 +189,7 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-1747.log
+ALACRITTY_LOG = /tmp/Alacritty-23283.log
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
@@ -214,6 +214,8 @@ DIRENV_FILE = /wa/git/go/.envrc
 LOGNAME = sgonzalez
 # environment
 XDG_VTNR = 1
+# environment
+TEST_FILTER = TestAccJosso1Re_crud
 # makefile
 .DEFAULT_GOAL := default
 # environment
@@ -279,13 +281,13 @@ is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+
 # default
 SUFFIXES := 
 # environment
-_P9K_TTY = /dev/pts/5
+_P9K_TTY = /dev/pts/11
 # environment
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
- 
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # makefile (from 'Makefile', line 6)
 SWAGGER_FILE = ./console-api-1.4.3-SNAPSHOT-swagger.json
@@ -294,7 +296,7 @@ TERM_PROGRAM_VERSION = 3.2a
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=140/1024=14%, Rehash=0, Collisions=14/170=8%
+# Load=141/1024=14%, Rehash=0, Collisions=13/171=8%
 
 # Pattern-specific Variable Values
 
@@ -380,6 +382,6 @@ test:
 # strcache performance: lookups = 188 / hit rate = 5%
 # hash-table stats:
 # Load=178/8192=2%, Rehash=0, Collisions=2/188=1%
-# Finished Make data base on Fri Apr  8 17:32:13 2022
+# Finished Make data base on Mon Apr 11 17:36:06 2022
 
  

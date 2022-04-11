@@ -2,7 +2,7 @@ package jossoappi
 
 // Transforms the federated connection's channelA (FederatedChannelDTO) into a IdentityProviderChannelDTO
 func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, error) {
-	c := f.GetChannelA()
+	c := f.GetChannelB()
 	var idpc IdentityProviderChannelDTO
 
 	idpc.SetActiveBindings(c.GetActiveBindings())
@@ -66,7 +66,7 @@ func (f *FederatedConnectionDTO) SetIDPChannel(idpc *IdentityProviderChannelDTO)
 		c.AdditionalProperties["wantAssertionSigned"] = idpc.GetWantAssertionSigned()
 	}
 
-	f.SetChannelA(c)
+	f.SetChannelB(c)
 	return nil
 }
 
