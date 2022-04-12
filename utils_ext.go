@@ -37,3 +37,11 @@ func AsInt32(i interface{}, d int32) int32 {
 	return d
 
 }
+
+func AsString(i interface{}, d string) string {
+	if i == nil {
+		return d
+	}
+
+	return i.(string)
+}
