@@ -135,3 +135,86 @@ func (p *IdentityProviderDTO) RemoveIdentityLookup(name string) bool {
 
 	return deleted
 }
+
+func (p IdentityProviderDTO) IsBasicAuthn(m *AuthenticationMechanismDTO) bool {
+	return m.AdditionalProperties["@c"] == ".BasicAuthenticationDTO"
+}
+
+func (p IdentityProviderDTO) GetBasicAuthns() ([]*BasicAuthenticationDTO, error) {
+
+	bas := make([]*BasicAuthenticationDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+
+		if p.IsBasicAuthn(&m) {
+			ba, err := p.AsBasicAuthn(&m)
+			if err != nil {
+				return bas, err
+			}
+			bas = append(bas, ba)
+		}
+	}
+
+	return bas, nil
+}
+
+func (p IdentityProviderDTO) AddBasicAuthns(ms []*BasicAuthenticationDTO) error {
+
+	for _, ba := range ms {
+		m, err := p.BasicAuthnAsAuthnMechansim(ba)
+		if err != nil {
+			return err
+		}
+		p.SetAuthenticationMechanisms(append(p.GetAuthenticationMechanisms(), *m))
+	}
+
+	return nil
+}
+
+func (p IdentityProviderDTO) AsBasicAuthn(m *AuthenticationMechanismDTO) (*BasicAuthenticationDTO, error) {
+	ba := NewBasicAuthenticationDTO()
+
+	if m.AdditionalProperties["@c"] != ".BasicAuthenticationDTO" {
+		return nil, fmt.Errorf("Invalid authentication mechanism java class %s", m.AdditionalProperties["@c"])
+	}
+
+	ba.SetName(m.GetName())
+	ba.SetDisplayName(m.GetDisplayName())
+	ba.SetPriority(m.GetPriority())
+
+	ba.SetHashAlgorithm(m.AdditionalProperties["hashAlgorithm"].(string))
+	ba.SetHashEncoding(m.AdditionalProperties["hashEncoding"].(string))
+	ba.SetIgnoreUsernameCase(m.AdditionalProperties["ignoreUsernamecase"].(bool))
+	ba.SetIgnorePasswordCase(m.AdditionalProperties["ignorePassowordCase"].(bool))
+	ba.SetSaltLength(int32(m.AdditionalProperties["SaltLength"].(int)))
+	ba.SetSaltPrefix(m.AdditionalProperties["saltPrefix"].(string))
+	ba.SetSaltSuffix(m.AdditionalProperties["saltSuffix"].(string))
+	//authn.AdditionalProperties["impersonateUserPolicy"]
+	ba.SetSimpleAuthnSaml2AuthnCtxClass(m.AdditionalProperties["simpleAuthnSaml2AuthnCtxClass"].(string))
+
+	return ba, nil
+}
+
+func (p IdentityProviderDTO) BasicAuthnAsAuthnMechansim(ba *BasicAuthenticationDTO) (*AuthenticationMechanismDTO, error) {
+
+	m := NewAuthenticationMechanismDTO()
+
+	m.SetName(ba.GetName())
+	m.SetDisplayName(ba.GetDisplayName())
+	m.SetPriority(ba.GetPriority())
+
+	m.AdditionalProperties = make(map[string]interface{})
+
+	m.AdditionalProperties["@c"] = ".BasicAuthenticationDTO"
+	m.AdditionalProperties["hashAlgorithm"] = ba.GetHashAlgorithm()
+	m.AdditionalProperties["hashEncoding"] = ba.GetHashEncoding()
+	m.AdditionalProperties["ignoreUsernamecase"] = ba.GetIgnoreUsernameCase()
+	m.AdditionalProperties["ignorePassowordCase"] = ba.GetIgnorePasswordCase()
+	m.AdditionalProperties["SaltLength"] = ba.GetSaltLength()
+	m.AdditionalProperties["saltPrefix"] = ba.GetSaltPrefix()
+	m.AdditionalProperties["saltSuffix"] = ba.GetSaltSuffix()
+	//authn.AdditionalProperties["impersonateUserPolicy"]
+	m.AdditionalProperties["simpleAuthnSaml2AuthnCtxClass"] = ba.GetSimpleAuthnSaml2AuthnCtxClass()
+
+	return m, nil
+}
