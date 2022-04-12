@@ -184,9 +184,11 @@ func (p IdentityProviderDTO) AsBasicAuthn(m *AuthenticationMechanismDTO) (*Basic
 
 	ba.SetHashAlgorithm(m.AdditionalProperties["hashAlgorithm"].(string))
 	ba.SetHashEncoding(m.AdditionalProperties["hashEncoding"].(string))
-	ba.SetIgnoreUsernameCase(m.AdditionalProperties["ignoreUsernamecase"].(bool))
-	ba.SetIgnorePasswordCase(m.AdditionalProperties["ignorePassowordCase"].(bool))
-	ba.SetSaltLength(int32(m.AdditionalProperties["SaltLength"].(int)))
+	ba.SetIgnoreUsernameCase(AsBool(m.AdditionalProperties["ignoreUsernamecase"], false))
+
+	//ba.SetIgnorePasswordCase(m.AdditionalProperties["ignorePassowordCase"].(bool))
+
+	ba.SetSaltLength(AsInt32(m.AdditionalProperties["saltLength"], 0))
 	ba.SetSaltPrefix(m.AdditionalProperties["saltPrefix"].(string))
 	ba.SetSaltSuffix(m.AdditionalProperties["saltSuffix"].(string))
 	//authn.AdditionalProperties["impersonateUserPolicy"]
@@ -210,7 +212,7 @@ func (p IdentityProviderDTO) BasicAuthnAsAuthnMechansim(ba *BasicAuthenticationD
 	m.AdditionalProperties["hashEncoding"] = ba.GetHashEncoding()
 	m.AdditionalProperties["ignoreUsernamecase"] = ba.GetIgnoreUsernameCase()
 	m.AdditionalProperties["ignorePassowordCase"] = ba.GetIgnorePasswordCase()
-	m.AdditionalProperties["SaltLength"] = ba.GetSaltLength()
+	m.AdditionalProperties["saltLength"] = ba.GetSaltLength()
 	m.AdditionalProperties["saltPrefix"] = ba.GetSaltPrefix()
 	m.AdditionalProperties["saltSuffix"] = ba.GetSaltSuffix()
 	//authn.AdditionalProperties["impersonateUserPolicy"]

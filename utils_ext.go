@@ -13,3 +13,27 @@ func IPtrBool(s interface{}) *bool {
 	}
 	return nil
 }
+
+func AsBool(i interface{}, d bool) bool {
+	if i != nil {
+		return i.(bool)
+	}
+	return d
+}
+
+func AsInt32(i interface{}, d int32) int32 {
+	if i == nil {
+		return d
+	}
+
+	switch v := i.(type) {
+	case int32:
+		return v
+	case int:
+	case int64:
+		return int32(v)
+	}
+
+	return d
+
+}
