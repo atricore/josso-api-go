@@ -39,12 +39,13 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 	spCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
 	spCfg.AdditionalProperties["@c"] = class
 
-	spCfg.Description = cfg.Description
-	spCfg.DisplayName = cfg.DisplayName
-	spCfg.ElementId = cfg.ElementId
-	spCfg.Name = cfg.Name
-	spCfg.UseSampleStore = PtrBool(cfg.AdditionalProperties["useSampleStore"].(bool))
-	spCfg.UseSystemStore = PtrBool(cfg.AdditionalProperties["useSystemStore"].(bool))
+	spCfg.SetDescription(cfg.GetDescription())
+	spCfg.SetDisplayName(cfg.GetDisplayName())
+	spCfg.SetElementId(cfg.GetElementId())
+	spCfg.SetId(cfg.GetId())
+	spCfg.SetName(cfg.GetName())
+	spCfg.SetUseSampleStore(AsBool(cfg.AdditionalProperties["useSampleStore"], false))
+	spCfg.SetUseSystemStore(AsBool(cfg.AdditionalProperties["useSystemStore"], false))
 
 	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
 		// Get signer/encrypter

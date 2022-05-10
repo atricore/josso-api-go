@@ -53,9 +53,7 @@ func (p *IdentityProviderDTO) GetSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) 
 }
 
 func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) error {
-
 	cfg, err := idpCfg.ToProviderConfig()
-
 	if err != nil {
 		return err
 	}

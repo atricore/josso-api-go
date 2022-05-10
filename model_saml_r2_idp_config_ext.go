@@ -1,8 +1,9 @@
 package jossoappi
 
 func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
-	var cfg ProviderConfigDTO
+	cfg := NewProviderConfigDTO()
 	cfg.AdditionalProperties = make(map[string]interface{})
+
 	// Build specific type
 	cfg.AdditionalProperties["@id"] = idpCfg.AdditionalProperties["@id"]
 	cfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
@@ -20,6 +21,6 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
 	}
 
-	return &cfg, nil
+	return cfg, nil
 
 }
