@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,14 +8,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Apr 12 18:22:18 2022
+# Make data base, printed on Tue May 10 10:18:36 2022
 
 # Variables
 
 # environment
-TMUX_PANE = %20
-# environment
-RUSTUP_HOME = /opt/atricore/tools/rust/rustup
+TMUX_PANE = %1
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-openjdk
 # environment
@@ -25,7 +25,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-533df564-25e2-4cb1-9e57-4554264ea591.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7ec1e930-cf2a-468e-85fd-e8cfde2c5573.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -33,9 +33,9 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CWD = /wa/git/go/src/josso-api-go
 # environment
-WINDOWID = 125829122
+WINDOWID = 4194306
 # environment
-DIRENV_WATCHES = eJxszsFKxDAQANB_mXPZySTT1PTuUfAuHibJ2BayDTRxVyr-u0dB9gMevLdveJW-wgx4F1y2jkvFi-63I8EALzX37aowk-fA9skFO8Dz19Z6g7kfn_oz_Pm1XhXbUvdTip54KTVJwbbKoZi3Q_cbSin1jomDJSLjonchSYiRWZRJ2VufJ5mSjca5MTomO5pMIdsP78hPoxcR8yDGxvyLvf8GAAD__zpyQqc=
+DIRENV_WATCHES = eJxczsFKxDAQANB_ybnsZJLJ1PTuUfAuHibJ2BayDbRxVyr-u0dxP-DBe_s2r9IXMxm4C8xrh7nBRbfbns1gXlrp61XNhEyR3JOPbjDPX-vRDzP1_VN_hj-_tKvCMbftlKonXGrLUuFYZFco667bDaTWdodM0SGi9Yl9zBJTIhIlVGLHZZQxu2S9D8kTumALxuI-2COPgUXE_o8FG0aOFB5i778BAAD__zsOQrE=
 # environment
 LC_ADDRESS = en_US.UTF-8
 # default
@@ -61,7 +61,9 @@ MAIL = /var/spool/mail/sgonzalez
 # environment
 XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/sgonzalez
+TFE_PARALLELISM = 1
+# environment
+OLDPWD = /home/sgonzalez/wa/git/go/src/josso-sdk-go
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -69,9 +71,9 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-23283.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-168641.sock
 # environment
-VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/e18005f0f1b33c29e81d732535d8c0e47cafb0b5
+VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
@@ -117,11 +119,11 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 883595
+VSCODE_PID = 221173
 # environment
 XDG_SESSION_TYPE = x11
 # environment
-TMUX = /tmp/tmux-1000/default,23368,2
+TMUX = /tmp/tmux-1000/default,168710,0
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -153,7 +155,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/data/opt/atricore/tools/gcloud/google-cloud-sdk-370.0.0/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/opt/atricore/tools/rust/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+PATH = /opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/opt/atricore/tools/bin:/usr/lib/jvm/java-8-openjdk/bin:/opt/atricore/tools/apache-maven-3.5.4/bin:/home/sgonzalez/.cargo/bin:/opt/atricore/tools/go/bin:/opt/atricore/tools/hcp/bin:/opt/atricore/tools/OpenAPITools/git/openapi-generator/bin:/home/sgonzalez/bin:/home/sgonzalez/.local/bin:/home/sgonzalez/.bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/sgonzalez/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
 # environment
 NIX_SSL_CERT_FILE = /etc/ssl/certs/ca-certificates.crt
 # default
@@ -166,8 +168,6 @@ MOTD_SHOWN = pam
 ^F = $(notdir $^)
 # environment
 LC_TIME = en_US.UTF-8
-# environment
-CARGO_HOME = /opt/atricore/tools/rust/cargo
 # environment
 tmux_conf_copy_to_os_clipboard = true
 # environment
@@ -185,9 +185,9 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-23283.log
+ALACRITTY_LOG = /tmp/Alacritty-168641.log
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
 # environment
 MAVEN_OPTS = -Xmx4096m -XX:MaxPermSize=256m -Dmaven.test.skip=true
 # automatic
@@ -210,6 +210,8 @@ DIRENV_FILE = /wa/git/go/.envrc
 LOGNAME = sgonzalez
 # environment
 XDG_VTNR = 1
+# environment
+TEST_FILTER = TestAccJossoIdP_crud
 # makefile
 .DEFAULT_GOAL := default
 # environment
@@ -231,8 +233,6 @@ DIRENV_DIR = -/wa/git/go
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-TF_PARALLELISM = 0
-# environment
 JOSSO_API_USERNAME = admin
 # environment
 PAGER = less
@@ -247,7 +247,7 @@ GENERATOR = /opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh
 # environment
 COLORTERM = truecolor
 # environment
-DIRENV_DIFF = eJxEystyqjAAANB_yVouFxVFZrqIDSiIihCRsmF4GxgIlRIIjv_eVcf1OU_QAvX5moEGqE-ADEc7eSEyHKACQRwisSA_YkHB7I90w9KACt4k_ssa9kje4wbx515zgQoyc-ymTj-MCF7gaRvWvh1wF2PJxv01h_2exOZ8G3GEndHjD6H_n243xTFjVsoy8yYMxbjUJT4vK6YTYbUwFA1ak79YR3SohBxuuko_K2iSNsGqWFd5E9IptGvJv_vxlaWYtPLygD1ziOMDDcjiEiaxSxqppDUyXaukTXJ3v4hzCxxz7vW5KddumUTyEdP6LLdHI-3stXK36Zg4Cke7kXGL5coOQhSGU8sv38kHeL1-AwAA__-nHWor
+DIRENV_DIFF = eJxEysuymjAAANB_yVqK0FYeM10QAhhEQERENhniA7AITjDegOO_39Ud1-e8wB2Yr_cMdMB8AYQTJ8wIwgkwgSR_lXLVPOSqB7MfcnHgABN8SP517p7s-Bl7K7WXzhaY4OyL4zS4K4GsjRVCMtJuKPzAV-KU7y4WXzbUV2E5IpqIbGQSn59ELCF4JoPKDJyvxe2PrQtWax1M6IV2g1LlLbsvlDysnTH57UcxvaI4l54JmmKFZCGprxJ5rJ72ml4e7arvco8FO-4eCvfYLxYaRWW6P_Wn9XzrNcahNSbop7jGbeYFy6LYCK5uDaT_T_nNCgTHkmpHcbXLHdLrrjcvIxf-bTRNh5aFCJmGaMOcf-D9_g4AAP__RBFpYg==
 # environment
 GOMODCACHE = /home/sgonzalez/wa/git/go/pkg/mod
 # environment
@@ -261,7 +261,7 @@ HOME = /home/sgonzalez
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.66.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1af84b18-1.67.0-main.sock
 # environment
 TERM = tmux-256color
 # environment
@@ -277,7 +277,7 @@ is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+
 # default
 SUFFIXES := 
 # environment
-_P9K_TTY = /dev/pts/5
+_P9K_TTY = /dev/pts/2
 # environment
 VSCODE_CLI = 1
 # environment
@@ -285,16 +285,13 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
 # makefile (from 'Makefile', line 6)
- 
-make: *** No rule to make target 'all'.  Stop.
-
 SWAGGER_FILE = ./console-api-1.4.3-SNAPSHOT-swagger.json
 # environment
 TERM_PROGRAM_VERSION = 3.2a
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=140/1024=14%, Rehash=0, Collisions=13/170=8%
+# Load=139/1024=14%, Rehash=0, Collisions=12/169=7%
 
 # Pattern-specific Variable Values
 
@@ -380,6 +377,6 @@ test:
 # strcache performance: lookups = 188 / hit rate = 5%
 # hash-table stats:
 # Load=178/8192=2%, Rehash=0, Collisions=2/188=1%
-# Finished Make data base on Tue Apr 12 18:22:18 2022
+# Finished Make data base on Tue May 10 10:18:36 2022
 
  

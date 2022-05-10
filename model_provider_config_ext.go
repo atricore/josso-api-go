@@ -22,8 +22,7 @@ func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error
 }
 
 func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
-	var spCfg *SamlR2SPConfigDTO
-
+	spCfg := NewSamlR2SPConfigDTO()
 	spCfg.AdditionalProperties = make(map[string]interface{})
 
 	// @id and @c properties
@@ -70,8 +69,7 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 
 func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 
-	var idpCfg *SamlR2IDPConfigDTO
-
+	idpCfg := NewSamlR2IDPConfigDTO()
 	idpCfg.AdditionalProperties = make(map[string]interface{})
 
 	// @id and @c properties
