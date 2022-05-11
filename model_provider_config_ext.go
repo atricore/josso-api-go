@@ -10,13 +10,21 @@ func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error
 	var storeId int
 	var ok bool
 
-	if storeId, ok = cfg.AdditionalProperties["encrypter"].(int); ok {
-		storeProps = cfg.AdditionalProperties["signer"].(map[string]interface{})
-	} else if storeId, ok = cfg.AdditionalProperties["signer"].(int); ok {
-		storeProps = cfg.AdditionalProperties["encrypter"].(map[string]interface{})
-	} else {
-		return storeProps, storeId, fmt.Errorf("config does not have encrypter/signer ?")
+	if storeProps, ok = cfg.AdditionalProperties["signer"].(map[string]interface{}); !ok {
+		if storeProps, ok = cfg.AdditionalProperties["encrypter"].(map[string]interface{}); !ok {
+			return storeProps, storeId, fmt.Errorf("config does not have encrypter/signer ?")
+		}
 	}
+
+	/*
+		if storeId, ok = cfg.AdditionalProperties["encrypter"].(int); ok {
+			storeProps = cfg.AdditionalProperties["signer"].(map[string]interface{})
+		} else if storeId, ok = cfg.AdditionalProperties["signer"].(int); ok {
+			storeProps = cfg.AdditionalProperties["encrypter"].(map[string]interface{})
+		} else {
+			return storeProps, storeId, fmt.Errorf("config does not have encrypter/signer ?")
+		}
+	*/
 
 	return storeProps, storeId, nil
 }
@@ -100,11 +108,11 @@ func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 		if err != nil {
 			return idpCfg, err
 		}
-
-		if storeProps["@id"].(int) != storeId {
-			return idpCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
-		}
-
+		/*
+			if storeProps["@id"].(int) != storeId {
+				return idpCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
+			}
+		*/
 		store := toKeyStoreDTO(storeId, storeProps)
 		idpCfg.Signer = store
 		idpCfg.Encrypter = store
