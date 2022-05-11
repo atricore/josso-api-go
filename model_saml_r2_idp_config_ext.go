@@ -24,3 +24,14 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 	return cfg, nil
 
 }
+
+func NewSamlR2IDPConfigDTOWithOK() *SamlR2IDPConfigDTO {
+	idpCfg := NewSamlR2IDPConfigDTOWithDefaults()
+	idpCfg.SetUseSampleStore(false)
+	idpCfg.SetUseSystemStore(false)
+	idpCfg.AdditionalProperties = make(map[string]interface{})
+	idpCfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
+
+	return idpCfg
+
+}

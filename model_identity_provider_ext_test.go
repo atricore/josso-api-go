@@ -5,6 +5,43 @@ import (
 	"testing"
 )
 
+func TestKeystoreAdd(t *testing.T) {
+
+	// 1. create empty idp dto
+	p := NewIdentityProviderDTO()
+	p.AdditionalProperties = make(map[string]interface{})
+
+	// 2. Create IDP config
+	idpCfg := NewSamlR2IDPConfigDTOWithOK()
+
+	// Set KS value
+	ks := NewKeystoreDTOWithOK()
+	s := ks.GetStore()
+	s.SetValue("asdf")
+	ks.SetPassword("1234")
+	ks.SetKeystorePassOnly(true)
+
+	idpCfg.SetSigner(*ks)
+	idpCfg.SetEncrypter(*ks)
+
+	err := p.SetSamlR2IDPConfig(idpCfg)
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	idpCfgTest, err := p.GetSamlR2IDPConfig()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	
+	if idpCfgTest.GetDescription() != idpCfg.GetDescription()
+	// 3. Convert to provider config
+
+}
+
 func TestAddIdLookup(t *testing.T) {
 
 	// 1. create empty idp dto

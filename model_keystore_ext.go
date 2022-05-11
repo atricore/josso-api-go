@@ -79,10 +79,12 @@ func NewKeystoreDTOWithOK() *KeystoreDTO {
 	this := KeystoreDTO{}
 	this.AdditionalProperties = make(map[string]interface{})
 	this.AdditionalProperties["@c"] = ".KeystoreDTO"
+	this.AdditionalProperties["@id"] = 100001 // TODO check
 
 	this.Store = NewResourceDTO()
 	this.Store.AdditionalProperties = map[string]interface{}{}
 	this.Store.AdditionalProperties["@c"] = ".ResourceDTO"
+	this.Store.AdditionalProperties["@id"] = 100002 // TODO check
 
 	return &this
 }
