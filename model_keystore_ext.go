@@ -46,7 +46,7 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 		store.SetElementId((props["elementId"].(string)))
 	}
 	if props["id"] != nil {
-		store.SetId((props["id"].(int64)))
+		store.SetId(AsInt64(props["id"], 0))
 	}
 	if props["name"] != nil {
 		store.SetName((props["name"].(string)))

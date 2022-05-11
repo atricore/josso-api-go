@@ -41,6 +41,31 @@ func AsInt32(i interface{}, d int32) int32 {
 	case int:
 	case int64:
 		return int32(v)
+	case float32:
+		return int32(v)
+	case float64:
+		return int32(v)
+	}
+
+	return d
+
+}
+
+func AsInt64(i interface{}, d int64) int64 {
+	if i == nil {
+		return d
+	}
+
+	switch v := i.(type) {
+	case int32:
+		return int64(v)
+	case int:
+	case int64:
+		return v
+	case float32:
+		return int64(v)
+	case float64:
+		return int64(v)
 	}
 
 	return d

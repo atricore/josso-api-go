@@ -89,7 +89,7 @@ func toIdentityMappingPolicyDTO(props map[string]interface{}) IdentityMappingPol
 	dto := NewIdentityMappingPolicyDTO()
 	dto.SetCustomMapper((props["customMapper"].(string)))
 	dto.SetElementId((props["elementId"].(string)))
-	dto.SetId((props["id"].(int64)))
+	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetMappingType((props["mappingType"].(string)))
 	dto.SetName((props["name"].(string)))
 	dto.SetUseLocalId((props["useLocalId"].(bool)))
@@ -113,7 +113,7 @@ func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolic
 	dto := NewAccountLinkagePolicyDTO()
 	dto.SetCustomLinkEmitter((props["customLinkEmitter"].(string)))
 	dto.SetElementId((props["elementId"].(string)))
-	dto.SetId((props["id"].(int64)))
+	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetLinkEmitterType((props["linkEmitterType"].(string)))
 	dto.SetName((props["name"].(string)))
 	return *dto
@@ -123,7 +123,7 @@ func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolic
 func toEmissionPolicyDTO(props map[string]interface{}) AuthenticationAssertionEmissionPolicyDTO {
 	dto := NewAuthenticationAssertionEmissionPolicyDTO()
 	dto.SetElementId(props["elementId"].(string))
-	dto.SetId(props["id"].(int64))
+	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(props["name"].(string))
 	return *dto
 }
@@ -132,7 +132,7 @@ func toEmissionPolicyDTO(props map[string]interface{}) AuthenticationAssertionEm
 func toAuthenticationContractDTO(props map[string]interface{}) AuthenticationContractDTO {
 	dto := NewAuthenticationContractDTO()
 	dto.SetElementId(props["elementId"].(string))
-	dto.SetId(props["id"].(int64))
+	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(props["name"].(string))
 	return *dto
 }
@@ -141,7 +141,7 @@ func toAuthenticationContractDTO(props map[string]interface{}) AuthenticationCon
 func toAttributeProfileDTO(props map[string]interface{}) AttributeProfileDTO {
 	dto := NewAttributeProfileDTO()
 	dto.SetElementId(props["elementId"].(string))
-	dto.SetId(props["id"].(int64))
+	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(props["name"].(string))
 	dto.SetProfileType(props["profileType"].(string))
 	return *dto
