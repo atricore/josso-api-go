@@ -188,7 +188,7 @@ func (p IdentityProviderDTO) AsBasicAuthn(m *AuthenticationMechanismDTO) (*Basic
 
 	ba.SetSaltLength(AsInt32(m.AdditionalProperties["saltLength"], 0))
 	ba.SetSaltPrefix(AsString(m.AdditionalProperties["saltPrefix"], ""))
-	ba.SetSaltSuffix(m.AdditionalProperties["saltSuffix"].(string))
+	ba.SetSaltSuffix(AsString(m.AdditionalProperties["saltSuffix"], ""))
 	//authn.AdditionalProperties["impersonateUserPolicy"]
 	ba.SetSimpleAuthnSaml2AuthnCtxClass(m.AdditionalProperties["simpleAuthnSaml2AuthnCtxClass"].(string))
 
