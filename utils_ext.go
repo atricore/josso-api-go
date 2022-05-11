@@ -15,9 +15,18 @@ func IPtrBool(s interface{}) *bool {
 }
 
 func AsBool(i interface{}, d bool) bool {
-	if i != nil {
-		return i.(bool)
+	if i == nil {
+		return d
 	}
+
+	switch v := i.(type) {
+	case bool:
+		return v
+	case *bool:
+		return *v
+
+	}
+
 	return d
 }
 
