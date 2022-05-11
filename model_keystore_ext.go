@@ -35,8 +35,6 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 // Transforms a map into an KeyStoreDTO
 func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 
-	var storeProps map[string]interface{}
-
 	store := NewKeystoreDTO()
 	store.AdditionalProperties = make(map[string]interface{})
 	store.AdditionalProperties["@id"] = storeId
@@ -62,7 +60,7 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 	store.SetPrivateKeyPassword((props["privateKeyPassword"].(string)))
 	store.SetType((props["type"].(string)))
 
-	resourceProps := storeProps["store"].(map[string]interface{})
+	resourceProps := props["store"].(map[string]interface{})
 	store.Store = NewResourceDTO()
 	store.Store.AdditionalProperties = map[string]interface{}{}
 	store.Store.AdditionalProperties["@id"] = resourceProps["@id"]

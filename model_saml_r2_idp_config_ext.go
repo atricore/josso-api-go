@@ -11,7 +11,7 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 	cfg.Description = idpCfg.Description
 	cfg.DisplayName = idpCfg.DisplayName
 	cfg.ElementId = idpCfg.ElementId
-	cfg.Name = idpCfg.Name
+	cfg.Name = idpCfg.Name	
 	cfg.AdditionalProperties["useSampleStore"] = idpCfg.UseSampleStore
 	cfg.AdditionalProperties["useSystemStore"] = idpCfg.UseSystemStore
 

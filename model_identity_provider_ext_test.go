@@ -3,6 +3,8 @@ package jossoappi
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestKeystoreAdd(t *testing.T) {
@@ -20,6 +22,7 @@ func TestKeystoreAdd(t *testing.T) {
 	s.SetValue("asdf")
 	ks.SetPassword("1234")
 	ks.SetKeystorePassOnly(true)
+	ks.SetStore(s)
 
 	idpCfg.SetSigner(*ks)
 	idpCfg.SetEncrypter(*ks)
@@ -36,8 +39,21 @@ func TestKeystoreAdd(t *testing.T) {
 		return
 	}
 
-	
-	if idpCfgTest.GetDescription() != idpCfg.GetDescription()
+	if idpCfgTest.GetDescription() != idpCfg.GetDescription() {
+		t.Errorf("description does not match : %s %s", idpCfg.GetDescription(), idpCfgTest.GetDescription())
+	}
+
+	ksTest := idpCfgTest.GetSigner()
+	sTest := ksTest.GetStore()
+
+	assert.Equal(t, idpCfgTest.GetDescription(), idpCfg.GetDescription(), "description does not match")
+	assert.Equal(t, ksTest.GetPassword(), ks.GetPassword(), "password does not match")
+	assert.Equal(t, ksTest.GetCertificateAlias(), ks.GetCertificateAlias(), "certificate alias does not match")
+	assert.Equal(t, ksTest.GetKeystorePassOnly(), ks.GetKeystorePassOnly(), "keystore pass only does not match")
+	assert.Equal(t, ksTest.GetPrivateKeyName(), ks.GetPrivateKeyName(), "private key name pass only does not match")
+	assert.Equal(t, ksTest.GetPrivateKeyPassword(), ks.GetPrivateKeyPassword(), "private password name pass only does not match")
+	assert.Equal(t, sTest.GetValue(), s.GetValue(), "keystore value does not match")
+
 	// 3. Convert to provider config
 
 }

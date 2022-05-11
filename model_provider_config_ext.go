@@ -91,8 +91,8 @@ func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 	idpCfg.DisplayName = cfg.DisplayName
 	idpCfg.ElementId = cfg.ElementId
 	idpCfg.Name = cfg.Name
-	idpCfg.UseSampleStore = PtrBool(cfg.AdditionalProperties["useSampleStore"].(bool))
-	idpCfg.UseSystemStore = PtrBool(cfg.AdditionalProperties["useSystemStore"].(bool))
+	idpCfg.UseSampleStore = cfg.AdditionalProperties["useSampleStore"].(*bool)
+	idpCfg.UseSystemStore = cfg.AdditionalProperties["useSystemStore"].(*bool)
 
 	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
 		// Get signer/encrypter
