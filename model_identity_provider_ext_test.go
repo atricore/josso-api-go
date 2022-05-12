@@ -79,7 +79,7 @@ func TestKeystore(t *testing.T) {
 	p.AdditionalProperties = make(map[string]interface{})
 
 	// 2. Create IDP config
-	idpCfg := NewSamlR2IDPConfigInit()
+	idpCfg := NewSamlR2IDPConfigDTOInit()
 
 	// Set KS value
 
