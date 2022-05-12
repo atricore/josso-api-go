@@ -25,7 +25,7 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 
 }
 
-func NewSamlR2IDPConfigDTOWithOK() *SamlR2IDPConfigDTO {
+func NewSamlR2IDPConfigInit() *SamlR2IDPConfigDTO {
 	idpCfg := NewSamlR2IDPConfigDTOWithDefaults()
 	idpCfg.SetUseSampleStore(false)
 	idpCfg.SetUseSystemStore(false)

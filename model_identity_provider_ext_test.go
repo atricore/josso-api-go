@@ -79,15 +79,16 @@ func TestKeystore(t *testing.T) {
 	p.AdditionalProperties = make(map[string]interface{})
 
 	// 2. Create IDP config
-	idpCfg := NewSamlR2IDPConfigDTOWithOK()
+	idpCfg := NewSamlR2IDPConfigInit()
 
 	// Set KS value
-	ks := NewKeystoreDTOWithOK()
-	s := ks.GetStore()
-	s.SetValue("asdf")
+
+	s := NewResourceDTOInit("signer keystore", "pkcs#12 signer keystore", "asdfasdf")
+
+	ks := NewKeystoreInit("signer", "pkcs#12 signer", s)
 	ks.SetPassword("1234")
 	ks.SetKeystorePassOnly(true)
-	ks.SetStore(s)
+	ks.SetStore(*s)
 
 	idpCfg.SetSigner(*ks)
 	idpCfg.SetEncrypter(*ks)

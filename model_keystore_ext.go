@@ -73,16 +73,14 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 	return store
 }
 
-func NewKeystoreDTOWithOK() *KeystoreDTO {
-	this := KeystoreDTO{}
-	this.AdditionalProperties = make(map[string]interface{})
-	this.AdditionalProperties["@c"] = ".KeystoreDTO"
-	//this.AdditionalProperties["@id"] = 100001 // TODO check
+func NewKeystoreInit(n string, d string, s *ResourceDTO) *KeystoreDTO {
+	ks := NewKeystoreDTO()
+	ks.SetName(n)
+	ks.SetDisplayName(d)
+	ks.AdditionalProperties = make(map[string]interface{})
+	ks.AdditionalProperties["@c"] = ".KeystoreDTO"
 
-	this.Store = NewResourceDTO()
-	this.Store.AdditionalProperties = map[string]interface{}{}
-	this.Store.AdditionalProperties["@c"] = ".ResourceDTO"
-	//this.Store.AdditionalProperties["@id"] = 100002 // TODO check
+	ks.SetStore(*s)
 
-	return &this
+	return ks
 }
