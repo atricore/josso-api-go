@@ -3,7 +3,7 @@ package jossoappi
 import "fmt"
 
 func (m AuthenticationMechanismDTO) ToBasicAuthn() (*BasicAuthenticationDTO, error) {
-	ba := NewBasicAuthenticationWithOK()
+	ba := NewBasicAuthenticationDTOInit()
 
 	if m.AdditionalProperties["@c"] != ba.AdditionalProperties["@c"] {
 		return nil, fmt.Errorf("invalid authentication mechanism java class %s", m.AdditionalProperties["@c"])

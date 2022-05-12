@@ -79,7 +79,7 @@ func TestKeystore(t *testing.T) {
 	p.AdditionalProperties = make(map[string]interface{})
 
 	// 2. Create IDP config
-	idpCfg := NewSamlR2IDPConfigInit()
+	idpCfg := NewSamlR2IDPConfigDTOInit()
 
 	// Set KS value
 
@@ -208,7 +208,7 @@ func TestRemoveIdLookup(t *testing.T) {
 }
 
 func newBasicAuth(idx int32) *BasicAuthenticationDTO {
-	ba := NewBasicAuthenticationWithOK()
+	ba := NewBasicAuthenticationDTOInit()
 
 	ba.SetPriority(3 + idx)
 	ba.SetSaltLength(2 + idx)

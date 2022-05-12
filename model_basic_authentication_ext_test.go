@@ -8,7 +8,7 @@ import (
 
 func TestToAuthnMechanism(t *testing.T) {
 
-	ba := NewBasicAuthenticationWithOK()
+	ba := NewBasicAuthenticationDTOInit()
 	// Some defaults
 	ba.SetName("basic-authn")
 	ba.SetDisplayName("basic authn")
