@@ -85,7 +85,7 @@ func TestKeystore(t *testing.T) {
 
 	s := NewResourceDTOInit("signer keystore", "pkcs#12 signer keystore", "asdfasdf")
 
-	ks := NewKeystoreInit("signer", "pkcs#12 signer", s)
+	ks := NewKeystoreDTOInit("signer", "pkcs#12 signer", s)
 	ks.SetPassword("1234")
 	ks.SetKeystorePassOnly(true)
 	ks.SetStore(*s)

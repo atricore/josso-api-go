@@ -73,7 +73,7 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 	return store
 }
 
-func NewKeystoreInit(n string, d string, s *ResourceDTO) *KeystoreDTO {
+func NewKeystoreDTOInit(n string, d string, s *ResourceDTO) *KeystoreDTO {
 	ks := NewKeystoreDTO()
 	ks.SetName(n)
 	ks.SetDisplayName(d)

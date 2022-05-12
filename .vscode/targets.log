@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 12 11:58:17 2022
+# Make data base, printed on Thu May 12 15:44:58 2022
 
 # Variables
 
@@ -23,7 +25,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-76b6acb2-f39d-450a-bb66-9d3cf868d71a.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4d02d290-a06f-4a38-83ca-7f0274d2f011.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -49,7 +51,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/sgonzalez/wa/git/go/src/josso-api-go
+PWD = /wa/git/go/src/josso-api-go
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -59,7 +61,7 @@ MAIL = /var/spool/mail/sgonzalez
 # environment
 XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/sgonzalez/wa/git/go/bin
+OLDPWD = /wa/git/go/src/josso-sdk-go
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -115,7 +117,7 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 1810952
+VSCODE_PID = 2210659
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -206,6 +208,8 @@ DIRENV_FILE = /wa/git/go/.envrc
 LOGNAME = sgonzalez
 # environment
 XDG_VTNR = 1
+# environment
+TEST_FILTER = TestAccJossoIdP_crud
 # makefile
 .DEFAULT_GOAL := default
 # environment
@@ -269,6 +273,7 @@ is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+
 # automatic
 <F = $(notdir $<)
 # default
+ 
 SUFFIXES := 
 # environment
 _P9K_TTY = /dev/pts/1
@@ -287,7 +292,7 @@ TERM_PROGRAM_VERSION = 3.2a
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=138/1024=13%, Rehash=0, Collisions=12/168=7%
+# Load=139/1024=14%, Rehash=0, Collisions=12/169=7%
 
 # Pattern-specific Variable Values
 
@@ -295,12 +300,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
- 
-make: *** No rule to make target 'all'.  Stop.
+# . (device 2065, inode 9188680): 173 files, no impossibilities.
 
-# . (device 2065, inode 9188680): 171 files, no impossibilities.
-
-# 171 files, no impossibilities in 1 directories.
+# 173 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -370,12 +372,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 181 / storage = 5019 B / avg = 27 B
-# current buf: size = 8162 B / used = 5019 B / count = 181 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 183 / storage = 5050 B / avg = 27 B
+# current buf: size = 8162 B / used = 5050 B / count = 183 / avg = 27 B
 
-# strcache performance: lookups = 191 / hit rate = 5%
+# strcache performance: lookups = 193 / hit rate = 5%
 # hash-table stats:
-# Load=181/8192=2%, Rehash=0, Collisions=2/191=1%
-# Finished Make data base on Thu May 12 11:58:17 2022
+# Load=183/8192=2%, Rehash=0, Collisions=2/193=1%
+# Finished Make data base on Thu May 12 15:44:58 2022
 
  
