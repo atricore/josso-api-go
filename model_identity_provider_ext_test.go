@@ -208,7 +208,7 @@ func TestRemoveIdLookup(t *testing.T) {
 }
 
 func newBasicAuth(idx int32) *BasicAuthenticationDTO {
-	ba := NewBasicAuthenticationWithOK()
+	ba := NewBasicAuthenticationDTOInit()
 
 	ba.SetPriority(3 + idx)
 	ba.SetSaltLength(2 + idx)

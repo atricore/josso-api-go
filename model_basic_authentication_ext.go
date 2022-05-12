@@ -25,7 +25,7 @@ func (ba BasicAuthenticationDTO) ToAuthnMechansim() (*AuthenticationMechanismDTO
 	return m, nil
 }
 
-func NewBasicAuthenticationWithOK() *BasicAuthenticationDTO {
+func NewBasicAuthenticationDTOInit() *BasicAuthenticationDTO {
 	ba := NewBasicAuthenticationDTO()
 	ba.AdditionalProperties = make(map[string]interface{})
 	ba.AdditionalProperties["@c"] = ".BasicAuthenticationDTO"
