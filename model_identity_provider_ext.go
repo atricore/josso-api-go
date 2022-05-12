@@ -153,14 +153,19 @@ func (p *IdentityProviderDTO) GetBasicAuthns() ([]*BasicAuthenticationDTO, error
 }
 
 func (p *IdentityProviderDTO) AddBasicAuthns(ms []*BasicAuthenticationDTO) error {
-
 	for _, ba := range ms {
-		m, err := ba.ToAuthnMechansim()
-		if err != nil {
-			return err
-		}
-		p.SetAuthenticationMechanisms(append(p.GetAuthenticationMechanisms(), *m))
+		p.AddBasicAuthn(ba)
 	}
 
 	return nil
+}
+
+func (p *IdentityProviderDTO) AddBasicAuthn(ba *BasicAuthenticationDTO) (*AuthenticationMechanismDTO, error) {
+	m, err := ba.ToAuthnMechansim()
+	if err != nil {
+		return m, err
+	}
+	p.SetAuthenticationMechanisms(append(p.GetAuthenticationMechanisms(), *m))
+
+	return m, nil
 }
