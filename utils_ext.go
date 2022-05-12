@@ -39,6 +39,7 @@ func AsInt32(i interface{}, d int32) int32 {
 	case int32:
 		return v
 	case int:
+		return int32(v)
 	case int64:
 		return int32(v)
 	case float32:
@@ -60,6 +61,7 @@ func AsInt64(i interface{}, d int64) int64 {
 	case int32:
 		return int64(v)
 	case int:
+		return int64(v)
 	case int64:
 		return v
 	case float32:
@@ -79,7 +81,6 @@ func AsString(i interface{}, d string) string {
 
 	return i.(string)
 }
-
 
 func AsStringArr(i interface{}) []string {
 	if i == nil {
