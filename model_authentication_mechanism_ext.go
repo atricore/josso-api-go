@@ -24,7 +24,7 @@ func (m AuthenticationMechanismDTO) ToBasicAuthn() (*BasicAuthenticationDTO, err
 	ba.SetSaltPrefix(AsString(m.AdditionalProperties["saltPrefix"], ""))
 	ba.SetSaltSuffix(AsString(m.AdditionalProperties["saltSuffix"], ""))
 	//authn.AdditionalProperties["impersonateUserPolicy"]
-	ba.SetSimpleAuthnSaml2AuthnCtxClass(m.AdditionalProperties["simpleAuthnSaml2AuthnCtxClass"].(string))
+	ba.SetSimpleAuthnSaml2AuthnCtxClass(AsString(m.AdditionalProperties["simpleAuthnSaml2AuthnCtxClass"], ""))
 
 	return ba, nil
 }
