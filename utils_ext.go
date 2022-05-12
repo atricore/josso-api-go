@@ -79,3 +79,13 @@ func AsString(i interface{}, d string) string {
 
 	return i.(string)
 }
+
+
+func AsStringArr(i interface{}) []string {
+	if i == nil {
+		var vec []string
+		return vec
+	}
+
+	return i.([]string)
+}

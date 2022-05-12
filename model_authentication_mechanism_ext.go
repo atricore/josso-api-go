@@ -14,8 +14,8 @@ func (m AuthenticationMechanismDTO) ToBasicAuthn() (*BasicAuthenticationDTO, err
 	ba.SetPriority(m.GetPriority())
 	ba.SetEnabled(AsBool(m.AdditionalProperties["enabled"], false))
 
-	ba.SetHashAlgorithm(m.AdditionalProperties["hashAlgorithm"].(string))
-	ba.SetHashEncoding(m.AdditionalProperties["hashEncoding"].(string))
+	ba.SetHashAlgorithm(AsString(m.AdditionalProperties["hashAlgorithm"], ""))
+	ba.SetHashEncoding(AsString(m.AdditionalProperties["hashEncoding"], ""))
 	ba.SetIgnoreUsernameCase(AsBool(m.AdditionalProperties["ignoreUsernamecase"], false))
 
 	//ba.SetIgnorePasswordCase(m.AdditionalProperties["ignorePassowordCase"].(bool))
