@@ -4,41 +4,18 @@ import (
 	"fmt"
 )
 
-func (i *InternalSaml2ServiceProviderDTO) GetSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
-	cfg := i.GetConfig()
-	return cfg.ToSamlR2SPConfig()
+func (p *InternalSaml2ServiceProviderDTO) GetSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
+	return p.GetConfig().ToSamlR2SPConfig()
 }
 
-func (i *InternalSaml2ServiceProviderDTO) SetSamlR2SPConfig(spCfg *SamlR2SPConfigDTO) error {
-
+func (p *InternalSaml2ServiceProviderDTO) SetSamlR2SPConfig(spCfg *SamlR2SPConfigDTO) error {
 	cfg, err := spCfg.ToProviderConfig()
 	if err != nil {
 		return err
 	}
-	i.SetConfig(*cfg)
-	/*
-		cfg.AdditionalProperties = make(map[string]interface{})
-		// Build specific type
-		cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
-		cfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
-
-		cfg.Description = spCfg.Description
-		cfg.DisplayName = spCfg.DisplayName
-		cfg.ElementId = spCfg.ElementId
-		cfg.Name = spCfg.Name
-		cfg.AdditionalProperties["useSampleStore"] = spCfg.UseSampleStore
-		cfg.AdditionalProperties["useSystemStore"] = spCfg.UseSystemStore
-
-		if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
-			storeProps := toKeyStoreMap(spCfg.GetSigner()) // Assuming that both signer and encrypter have the same store
-			cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
-			cfg.AdditionalProperties["signer"] = storeProps
-		}
-	*/
-	return err
-
+	p.SetConfig(*cfg)
+	return nil
 }
-
 func (p *InternalSaml2ServiceProviderDTO) GetIdentityLookup(name string) *IdentityLookupDTO {
 	if p.IdentityLookups == nil {
 		return nil

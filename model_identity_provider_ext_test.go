@@ -31,11 +31,11 @@ func TestBasicAuthn(t *testing.T) {
 
 	baTest := basTest[0]
 
-	assertEqual(t, ba, baTest)
+	assertBasicAuthnEqual(t, ba, baTest)
 
 }
 
-func TestBasicAuthns(t *testing.T) {
+func TestIdPBasicAuthns(t *testing.T) {
 
 	ba1 := newBasicAuth(1)
 	ba2 := newBasicAuth(2)
@@ -60,7 +60,7 @@ func TestBasicAuthns(t *testing.T) {
 		f := false
 		for _, baTest := range basTest {
 			if ba.GetName() == baTest.GetName() {
-				assertEqual(t, ba, baTest)
+				assertBasicAuthnEqual(t, ba, baTest)
 				f = true
 			}
 		}
@@ -72,7 +72,7 @@ func TestBasicAuthns(t *testing.T) {
 
 }
 
-func TestKeystore(t *testing.T) {
+func TestIdPKeystore(t *testing.T) {
 
 	// 1. create empty idp dto
 	p := NewIdentityProviderDTO()
@@ -120,7 +120,7 @@ func TestKeystore(t *testing.T) {
 
 }
 
-func TestAddIdLookup(t *testing.T) {
+func TestIdPAddIdLookup(t *testing.T) {
 
 	// 1. create empty idp dto
 	p := NewIdentityProviderDTO()
@@ -151,7 +151,7 @@ func TestAddIdLookup(t *testing.T) {
 
 }
 
-func TestRemoveIdLookup(t *testing.T) {
+func TestIdPRemoveIdLookup(t *testing.T) {
 
 	// 1. create empty idp dto
 	p := NewIdentityProviderDTO()
@@ -224,7 +224,7 @@ func newBasicAuth(idx int32) *BasicAuthenticationDTO {
 	return ba
 }
 
-func assertEqual(t *testing.T, ba *BasicAuthenticationDTO, baTest *BasicAuthenticationDTO) {
+func assertBasicAuthnEqual(t *testing.T, ba *BasicAuthenticationDTO, baTest *BasicAuthenticationDTO) {
 	assert.Equal(t, ba.AdditionalProperties, baTest.AdditionalProperties)
 	assert.Equal(t, ba.GetName(), baTest.GetName())
 	assert.Equal(t, ba.GetDisplayName(), baTest.GetDisplayName())

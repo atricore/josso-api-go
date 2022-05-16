@@ -1,8 +1,9 @@
 package jossoappi
 
 func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
-	var cfg ProviderConfigDTO
+	cfg := NewProviderConfigDTO()
 	cfg.AdditionalProperties = make(map[string]interface{})
+
 	// Build specific type
 	cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
 	cfg.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
@@ -11,8 +12,8 @@ func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
 	cfg.DisplayName = spCfg.DisplayName
 	cfg.ElementId = spCfg.ElementId
 	cfg.Name = spCfg.Name
-	cfg.AdditionalProperties["useSampleStore"] = spCfg.UseSampleStore
-	cfg.AdditionalProperties["useSystemStore"] = spCfg.UseSystemStore
+	cfg.AdditionalProperties["useSampleStore"] = AsBool(spCfg.UseSampleStore, false)
+	cfg.AdditionalProperties["useSystemStore"] = AsBool(spCfg.UseSystemStore, false)
 
 	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
 		storeProps := toKeyStoreMap(spCfg.GetSigner())
@@ -20,6 +21,17 @@ func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
 		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
 	}
 
-	return &cfg, nil
+	return cfg, nil
+
+}
+
+func NewSamlR2SPConfigDTOInit() *SamlR2SPConfigDTO {
+	spCfg := NewSamlR2SPConfigDTOWithDefaults()
+	spCfg.SetUseSampleStore(false)
+	spCfg.SetUseSystemStore(false)
+	spCfg.AdditionalProperties = make(map[string]interface{})
+	spCfg.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
+
+	return spCfg
 
 }

@@ -59,7 +59,6 @@ func (p *IdentityProviderDTO) SetSamlR2IDPConfig(idpCfg *SamlR2IDPConfigDTO) err
 	}
 	p.SetConfig(*cfg)
 	return nil
-
 }
 
 func (p *IdentityProviderDTO) GetIdentityLookup(name string) *IdentityLookupDTO {

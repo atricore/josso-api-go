@@ -47,13 +47,12 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 	spCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
 	spCfg.AdditionalProperties["@c"] = class
 
-	spCfg.SetDescription(cfg.GetDescription())
-	spCfg.SetDisplayName(cfg.GetDisplayName())
-	spCfg.SetElementId(cfg.GetElementId())
-	spCfg.SetId(cfg.GetId())
-	spCfg.SetName(cfg.GetName())
-	spCfg.SetUseSampleStore(AsBool(cfg.AdditionalProperties["useSampleStore"], false))
-	spCfg.SetUseSystemStore(AsBool(cfg.AdditionalProperties["useSystemStore"], false))
+	spCfg.Description = cfg.Description
+	spCfg.DisplayName = cfg.DisplayName
+	spCfg.ElementId = cfg.ElementId
+	spCfg.Name = cfg.Name
+	spCfg.UseSampleStore = PtrBool(AsBool(cfg.AdditionalProperties["useSampleStore"], false))
+	spCfg.UseSystemStore = PtrBool(AsBool(cfg.AdditionalProperties["useSystemStore"], false))
 
 	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
 		// Get signer/encrypter
@@ -61,11 +60,11 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 		if err != nil {
 			return spCfg, err
 		}
-
-		if storeProps["@id"].(int) != storeId {
-			return spCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
-		}
-
+		/*
+			if storeProps["@id"].(int) != storeId {
+				return idpCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
+			}
+		*/
 		store := toKeyStoreDTO(storeId, storeProps)
 		spCfg.Signer = store
 		spCfg.Encrypter = store
