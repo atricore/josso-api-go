@@ -30,6 +30,34 @@ func AsBool(i interface{}, d bool) bool {
 	return d
 }
 
+func AsInt32Def(i interface{}, d int32, zeroAsNil bool) int32 {
+	if i == nil {
+		return d
+	}
+
+	var result int32
+
+	switch v := i.(type) {
+	case int32:
+		result = v
+	case int:
+		result = int32(v)
+	case int64:
+		result = int32(v)
+	case float32:
+		result = int32(v)
+	case float64:
+		result = int32(v)
+	}
+
+	if zeroAsNil && result == 0 {
+		return d
+	}
+
+	return result
+
+}
+
 func AsInt32(i interface{}, d int32) int32 {
 	if i == nil {
 		return d
@@ -74,12 +102,24 @@ func AsInt64(i interface{}, d int64) int64 {
 
 }
 
-func AsString(i interface{}, d string) string {
-	if i == nil {
-		return d
+// Returns the received value 'casted' as a string. If the value is nil, returs the default.
+func AsStringDef(value interface{},
+	defautlValue string,
+	emptyAsNil bool) string {
+	if value == nil {
+		return defautlValue
 	}
 
-	return i.(string)
+	s := value.(string)
+	if emptyAsNil && s == "" {
+		return defautlValue
+	}
+
+	return s
+}
+
+func AsString(i interface{}, d string) string {
+	return AsStringDef(i, d, false)
 }
 
 func AsStringArr(i interface{}) []string {
