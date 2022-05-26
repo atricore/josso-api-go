@@ -25,10 +25,10 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 		idpc.SetSignatureHash(AsString(c.AdditionalProperties["signatureHash"], ""))
 		idpc.SetMessageTtl(AsInt32(c.AdditionalProperties["messageTtl"], 0))
 		idpc.SetMessageTtlTolerance(AsInt32(c.AdditionalProperties["messageTtlTolerance"], 0))
-		accountLinkage := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountLinkagePolicy"].(*map[string]interface{}))
+		accountLinkage := toAccountLinkagePolicyDTO(c.AdditionalProperties["accountLinkagePolicy"].(map[string]interface{}))
 		idpc.SetAccountLinkagePolicy(accountLinkage)
 		idpc.SetEnableProxyExtension(AsBool(c.AdditionalProperties["enableProxyExtension"], false))
-		idMapping := toIdentityMappingPolicyDTO(c.AdditionalProperties["identityMappingPolicy"].(*map[string]interface{}))
+		idMapping := toIdentityMappingPolicyDTO(c.AdditionalProperties["identityMappingPolicy"].(map[string]interface{}))
 		idpc.SetIdentityMappingPolicy(idMapping)
 		idpc.SetSignAuthenticationRequests(AsBool(c.AdditionalProperties["signAuthenticationRequests"], false))
 		idpc.SetWantAssertionSigned(AsBool(c.AdditionalProperties["wantAssertionSigned"], false))
@@ -71,7 +71,7 @@ func (f *FederatedConnectionDTO) SetIDPChannel(idpc *IdentityProviderChannelDTO)
 }
 
 // Transforms IdentityMappingPolicyDTO a map
-func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) *map[string]interface{} {
+func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) map[string]interface{} {
 
 	props := make(map[string]interface{})
 
@@ -81,24 +81,23 @@ func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) *map[string]interf
 	props["mappingType"] = dto.GetMappingType()
 	props["name"] = dto.GetName()
 	props["useLocalId"] = dto.GetUseLocalId()
-	return &props
+	return props
 }
 
 // Transforms a map into an IdentityMappingPolicyDTO
-func toIdentityMappingPolicyDTO(props *map[string]interface{}) IdentityMappingPolicyDTO {
-	m := *props
+func toIdentityMappingPolicyDTO(props map[string]interface{}) IdentityMappingPolicyDTO {
 	dto := NewIdentityMappingPolicyDTO()
-	dto.SetCustomMapper(AsString(m["customMapper"], ""))
-	dto.SetElementId(AsString(m["elementId"], ""))
-	dto.SetId(AsInt64(m["id"], 0))
-	dto.SetMappingType(AsString(m["mappingType"], ""))
-	dto.SetName(AsString(m["name"], ""))
-	dto.SetUseLocalId(AsBool(m["useLocalId"], false))
+	dto.SetCustomMapper(AsString(props["customMapper"], ""))
+	dto.SetElementId(AsString(props["elementId"], ""))
+	dto.SetId(AsInt64(props["id"], 0))
+	dto.SetMappingType(AsString(props["mappingType"], ""))
+	dto.SetName(AsString(props["name"], ""))
+	dto.SetUseLocalId(AsBool(props["useLocalId"], false))
 	return *dto
 }
 
 // Transforms AccountLinkagePolicy a map
-func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) *map[string]interface{} {
+func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) map[string]interface{} {
 	props := make(map[string]interface{})
 
 	props["customLinkEmitter"] = dto.GetCustomLinkEmitter()
@@ -106,19 +105,18 @@ func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) *map[string]interfac
 	props["id"] = dto.GetId()
 	props["linkEmitterType"] = dto.GetLinkEmitterType()
 	props["name"] = dto.GetName()
-	return &props
+	return props
 }
 
 // Transforms a map into an AccountLinkagePolicyDTO
-func toAccountLinkagePolicyDTO(props *map[string]interface{}) AccountLinkagePolicyDTO {
+func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolicyDTO {
 
-	m := *props
 	dto := NewAccountLinkagePolicyDTO()
-	dto.SetCustomLinkEmitter(AsString(m["customLinkEmitter"], ""))
-	dto.SetElementId(AsString(m["elementId"], ""))
-	dto.SetId(AsInt64(m["id"], 0))
-	dto.SetLinkEmitterType(AsString(m["linkEmitterType"], ""))
-	dto.SetName(AsString(m["name"], ""))
+	dto.SetCustomLinkEmitter(AsString(props["customLinkEmitter"], ""))
+	dto.SetElementId(AsString(props["elementId"], ""))
+	dto.SetId(AsInt64(props["id"], 0))
+	dto.SetLinkEmitterType(AsString(props["linkEmitterType"], ""))
+	dto.SetName(AsString(props["name"], ""))
 	return *dto
 }
 
