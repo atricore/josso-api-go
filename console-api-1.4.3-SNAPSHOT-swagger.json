@@ -1485,6 +1485,32 @@
         }
       }
     },
+    "/iam-deploy/provider" : {
+      "get" : {
+        "operationId" : "getProvider",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetProviderReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetProviderRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/tomcatexecenv" : {
       "get" : {
         "operationId" : "getTomcatExecEnv",
@@ -1792,6 +1818,50 @@
           }
         }
       },
+      "AttributeMapperProfileDTO" : {
+        "type" : "object",
+        "properties" : {
+          "attributeMaps" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/AttributeMappingDTO"
+            }
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "includeNonMappedProperties" : {
+            "type" : "boolean"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "profileType" : {
+            "type" : "string",
+            "enum" : [ "BASIC", "JOSSO", "ONE_TO_ONE", "CUSTOM" ]
+          }
+        }
+      },
+      "AttributeMappingDTO" : {
+        "type" : "object",
+        "properties" : {
+          "attrName" : {
+            "type" : "string"
+          },
+          "reportedAttrName" : {
+            "type" : "string"
+          },
+          "reportedAttrNameFormat" : {
+            "type" : "string",
+            "enum" : [ "BASIC", "URI" ]
+          }
+        }
+      },
       "AttributeProfileDTO" : {
         "type" : "object",
         "properties" : {
@@ -1977,6 +2047,25 @@
           "y" : {
             "type" : "number",
             "format" : "double"
+          }
+        }
+      },
+      "BuiltInAttributeProfileDTO" : {
+        "type" : "object",
+        "properties" : {
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "profileType" : {
+            "type" : "string",
+            "enum" : [ "BASIC", "JOSSO", "ONE_TO_ONE", "CUSTOM" ]
           }
         }
       },
@@ -2775,7 +2864,7 @@
         "type" : "object",
         "properties" : {
           "appliance" : {
-            "$ref" : "#/components/schemas/IdentityApplianceDTO"
+            "$ref" : "#/components/schemas/IdentityApplianceContainerDTO"
           },
           "error" : {
             "type" : "string"
@@ -2794,7 +2883,7 @@
           "appliances" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/components/schemas/IdentityApplianceDTO"
+              "$ref" : "#/components/schemas/IdentityApplianceContainerDTO"
             }
           },
           "error" : {
@@ -3318,6 +3407,37 @@
           }
         }
       },
+      "GetProviderReq" : {
+        "type" : "object",
+        "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetProviderRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "provider" : {
+            "$ref" : "#/components/schemas/ProviderContainerDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
@@ -3369,8 +3489,14 @@
       "GetTypesRes" : {
         "type" : "object",
         "properties" : {
+          "attributeMapperProfileDTO" : {
+            "$ref" : "#/components/schemas/AttributeMapperProfileDTO"
+          },
           "basicAuthnMechanism" : {
             "$ref" : "#/components/schemas/BasicAuthenticationDTO"
+          },
+          "builtInAttributeProfile" : {
+            "$ref" : "#/components/schemas/BuiltInAttributeProfileDTO"
           },
           "idpc" : {
             "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
@@ -3451,6 +3577,26 @@
           },
           "name" : {
             "type" : "string"
+          }
+        }
+      },
+      "IdentityApplianceContainerDTO" : {
+        "type" : "object",
+        "properties" : {
+          "appliance" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDTO"
+          },
+          "idSources" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "providers" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },
@@ -4737,6 +4883,23 @@
           },
           "name" : {
             "type" : "string"
+          }
+        }
+      },
+      "ProviderContainerDTO" : {
+        "type" : "object",
+        "properties" : {
+          "extOidcRp" : {
+            "$ref" : "#/components/schemas/ExternalOpenIDConnectRelayingPartyDTO"
+          },
+          "extSaml2sp" : {
+            "$ref" : "#/components/schemas/ExternalSaml2ServiceProviderDTO"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/IdentityProviderDTO"
+          },
+          "saml2sp" : {
+            "$ref" : "#/components/schemas/InternalSaml2ServiceProviderDTO"
           }
         }
       },

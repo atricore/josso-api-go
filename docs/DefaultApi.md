@@ -51,6 +51,7 @@ Method | HTTP request | Description
 [**GetJossoRss**](DefaultApi.md#GetJossoRss) | **Get** /iam-deploy/jossorss | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
 [**GetTomcatExecEnvs**](DefaultApi.md#GetTomcatExecEnvs) | **Get** /iam-deploy/tomcatexecenvs | 
 [**GetTypes**](DefaultApi.md#GetTypes) | **Get** /iam-deploy/noop/types | 
@@ -3069,6 +3070,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOidcRpsRes**](GetOidcRpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetProvider
+
+> GetProviderRes GetProvider(ctx).GetProviderReq(getProviderReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getProviderReq := *openapiclient.NewGetProviderReq() // GetProviderReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetProvider(context.Background()).GetProviderReq(getProviderReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetProvider``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetProvider`: GetProviderRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetProvider`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetProviderRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getProviderReq** | [**GetProviderReq**](GetProviderReq.md) |  | 
+
+### Return type
+
+[**GetProviderRes**](GetProviderRes.md)
 
 ### Authorization
 

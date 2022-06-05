@@ -17,7 +17,7 @@ import (
 
 // GetApplianceContainerRes struct for GetApplianceContainerRes
 type GetApplianceContainerRes struct {
-	Appliance *IdentityApplianceDTO `json:"appliance,omitempty"`
+	Appliance *IdentityApplianceContainerDTO `json:"appliance,omitempty"`
 	Error *string `json:"error,omitempty"`
 	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
@@ -43,9 +43,9 @@ func NewGetApplianceContainerResWithDefaults() *GetApplianceContainerRes {
 }
 
 // GetAppliance returns the Appliance field value if set, zero value otherwise.
-func (o *GetApplianceContainerRes) GetAppliance() IdentityApplianceDTO {
+func (o *GetApplianceContainerRes) GetAppliance() IdentityApplianceContainerDTO {
 	if o == nil || o.Appliance == nil {
-		var ret IdentityApplianceDTO
+		var ret IdentityApplianceContainerDTO
 		return ret
 	}
 	return *o.Appliance
@@ -53,7 +53,7 @@ func (o *GetApplianceContainerRes) GetAppliance() IdentityApplianceDTO {
 
 // GetApplianceOk returns a tuple with the Appliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetApplianceContainerRes) GetApplianceOk() (*IdentityApplianceDTO, bool) {
+func (o *GetApplianceContainerRes) GetApplianceOk() (*IdentityApplianceContainerDTO, bool) {
 	if o == nil || o.Appliance == nil {
 		return nil, false
 	}
@@ -69,8 +69,8 @@ func (o *GetApplianceContainerRes) HasAppliance() bool {
 	return false
 }
 
-// SetAppliance gets a reference to the given IdentityApplianceDTO and assigns it to the Appliance field.
-func (o *GetApplianceContainerRes) SetAppliance(v IdentityApplianceDTO) {
+// SetAppliance gets a reference to the given IdentityApplianceContainerDTO and assigns it to the Appliance field.
+func (o *GetApplianceContainerRes) SetAppliance(v IdentityApplianceContainerDTO) {
 	o.Appliance = &v
 }
 

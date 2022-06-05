@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AttributeMapperProfileDTO** | Pointer to [**AttributeMapperProfileDTO**](AttributeMapperProfileDTO.md) |  | [optional] 
 **BasicAuthnMechanism** | Pointer to [**BasicAuthenticationDTO**](BasicAuthenticationDTO.md) |  | [optional] 
+**BuiltInAttributeProfile** | Pointer to [**BuiltInAttributeProfileDTO**](BuiltInAttributeProfileDTO.md) |  | [optional] 
 **Idpc** | Pointer to [**IdentityProviderChannelDTO**](IdentityProviderChannelDTO.md) |  | [optional] 
 **Spc** | Pointer to [**InternalSaml2ServiceProviderChannelDTO**](InternalSaml2ServiceProviderChannelDTO.md) |  | [optional] 
 **TotpAuthnSvc** | Pointer to [**TOTPAuthenticationServiceDTO**](TOTPAuthenticationServiceDTO.md) |  | [optional] 
@@ -27,6 +29,31 @@ will change when the set of required properties is changed
 NewGetTypesResWithDefaults instantiates a new GetTypesRes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAttributeMapperProfileDTO
+
+`func (o *GetTypesRes) GetAttributeMapperProfileDTO() AttributeMapperProfileDTO`
+
+GetAttributeMapperProfileDTO returns the AttributeMapperProfileDTO field if non-nil, zero value otherwise.
+
+### GetAttributeMapperProfileDTOOk
+
+`func (o *GetTypesRes) GetAttributeMapperProfileDTOOk() (*AttributeMapperProfileDTO, bool)`
+
+GetAttributeMapperProfileDTOOk returns a tuple with the AttributeMapperProfileDTO field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAttributeMapperProfileDTO
+
+`func (o *GetTypesRes) SetAttributeMapperProfileDTO(v AttributeMapperProfileDTO)`
+
+SetAttributeMapperProfileDTO sets AttributeMapperProfileDTO field to given value.
+
+### HasAttributeMapperProfileDTO
+
+`func (o *GetTypesRes) HasAttributeMapperProfileDTO() bool`
+
+HasAttributeMapperProfileDTO returns a boolean if a field has been set.
 
 ### GetBasicAuthnMechanism
 
@@ -52,6 +79,31 @@ SetBasicAuthnMechanism sets BasicAuthnMechanism field to given value.
 `func (o *GetTypesRes) HasBasicAuthnMechanism() bool`
 
 HasBasicAuthnMechanism returns a boolean if a field has been set.
+
+### GetBuiltInAttributeProfile
+
+`func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO`
+
+GetBuiltInAttributeProfile returns the BuiltInAttributeProfile field if non-nil, zero value otherwise.
+
+### GetBuiltInAttributeProfileOk
+
+`func (o *GetTypesRes) GetBuiltInAttributeProfileOk() (*BuiltInAttributeProfileDTO, bool)`
+
+GetBuiltInAttributeProfileOk returns a tuple with the BuiltInAttributeProfile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBuiltInAttributeProfile
+
+`func (o *GetTypesRes) SetBuiltInAttributeProfile(v BuiltInAttributeProfileDTO)`
+
+SetBuiltInAttributeProfile sets BuiltInAttributeProfile field to given value.
+
+### HasBuiltInAttributeProfile
+
+`func (o *GetTypesRes) HasBuiltInAttributeProfile() bool`
+
+HasBuiltInAttributeProfile returns a boolean if a field has been set.
 
 ### GetIdpc
 

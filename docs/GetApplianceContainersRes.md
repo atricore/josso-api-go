@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Appliances** | Pointer to [**[]IdentityApplianceDTO**](IdentityApplianceDTO.md) |  | [optional] 
+**Appliances** | Pointer to [**[]IdentityApplianceContainerDTO**](IdentityApplianceContainerDTO.md) |  | [optional] 
 **Error** | Pointer to **string** |  | [optional] 
 **ValidationErrors** | Pointer to **[]string** |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAppliances
 
-`func (o *GetApplianceContainersRes) GetAppliances() []IdentityApplianceDTO`
+`func (o *GetApplianceContainersRes) GetAppliances() []IdentityApplianceContainerDTO`
 
 GetAppliances returns the Appliances field if non-nil, zero value otherwise.
 
 ### GetAppliancesOk
 
-`func (o *GetApplianceContainersRes) GetAppliancesOk() (*[]IdentityApplianceDTO, bool)`
+`func (o *GetApplianceContainersRes) GetAppliancesOk() (*[]IdentityApplianceContainerDTO, bool)`
 
 GetAppliancesOk returns a tuple with the Appliances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppliances
 
-`func (o *GetApplianceContainersRes) SetAppliances(v []IdentityApplianceDTO)`
+`func (o *GetApplianceContainersRes) SetAppliances(v []IdentityApplianceContainerDTO)`
 
 SetAppliances sets Appliances field to given value.
 

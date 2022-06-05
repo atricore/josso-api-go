@@ -17,7 +17,9 @@ import (
 
 // GetTypesRes struct for GetTypesRes
 type GetTypesRes struct {
+	AttributeMapperProfileDTO *AttributeMapperProfileDTO `json:"attributeMapperProfileDTO,omitempty"`
 	BasicAuthnMechanism *BasicAuthenticationDTO `json:"basicAuthnMechanism,omitempty"`
+	BuiltInAttributeProfile *BuiltInAttributeProfileDTO `json:"builtInAttributeProfile,omitempty"`
 	Idpc *IdentityProviderChannelDTO `json:"idpc,omitempty"`
 	Spc *InternalSaml2ServiceProviderChannelDTO `json:"spc,omitempty"`
 	TotpAuthnSvc *TOTPAuthenticationServiceDTO `json:"totpAuthnSvc,omitempty"`
@@ -41,6 +43,38 @@ func NewGetTypesRes() *GetTypesRes {
 func NewGetTypesResWithDefaults() *GetTypesRes {
 	this := GetTypesRes{}
 	return &this
+}
+
+// GetAttributeMapperProfileDTO returns the AttributeMapperProfileDTO field value if set, zero value otherwise.
+func (o *GetTypesRes) GetAttributeMapperProfileDTO() AttributeMapperProfileDTO {
+	if o == nil || o.AttributeMapperProfileDTO == nil {
+		var ret AttributeMapperProfileDTO
+		return ret
+	}
+	return *o.AttributeMapperProfileDTO
+}
+
+// GetAttributeMapperProfileDTOOk returns a tuple with the AttributeMapperProfileDTO field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetAttributeMapperProfileDTOOk() (*AttributeMapperProfileDTO, bool) {
+	if o == nil || o.AttributeMapperProfileDTO == nil {
+		return nil, false
+	}
+	return o.AttributeMapperProfileDTO, true
+}
+
+// HasAttributeMapperProfileDTO returns a boolean if a field has been set.
+func (o *GetTypesRes) HasAttributeMapperProfileDTO() bool {
+	if o != nil && o.AttributeMapperProfileDTO != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAttributeMapperProfileDTO gets a reference to the given AttributeMapperProfileDTO and assigns it to the AttributeMapperProfileDTO field.
+func (o *GetTypesRes) SetAttributeMapperProfileDTO(v AttributeMapperProfileDTO) {
+	o.AttributeMapperProfileDTO = &v
 }
 
 // GetBasicAuthnMechanism returns the BasicAuthnMechanism field value if set, zero value otherwise.
@@ -73,6 +107,38 @@ func (o *GetTypesRes) HasBasicAuthnMechanism() bool {
 // SetBasicAuthnMechanism gets a reference to the given BasicAuthenticationDTO and assigns it to the BasicAuthnMechanism field.
 func (o *GetTypesRes) SetBasicAuthnMechanism(v BasicAuthenticationDTO) {
 	o.BasicAuthnMechanism = &v
+}
+
+// GetBuiltInAttributeProfile returns the BuiltInAttributeProfile field value if set, zero value otherwise.
+func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO {
+	if o == nil || o.BuiltInAttributeProfile == nil {
+		var ret BuiltInAttributeProfileDTO
+		return ret
+	}
+	return *o.BuiltInAttributeProfile
+}
+
+// GetBuiltInAttributeProfileOk returns a tuple with the BuiltInAttributeProfile field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetBuiltInAttributeProfileOk() (*BuiltInAttributeProfileDTO, bool) {
+	if o == nil || o.BuiltInAttributeProfile == nil {
+		return nil, false
+	}
+	return o.BuiltInAttributeProfile, true
+}
+
+// HasBuiltInAttributeProfile returns a boolean if a field has been set.
+func (o *GetTypesRes) HasBuiltInAttributeProfile() bool {
+	if o != nil && o.BuiltInAttributeProfile != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetBuiltInAttributeProfile gets a reference to the given BuiltInAttributeProfileDTO and assigns it to the BuiltInAttributeProfile field.
+func (o *GetTypesRes) SetBuiltInAttributeProfile(v BuiltInAttributeProfileDTO) {
+	o.BuiltInAttributeProfile = &v
 }
 
 // GetIdpc returns the Idpc field value if set, zero value otherwise.
@@ -173,8 +239,14 @@ func (o *GetTypesRes) SetTotpAuthnSvc(v TOTPAuthenticationServiceDTO) {
 
 func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.AttributeMapperProfileDTO != nil {
+		toSerialize["attributeMapperProfileDTO"] = o.AttributeMapperProfileDTO
+	}
 	if o.BasicAuthnMechanism != nil {
 		toSerialize["basicAuthnMechanism"] = o.BasicAuthnMechanism
+	}
+	if o.BuiltInAttributeProfile != nil {
+		toSerialize["builtInAttributeProfile"] = o.BuiltInAttributeProfile
 	}
 	if o.Idpc != nil {
 		toSerialize["idpc"] = o.Idpc
@@ -203,7 +275,9 @@ func (o *GetTypesRes) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+		delete(additionalProperties, "attributeMapperProfileDTO")
 		delete(additionalProperties, "basicAuthnMechanism")
+		delete(additionalProperties, "builtInAttributeProfile")
 		delete(additionalProperties, "idpc")
 		delete(additionalProperties, "spc")
 		delete(additionalProperties, "totpAuthnSvc")
