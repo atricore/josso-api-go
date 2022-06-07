@@ -17,10 +17,10 @@ import (
 
 // ProviderContainerDTO struct for ProviderContainerDTO
 type ProviderContainerDTO struct {
-	ExtOidcRp *ExternalOpenIDConnectRelayingPartyDTO `json:"extOidcRp,omitempty"`
-	ExtSaml2sp *ExternalSaml2ServiceProviderDTO `json:"extSaml2sp,omitempty"`
-	Idp *IdentityProviderDTO `json:"idp,omitempty"`
-	Saml2sp *InternalSaml2ServiceProviderDTO `json:"saml2sp,omitempty"`
+	FederatedProvider *FederatedProviderDTO `json:"federatedProvider,omitempty"`
+	Location *string `json:"location,omitempty"`
+	Name *string `json:"name,omitempty"`
+	Type *string `json:"type,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -43,147 +43,147 @@ func NewProviderContainerDTOWithDefaults() *ProviderContainerDTO {
 	return &this
 }
 
-// GetExtOidcRp returns the ExtOidcRp field value if set, zero value otherwise.
-func (o *ProviderContainerDTO) GetExtOidcRp() ExternalOpenIDConnectRelayingPartyDTO {
-	if o == nil || o.ExtOidcRp == nil {
-		var ret ExternalOpenIDConnectRelayingPartyDTO
+// GetFederatedProvider returns the FederatedProvider field value if set, zero value otherwise.
+func (o *ProviderContainerDTO) GetFederatedProvider() FederatedProviderDTO {
+	if o == nil || o.FederatedProvider == nil {
+		var ret FederatedProviderDTO
 		return ret
 	}
-	return *o.ExtOidcRp
+	return *o.FederatedProvider
 }
 
-// GetExtOidcRpOk returns a tuple with the ExtOidcRp field value if set, nil otherwise
+// GetFederatedProviderOk returns a tuple with the FederatedProvider field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ProviderContainerDTO) GetExtOidcRpOk() (*ExternalOpenIDConnectRelayingPartyDTO, bool) {
-	if o == nil || o.ExtOidcRp == nil {
+func (o *ProviderContainerDTO) GetFederatedProviderOk() (*FederatedProviderDTO, bool) {
+	if o == nil || o.FederatedProvider == nil {
 		return nil, false
 	}
-	return o.ExtOidcRp, true
+	return o.FederatedProvider, true
 }
 
-// HasExtOidcRp returns a boolean if a field has been set.
-func (o *ProviderContainerDTO) HasExtOidcRp() bool {
-	if o != nil && o.ExtOidcRp != nil {
+// HasFederatedProvider returns a boolean if a field has been set.
+func (o *ProviderContainerDTO) HasFederatedProvider() bool {
+	if o != nil && o.FederatedProvider != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetExtOidcRp gets a reference to the given ExternalOpenIDConnectRelayingPartyDTO and assigns it to the ExtOidcRp field.
-func (o *ProviderContainerDTO) SetExtOidcRp(v ExternalOpenIDConnectRelayingPartyDTO) {
-	o.ExtOidcRp = &v
+// SetFederatedProvider gets a reference to the given FederatedProviderDTO and assigns it to the FederatedProvider field.
+func (o *ProviderContainerDTO) SetFederatedProvider(v FederatedProviderDTO) {
+	o.FederatedProvider = &v
 }
 
-// GetExtSaml2sp returns the ExtSaml2sp field value if set, zero value otherwise.
-func (o *ProviderContainerDTO) GetExtSaml2sp() ExternalSaml2ServiceProviderDTO {
-	if o == nil || o.ExtSaml2sp == nil {
-		var ret ExternalSaml2ServiceProviderDTO
+// GetLocation returns the Location field value if set, zero value otherwise.
+func (o *ProviderContainerDTO) GetLocation() string {
+	if o == nil || o.Location == nil {
+		var ret string
 		return ret
 	}
-	return *o.ExtSaml2sp
+	return *o.Location
 }
 
-// GetExtSaml2spOk returns a tuple with the ExtSaml2sp field value if set, nil otherwise
+// GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ProviderContainerDTO) GetExtSaml2spOk() (*ExternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.ExtSaml2sp == nil {
+func (o *ProviderContainerDTO) GetLocationOk() (*string, bool) {
+	if o == nil || o.Location == nil {
 		return nil, false
 	}
-	return o.ExtSaml2sp, true
+	return o.Location, true
 }
 
-// HasExtSaml2sp returns a boolean if a field has been set.
-func (o *ProviderContainerDTO) HasExtSaml2sp() bool {
-	if o != nil && o.ExtSaml2sp != nil {
+// HasLocation returns a boolean if a field has been set.
+func (o *ProviderContainerDTO) HasLocation() bool {
+	if o != nil && o.Location != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetExtSaml2sp gets a reference to the given ExternalSaml2ServiceProviderDTO and assigns it to the ExtSaml2sp field.
-func (o *ProviderContainerDTO) SetExtSaml2sp(v ExternalSaml2ServiceProviderDTO) {
-	o.ExtSaml2sp = &v
+// SetLocation gets a reference to the given string and assigns it to the Location field.
+func (o *ProviderContainerDTO) SetLocation(v string) {
+	o.Location = &v
 }
 
-// GetIdp returns the Idp field value if set, zero value otherwise.
-func (o *ProviderContainerDTO) GetIdp() IdentityProviderDTO {
-	if o == nil || o.Idp == nil {
-		var ret IdentityProviderDTO
+// GetName returns the Name field value if set, zero value otherwise.
+func (o *ProviderContainerDTO) GetName() string {
+	if o == nil || o.Name == nil {
+		var ret string
 		return ret
 	}
-	return *o.Idp
+	return *o.Name
 }
 
-// GetIdpOk returns a tuple with the Idp field value if set, nil otherwise
+// GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ProviderContainerDTO) GetIdpOk() (*IdentityProviderDTO, bool) {
-	if o == nil || o.Idp == nil {
+func (o *ProviderContainerDTO) GetNameOk() (*string, bool) {
+	if o == nil || o.Name == nil {
 		return nil, false
 	}
-	return o.Idp, true
+	return o.Name, true
 }
 
-// HasIdp returns a boolean if a field has been set.
-func (o *ProviderContainerDTO) HasIdp() bool {
-	if o != nil && o.Idp != nil {
+// HasName returns a boolean if a field has been set.
+func (o *ProviderContainerDTO) HasName() bool {
+	if o != nil && o.Name != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetIdp gets a reference to the given IdentityProviderDTO and assigns it to the Idp field.
-func (o *ProviderContainerDTO) SetIdp(v IdentityProviderDTO) {
-	o.Idp = &v
+// SetName gets a reference to the given string and assigns it to the Name field.
+func (o *ProviderContainerDTO) SetName(v string) {
+	o.Name = &v
 }
 
-// GetSaml2sp returns the Saml2sp field value if set, zero value otherwise.
-func (o *ProviderContainerDTO) GetSaml2sp() InternalSaml2ServiceProviderDTO {
-	if o == nil || o.Saml2sp == nil {
-		var ret InternalSaml2ServiceProviderDTO
+// GetType returns the Type field value if set, zero value otherwise.
+func (o *ProviderContainerDTO) GetType() string {
+	if o == nil || o.Type == nil {
+		var ret string
 		return ret
 	}
-	return *o.Saml2sp
+	return *o.Type
 }
 
-// GetSaml2spOk returns a tuple with the Saml2sp field value if set, nil otherwise
+// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ProviderContainerDTO) GetSaml2spOk() (*InternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Saml2sp == nil {
+func (o *ProviderContainerDTO) GetTypeOk() (*string, bool) {
+	if o == nil || o.Type == nil {
 		return nil, false
 	}
-	return o.Saml2sp, true
+	return o.Type, true
 }
 
-// HasSaml2sp returns a boolean if a field has been set.
-func (o *ProviderContainerDTO) HasSaml2sp() bool {
-	if o != nil && o.Saml2sp != nil {
+// HasType returns a boolean if a field has been set.
+func (o *ProviderContainerDTO) HasType() bool {
+	if o != nil && o.Type != nil {
 		return true
 	}
 
 	return false
 }
 
-// SetSaml2sp gets a reference to the given InternalSaml2ServiceProviderDTO and assigns it to the Saml2sp field.
-func (o *ProviderContainerDTO) SetSaml2sp(v InternalSaml2ServiceProviderDTO) {
-	o.Saml2sp = &v
+// SetType gets a reference to the given string and assigns it to the Type field.
+func (o *ProviderContainerDTO) SetType(v string) {
+	o.Type = &v
 }
 
 func (o ProviderContainerDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ExtOidcRp != nil {
-		toSerialize["extOidcRp"] = o.ExtOidcRp
+	if o.FederatedProvider != nil {
+		toSerialize["federatedProvider"] = o.FederatedProvider
 	}
-	if o.ExtSaml2sp != nil {
-		toSerialize["extSaml2sp"] = o.ExtSaml2sp
+	if o.Location != nil {
+		toSerialize["location"] = o.Location
 	}
-	if o.Idp != nil {
-		toSerialize["idp"] = o.Idp
+	if o.Name != nil {
+		toSerialize["name"] = o.Name
 	}
-	if o.Saml2sp != nil {
-		toSerialize["saml2sp"] = o.Saml2sp
+	if o.Type != nil {
+		toSerialize["type"] = o.Type
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -203,10 +203,10 @@ func (o *ProviderContainerDTO) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "extOidcRp")
-		delete(additionalProperties, "extSaml2sp")
-		delete(additionalProperties, "idp")
-		delete(additionalProperties, "saml2sp")
+		delete(additionalProperties, "federatedProvider")
+		delete(additionalProperties, "location")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "type")
 		o.AdditionalProperties = additionalProperties
 	}
 

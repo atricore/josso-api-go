@@ -1511,6 +1511,32 @@
         }
       }
     },
+    "/iam-deploy/providers" : {
+      "get" : {
+        "operationId" : "getProviders",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetProvidersRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/tomcatexecenv" : {
       "get" : {
         "operationId" : "getTomcatExecEnv",
@@ -3438,6 +3464,26 @@
           }
         }
       },
+      "GetProvidersRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "providers" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ProviderContainerDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
@@ -4889,17 +4935,17 @@
       "ProviderContainerDTO" : {
         "type" : "object",
         "properties" : {
-          "extOidcRp" : {
-            "$ref" : "#/components/schemas/ExternalOpenIDConnectRelayingPartyDTO"
+          "federatedProvider" : {
+            "$ref" : "#/components/schemas/FederatedProviderDTO"
           },
-          "extSaml2sp" : {
-            "$ref" : "#/components/schemas/ExternalSaml2ServiceProviderDTO"
+          "location" : {
+            "type" : "string"
           },
-          "idp" : {
-            "$ref" : "#/components/schemas/IdentityProviderDTO"
+          "name" : {
+            "type" : "string"
           },
-          "saml2sp" : {
-            "$ref" : "#/components/schemas/InternalSaml2ServiceProviderDTO"
+          "type" : {
+            "type" : "string"
           }
         }
       },
@@ -4991,7 +5037,7 @@
           },
           "value" : {
             "type" : "string"
-          }
+          }            
         }
       },
       "SamlR2IDPConfigDTO" : {

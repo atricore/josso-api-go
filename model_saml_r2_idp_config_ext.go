@@ -18,7 +18,7 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
 		storeProps := toKeyStoreMap(idpCfg.GetSigner())
 		cfg.AdditionalProperties["signer"] = storeProps
-		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
+		cfg.AdditionalProperties["encrypter"] = storeProps
 	}
 
 	return cfg, nil

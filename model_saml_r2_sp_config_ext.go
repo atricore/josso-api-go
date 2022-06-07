@@ -18,7 +18,7 @@ func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
 	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
 		storeProps := toKeyStoreMap(spCfg.GetSigner())
 		cfg.AdditionalProperties["signer"] = storeProps
-		cfg.AdditionalProperties["encrypter"] = storeProps["@id"]
+		cfg.AdditionalProperties["encrypter"] = storeProps
 	}
 
 	return cfg, nil

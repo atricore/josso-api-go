@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtOidcRp** | Pointer to [**ExternalOpenIDConnectRelayingPartyDTO**](ExternalOpenIDConnectRelayingPartyDTO.md) |  | [optional] 
-**ExtSaml2sp** | Pointer to [**ExternalSaml2ServiceProviderDTO**](ExternalSaml2ServiceProviderDTO.md) |  | [optional] 
-**Idp** | Pointer to [**IdentityProviderDTO**](IdentityProviderDTO.md) |  | [optional] 
-**Saml2sp** | Pointer to [**InternalSaml2ServiceProviderDTO**](InternalSaml2ServiceProviderDTO.md) |  | [optional] 
+**FederatedProvider** | Pointer to [**FederatedProviderDTO**](FederatedProviderDTO.md) |  | [optional] 
+**Location** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewProviderContainerDTOWithDefaults instantiates a new ProviderContainerDTO obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExtOidcRp
+### GetFederatedProvider
 
-`func (o *ProviderContainerDTO) GetExtOidcRp() ExternalOpenIDConnectRelayingPartyDTO`
+`func (o *ProviderContainerDTO) GetFederatedProvider() FederatedProviderDTO`
 
-GetExtOidcRp returns the ExtOidcRp field if non-nil, zero value otherwise.
+GetFederatedProvider returns the FederatedProvider field if non-nil, zero value otherwise.
 
-### GetExtOidcRpOk
+### GetFederatedProviderOk
 
-`func (o *ProviderContainerDTO) GetExtOidcRpOk() (*ExternalOpenIDConnectRelayingPartyDTO, bool)`
+`func (o *ProviderContainerDTO) GetFederatedProviderOk() (*FederatedProviderDTO, bool)`
 
-GetExtOidcRpOk returns a tuple with the ExtOidcRp field if it's non-nil, zero value otherwise
+GetFederatedProviderOk returns a tuple with the FederatedProvider field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExtOidcRp
+### SetFederatedProvider
 
-`func (o *ProviderContainerDTO) SetExtOidcRp(v ExternalOpenIDConnectRelayingPartyDTO)`
+`func (o *ProviderContainerDTO) SetFederatedProvider(v FederatedProviderDTO)`
 
-SetExtOidcRp sets ExtOidcRp field to given value.
+SetFederatedProvider sets FederatedProvider field to given value.
 
-### HasExtOidcRp
+### HasFederatedProvider
 
-`func (o *ProviderContainerDTO) HasExtOidcRp() bool`
+`func (o *ProviderContainerDTO) HasFederatedProvider() bool`
 
-HasExtOidcRp returns a boolean if a field has been set.
+HasFederatedProvider returns a boolean if a field has been set.
 
-### GetExtSaml2sp
+### GetLocation
 
-`func (o *ProviderContainerDTO) GetExtSaml2sp() ExternalSaml2ServiceProviderDTO`
+`func (o *ProviderContainerDTO) GetLocation() string`
 
-GetExtSaml2sp returns the ExtSaml2sp field if non-nil, zero value otherwise.
+GetLocation returns the Location field if non-nil, zero value otherwise.
 
-### GetExtSaml2spOk
+### GetLocationOk
 
-`func (o *ProviderContainerDTO) GetExtSaml2spOk() (*ExternalSaml2ServiceProviderDTO, bool)`
+`func (o *ProviderContainerDTO) GetLocationOk() (*string, bool)`
 
-GetExtSaml2spOk returns a tuple with the ExtSaml2sp field if it's non-nil, zero value otherwise
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExtSaml2sp
+### SetLocation
 
-`func (o *ProviderContainerDTO) SetExtSaml2sp(v ExternalSaml2ServiceProviderDTO)`
+`func (o *ProviderContainerDTO) SetLocation(v string)`
 
-SetExtSaml2sp sets ExtSaml2sp field to given value.
+SetLocation sets Location field to given value.
 
-### HasExtSaml2sp
+### HasLocation
 
-`func (o *ProviderContainerDTO) HasExtSaml2sp() bool`
+`func (o *ProviderContainerDTO) HasLocation() bool`
 
-HasExtSaml2sp returns a boolean if a field has been set.
+HasLocation returns a boolean if a field has been set.
 
-### GetIdp
+### GetName
 
-`func (o *ProviderContainerDTO) GetIdp() IdentityProviderDTO`
+`func (o *ProviderContainerDTO) GetName() string`
 
-GetIdp returns the Idp field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIdpOk
+### GetNameOk
 
-`func (o *ProviderContainerDTO) GetIdpOk() (*IdentityProviderDTO, bool)`
+`func (o *ProviderContainerDTO) GetNameOk() (*string, bool)`
 
-GetIdpOk returns a tuple with the Idp field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdp
+### SetName
 
-`func (o *ProviderContainerDTO) SetIdp(v IdentityProviderDTO)`
+`func (o *ProviderContainerDTO) SetName(v string)`
 
-SetIdp sets Idp field to given value.
+SetName sets Name field to given value.
 
-### HasIdp
+### HasName
 
-`func (o *ProviderContainerDTO) HasIdp() bool`
+`func (o *ProviderContainerDTO) HasName() bool`
 
-HasIdp returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSaml2sp
+### GetType
 
-`func (o *ProviderContainerDTO) GetSaml2sp() InternalSaml2ServiceProviderDTO`
+`func (o *ProviderContainerDTO) GetType() string`
 
-GetSaml2sp returns the Saml2sp field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetSaml2spOk
+### GetTypeOk
 
-`func (o *ProviderContainerDTO) GetSaml2spOk() (*InternalSaml2ServiceProviderDTO, bool)`
+`func (o *ProviderContainerDTO) GetTypeOk() (*string, bool)`
 
-GetSaml2spOk returns a tuple with the Saml2sp field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSaml2sp
+### SetType
 
-`func (o *ProviderContainerDTO) SetSaml2sp(v InternalSaml2ServiceProviderDTO)`
+`func (o *ProviderContainerDTO) SetType(v string)`
 
-SetSaml2sp sets Saml2sp field to given value.
+SetType sets Type field to given value.
 
-### HasSaml2sp
+### HasType
 
-`func (o *ProviderContainerDTO) HasSaml2sp() bool`
+`func (o *ProviderContainerDTO) HasType() bool`
 
-HasSaml2sp returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

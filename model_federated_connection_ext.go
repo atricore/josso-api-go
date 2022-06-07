@@ -33,6 +33,11 @@ func (f *FederatedConnectionDTO) GetIDPChannel() (*IdentityProviderChannelDTO, e
 		idpc.SetSignAuthenticationRequests(AsBool(c.AdditionalProperties["signAuthenticationRequests"], false))
 		idpc.SetWantAssertionSigned(AsBool(c.AdditionalProperties["wantAssertionSigned"], false))
 	}
+
+	idpc.AdditionalProperties = map[string]interface{}{
+		"@c": ".IdentityProviderChannelDTO",
+	}
+
 	return &idpc, nil
 }
 
@@ -81,6 +86,7 @@ func toIdentityMappingPolicyMap(dto IdentityMappingPolicyDTO) map[string]interfa
 	props["mappingType"] = dto.GetMappingType()
 	props["name"] = dto.GetName()
 	props["useLocalId"] = dto.GetUseLocalId()
+	props["@c"] = ".IdentityMappingPolicyDTO"
 	return props
 }
 
@@ -93,6 +99,9 @@ func toIdentityMappingPolicyDTO(props map[string]interface{}) IdentityMappingPol
 	dto.SetMappingType(AsString(props["mappingType"], ""))
 	dto.SetName(AsString(props["name"], ""))
 	dto.SetUseLocalId(AsBool(props["useLocalId"], false))
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".IdentityMappingPolicyDTO",
+	}
 	return *dto
 }
 
@@ -105,6 +114,7 @@ func toAccountLinkagePolicyMap(dto AccountLinkagePolicyDTO) map[string]interface
 	props["id"] = dto.GetId()
 	props["linkEmitterType"] = dto.GetLinkEmitterType()
 	props["name"] = dto.GetName()
+	props["@c"] = ".AccountLinkagePolicyDTO"
 	return props
 }
 
@@ -117,6 +127,9 @@ func toAccountLinkagePolicyDTO(props map[string]interface{}) AccountLinkagePolic
 	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetLinkEmitterType(AsString(props["linkEmitterType"], ""))
 	dto.SetName(AsString(props["name"], ""))
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".AccountLinkagePolicyDTO",
+	}
 	return *dto
 }
 
@@ -126,6 +139,9 @@ func toEmissionPolicyDTO(props map[string]interface{}) AuthenticationAssertionEm
 	dto.SetElementId(AsString(props["elementId"], ""))
 	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(AsString(props["name"], ""))
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".AuthenticationAssertionEmissionPolicyDTO",
+	}
 	return *dto
 }
 
@@ -135,6 +151,9 @@ func toAuthenticationContractDTO(props map[string]interface{}) AuthenticationCon
 	dto.SetElementId(AsString(props["elementId"], ""))
 	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(AsString(props["name"], ""))
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".AuthenticationContractDTO",
+	}
 	return *dto
 }
 
@@ -145,6 +164,10 @@ func toAttributeProfileDTO(props map[string]interface{}) AttributeProfileDTO {
 	dto.SetId(AsInt64(props["id"], 0))
 	dto.SetName(AsString(props["name"], ""))
 	dto.SetProfileType(AsString(props["profileType"], ""))
+	// TODO : Support custom attribute profile
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".BuiltInAttributeProfileDTO",
+	}
 	return *dto
 }
 
@@ -156,6 +179,9 @@ func toSubjectNameIDPolicyDTO(props map[string]interface{}) SubjectNameIdentifie
 	dto.SetName(AsString(props["name"], ""))
 	dto.SetSubjectAttribute(AsString(props["subjectAttribute"], ""))
 	dto.SetType(AsString(props["type"], ""))
+	dto.AdditionalProperties = map[string]interface{}{
+		"@c": ".SubjectNameIdentifierPolicyDTO",
+	}
 	return *dto
 }
 
@@ -186,7 +212,11 @@ func (f *FederatedConnectionDTO) SetSPChannel(spc *InternalSaml2ServiceProviderC
 		c.AdditionalProperties["restrictedRolesMatchMode"] = spc.GetRestrictedRolesMatchMode()
 		c.AdditionalProperties["encryptAssertionAlgorithm"] = spc.GetEncryptAssertionAlgorithm()
 		c.AdditionalProperties["ignoreRequestedNameIDPolicy"] = spc.GetIgnoreRequestedNameIDPolicy()
-		c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(spc.GetSubjectNameIDPolicy())
+
+
+		if p, ok := spc.GetSubjectNameIDPolicyOk(); ok {
+			c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(p)
+		}
 		c.AdditionalProperties["encryptAssertion"] = spc.GetEncryptAssertion()
 		c.AdditionalProperties["signatureHash"] = spc.GetSignatureHash()
 		c.AdditionalProperties["attributeProfile"] = toAttributeProfilemap(spc.GetAttributeProfile())
@@ -235,6 +265,10 @@ func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderCh
 		spc.SetWantAuthnRequestsSigned(AsBool(c.AdditionalProperties["wantAuthnRequestsSigned"], false))
 	}
 
+	spc.AdditionalProperties = map[string]interface{}{
+		"@c": ".InternalSaml2ServiceProviderChannelDTO",
+	}
+
 	return &spc, nil
 }
 
@@ -244,6 +278,7 @@ func toAuthenticationContractmap(dto AuthenticationContractDTO) *map[string]inte
 	props["elementId"] = dto.GetElementId()
 	props["id"] = dto.GetId()
 	props["name"] = dto.GetName()
+	props["@c"] = ".AuthenticationContractDTO"
 	return &props
 }
 
@@ -254,6 +289,7 @@ func toAttributeProfilemap(dto AttributeProfileDTO) *map[string]interface{} {
 	props["id"] = dto.GetId()
 	props["name"] = dto.GetName()
 	props["profileType"] = dto.GetProfileType()
+	props["@c"] = ".BuiltInAttributeProfileDTO"
 	return &props
 }
 
@@ -263,17 +299,19 @@ func toEmissionPolicyMap(dto AuthenticationAssertionEmissionPolicyDTO) *map[stri
 	props["elementId"] = dto.GetElementId()
 	props["id"] = dto.GetId()
 	props["name"] = dto.GetName()
+	props["@c"] = ".AuthenticationAssertionEmissionPolicyDTO"
 	return &props
 }
 
 // Transforms SubjectNameIDPolicy a map
-func toSubjectNameIDPolicyMap(dto SubjectNameIdentifierPolicyDTO) *map[string]interface{} {
+func toSubjectNameIDPolicyMap(dto *SubjectNameIdentifierPolicyDTO) *map[string]interface{} {
 	props := make(map[string]interface{})
 	props["descriptionKey"] = dto.GetDescriptionKey()
 	props["id"] = dto.GetId()
 	props["name"] = dto.GetName()
 	props["subjectAttribute"] = dto.GetSubjectAttribute()
 	props["type"] = dto.GetType()
+	props["@c"] = ".SubjectNameIdentifierPolicyDTO"
 	return &props
 }
 
@@ -284,12 +322,12 @@ func addFederatedConnection(fcs []FederatedConnectionDTO,
 
 	// Create new Federated Connection
 	var fc FederatedConnectionDTO
+	fc.AdditionalProperties = map[string]interface{}{
+		"@c": ".FederatedConnectionDTO",
+	}
 	fc.SetName(target)
 	fc.SetIDPChannel(idpChannel)
 	fc.SetSPChannel(spChannel)
-	fc.AdditionalProperties = make(map[string]interface{})
-	fc.AdditionalProperties["@c"] = ".FederatedConnectionDTO"
-
 	fcs = append(fcs, fc)
 
 	return fcs, nil

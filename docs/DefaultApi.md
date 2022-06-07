@@ -52,6 +52,7 @@ Method | HTTP request | Description
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
 [**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
+[**GetProviders**](DefaultApi.md#GetProviders) | **Get** /iam-deploy/providers | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
 [**GetTomcatExecEnvs**](DefaultApi.md#GetTomcatExecEnvs) | **Get** /iam-deploy/tomcatexecenvs | 
 [**GetTypes**](DefaultApi.md#GetTypes) | **Get** /iam-deploy/noop/types | 
@@ -3134,6 +3135,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetProviderRes**](GetProviderRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetProviders
+
+> GetProvidersRes GetProviders(ctx).GetApplianceReq(getApplianceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetProviders(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetProviders``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetProviders`: GetProvidersRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetProviders`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetProvidersRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getApplianceReq** | [**GetApplianceReq**](GetApplianceReq.md) |  | 
+
+### Return type
+
+[**GetProvidersRes**](GetProvidersRes.md)
 
 ### Authorization
 

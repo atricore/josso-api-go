@@ -69,6 +69,7 @@ docs/GetOidcRpRes.md
 docs/GetOidcRpsRes.md
 docs/GetProviderReq.md
 docs/GetProviderRes.md
+docs/GetProvidersRes.md
 docs/GetTomcatExecEnvReq.md
 docs/GetTomcatExecEnvRes.md
 docs/GetTomcatExecEnvsRes.md
@@ -209,6 +210,7 @@ model_get_oidc_rp_res.go
 model_get_oidc_rps_res.go
 model_get_provider_req.go
 model_get_provider_res.go
+model_get_providers_res.go
 model_get_tomcat_exec_env_req.go
 model_get_tomcat_exec_env_res.go
 model_get_tomcat_exec_envs_res.go
