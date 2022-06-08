@@ -4,9 +4,9 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 
 	storeProps := make(map[string]interface{})
 
-	if store.AdditionalProperties["@id"] != nil {
-		storeProps["@id"] = store.AdditionalProperties["@id"].(int)
-	}
+	//	if store.AdditionalProperties["@id"] != nil {
+	//		storeProps["@id"] = store.AdditionalProperties["@id"].(int)
+	//	}
 	storeProps["certificateAlias"] = store.GetCertificateAlias()
 	storeProps["displayName"] = store.GetDisplayName()
 	storeProps["elementId"] = store.GetElementId()
@@ -21,7 +21,7 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 	resourceProps := make(map[string]interface{})
 	storeProps["store"] = resourceProps
 
-	resourceProps["@id"] = store.Store.AdditionalProperties["@id"]
+	//	resourceProps["@id"] = store.Store.AdditionalProperties["@id"]
 	resourceProps["displayName"] = store.Store.GetDisplayName()
 	resourceProps["elementId"] = store.Store.GetElementId()
 	resourceProps["name"] = store.Store.GetName()
@@ -33,11 +33,11 @@ func toKeyStoreMap(store KeystoreDTO) map[string]interface{} {
 }
 
 // Transforms a map into an KeyStoreDTO
-func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
+func toKeyStoreDTO(props map[string]interface{}) *KeystoreDTO {
 
 	store := NewKeystoreDTO()
 	store.AdditionalProperties = make(map[string]interface{})
-	store.AdditionalProperties["@id"] = storeId
+	//store.AdditionalProperties["@id"] = storeId
 
 	if props["displayName"] != nil {
 		store.SetDisplayName((props["displayName"].(string)))
@@ -63,7 +63,7 @@ func toKeyStoreDTO(storeId int, props map[string]interface{}) *KeystoreDTO {
 	resourceProps := props["store"].(map[string]interface{})
 	store.Store = NewResourceDTO()
 	store.Store.AdditionalProperties = map[string]interface{}{}
-	store.Store.AdditionalProperties["@id"] = resourceProps["@id"]
+	//store.Store.AdditionalProperties["@id"] = resourceProps["@id"]
 	store.Store.DisplayName = IPtrString(resourceProps["displayName"])
 	store.Store.ElementId = IPtrString(resourceProps["elementId"])
 	store.Store.Name = IPtrString(resourceProps["name"])

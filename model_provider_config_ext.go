@@ -5,14 +5,13 @@ import (
 	"fmt"
 )
 
-func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error) {
+func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, error) {
 	var storeProps map[string]interface{}
-	var storeId int
 	var ok bool
 
 	if storeProps, ok = cfg.AdditionalProperties["signer"].(map[string]interface{}); !ok {
 		if storeProps, ok = cfg.AdditionalProperties["encrypter"].(map[string]interface{}); !ok {
-			return storeProps, storeId, fmt.Errorf("config does not have encrypter/signer ?")
+			return storeProps, fmt.Errorf("config does not have encrypter/signer ?")
 		}
 	}
 
@@ -26,7 +25,7 @@ func (cfg ProviderConfigDTO) GetStoreProps() (map[string]interface{}, int, error
 		}
 	*/
 
-	return storeProps, storeId, nil
+	return storeProps, nil
 }
 
 func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
@@ -44,7 +43,7 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 	}
 
 	// Build specific type
-	spCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
+	//spCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
 	spCfg.AdditionalProperties["@c"] = class
 
 	spCfg.Description = cfg.Description
@@ -56,7 +55,7 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 
 	if !*spCfg.UseSampleStore && !*spCfg.UseSystemStore {
 		// Get signer/encrypter
-		storeProps, storeId, err := cfg.GetStoreProps()
+		storeProps, err := cfg.GetStoreProps()
 		if err != nil {
 			return spCfg, err
 		}
@@ -65,7 +64,7 @@ func (cfg ProviderConfigDTO) ToSamlR2SPConfig() (*SamlR2SPConfigDTO, error) {
 				return idpCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
 			}
 		*/
-		store := toKeyStoreDTO(storeId, storeProps)
+		store := toKeyStoreDTO(storeProps)
 		spCfg.Signer = store
 		spCfg.Encrypter = store
 
@@ -91,7 +90,7 @@ func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 	}
 
 	// Build specific type
-	idpCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
+	//idpCfg.AdditionalProperties["@id"] = cfg.AdditionalProperties["@id"]
 	idpCfg.AdditionalProperties["@c"] = class
 
 	idpCfg.Description = cfg.Description
@@ -103,7 +102,7 @@ func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 
 	if !*idpCfg.UseSampleStore && !*idpCfg.UseSystemStore {
 		// Get signer/encrypter
-		storeProps, storeId, err := cfg.GetStoreProps()
+		storeProps, err := cfg.GetStoreProps()
 		if err != nil {
 			return idpCfg, err
 		}
@@ -112,7 +111,7 @@ func (cfg ProviderConfigDTO) ToSamlR2IDPConfig() (*SamlR2IDPConfigDTO, error) {
 				return idpCfg, fmt.Errorf("inconsistent config Ids %d, %d", storeId, storeProps["@id"].(int))
 			}
 		*/
-		store := toKeyStoreDTO(storeId, storeProps)
+		store := toKeyStoreDTO(storeProps)
 		idpCfg.Signer = store
 		idpCfg.Encrypter = store
 

@@ -5,7 +5,7 @@ func (idpCfg SamlR2IDPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) 
 	cfg.AdditionalProperties = make(map[string]interface{})
 
 	// Build specific type
-	cfg.AdditionalProperties["@id"] = idpCfg.AdditionalProperties["@id"]
+	//cfg.AdditionalProperties["@id"] = idpCfg.AdditionalProperties["@id"]
 	cfg.AdditionalProperties["@c"] = ".SamlR2IDPConfigDTO"
 
 	cfg.Description = idpCfg.Description

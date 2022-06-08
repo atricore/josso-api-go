@@ -5,7 +5,7 @@ func (spCfg SamlR2SPConfigDTO) ToProviderConfig() (*ProviderConfigDTO, error) {
 	cfg.AdditionalProperties = make(map[string]interface{})
 
 	// Build specific type
-	cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
+	//cfg.AdditionalProperties["@id"] = spCfg.AdditionalProperties["@id"]
 	cfg.AdditionalProperties["@c"] = ".SamlR2SPConfigDTO"
 
 	cfg.Description = spCfg.Description
