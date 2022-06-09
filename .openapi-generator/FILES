@@ -6,6 +6,8 @@ api_default.go
 client.go
 configuration.go
 docs/AccountLinkagePolicyDTO.md
+docs/ActivateExecEnvReq.md
+docs/ActivateExecEnvRes.md
 docs/ActivationDTO.md
 docs/AttributeMapperProfileDTO.md
 docs/AttributeMappingDTO.md
@@ -148,6 +150,8 @@ git_push.sh
 go.mod
 go.sum
 model_account_linkage_policy_dto.go
+model_activate_exec_env_req.go
+model_activate_exec_env_res.go
 model_activation_dto.go
 model_attribute_mapper_profile_dto.go
 model_attribute_mapping_dto.go

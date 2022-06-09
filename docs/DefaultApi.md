@@ -4,6 +4,8 @@ All URIs are relative to *http://localhost:8081/atricore-res/services*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ActivateExecEnv**](DefaultApi.md#ActivateExecEnv) | **Get** /iam-deploy/execenv/activate | 
+[**BuildAppliance**](DefaultApi.md#BuildAppliance) | **Get** /iam-deploy/appliance/build | 
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
 [**CreateDbIdVault**](DefaultApi.md#CreateDbIdVault) | **Post** /iam-deploy/dbidvault | 
 [**CreateExtSaml2Sp**](DefaultApi.md#CreateExtSaml2Sp) | **Post** /iam-deploy/extsaml2sp | 
@@ -76,6 +78,134 @@ Method | HTTP request | Description
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
 
+
+
+## ActivateExecEnv
+
+> ActivateExecEnvRes ActivateExecEnv(ctx).ActivateExecEnvReq(activateExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    activateExecEnvReq := *openapiclient.NewActivateExecEnvReq() // ActivateExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ActivateExecEnv(context.Background()).ActivateExecEnvReq(activateExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ActivateExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ActivateExecEnv`: ActivateExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ActivateExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiActivateExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activateExecEnvReq** | [**ActivateExecEnvReq**](ActivateExecEnvReq.md) |  | 
+
+### Return type
+
+[**ActivateExecEnvRes**](ActivateExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BuildAppliance
+
+> GetApplianceStateRes BuildAppliance(ctx).SetApplianceStateReq(setApplianceStateReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    setApplianceStateReq := *openapiclient.NewSetApplianceStateReq() // SetApplianceStateReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.BuildAppliance(context.Background()).SetApplianceStateReq(setApplianceStateReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.BuildAppliance``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BuildAppliance`: GetApplianceStateRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.BuildAppliance`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBuildApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setApplianceStateReq** | [**SetApplianceStateReq**](SetApplianceStateReq.md) |  | 
+
+### Return type
+
+[**GetApplianceStateRes**](GetApplianceStateRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## CreateAppliance

@@ -196,6 +196,32 @@
         }
       }
     },
+    "/iam-deploy/appliance/build" : {
+      "get" : {
+        "operationId" : "buildAppliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/SetApplianceStateReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetApplianceStateRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliance/import" : {
       "post" : {
         "operationId" : "importAppliance",
@@ -469,6 +495,32 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/GetDbIdVaultsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/execenv/activate" : {
+      "get" : {
+        "operationId" : "activateExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ActivateExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ActivateExecEnvRes"
                 }
               }
             }
@@ -1807,6 +1859,55 @@
           },
           "name" : {
             "type" : "string"
+          }
+        }
+      },
+      "ActivateExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "activateSamples" : {
+            "type" : "boolean"
+          },
+          "applianceId" : {
+            "type" : "string"
+          },
+          "destination" : {
+            "type" : "string"
+          },
+          "execEnvFolder" : {
+            "type" : "string"
+          },
+          "execEnvName" : {
+            "type" : "string"
+          },
+          "idaName" : {
+            "type" : "string"
+          },
+          "password" : {
+            "type" : "string"
+          },
+          "reactivate" : {
+            "type" : "boolean"
+          },
+          "replace" : {
+            "type" : "boolean"
+          },
+          "username" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ActivateExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },
