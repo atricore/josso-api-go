@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateIdSourceDb**](docs/DefaultApi.md#createidsourcedb) | **Post** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**CreateIdSourceLdap**](docs/DefaultApi.md#createidsourceldap) | **Post** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**CreateIdVault**](docs/DefaultApi.md#createidvault) | **Post** /iam-deploy/idvault | 
+*DefaultApi* | [**CreateIisExecEnv**](docs/DefaultApi.md#createiisexecenv) | **Post** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**CreateIntSaml2Sp**](docs/DefaultApi.md#createintsaml2sp) | **Post** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**CreateJossoRs**](docs/DefaultApi.md#createjossors) | **Post** /iam-deploy/jossors | 
 *DefaultApi* | [**CreateOidcRp**](docs/DefaultApi.md#createoidcrp) | **Post** /iam-deploy/oidcrp | 
@@ -100,6 +101,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteIdSourceDb**](docs/DefaultApi.md#deleteidsourcedb) | **Delete** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**DeleteIdSourceLdap**](docs/DefaultApi.md#deleteidsourceldap) | **Delete** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**DeleteIdVault**](docs/DefaultApi.md#deleteidvault) | **Delete** /iam-deploy/idvault | 
+*DefaultApi* | [**DeleteIisExecEnv**](docs/DefaultApi.md#deleteiisexecenv) | **Delete** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**DeleteIntSaml2Sp**](docs/DefaultApi.md#deleteintsaml2sp) | **Delete** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**DeleteJossoRs**](docs/DefaultApi.md#deletejossors) | **Delete** /iam-deploy/jossors | 
 *DefaultApi* | [**DeleteOidcRp**](docs/DefaultApi.md#deleteoidcrp) | **Delete** /iam-deploy/oidcrp | 
@@ -122,6 +124,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetIdSourceLdaps**](docs/DefaultApi.md#getidsourceldaps) | **Get** /iam-deploy/idsourceldaps | 
 *DefaultApi* | [**GetIdVault**](docs/DefaultApi.md#getidvault) | **Get** /iam-deploy/idvault | 
 *DefaultApi* | [**GetIdVaults**](docs/DefaultApi.md#getidvaults) | **Get** /iam-deploy/idvaults | 
+*DefaultApi* | [**GetIisExecEnv**](docs/DefaultApi.md#getiisexecenv) | **Get** /iam-deploy/iisexecenv | 
+*DefaultApi* | [**GetIisExecEnvs**](docs/DefaultApi.md#getiisexecenvs) | **Get** /iam-deploy/iisexecenvs | 
 *DefaultApi* | [**GetIntSaml2Sp**](docs/DefaultApi.md#getintsaml2sp) | **Get** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**GetIntSaml2Sps**](docs/DefaultApi.md#getintsaml2sps) | **Get** /iam-deploy/intsaml2sps | 
 *DefaultApi* | [**GetJossoRs**](docs/DefaultApi.md#getjossors) | **Get** /iam-deploy/jossors | 
@@ -148,6 +152,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateIdSourceDb**](docs/DefaultApi.md#updateidsourcedb) | **Put** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**UpdateIdSourceLdap**](docs/DefaultApi.md#updateidsourceldap) | **Put** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**UpdateIdVault**](docs/DefaultApi.md#updateidvault) | **Put** /iam-deploy/idvault | 
+*DefaultApi* | [**UpdateIisExecEnv**](docs/DefaultApi.md#updateiisexecenv) | **Put** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**UpdateIntSaml2Sp**](docs/DefaultApi.md#updateintsaml2sp) | **Put** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
 *DefaultApi* | [**UpdateTomcatExecEnv**](docs/DefaultApi.md#updatetomcatexecenv) | **Put** /iam-deploy/tomcatexecenv | 
@@ -210,6 +215,9 @@ Class | Method | HTTP request | Description
  - [GetIdVaultReq](docs/GetIdVaultReq.md)
  - [GetIdVaultRes](docs/GetIdVaultRes.md)
  - [GetIdVaultsRes](docs/GetIdVaultsRes.md)
+ - [GetIisExecEnvReq](docs/GetIisExecEnvReq.md)
+ - [GetIisExecEnvRes](docs/GetIisExecEnvRes.md)
+ - [GetIisExecEnvsRes](docs/GetIisExecEnvsRes.md)
  - [GetIntSaml2SpReq](docs/GetIntSaml2SpReq.md)
  - [GetIntSaml2SpRes](docs/GetIntSaml2SpRes.md)
  - [GetIntSaml2SpsRes](docs/GetIntSaml2SpsRes.md)
@@ -279,6 +287,8 @@ Class | Method | HTTP request | Description
  - [StoreIdSourceLdapRes](docs/StoreIdSourceLdapRes.md)
  - [StoreIdVaultReq](docs/StoreIdVaultReq.md)
  - [StoreIdVaultRes](docs/StoreIdVaultRes.md)
+ - [StoreIisExecEnvReq](docs/StoreIisExecEnvReq.md)
+ - [StoreIisExecEnvRes](docs/StoreIisExecEnvRes.md)
  - [StoreIntSaml2SpReq](docs/StoreIntSaml2SpReq.md)
  - [StoreIntSaml2SpRes](docs/StoreIntSaml2SpRes.md)
  - [StoreJossoRsReq](docs/StoreJossoRsReq.md)
@@ -296,6 +306,7 @@ Class | Method | HTTP request | Description
  - [UserDTO](docs/UserDTO.md)
  - [UserDashboardBrandingDTO](docs/UserDashboardBrandingDTO.md)
  - [VirtualSaml2ServiceProviderDTO](docs/VirtualSaml2ServiceProviderDTO.md)
+ - [WindowsIISExecutionEnvironmentDTO](docs/WindowsIISExecutionEnvironmentDTO.md)
 
 
 ## Documentation For Authorization

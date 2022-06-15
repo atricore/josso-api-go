@@ -1148,6 +1148,130 @@
         }
       }
     },
+    "/iam-deploy/iisexecenv" : {
+      "get" : {
+        "operationId" : "getIisExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIisExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIisExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateIisExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIisExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIisExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createIisExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIisExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIisExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteIisExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/iisexecenvs" : {
+      "get" : {
+        "operationId" : "getIisExecEnvs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIisExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIisExecEnvsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/intsaml2sp" : {
       "get" : {
         "operationId" : "getIntSaml2Sp",
@@ -3387,6 +3511,54 @@
           }
         }
       },
+      "GetIisExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetIisExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "iisExecEnv" : {
+            "$ref" : "#/components/schemas/WindowsIISExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetIisExecEnvsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "iisExecEnv" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/TomcatExecutionEnvironmentDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetIntSaml2SpReq" : {
         "type" : "object",
         "properties" : {
@@ -5138,8 +5310,8 @@
           },
           "value" : {
             "type" : "string"
-          }            
-        }
+            }
+          }
       },
       "SamlR2IDPConfigDTO" : {
         "type" : "object",
@@ -5497,6 +5669,34 @@
           },
           "idVault" : {
             "$ref" : "#/components/schemas/EmbeddedIdentityVaultDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StoreIisExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "iisExecEnv" : {
+            "$ref" : "#/components/schemas/WindowsIISExecutionEnvironmentDTO"
+          }
+        }
+      },
+      "StoreIisExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "iisExecEnv" : {
+            "$ref" : "#/components/schemas/WindowsIISExecutionEnvironmentDTO"
           },
           "validationErrors" : {
             "type" : "array",
@@ -6142,6 +6342,73 @@
           },
           "wantSignedRequests" : {
             "type" : "boolean"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
+      "WindowsIISExecutionEnvironmentDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activations" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ActivationDTO"
+            }
+          },
+          "active" : {
+            "type" : "boolean"
+          },
+          "bindingLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "installDemoApps" : {
+            "type" : "boolean"
+          },
+          "installUri" : {
+            "type" : "string"
+          },
+          "isapiExtensionPath" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overwriteOriginalSetup" : {
+            "type" : "boolean"
+          },
+          "platformId" : {
+            "type" : "string"
+          },
+          "targetJDK" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "LOCAL", "REMOTE" ]
           },
           "x" : {
             "type" : "number",

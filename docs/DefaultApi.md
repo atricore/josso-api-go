@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
+[**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
@@ -25,6 +26,7 @@ Method | HTTP request | Description
 [**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
+[**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
@@ -47,6 +49,8 @@ Method | HTTP request | Description
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
+[**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
+[**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
 [**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetJossoRs**](DefaultApi.md#GetJossoRs) | **Get** /iam-deploy/jossors | 
@@ -73,6 +77,7 @@ Method | HTTP request | Description
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
+[**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
@@ -641,6 +646,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdVaultRes**](StoreIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIisExecEnv
+
+> StoreIisExecEnvRes CreateIisExecEnv(ctx).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIisExecEnvReq := *openapiclient.NewStoreIisExecEnvReq() // StoreIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIisExecEnv(context.Background()).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIisExecEnv`: StoreIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIisExecEnvReq** | [**StoreIisExecEnvReq**](StoreIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreIisExecEnvRes**](StoreIisExecEnvRes.md)
 
 ### Authorization
 
@@ -1400,6 +1469,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIisExecEnv
+
+> DeleteRes DeleteIisExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIisExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIisExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIisExecEnvRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -2817,6 +2950,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIdVaultsRes**](GetIdVaultsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIisExecEnv
+
+> GetIisExecEnvRes GetIisExecEnv(ctx).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIisExecEnvReq := *openapiclient.NewGetIisExecEnvReq() // GetIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIisExecEnv(context.Background()).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIisExecEnv`: GetIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIisExecEnvReq** | [**GetIisExecEnvReq**](GetIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetIisExecEnvRes**](GetIisExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIisExecEnvs
+
+> GetIisExecEnvsRes GetIisExecEnvs(ctx).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIisExecEnvReq := *openapiclient.NewGetIisExecEnvReq() // GetIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIisExecEnvs(context.Background()).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIisExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIisExecEnvs`: GetIisExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIisExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIisExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIisExecEnvReq** | [**GetIisExecEnvReq**](GetIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetIisExecEnvsRes**](GetIisExecEnvsRes.md)
 
 ### Authorization
 
@@ -4476,6 +4737,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdVaultRes**](StoreIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIisExecEnv
+
+> StoreIisExecEnvRes UpdateIisExecEnv(ctx).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIisExecEnvReq := *openapiclient.NewStoreIisExecEnvReq() // StoreIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIisExecEnv(context.Background()).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIisExecEnv`: StoreIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIisExecEnvReq** | [**StoreIisExecEnvReq**](StoreIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreIisExecEnvRes**](StoreIisExecEnvRes.md)
 
 ### Authorization
 
