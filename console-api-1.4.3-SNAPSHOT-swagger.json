@@ -1661,6 +1661,130 @@
         }
       }
     },
+    "/iam-deploy/phpexecenv" : {
+      "get" : {
+        "operationId" : "getPhpExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetPhpExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetPhpExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updatePhpExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StorePhpExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StorePhpExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createPhpExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StorePhpExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StorePhpExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deletePhpExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/phpexecenvs" : {
+      "get" : {
+        "operationId" : "getPhpExecEnvs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetPhpExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetPhpExecEnvsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/provider" : {
       "get" : {
         "operationId" : "getProvider",
@@ -3706,6 +3830,54 @@
           }
         }
       },
+      "GetPhpExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetPhpExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "phpExecEnv" : {
+            "$ref" : "#/components/schemas/PHPExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetPhpExecEnvsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "phpExecEnv" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/PHPExecutionEnvironmentDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetProviderReq" : {
         "type" : "object",
         "properties" : {
@@ -5171,6 +5343,74 @@
           }
         }
       },
+      "PHPExecutionEnvironmentDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activations" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ActivationDTO"
+            }
+          },
+          "active" : {
+            "type" : "boolean"
+          },
+          "bindingLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "installDemoApps" : {
+            "type" : "boolean"
+          },
+          "installUri" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overwriteOriginalSetup" : {
+            "type" : "boolean"
+          },
+          "phpEnvironmentType" : {
+            "type" : "string",
+            "enum" : [ "STANDARD", "DRUPAL" ]
+          },
+          "platformId" : {
+            "type" : "string"
+          },
+          "targetJDK" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "LOCAL", "REMOTE" ]
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "PointDTO" : {
         "type" : "object",
         "properties" : {
@@ -5310,8 +5550,8 @@
           },
           "value" : {
             "type" : "string"
-            }
           }
+        }
       },
       "SamlR2IDPConfigDTO" : {
         "type" : "object",
@@ -5781,6 +6021,34 @@
           },
           "oidcRp" : {
             "$ref" : "#/components/schemas/ExternalOpenIDConnectRelayingPartyDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StorePhpExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "phpExecEnv" : {
+            "$ref" : "#/components/schemas/PHPExecutionEnvironmentDTO"
+          }
+        }
+      },
+      "StorePhpExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "phpExecEnv" : {
+            "$ref" : "#/components/schemas/PHPExecutionEnvironmentDTO"
           },
           "validationErrors" : {
             "type" : "array",
