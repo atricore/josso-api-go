@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateIntSaml2Sp**](docs/DefaultApi.md#createintsaml2sp) | **Post** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**CreateJossoRs**](docs/DefaultApi.md#createjossors) | **Post** /iam-deploy/jossors | 
 *DefaultApi* | [**CreateOidcRp**](docs/DefaultApi.md#createoidcrp) | **Post** /iam-deploy/oidcrp | 
+*DefaultApi* | [**CreatePhpExecEnv**](docs/DefaultApi.md#createphpexecenv) | **Post** /iam-deploy/phpexecenv | 
 *DefaultApi* | [**CreateTomcatExecEnv**](docs/DefaultApi.md#createtomcatexecenv) | **Post** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**CreateVirtSaml2Sp**](docs/DefaultApi.md#createvirtsaml2sp) | **Post** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**DeleteAppliance**](docs/DefaultApi.md#deleteappliance) | **Delete** /iam-deploy/appliance | 
@@ -105,6 +106,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteIntSaml2Sp**](docs/DefaultApi.md#deleteintsaml2sp) | **Delete** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**DeleteJossoRs**](docs/DefaultApi.md#deletejossors) | **Delete** /iam-deploy/jossors | 
 *DefaultApi* | [**DeleteOidcRp**](docs/DefaultApi.md#deleteoidcrp) | **Delete** /iam-deploy/oidcrp | 
+*DefaultApi* | [**DeletePhpExecEnv**](docs/DefaultApi.md#deletephpexecenv) | **Delete** /iam-deploy/phpexecenv | 
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**GetAppliance**](docs/DefaultApi.md#getappliance) | **Get** /iam-deploy/appliance | 
@@ -132,6 +134,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetJossoRss**](docs/DefaultApi.md#getjossorss) | **Get** /iam-deploy/jossorss | 
 *DefaultApi* | [**GetOidcRp**](docs/DefaultApi.md#getoidcrp) | **Get** /iam-deploy/oidcrp | 
 *DefaultApi* | [**GetOidcRps**](docs/DefaultApi.md#getoidcrps) | **Get** /iam-deploy/oidcrps | 
+*DefaultApi* | [**GetPhpExecEnv**](docs/DefaultApi.md#getphpexecenv) | **Get** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**GetPhpExecEnvs**](docs/DefaultApi.md#getphpexecenvs) | **Get** /iam-deploy/phpexecenvs | 
 *DefaultApi* | [**GetProvider**](docs/DefaultApi.md#getprovider) | **Get** /iam-deploy/provider | 
 *DefaultApi* | [**GetProviders**](docs/DefaultApi.md#getproviders) | **Get** /iam-deploy/providers | 
 *DefaultApi* | [**GetTomcatExecEnv**](docs/DefaultApi.md#gettomcatexecenv) | **Get** /iam-deploy/tomcatexecenv | 
@@ -155,6 +159,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateIisExecEnv**](docs/DefaultApi.md#updateiisexecenv) | **Put** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**UpdateIntSaml2Sp**](docs/DefaultApi.md#updateintsaml2sp) | **Put** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
+*DefaultApi* | [**UpdatePhpExecEnv**](docs/DefaultApi.md#updatephpexecenv) | **Put** /iam-deploy/phpexecenv | 
 *DefaultApi* | [**UpdateTomcatExecEnv**](docs/DefaultApi.md#updatetomcatexecenv) | **Put** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**ValidateAppliance**](docs/DefaultApi.md#validateappliance) | **Get** /iam-deploy/appliance/validate | 
 
@@ -227,6 +232,9 @@ Class | Method | HTTP request | Description
  - [GetOidcRpReq](docs/GetOidcRpReq.md)
  - [GetOidcRpRes](docs/GetOidcRpRes.md)
  - [GetOidcRpsRes](docs/GetOidcRpsRes.md)
+ - [GetPhpExecEnvReq](docs/GetPhpExecEnvReq.md)
+ - [GetPhpExecEnvRes](docs/GetPhpExecEnvRes.md)
+ - [GetPhpExecEnvsRes](docs/GetPhpExecEnvsRes.md)
  - [GetProviderReq](docs/GetProviderReq.md)
  - [GetProviderRes](docs/GetProviderRes.md)
  - [GetProvidersRes](docs/GetProvidersRes.md)
@@ -261,6 +269,7 @@ Class | Method | HTTP request | Description
  - [OAuth2ClientDTO](docs/OAuth2ClientDTO.md)
  - [OIDCSignOnRequest](docs/OIDCSignOnRequest.md)
  - [OIDCSignOnResponse](docs/OIDCSignOnResponse.md)
+ - [PHPExecutionEnvironmentDTO](docs/PHPExecutionEnvironmentDTO.md)
  - [PointDTO](docs/PointDTO.md)
  - [ProviderConfigDTO](docs/ProviderConfigDTO.md)
  - [ProviderContainerDTO](docs/ProviderContainerDTO.md)
@@ -295,6 +304,8 @@ Class | Method | HTTP request | Description
  - [StoreJossoRsRes](docs/StoreJossoRsRes.md)
  - [StoreOidcRpReq](docs/StoreOidcRpReq.md)
  - [StoreOidcRpRes](docs/StoreOidcRpRes.md)
+ - [StorePhpExecEnvReq](docs/StorePhpExecEnvReq.md)
+ - [StorePhpExecEnvRes](docs/StorePhpExecEnvRes.md)
  - [StoreTomcatExecEnvReq](docs/StoreTomcatExecEnvReq.md)
  - [StoreTomcatExecEnvRes](docs/StoreTomcatExecEnvRes.md)
  - [StoreVirtSaml2SpReq](docs/StoreVirtSaml2SpReq.md)

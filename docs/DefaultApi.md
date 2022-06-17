@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
+[**CreatePhpExecEnv**](DefaultApi.md#CreatePhpExecEnv) | **Post** /iam-deploy/phpexecenv | 
 [**CreateTomcatExecEnv**](DefaultApi.md#CreateTomcatExecEnv) | **Post** /iam-deploy/tomcatexecenv | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
@@ -30,6 +31,7 @@ Method | HTTP request | Description
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
+[**DeletePhpExecEnv**](DefaultApi.md#DeletePhpExecEnv) | **Delete** /iam-deploy/phpexecenv | 
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
@@ -57,6 +59,8 @@ Method | HTTP request | Description
 [**GetJossoRss**](DefaultApi.md#GetJossoRss) | **Get** /iam-deploy/jossorss | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetPhpExecEnv**](DefaultApi.md#GetPhpExecEnv) | **Get** /iam-deploy/phpexecenv | 
+[**GetPhpExecEnvs**](DefaultApi.md#GetPhpExecEnvs) | **Get** /iam-deploy/phpexecenvs | 
 [**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
 [**GetProviders**](DefaultApi.md#GetProviders) | **Get** /iam-deploy/providers | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
@@ -80,6 +84,7 @@ Method | HTTP request | Description
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
+[**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
 
@@ -917,6 +922,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreatePhpExecEnv
+
+> StorePhpExecEnvRes CreatePhpExecEnv(ctx).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storePhpExecEnvReq := *openapiclient.NewStorePhpExecEnvReq() // StorePhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreatePhpExecEnv(context.Background()).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreatePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreatePhpExecEnv`: StorePhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreatePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreatePhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storePhpExecEnvReq** | [**StorePhpExecEnvReq**](StorePhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateTomcatExecEnv
 
 > StoreTomcatExecEnvRes CreateTomcatExecEnv(ctx).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
@@ -1725,6 +1794,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteOidcRpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeletePhpExecEnv
+
+> DeleteRes DeletePhpExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeletePhpExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeletePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeletePhpExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeletePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeletePhpExecEnvRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -3477,6 +3610,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetPhpExecEnv
+
+> GetPhpExecEnvRes GetPhpExecEnv(ctx).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getPhpExecEnvReq := *openapiclient.NewGetPhpExecEnvReq() // GetPhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetPhpExecEnv(context.Background()).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetPhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetPhpExecEnv`: GetPhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetPhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPhpExecEnvReq** | [**GetPhpExecEnvReq**](GetPhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetPhpExecEnvRes**](GetPhpExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetPhpExecEnvs
+
+> GetPhpExecEnvsRes GetPhpExecEnvs(ctx).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getPhpExecEnvReq := *openapiclient.NewGetPhpExecEnvReq() // GetPhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetPhpExecEnvs(context.Background()).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetPhpExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetPhpExecEnvs`: GetPhpExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetPhpExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPhpExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPhpExecEnvReq** | [**GetPhpExecEnvReq**](GetPhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetPhpExecEnvsRes**](GetPhpExecEnvsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetProvider
 
 > GetProviderRes GetProvider(ctx).GetProviderReq(getProviderReq).Execute()
@@ -4929,6 +5190,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdatePhpExecEnv
+
+> StorePhpExecEnvRes UpdatePhpExecEnv(ctx).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storePhpExecEnvReq := *openapiclient.NewStorePhpExecEnvReq() // StorePhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdatePhpExecEnv(context.Background()).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdatePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdatePhpExecEnv`: StorePhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdatePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdatePhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storePhpExecEnvReq** | [**StorePhpExecEnvReq**](StorePhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
 
 ### Authorization
 
