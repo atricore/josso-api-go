@@ -18,7 +18,7 @@ import (
 // GetIisExecEnvsRes struct for GetIisExecEnvsRes
 type GetIisExecEnvsRes struct {
 	Error *string `json:"error,omitempty"`
-	IisExecEnv []TomcatExecutionEnvironmentDTO `json:"iisExecEnv,omitempty"`
+	IisExecEnv []WindowsIISExecutionEnvironmentDTO `json:"iisExecEnv,omitempty"`
 	ValidationErrors []string `json:"validationErrors,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -75,9 +75,9 @@ func (o *GetIisExecEnvsRes) SetError(v string) {
 }
 
 // GetIisExecEnv returns the IisExecEnv field value if set, zero value otherwise.
-func (o *GetIisExecEnvsRes) GetIisExecEnv() []TomcatExecutionEnvironmentDTO {
+func (o *GetIisExecEnvsRes) GetIisExecEnv() []WindowsIISExecutionEnvironmentDTO {
 	if o == nil || o.IisExecEnv == nil {
-		var ret []TomcatExecutionEnvironmentDTO
+		var ret []WindowsIISExecutionEnvironmentDTO
 		return ret
 	}
 	return o.IisExecEnv
@@ -85,7 +85,7 @@ func (o *GetIisExecEnvsRes) GetIisExecEnv() []TomcatExecutionEnvironmentDTO {
 
 // GetIisExecEnvOk returns a tuple with the IisExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIisExecEnvsRes) GetIisExecEnvOk() ([]TomcatExecutionEnvironmentDTO, bool) {
+func (o *GetIisExecEnvsRes) GetIisExecEnvOk() ([]WindowsIISExecutionEnvironmentDTO, bool) {
 	if o == nil || o.IisExecEnv == nil {
 		return nil, false
 	}
@@ -101,8 +101,8 @@ func (o *GetIisExecEnvsRes) HasIisExecEnv() bool {
 	return false
 }
 
-// SetIisExecEnv gets a reference to the given []TomcatExecutionEnvironmentDTO and assigns it to the IisExecEnv field.
-func (o *GetIisExecEnvsRes) SetIisExecEnv(v []TomcatExecutionEnvironmentDTO) {
+// SetIisExecEnv gets a reference to the given []WindowsIISExecutionEnvironmentDTO and assigns it to the IisExecEnv field.
+func (o *GetIisExecEnvsRes) SetIisExecEnv(v []WindowsIISExecutionEnvironmentDTO) {
 	o.IisExecEnv = v
 }
 

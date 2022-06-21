@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Error** | Pointer to **string** |  | [optional] 
-**IisExecEnv** | Pointer to [**[]TomcatExecutionEnvironmentDTO**](TomcatExecutionEnvironmentDTO.md) |  | [optional] 
+**IisExecEnv** | Pointer to [**[]WindowsIISExecutionEnvironmentDTO**](WindowsIISExecutionEnvironmentDTO.md) |  | [optional] 
 **ValidationErrors** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasError returns a boolean if a field has been set.
 
 ### GetIisExecEnv
 
-`func (o *GetIisExecEnvsRes) GetIisExecEnv() []TomcatExecutionEnvironmentDTO`
+`func (o *GetIisExecEnvsRes) GetIisExecEnv() []WindowsIISExecutionEnvironmentDTO`
 
 GetIisExecEnv returns the IisExecEnv field if non-nil, zero value otherwise.
 
 ### GetIisExecEnvOk
 
-`func (o *GetIisExecEnvsRes) GetIisExecEnvOk() (*[]TomcatExecutionEnvironmentDTO, bool)`
+`func (o *GetIisExecEnvsRes) GetIisExecEnvOk() (*[]WindowsIISExecutionEnvironmentDTO, bool)`
 
 GetIisExecEnvOk returns a tuple with the IisExecEnv field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIisExecEnv
 
-`func (o *GetIisExecEnvsRes) SetIisExecEnv(v []TomcatExecutionEnvironmentDTO)`
+`func (o *GetIisExecEnvsRes) SetIisExecEnv(v []WindowsIISExecutionEnvironmentDTO)`
 
 SetIisExecEnv sets IisExecEnv field to given value.
 
