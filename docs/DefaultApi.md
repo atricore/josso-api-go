@@ -13,9 +13,11 @@ Method | HTTP request | Description
 [**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
+[**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
+[**CreatePhpExecEnv**](DefaultApi.md#CreatePhpExecEnv) | **Post** /iam-deploy/phpexecenv | 
 [**CreateTomcatExecEnv**](DefaultApi.md#CreateTomcatExecEnv) | **Post** /iam-deploy/tomcatexecenv | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
@@ -25,9 +27,11 @@ Method | HTTP request | Description
 [**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
+[**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
+[**DeletePhpExecEnv**](DefaultApi.md#DeletePhpExecEnv) | **Delete** /iam-deploy/phpexecenv | 
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
@@ -47,12 +51,16 @@ Method | HTTP request | Description
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
+[**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
+[**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
 [**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetJossoRs**](DefaultApi.md#GetJossoRs) | **Get** /iam-deploy/jossors | 
 [**GetJossoRss**](DefaultApi.md#GetJossoRss) | **Get** /iam-deploy/jossorss | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
+[**GetPhpExecEnv**](DefaultApi.md#GetPhpExecEnv) | **Get** /iam-deploy/phpexecenv | 
+[**GetPhpExecEnvs**](DefaultApi.md#GetPhpExecEnvs) | **Get** /iam-deploy/phpexecenvs | 
 [**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
 [**GetProviders**](DefaultApi.md#GetProviders) | **Get** /iam-deploy/providers | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
@@ -73,8 +81,10 @@ Method | HTTP request | Description
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
+[**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
+[**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
 
@@ -656,6 +666,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreateIisExecEnv
+
+> StoreIisExecEnvRes CreateIisExecEnv(ctx).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIisExecEnvReq := *openapiclient.NewStoreIisExecEnvReq() // StoreIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIisExecEnv(context.Background()).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIisExecEnv`: StoreIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIisExecEnvReq** | [**StoreIisExecEnvReq**](StoreIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreIisExecEnvRes**](StoreIisExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateIntSaml2Sp
 
 > StoreIntSaml2SpRes CreateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
@@ -833,6 +907,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreatePhpExecEnv
+
+> StorePhpExecEnvRes CreatePhpExecEnv(ctx).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storePhpExecEnvReq := *openapiclient.NewStorePhpExecEnvReq() // StorePhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreatePhpExecEnv(context.Background()).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreatePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreatePhpExecEnv`: StorePhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreatePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreatePhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storePhpExecEnvReq** | [**StorePhpExecEnvReq**](StorePhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
 
 ### Authorization
 
@@ -1424,6 +1562,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeleteIisExecEnv
+
+> DeleteRes DeleteIisExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIisExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIisExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeleteIntSaml2Sp
 
 > DeleteRes DeleteIntSaml2Sp(ctx).DeleteReq(deleteReq).Execute()
@@ -1592,6 +1794,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteOidcRpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeletePhpExecEnv
+
+> DeleteRes DeletePhpExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeletePhpExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeletePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeletePhpExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeletePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeletePhpExecEnvRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -2832,6 +3098,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIisExecEnv
+
+> GetIisExecEnvRes GetIisExecEnv(ctx).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIisExecEnvReq := *openapiclient.NewGetIisExecEnvReq() // GetIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIisExecEnv(context.Background()).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIisExecEnv`: GetIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIisExecEnvReq** | [**GetIisExecEnvReq**](GetIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetIisExecEnvRes**](GetIisExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIisExecEnvs
+
+> GetIisExecEnvsRes GetIisExecEnvs(ctx).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIisExecEnvReq := *openapiclient.NewGetIisExecEnvReq() // GetIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIisExecEnvs(context.Background()).GetIisExecEnvReq(getIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIisExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIisExecEnvs`: GetIisExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIisExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIisExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIisExecEnvReq** | [**GetIisExecEnvReq**](GetIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetIisExecEnvsRes**](GetIisExecEnvsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetIntSaml2Sp
 
 > GetIntSaml2SpRes GetIntSaml2Sp(ctx).GetIntSaml2SpReq(getIntSaml2SpReq).Execute()
@@ -3201,6 +3595,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOidcRpsRes**](GetOidcRpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetPhpExecEnv
+
+> GetPhpExecEnvRes GetPhpExecEnv(ctx).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getPhpExecEnvReq := *openapiclient.NewGetPhpExecEnvReq() // GetPhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetPhpExecEnv(context.Background()).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetPhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetPhpExecEnv`: GetPhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetPhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPhpExecEnvReq** | [**GetPhpExecEnvReq**](GetPhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetPhpExecEnvRes**](GetPhpExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetPhpExecEnvs
+
+> GetPhpExecEnvsRes GetPhpExecEnvs(ctx).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getPhpExecEnvReq := *openapiclient.NewGetPhpExecEnvReq() // GetPhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetPhpExecEnvs(context.Background()).GetPhpExecEnvReq(getPhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetPhpExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetPhpExecEnvs`: GetPhpExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetPhpExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetPhpExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPhpExecEnvReq** | [**GetPhpExecEnvReq**](GetPhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetPhpExecEnvsRes**](GetPhpExecEnvsRes.md)
 
 ### Authorization
 
@@ -4491,6 +5013,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UpdateIisExecEnv
+
+> StoreIisExecEnvRes UpdateIisExecEnv(ctx).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIisExecEnvReq := *openapiclient.NewStoreIisExecEnvReq() // StoreIisExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIisExecEnv(context.Background()).StoreIisExecEnvReq(storeIisExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIisExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIisExecEnv`: StoreIisExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIisExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIisExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIisExecEnvReq** | [**StoreIisExecEnvReq**](StoreIisExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreIisExecEnvRes**](StoreIisExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateIntSaml2Sp
 
 > StoreIntSaml2SpRes UpdateIntSaml2Sp(ctx).StoreIntSaml2SpReq(storeIntSaml2SpReq).Execute()
@@ -4604,6 +5190,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreOidcRpRes**](StoreOidcRpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdatePhpExecEnv
+
+> StorePhpExecEnvRes UpdatePhpExecEnv(ctx).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storePhpExecEnvReq := *openapiclient.NewStorePhpExecEnvReq() // StorePhpExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdatePhpExecEnv(context.Background()).StorePhpExecEnvReq(storePhpExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdatePhpExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdatePhpExecEnv`: StorePhpExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdatePhpExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdatePhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storePhpExecEnvReq** | [**StorePhpExecEnvReq**](StorePhpExecEnvReq.md) |  | 
+
+### Return type
+
+[**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
 
 ### Authorization
 
