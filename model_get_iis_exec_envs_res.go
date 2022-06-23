@@ -3,7 +3,7 @@ Atricore Console :: Remote : API
 
 # Atricore Console API
 
-API version: 1.4.3-SNAPSHOT
+API version: 1.5.0-SNAPSHOT
 Contact: sgonzalez@atricore.com
 */
 

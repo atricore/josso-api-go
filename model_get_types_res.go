@@ -3,7 +3,7 @@ Atricore Console :: Remote : API
 
 # Atricore Console API
 
-API version: 1.4.3-SNAPSHOT
+API version: 1.5.0-SNAPSHOT
 Contact: sgonzalez@atricore.com
 */
 
@@ -19,7 +19,9 @@ import (
 type GetTypesRes struct {
 	AttributeMapperProfileDTO *AttributeMapperProfileDTO `json:"attributeMapperProfileDTO,omitempty"`
 	BasicAuthnMechanism *BasicAuthenticationDTO `json:"basicAuthnMechanism,omitempty"`
+	BindAuthn *BindAuthenticationDTO `json:"bindAuthn,omitempty"`
 	BuiltInAttributeProfile *BuiltInAttributeProfileDTO `json:"builtInAttributeProfile,omitempty"`
+	DirectoryAuthnSvc *DirectoryAuthenticationServiceDTO `json:"directoryAuthnSvc,omitempty"`
 	Idpc *IdentityProviderChannelDTO `json:"idpc,omitempty"`
 	Spc *InternalSaml2ServiceProviderChannelDTO `json:"spc,omitempty"`
 	TotpAuthnSvc *TOTPAuthenticationServiceDTO `json:"totpAuthnSvc,omitempty"`
@@ -109,6 +111,38 @@ func (o *GetTypesRes) SetBasicAuthnMechanism(v BasicAuthenticationDTO) {
 	o.BasicAuthnMechanism = &v
 }
 
+// GetBindAuthn returns the BindAuthn field value if set, zero value otherwise.
+func (o *GetTypesRes) GetBindAuthn() BindAuthenticationDTO {
+	if o == nil || o.BindAuthn == nil {
+		var ret BindAuthenticationDTO
+		return ret
+	}
+	return *o.BindAuthn
+}
+
+// GetBindAuthnOk returns a tuple with the BindAuthn field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetBindAuthnOk() (*BindAuthenticationDTO, bool) {
+	if o == nil || o.BindAuthn == nil {
+		return nil, false
+	}
+	return o.BindAuthn, true
+}
+
+// HasBindAuthn returns a boolean if a field has been set.
+func (o *GetTypesRes) HasBindAuthn() bool {
+	if o != nil && o.BindAuthn != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetBindAuthn gets a reference to the given BindAuthenticationDTO and assigns it to the BindAuthn field.
+func (o *GetTypesRes) SetBindAuthn(v BindAuthenticationDTO) {
+	o.BindAuthn = &v
+}
+
 // GetBuiltInAttributeProfile returns the BuiltInAttributeProfile field value if set, zero value otherwise.
 func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO {
 	if o == nil || o.BuiltInAttributeProfile == nil {
@@ -139,6 +173,38 @@ func (o *GetTypesRes) HasBuiltInAttributeProfile() bool {
 // SetBuiltInAttributeProfile gets a reference to the given BuiltInAttributeProfileDTO and assigns it to the BuiltInAttributeProfile field.
 func (o *GetTypesRes) SetBuiltInAttributeProfile(v BuiltInAttributeProfileDTO) {
 	o.BuiltInAttributeProfile = &v
+}
+
+// GetDirectoryAuthnSvc returns the DirectoryAuthnSvc field value if set, zero value otherwise.
+func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO {
+	if o == nil || o.DirectoryAuthnSvc == nil {
+		var ret DirectoryAuthenticationServiceDTO
+		return ret
+	}
+	return *o.DirectoryAuthnSvc
+}
+
+// GetDirectoryAuthnSvcOk returns a tuple with the DirectoryAuthnSvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetDirectoryAuthnSvcOk() (*DirectoryAuthenticationServiceDTO, bool) {
+	if o == nil || o.DirectoryAuthnSvc == nil {
+		return nil, false
+	}
+	return o.DirectoryAuthnSvc, true
+}
+
+// HasDirectoryAuthnSvc returns a boolean if a field has been set.
+func (o *GetTypesRes) HasDirectoryAuthnSvc() bool {
+	if o != nil && o.DirectoryAuthnSvc != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetDirectoryAuthnSvc gets a reference to the given DirectoryAuthenticationServiceDTO and assigns it to the DirectoryAuthnSvc field.
+func (o *GetTypesRes) SetDirectoryAuthnSvc(v DirectoryAuthenticationServiceDTO) {
+	o.DirectoryAuthnSvc = &v
 }
 
 // GetIdpc returns the Idpc field value if set, zero value otherwise.
@@ -245,8 +311,14 @@ func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	if o.BasicAuthnMechanism != nil {
 		toSerialize["basicAuthnMechanism"] = o.BasicAuthnMechanism
 	}
+	if o.BindAuthn != nil {
+		toSerialize["bindAuthn"] = o.BindAuthn
+	}
 	if o.BuiltInAttributeProfile != nil {
 		toSerialize["builtInAttributeProfile"] = o.BuiltInAttributeProfile
+	}
+	if o.DirectoryAuthnSvc != nil {
+		toSerialize["directoryAuthnSvc"] = o.DirectoryAuthnSvc
 	}
 	if o.Idpc != nil {
 		toSerialize["idpc"] = o.Idpc
@@ -277,7 +349,9 @@ func (o *GetTypesRes) UnmarshalJSON(bytes []byte) (err error) {
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "attributeMapperProfileDTO")
 		delete(additionalProperties, "basicAuthnMechanism")
+		delete(additionalProperties, "bindAuthn")
 		delete(additionalProperties, "builtInAttributeProfile")
+		delete(additionalProperties, "directoryAuthnSvc")
 		delete(additionalProperties, "idpc")
 		delete(additionalProperties, "spc")
 		delete(additionalProperties, "totpAuthnSvc")

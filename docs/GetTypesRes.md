@@ -6,7 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AttributeMapperProfileDTO** | Pointer to [**AttributeMapperProfileDTO**](AttributeMapperProfileDTO.md) |  | [optional] 
 **BasicAuthnMechanism** | Pointer to [**BasicAuthenticationDTO**](BasicAuthenticationDTO.md) |  | [optional] 
+**BindAuthn** | Pointer to [**BindAuthenticationDTO**](BindAuthenticationDTO.md) |  | [optional] 
 **BuiltInAttributeProfile** | Pointer to [**BuiltInAttributeProfileDTO**](BuiltInAttributeProfileDTO.md) |  | [optional] 
+**DirectoryAuthnSvc** | Pointer to [**DirectoryAuthenticationServiceDTO**](DirectoryAuthenticationServiceDTO.md) |  | [optional] 
 **Idpc** | Pointer to [**IdentityProviderChannelDTO**](IdentityProviderChannelDTO.md) |  | [optional] 
 **Spc** | Pointer to [**InternalSaml2ServiceProviderChannelDTO**](InternalSaml2ServiceProviderChannelDTO.md) |  | [optional] 
 **TotpAuthnSvc** | Pointer to [**TOTPAuthenticationServiceDTO**](TOTPAuthenticationServiceDTO.md) |  | [optional] 
@@ -80,6 +82,31 @@ SetBasicAuthnMechanism sets BasicAuthnMechanism field to given value.
 
 HasBasicAuthnMechanism returns a boolean if a field has been set.
 
+### GetBindAuthn
+
+`func (o *GetTypesRes) GetBindAuthn() BindAuthenticationDTO`
+
+GetBindAuthn returns the BindAuthn field if non-nil, zero value otherwise.
+
+### GetBindAuthnOk
+
+`func (o *GetTypesRes) GetBindAuthnOk() (*BindAuthenticationDTO, bool)`
+
+GetBindAuthnOk returns a tuple with the BindAuthn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBindAuthn
+
+`func (o *GetTypesRes) SetBindAuthn(v BindAuthenticationDTO)`
+
+SetBindAuthn sets BindAuthn field to given value.
+
+### HasBindAuthn
+
+`func (o *GetTypesRes) HasBindAuthn() bool`
+
+HasBindAuthn returns a boolean if a field has been set.
+
 ### GetBuiltInAttributeProfile
 
 `func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO`
@@ -104,6 +131,31 @@ SetBuiltInAttributeProfile sets BuiltInAttributeProfile field to given value.
 `func (o *GetTypesRes) HasBuiltInAttributeProfile() bool`
 
 HasBuiltInAttributeProfile returns a boolean if a field has been set.
+
+### GetDirectoryAuthnSvc
+
+`func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO`
+
+GetDirectoryAuthnSvc returns the DirectoryAuthnSvc field if non-nil, zero value otherwise.
+
+### GetDirectoryAuthnSvcOk
+
+`func (o *GetTypesRes) GetDirectoryAuthnSvcOk() (*DirectoryAuthenticationServiceDTO, bool)`
+
+GetDirectoryAuthnSvcOk returns a tuple with the DirectoryAuthnSvc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDirectoryAuthnSvc
+
+`func (o *GetTypesRes) SetDirectoryAuthnSvc(v DirectoryAuthenticationServiceDTO)`
+
+SetDirectoryAuthnSvc sets DirectoryAuthnSvc field to given value.
+
+### HasDirectoryAuthnSvc
+
+`func (o *GetTypesRes) HasDirectoryAuthnSvc() bool`
+
+HasDirectoryAuthnSvc returns a boolean if a field has been set.
 
 ### GetIdpc
 

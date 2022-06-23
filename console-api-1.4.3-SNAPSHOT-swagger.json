@@ -4599,13 +4599,6 @@
           "identityConfirmationPolicy" : {
             "$ref" : "#/components/schemas/ExtensionDTO"
           },
-          "identityLookups" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/IdentityLookupDTO"
-            }
-          },
           "ignoreRequestedNameIDPolicy" : {
             "type" : "boolean"
           },
@@ -5549,7 +5542,11 @@
             "type" : "string"
           },
           "value" : {
-            "type" : "string"
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "format" : "byte"
+            }
           }
         }
       },

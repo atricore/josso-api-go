@@ -3,7 +3,7 @@ GENERATOR=/opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh
 #SWAGGER_FILE=~/.m2/repository/com/atricore/idbus/console/console-api/1.4.3-SNAPSHOT/console-api-1.4.3-SNAPSHOT-swagger.yaml
 #SWAGGER_FILE=./console-api-1.4.3-SNAPSHOT-swagger.yaml
 
-SWAGGER_FILE=./console-api-1.4.3-SNAPSHOT-swagger.json
+SWAGGER_FILE=./console-api-1.5.0-SNAPSHOT-swagger.json
 
 PGK_NAME=jossoappi
 

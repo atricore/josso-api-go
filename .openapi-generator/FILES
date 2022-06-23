@@ -18,6 +18,7 @@ docs/AuthenticationContractDTO.md
 docs/AuthenticationMechanismDTO.md
 docs/AuthenticationServiceDTO.md
 docs/BasicAuthenticationDTO.md
+docs/BindAuthenticationDTO.md
 docs/BuiltInAttributeProfileDTO.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
@@ -27,6 +28,7 @@ docs/DefaultApi.md
 docs/DelegatedAuthenticationDTO.md
 docs/DeleteReq.md
 docs/DeleteRes.md
+docs/DirectoryAuthenticationServiceDTO.md
 docs/EmbeddedIdentityVaultDTO.md
 docs/EntitySelectionStrategyDTO.md
 docs/ExecutionEnvironmentDTO.md
@@ -174,6 +176,7 @@ model_authentication_contract_dto.go
 model_authentication_mechanism_dto.go
 model_authentication_service_dto.go
 model_basic_authentication_dto.go
+model_bind_authentication_dto.go
 model_built_in_attribute_profile_dto.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go
@@ -182,6 +185,7 @@ model_db_identity_vault_dto.go
 model_delegated_authentication_dto.go
 model_delete_req.go
 model_delete_res.go
+model_directory_authentication_service_dto.go
 model_embedded_identity_vault_dto.go
 model_entity_selection_strategy_dto.go
 model_execution_environment_dto.go
