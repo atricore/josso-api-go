@@ -5542,11 +5542,15 @@
             "type" : "string"
           },
           "value" : {
+<<<<<<< HEAD
             "type" : "array",
             "items" : {
               "type" : "string",
               "format" : "byte"
             }
+=======
+            "type" : "string"
+>>>>>>> 28dfa57275491da3560fcc1754116a8d1b38e84d
           }
         }
       },
