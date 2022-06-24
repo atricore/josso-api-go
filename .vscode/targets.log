@@ -8,12 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 14:48:07 2022
+# Make data base, printed on Fri Jun 24 10:28:25 2022
 
 # Variables
 
 # environment
-TMUX_PANE = %14
+TMUX_PANE = %0
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-openjdk
 # environment
@@ -25,7 +25,7 @@ NO_AT_BRIDGE = 1
 # makefile (from 'Makefile', line 8)
 PGK_NAME = jossoappi
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2e5f2ca1-4873-487e-a471-0cf8f4598400.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6539d4a3-0759-45b2-b7c9-192c14a823df.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -51,7 +51,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /wa/git/go/src/josso-api-go
+PWD = /home/sgonzalez/wa/git/go/src/josso-api-go
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -63,7 +63,7 @@ XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flat
 # environment
 TFE_PARALLELISM = 1
 # environment
-OLDPWD = /wa/git/go/src
+OLDPWD = /home/sgonzalez/wa/git/go/src/terraform-provider-josso/v0.1
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -71,7 +71,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-2538.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-2243.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
@@ -117,11 +117,11 @@ ZSH = /usr/share/oh-my-zsh/
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 10551
+VSCODE_PID = 20646
 # environment
 XDG_SESSION_TYPE = x11
 # environment
-TMUX = /tmp/tmux-1000/default,2763,0
+TMUX = /tmp/tmux-1000/default,2589,0
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -183,7 +183,7 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-2538.log
+ALACRITTY_LOG = /tmp/Alacritty-2243.log
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
 # environment
@@ -271,7 +271,7 @@ is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+
 # default
 SUFFIXES := 
 # environment
-_P9K_TTY = /dev/pts/5
+_P9K_TTY = /dev/pts/1
 # environment
 VSCODE_CLI = 1
 # environment
@@ -285,7 +285,6 @@ TERM_PROGRAM_VERSION = 3.3a
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
- 
 # Load=136/1024=13%, Rehash=0, Collisions=12/166=7%
 
 # Pattern-specific Variable Values
@@ -294,9 +293,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 186 files, no impossibilities.
+# . (device 2065, inode 9188680): 198 files, no impossibilities.
 
-# 186 files, no impossibilities in 1 directories.
+# 198 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -319,7 +318,7 @@ default: build
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-09-30 15:55:52.607027753
+#  Last modified 2022-06-23 16:22:36.595399451
 #  File has been updated.
 #  Successfully updated.
 
@@ -366,12 +365,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 196 / storage = 5472 B / avg = 27 B
-# current buf: size = 8162 B / used = 5472 B / count = 196 / avg = 27 B
+# strcache buffers: 1 (0) / strings = 208 / storage = 5868 B / avg = 28 B
+# current buf: size = 8162 B / used = 5868 B / count = 208 / avg = 28 B
 
-# strcache performance: lookups = 206 / hit rate = 4%
+# strcache performance: lookups = 218 / hit rate = 4%
 # hash-table stats:
-# Load=196/8192=2%, Rehash=0, Collisions=2/206=1%
-# Finished Make data base on Thu Jun 23 14:48:07 2022
+# Load=208/8192=3%, Rehash=0, Collisions=3/218=1%
+# Finished Make data base on Fri Jun 24 10:28:25 2022
 
  

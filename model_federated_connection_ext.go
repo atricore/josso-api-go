@@ -213,7 +213,6 @@ func (f *FederatedConnectionDTO) SetSPChannel(spc *InternalSaml2ServiceProviderC
 		c.AdditionalProperties["encryptAssertionAlgorithm"] = spc.GetEncryptAssertionAlgorithm()
 		c.AdditionalProperties["ignoreRequestedNameIDPolicy"] = spc.GetIgnoreRequestedNameIDPolicy()
 
-
 		if p, ok := spc.GetSubjectNameIDPolicyOk(); ok {
 			c.AdditionalProperties["subjectNameIDPolicy"] = toSubjectNameIDPolicyMap(p)
 		}
@@ -245,8 +244,12 @@ func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderCh
 	spc.SetOverrideProviderSetup(c.GetOverrideProviderSetup())
 
 	if c.GetOverrideProviderSetup() {
-		emissionPolicy := toEmissionPolicyDTO(c.AdditionalProperties["emissionPolicy"].(map[string]interface{}))
-		spc.SetEmissionPolicy(emissionPolicy)
+
+		if c.AdditionalProperties["emissionPolicy"] != nil {
+			emissionPolicy := toEmissionPolicyDTO(c.AdditionalProperties["emissionPolicy"].(map[string]interface{}))
+			spc.SetEmissionPolicy(emissionPolicy)
+		}
+
 		spc.SetRestrictedRoles(AsStringArr(c.AdditionalProperties["restrictedRoles"]))
 		spc.SetRequiredRoles(AsStringArr(c.AdditionalProperties["requiredRoles"]))
 		spc.SetMessageTtl(AsInt32(c.AdditionalProperties["messageTtl"], 0))
@@ -254,14 +257,25 @@ func (f *FederatedConnectionDTO) GetSPChannel() (*InternalSaml2ServiceProviderCh
 		spc.SetRestrictedRolesMatchMode(AsInt32(c.AdditionalProperties["restrictedRolesMatchMode"], 0))
 		spc.SetEncryptAssertionAlgorithm(AsString(c.AdditionalProperties["encryptAssertionAlgorithm"], ""))
 		spc.SetIgnoreRequestedNameIDPolicy(AsBool(c.AdditionalProperties["ignoreRequestedNameIDPolicy"], false))
-		subjectNameId := toSubjectNameIDPolicyDTO(c.AdditionalProperties["subjectNameIDPolicy"].(map[string]interface{}))
-		spc.SetSubjectNameIDPolicy(subjectNameId)
+
+		if c.AdditionalProperties["subjectNameIDPolicy"] != nil {
+			subjectNameId := toSubjectNameIDPolicyDTO(c.AdditionalProperties["subjectNameIDPolicy"].(map[string]interface{}))
+			spc.SetSubjectNameIDPolicy(subjectNameId)
+		}
+
 		spc.SetEncryptAssertion(AsBool(c.AdditionalProperties["encryptAssertion"], false))
 		spc.SetSignatureHash(AsString(c.AdditionalProperties["signatureHash"], ""))
-		attrProfile := toAttributeProfileDTO(c.AdditionalProperties["attributeProfile"].(map[string]interface{}))
-		spc.SetAttributeProfile(attrProfile)
-		authnContract := toAuthenticationContractDTO(c.AdditionalProperties["authenticationContract"].(map[string]interface{}))
-		spc.SetAuthenticationContract(authnContract)
+
+		if c.AdditionalProperties["attributeProfile"] != nil {
+			attrProfile := toAttributeProfileDTO(c.AdditionalProperties["attributeProfile"].(map[string]interface{}))
+			spc.SetAttributeProfile(attrProfile)
+		}
+
+		if c.AdditionalProperties["authenticationContract"] != nil {
+			authnContract := toAuthenticationContractDTO(c.AdditionalProperties["authenticationContract"].(map[string]interface{}))
+			spc.SetAuthenticationContract(authnContract)
+		}
+
 		spc.SetWantAuthnRequestsSigned(AsBool(c.AdditionalProperties["wantAuthnRequestsSigned"], false))
 	}
 
