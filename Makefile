@@ -21,3 +21,4 @@ test:
 
 generate:
 	$(GENERATOR) generate -i $(SWAGGER_FILE) -g go -o . --additional-properties=packageName=$(PGK_NAME) --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
+	cat "\n.vscode" >> .gitignore
