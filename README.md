@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
  - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [BindAuthenticationDTO](docs/BindAuthenticationDTO.md)
  - [BuiltInAttributeProfileDTO](docs/BuiltInAttributeProfileDTO.md)
+ - [ClientCertAuthnServiceDTO](docs/ClientCertAuthnServiceDTO.md)
  - [CustomClassDTO](docs/CustomClassDTO.md)
  - [CustomClassPropertyDTO](docs/CustomClassPropertyDTO.md)
  - [DbIdentitySourceDTO](docs/DbIdentitySourceDTO.md)
@@ -269,6 +270,7 @@ Class | Method | HTTP request | Description
  - [LdapIdentitySourceDTO](docs/LdapIdentitySourceDTO.md)
  - [LocationDTO](docs/LocationDTO.md)
  - [OAuth2ClientDTO](docs/OAuth2ClientDTO.md)
+ - [OAuth2PreAuthenticationServiceDTO](docs/OAuth2PreAuthenticationServiceDTO.md)
  - [OIDCSignOnRequest](docs/OIDCSignOnRequest.md)
  - [OIDCSignOnResponse](docs/OIDCSignOnResponse.md)
  - [PHPExecutionEnvironmentDTO](docs/PHPExecutionEnvironmentDTO.md)
@@ -320,6 +322,7 @@ Class | Method | HTTP request | Description
  - [UserDashboardBrandingDTO](docs/UserDashboardBrandingDTO.md)
  - [VirtualSaml2ServiceProviderDTO](docs/VirtualSaml2ServiceProviderDTO.md)
  - [WindowsIISExecutionEnvironmentDTO](docs/WindowsIISExecutionEnvironmentDTO.md)
+ - [WindowsIntegratedAuthenticationDTO](docs/WindowsIntegratedAuthenticationDTO.md)
 
 
 ## Documentation For Authorization

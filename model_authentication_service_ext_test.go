@@ -7,6 +7,7 @@ import (
 )
 
 func TestToDirectoryAuthnSvc(t *testing.T) {
+
 	das := NewDirectoryAuthnSvcDTOInit()
 
 	das.SetId(10)
@@ -46,7 +47,7 @@ func TestToDirectoryAuthnSvc(t *testing.T) {
 	assert.Equal(t, das.GetName(), dasTest.GetName())
 	assert.Equal(t, das.GetDisplayName(), dasTest.GetDisplayName())
 	assert.Equal(t, das.GetDescription(), dasTest.GetDescription())
-	
+
 	assert.Equal(t, das.GetInitialContextFactory(), dasTest.GetInitialContextFactory())
 	assert.Equal(t, das.GetProviderUrl(), dasTest.GetProviderUrl())
 	assert.Equal(t, das.GetPerformDnSearch(), dasTest.GetPerformDnSearch())

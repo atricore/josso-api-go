@@ -21,10 +21,13 @@ type GetTypesRes struct {
 	BasicAuthnMechanism *BasicAuthenticationDTO `json:"basicAuthnMechanism,omitempty"`
 	BindAuthn *BindAuthenticationDTO `json:"bindAuthn,omitempty"`
 	BuiltInAttributeProfile *BuiltInAttributeProfileDTO `json:"builtInAttributeProfile,omitempty"`
+	ClientCertAuthnSvc *ClientCertAuthnServiceDTO `json:"clientCertAuthnSvc,omitempty"`
 	DirectoryAuthnSvc *DirectoryAuthenticationServiceDTO `json:"directoryAuthnSvc,omitempty"`
 	Idpc *IdentityProviderChannelDTO `json:"idpc,omitempty"`
+	Oauth2PreAuthnSvc *OAuth2PreAuthenticationServiceDTO `json:"oauth2PreAuthnSvc,omitempty"`
 	Spc *InternalSaml2ServiceProviderChannelDTO `json:"spc,omitempty"`
 	TotpAuthnSvc *TOTPAuthenticationServiceDTO `json:"totpAuthnSvc,omitempty"`
+	WiaAuthnSvc *WindowsIntegratedAuthenticationDTO `json:"wiaAuthnSvc,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -175,6 +178,38 @@ func (o *GetTypesRes) SetBuiltInAttributeProfile(v BuiltInAttributeProfileDTO) {
 	o.BuiltInAttributeProfile = &v
 }
 
+// GetClientCertAuthnSvc returns the ClientCertAuthnSvc field value if set, zero value otherwise.
+func (o *GetTypesRes) GetClientCertAuthnSvc() ClientCertAuthnServiceDTO {
+	if o == nil || o.ClientCertAuthnSvc == nil {
+		var ret ClientCertAuthnServiceDTO
+		return ret
+	}
+	return *o.ClientCertAuthnSvc
+}
+
+// GetClientCertAuthnSvcOk returns a tuple with the ClientCertAuthnSvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetClientCertAuthnSvcOk() (*ClientCertAuthnServiceDTO, bool) {
+	if o == nil || o.ClientCertAuthnSvc == nil {
+		return nil, false
+	}
+	return o.ClientCertAuthnSvc, true
+}
+
+// HasClientCertAuthnSvc returns a boolean if a field has been set.
+func (o *GetTypesRes) HasClientCertAuthnSvc() bool {
+	if o != nil && o.ClientCertAuthnSvc != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetClientCertAuthnSvc gets a reference to the given ClientCertAuthnServiceDTO and assigns it to the ClientCertAuthnSvc field.
+func (o *GetTypesRes) SetClientCertAuthnSvc(v ClientCertAuthnServiceDTO) {
+	o.ClientCertAuthnSvc = &v
+}
+
 // GetDirectoryAuthnSvc returns the DirectoryAuthnSvc field value if set, zero value otherwise.
 func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO {
 	if o == nil || o.DirectoryAuthnSvc == nil {
@@ -237,6 +272,38 @@ func (o *GetTypesRes) HasIdpc() bool {
 // SetIdpc gets a reference to the given IdentityProviderChannelDTO and assigns it to the Idpc field.
 func (o *GetTypesRes) SetIdpc(v IdentityProviderChannelDTO) {
 	o.Idpc = &v
+}
+
+// GetOauth2PreAuthnSvc returns the Oauth2PreAuthnSvc field value if set, zero value otherwise.
+func (o *GetTypesRes) GetOauth2PreAuthnSvc() OAuth2PreAuthenticationServiceDTO {
+	if o == nil || o.Oauth2PreAuthnSvc == nil {
+		var ret OAuth2PreAuthenticationServiceDTO
+		return ret
+	}
+	return *o.Oauth2PreAuthnSvc
+}
+
+// GetOauth2PreAuthnSvcOk returns a tuple with the Oauth2PreAuthnSvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetOauth2PreAuthnSvcOk() (*OAuth2PreAuthenticationServiceDTO, bool) {
+	if o == nil || o.Oauth2PreAuthnSvc == nil {
+		return nil, false
+	}
+	return o.Oauth2PreAuthnSvc, true
+}
+
+// HasOauth2PreAuthnSvc returns a boolean if a field has been set.
+func (o *GetTypesRes) HasOauth2PreAuthnSvc() bool {
+	if o != nil && o.Oauth2PreAuthnSvc != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetOauth2PreAuthnSvc gets a reference to the given OAuth2PreAuthenticationServiceDTO and assigns it to the Oauth2PreAuthnSvc field.
+func (o *GetTypesRes) SetOauth2PreAuthnSvc(v OAuth2PreAuthenticationServiceDTO) {
+	o.Oauth2PreAuthnSvc = &v
 }
 
 // GetSpc returns the Spc field value if set, zero value otherwise.
@@ -303,6 +370,38 @@ func (o *GetTypesRes) SetTotpAuthnSvc(v TOTPAuthenticationServiceDTO) {
 	o.TotpAuthnSvc = &v
 }
 
+// GetWiaAuthnSvc returns the WiaAuthnSvc field value if set, zero value otherwise.
+func (o *GetTypesRes) GetWiaAuthnSvc() WindowsIntegratedAuthenticationDTO {
+	if o == nil || o.WiaAuthnSvc == nil {
+		var ret WindowsIntegratedAuthenticationDTO
+		return ret
+	}
+	return *o.WiaAuthnSvc
+}
+
+// GetWiaAuthnSvcOk returns a tuple with the WiaAuthnSvc field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetTypesRes) GetWiaAuthnSvcOk() (*WindowsIntegratedAuthenticationDTO, bool) {
+	if o == nil || o.WiaAuthnSvc == nil {
+		return nil, false
+	}
+	return o.WiaAuthnSvc, true
+}
+
+// HasWiaAuthnSvc returns a boolean if a field has been set.
+func (o *GetTypesRes) HasWiaAuthnSvc() bool {
+	if o != nil && o.WiaAuthnSvc != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetWiaAuthnSvc gets a reference to the given WindowsIntegratedAuthenticationDTO and assigns it to the WiaAuthnSvc field.
+func (o *GetTypesRes) SetWiaAuthnSvc(v WindowsIntegratedAuthenticationDTO) {
+	o.WiaAuthnSvc = &v
+}
+
 func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.AttributeMapperProfileDTO != nil {
@@ -317,17 +416,26 @@ func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	if o.BuiltInAttributeProfile != nil {
 		toSerialize["builtInAttributeProfile"] = o.BuiltInAttributeProfile
 	}
+	if o.ClientCertAuthnSvc != nil {
+		toSerialize["clientCertAuthnSvc"] = o.ClientCertAuthnSvc
+	}
 	if o.DirectoryAuthnSvc != nil {
 		toSerialize["directoryAuthnSvc"] = o.DirectoryAuthnSvc
 	}
 	if o.Idpc != nil {
 		toSerialize["idpc"] = o.Idpc
 	}
+	if o.Oauth2PreAuthnSvc != nil {
+		toSerialize["oauth2PreAuthnSvc"] = o.Oauth2PreAuthnSvc
+	}
 	if o.Spc != nil {
 		toSerialize["spc"] = o.Spc
 	}
 	if o.TotpAuthnSvc != nil {
 		toSerialize["totpAuthnSvc"] = o.TotpAuthnSvc
+	}
+	if o.WiaAuthnSvc != nil {
+		toSerialize["wiaAuthnSvc"] = o.WiaAuthnSvc
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -351,10 +459,13 @@ func (o *GetTypesRes) UnmarshalJSON(bytes []byte) (err error) {
 		delete(additionalProperties, "basicAuthnMechanism")
 		delete(additionalProperties, "bindAuthn")
 		delete(additionalProperties, "builtInAttributeProfile")
+		delete(additionalProperties, "clientCertAuthnSvc")
 		delete(additionalProperties, "directoryAuthnSvc")
 		delete(additionalProperties, "idpc")
+		delete(additionalProperties, "oauth2PreAuthnSvc")
 		delete(additionalProperties, "spc")
 		delete(additionalProperties, "totpAuthnSvc")
+		delete(additionalProperties, "wiaAuthnSvc")
 		o.AdditionalProperties = additionalProperties
 	}
 

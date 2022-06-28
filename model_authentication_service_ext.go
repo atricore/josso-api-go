@@ -37,3 +37,5 @@ func (svc AuthenticationServiceDTO) toDirectoryAuthnSvc() (*DirectoryAuthenticat
 func (m AuthenticationMechanismDTO) IsDirectoryAuthnSvc() bool {
 	return m.AdditionalProperties["@c"] == ".DirectoryAuthenticationServiceDTO"
 }
+
+// TODO : Add 3 new converters for:  ClientCertAuthnServiceDTO, WindowsIntegratedAuthenticationDTO, ClientCertAuthnServiceDTO

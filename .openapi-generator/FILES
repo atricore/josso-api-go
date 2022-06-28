@@ -20,6 +20,7 @@ docs/AuthenticationServiceDTO.md
 docs/BasicAuthenticationDTO.md
 docs/BindAuthenticationDTO.md
 docs/BuiltInAttributeProfileDTO.md
+docs/ClientCertAuthnServiceDTO.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
 docs/DbIdentitySourceDTO.md
@@ -109,6 +110,7 @@ docs/KeystoreDTO.md
 docs/LdapIdentitySourceDTO.md
 docs/LocationDTO.md
 docs/OAuth2ClientDTO.md
+docs/OAuth2PreAuthenticationServiceDTO.md
 docs/OIDCSignOnRequest.md
 docs/OIDCSignOnResponse.md
 docs/PHPExecutionEnvironmentDTO.md
@@ -160,6 +162,7 @@ docs/UserDTO.md
 docs/UserDashboardBrandingDTO.md
 docs/VirtualSaml2ServiceProviderDTO.md
 docs/WindowsIISExecutionEnvironmentDTO.md
+docs/WindowsIntegratedAuthenticationDTO.md
 git_push.sh
 go.mod
 go.sum
@@ -178,6 +181,7 @@ model_authentication_service_dto.go
 model_basic_authentication_dto.go
 model_bind_authentication_dto.go
 model_built_in_attribute_profile_dto.go
+model_client_cert_authn_service_dto.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go
 model_db_identity_source_dto.go
@@ -266,6 +270,7 @@ model_keystore_dto.go
 model_ldap_identity_source_dto.go
 model_location_dto.go
 model_o_auth2_client_dto.go
+model_o_auth2_pre_authentication_service_dto.go
 model_oidc_sign_on_request.go
 model_oidc_sign_on_response.go
 model_php_execution_environment_dto.go
@@ -317,5 +322,6 @@ model_user_dashboard_branding_dto.go
 model_user_dto.go
 model_virtual_saml2_service_provider_dto.go
 model_windows_iis_execution_environment_dto.go
+model_windows_integrated_authentication_dto.go
 response.go
 utils.go

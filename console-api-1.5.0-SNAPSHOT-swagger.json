@@ -2469,6 +2469,67 @@
           }
         }
       },
+      "ClientCertAuthnServiceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "clrEnabled" : {
+            "type" : "boolean"
+          },
+          "crlRefreshSeconds" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "crlUrl" : {
+            "type" : "string"
+          },
+          "customClass" : {
+            "$ref" : "#/components/schemas/CustomClassDTO"
+          },
+          "delegatedAuthentications" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "ocspEnabled" : {
+            "type" : "boolean"
+          },
+          "ocspServer" : {
+            "type" : "string"
+          },
+          "ocspserver" : {
+            "type" : "string"
+          },
+          "uid" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "CustomClassDTO" : {
         "type" : "object",
         "properties" : {
@@ -4095,17 +4156,26 @@
           "builtInAttributeProfile" : {
             "$ref" : "#/components/schemas/BuiltInAttributeProfileDTO"
           },
+          "clientCertAuthnSvc" : {
+            "$ref" : "#/components/schemas/ClientCertAuthnServiceDTO"
+          },
           "directoryAuthnSvc" : {
             "$ref" : "#/components/schemas/DirectoryAuthenticationServiceDTO"
           },
           "idpc" : {
             "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
           },
+          "oauth2PreAuthnSvc" : {
+            "$ref" : "#/components/schemas/OAuth2PreAuthenticationServiceDTO"
+          },
           "spc" : {
             "$ref" : "#/components/schemas/InternalSaml2ServiceProviderChannelDTO"
           },
           "totpAuthnSvc" : {
             "$ref" : "#/components/schemas/TOTPAuthenticationServiceDTO"
+          },
+          "wiaAuthnSvc" : {
+            "$ref" : "#/components/schemas/WindowsIntegratedAuthenticationDTO"
           }
         }
       },
@@ -5403,6 +5473,51 @@
           },
           "secret" : {
             "type" : "string"
+          }
+        }
+      },
+      "OAuth2PreAuthenticationServiceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "authnService" : {
+            "type" : "string"
+          },
+          "delegatedAuthentications" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "externalAuth" : {
+            "type" : "boolean"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "rememberMe" : {
+            "type" : "boolean"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
           }
         }
       },
@@ -6786,6 +6901,70 @@
           "type" : {
             "type" : "string",
             "enum" : [ "LOCAL", "REMOTE" ]
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
+      "WindowsIntegratedAuthenticationDTO" : {
+        "type" : "object",
+        "properties" : {
+          "delegatedAuthentications" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "domain" : {
+            "type" : "string"
+          },
+          "domainController" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "host" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "keyTab" : {
+            "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overwriteKerberosSetup" : {
+            "type" : "boolean"
+          },
+          "port" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "protocol" : {
+            "type" : "string"
+          },
+          "serviceClass" : {
+            "type" : "string"
+          },
+          "serviceName" : {
+            "type" : "string"
           },
           "x" : {
             "type" : "number",
