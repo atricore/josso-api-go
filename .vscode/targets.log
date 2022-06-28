@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 24 14:29:10 2022
+# Make data base, printed on Fri Jun 24 14:31:39 2022
 
 # Variables
 
@@ -29,7 +29,7 @@ PGK_NAME = jossoappi
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e0317501-758b-485d-b398-57bb72ff8590.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-95e99517-1a32-4753-973e-d755536636a2.sock
 # environment
 VSCODE_CWD = /wa/git/go/src/josso-api-go
 # environment
@@ -87,7 +87,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 JOSSO_API_PASSWORD = atricore
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -113,7 +113,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 6571
+VSCODE_PID = 8711
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -277,9 +277,10 @@ GDMSESSION = pop
 
 # Directories
 
-# . (device 2051, inode 8390281): 201 files, no impossibilities.
+ 
+# . (device 2051, inode 8390281): 204 files, no impossibilities.
 
-# 201 files, no impossibilities in 1 directories.
+# 204 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -290,10 +291,10 @@ GDMSESSION = pop
 generate:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
 	$(GENERATOR) generate -i $(SWAGGER_FILE) -g go -o . --additional-properties=packageName=$(PGK_NAME) --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
+	cat "\n.vscode" >> .gitignore
 
 default: build
 #  Implicit rule search has not been done.
@@ -303,7 +304,7 @@ default: build
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-23 15:59:34.152761255
+#  Last modified 2022-06-24 14:31:08.871797066
 #  File has been updated.
 #  Successfully updated.
 
@@ -350,12 +351,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 211 / storage = 5987 B / avg = 28 B
-# current buf: size = 8162 B / used = 5987 B / count = 211 / avg = 28 B
+# strcache buffers: 1 (0) / strings = 214 / storage = 6110 B / avg = 28 B
+# current buf: size = 8162 B / used = 6110 B / count = 214 / avg = 28 B
 
-# strcache performance: lookups = 221 / hit rate = 4%
+# strcache performance: lookups = 224 / hit rate = 4%
 # hash-table stats:
-# Load=211/8192=3%, Rehash=0, Collisions=3/221=1%
-# Finished Make data base on Fri Jun 24 14:29:10 2022
+# Load=214/8192=3%, Rehash=0, Collisions=3/224=1%
+# Finished Make data base on Fri Jun 24 14:31:39 2022
 
  

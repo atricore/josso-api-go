@@ -2,6 +2,8 @@ package jossoappi
 
 import "fmt"
 
+// AuthenticationMechanismDTO -> BindAuthenticationDTO+DelegatedAuthenticationDTO+AuthenticationMechanism
+
 func (m AuthenticationMechanismDTO) ToBasicAuthn() (*BasicAuthenticationDTO, error) {
 	ba := NewBasicAuthenticationDTOInit()
 

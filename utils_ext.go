@@ -128,5 +128,11 @@ func AsStringArr(i interface{}) []string {
 		return vec
 	}
 
+	l := i.([]interface{})
+	if len(l) == 0 {
+		var v []string
+		return v
+	}
+
 	return i.([]string)
 }
