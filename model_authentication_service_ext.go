@@ -34,8 +34,94 @@ func (svc AuthenticationServiceDTO) toDirectoryAuthnSvc() (*DirectoryAuthenticat
 	return das, nil
 }
 
+// AuthenticationServiceDTO -> ClientCertAuthnServiceDTO
+func (svc AuthenticationServiceDTO) toClientCertAuthnSvc() (*ClientCertAuthnServiceDTO, error) {
+	cas := NewClientCertAuthnSvcDTOInit()
+
+	if svc.AdditionalProperties["@c"] != cas.AdditionalProperties["@c"] {
+		return nil, fmt.Errorf("invalid authentication mechanism java class %s", cas.AdditionalProperties["@c"])
+	}
+
+	cas.SetId(svc.GetId())
+	cas.SetElementId(svc.GetElementId())
+	cas.SetName(svc.GetName())
+	cas.SetDisplayName(svc.GetDisplayName())
+	cas.SetDescription(svc.GetDescription())
+	cas.SetDelegatedAuthentications(svc.GetDelegatedAuthentications())
+
+	cas.SetClrEnabled(AsBool(svc.AdditionalProperties["clrEnabled"], false))
+	cas.SetCrlRefreshSeconds(AsInt32(svc.AdditionalProperties["crlRefreshSeconds"], 0))
+	cas.SetCrlUrl(AsString(svc.AdditionalProperties["crlUrl"], ""))
+	cas.SetOcspEnabled(AsBool(svc.AdditionalProperties["ocspEnabled"], false))
+	cas.SetOcspServer(AsString(svc.AdditionalProperties["ocspServer"], ""))
+	cas.SetOcspserver(AsString(svc.AdditionalProperties["ocspserver"], ""))
+	cas.SetUid(AsString(svc.AdditionalProperties["uid"], ""))
+
+	return cas, nil
+}
+
+// AuthenticationServiceDTO -> WindowsIntegratedAuthenticationDTO
+func (svc AuthenticationServiceDTO) toWindowsIntegratedAuthn() (*WindowsIntegratedAuthenticationDTO, error) {
+	wia := NewWindowsintegratedAuthnDTOInit()
+
+	if svc.AdditionalProperties["@c"] != wia.AdditionalProperties["@c"] {
+		return nil, fmt.Errorf("invalid authentication mechanism java class %s", wia.AdditionalProperties["@c"])
+	}
+	wia.SetId(svc.GetId())
+	wia.SetElementId(svc.GetElementId())
+	wia.SetName(svc.GetName())
+	wia.SetDisplayName(svc.GetDisplayName())
+	wia.SetDescription(svc.GetDescription())
+	wia.SetDelegatedAuthentications(svc.GetDelegatedAuthentications())
+
+	//wia.SetKeyTab()
+	wia.SetDomain(AsString(svc.AdditionalProperties["domain"], ""))
+	wia.SetDomainController(AsString(svc.AdditionalProperties["domainController"], ""))
+	wia.SetHost(AsString(svc.AdditionalProperties["host"], ""))
+	wia.SetOverwriteKerberosSetup(AsBool(svc.AdditionalProperties["overwriteKerberosSetup"], false))
+	wia.SetPort(AsInt32(svc.AdditionalProperties["port"], 0))
+	wia.SetProtocol(AsString(svc.AdditionalProperties["protocol"], ""))
+	wia.SetServiceClass(AsString(svc.AdditionalProperties["serviceClass"], ""))
+	wia.SetServiceName(AsString(svc.AdditionalProperties["serviceName"], ""))
+
+	return wia, nil
+}
+
+// AuthenticationServiceDTO -> OAuth2PreAuthenticationServiceDTO
+func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvc() (*OAuth2PreAuthenticationServiceDTO, error) {
+	oaut2 := NewOauth2PreAuthnSvcDTOInit()
+
+	if svc.AdditionalProperties["@c"] != oaut2.AdditionalProperties["@c"] {
+		return nil, fmt.Errorf("invalid authentication mechanism java class %s", oaut2.AdditionalProperties["@c"])
+	}
+	return oaut2, nil
+
+	oaut2.SetId(svc.GetId())
+	oaut2.SetElementId(svc.GetElementId())
+	oaut2.SetName(svc.GetName())
+	oaut2.SetDisplayName(svc.GetDisplayName())
+	oaut2.SetDescription(svc.GetDescription())
+	oaut2.SetDelegatedAuthentications(svc.GetDelegatedAuthentications())
+
+	oaut2.SetAuthnService(AsString(svc.AdditionalProperties["authnService"], ""))
+	oaut2.SetExternalAuth((AsBool(svc.AdditionalProperties["externalAuth"], false)))
+	oaut2.SetRememberMe(AsBool(svc.AdditionalProperties["rememberMe"], false))
+
+	return oaut2, nil
+}
+
 func (m AuthenticationMechanismDTO) IsDirectoryAuthnSvc() bool {
 	return m.AdditionalProperties["@c"] == ".DirectoryAuthenticationServiceDTO"
 }
 
-// TODO : Add 3 new converters for:  ClientCertAuthnServiceDTO, WindowsIntegratedAuthenticationDTO, ClientCertAuthnServiceDTO
+func (m AuthenticationMechanismDTO) IsClientCertAuthnSvc() bool {
+	return m.AdditionalProperties["@c"] == ".ClientCertAuthnServiceDTO"
+}
+
+func (m AuthenticationMechanismDTO) IsWindowsIntegratedAuthn() bool {
+	return m.AdditionalProperties["@c"] == ".WindowsIntegratedAuthenticationDTO"
+}
+
+func (m AuthenticationMechanismDTO) IsOauth2PreAuthnSvc() bool {
+	return m.AdditionalProperties["@c"] == ".OAuth2PreAuthenticationServiceDTO"
+}

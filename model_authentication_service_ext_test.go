@@ -62,3 +62,129 @@ func TestToDirectoryAuthnSvc(t *testing.T) {
 	assert.Equal(t, das.GetReferrals(), dasTest.GetReferrals())
 	assert.Equal(t, das.GetIncludeOperationalAttributes(), dasTest.GetIncludeOperationalAttributes())
 }
+
+func TestToClientCertAuthnSvc(t *testing.T) {
+	cas := NewClientCertAuthnSvcDTOInit()
+
+	cas.SetId(10)
+	cas.SetElementId("_942978F0-071D-428F-94EC-D2396D2B491A")
+	cas.SetName("ldap-authn-1")
+	cas.SetDisplayName("ldap authn 1")
+	cas.SetDescription("ldap authn 1")
+
+	cas.SetClrEnabled(false)
+	cas.SetCrlRefreshSeconds(0)
+	cas.SetCrlUrl("")
+	cas.SetOcspEnabled(false)
+	cas.SetOcspServer("")
+	cas.SetOcspserver("")
+	cas.SetUid("")
+
+	m, err := cas.toClientCertAuthSvc()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	casTest, err := m.toClientCertAuthnSvc()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	assert.Equal(t, cas.GetId(), casTest.GetId())
+	assert.Equal(t, cas.GetElementId(), casTest.GetElementId())
+	assert.Equal(t, cas.GetName(), casTest.GetName())
+	assert.Equal(t, cas.GetDisplayName(), casTest.GetDisplayName())
+	assert.Equal(t, cas.GetDescription(), casTest.GetDescription())
+
+	assert.Equal(t, cas.GetClrEnabled(), casTest.GetClrEnabled())
+	assert.Equal(t, cas.GetCrlRefreshSeconds(), casTest.GetCrlRefreshSeconds())
+	assert.Equal(t, cas.GetCrlUrl(), casTest.GetCrlUrl())
+	assert.Equal(t, cas.GetOcspEnabled(), casTest.GetOcspEnabled())
+	assert.Equal(t, cas.GetOcspServer(), casTest.GetOcspServer())
+	assert.Equal(t, cas.GetOcspserver(), casTest.GetOcspserver())
+	assert.Equal(t, cas.GetUid(), casTest.GetUid())
+}
+
+func TestToWindowsIntegratedAuthn(t *testing.T) {
+	wia := NewWindowsintegratedAuthnDTOInit()
+
+	wia.SetId(10)
+	wia.SetElementId("_942978F0-071D-428F-94EC-D2396D2B491A")
+	wia.SetName("ldap-authn-1")
+	wia.SetDisplayName("ldap authn 1")
+	wia.SetDescription("ldap authn 1")
+
+	wia.SetDomain("")
+	wia.SetDomainController("")
+	wia.SetHost("")
+	wia.SetOverwriteKerberosSetup(false)
+	wia.SetPort(0)
+	wia.SetProtocol("")
+	wia.SetServiceClass("")
+	wia.SetServiceName("")
+
+	m, err := wia.toWindowsIntegratedAuth()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	wiaTest, err := m.toWindowsIntegratedAuthn()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	assert.Equal(t, wia.GetId(), wiaTest.GetId())
+	assert.Equal(t, wia.GetElementId(), wiaTest.GetElementId())
+	assert.Equal(t, wia.GetName(), wiaTest.GetName())
+	assert.Equal(t, wia.GetDisplayName(), wiaTest.GetDisplayName())
+	assert.Equal(t, wia.GetDescription(), wiaTest.GetDescription())
+
+	assert.Equal(t, wia.GetDomain(), wiaTest.GetDomain())
+	assert.Equal(t, wia.GetDomainController(), wiaTest.GetDomainController())
+	assert.Equal(t, wia.GetHost(), wiaTest.GetHost())
+	assert.Equal(t, wia.GetOverwriteKerberosSetup(), wiaTest.GetOverwriteKerberosSetup())
+	assert.Equal(t, wia.GetPort(), wiaTest.GetPort())
+	assert.Equal(t, wia.GetProtocol(), wiaTest.GetProtocol())
+	assert.Equal(t, wia.GetServiceClass(), wiaTest.GetServiceClass())
+	assert.Equal(t, wia.GetServiceName(), wiaTest.GetServiceName())
+}
+
+func TestToOauth2PreAuthnSvc(t *testing.T) {
+	oaut2 := NewOAuth2PreAuthenticationServiceDTO()
+
+	oaut2.SetId(0)
+	oaut2.SetElementId("")
+	oaut2.SetName("")
+	oaut2.SetDisplayName("")
+	oaut2.SetDescription("")
+
+	oaut2.SetAuthnService("")
+	oaut2.SetExternalAuth(false)
+	oaut2.SetRememberMe(false)
+
+	m, err := oaut2.toOauth2PreAuthnSvc()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	oaut2Test, err := m.toOauth2PreAuthnSvc()
+	if err != nil {
+		t.Errorf("%v", err)
+		return
+	}
+
+	assert.Equal(t, oaut2.GetId(), oaut2Test.GetId())
+	assert.Equal(t, oaut2.GetElementId(), oaut2Test.GetElementId())
+	assert.Equal(t, oaut2.GetName(), oaut2Test.GetName())
+	assert.Equal(t, oaut2.GetDisplayName(), oaut2Test.GetDisplayName())
+	assert.Equal(t, oaut2.GetDescription(), oaut2Test.GetDescription())
+
+	assert.Equal(t, oaut2.GetAuthnService(), oaut2Test.GetAuthnService())
+	assert.Equal(t, oaut2.GetExternalAuth(), oaut2Test.GetExternalAuth())
+	assert.Equal(t, oaut2.GetRememberMe(), oaut2Test.GetRememberMe())
+}
