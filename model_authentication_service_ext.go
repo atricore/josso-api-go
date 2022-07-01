@@ -74,7 +74,10 @@ func (svc AuthenticationServiceDTO) toWindowsIntegratedAuthn() (*WindowsIntegrat
 	wia.SetDescription(svc.GetDescription())
 	wia.SetDelegatedAuthentications(svc.GetDelegatedAuthentications())
 
-	//wia.SetKeyTab()
+	// TODO : wia.SetKeyTab ?
+	// ktMap := svc.AdditionalProperties["keytab"].(map[string]interface{})
+	// ktValue := ktMap["value"]
+
 	wia.SetDomain(AsString(svc.AdditionalProperties["domain"], ""))
 	wia.SetDomainController(AsString(svc.AdditionalProperties["domainController"], ""))
 	wia.SetHost(AsString(svc.AdditionalProperties["host"], ""))
@@ -94,7 +97,6 @@ func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvc() (*OAuth2PreAuthenticat
 	if svc.AdditionalProperties["@c"] != oaut2.AdditionalProperties["@c"] {
 		return nil, fmt.Errorf("invalid authentication mechanism java class %s", oaut2.AdditionalProperties["@c"])
 	}
-	return oaut2, nil
 
 	oaut2.SetId(svc.GetId())
 	oaut2.SetElementId(svc.GetElementId())
