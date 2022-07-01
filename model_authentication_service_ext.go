@@ -88,7 +88,7 @@ func (svc AuthenticationServiceDTO) toWindowsIntegratedAuthn() (*WindowsIntegrat
 }
 
 // AuthenticationServiceDTO -> OAuth2PreAuthenticationServiceDTO
-func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvc() (*OAuth2PreAuthenticationServiceDTO, error) {
+func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvs() (*OAuth2PreAuthenticationServiceDTO, error) {
 	oaut2 := NewOauth2PreAuthnSvcDTOInit()
 
 	if svc.AdditionalProperties["@c"] != oaut2.AdditionalProperties["@c"] {
@@ -110,18 +110,88 @@ func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvc() (*OAuth2PreAuthenticat
 	return oaut2, nil
 }
 
-func (m AuthenticationMechanismDTO) IsDirectoryAuthnSvc() bool {
+func (m AuthenticationServiceDTO) IsDirectoryAuthnSvs() bool {
 	return m.AdditionalProperties["@c"] == ".DirectoryAuthenticationServiceDTO"
 }
 
-func (m AuthenticationMechanismDTO) IsClientCertAuthnSvc() bool {
+func (m AuthenticationServiceDTO) IsClientCertAuthnSvs() bool {
 	return m.AdditionalProperties["@c"] == ".ClientCertAuthnServiceDTO"
 }
 
-func (m AuthenticationMechanismDTO) IsWindowsIntegratedAuthn() bool {
+func (m AuthenticationServiceDTO) IsWindowsIntegratedAuthn() bool {
 	return m.AdditionalProperties["@c"] == ".WindowsIntegratedAuthenticationDTO"
 }
 
-func (m AuthenticationMechanismDTO) IsOauth2PreAuthnSvc() bool {
+func (m AuthenticationServiceDTO) IsOauth2PreAuthnSvc() bool {
 	return m.AdditionalProperties["@c"] == ".OAuth2PreAuthenticationServiceDTO"
+}
+
+func (p *IdentityProviderDTO) GetDirectoryAuthnSvc() ([]*DirectoryAuthenticationServiceDTO, error) {
+
+	das := make([]*DirectoryAuthenticationServiceDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+		da := m.GetDelegatedAuthentication()
+		as := da.GetAuthnService()
+		if as.IsDirectoryAuthnSvs() {
+			a, err := as.toDirectoryAuthnSvc()
+			if err != nil {
+				return das, err
+			}
+			das = append(das, a)
+		}
+	}
+
+	return das, nil
+}
+
+func (p *IdentityProviderDTO) GetClientCertAuthnSvs() ([]*ClientCertAuthnServiceDTO, error) {
+
+	cas := make([]*ClientCertAuthnServiceDTO, 0)
+
+	for _, m := range p.AuthenticationMechanisms() {
+		if m.IsClientCertAuthnSvc() {
+			ca, err := m.toClientCertAuthnSvc()
+			if err != nil {
+				return cas, err
+			}
+			cas = append(cas, ca)
+		}
+	}
+
+	return cas, nil
+}
+
+func (p *IdentityProviderDTO) GetWindowsIntegratedAuthn() ([]*WindowsIntegratedAuthenticationDTO, error) {
+
+	wia := make([]*WindowsIntegratedAuthenticationDTO, 0)
+
+	for _, m := range p.AuthenticationMechanisms() {
+		if m.IsWindowsIntegratedAuthn() {
+			wa, err := m.toWindowsIntegratedAuthn()
+			if err != nil {
+				return wia, err
+			}
+			wia = append(wia, wa)
+		}
+	}
+
+	return wia, nil
+}
+
+func (p *IdentityProviderDTO) GetOauth2PreAuthnSvs() ([]*OAuth2PreAuthenticationServiceDTO, error) {
+
+	oaut2 := make([]*OAuth2PreAuthenticationServiceDTO, 0)
+
+	for _, m := range p.AuthenticationMechanisms() {
+		if m.IsOauth2PreAuthnSvc() {
+			oaut2svc, err := m.toOauth2PreAuthnSvc()
+			if err != nil {
+				return oaut2, err
+			}
+			oaut2 = append(oaut2, oaut2svc)
+		}
+	}
+
+	return oaut2, nil
 }
