@@ -168,3 +168,79 @@ func (p *IdentityProviderDTO) AddBasicAuthn(ba *BasicAuthenticationDTO) (*Authen
 
 	return m, nil
 }
+
+func (p *IdentityProviderDTO) GetDirectoryAuthnSvc() ([]*DirectoryAuthenticationServiceDTO, error) {
+
+	r := make([]*DirectoryAuthenticationServiceDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+		da := m.GetDelegatedAuthentication()
+		as := da.GetAuthnService()
+		if as.IsDirectoryAuthnSvs() {
+			a, err := as.toDirectoryAuthnSvc()
+			if err != nil {
+				return r, err
+			}
+			r = append(r, a)
+		}
+	}
+
+	return r, nil
+}
+
+func (p *IdentityProviderDTO) GetClientCertAuthnSvs() ([]*ClientCertAuthnServiceDTO, error) {
+
+	r := make([]*ClientCertAuthnServiceDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+		da := m.GetDelegatedAuthentication()
+		as := da.GetAuthnService()
+		if as.IsClientCertAuthnSvs() {
+			a, err := as.toClientCertAuthnSvc()
+			if err != nil {
+				return r, err
+			}
+			r = append(r, a)
+		}
+	}
+
+	return r, nil
+}
+
+func (p *IdentityProviderDTO) GetWindowsIntegratedAuthn() ([]*WindowsIntegratedAuthenticationDTO, error) {
+
+	r := make([]*WindowsIntegratedAuthenticationDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+		da := m.GetDelegatedAuthentication()
+		as := da.GetAuthnService()
+		if as.IsWindowsIntegratedAuthn() {
+			a, err := as.toWindowsIntegratedAuthn()
+			if err != nil {
+				return r, err
+			}
+			r = append(r, a)
+		}
+	}
+
+	return r, nil
+}
+
+func (p *IdentityProviderDTO) GetOauth2PreAuthnSvs() ([]*OAuth2PreAuthenticationServiceDTO, error) {
+
+	r := make([]*OAuth2PreAuthenticationServiceDTO, 0)
+
+	for _, m := range p.GetAuthenticationMechanisms() {
+		da := m.GetDelegatedAuthentication()
+		as := da.GetAuthnService()
+		if as.IsOauth2PreAuthnSvc() {
+			a, err := as.toOauth2PreAuthnSvs()
+			if err != nil {
+				return r, err
+			}
+			r = append(r, a)
+		}
+	}
+
+	return r, nil
+}
