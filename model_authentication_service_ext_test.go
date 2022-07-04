@@ -172,7 +172,7 @@ func TestToOauth2PreAuthnSvc(t *testing.T) {
 		return
 	}
 
-	oaut2Test, err := m.toOauth2PreAuthnSvc()
+	oaut2Test, err := m.toOauth2PreAuthnSvs()
 	if err != nil {
 		t.Errorf("%v", err)
 		return

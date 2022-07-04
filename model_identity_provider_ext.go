@@ -169,6 +169,8 @@ func (p *IdentityProviderDTO) AddBasicAuthn(ba *BasicAuthenticationDTO) (*Authen
 	return m, nil
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 func (p *IdentityProviderDTO) GetDirectoryAuthnSvc() ([]*DirectoryAuthenticationServiceDTO, error) {
 
 	r := make([]*DirectoryAuthenticationServiceDTO, 0)
@@ -187,6 +189,34 @@ func (p *IdentityProviderDTO) GetDirectoryAuthnSvc() ([]*DirectoryAuthentication
 
 	return r, nil
 }
+
+func (p *IdentityProviderDTO) AddDirectoryAuthnsSvc(ms []*DirectoryAuthenticationServiceDTO, pr int32) error {
+	for _, das := range ms {
+		p.AddDirectoryAuthnSvc(das, pr)
+	}
+
+	return nil
+}
+
+func (p *IdentityProviderDTO) AddDirectoryAuthnSvc(das *DirectoryAuthenticationServiceDTO, pr int32) (*AuthenticationServiceDTO, error) {
+	m, err := das.toAuthnSvc()
+	if err != nil {
+		return m, err
+	}
+	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.SetAuthnService(*m)
+
+	authMechDTO := NewAuthenticationMechanismDTO()
+	authMechDTO.SetPriority(pr)
+	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+
+	p.GetAuthenticationMechanisms()
+	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
+	p.SetAuthenticationMechanisms(authMech)
+	return m, nil
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 func (p *IdentityProviderDTO) GetClientCertAuthnSvs() ([]*ClientCertAuthnServiceDTO, error) {
 
@@ -207,6 +237,34 @@ func (p *IdentityProviderDTO) GetClientCertAuthnSvs() ([]*ClientCertAuthnService
 	return r, nil
 }
 
+func (p *IdentityProviderDTO) AddClientCertAuthnsSvs(ms []*ClientCertAuthnServiceDTO, pr int32) error {
+	for _, cas := range ms {
+		p.AddClientCertAuthnSvs(cas, pr)
+	}
+
+	return nil
+}
+
+func (p *IdentityProviderDTO) AddClientCertAuthnSvs(cas *ClientCertAuthnServiceDTO, pr int32) (*AuthenticationServiceDTO, error) {
+	m, err := cas.toClientCertAuthSvc()
+	if err != nil {
+		return m, err
+	}
+	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.SetAuthnService(*m)
+
+	authMechDTO := NewAuthenticationMechanismDTO()
+	authMechDTO.SetPriority(pr)
+	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+
+	p.GetAuthenticationMechanisms()
+	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
+	p.SetAuthenticationMechanisms(authMech)
+	return m, nil
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 func (p *IdentityProviderDTO) GetWindowsIntegratedAuthn() ([]*WindowsIntegratedAuthenticationDTO, error) {
 
 	r := make([]*WindowsIntegratedAuthenticationDTO, 0)
@@ -226,6 +284,34 @@ func (p *IdentityProviderDTO) GetWindowsIntegratedAuthn() ([]*WindowsIntegratedA
 	return r, nil
 }
 
+func (p *IdentityProviderDTO) AddWindowsIntegratedAuthns(ms []*WindowsIntegratedAuthenticationDTO, pr int32) error {
+	for _, wia := range ms {
+		p.AddWindowsIntegratedAuthn(wia, pr)
+	}
+
+	return nil
+}
+
+func (p *IdentityProviderDTO) AddWindowsIntegratedAuthn(wia *WindowsIntegratedAuthenticationDTO, pr int32) (*AuthenticationServiceDTO, error) {
+	m, err := wia.toWindowsIntegratedAuth()
+	if err != nil {
+		return m, err
+	}
+	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.SetAuthnService(*m)
+
+	authMechDTO := NewAuthenticationMechanismDTO()
+	authMechDTO.SetPriority(pr)
+	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+
+	p.GetAuthenticationMechanisms()
+	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
+	p.SetAuthenticationMechanisms(authMech)
+	return m, nil
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 func (p *IdentityProviderDTO) GetOauth2PreAuthnSvs() ([]*OAuth2PreAuthenticationServiceDTO, error) {
 
 	r := make([]*OAuth2PreAuthenticationServiceDTO, 0)
@@ -243,4 +329,30 @@ func (p *IdentityProviderDTO) GetOauth2PreAuthnSvs() ([]*OAuth2PreAuthentication
 	}
 
 	return r, nil
+}
+
+func (p *IdentityProviderDTO) AddOauth2PreAuthnsSvs(ms []*OAuth2PreAuthenticationServiceDTO, pr int32) error {
+	for _, oaut2 := range ms {
+		p.AddOauth2PreAuthnSvs(oaut2, pr)
+	}
+
+	return nil
+}
+
+func (p *IdentityProviderDTO) AddOauth2PreAuthnSvs(oaut2 *OAuth2PreAuthenticationServiceDTO, pr int32) (*AuthenticationServiceDTO, error) {
+	m, err := oaut2.toOauth2PreAuthnSvc()
+	if err != nil {
+		return m, err
+	}
+	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.SetAuthnService(*m)
+
+	authMechDTO := NewAuthenticationMechanismDTO()
+	authMechDTO.SetPriority(pr)
+	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+
+	p.GetAuthenticationMechanisms()
+	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
+	p.SetAuthenticationMechanisms(authMech)
+	return m, nil
 }
