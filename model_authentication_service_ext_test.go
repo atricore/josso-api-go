@@ -36,7 +36,7 @@ func TestToDirectoryAuthnSvc(t *testing.T) {
 		return
 	}
 
-	dasTest, err := m.toDirectoryAuthnSvc()
+	dasTest, err := m.ToDirectoryAuthnSvc()
 	if err != nil {
 		t.Errorf("%v", err)
 		return
@@ -86,7 +86,7 @@ func TestToClientCertAuthnSvc(t *testing.T) {
 		return
 	}
 
-	casTest, err := m.toClientCertAuthnSvc()
+	casTest, err := m.ToClientCertAuthnSvc()
 	if err != nil {
 		t.Errorf("%v", err)
 		return
@@ -131,7 +131,7 @@ func TestToWindowsIntegratedAuthn(t *testing.T) {
 		return
 	}
 
-	wiaTest, err := m.toWindowsIntegratedAuthn()
+	wiaTest, err := m.ToWindowsIntegratedAuthn()
 	if err != nil {
 		t.Errorf("%v", err)
 		return
@@ -172,7 +172,7 @@ func TestToOauth2PreAuthnSvc(t *testing.T) {
 		return
 	}
 
-	oaut2Test, err := m.toOauth2PreAuthnSvs()
+	oaut2Test, err := m.ToOauth2PreAuthnSvs()
 	if err != nil {
 		t.Errorf("%v", err)
 		return

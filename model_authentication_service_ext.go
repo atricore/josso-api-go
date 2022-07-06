@@ -3,7 +3,7 @@ package jossoappi
 import "fmt"
 
 // AuthenticationServiceDTO -> DirectoryAuthenticationServiceDTO
-func (svc AuthenticationServiceDTO) toDirectoryAuthnSvc() (*DirectoryAuthenticationServiceDTO, error) {
+func (svc AuthenticationServiceDTO) ToDirectoryAuthnSvc() (*DirectoryAuthenticationServiceDTO, error) {
 	das := NewDirectoryAuthnSvcDTOInit()
 
 	if svc.AdditionalProperties["@c"] != das.AdditionalProperties["@c"] {
@@ -35,7 +35,7 @@ func (svc AuthenticationServiceDTO) toDirectoryAuthnSvc() (*DirectoryAuthenticat
 }
 
 // AuthenticationServiceDTO -> ClientCertAuthnServiceDTO
-func (svc AuthenticationServiceDTO) toClientCertAuthnSvc() (*ClientCertAuthnServiceDTO, error) {
+func (svc AuthenticationServiceDTO) ToClientCertAuthnSvc() (*ClientCertAuthnServiceDTO, error) {
 	cas := NewClientCertAuthnSvcDTOInit()
 
 	if svc.AdditionalProperties["@c"] != cas.AdditionalProperties["@c"] {
@@ -61,7 +61,7 @@ func (svc AuthenticationServiceDTO) toClientCertAuthnSvc() (*ClientCertAuthnServ
 }
 
 // AuthenticationServiceDTO -> WindowsIntegratedAuthenticationDTO
-func (svc AuthenticationServiceDTO) toWindowsIntegratedAuthn() (*WindowsIntegratedAuthenticationDTO, error) {
+func (svc AuthenticationServiceDTO) ToWindowsIntegratedAuthn() (*WindowsIntegratedAuthenticationDTO, error) {
 	wia := NewWindowsintegratedAuthnDTOInit()
 
 	if svc.AdditionalProperties["@c"] != wia.AdditionalProperties["@c"] {
@@ -91,7 +91,7 @@ func (svc AuthenticationServiceDTO) toWindowsIntegratedAuthn() (*WindowsIntegrat
 }
 
 // AuthenticationServiceDTO -> OAuth2PreAuthenticationServiceDTO
-func (svc AuthenticationServiceDTO) toOauth2PreAuthnSvs() (*OAuth2PreAuthenticationServiceDTO, error) {
+func (svc AuthenticationServiceDTO) ToOauth2PreAuthnSvs() (*OAuth2PreAuthenticationServiceDTO, error) {
 	oaut2 := NewOauth2PreAuthnSvcDTOInit()
 
 	if svc.AdditionalProperties["@c"] != oaut2.AdditionalProperties["@c"] {

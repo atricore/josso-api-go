@@ -179,7 +179,7 @@ func (p *IdentityProviderDTO) GetDirectoryAuthnSvc() ([]*DirectoryAuthentication
 		da := m.GetDelegatedAuthentication()
 		as := da.GetAuthnService()
 		if as.IsDirectoryAuthnSvs() {
-			a, err := as.toDirectoryAuthnSvc()
+			a, err := as.ToDirectoryAuthnSvc()
 			if err != nil {
 				return r, err
 			}
@@ -204,11 +204,15 @@ func (p *IdentityProviderDTO) AddDirectoryAuthnSvc(das *DirectoryAuthenticationS
 		return m, err
 	}
 	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.AdditionalProperties = make(map[string]interface{})
+	dauthDTO.AdditionalProperties["@c"] = ".DelegatedAuthenticationDTO"
 	dauthDTO.SetAuthnService(*m)
 
 	authMechDTO := NewAuthenticationMechanismDTO()
 	authMechDTO.SetPriority(pr)
 	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+	authMechDTO.AdditionalProperties = make(map[string]interface{})
+	authMechDTO.AdditionalProperties["@c"] = ".BindAuthenticationDTO"
 
 	p.GetAuthenticationMechanisms()
 	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
@@ -226,7 +230,7 @@ func (p *IdentityProviderDTO) GetClientCertAuthnSvs() ([]*ClientCertAuthnService
 		da := m.GetDelegatedAuthentication()
 		as := da.GetAuthnService()
 		if as.IsClientCertAuthnSvs() {
-			a, err := as.toClientCertAuthnSvc()
+			a, err := as.ToClientCertAuthnSvc()
 			if err != nil {
 				return r, err
 			}
@@ -251,11 +255,15 @@ func (p *IdentityProviderDTO) AddClientCertAuthnSvs(cas *ClientCertAuthnServiceD
 		return m, err
 	}
 	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.AdditionalProperties = make(map[string]interface{})
+	dauthDTO.AdditionalProperties["@c"] = ".DelegatedAuthenticationDTO"
 	dauthDTO.SetAuthnService(*m)
 
 	authMechDTO := NewAuthenticationMechanismDTO()
 	authMechDTO.SetPriority(pr)
 	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+	authMechDTO.AdditionalProperties = make(map[string]interface{})
+	authMechDTO.AdditionalProperties["@c"] = ".ClientCertAuthenticationDTO"
 
 	p.GetAuthenticationMechanisms()
 	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
@@ -273,7 +281,7 @@ func (p *IdentityProviderDTO) GetWindowsIntegratedAuthn() ([]*WindowsIntegratedA
 		da := m.GetDelegatedAuthentication()
 		as := da.GetAuthnService()
 		if as.IsWindowsIntegratedAuthn() {
-			a, err := as.toWindowsIntegratedAuthn()
+			a, err := as.ToWindowsIntegratedAuthn()
 			if err != nil {
 				return r, err
 			}
@@ -298,11 +306,15 @@ func (p *IdentityProviderDTO) AddWindowsIntegratedAuthn(wia *WindowsIntegratedAu
 		return m, err
 	}
 	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.AdditionalProperties = make(map[string]interface{})
+	dauthDTO.AdditionalProperties["@c"] = ".DelegatedAuthenticationDTO"
 	dauthDTO.SetAuthnService(*m)
 
 	authMechDTO := NewAuthenticationMechanismDTO()
 	authMechDTO.SetPriority(pr)
 	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+	authMechDTO.AdditionalProperties = make(map[string]interface{})
+	authMechDTO.AdditionalProperties["@c"] = ".WindowsAuthenticationDTO"
 
 	p.GetAuthenticationMechanisms()
 	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
@@ -320,7 +332,7 @@ func (p *IdentityProviderDTO) GetOauth2PreAuthnSvs() ([]*OAuth2PreAuthentication
 		da := m.GetDelegatedAuthentication()
 		as := da.GetAuthnService()
 		if as.IsOauth2PreAuthnSvc() {
-			a, err := as.toOauth2PreAuthnSvs()
+			a, err := as.ToOauth2PreAuthnSvs()
 			if err != nil {
 				return r, err
 			}
@@ -345,11 +357,15 @@ func (p *IdentityProviderDTO) AddOauth2PreAuthnSvs(oaut2 *OAuth2PreAuthenticatio
 		return m, err
 	}
 	dauthDTO := NewDelegatedAuthenticationDTO()
+	dauthDTO.AdditionalProperties = make(map[string]interface{})
+	dauthDTO.AdditionalProperties["@c"] = ".DelegatedAuthenticationDTO"
 	dauthDTO.SetAuthnService(*m)
 
 	authMechDTO := NewAuthenticationMechanismDTO()
 	authMechDTO.SetPriority(pr)
 	authMechDTO.SetDelegatedAuthentication(*dauthDTO)
+	authMechDTO.AdditionalProperties = make(map[string]interface{})
+	authMechDTO.AdditionalProperties["@c"] = ".OAuth2PreAuthenticationDTO"
 
 	p.GetAuthenticationMechanisms()
 	authMech := append(p.GetAuthenticationMechanisms(), *authMechDTO)
