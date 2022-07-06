@@ -1837,6 +1837,130 @@
         }
       }
     },
+    "/iam-deploy/sharepointrs" : {
+      "get" : {
+        "operationId" : "getSharepointRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetSharepointRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetSharepointRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "udpateSharepointRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreSharepointRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreSharepointRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createSharepointRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreSharepointRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreSharepointRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteSharepointRs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/sharepointrss" : {
+      "get" : {
+        "operationId" : "getSharepointRss",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetSharepointRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetSharepointRssRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/tomcatexecenv" : {
       "get" : {
         "operationId" : "getTomcatExecEnv",
@@ -2078,6 +2202,130 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/GetVirtSaml2SpsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/weblogicexecenv" : {
+      "get" : {
+        "operationId" : "getWeblogicExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetWeblogicExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetWeblogicExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateWeblogicExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreWeblogicExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreWeblogicExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createWeblogicExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreWeblogicExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StorePhpExecEnvRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteWeblogicExecEnv",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/weblogicexecenvs" : {
+      "get" : {
+        "operationId" : "getWeblogicExecEnvs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetWeblogicExecEnvReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetWeblogicExecEnvsRes"
                 }
               }
             }
@@ -2466,67 +2714,6 @@
           "profileType" : {
             "type" : "string",
             "enum" : [ "BASIC", "JOSSO", "ONE_TO_ONE", "CUSTOM" ]
-          }
-        }
-      },
-      "ClientCertAuthnServiceDTO" : {
-        "type" : "object",
-        "properties" : {
-          "clrEnabled" : {
-            "type" : "boolean"
-          },
-          "crlRefreshSeconds" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "crlUrl" : {
-            "type" : "string"
-          },
-          "customClass" : {
-            "$ref" : "#/components/schemas/CustomClassDTO"
-          },
-          "delegatedAuthentications" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
-            }
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "displayName" : {
-            "type" : "string"
-          },
-          "elementId" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int64"
-          },
-          "name" : {
-            "type" : "string"
-          },
-          "ocspEnabled" : {
-            "type" : "boolean"
-          },
-          "ocspServer" : {
-            "type" : "string"
-          },
-          "ocspserver" : {
-            "type" : "string"
-          },
-          "uid" : {
-            "type" : "string"
-          },
-          "x" : {
-            "type" : "number",
-            "format" : "double"
-          },
-          "y" : {
-            "type" : "number",
-            "format" : "double"
           }
         }
       },
@@ -4093,6 +4280,54 @@
           }
         }
       },
+      "GetSharepointRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetSharepointRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SharepointResourceDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetSharepointRssRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resources" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SharepointResourceDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
@@ -4156,26 +4391,17 @@
           "builtInAttributeProfile" : {
             "$ref" : "#/components/schemas/BuiltInAttributeProfileDTO"
           },
-          "clientCertAuthnSvc" : {
-            "$ref" : "#/components/schemas/ClientCertAuthnServiceDTO"
-          },
           "directoryAuthnSvc" : {
             "$ref" : "#/components/schemas/DirectoryAuthenticationServiceDTO"
           },
           "idpc" : {
             "$ref" : "#/components/schemas/IdentityProviderChannelDTO"
           },
-          "oauth2PreAuthnSvc" : {
-            "$ref" : "#/components/schemas/OAuth2PreAuthenticationServiceDTO"
-          },
           "spc" : {
             "$ref" : "#/components/schemas/InternalSaml2ServiceProviderChannelDTO"
           },
           "totpAuthnSvc" : {
             "$ref" : "#/components/schemas/TOTPAuthenticationServiceDTO"
-          },
-          "wiaAuthnSvc" : {
-            "$ref" : "#/components/schemas/WindowsIntegratedAuthenticationDTO"
           }
         }
       },
@@ -4220,6 +4446,54 @@
             "type" : "array",
             "items" : {
               "$ref" : "#/components/schemas/VirtualSaml2ServiceProviderDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetWeblogicExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetWeblogicExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "execEnv" : {
+            "$ref" : "#/components/schemas/WeblogicExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetWeblogicExecEnvsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "execEnv" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/WeblogicExecutionEnvironmentDTO"
             }
           },
           "validationErrors" : {
@@ -5476,51 +5750,6 @@
           }
         }
       },
-      "OAuth2PreAuthenticationServiceDTO" : {
-        "type" : "object",
-        "properties" : {
-          "authnService" : {
-            "type" : "string"
-          },
-          "delegatedAuthentications" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
-            }
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "displayName" : {
-            "type" : "string"
-          },
-          "elementId" : {
-            "type" : "string"
-          },
-          "externalAuth" : {
-            "type" : "boolean"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int64"
-          },
-          "name" : {
-            "type" : "string"
-          },
-          "rememberMe" : {
-            "type" : "boolean"
-          },
-          "x" : {
-            "type" : "number",
-            "format" : "double"
-          },
-          "y" : {
-            "type" : "number",
-            "format" : "double"
-          }
-        }
-      },
       "OIDCSignOnRequest" : {
         "type" : "object",
         "properties" : {
@@ -5943,6 +6172,69 @@
           }
         }
       },
+      "SharepointResourceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activation" : {
+            "$ref" : "#/components/schemas/ActivationDTO"
+          },
+          "defaultResource" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "ignoredWebResources" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "partnerAppLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "relayingPartyLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "serviceConnection" : {
+            "$ref" : "#/components/schemas/ServiceConnectionDTO"
+          },
+          "sloLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "sloLocationEnabled" : {
+            "type" : "boolean"
+          },
+          "stsEncryptingCertSubject" : {
+            "type" : "string"
+          },
+          "stsMetadata" : {
+            "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "stsSigningCertSubject" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "StoreApplianceReq" : {
         "type" : "object",
         "properties" : {
@@ -6282,6 +6574,34 @@
           }
         }
       },
+      "StoreSharepointRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SharepointResourceDTO"
+          }
+        }
+      },
+      "StoreSharepointRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SharepointResourceDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "StoreTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
@@ -6329,6 +6649,34 @@
           },
           "sp" : {
             "$ref" : "#/components/schemas/VirtualSaml2ServiceProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StoreWeblogicExecEnvReq" : {
+        "type" : "object",
+        "properties" : {
+          "execEnv" : {
+            "$ref" : "#/components/schemas/WeblogicExecutionEnvironmentDTO"
+          },
+          "idaName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "StoreWeblogicExecEnvRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "execEnv" : {
+            "$ref" : "#/components/schemas/WeblogicExecutionEnvironmentDTO"
           },
           "validationErrors" : {
             "type" : "array",
@@ -6845,6 +7193,73 @@
           }
         }
       },
+      "WeblogicExecutionEnvironmentDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activations" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/ActivationDTO"
+            }
+          },
+          "active" : {
+            "type" : "boolean"
+          },
+          "bindingLocation" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "domain" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "installDemoApps" : {
+            "type" : "boolean"
+          },
+          "installUri" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "overwriteOriginalSetup" : {
+            "type" : "boolean"
+          },
+          "platformId" : {
+            "type" : "string"
+          },
+          "targetJDK" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "LOCAL", "REMOTE" ]
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "WindowsIISExecutionEnvironmentDTO" : {
         "type" : "object",
         "properties" : {
@@ -6901,70 +7316,6 @@
           "type" : {
             "type" : "string",
             "enum" : [ "LOCAL", "REMOTE" ]
-          },
-          "x" : {
-            "type" : "number",
-            "format" : "double"
-          },
-          "y" : {
-            "type" : "number",
-            "format" : "double"
-          }
-        }
-      },
-      "WindowsIntegratedAuthenticationDTO" : {
-        "type" : "object",
-        "properties" : {
-          "delegatedAuthentications" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
-            }
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "displayName" : {
-            "type" : "string"
-          },
-          "domain" : {
-            "type" : "string"
-          },
-          "domainController" : {
-            "type" : "string"
-          },
-          "elementId" : {
-            "type" : "string"
-          },
-          "host" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int64"
-          },
-          "keyTab" : {
-            "$ref" : "#/components/schemas/ResourceDTO"
-          },
-          "name" : {
-            "type" : "string"
-          },
-          "overwriteKerberosSetup" : {
-            "type" : "boolean"
-          },
-          "port" : {
-            "type" : "integer",
-            "format" : "int32"
-          },
-          "protocol" : {
-            "type" : "string"
-          },
-          "serviceClass" : {
-            "type" : "string"
-          },
-          "serviceName" : {
-            "type" : "string"
           },
           "x" : {
             "type" : "number",
