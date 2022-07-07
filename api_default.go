@@ -1938,7 +1938,7 @@ func (r ApiCreateWeblogicExecEnvRequest) StoreWeblogicExecEnvReq(storeWeblogicEx
 	return r
 }
 
-func (r ApiCreateWeblogicExecEnvRequest) Execute() (*StorePhpExecEnvRes, *http.Response, error) {
+func (r ApiCreateWeblogicExecEnvRequest) Execute() (*StoreWeblogicExecEnvRes, *http.Response, error) {
 	return r.ApiService.CreateWeblogicExecEnvExecute(r)
 }
 
@@ -1956,13 +1956,13 @@ func (a *DefaultApiService) CreateWeblogicExecEnv(ctx context.Context) ApiCreate
 }
 
 // Execute executes the request
-//  @return StorePhpExecEnvRes
-func (a *DefaultApiService) CreateWeblogicExecEnvExecute(r ApiCreateWeblogicExecEnvRequest) (*StorePhpExecEnvRes, *http.Response, error) {
+//  @return StoreWeblogicExecEnvRes
+func (a *DefaultApiService) CreateWeblogicExecEnvExecute(r ApiCreateWeblogicExecEnvRequest) (*StoreWeblogicExecEnvRes, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *StorePhpExecEnvRes
+		localVarReturnValue  *StoreWeblogicExecEnvRes
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.CreateWeblogicExecEnv")
@@ -2017,7 +2017,7 @@ func (a *DefaultApiService) CreateWeblogicExecEnvExecute(r ApiCreateWeblogicExec
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v StorePhpExecEnvRes
+			var v StoreWeblogicExecEnvRes
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()

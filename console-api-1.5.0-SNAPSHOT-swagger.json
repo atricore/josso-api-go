@@ -2275,7 +2275,7 @@
             "content" : {
               "application/json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/StorePhpExecEnvRes"
+                  "$ref" : "#/components/schemas/StoreWeblogicExecEnvRes"
                 }
               }
             }

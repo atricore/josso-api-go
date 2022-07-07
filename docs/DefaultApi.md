@@ -1190,7 +1190,7 @@ No authorization required
 
 ## CreateWeblogicExecEnv
 
-> StorePhpExecEnvRes CreateWeblogicExecEnv(ctx).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
+> StoreWeblogicExecEnvRes CreateWeblogicExecEnv(ctx).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
 
 
 
@@ -1216,7 +1216,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateWeblogicExecEnv``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateWeblogicExecEnv`: StorePhpExecEnvRes
+    // response from `CreateWeblogicExecEnv`: StoreWeblogicExecEnvRes
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateWeblogicExecEnv`: %v\n", resp)
 }
 ```
@@ -1236,7 +1236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
+[**StoreWeblogicExecEnvRes**](StoreWeblogicExecEnvRes.md)
 
 ### Authorization
 
