@@ -20,7 +20,6 @@ docs/AuthenticationServiceDTO.md
 docs/BasicAuthenticationDTO.md
 docs/BindAuthenticationDTO.md
 docs/BuiltInAttributeProfileDTO.md
-docs/ClientCertAuthnServiceDTO.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
 docs/DbIdentitySourceDTO.md
@@ -81,6 +80,9 @@ docs/GetPhpExecEnvsRes.md
 docs/GetProviderReq.md
 docs/GetProviderRes.md
 docs/GetProvidersRes.md
+docs/GetSharepointRsReq.md
+docs/GetSharepointRsRes.md
+docs/GetSharepointRssRes.md
 docs/GetTomcatExecEnvReq.md
 docs/GetTomcatExecEnvRes.md
 docs/GetTomcatExecEnvsRes.md
@@ -88,6 +90,9 @@ docs/GetTypesRes.md
 docs/GetVirtSaml2SpReq.md
 docs/GetVirtSaml2SpRes.md
 docs/GetVirtSaml2SpsRes.md
+docs/GetWeblogicExecEnvReq.md
+docs/GetWeblogicExecEnvRes.md
+docs/GetWeblogicExecEnvsRes.md
 docs/GroupDTO.md
 docs/IdentityApplianceContainerDTO.md
 docs/IdentityApplianceDTO.md
@@ -110,7 +115,6 @@ docs/KeystoreDTO.md
 docs/LdapIdentitySourceDTO.md
 docs/LocationDTO.md
 docs/OAuth2ClientDTO.md
-docs/OAuth2PreAuthenticationServiceDTO.md
 docs/OIDCSignOnRequest.md
 docs/OIDCSignOnResponse.md
 docs/PHPExecutionEnvironmentDTO.md
@@ -126,6 +130,7 @@ docs/ServiceConnectionDTO.md
 docs/ServiceResourceDTO.md
 docs/SessionManagerFactoryDTO.md
 docs/SetApplianceStateReq.md
+docs/SharepointResourceDTO.md
 docs/StoreApplianceReq.md
 docs/StoreApplianceRes.md
 docs/StoreDbIdVaultReq.md
@@ -150,10 +155,14 @@ docs/StoreOidcRpReq.md
 docs/StoreOidcRpRes.md
 docs/StorePhpExecEnvReq.md
 docs/StorePhpExecEnvRes.md
+docs/StoreSharepointRsReq.md
+docs/StoreSharepointRsRes.md
 docs/StoreTomcatExecEnvReq.md
 docs/StoreTomcatExecEnvRes.md
 docs/StoreVirtSaml2SpReq.md
 docs/StoreVirtSaml2SpRes.md
+docs/StoreWeblogicExecEnvReq.md
+docs/StoreWeblogicExecEnvRes.md
 docs/SubjectAuthenticationPolicyDTO.md
 docs/SubjectNameIdentifierPolicyDTO.md
 docs/TOTPAuthenticationServiceDTO.md
@@ -161,8 +170,8 @@ docs/TomcatExecutionEnvironmentDTO.md
 docs/UserDTO.md
 docs/UserDashboardBrandingDTO.md
 docs/VirtualSaml2ServiceProviderDTO.md
+docs/WeblogicExecutionEnvironmentDTO.md
 docs/WindowsIISExecutionEnvironmentDTO.md
-docs/WindowsIntegratedAuthenticationDTO.md
 git_push.sh
 go.mod
 go.sum
@@ -181,7 +190,6 @@ model_authentication_service_dto.go
 model_basic_authentication_dto.go
 model_bind_authentication_dto.go
 model_built_in_attribute_profile_dto.go
-model_client_cert_authn_service_dto.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go
 model_db_identity_source_dto.go
@@ -241,6 +249,9 @@ model_get_php_exec_envs_res.go
 model_get_provider_req.go
 model_get_provider_res.go
 model_get_providers_res.go
+model_get_sharepoint_rs_req.go
+model_get_sharepoint_rs_res.go
+model_get_sharepoint_rss_res.go
 model_get_tomcat_exec_env_req.go
 model_get_tomcat_exec_env_res.go
 model_get_tomcat_exec_envs_res.go
@@ -248,6 +259,9 @@ model_get_types_res.go
 model_get_virt_saml2_sp_req.go
 model_get_virt_saml2_sp_res.go
 model_get_virt_saml2_sps_res.go
+model_get_weblogic_exec_env_req.go
+model_get_weblogic_exec_env_res.go
+model_get_weblogic_exec_envs_res.go
 model_group_dto.go
 model_identity_appliance_container_dto.go
 model_identity_appliance_definition_dto.go
@@ -270,7 +284,6 @@ model_keystore_dto.go
 model_ldap_identity_source_dto.go
 model_location_dto.go
 model_o_auth2_client_dto.go
-model_o_auth2_pre_authentication_service_dto.go
 model_oidc_sign_on_request.go
 model_oidc_sign_on_response.go
 model_php_execution_environment_dto.go
@@ -286,6 +299,7 @@ model_service_connection_dto.go
 model_service_resource_dto.go
 model_session_manager_factory_dto.go
 model_set_appliance_state_req.go
+model_sharepoint_resource_dto.go
 model_store_appliance_req.go
 model_store_appliance_res.go
 model_store_db_id_vault_req.go
@@ -310,10 +324,14 @@ model_store_oidc_rp_req.go
 model_store_oidc_rp_res.go
 model_store_php_exec_env_req.go
 model_store_php_exec_env_res.go
+model_store_sharepoint_rs_req.go
+model_store_sharepoint_rs_res.go
 model_store_tomcat_exec_env_req.go
 model_store_tomcat_exec_env_res.go
 model_store_virt_saml2_sp_req.go
 model_store_virt_saml2_sp_res.go
+model_store_weblogic_exec_env_req.go
+model_store_weblogic_exec_env_res.go
 model_subject_authentication_policy_dto.go
 model_subject_name_identifier_policy_dto.go
 model_tomcat_execution_environment_dto.go
@@ -321,7 +339,7 @@ model_totp_authentication_service_dto.go
 model_user_dashboard_branding_dto.go
 model_user_dto.go
 model_virtual_saml2_service_provider_dto.go
+model_weblogic_execution_environment_dto.go
 model_windows_iis_execution_environment_dto.go
-model_windows_integrated_authentication_dto.go
 response.go
 utils.go

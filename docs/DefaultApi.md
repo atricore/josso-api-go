@@ -18,8 +18,10 @@ Method | HTTP request | Description
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
 [**CreatePhpExecEnv**](DefaultApi.md#CreatePhpExecEnv) | **Post** /iam-deploy/phpexecenv | 
+[**CreateSharepointRs**](DefaultApi.md#CreateSharepointRs) | **Post** /iam-deploy/sharepointrs | 
 [**CreateTomcatExecEnv**](DefaultApi.md#CreateTomcatExecEnv) | **Post** /iam-deploy/tomcatexecenv | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
+[**CreateWeblogicExecEnv**](DefaultApi.md#CreateWeblogicExecEnv) | **Post** /iam-deploy/weblogicexecenv | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
 [**DeleteDbIdVault**](DefaultApi.md#DeleteDbIdVault) | **Delete** /iam-deploy/dbidvault | 
 [**DeleteExtSaml2Sp**](DefaultApi.md#DeleteExtSaml2Sp) | **Delete** /iam-deploy/extsaml2sp | 
@@ -32,8 +34,10 @@ Method | HTTP request | Description
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
 [**DeletePhpExecEnv**](DefaultApi.md#DeletePhpExecEnv) | **Delete** /iam-deploy/phpexecenv | 
+[**DeleteSharepointRs**](DefaultApi.md#DeleteSharepointRs) | **Delete** /iam-deploy/sharepointrs | 
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
+[**DeleteWeblogicExecEnv**](DefaultApi.md#DeleteWeblogicExecEnv) | **Delete** /iam-deploy/weblogicexecenv | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetApplianceContainer**](DefaultApi.md#GetApplianceContainer) | **Get** /iam-deploy/appliance-container | 
 [**GetApplianceContainers**](DefaultApi.md#GetApplianceContainers) | **Get** /iam-deploy/appliance-containers | 
@@ -63,17 +67,22 @@ Method | HTTP request | Description
 [**GetPhpExecEnvs**](DefaultApi.md#GetPhpExecEnvs) | **Get** /iam-deploy/phpexecenvs | 
 [**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
 [**GetProviders**](DefaultApi.md#GetProviders) | **Get** /iam-deploy/providers | 
+[**GetSharepointRs**](DefaultApi.md#GetSharepointRs) | **Get** /iam-deploy/sharepointrs | 
+[**GetSharepointRss**](DefaultApi.md#GetSharepointRss) | **Get** /iam-deploy/sharepointrss | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
 [**GetTomcatExecEnvs**](DefaultApi.md#GetTomcatExecEnvs) | **Get** /iam-deploy/tomcatexecenvs | 
 [**GetTypes**](DefaultApi.md#GetTypes) | **Get** /iam-deploy/noop/types | 
 [**GetVirtSaml2Sp**](DefaultApi.md#GetVirtSaml2Sp) | **Get** /iam-deploy/virtsaml2sp | 
 [**GetVirtSaml2Sps**](DefaultApi.md#GetVirtSaml2Sps) | **Get** /iam-deploy/virtsaml2sps | 
+[**GetWeblogicExecEnv**](DefaultApi.md#GetWeblogicExecEnv) | **Get** /iam-deploy/weblogicexecenv | 
+[**GetWeblogicExecEnvs**](DefaultApi.md#GetWeblogicExecEnvs) | **Get** /iam-deploy/weblogicexecenvs | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**StartAppliance**](DefaultApi.md#StartAppliance) | **Get** /iam-deploy/appliance/start | 
 [**StopAppliance**](DefaultApi.md#StopAppliance) | **Get** /iam-deploy/appliance/stop | 
 [**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
 [**UdpateJossoRs**](DefaultApi.md#UdpateJossoRs) | **Put** /iam-deploy/jossors | 
+[**UdpateSharepointRs**](DefaultApi.md#UdpateSharepointRs) | **Put** /iam-deploy/sharepointrs | 
 [**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateDbIdVault**](DefaultApi.md#UpdateDbIdVault) | **Put** /iam-deploy/dbidvault | 
@@ -86,6 +95,7 @@ Method | HTTP request | Description
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 [**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
+[**UpdateWeblogicExecEnv**](DefaultApi.md#UpdateWeblogicExecEnv) | **Put** /iam-deploy/weblogicexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
 
 
@@ -986,6 +996,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreateSharepointRs
+
+> StoreSharepointRsRes CreateSharepointRs(ctx).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeSharepointRsReq := *openapiclient.NewStoreSharepointRsReq() // StoreSharepointRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateSharepointRs(context.Background()).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateSharepointRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateSharepointRs`: StoreSharepointRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateSharepointRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateSharepointRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeSharepointRsReq** | [**StoreSharepointRsReq**](StoreSharepointRsReq.md) |  | 
+
+### Return type
+
+[**StoreSharepointRsRes**](StoreSharepointRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateTomcatExecEnv
 
 > StoreTomcatExecEnvRes CreateTomcatExecEnv(ctx).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
@@ -1099,6 +1173,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreVirtSaml2SpRes**](StoreVirtSaml2SpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateWeblogicExecEnv
+
+> StoreWeblogicExecEnvRes CreateWeblogicExecEnv(ctx).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeWeblogicExecEnvReq := *openapiclient.NewStoreWeblogicExecEnvReq() // StoreWeblogicExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateWeblogicExecEnv(context.Background()).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateWeblogicExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateWeblogicExecEnv`: StoreWeblogicExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateWeblogicExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateWeblogicExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeWeblogicExecEnvReq** | [**StoreWeblogicExecEnvReq**](StoreWeblogicExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreWeblogicExecEnvRes**](StoreWeblogicExecEnvRes.md)
 
 ### Authorization
 
@@ -1882,6 +2020,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeleteSharepointRs
+
+> DeleteRes DeleteSharepointRs(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteSharepointRs(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteSharepointRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteSharepointRs`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteSharepointRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteSharepointRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeleteTomcatExecEnv
 
 > DeleteRes DeleteTomcatExecEnv(ctx).DeleteReq(deleteReq).Execute()
@@ -1986,6 +2188,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteVirtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteWeblogicExecEnv
+
+> DeleteRes DeleteWeblogicExecEnv(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteWeblogicExecEnv(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteWeblogicExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteWeblogicExecEnv`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteWeblogicExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteWeblogicExecEnvRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -3866,6 +4132,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetSharepointRs
+
+> GetSharepointRsRes GetSharepointRs(ctx).GetSharepointRsReq(getSharepointRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getSharepointRsReq := *openapiclient.NewGetSharepointRsReq() // GetSharepointRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetSharepointRs(context.Background()).GetSharepointRsReq(getSharepointRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetSharepointRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSharepointRs`: GetSharepointRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetSharepointRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSharepointRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getSharepointRsReq** | [**GetSharepointRsReq**](GetSharepointRsReq.md) |  | 
+
+### Return type
+
+[**GetSharepointRsRes**](GetSharepointRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetSharepointRss
+
+> GetSharepointRssRes GetSharepointRss(ctx).GetSharepointRsReq(getSharepointRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getSharepointRsReq := *openapiclient.NewGetSharepointRsReq() // GetSharepointRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetSharepointRss(context.Background()).GetSharepointRsReq(getSharepointRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetSharepointRss``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSharepointRss`: GetSharepointRssRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetSharepointRss`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSharepointRssRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getSharepointRsReq** | [**GetSharepointRsReq**](GetSharepointRsReq.md) |  | 
+
+### Return type
+
+[**GetSharepointRssRes**](GetSharepointRssRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetTomcatExecEnv
 
 > GetTomcatExecEnvRes GetTomcatExecEnv(ctx).GetTomcatExecEnvReq(getTomcatExecEnvReq).Execute()
@@ -4166,6 +4560,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetVirtSaml2SpsRes**](GetVirtSaml2SpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetWeblogicExecEnv
+
+> GetWeblogicExecEnvRes GetWeblogicExecEnv(ctx).GetWeblogicExecEnvReq(getWeblogicExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getWeblogicExecEnvReq := *openapiclient.NewGetWeblogicExecEnvReq() // GetWeblogicExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetWeblogicExecEnv(context.Background()).GetWeblogicExecEnvReq(getWeblogicExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetWeblogicExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetWeblogicExecEnv`: GetWeblogicExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetWeblogicExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetWeblogicExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getWeblogicExecEnvReq** | [**GetWeblogicExecEnvReq**](GetWeblogicExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetWeblogicExecEnvRes**](GetWeblogicExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetWeblogicExecEnvs
+
+> GetWeblogicExecEnvsRes GetWeblogicExecEnvs(ctx).GetWeblogicExecEnvReq(getWeblogicExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getWeblogicExecEnvReq := *openapiclient.NewGetWeblogicExecEnvReq() // GetWeblogicExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetWeblogicExecEnvs(context.Background()).GetWeblogicExecEnvReq(getWeblogicExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetWeblogicExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetWeblogicExecEnvs`: GetWeblogicExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetWeblogicExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetWeblogicExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getWeblogicExecEnvReq** | [**GetWeblogicExecEnvReq**](GetWeblogicExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetWeblogicExecEnvsRes**](GetWeblogicExecEnvsRes.md)
 
 ### Authorization
 
@@ -4550,6 +5072,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreJossoRsRes**](StoreJossoRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UdpateSharepointRs
+
+> StoreSharepointRsRes UdpateSharepointRs(ctx).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeSharepointRsReq := *openapiclient.NewStoreSharepointRsReq() // StoreSharepointRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UdpateSharepointRs(context.Background()).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateSharepointRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UdpateSharepointRs`: StoreSharepointRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateSharepointRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUdpateSharepointRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeSharepointRsReq** | [**StoreSharepointRsReq**](StoreSharepointRsReq.md) |  | 
+
+### Return type
+
+[**StoreSharepointRsRes**](StoreSharepointRsRes.md)
 
 ### Authorization
 
@@ -5318,6 +5904,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreTomcatExecEnvRes**](StoreTomcatExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateWeblogicExecEnv
+
+> StoreWeblogicExecEnvRes UpdateWeblogicExecEnv(ctx).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeWeblogicExecEnvReq := *openapiclient.NewStoreWeblogicExecEnvReq() // StoreWeblogicExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateWeblogicExecEnv(context.Background()).StoreWeblogicExecEnvReq(storeWeblogicExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateWeblogicExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateWeblogicExecEnv`: StoreWeblogicExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateWeblogicExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateWeblogicExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeWeblogicExecEnvReq** | [**StoreWeblogicExecEnvReq**](StoreWeblogicExecEnvReq.md) |  | 
+
+### Return type
+
+[**StoreWeblogicExecEnvRes**](StoreWeblogicExecEnvRes.md)
 
 ### Authorization
 

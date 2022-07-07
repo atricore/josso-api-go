@@ -8,13 +8,10 @@ Name | Type | Description | Notes
 **BasicAuthnMechanism** | Pointer to [**BasicAuthenticationDTO**](BasicAuthenticationDTO.md) |  | [optional] 
 **BindAuthn** | Pointer to [**BindAuthenticationDTO**](BindAuthenticationDTO.md) |  | [optional] 
 **BuiltInAttributeProfile** | Pointer to [**BuiltInAttributeProfileDTO**](BuiltInAttributeProfileDTO.md) |  | [optional] 
-**ClientCertAuthnSvc** | Pointer to [**ClientCertAuthnServiceDTO**](ClientCertAuthnServiceDTO.md) |  | [optional] 
 **DirectoryAuthnSvc** | Pointer to [**DirectoryAuthenticationServiceDTO**](DirectoryAuthenticationServiceDTO.md) |  | [optional] 
 **Idpc** | Pointer to [**IdentityProviderChannelDTO**](IdentityProviderChannelDTO.md) |  | [optional] 
-**Oauth2PreAuthnSvc** | Pointer to [**OAuth2PreAuthenticationServiceDTO**](OAuth2PreAuthenticationServiceDTO.md) |  | [optional] 
 **Spc** | Pointer to [**InternalSaml2ServiceProviderChannelDTO**](InternalSaml2ServiceProviderChannelDTO.md) |  | [optional] 
 **TotpAuthnSvc** | Pointer to [**TOTPAuthenticationServiceDTO**](TOTPAuthenticationServiceDTO.md) |  | [optional] 
-**WiaAuthnSvc** | Pointer to [**WindowsIntegratedAuthenticationDTO**](WindowsIntegratedAuthenticationDTO.md) |  | [optional] 
 
 ## Methods
 
@@ -135,31 +132,6 @@ SetBuiltInAttributeProfile sets BuiltInAttributeProfile field to given value.
 
 HasBuiltInAttributeProfile returns a boolean if a field has been set.
 
-### GetClientCertAuthnSvc
-
-`func (o *GetTypesRes) GetClientCertAuthnSvc() ClientCertAuthnServiceDTO`
-
-GetClientCertAuthnSvc returns the ClientCertAuthnSvc field if non-nil, zero value otherwise.
-
-### GetClientCertAuthnSvcOk
-
-`func (o *GetTypesRes) GetClientCertAuthnSvcOk() (*ClientCertAuthnServiceDTO, bool)`
-
-GetClientCertAuthnSvcOk returns a tuple with the ClientCertAuthnSvc field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientCertAuthnSvc
-
-`func (o *GetTypesRes) SetClientCertAuthnSvc(v ClientCertAuthnServiceDTO)`
-
-SetClientCertAuthnSvc sets ClientCertAuthnSvc field to given value.
-
-### HasClientCertAuthnSvc
-
-`func (o *GetTypesRes) HasClientCertAuthnSvc() bool`
-
-HasClientCertAuthnSvc returns a boolean if a field has been set.
-
 ### GetDirectoryAuthnSvc
 
 `func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO`
@@ -210,31 +182,6 @@ SetIdpc sets Idpc field to given value.
 
 HasIdpc returns a boolean if a field has been set.
 
-### GetOauth2PreAuthnSvc
-
-`func (o *GetTypesRes) GetOauth2PreAuthnSvc() OAuth2PreAuthenticationServiceDTO`
-
-GetOauth2PreAuthnSvc returns the Oauth2PreAuthnSvc field if non-nil, zero value otherwise.
-
-### GetOauth2PreAuthnSvcOk
-
-`func (o *GetTypesRes) GetOauth2PreAuthnSvcOk() (*OAuth2PreAuthenticationServiceDTO, bool)`
-
-GetOauth2PreAuthnSvcOk returns a tuple with the Oauth2PreAuthnSvc field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOauth2PreAuthnSvc
-
-`func (o *GetTypesRes) SetOauth2PreAuthnSvc(v OAuth2PreAuthenticationServiceDTO)`
-
-SetOauth2PreAuthnSvc sets Oauth2PreAuthnSvc field to given value.
-
-### HasOauth2PreAuthnSvc
-
-`func (o *GetTypesRes) HasOauth2PreAuthnSvc() bool`
-
-HasOauth2PreAuthnSvc returns a boolean if a field has been set.
-
 ### GetSpc
 
 `func (o *GetTypesRes) GetSpc() InternalSaml2ServiceProviderChannelDTO`
@@ -284,31 +231,6 @@ SetTotpAuthnSvc sets TotpAuthnSvc field to given value.
 `func (o *GetTypesRes) HasTotpAuthnSvc() bool`
 
 HasTotpAuthnSvc returns a boolean if a field has been set.
-
-### GetWiaAuthnSvc
-
-`func (o *GetTypesRes) GetWiaAuthnSvc() WindowsIntegratedAuthenticationDTO`
-
-GetWiaAuthnSvc returns the WiaAuthnSvc field if non-nil, zero value otherwise.
-
-### GetWiaAuthnSvcOk
-
-`func (o *GetTypesRes) GetWiaAuthnSvcOk() (*WindowsIntegratedAuthenticationDTO, bool)`
-
-GetWiaAuthnSvcOk returns a tuple with the WiaAuthnSvc field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWiaAuthnSvc
-
-`func (o *GetTypesRes) SetWiaAuthnSvc(v WindowsIntegratedAuthenticationDTO)`
-
-SetWiaAuthnSvc sets WiaAuthnSvc field to given value.
-
-### HasWiaAuthnSvc
-
-`func (o *GetTypesRes) HasWiaAuthnSvc() bool`
-
-HasWiaAuthnSvc returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

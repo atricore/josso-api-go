@@ -93,8 +93,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateJossoRs**](docs/DefaultApi.md#createjossors) | **Post** /iam-deploy/jossors | 
 *DefaultApi* | [**CreateOidcRp**](docs/DefaultApi.md#createoidcrp) | **Post** /iam-deploy/oidcrp | 
 *DefaultApi* | [**CreatePhpExecEnv**](docs/DefaultApi.md#createphpexecenv) | **Post** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**CreateSharepointRs**](docs/DefaultApi.md#createsharepointrs) | **Post** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**CreateTomcatExecEnv**](docs/DefaultApi.md#createtomcatexecenv) | **Post** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**CreateVirtSaml2Sp**](docs/DefaultApi.md#createvirtsaml2sp) | **Post** /iam-deploy/virtsaml2sp | 
+*DefaultApi* | [**CreateWeblogicExecEnv**](docs/DefaultApi.md#createweblogicexecenv) | **Post** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**DeleteAppliance**](docs/DefaultApi.md#deleteappliance) | **Delete** /iam-deploy/appliance | 
 *DefaultApi* | [**DeleteDbIdVault**](docs/DefaultApi.md#deletedbidvault) | **Delete** /iam-deploy/dbidvault | 
 *DefaultApi* | [**DeleteExtSaml2Sp**](docs/DefaultApi.md#deleteextsaml2sp) | **Delete** /iam-deploy/extsaml2sp | 
@@ -107,8 +109,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteJossoRs**](docs/DefaultApi.md#deletejossors) | **Delete** /iam-deploy/jossors | 
 *DefaultApi* | [**DeleteOidcRp**](docs/DefaultApi.md#deleteoidcrp) | **Delete** /iam-deploy/oidcrp | 
 *DefaultApi* | [**DeletePhpExecEnv**](docs/DefaultApi.md#deletephpexecenv) | **Delete** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**DeleteSharepointRs**](docs/DefaultApi.md#deletesharepointrs) | **Delete** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
+*DefaultApi* | [**DeleteWeblogicExecEnv**](docs/DefaultApi.md#deleteweblogicexecenv) | **Delete** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**GetAppliance**](docs/DefaultApi.md#getappliance) | **Get** /iam-deploy/appliance | 
 *DefaultApi* | [**GetApplianceContainer**](docs/DefaultApi.md#getappliancecontainer) | **Get** /iam-deploy/appliance-container | 
 *DefaultApi* | [**GetApplianceContainers**](docs/DefaultApi.md#getappliancecontainers) | **Get** /iam-deploy/appliance-containers | 
@@ -138,17 +142,22 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetPhpExecEnvs**](docs/DefaultApi.md#getphpexecenvs) | **Get** /iam-deploy/phpexecenvs | 
 *DefaultApi* | [**GetProvider**](docs/DefaultApi.md#getprovider) | **Get** /iam-deploy/provider | 
 *DefaultApi* | [**GetProviders**](docs/DefaultApi.md#getproviders) | **Get** /iam-deploy/providers | 
+*DefaultApi* | [**GetSharepointRs**](docs/DefaultApi.md#getsharepointrs) | **Get** /iam-deploy/sharepointrs | 
+*DefaultApi* | [**GetSharepointRss**](docs/DefaultApi.md#getsharepointrss) | **Get** /iam-deploy/sharepointrss | 
 *DefaultApi* | [**GetTomcatExecEnv**](docs/DefaultApi.md#gettomcatexecenv) | **Get** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**GetTomcatExecEnvs**](docs/DefaultApi.md#gettomcatexecenvs) | **Get** /iam-deploy/tomcatexecenvs | 
 *DefaultApi* | [**GetTypes**](docs/DefaultApi.md#gettypes) | **Get** /iam-deploy/noop/types | 
 *DefaultApi* | [**GetVirtSaml2Sp**](docs/DefaultApi.md#getvirtsaml2sp) | **Get** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**GetVirtSaml2Sps**](docs/DefaultApi.md#getvirtsaml2sps) | **Get** /iam-deploy/virtsaml2sps | 
+*DefaultApi* | [**GetWeblogicExecEnv**](docs/DefaultApi.md#getweblogicexecenv) | **Get** /iam-deploy/weblogicexecenv | 
+*DefaultApi* | [**GetWeblogicExecEnvs**](docs/DefaultApi.md#getweblogicexecenvs) | **Get** /iam-deploy/weblogicexecenvs | 
 *DefaultApi* | [**ImportAppliance**](docs/DefaultApi.md#importappliance) | **Post** /iam-deploy/appliance/import | 
 *DefaultApi* | [**SignOn**](docs/DefaultApi.md#signon) | **Post** /iam-authn/sign-on | 
 *DefaultApi* | [**StartAppliance**](docs/DefaultApi.md#startappliance) | **Get** /iam-deploy/appliance/start | 
 *DefaultApi* | [**StopAppliance**](docs/DefaultApi.md#stopappliance) | **Get** /iam-deploy/appliance/stop | 
 *DefaultApi* | [**UdpateExtSaml2Sp**](docs/DefaultApi.md#udpateextsaml2sp) | **Put** /iam-deploy/extsaml2sp | 
 *DefaultApi* | [**UdpateJossoRs**](docs/DefaultApi.md#udpatejossors) | **Put** /iam-deploy/jossors | 
+*DefaultApi* | [**UdpateSharepointRs**](docs/DefaultApi.md#udpatesharepointrs) | **Put** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**UdpateVirtSaml2Sp**](docs/DefaultApi.md#udpatevirtsaml2sp) | **Put** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**UpdateAppliance**](docs/DefaultApi.md#updateappliance) | **Put** /iam-deploy/appliance | 
 *DefaultApi* | [**UpdateDbIdVault**](docs/DefaultApi.md#updatedbidvault) | **Put** /iam-deploy/dbidvault | 
@@ -161,6 +170,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
 *DefaultApi* | [**UpdatePhpExecEnv**](docs/DefaultApi.md#updatephpexecenv) | **Put** /iam-deploy/phpexecenv | 
 *DefaultApi* | [**UpdateTomcatExecEnv**](docs/DefaultApi.md#updatetomcatexecenv) | **Put** /iam-deploy/tomcatexecenv | 
+*DefaultApi* | [**UpdateWeblogicExecEnv**](docs/DefaultApi.md#updateweblogicexecenv) | **Put** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**ValidateAppliance**](docs/DefaultApi.md#validateappliance) | **Get** /iam-deploy/appliance/validate | 
 
 
@@ -181,7 +191,6 @@ Class | Method | HTTP request | Description
  - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [BindAuthenticationDTO](docs/BindAuthenticationDTO.md)
  - [BuiltInAttributeProfileDTO](docs/BuiltInAttributeProfileDTO.md)
- - [ClientCertAuthnServiceDTO](docs/ClientCertAuthnServiceDTO.md)
  - [CustomClassDTO](docs/CustomClassDTO.md)
  - [CustomClassPropertyDTO](docs/CustomClassPropertyDTO.md)
  - [DbIdentitySourceDTO](docs/DbIdentitySourceDTO.md)
@@ -241,6 +250,9 @@ Class | Method | HTTP request | Description
  - [GetProviderReq](docs/GetProviderReq.md)
  - [GetProviderRes](docs/GetProviderRes.md)
  - [GetProvidersRes](docs/GetProvidersRes.md)
+ - [GetSharepointRsReq](docs/GetSharepointRsReq.md)
+ - [GetSharepointRsRes](docs/GetSharepointRsRes.md)
+ - [GetSharepointRssRes](docs/GetSharepointRssRes.md)
  - [GetTomcatExecEnvReq](docs/GetTomcatExecEnvReq.md)
  - [GetTomcatExecEnvRes](docs/GetTomcatExecEnvRes.md)
  - [GetTomcatExecEnvsRes](docs/GetTomcatExecEnvsRes.md)
@@ -248,6 +260,9 @@ Class | Method | HTTP request | Description
  - [GetVirtSaml2SpReq](docs/GetVirtSaml2SpReq.md)
  - [GetVirtSaml2SpRes](docs/GetVirtSaml2SpRes.md)
  - [GetVirtSaml2SpsRes](docs/GetVirtSaml2SpsRes.md)
+ - [GetWeblogicExecEnvReq](docs/GetWeblogicExecEnvReq.md)
+ - [GetWeblogicExecEnvRes](docs/GetWeblogicExecEnvRes.md)
+ - [GetWeblogicExecEnvsRes](docs/GetWeblogicExecEnvsRes.md)
  - [GroupDTO](docs/GroupDTO.md)
  - [IdentityApplianceContainerDTO](docs/IdentityApplianceContainerDTO.md)
  - [IdentityApplianceDTO](docs/IdentityApplianceDTO.md)
@@ -270,7 +285,6 @@ Class | Method | HTTP request | Description
  - [LdapIdentitySourceDTO](docs/LdapIdentitySourceDTO.md)
  - [LocationDTO](docs/LocationDTO.md)
  - [OAuth2ClientDTO](docs/OAuth2ClientDTO.md)
- - [OAuth2PreAuthenticationServiceDTO](docs/OAuth2PreAuthenticationServiceDTO.md)
  - [OIDCSignOnRequest](docs/OIDCSignOnRequest.md)
  - [OIDCSignOnResponse](docs/OIDCSignOnResponse.md)
  - [PHPExecutionEnvironmentDTO](docs/PHPExecutionEnvironmentDTO.md)
@@ -286,6 +300,7 @@ Class | Method | HTTP request | Description
  - [ServiceResourceDTO](docs/ServiceResourceDTO.md)
  - [SessionManagerFactoryDTO](docs/SessionManagerFactoryDTO.md)
  - [SetApplianceStateReq](docs/SetApplianceStateReq.md)
+ - [SharepointResourceDTO](docs/SharepointResourceDTO.md)
  - [StoreApplianceReq](docs/StoreApplianceReq.md)
  - [StoreApplianceRes](docs/StoreApplianceRes.md)
  - [StoreDbIdVaultReq](docs/StoreDbIdVaultReq.md)
@@ -310,10 +325,14 @@ Class | Method | HTTP request | Description
  - [StoreOidcRpRes](docs/StoreOidcRpRes.md)
  - [StorePhpExecEnvReq](docs/StorePhpExecEnvReq.md)
  - [StorePhpExecEnvRes](docs/StorePhpExecEnvRes.md)
+ - [StoreSharepointRsReq](docs/StoreSharepointRsReq.md)
+ - [StoreSharepointRsRes](docs/StoreSharepointRsRes.md)
  - [StoreTomcatExecEnvReq](docs/StoreTomcatExecEnvReq.md)
  - [StoreTomcatExecEnvRes](docs/StoreTomcatExecEnvRes.md)
  - [StoreVirtSaml2SpReq](docs/StoreVirtSaml2SpReq.md)
  - [StoreVirtSaml2SpRes](docs/StoreVirtSaml2SpRes.md)
+ - [StoreWeblogicExecEnvReq](docs/StoreWeblogicExecEnvReq.md)
+ - [StoreWeblogicExecEnvRes](docs/StoreWeblogicExecEnvRes.md)
  - [SubjectAuthenticationPolicyDTO](docs/SubjectAuthenticationPolicyDTO.md)
  - [SubjectNameIdentifierPolicyDTO](docs/SubjectNameIdentifierPolicyDTO.md)
  - [TOTPAuthenticationServiceDTO](docs/TOTPAuthenticationServiceDTO.md)
@@ -321,8 +340,8 @@ Class | Method | HTTP request | Description
  - [UserDTO](docs/UserDTO.md)
  - [UserDashboardBrandingDTO](docs/UserDashboardBrandingDTO.md)
  - [VirtualSaml2ServiceProviderDTO](docs/VirtualSaml2ServiceProviderDTO.md)
+ - [WeblogicExecutionEnvironmentDTO](docs/WeblogicExecutionEnvironmentDTO.md)
  - [WindowsIISExecutionEnvironmentDTO](docs/WindowsIISExecutionEnvironmentDTO.md)
- - [WindowsIntegratedAuthenticationDTO](docs/WindowsIntegratedAuthenticationDTO.md)
 
 
 ## Documentation For Authorization
