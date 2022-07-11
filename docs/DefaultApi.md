@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
+[**CreateIdpFacebook**](DefaultApi.md#CreateIdpFacebook) | **Post** /iam-deploy/idp_fb | 
 [**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
+[**DeleteIdpFacebook**](DefaultApi.md#DeleteIdpFacebook) | **Delete** /iam-deploy/idp_fb | 
 [**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
@@ -55,6 +57,8 @@ Method | HTTP request | Description
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
+[**GetIdpFacebook**](DefaultApi.md#GetIdpFacebook) | **Get** /iam-deploy/idp_fb | 
+[**GetIdpFacebooks**](DefaultApi.md#GetIdpFacebooks) | **Get** /iam-deploy/idp_fbs | 
 [**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
 [**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
 [**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
@@ -90,6 +94,7 @@ Method | HTTP request | Description
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
+[**UpdateIdpFacebook**](DefaultApi.md#UpdateIdpFacebook) | **Put** /iam-deploy/idp_fb | 
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
@@ -661,6 +666,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdVaultRes**](StoreIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIdpFacebook
+
+> StoreIdpFacebookRes CreateIdpFacebook(ctx).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpFacebookReq := *openapiclient.NewStoreIdpFacebookReq() // StoreIdpFacebookReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdpFacebook(context.Background()).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdpFacebook``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdpFacebook`: StoreIdpFacebookRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdpFacebook`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdpFacebookRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpFacebookReq** | [**StoreIdpFacebookReq**](StoreIdpFacebookReq.md) |  | 
+
+### Return type
+
+[**StoreIdpFacebookRes**](StoreIdpFacebookRes.md)
 
 ### Authorization
 
@@ -1676,6 +1745,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteIdVaultRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIdpFacebook
+
+> DeleteRes DeleteIdpFacebook(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdpFacebook(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdpFacebook``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdpFacebook`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdpFacebook`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdpFacebookRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -3349,6 +3482,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIdVaultsRes**](GetIdVaultsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpFacebook
+
+> GetIdpFacebookRes GetIdpFacebook(ctx).GetIdpFacebookReq(getIdpFacebookReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpFacebookReq := *openapiclient.NewGetIdpFacebookReq() // GetIdpFacebookReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpFacebook(context.Background()).GetIdpFacebookReq(getIdpFacebookReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpFacebook``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpFacebook`: GetIdpFacebookRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpFacebook`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpFacebookRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpFacebookReq** | [**GetIdpFacebookReq**](GetIdpFacebookReq.md) |  | 
+
+### Return type
+
+[**GetIdpFacebookRes**](GetIdpFacebookRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpFacebooks
+
+> GetIdpFacebooksRes GetIdpFacebooks(ctx).GetIdpFacebookReq(getIdpFacebookReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpFacebookReq := *openapiclient.NewGetIdpFacebookReq() // GetIdpFacebookReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpFacebooks(context.Background()).GetIdpFacebookReq(getIdpFacebookReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpFacebooks``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpFacebooks`: GetIdpFacebooksRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpFacebooks`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpFacebooksRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpFacebookReq** | [**GetIdpFacebookReq**](GetIdpFacebookReq.md) |  | 
+
+### Return type
+
+[**GetIdpFacebooksRes**](GetIdpFacebooksRes.md)
 
 ### Authorization
 
@@ -5584,6 +5845,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdVaultRes**](StoreIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdpFacebook
+
+> StoreIdpFacebookRes UpdateIdpFacebook(ctx).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpFacebookReq := *openapiclient.NewStoreIdpFacebookReq() // StoreIdpFacebookReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdpFacebook(context.Background()).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdpFacebook``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdpFacebook`: StoreIdpFacebookRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdpFacebook`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdpFacebookRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpFacebookReq** | [**StoreIdpFacebookReq**](StoreIdpFacebookReq.md) |  | 
+
+### Return type
+
+[**StoreIdpFacebookRes**](StoreIdpFacebookRes.md)
 
 ### Authorization
 
