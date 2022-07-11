@@ -87,9 +87,13 @@ func (svc AuthenticationServiceDTO) ToWindowsIntegratedAuthn() (*WindowsIntegrat
 	wia.SetServiceClass(AsString(svc.AdditionalProperties["serviceClass"], ""))
 	wia.SetServiceName(AsString(svc.AdditionalProperties["serviceName"], ""))
 
-	kt := NewResourceDTO()
-	kt.SetValue(AsString(svc.AdditionalProperties["keyTab"], ""))
-	wia.SetKeyTab(*kt)
+	if _, ok := svc.AdditionalProperties["keyTab"].(map[string]interface{}); ok {
+
+		ktMap := svc.AdditionalProperties["keyTab"].(map[string]interface{})
+		kt := NewResourceDTO()
+		kt.SetValue(AsString(ktMap["value"], ""))
+		wia.SetKeyTab(*kt)
+	}
 
 	return wia, nil
 }

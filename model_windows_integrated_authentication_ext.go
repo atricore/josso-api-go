@@ -20,6 +20,7 @@ func (dsvc WindowsIntegratedAuthenticationDTO) toWindowsIntegratedAuth() (*Authe
 	m.AdditionalProperties["protocol"] = dsvc.GetProtocol()
 	m.AdditionalProperties["serviceClass"] = dsvc.GetServiceClass()
 	m.AdditionalProperties["serviceName"] = dsvc.GetServiceName()
+	
 	m.AdditionalProperties["keyTab"] = dsvc.GetKeyTab()
 
 	return m, nil
