@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**CreateIdSourceDb**](DefaultApi.md#CreateIdSourceDb) | **Post** /iam-deploy/idsourcedb | 
 [**CreateIdSourceLdap**](DefaultApi.md#CreateIdSourceLdap) | **Post** /iam-deploy/idsourceldap | 
 [**CreateIdVault**](DefaultApi.md#CreateIdVault) | **Post** /iam-deploy/idvault | 
+[**CreateIdpAzure**](DefaultApi.md#CreateIdpAzure) | **Post** /iam-deploy/idp_azure | 
 [**CreateIdpFacebook**](DefaultApi.md#CreateIdpFacebook) | **Post** /iam-deploy/idp_fb | 
+[**CreateIdpGoogle**](DefaultApi.md#CreateIdpGoogle) | **Post** /iam-deploy/idp_google | 
 [**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
@@ -30,7 +32,9 @@ Method | HTTP request | Description
 [**DeleteIdSourceDb**](DefaultApi.md#DeleteIdSourceDb) | **Delete** /iam-deploy/idsourcedb | 
 [**DeleteIdSourceLdap**](DefaultApi.md#DeleteIdSourceLdap) | **Delete** /iam-deploy/idsourceldap | 
 [**DeleteIdVault**](DefaultApi.md#DeleteIdVault) | **Delete** /iam-deploy/idvault | 
+[**DeleteIdpAzure**](DefaultApi.md#DeleteIdpAzure) | **Delete** /iam-deploy/idp_azure | 
 [**DeleteIdpFacebook**](DefaultApi.md#DeleteIdpFacebook) | **Delete** /iam-deploy/idp_fb | 
+[**DeleteIdpGoogle**](DefaultApi.md#DeleteIdpGoogle) | **Delete** /iam-deploy/idp_google | 
 [**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
@@ -57,8 +61,12 @@ Method | HTTP request | Description
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
+[**GetIdpAzure**](DefaultApi.md#GetIdpAzure) | **Get** /iam-deploy/idp_azure | 
+[**GetIdpAzures**](DefaultApi.md#GetIdpAzures) | **Get** /iam-deploy/idp_azures | 
 [**GetIdpFacebook**](DefaultApi.md#GetIdpFacebook) | **Get** /iam-deploy/idp_fb | 
 [**GetIdpFacebooks**](DefaultApi.md#GetIdpFacebooks) | **Get** /iam-deploy/idp_fbs | 
+[**GetIdpGoogle**](DefaultApi.md#GetIdpGoogle) | **Get** /iam-deploy/idp_google | 
+[**GetIdpGoogles**](DefaultApi.md#GetIdpGoogles) | **Get** /iam-deploy/idp_googles | 
 [**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
 [**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
 [**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
@@ -94,7 +102,9 @@ Method | HTTP request | Description
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
 [**UpdateIdVault**](DefaultApi.md#UpdateIdVault) | **Put** /iam-deploy/idvault | 
+[**UpdateIdpAzure**](DefaultApi.md#UpdateIdpAzure) | **Put** /iam-deploy/idp_azure | 
 [**UpdateIdpFacebook**](DefaultApi.md#UpdateIdpFacebook) | **Put** /iam-deploy/idp_fb | 
+[**UpdateIdpGoogle**](DefaultApi.md#UpdateIdpGoogle) | **Put** /iam-deploy/idp_google | 
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
@@ -681,6 +691,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CreateIdpAzure
+
+> StoreIdpAzureRes CreateIdpAzure(ctx).StoreIdpAzureReq(storeIdpAzureReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpAzureReq := *openapiclient.NewStoreIdpAzureReq() // StoreIdpAzureReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdpAzure(context.Background()).StoreIdpAzureReq(storeIdpAzureReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdpAzure``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdpAzure`: StoreIdpAzureRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdpAzure`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdpAzureRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpAzureReq** | [**StoreIdpAzureReq**](StoreIdpAzureReq.md) |  | 
+
+### Return type
+
+[**StoreIdpAzureRes**](StoreIdpAzureRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateIdpFacebook
 
 > StoreIdpFacebookRes CreateIdpFacebook(ctx).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
@@ -730,6 +804,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdpFacebookRes**](StoreIdpFacebookRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIdpGoogle
+
+> StoreIdpGoogleRes CreateIdpGoogle(ctx).StoreIdpGoogleReq(storeIdpGoogleReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpGoogleReq := *openapiclient.NewStoreIdpGoogleReq() // StoreIdpGoogleReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdpGoogle(context.Background()).StoreIdpGoogleReq(storeIdpGoogleReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdpGoogle``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdpGoogle`: StoreIdpGoogleRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdpGoogle`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdpGoogleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpGoogleReq** | [**StoreIdpGoogleReq**](StoreIdpGoogleReq.md) |  | 
+
+### Return type
+
+[**StoreIdpGoogleRes**](StoreIdpGoogleRes.md)
 
 ### Authorization
 
@@ -1769,6 +1907,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeleteIdpAzure
+
+> DeleteRes DeleteIdpAzure(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdpAzure(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdpAzure``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdpAzure`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdpAzure`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdpAzureRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeleteIdpFacebook
 
 > DeleteRes DeleteIdpFacebook(ctx).DeleteReq(deleteReq).Execute()
@@ -1809,6 +2011,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteIdpFacebookRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIdpGoogle
+
+> DeleteRes DeleteIdpGoogle(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdpGoogle(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdpGoogle``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdpGoogle`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdpGoogle`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdpGoogleRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -3497,6 +3763,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIdpAzure
+
+> GetIdpAzureRes GetIdpAzure(ctx).GetIdpAzureReq(getIdpAzureReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpAzureReq := *openapiclient.NewGetIdpAzureReq() // GetIdpAzureReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpAzure(context.Background()).GetIdpAzureReq(getIdpAzureReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpAzure``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpAzure`: GetIdpAzureRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpAzure`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpAzureRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpAzureReq** | [**GetIdpAzureReq**](GetIdpAzureReq.md) |  | 
+
+### Return type
+
+[**GetIdpAzureRes**](GetIdpAzureRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpAzures
+
+> GetIdpAzuresRes GetIdpAzures(ctx).GetIdpAzureReq(getIdpAzureReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpAzureReq := *openapiclient.NewGetIdpAzureReq() // GetIdpAzureReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpAzures(context.Background()).GetIdpAzureReq(getIdpAzureReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpAzures``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpAzures`: GetIdpAzuresRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpAzures`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpAzuresRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpAzureReq** | [**GetIdpAzureReq**](GetIdpAzureReq.md) |  | 
+
+### Return type
+
+[**GetIdpAzuresRes**](GetIdpAzuresRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetIdpFacebook
 
 > GetIdpFacebookRes GetIdpFacebook(ctx).GetIdpFacebookReq(getIdpFacebookReq).Execute()
@@ -3610,6 +4004,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIdpFacebooksRes**](GetIdpFacebooksRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpGoogle
+
+> GetIdpGoogleRes GetIdpGoogle(ctx).GetIdpGoogleReq(getIdpGoogleReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpGoogleReq := *openapiclient.NewGetIdpGoogleReq() // GetIdpGoogleReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpGoogle(context.Background()).GetIdpGoogleReq(getIdpGoogleReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpGoogle``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpGoogle`: GetIdpGoogleRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpGoogle`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpGoogleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpGoogleReq** | [**GetIdpGoogleReq**](GetIdpGoogleReq.md) |  | 
+
+### Return type
+
+[**GetIdpGoogleRes**](GetIdpGoogleRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpGoogles
+
+> GetIdpGooglesRes GetIdpGoogles(ctx).GetIdpGoogleReq(getIdpGoogleReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdpGoogleReq := *openapiclient.NewGetIdpGoogleReq() // GetIdpGoogleReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpGoogles(context.Background()).GetIdpGoogleReq(getIdpGoogleReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpGoogles``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpGoogles`: GetIdpGooglesRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpGoogles`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpGooglesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdpGoogleReq** | [**GetIdpGoogleReq**](GetIdpGoogleReq.md) |  | 
+
+### Return type
+
+[**GetIdpGooglesRes**](GetIdpGooglesRes.md)
 
 ### Authorization
 
@@ -5860,6 +6382,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UpdateIdpAzure
+
+> StoreIdpAzureRes UpdateIdpAzure(ctx).StoreIdpAzureReq(storeIdpAzureReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpAzureReq := *openapiclient.NewStoreIdpAzureReq() // StoreIdpAzureReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdpAzure(context.Background()).StoreIdpAzureReq(storeIdpAzureReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdpAzure``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdpAzure`: StoreIdpAzureRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdpAzure`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdpAzureRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpAzureReq** | [**StoreIdpAzureReq**](StoreIdpAzureReq.md) |  | 
+
+### Return type
+
+[**StoreIdpAzureRes**](StoreIdpAzureRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateIdpFacebook
 
 > StoreIdpFacebookRes UpdateIdpFacebook(ctx).StoreIdpFacebookReq(storeIdpFacebookReq).Execute()
@@ -5909,6 +6495,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdpFacebookRes**](StoreIdpFacebookRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdpGoogle
+
+> StoreIdpGoogleRes UpdateIdpGoogle(ctx).StoreIdpGoogleReq(storeIdpGoogleReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdpGoogleReq := *openapiclient.NewStoreIdpGoogleReq() // StoreIdpGoogleReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdpGoogle(context.Background()).StoreIdpGoogleReq(storeIdpGoogleReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdpGoogle``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdpGoogle`: StoreIdpGoogleRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdpGoogle`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdpGoogleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdpGoogleReq** | [**StoreIdpGoogleReq**](StoreIdpGoogleReq.md) |  | 
+
+### Return type
+
+[**StoreIdpGoogleRes**](StoreIdpGoogleRes.md)
 
 ### Authorization
 

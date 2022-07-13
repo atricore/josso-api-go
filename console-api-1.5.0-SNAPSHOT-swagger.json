@@ -750,6 +750,130 @@
         }
       }
     },
+    "/iam-deploy/idp_azure" : {
+      "get" : {
+        "operationId" : "getIdpAzure",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdpAzureReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdpAzureRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateIdpAzure",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIdpAzureReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIdpAzureRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createIdpAzure",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIdpAzureReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIdpAzureRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteIdpAzure",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/idp_azures" : {
+      "get" : {
+        "operationId" : "getIdpAzures",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdpAzureReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdpAzuresRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/idp_fb" : {
       "get" : {
         "operationId" : "getIdpFacebook",
@@ -867,6 +991,130 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/GetIdpFacebooksRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/idp_google" : {
+      "get" : {
+        "operationId" : "getIdpGoogle",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdpGoogleReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdpGoogleRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateIdpGoogle",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIdpGoogleReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIdpGoogleRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createIdpGoogle",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreIdpGoogleReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreIdpGoogleRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteIdpGoogle",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/idp_googles" : {
+      "get" : {
+        "operationId" : "getIdpGoogles",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdpGoogleReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdpGooglesRes"
                 }
               }
             }
@@ -2733,6 +2981,121 @@
           }
         }
       },
+      "AzureOpenIDConnectIdentityProviderDTO" : {
+        "type" : "object",
+        "properties" : {
+          "accessTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "activeBindings" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SAMLR2_HTTP_POST", "SAMLR2_ARTIFACT", "SAMLR2_HTTP_REDIRECT", "SAMLR2_SOAP", "SAMLR2_LOCAL", "SSO_ARTIFACT", "SSO_REDIRECT", "SSO_POST", "JOSSO_REDIRECT", "JOSSO_SOAP", "JOSSO_ARTIFACT", "OAUTH2_SOAP", "OAUTH2_HTTP_RESTFUL" ]
+            }
+          },
+          "activeProfiles" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SSO", "SSO_ECP", "SSO_SLO", "SSO_NAMEID", "ARTIFACT", "ASSERTION_QUERY", "NAMEID", "ATTR_BASIC", "ATTR_X500", "ATTR_UUID", "ATTR_DCE", "ATTR_XACML", "OAUTH2_USERNAMEPWD_FLOW" ]
+            }
+          },
+          "authzTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "azObjectId" : {
+            "type" : "string"
+          },
+          "clientId" : {
+            "type" : "string"
+          },
+          "clientSecret" : {
+            "type" : "string"
+          },
+          "config" : {
+            "$ref" : "#/components/schemas/ProviderConfigDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "federatedConnectionsA" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/FederatedConnectionDTO"
+            }
+          },
+          "federatedConnectionsB" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/FederatedConnectionDTO"
+            }
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "identityAppliance" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDefinitionDTO"
+          },
+          "identityLookups" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityLookupDTO"
+            }
+          },
+          "isRemote" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "metadata" : {
+            "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "mobileAuthzTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "remote" : {
+            "type" : "boolean"
+          },
+          "role" : {
+            "type" : "string",
+            "enum" : [ "SSOIdentityProvider", "SSOServiceProvider", "AuthenticationAuthority", "AttributeAuthority", "PolicyDecisionPoint", "Affiliation", "Provisioning", "Binding" ]
+          },
+          "scopes" : {
+            "type" : "string"
+          },
+          "serverKey" : {
+            "type" : "string"
+          },
+          "userFields" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "BasicAuthenticationDTO" : {
         "type" : "object",
         "properties" : {
@@ -4222,6 +4585,54 @@
           }
         }
       },
+      "GetIdpAzureReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetIdpAzureRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/AzureOpenIDConnectIdentityProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetIdpAzuresRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idps" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/AzureOpenIDConnectIdentityProviderDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetIdpFacebookReq" : {
         "type" : "object",
         "properties" : {
@@ -4260,6 +4671,54 @@
             "type" : "array",
             "items" : {
               "$ref" : "#/components/schemas/FacebookOpenIDConnectIdentityProviderDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetIdpGoogleReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetIdpGoogleRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/GoogleOpenIDConnectIdentityProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetIdpGooglesRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idps" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/GoogleOpenIDConnectIdentityProviderDTO"
             }
           },
           "validationErrors" : {
@@ -4785,6 +5244,121 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "GoogleOpenIDConnectIdentityProviderDTO" : {
+        "type" : "object",
+        "properties" : {
+          "accessTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "activeBindings" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SAMLR2_HTTP_POST", "SAMLR2_ARTIFACT", "SAMLR2_HTTP_REDIRECT", "SAMLR2_SOAP", "SAMLR2_LOCAL", "SSO_ARTIFACT", "SSO_REDIRECT", "SSO_POST", "JOSSO_REDIRECT", "JOSSO_SOAP", "JOSSO_ARTIFACT", "OAUTH2_SOAP", "OAUTH2_HTTP_RESTFUL" ]
+            }
+          },
+          "activeProfiles" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "SSO", "SSO_ECP", "SSO_SLO", "SSO_NAMEID", "ARTIFACT", "ASSERTION_QUERY", "NAMEID", "ATTR_BASIC", "ATTR_X500", "ATTR_UUID", "ATTR_DCE", "ATTR_XACML", "OAUTH2_USERNAMEPWD_FLOW" ]
+            }
+          },
+          "authzTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "clientId" : {
+            "type" : "string"
+          },
+          "clientSecret" : {
+            "type" : "string"
+          },
+          "config" : {
+            "$ref" : "#/components/schemas/ProviderConfigDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "federatedConnectionsA" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/FederatedConnectionDTO"
+            }
+          },
+          "federatedConnectionsB" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/FederatedConnectionDTO"
+            }
+          },
+          "googleAppsDomain" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "identityAppliance" : {
+            "$ref" : "#/components/schemas/IdentityApplianceDefinitionDTO"
+          },
+          "identityLookups" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdentityLookupDTO"
+            }
+          },
+          "isRemote" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "metadata" : {
+            "$ref" : "#/components/schemas/ResourceDTO"
+          },
+          "mobileAuthzTokenService" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "remote" : {
+            "type" : "boolean"
+          },
+          "role" : {
+            "type" : "string",
+            "enum" : [ "SSOIdentityProvider", "SSOServiceProvider", "AuthenticationAuthority", "AttributeAuthority", "PolicyDecisionPoint", "Affiliation", "Provisioning", "Binding" ]
+          },
+          "scopes" : {
+            "type" : "string"
+          },
+          "serverKey" : {
+            "type" : "string"
+          },
+          "userFields" : {
+            "type" : "string"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
           }
         }
       },
@@ -6718,6 +7292,34 @@
           }
         }
       },
+      "StoreIdpAzureReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/AzureOpenIDConnectIdentityProviderDTO"
+          }
+        }
+      },
+      "StoreIdpAzureRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/AzureOpenIDConnectIdentityProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "StoreIdpFacebookReq" : {
         "type" : "object",
         "properties" : {
@@ -6737,6 +7339,34 @@
           },
           "idp" : {
             "$ref" : "#/components/schemas/FacebookOpenIDConnectIdentityProviderDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StoreIdpGoogleReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/GoogleOpenIDConnectIdentityProviderDTO"
+          }
+        }
+      },
+      "StoreIdpGoogleRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idp" : {
+            "$ref" : "#/components/schemas/GoogleOpenIDConnectIdentityProviderDTO"
           },
           "validationErrors" : {
             "type" : "array",

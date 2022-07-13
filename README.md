@@ -88,7 +88,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateIdSourceDb**](docs/DefaultApi.md#createidsourcedb) | **Post** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**CreateIdSourceLdap**](docs/DefaultApi.md#createidsourceldap) | **Post** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**CreateIdVault**](docs/DefaultApi.md#createidvault) | **Post** /iam-deploy/idvault | 
+*DefaultApi* | [**CreateIdpAzure**](docs/DefaultApi.md#createidpazure) | **Post** /iam-deploy/idp_azure | 
 *DefaultApi* | [**CreateIdpFacebook**](docs/DefaultApi.md#createidpfacebook) | **Post** /iam-deploy/idp_fb | 
+*DefaultApi* | [**CreateIdpGoogle**](docs/DefaultApi.md#createidpgoogle) | **Post** /iam-deploy/idp_google | 
 *DefaultApi* | [**CreateIisExecEnv**](docs/DefaultApi.md#createiisexecenv) | **Post** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**CreateIntSaml2Sp**](docs/DefaultApi.md#createintsaml2sp) | **Post** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**CreateJossoRs**](docs/DefaultApi.md#createjossors) | **Post** /iam-deploy/jossors | 
@@ -105,7 +107,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteIdSourceDb**](docs/DefaultApi.md#deleteidsourcedb) | **Delete** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**DeleteIdSourceLdap**](docs/DefaultApi.md#deleteidsourceldap) | **Delete** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**DeleteIdVault**](docs/DefaultApi.md#deleteidvault) | **Delete** /iam-deploy/idvault | 
+*DefaultApi* | [**DeleteIdpAzure**](docs/DefaultApi.md#deleteidpazure) | **Delete** /iam-deploy/idp_azure | 
 *DefaultApi* | [**DeleteIdpFacebook**](docs/DefaultApi.md#deleteidpfacebook) | **Delete** /iam-deploy/idp_fb | 
+*DefaultApi* | [**DeleteIdpGoogle**](docs/DefaultApi.md#deleteidpgoogle) | **Delete** /iam-deploy/idp_google | 
 *DefaultApi* | [**DeleteIisExecEnv**](docs/DefaultApi.md#deleteiisexecenv) | **Delete** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**DeleteIntSaml2Sp**](docs/DefaultApi.md#deleteintsaml2sp) | **Delete** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**DeleteJossoRs**](docs/DefaultApi.md#deletejossors) | **Delete** /iam-deploy/jossors | 
@@ -132,8 +136,12 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetIdSourceLdaps**](docs/DefaultApi.md#getidsourceldaps) | **Get** /iam-deploy/idsourceldaps | 
 *DefaultApi* | [**GetIdVault**](docs/DefaultApi.md#getidvault) | **Get** /iam-deploy/idvault | 
 *DefaultApi* | [**GetIdVaults**](docs/DefaultApi.md#getidvaults) | **Get** /iam-deploy/idvaults | 
+*DefaultApi* | [**GetIdpAzure**](docs/DefaultApi.md#getidpazure) | **Get** /iam-deploy/idp_azure | 
+*DefaultApi* | [**GetIdpAzures**](docs/DefaultApi.md#getidpazures) | **Get** /iam-deploy/idp_azures | 
 *DefaultApi* | [**GetIdpFacebook**](docs/DefaultApi.md#getidpfacebook) | **Get** /iam-deploy/idp_fb | 
 *DefaultApi* | [**GetIdpFacebooks**](docs/DefaultApi.md#getidpfacebooks) | **Get** /iam-deploy/idp_fbs | 
+*DefaultApi* | [**GetIdpGoogle**](docs/DefaultApi.md#getidpgoogle) | **Get** /iam-deploy/idp_google | 
+*DefaultApi* | [**GetIdpGoogles**](docs/DefaultApi.md#getidpgoogles) | **Get** /iam-deploy/idp_googles | 
 *DefaultApi* | [**GetIisExecEnv**](docs/DefaultApi.md#getiisexecenv) | **Get** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**GetIisExecEnvs**](docs/DefaultApi.md#getiisexecenvs) | **Get** /iam-deploy/iisexecenvs | 
 *DefaultApi* | [**GetIntSaml2Sp**](docs/DefaultApi.md#getintsaml2sp) | **Get** /iam-deploy/intsaml2sp | 
@@ -169,7 +177,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateIdSourceDb**](docs/DefaultApi.md#updateidsourcedb) | **Put** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**UpdateIdSourceLdap**](docs/DefaultApi.md#updateidsourceldap) | **Put** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**UpdateIdVault**](docs/DefaultApi.md#updateidvault) | **Put** /iam-deploy/idvault | 
+*DefaultApi* | [**UpdateIdpAzure**](docs/DefaultApi.md#updateidpazure) | **Put** /iam-deploy/idp_azure | 
 *DefaultApi* | [**UpdateIdpFacebook**](docs/DefaultApi.md#updateidpfacebook) | **Put** /iam-deploy/idp_fb | 
+*DefaultApi* | [**UpdateIdpGoogle**](docs/DefaultApi.md#updateidpgoogle) | **Put** /iam-deploy/idp_google | 
 *DefaultApi* | [**UpdateIisExecEnv**](docs/DefaultApi.md#updateiisexecenv) | **Put** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**UpdateIntSaml2Sp**](docs/DefaultApi.md#updateintsaml2sp) | **Put** /iam-deploy/intsaml2sp | 
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
@@ -193,6 +203,7 @@ Class | Method | HTTP request | Description
  - [AuthenticationContractDTO](docs/AuthenticationContractDTO.md)
  - [AuthenticationMechanismDTO](docs/AuthenticationMechanismDTO.md)
  - [AuthenticationServiceDTO](docs/AuthenticationServiceDTO.md)
+ - [AzureOpenIDConnectIdentityProviderDTO](docs/AzureOpenIDConnectIdentityProviderDTO.md)
  - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [BindAuthenticationDTO](docs/BindAuthenticationDTO.md)
  - [BuiltInAttributeProfileDTO](docs/BuiltInAttributeProfileDTO.md)
@@ -238,9 +249,15 @@ Class | Method | HTTP request | Description
  - [GetIdVaultReq](docs/GetIdVaultReq.md)
  - [GetIdVaultRes](docs/GetIdVaultRes.md)
  - [GetIdVaultsRes](docs/GetIdVaultsRes.md)
+ - [GetIdpAzureReq](docs/GetIdpAzureReq.md)
+ - [GetIdpAzureRes](docs/GetIdpAzureRes.md)
+ - [GetIdpAzuresRes](docs/GetIdpAzuresRes.md)
  - [GetIdpFacebookReq](docs/GetIdpFacebookReq.md)
  - [GetIdpFacebookRes](docs/GetIdpFacebookRes.md)
  - [GetIdpFacebooksRes](docs/GetIdpFacebooksRes.md)
+ - [GetIdpGoogleReq](docs/GetIdpGoogleReq.md)
+ - [GetIdpGoogleRes](docs/GetIdpGoogleRes.md)
+ - [GetIdpGooglesRes](docs/GetIdpGooglesRes.md)
  - [GetIisExecEnvReq](docs/GetIisExecEnvReq.md)
  - [GetIisExecEnvRes](docs/GetIisExecEnvRes.md)
  - [GetIisExecEnvsRes](docs/GetIisExecEnvsRes.md)
@@ -272,6 +289,7 @@ Class | Method | HTTP request | Description
  - [GetWeblogicExecEnvReq](docs/GetWeblogicExecEnvReq.md)
  - [GetWeblogicExecEnvRes](docs/GetWeblogicExecEnvRes.md)
  - [GetWeblogicExecEnvsRes](docs/GetWeblogicExecEnvsRes.md)
+ - [GoogleOpenIDConnectIdentityProviderDTO](docs/GoogleOpenIDConnectIdentityProviderDTO.md)
  - [GroupDTO](docs/GroupDTO.md)
  - [IdentityApplianceContainerDTO](docs/IdentityApplianceContainerDTO.md)
  - [IdentityApplianceDTO](docs/IdentityApplianceDTO.md)
@@ -324,8 +342,12 @@ Class | Method | HTTP request | Description
  - [StoreIdSourceLdapRes](docs/StoreIdSourceLdapRes.md)
  - [StoreIdVaultReq](docs/StoreIdVaultReq.md)
  - [StoreIdVaultRes](docs/StoreIdVaultRes.md)
+ - [StoreIdpAzureReq](docs/StoreIdpAzureReq.md)
+ - [StoreIdpAzureRes](docs/StoreIdpAzureRes.md)
  - [StoreIdpFacebookReq](docs/StoreIdpFacebookReq.md)
  - [StoreIdpFacebookRes](docs/StoreIdpFacebookRes.md)
+ - [StoreIdpGoogleReq](docs/StoreIdpGoogleReq.md)
+ - [StoreIdpGoogleRes](docs/StoreIdpGoogleRes.md)
  - [StoreIisExecEnvReq](docs/StoreIisExecEnvReq.md)
  - [StoreIisExecEnvRes](docs/StoreIisExecEnvRes.md)
  - [StoreIntSaml2SpReq](docs/StoreIntSaml2SpReq.md)
