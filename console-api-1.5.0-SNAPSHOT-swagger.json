@@ -554,7 +554,7 @@
         }
       },
       "put" : {
-        "operationId" : "udpateExtSaml2Sp",
+        "operationId" : "updateExtSaml2Sp",
         "requestBody" : {
           "content" : {
             "application/json" : {
@@ -1794,7 +1794,7 @@
         }
       },
       "put" : {
-        "operationId" : "udpateJossoRs",
+        "operationId" : "updateJossoRs",
         "requestBody" : {
           "content" : {
             "application/json" : {
@@ -2235,7 +2235,7 @@
         }
       },
       "put" : {
-        "operationId" : "udpateSharepointRs",
+        "operationId" : "updateSharepointRs",
         "requestBody" : {
           "content" : {
             "application/json" : {
@@ -2483,7 +2483,7 @@
         }
       },
       "put" : {
-        "operationId" : "udpateVirtSaml2Sp",
+        "operationId" : "updateVirtSaml2Sp",
         "requestBody" : {
           "content" : {
             "application/json" : {

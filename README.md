@@ -167,12 +167,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**SignOn**](docs/DefaultApi.md#signon) | **Post** /iam-authn/sign-on | 
 *DefaultApi* | [**StartAppliance**](docs/DefaultApi.md#startappliance) | **Get** /iam-deploy/appliance/start | 
 *DefaultApi* | [**StopAppliance**](docs/DefaultApi.md#stopappliance) | **Get** /iam-deploy/appliance/stop | 
-*DefaultApi* | [**UdpateExtSaml2Sp**](docs/DefaultApi.md#udpateextsaml2sp) | **Put** /iam-deploy/extsaml2sp | 
-*DefaultApi* | [**UdpateJossoRs**](docs/DefaultApi.md#udpatejossors) | **Put** /iam-deploy/jossors | 
-*DefaultApi* | [**UdpateSharepointRs**](docs/DefaultApi.md#udpatesharepointrs) | **Put** /iam-deploy/sharepointrs | 
-*DefaultApi* | [**UdpateVirtSaml2Sp**](docs/DefaultApi.md#udpatevirtsaml2sp) | **Put** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**UpdateAppliance**](docs/DefaultApi.md#updateappliance) | **Put** /iam-deploy/appliance | 
 *DefaultApi* | [**UpdateDbIdVault**](docs/DefaultApi.md#updatedbidvault) | **Put** /iam-deploy/dbidvault | 
+*DefaultApi* | [**UpdateExtSaml2Sp**](docs/DefaultApi.md#updateextsaml2sp) | **Put** /iam-deploy/extsaml2sp | 
 *DefaultApi* | [**UpdateIdP**](docs/DefaultApi.md#updateidp) | **Put** /iam-deploy/idp | 
 *DefaultApi* | [**UpdateIdSourceDb**](docs/DefaultApi.md#updateidsourcedb) | **Put** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**UpdateIdSourceLdap**](docs/DefaultApi.md#updateidsourceldap) | **Put** /iam-deploy/idsourceldap | 
@@ -182,9 +179,12 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateIdpGoogle**](docs/DefaultApi.md#updateidpgoogle) | **Put** /iam-deploy/idp_google | 
 *DefaultApi* | [**UpdateIisExecEnv**](docs/DefaultApi.md#updateiisexecenv) | **Put** /iam-deploy/iisexecenv | 
 *DefaultApi* | [**UpdateIntSaml2Sp**](docs/DefaultApi.md#updateintsaml2sp) | **Put** /iam-deploy/intsaml2sp | 
+*DefaultApi* | [**UpdateJossoRs**](docs/DefaultApi.md#updatejossors) | **Put** /iam-deploy/jossors | 
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
 *DefaultApi* | [**UpdatePhpExecEnv**](docs/DefaultApi.md#updatephpexecenv) | **Put** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**UpdateSharepointRs**](docs/DefaultApi.md#updatesharepointrs) | **Put** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**UpdateTomcatExecEnv**](docs/DefaultApi.md#updatetomcatexecenv) | **Put** /iam-deploy/tomcatexecenv | 
+*DefaultApi* | [**UpdateVirtSaml2Sp**](docs/DefaultApi.md#updatevirtsaml2sp) | **Put** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**UpdateWeblogicExecEnv**](docs/DefaultApi.md#updateweblogicexecenv) | **Put** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**ValidateAppliance**](docs/DefaultApi.md#validateappliance) | **Get** /iam-deploy/appliance/validate | 
 

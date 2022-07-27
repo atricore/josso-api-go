@@ -92,12 +92,9 @@ Method | HTTP request | Description
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**StartAppliance**](DefaultApi.md#StartAppliance) | **Get** /iam-deploy/appliance/start | 
 [**StopAppliance**](DefaultApi.md#StopAppliance) | **Get** /iam-deploy/appliance/stop | 
-[**UdpateExtSaml2Sp**](DefaultApi.md#UdpateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
-[**UdpateJossoRs**](DefaultApi.md#UdpateJossoRs) | **Put** /iam-deploy/jossors | 
-[**UdpateSharepointRs**](DefaultApi.md#UdpateSharepointRs) | **Put** /iam-deploy/sharepointrs | 
-[**UdpateVirtSaml2Sp**](DefaultApi.md#UdpateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
 [**UpdateDbIdVault**](DefaultApi.md#UpdateDbIdVault) | **Put** /iam-deploy/dbidvault | 
+[**UpdateExtSaml2Sp**](DefaultApi.md#UpdateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
 [**UpdateIdSourceDb**](DefaultApi.md#UpdateIdSourceDb) | **Put** /iam-deploy/idsourcedb | 
 [**UpdateIdSourceLdap**](DefaultApi.md#UpdateIdSourceLdap) | **Put** /iam-deploy/idsourceldap | 
@@ -107,9 +104,12 @@ Method | HTTP request | Description
 [**UpdateIdpGoogle**](DefaultApi.md#UpdateIdpGoogle) | **Put** /iam-deploy/idp_google | 
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
+[**UpdateJossoRs**](DefaultApi.md#UpdateJossoRs) | **Put** /iam-deploy/jossors | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 [**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
+[**UpdateSharepointRs**](DefaultApi.md#UpdateSharepointRs) | **Put** /iam-deploy/sharepointrs | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
+[**UpdateVirtSaml2Sp**](DefaultApi.md#UpdateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateWeblogicExecEnv**](DefaultApi.md#UpdateWeblogicExecEnv) | **Put** /iam-deploy/weblogicexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
 
@@ -5742,262 +5742,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UdpateExtSaml2Sp
-
-> StoreExtSaml2SpRes UdpateExtSaml2Sp(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.UdpateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateExtSaml2Sp``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UdpateExtSaml2Sp`: StoreExtSaml2SpRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateExtSaml2Sp`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUdpateExtSaml2SpRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
-
-### Return type
-
-[**StoreExtSaml2SpRes**](StoreExtSaml2SpRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UdpateJossoRs
-
-> StoreJossoRsRes UdpateJossoRs(ctx).StoreJossoRsReq(storeJossoRsReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    storeJossoRsReq := *openapiclient.NewStoreJossoRsReq() // StoreJossoRsReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.UdpateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateJossoRs``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UdpateJossoRs`: StoreJossoRsRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateJossoRs`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUdpateJossoRsRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeJossoRsReq** | [**StoreJossoRsReq**](StoreJossoRsReq.md) |  | 
-
-### Return type
-
-[**StoreJossoRsRes**](StoreJossoRsRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UdpateSharepointRs
-
-> StoreSharepointRsRes UdpateSharepointRs(ctx).StoreSharepointRsReq(storeSharepointRsReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    storeSharepointRsReq := *openapiclient.NewStoreSharepointRsReq() // StoreSharepointRsReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.UdpateSharepointRs(context.Background()).StoreSharepointRsReq(storeSharepointRsReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateSharepointRs``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UdpateSharepointRs`: StoreSharepointRsRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateSharepointRs`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUdpateSharepointRsRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeSharepointRsReq** | [**StoreSharepointRsReq**](StoreSharepointRsReq.md) |  | 
-
-### Return type
-
-[**StoreSharepointRsRes**](StoreSharepointRsRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UdpateVirtSaml2Sp
-
-> StoreVirtSaml2SpRes UdpateVirtSaml2Sp(ctx).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.UdpateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UdpateVirtSaml2Sp``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UdpateVirtSaml2Sp`: StoreVirtSaml2SpRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UdpateVirtSaml2Sp`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUdpateVirtSaml2SpRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeVirtSaml2SpReq** | [**StoreVirtSaml2SpReq**](StoreVirtSaml2SpReq.md) |  | 
-
-### Return type
-
-[**StoreVirtSaml2SpRes**](StoreVirtSaml2SpRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## UpdateAppliance
 
 > StoreApplianceRes UpdateAppliance(ctx).StoreApplianceReq(storeApplianceReq).Execute()
@@ -6111,6 +5855,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreDbIdVaultRes**](StoreDbIdVaultRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateExtSaml2Sp
+
+> StoreExtSaml2SpRes UpdateExtSaml2Sp(ctx).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeExtSaml2SpReq := *openapiclient.NewStoreExtSaml2SpReq() // StoreExtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateExtSaml2Sp(context.Background()).StoreExtSaml2SpReq(storeExtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateExtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateExtSaml2Sp`: StoreExtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateExtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateExtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeExtSaml2SpReq** | [**StoreExtSaml2SpReq**](StoreExtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreExtSaml2SpRes**](StoreExtSaml2SpRes.md)
 
 ### Authorization
 
@@ -6702,6 +6510,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UpdateJossoRs
+
+> StoreJossoRsRes UpdateJossoRs(ctx).StoreJossoRsReq(storeJossoRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeJossoRsReq := *openapiclient.NewStoreJossoRsReq() // StoreJossoRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateJossoRs(context.Background()).StoreJossoRsReq(storeJossoRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateJossoRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateJossoRs`: StoreJossoRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateJossoRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateJossoRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeJossoRsReq** | [**StoreJossoRsReq**](StoreJossoRsReq.md) |  | 
+
+### Return type
+
+[**StoreJossoRsRes**](StoreJossoRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateOidcRp
 
 > StoreOidcRpRes UpdateOidcRp(ctx).StoreOidcRpReq(storeOidcRpReq).Execute()
@@ -6830,6 +6702,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## UpdateSharepointRs
+
+> StoreSharepointRsRes UpdateSharepointRs(ctx).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeSharepointRsReq := *openapiclient.NewStoreSharepointRsReq() // StoreSharepointRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateSharepointRs(context.Background()).StoreSharepointRsReq(storeSharepointRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateSharepointRs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateSharepointRs`: StoreSharepointRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateSharepointRs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateSharepointRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeSharepointRsReq** | [**StoreSharepointRsReq**](StoreSharepointRsReq.md) |  | 
+
+### Return type
+
+[**StoreSharepointRsRes**](StoreSharepointRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateTomcatExecEnv
 
 > StoreTomcatExecEnvRes UpdateTomcatExecEnv(ctx).StoreTomcatExecEnvReq(storeTomcatExecEnvReq).Execute()
@@ -6879,6 +6815,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreTomcatExecEnvRes**](StoreTomcatExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateVirtSaml2Sp
+
+> StoreVirtSaml2SpRes UpdateVirtSaml2Sp(ctx).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeVirtSaml2SpReq := *openapiclient.NewStoreVirtSaml2SpReq() // StoreVirtSaml2SpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateVirtSaml2Sp(context.Background()).StoreVirtSaml2SpReq(storeVirtSaml2SpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateVirtSaml2Sp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateVirtSaml2Sp`: StoreVirtSaml2SpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateVirtSaml2Sp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateVirtSaml2SpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeVirtSaml2SpReq** | [**StoreVirtSaml2SpReq**](StoreVirtSaml2SpReq.md) |  | 
+
+### Return type
+
+[**StoreVirtSaml2SpRes**](StoreVirtSaml2SpRes.md)
 
 ### Authorization
 
