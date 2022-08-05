@@ -198,7 +198,7 @@
     },
     "/iam-deploy/appliance/build" : {
       "get" : {
-        "operationId" : "buildAppliance",
+        "operationId" : "layoutAppliance_1",
         "requestBody" : {
           "content" : {
             "application/json" : {
@@ -241,6 +241,32 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/ImportApplianceRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/appliance/layout" : {
+      "get" : {
+        "operationId" : "layoutAppliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/CalcLayoutReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/CalcLayoutRes"
                 }
               }
             }
@@ -3201,6 +3227,37 @@
           "profileType" : {
             "type" : "string",
             "enum" : [ "BASIC", "JOSSO", "ONE_TO_ONE", "CUSTOM" ]
+          }
+        }
+      },
+      "CalcLayoutReq" : {
+        "type" : "object",
+        "properties" : {
+          "export" : {
+            "type" : "boolean"
+          },
+          "idOrName" : {
+            "type" : "string"
+          },
+          "idaName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CalcLayoutRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "export" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },
