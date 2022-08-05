@@ -164,6 +164,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetWeblogicExecEnv**](docs/DefaultApi.md#getweblogicexecenv) | **Get** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**GetWeblogicExecEnvs**](docs/DefaultApi.md#getweblogicexecenvs) | **Get** /iam-deploy/weblogicexecenvs | 
 *DefaultApi* | [**ImportAppliance**](docs/DefaultApi.md#importappliance) | **Post** /iam-deploy/appliance/import | 
+*DefaultApi* | [**LayoutAppliance**](docs/DefaultApi.md#layoutappliance) | **Get** /iam-deploy/appliance/layout | 
 *DefaultApi* | [**SignOn**](docs/DefaultApi.md#signon) | **Post** /iam-authn/sign-on | 
 *DefaultApi* | [**StartAppliance**](docs/DefaultApi.md#startappliance) | **Get** /iam-deploy/appliance/start | 
 *DefaultApi* | [**StopAppliance**](docs/DefaultApi.md#stopappliance) | **Get** /iam-deploy/appliance/stop | 
@@ -207,6 +208,8 @@ Class | Method | HTTP request | Description
  - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [BindAuthenticationDTO](docs/BindAuthenticationDTO.md)
  - [BuiltInAttributeProfileDTO](docs/BuiltInAttributeProfileDTO.md)
+ - [CalcLayoutReq](docs/CalcLayoutReq.md)
+ - [CalcLayoutRes](docs/CalcLayoutRes.md)
  - [CustomClassDTO](docs/CustomClassDTO.md)
  - [CustomClassPropertyDTO](docs/CustomClassPropertyDTO.md)
  - [DbIdentitySourceDTO](docs/DbIdentitySourceDTO.md)

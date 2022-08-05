@@ -21,6 +21,8 @@ docs/AzureOpenIDConnectIdentityProviderDTO.md
 docs/BasicAuthenticationDTO.md
 docs/BindAuthenticationDTO.md
 docs/BuiltInAttributeProfileDTO.md
+docs/CalcLayoutReq.md
+docs/CalcLayoutRes.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
 docs/DbIdentitySourceDTO.md
@@ -209,6 +211,8 @@ model_azure_open_id_connect_identity_provider_dto.go
 model_basic_authentication_dto.go
 model_bind_authentication_dto.go
 model_built_in_attribute_profile_dto.go
+model_calc_layout_req.go
+model_calc_layout_res.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go
 model_db_identity_source_dto.go

@@ -198,7 +198,7 @@
     },
     "/iam-deploy/appliance/build" : {
       "get" : {
-        "operationId" : "layoutAppliance_1",
+        "operationId" : "buildAppliance",
         "requestBody" : {
           "content" : {
             "application/json" : {

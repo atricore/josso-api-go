@@ -89,6 +89,7 @@ Method | HTTP request | Description
 [**GetWeblogicExecEnv**](DefaultApi.md#GetWeblogicExecEnv) | **Get** /iam-deploy/weblogicexecenv | 
 [**GetWeblogicExecEnvs**](DefaultApi.md#GetWeblogicExecEnvs) | **Get** /iam-deploy/weblogicexecenvs | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
+[**LayoutAppliance**](DefaultApi.md#LayoutAppliance) | **Get** /iam-deploy/appliance/layout | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**StartAppliance**](DefaultApi.md#StartAppliance) | **Get** /iam-deploy/appliance/start | 
 [**StopAppliance**](DefaultApi.md#StopAppliance) | **Get** /iam-deploy/appliance/stop | 
@@ -5535,6 +5536,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ImportApplianceRes**](ImportApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## LayoutAppliance
+
+> CalcLayoutRes LayoutAppliance(ctx).CalcLayoutReq(calcLayoutReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    calcLayoutReq := *openapiclient.NewCalcLayoutReq() // CalcLayoutReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.LayoutAppliance(context.Background()).CalcLayoutReq(calcLayoutReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.LayoutAppliance``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `LayoutAppliance`: CalcLayoutRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.LayoutAppliance`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiLayoutApplianceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **calcLayoutReq** | [**CalcLayoutReq**](CalcLayoutReq.md) |  | 
+
+### Return type
+
+[**CalcLayoutRes**](CalcLayoutRes.md)
 
 ### Authorization
 
