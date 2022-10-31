@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ActivateExecEnv**](DefaultApi.md#ActivateExecEnv) | **Get** /iam-deploy/execenv/activate | 
 [**BuildAppliance**](DefaultApi.md#BuildAppliance) | **Get** /iam-deploy/appliance/build | 
 [**CreateAppliance**](DefaultApi.md#CreateAppliance) | **Post** /iam-deploy/appliance | 
+[**CreateBranding**](DefaultApi.md#CreateBranding) | **Post** /iam-branding/branding | 
 [**CreateDbIdVault**](DefaultApi.md#CreateDbIdVault) | **Post** /iam-deploy/dbidvault | 
 [**CreateExtSaml2Sp**](DefaultApi.md#CreateExtSaml2Sp) | **Post** /iam-deploy/extsaml2sp | 
 [**CreateIdP**](DefaultApi.md#CreateIdP) | **Post** /iam-deploy/idp | 
@@ -26,6 +27,7 @@ Method | HTTP request | Description
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
 [**CreateWeblogicExecEnv**](DefaultApi.md#CreateWeblogicExecEnv) | **Post** /iam-deploy/weblogicexecenv | 
 [**DeleteAppliance**](DefaultApi.md#DeleteAppliance) | **Delete** /iam-deploy/appliance | 
+[**DeleteBranding**](DefaultApi.md#DeleteBranding) | **Delete** /iam-branding/branding | 
 [**DeleteDbIdVault**](DefaultApi.md#DeleteDbIdVault) | **Delete** /iam-deploy/dbidvault | 
 [**DeleteExtSaml2Sp**](DefaultApi.md#DeleteExtSaml2Sp) | **Delete** /iam-deploy/extsaml2sp | 
 [**DeleteIdP**](DefaultApi.md#DeleteIdP) | **Delete** /iam-deploy/idp | 
@@ -44,11 +46,13 @@ Method | HTTP request | Description
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**DeleteWeblogicExecEnv**](DefaultApi.md#DeleteWeblogicExecEnv) | **Delete** /iam-deploy/weblogicexecenv | 
+[**GetAllBrandings**](DefaultApi.md#GetAllBrandings) | **Get** /iam-branding/brandings | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetApplianceContainer**](DefaultApi.md#GetApplianceContainer) | **Get** /iam-deploy/appliance-container | 
 [**GetApplianceContainers**](DefaultApi.md#GetApplianceContainers) | **Get** /iam-deploy/appliance-containers | 
 [**GetApplianceState**](DefaultApi.md#GetApplianceState) | **Get** /iam-deploy/appliance/state | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
+[**GetBranding**](DefaultApi.md#GetBranding) | **Get** /iam-branding/branding | 
 [**GetDbIdVault**](DefaultApi.md#GetDbIdVault) | **Get** /iam-deploy/dbidvault | 
 [**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvaults | 
 [**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
@@ -90,10 +94,12 @@ Method | HTTP request | Description
 [**GetWeblogicExecEnvs**](DefaultApi.md#GetWeblogicExecEnvs) | **Get** /iam-deploy/weblogicexecenvs | 
 [**ImportAppliance**](DefaultApi.md#ImportAppliance) | **Post** /iam-deploy/appliance/import | 
 [**LayoutAppliance**](DefaultApi.md#LayoutAppliance) | **Get** /iam-deploy/appliance/layout | 
+[**RefreshBrandings**](DefaultApi.md#RefreshBrandings) | **Get** /iam-branding/brandings/refresh | 
 [**SignOn**](DefaultApi.md#SignOn) | **Post** /iam-authn/sign-on | 
 [**StartAppliance**](DefaultApi.md#StartAppliance) | **Get** /iam-deploy/appliance/start | 
 [**StopAppliance**](DefaultApi.md#StopAppliance) | **Get** /iam-deploy/appliance/stop | 
 [**UpdateAppliance**](DefaultApi.md#UpdateAppliance) | **Put** /iam-deploy/appliance | 
+[**UpdateBranding**](DefaultApi.md#UpdateBranding) | **Put** /iam-branding/branding | 
 [**UpdateDbIdVault**](DefaultApi.md#UpdateDbIdVault) | **Put** /iam-deploy/dbidvault | 
 [**UpdateExtSaml2Sp**](DefaultApi.md#UpdateExtSaml2Sp) | **Put** /iam-deploy/extsaml2sp | 
 [**UpdateIdP**](DefaultApi.md#UpdateIdP) | **Put** /iam-deploy/idp | 
@@ -293,6 +299,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreApplianceRes**](StoreApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateBranding
+
+> StoreBrandingRes CreateBranding(ctx).StoreBrandingReq(storeBrandingReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeBrandingReq := *openapiclient.NewStoreBrandingReq() // StoreBrandingReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateBranding(context.Background()).StoreBrandingReq(storeBrandingReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateBranding``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateBranding`: StoreBrandingRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateBranding`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateBrandingRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeBrandingReq** | [**StoreBrandingReq**](StoreBrandingReq.md) |  | 
+
+### Return type
+
+[**StoreBrandingRes**](StoreBrandingRes.md)
 
 ### Authorization
 
@@ -1524,6 +1594,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeleteBranding
+
+> DeleteBrandingRes DeleteBranding(ctx).DeleteBrandingReq(deleteBrandingReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteBrandingReq := *openapiclient.NewDeleteBrandingReq() // DeleteBrandingReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteBranding(context.Background()).DeleteBrandingReq(deleteBrandingReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteBranding``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteBranding`: DeleteBrandingRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteBranding`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteBrandingRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteBrandingReq** | [**DeleteBrandingReq**](DeleteBrandingReq.md) |  | 
+
+### Return type
+
+[**DeleteBrandingRes**](DeleteBrandingRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeleteDbIdVault
 
 > DeleteRes DeleteDbIdVault(ctx).DeleteReq(deleteReq).Execute()
@@ -2676,6 +2810,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetAllBrandings
+
+> GetAllBrandingsRes GetAllBrandings(ctx).GetAllBrandingsReq(getAllBrandingsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getAllBrandingsReq := *openapiclient.NewGetAllBrandingsReq() // GetAllBrandingsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetAllBrandings(context.Background()).GetAllBrandingsReq(getAllBrandingsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetAllBrandings``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetAllBrandings`: GetAllBrandingsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetAllBrandings`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetAllBrandingsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getAllBrandingsReq** | [**GetAllBrandingsReq**](GetAllBrandingsReq.md) |  | 
+
+### Return type
+
+[**GetAllBrandingsRes**](GetAllBrandingsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetAppliance
 
 > GetApplianceRes GetAppliance(ctx).GetApplianceReq(getApplianceReq).Execute()
@@ -2981,6 +3179,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAppliancesRes**](GetAppliancesRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetBranding
+
+> GetBrandingRes GetBranding(ctx).GetBrandingReq(getBrandingReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getBrandingReq := *openapiclient.NewGetBrandingReq() // GetBrandingReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetBranding(context.Background()).GetBrandingReq(getBrandingReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetBranding``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetBranding`: GetBrandingRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetBranding`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetBrandingRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getBrandingReq** | [**GetBrandingReq**](GetBrandingReq.md) |  | 
+
+### Return type
+
+[**GetBrandingRes**](GetBrandingRes.md)
 
 ### Authorization
 
@@ -5615,6 +5877,70 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## RefreshBrandings
+
+> RefreshBrandingsRes RefreshBrandings(ctx).Body(body).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    body := map[string]interface{}{ ... } // map[string]interface{} |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.RefreshBrandings(context.Background()).Body(body).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RefreshBrandings``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RefreshBrandings`: RefreshBrandingsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RefreshBrandings`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRefreshBrandingsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | **map[string]interface{}** |  | 
+
+### Return type
+
+[**RefreshBrandingsRes**](RefreshBrandingsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SignOn
 
 > OIDCSignOnResponse SignOn(ctx).OIDCSignOnRequest(oIDCSignOnRequest).Execute()
@@ -5856,6 +6182,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreApplianceRes**](StoreApplianceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateBranding
+
+> StoreBrandingRes UpdateBranding(ctx).StoreBrandingReq(storeBrandingReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeBrandingReq := *openapiclient.NewStoreBrandingReq() // StoreBrandingReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateBranding(context.Background()).StoreBrandingReq(storeBrandingReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateBranding``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateBranding`: StoreBrandingRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateBranding`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateBrandingRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeBrandingReq** | [**StoreBrandingReq**](StoreBrandingReq.md) |  | 
+
+### Return type
+
+[**StoreBrandingRes**](StoreBrandingRes.md)
 
 ### Authorization
 

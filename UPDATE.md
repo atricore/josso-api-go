@@ -2,7 +2,7 @@
 
 * Update **console-api-XXX-swagger.json** file
 * Manually modify updated file as described bellow
-* Run **make generate**
+* Run **make all**
 
 
 ::: tip
@@ -19,6 +19,16 @@ Modify type, value should be:
 }
 ```
 
+## CustomBarandingDefinitionDTO, StoreBrandingReq, GetBrandingRes
+
+Modify type, resource should be:
+
+```json
+"resource" : {
+  "type" : "string"
+}
+```
+
 ## IdentityProviderDTO
 
 Modify type, add identity lookups property:
@@ -31,4 +41,22 @@ Modify type, add identity lookups property:
               "$ref" : "#/components/schemas/IdentityLookupDTO"
             }
           },
+```
+
+# Patching the file
+
+## Generate patch file
+
+```sh
+diff -u console-api-1.5.0-SNAPSHOT-swagger.json console-api-1.5.0-SNAPSHOT-swagger.json.new > console.patch
+```
+
+## Remove all changes to abobe mentioned types
+
+Remove changes to CustomBarandingDefinitionDTO, StoreBrandingReq, GetBrandingRes, ResourceDTO, IdentityProviderDTO
+
+## Apply the patch
+
+```sh
+patch console-api-1.5.0-SNAPSHOT-swagger.json < console.patch
 ```

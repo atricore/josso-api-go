@@ -7,7 +7,7 @@ SWAGGER_FILE=./console-api-1.5.0-SNAPSHOT-swagger.json
 
 PGK_NAME=jossoappi
 
-default: build
+default: all
 
 build:
 	go install
@@ -21,4 +21,5 @@ test:
 
 generate:
 	$(GENERATOR) generate -i $(SWAGGER_FILE) -g go -o . --additional-properties=packageName=$(PGK_NAME) --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
-	cat "\n.vscode" >> .gitignore
+
+all: generate dep build

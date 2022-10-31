@@ -46,6 +46,156 @@
         }
       }
     },
+    "/iam-branding/branding" : {
+      "get" : {
+        "operationId" : "getBranding",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetBrandingReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetBrandingRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateBranding",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreBrandingReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreBrandingRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createBranding",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreBrandingReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreBrandingRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteBranding",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteBrandingReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteBrandingRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-branding/brandings" : {
+      "get" : {
+        "operationId" : "getAllBrandings",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetAllBrandingsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetAllBrandingsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-branding/brandings/refresh" : {
+      "get" : {
+        "operationId" : "refreshBrandings",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/RefreshBrandingsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/RefreshBrandingsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliance" : {
       "get" : {
         "operationId" : "getAppliance",
@@ -3211,6 +3361,31 @@
           }
         }
       },
+      "BrandingDefinitionDTO" : {
+        "type" : "object",
+        "properties" : {
+          "defaultLocale" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "BUILT_IN", "CUSTOM" ]
+          },
+          "webBrandingId" : {
+            "type" : "string"
+          }
+        }
+      },
       "BuiltInAttributeProfileDTO" : {
         "type" : "object",
         "properties" : {
@@ -3258,6 +3433,49 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "CustomBrandingDefinitionDTO" : {
+        "type" : "object",
+        "properties" : {
+          "bundleSymbolicName" : {
+            "type" : "string"
+          },
+          "bundleUri" : {
+            "type" : "string"
+          },
+          "customOpenIdAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoIdPAppClazz" : {
+            "type" : "string"
+          },
+          "defaultLocale" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "BUILT_IN", "CUSTOM" ]
+          },
+          "webBrandingId" : {
+            "type" : "string"
           }
         }
       },
@@ -3504,6 +3722,25 @@
             "items" : {
               "$ref" : "#/components/schemas/PointDTO"
             }
+          }
+        }
+      },
+      "DeleteBrandingReq" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "DeleteBrandingRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "removed" : {
+            "type" : "boolean"
           }
         }
       },
@@ -4242,6 +4479,28 @@
           }
         }
       },
+      "GetAllBrandingsReq" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetAllBrandingsRes" : {
+        "type" : "object",
+        "properties" : {
+          "brandings" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/BrandingDefinitionDTO"
+            }
+          },
+          "error" : {
+            "type" : "string"
+          }
+        }
+      },
       "GetApplianceContainerRes" : {
         "type" : "object",
         "properties" : {
@@ -4342,6 +4601,52 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "GetBrandingReq" : {
+        "type" : "object",
+        "properties" : {
+          "nameOrId" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetBrandingRes" : {
+        "type" : "object",
+        "properties" : {
+          "bundleArtifact" : {
+            "type" : "string"
+          },
+          "bundleGroup" : {
+            "type" : "string"
+          },
+          "bundleVersion" : {
+            "type" : "string"
+          },
+          "customOpenIdAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoIdPAppClazz" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "error" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string"
           }
         }
       },
@@ -6897,6 +7202,17 @@
           }
         }
       },
+      "RefreshBrandingsReq" : {
+        "type" : "object"
+      },
+      "RefreshBrandingsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          }
+        }
+      },
       "ResourceDTO" : {
         "type" : "object",
         "properties" : {
@@ -7175,6 +7491,49 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "StoreBrandingReq" : {
+        "type" : "object",
+        "properties" : {
+          "bundleArtifact" : {
+            "type" : "string"
+          },
+          "bundleGroup" : {
+            "type" : "string"
+          },
+          "bundleVersion" : {
+            "type" : "string"
+          },
+          "customOpenIdAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoAppClazz" : {
+            "type" : "string"
+          },
+          "customSsoIdPAppClazz" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "type" : "string"
+          }
+        }
+      },
+      "StoreBrandingRes" : {
+        "type" : "object",
+        "properties" : {
+          "branding" : {
+            "$ref" : "#/components/schemas/CustomBrandingDefinitionDTO"
+          },
+          "error" : {
+            "type" : "string"
           }
         }
       },

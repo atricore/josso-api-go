@@ -62,7 +62,7 @@ Each operation can use different server URL defined using `OperationServers` map
 An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
 Similar rules for overriding default operation server index and variables applies by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
 
-```
+```golang
 ctx := context.WithValue(context.Background(), jossoappi.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
@@ -82,6 +82,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ActivateExecEnv**](docs/DefaultApi.md#activateexecenv) | **Get** /iam-deploy/execenv/activate | 
 *DefaultApi* | [**BuildAppliance**](docs/DefaultApi.md#buildappliance) | **Get** /iam-deploy/appliance/build | 
 *DefaultApi* | [**CreateAppliance**](docs/DefaultApi.md#createappliance) | **Post** /iam-deploy/appliance | 
+*DefaultApi* | [**CreateBranding**](docs/DefaultApi.md#createbranding) | **Post** /iam-branding/branding | 
 *DefaultApi* | [**CreateDbIdVault**](docs/DefaultApi.md#createdbidvault) | **Post** /iam-deploy/dbidvault | 
 *DefaultApi* | [**CreateExtSaml2Sp**](docs/DefaultApi.md#createextsaml2sp) | **Post** /iam-deploy/extsaml2sp | 
 *DefaultApi* | [**CreateIdP**](docs/DefaultApi.md#createidp) | **Post** /iam-deploy/idp | 
@@ -101,6 +102,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateVirtSaml2Sp**](docs/DefaultApi.md#createvirtsaml2sp) | **Post** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**CreateWeblogicExecEnv**](docs/DefaultApi.md#createweblogicexecenv) | **Post** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**DeleteAppliance**](docs/DefaultApi.md#deleteappliance) | **Delete** /iam-deploy/appliance | 
+*DefaultApi* | [**DeleteBranding**](docs/DefaultApi.md#deletebranding) | **Delete** /iam-branding/branding | 
 *DefaultApi* | [**DeleteDbIdVault**](docs/DefaultApi.md#deletedbidvault) | **Delete** /iam-deploy/dbidvault | 
 *DefaultApi* | [**DeleteExtSaml2Sp**](docs/DefaultApi.md#deleteextsaml2sp) | **Delete** /iam-deploy/extsaml2sp | 
 *DefaultApi* | [**DeleteIdP**](docs/DefaultApi.md#deleteidp) | **Delete** /iam-deploy/idp | 
@@ -119,11 +121,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**DeleteWeblogicExecEnv**](docs/DefaultApi.md#deleteweblogicexecenv) | **Delete** /iam-deploy/weblogicexecenv | 
+*DefaultApi* | [**GetAllBrandings**](docs/DefaultApi.md#getallbrandings) | **Get** /iam-branding/brandings | 
 *DefaultApi* | [**GetAppliance**](docs/DefaultApi.md#getappliance) | **Get** /iam-deploy/appliance | 
 *DefaultApi* | [**GetApplianceContainer**](docs/DefaultApi.md#getappliancecontainer) | **Get** /iam-deploy/appliance-container | 
 *DefaultApi* | [**GetApplianceContainers**](docs/DefaultApi.md#getappliancecontainers) | **Get** /iam-deploy/appliance-containers | 
 *DefaultApi* | [**GetApplianceState**](docs/DefaultApi.md#getappliancestate) | **Get** /iam-deploy/appliance/state | 
 *DefaultApi* | [**GetAppliances**](docs/DefaultApi.md#getappliances) | **Get** /iam-deploy/appliances | 
+*DefaultApi* | [**GetBranding**](docs/DefaultApi.md#getbranding) | **Get** /iam-branding/branding | 
 *DefaultApi* | [**GetDbIdVault**](docs/DefaultApi.md#getdbidvault) | **Get** /iam-deploy/dbidvault | 
 *DefaultApi* | [**GetDbIdVaults**](docs/DefaultApi.md#getdbidvaults) | **Get** /iam-deploy/dbidvaults | 
 *DefaultApi* | [**GetExtSaml2Sp**](docs/DefaultApi.md#getextsaml2sp) | **Get** /iam-deploy/extsaml2sp | 
@@ -165,10 +169,12 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetWeblogicExecEnvs**](docs/DefaultApi.md#getweblogicexecenvs) | **Get** /iam-deploy/weblogicexecenvs | 
 *DefaultApi* | [**ImportAppliance**](docs/DefaultApi.md#importappliance) | **Post** /iam-deploy/appliance/import | 
 *DefaultApi* | [**LayoutAppliance**](docs/DefaultApi.md#layoutappliance) | **Get** /iam-deploy/appliance/layout | 
+*DefaultApi* | [**RefreshBrandings**](docs/DefaultApi.md#refreshbrandings) | **Get** /iam-branding/brandings/refresh | 
 *DefaultApi* | [**SignOn**](docs/DefaultApi.md#signon) | **Post** /iam-authn/sign-on | 
 *DefaultApi* | [**StartAppliance**](docs/DefaultApi.md#startappliance) | **Get** /iam-deploy/appliance/start | 
 *DefaultApi* | [**StopAppliance**](docs/DefaultApi.md#stopappliance) | **Get** /iam-deploy/appliance/stop | 
 *DefaultApi* | [**UpdateAppliance**](docs/DefaultApi.md#updateappliance) | **Put** /iam-deploy/appliance | 
+*DefaultApi* | [**UpdateBranding**](docs/DefaultApi.md#updatebranding) | **Put** /iam-branding/branding | 
 *DefaultApi* | [**UpdateDbIdVault**](docs/DefaultApi.md#updatedbidvault) | **Put** /iam-deploy/dbidvault | 
 *DefaultApi* | [**UpdateExtSaml2Sp**](docs/DefaultApi.md#updateextsaml2sp) | **Put** /iam-deploy/extsaml2sp | 
 *DefaultApi* | [**UpdateIdP**](docs/DefaultApi.md#updateidp) | **Put** /iam-deploy/idp | 
@@ -207,14 +213,18 @@ Class | Method | HTTP request | Description
  - [AzureOpenIDConnectIdentityProviderDTO](docs/AzureOpenIDConnectIdentityProviderDTO.md)
  - [BasicAuthenticationDTO](docs/BasicAuthenticationDTO.md)
  - [BindAuthenticationDTO](docs/BindAuthenticationDTO.md)
+ - [BrandingDefinitionDTO](docs/BrandingDefinitionDTO.md)
  - [BuiltInAttributeProfileDTO](docs/BuiltInAttributeProfileDTO.md)
  - [CalcLayoutReq](docs/CalcLayoutReq.md)
  - [CalcLayoutRes](docs/CalcLayoutRes.md)
+ - [CustomBrandingDefinitionDTO](docs/CustomBrandingDefinitionDTO.md)
  - [CustomClassDTO](docs/CustomClassDTO.md)
  - [CustomClassPropertyDTO](docs/CustomClassPropertyDTO.md)
  - [DbIdentitySourceDTO](docs/DbIdentitySourceDTO.md)
  - [DbIdentityVaultDTO](docs/DbIdentityVaultDTO.md)
  - [DelegatedAuthenticationDTO](docs/DelegatedAuthenticationDTO.md)
+ - [DeleteBrandingReq](docs/DeleteBrandingReq.md)
+ - [DeleteBrandingRes](docs/DeleteBrandingRes.md)
  - [DeleteReq](docs/DeleteReq.md)
  - [DeleteRes](docs/DeleteRes.md)
  - [DirectoryAuthenticationServiceDTO](docs/DirectoryAuthenticationServiceDTO.md)
@@ -228,12 +238,16 @@ Class | Method | HTTP request | Description
  - [FederatedChannelDTO](docs/FederatedChannelDTO.md)
  - [FederatedConnectionDTO](docs/FederatedConnectionDTO.md)
  - [FederatedProviderDTO](docs/FederatedProviderDTO.md)
+ - [GetAllBrandingsReq](docs/GetAllBrandingsReq.md)
+ - [GetAllBrandingsRes](docs/GetAllBrandingsRes.md)
  - [GetApplianceContainerRes](docs/GetApplianceContainerRes.md)
  - [GetApplianceContainersRes](docs/GetApplianceContainersRes.md)
  - [GetApplianceReq](docs/GetApplianceReq.md)
  - [GetApplianceRes](docs/GetApplianceRes.md)
  - [GetApplianceStateRes](docs/GetApplianceStateRes.md)
  - [GetAppliancesRes](docs/GetAppliancesRes.md)
+ - [GetBrandingReq](docs/GetBrandingReq.md)
+ - [GetBrandingRes](docs/GetBrandingRes.md)
  - [GetDbIdVaultReq](docs/GetDbIdVaultReq.md)
  - [GetDbIdVaultRes](docs/GetDbIdVaultRes.md)
  - [GetDbIdVaultsRes](docs/GetDbIdVaultsRes.md)
@@ -322,6 +336,7 @@ Class | Method | HTTP request | Description
  - [ProviderConfigDTO](docs/ProviderConfigDTO.md)
  - [ProviderContainerDTO](docs/ProviderContainerDTO.md)
  - [ProviderDTO](docs/ProviderDTO.md)
+ - [RefreshBrandingsRes](docs/RefreshBrandingsRes.md)
  - [ResourceDTO](docs/ResourceDTO.md)
  - [SamlR2IDPConfigDTO](docs/SamlR2IDPConfigDTO.md)
  - [SamlR2SPConfigDTO](docs/SamlR2SPConfigDTO.md)
@@ -333,6 +348,8 @@ Class | Method | HTTP request | Description
  - [SharepointResourceDTO](docs/SharepointResourceDTO.md)
  - [StoreApplianceReq](docs/StoreApplianceReq.md)
  - [StoreApplianceRes](docs/StoreApplianceRes.md)
+ - [StoreBrandingReq](docs/StoreBrandingReq.md)
+ - [StoreBrandingRes](docs/StoreBrandingRes.md)
  - [StoreDbIdVaultReq](docs/StoreDbIdVaultReq.md)
  - [StoreDbIdVaultRes](docs/StoreDbIdVaultRes.md)
  - [StoreExtSaml2SpReq](docs/StoreExtSaml2SpReq.md)
