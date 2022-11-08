@@ -44,7 +44,7 @@ func NewAttributeMappingDTOWithDefaults() *AttributeMappingDTO {
 
 // GetAttrName returns the AttrName field value if set, zero value otherwise.
 func (o *AttributeMappingDTO) GetAttrName() string {
-	if o == nil || o.AttrName == nil {
+	if o == nil || isNil(o.AttrName) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *AttributeMappingDTO) GetAttrName() string {
 // GetAttrNameOk returns a tuple with the AttrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMappingDTO) GetAttrNameOk() (*string, bool) {
-	if o == nil || o.AttrName == nil {
-		return nil, false
+	if o == nil || isNil(o.AttrName) {
+    return nil, false
 	}
 	return o.AttrName, true
 }
 
 // HasAttrName returns a boolean if a field has been set.
 func (o *AttributeMappingDTO) HasAttrName() bool {
-	if o != nil && o.AttrName != nil {
+	if o != nil && !isNil(o.AttrName) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *AttributeMappingDTO) SetAttrName(v string) {
 
 // GetReportedAttrName returns the ReportedAttrName field value if set, zero value otherwise.
 func (o *AttributeMappingDTO) GetReportedAttrName() string {
-	if o == nil || o.ReportedAttrName == nil {
+	if o == nil || isNil(o.ReportedAttrName) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *AttributeMappingDTO) GetReportedAttrName() string {
 // GetReportedAttrNameOk returns a tuple with the ReportedAttrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMappingDTO) GetReportedAttrNameOk() (*string, bool) {
-	if o == nil || o.ReportedAttrName == nil {
-		return nil, false
+	if o == nil || isNil(o.ReportedAttrName) {
+    return nil, false
 	}
 	return o.ReportedAttrName, true
 }
 
 // HasReportedAttrName returns a boolean if a field has been set.
 func (o *AttributeMappingDTO) HasReportedAttrName() bool {
-	if o != nil && o.ReportedAttrName != nil {
+	if o != nil && !isNil(o.ReportedAttrName) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *AttributeMappingDTO) SetReportedAttrName(v string) {
 
 // GetReportedAttrNameFormat returns the ReportedAttrNameFormat field value if set, zero value otherwise.
 func (o *AttributeMappingDTO) GetReportedAttrNameFormat() string {
-	if o == nil || o.ReportedAttrNameFormat == nil {
+	if o == nil || isNil(o.ReportedAttrNameFormat) {
 		var ret string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *AttributeMappingDTO) GetReportedAttrNameFormat() string {
 // GetReportedAttrNameFormatOk returns a tuple with the ReportedAttrNameFormat field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMappingDTO) GetReportedAttrNameFormatOk() (*string, bool) {
-	if o == nil || o.ReportedAttrNameFormat == nil {
-		return nil, false
+	if o == nil || isNil(o.ReportedAttrNameFormat) {
+    return nil, false
 	}
 	return o.ReportedAttrNameFormat, true
 }
 
 // HasReportedAttrNameFormat returns a boolean if a field has been set.
 func (o *AttributeMappingDTO) HasReportedAttrNameFormat() bool {
-	if o != nil && o.ReportedAttrNameFormat != nil {
+	if o != nil && !isNil(o.ReportedAttrNameFormat) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *AttributeMappingDTO) SetReportedAttrNameFormat(v string) {
 
 func (o AttributeMappingDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AttrName != nil {
+	if !isNil(o.AttrName) {
 		toSerialize["attrName"] = o.AttrName
 	}
-	if o.ReportedAttrName != nil {
+	if !isNil(o.ReportedAttrName) {
 		toSerialize["reportedAttrName"] = o.ReportedAttrName
 	}
-	if o.ReportedAttrNameFormat != nil {
+	if !isNil(o.ReportedAttrNameFormat) {
 		toSerialize["reportedAttrNameFormat"] = o.ReportedAttrNameFormat
 	}
 

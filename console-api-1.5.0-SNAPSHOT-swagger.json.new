@@ -704,6 +704,32 @@
         }
       }
     },
+    "/iam-deploy/execenv/cfg" : {
+      "get" : {
+        "operationId" : "exportExecEnvCfg",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ExportExecEnvCfgReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ExportExecEnvCfgRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/extsaml2sp" : {
       "get" : {
         "operationId" : "getExtSaml2Sp",
@@ -3948,6 +3974,37 @@
           "y" : {
             "type" : "number",
             "format" : "double"
+          }
+        }
+      },
+      "ExportExecEnvCfgReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ExportExecEnvCfgRes" : {
+        "type" : "object",
+        "properties" : {
+          "config" : {
+            "type" : "string"
+          },
+          "error" : {
+            "type" : "string"
+          },
+          "fileName" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },

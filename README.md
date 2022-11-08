@@ -121,6 +121,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**DeleteWeblogicExecEnv**](docs/DefaultApi.md#deleteweblogicexecenv) | **Delete** /iam-deploy/weblogicexecenv | 
+*DefaultApi* | [**ExportExecEnvCfg**](docs/DefaultApi.md#exportexecenvcfg) | **Get** /iam-deploy/execenv/cfg | 
 *DefaultApi* | [**GetAllBrandings**](docs/DefaultApi.md#getallbrandings) | **Get** /iam-branding/brandings | 
 *DefaultApi* | [**GetAppliance**](docs/DefaultApi.md#getappliance) | **Get** /iam-deploy/appliance | 
 *DefaultApi* | [**GetApplianceContainer**](docs/DefaultApi.md#getappliancecontainer) | **Get** /iam-deploy/appliance-container | 
@@ -231,6 +232,8 @@ Class | Method | HTTP request | Description
  - [EmbeddedIdentityVaultDTO](docs/EmbeddedIdentityVaultDTO.md)
  - [EntitySelectionStrategyDTO](docs/EntitySelectionStrategyDTO.md)
  - [ExecutionEnvironmentDTO](docs/ExecutionEnvironmentDTO.md)
+ - [ExportExecEnvCfgReq](docs/ExportExecEnvCfgReq.md)
+ - [ExportExecEnvCfgRes](docs/ExportExecEnvCfgRes.md)
  - [ExtensionDTO](docs/ExtensionDTO.md)
  - [ExternalOpenIDConnectRelayingPartyDTO](docs/ExternalOpenIDConnectRelayingPartyDTO.md)
  - [ExternalSaml2ServiceProviderDTO](docs/ExternalSaml2ServiceProviderDTO.md)

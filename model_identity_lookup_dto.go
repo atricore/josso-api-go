@@ -48,7 +48,7 @@ func NewIdentityLookupDTOWithDefaults() *IdentityLookupDTO {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -58,15 +58,15 @@ func (o *IdentityLookupDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -80,7 +80,7 @@ func (o *IdentityLookupDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -90,15 +90,15 @@ func (o *IdentityLookupDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -112,7 +112,7 @@ func (o *IdentityLookupDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -122,15 +122,15 @@ func (o *IdentityLookupDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -144,7 +144,7 @@ func (o *IdentityLookupDTO) SetId(v int64) {
 
 // GetIdentitySource returns the IdentitySource field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetIdentitySource() IdentitySourceDTO {
-	if o == nil || o.IdentitySource == nil {
+	if o == nil || isNil(o.IdentitySource) {
 		var ret IdentitySourceDTO
 		return ret
 	}
@@ -154,15 +154,15 @@ func (o *IdentityLookupDTO) GetIdentitySource() IdentitySourceDTO {
 // GetIdentitySourceOk returns a tuple with the IdentitySource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetIdentitySourceOk() (*IdentitySourceDTO, bool) {
-	if o == nil || o.IdentitySource == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentitySource) {
+    return nil, false
 	}
 	return o.IdentitySource, true
 }
 
 // HasIdentitySource returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasIdentitySource() bool {
-	if o != nil && o.IdentitySource != nil {
+	if o != nil && !isNil(o.IdentitySource) {
 		return true
 	}
 
@@ -176,7 +176,7 @@ func (o *IdentityLookupDTO) SetIdentitySource(v IdentitySourceDTO) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -186,15 +186,15 @@ func (o *IdentityLookupDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -208,7 +208,7 @@ func (o *IdentityLookupDTO) SetName(v string) {
 
 // GetProvider returns the Provider field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetProvider() ProviderDTO {
-	if o == nil || o.Provider == nil {
+	if o == nil || isNil(o.Provider) {
 		var ret ProviderDTO
 		return ret
 	}
@@ -218,15 +218,15 @@ func (o *IdentityLookupDTO) GetProvider() ProviderDTO {
 // GetProviderOk returns a tuple with the Provider field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetProviderOk() (*ProviderDTO, bool) {
-	if o == nil || o.Provider == nil {
-		return nil, false
+	if o == nil || isNil(o.Provider) {
+    return nil, false
 	}
 	return o.Provider, true
 }
 
 // HasProvider returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasProvider() bool {
-	if o != nil && o.Provider != nil {
+	if o != nil && !isNil(o.Provider) {
 		return true
 	}
 
@@ -240,7 +240,7 @@ func (o *IdentityLookupDTO) SetProvider(v ProviderDTO) {
 
 // GetWaypoints returns the Waypoints field value if set, zero value otherwise.
 func (o *IdentityLookupDTO) GetWaypoints() []PointDTO {
-	if o == nil || o.Waypoints == nil {
+	if o == nil || isNil(o.Waypoints) {
 		var ret []PointDTO
 		return ret
 	}
@@ -250,15 +250,15 @@ func (o *IdentityLookupDTO) GetWaypoints() []PointDTO {
 // GetWaypointsOk returns a tuple with the Waypoints field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityLookupDTO) GetWaypointsOk() ([]PointDTO, bool) {
-	if o == nil || o.Waypoints == nil {
-		return nil, false
+	if o == nil || isNil(o.Waypoints) {
+    return nil, false
 	}
 	return o.Waypoints, true
 }
 
 // HasWaypoints returns a boolean if a field has been set.
 func (o *IdentityLookupDTO) HasWaypoints() bool {
-	if o != nil && o.Waypoints != nil {
+	if o != nil && !isNil(o.Waypoints) {
 		return true
 	}
 
@@ -272,25 +272,25 @@ func (o *IdentityLookupDTO) SetWaypoints(v []PointDTO) {
 
 func (o IdentityLookupDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdentitySource != nil {
+	if !isNil(o.IdentitySource) {
 		toSerialize["identitySource"] = o.IdentitySource
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Provider != nil {
+	if !isNil(o.Provider) {
 		toSerialize["provider"] = o.Provider
 	}
-	if o.Waypoints != nil {
+	if !isNil(o.Waypoints) {
 		toSerialize["waypoints"] = o.Waypoints
 	}
 

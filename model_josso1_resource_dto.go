@@ -54,7 +54,7 @@ func NewJOSSO1ResourceDTOWithDefaults() *JOSSO1ResourceDTO {
 
 // GetActivation returns the Activation field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetActivation() ActivationDTO {
-	if o == nil || o.Activation == nil {
+	if o == nil || isNil(o.Activation) {
 		var ret ActivationDTO
 		return ret
 	}
@@ -64,15 +64,15 @@ func (o *JOSSO1ResourceDTO) GetActivation() ActivationDTO {
 // GetActivationOk returns a tuple with the Activation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetActivationOk() (*ActivationDTO, bool) {
-	if o == nil || o.Activation == nil {
-		return nil, false
+	if o == nil || isNil(o.Activation) {
+    return nil, false
 	}
 	return o.Activation, true
 }
 
 // HasActivation returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasActivation() bool {
-	if o != nil && o.Activation != nil {
+	if o != nil && !isNil(o.Activation) {
 		return true
 	}
 
@@ -86,7 +86,7 @@ func (o *JOSSO1ResourceDTO) SetActivation(v ActivationDTO) {
 
 // GetDefaultResource returns the DefaultResource field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetDefaultResource() string {
-	if o == nil || o.DefaultResource == nil {
+	if o == nil || isNil(o.DefaultResource) {
 		var ret string
 		return ret
 	}
@@ -96,15 +96,15 @@ func (o *JOSSO1ResourceDTO) GetDefaultResource() string {
 // GetDefaultResourceOk returns a tuple with the DefaultResource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetDefaultResourceOk() (*string, bool) {
-	if o == nil || o.DefaultResource == nil {
-		return nil, false
+	if o == nil || isNil(o.DefaultResource) {
+    return nil, false
 	}
 	return o.DefaultResource, true
 }
 
 // HasDefaultResource returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasDefaultResource() bool {
-	if o != nil && o.DefaultResource != nil {
+	if o != nil && !isNil(o.DefaultResource) {
 		return true
 	}
 
@@ -118,7 +118,7 @@ func (o *JOSSO1ResourceDTO) SetDefaultResource(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -128,15 +128,15 @@ func (o *JOSSO1ResourceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -150,7 +150,7 @@ func (o *JOSSO1ResourceDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -160,15 +160,15 @@ func (o *JOSSO1ResourceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -182,7 +182,7 @@ func (o *JOSSO1ResourceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -192,15 +192,15 @@ func (o *JOSSO1ResourceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -214,7 +214,7 @@ func (o *JOSSO1ResourceDTO) SetId(v int64) {
 
 // GetIgnoredWebResources returns the IgnoredWebResources field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetIgnoredWebResources() []string {
-	if o == nil || o.IgnoredWebResources == nil {
+	if o == nil || isNil(o.IgnoredWebResources) {
 		var ret []string
 		return ret
 	}
@@ -224,15 +224,15 @@ func (o *JOSSO1ResourceDTO) GetIgnoredWebResources() []string {
 // GetIgnoredWebResourcesOk returns a tuple with the IgnoredWebResources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetIgnoredWebResourcesOk() ([]string, bool) {
-	if o == nil || o.IgnoredWebResources == nil {
-		return nil, false
+	if o == nil || isNil(o.IgnoredWebResources) {
+    return nil, false
 	}
 	return o.IgnoredWebResources, true
 }
 
 // HasIgnoredWebResources returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasIgnoredWebResources() bool {
-	if o != nil && o.IgnoredWebResources != nil {
+	if o != nil && !isNil(o.IgnoredWebResources) {
 		return true
 	}
 
@@ -246,7 +246,7 @@ func (o *JOSSO1ResourceDTO) SetIgnoredWebResources(v []string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -256,15 +256,15 @@ func (o *JOSSO1ResourceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -278,7 +278,7 @@ func (o *JOSSO1ResourceDTO) SetName(v string) {
 
 // GetPartnerAppLocation returns the PartnerAppLocation field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetPartnerAppLocation() LocationDTO {
-	if o == nil || o.PartnerAppLocation == nil {
+	if o == nil || isNil(o.PartnerAppLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -288,15 +288,15 @@ func (o *JOSSO1ResourceDTO) GetPartnerAppLocation() LocationDTO {
 // GetPartnerAppLocationOk returns a tuple with the PartnerAppLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetPartnerAppLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.PartnerAppLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.PartnerAppLocation) {
+    return nil, false
 	}
 	return o.PartnerAppLocation, true
 }
 
 // HasPartnerAppLocation returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasPartnerAppLocation() bool {
-	if o != nil && o.PartnerAppLocation != nil {
+	if o != nil && !isNil(o.PartnerAppLocation) {
 		return true
 	}
 
@@ -310,7 +310,7 @@ func (o *JOSSO1ResourceDTO) SetPartnerAppLocation(v LocationDTO) {
 
 // GetServiceConnection returns the ServiceConnection field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetServiceConnection() ServiceConnectionDTO {
-	if o == nil || o.ServiceConnection == nil {
+	if o == nil || isNil(o.ServiceConnection) {
 		var ret ServiceConnectionDTO
 		return ret
 	}
@@ -320,15 +320,15 @@ func (o *JOSSO1ResourceDTO) GetServiceConnection() ServiceConnectionDTO {
 // GetServiceConnectionOk returns a tuple with the ServiceConnection field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetServiceConnectionOk() (*ServiceConnectionDTO, bool) {
-	if o == nil || o.ServiceConnection == nil {
-		return nil, false
+	if o == nil || isNil(o.ServiceConnection) {
+    return nil, false
 	}
 	return o.ServiceConnection, true
 }
 
 // HasServiceConnection returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasServiceConnection() bool {
-	if o != nil && o.ServiceConnection != nil {
+	if o != nil && !isNil(o.ServiceConnection) {
 		return true
 	}
 
@@ -342,7 +342,7 @@ func (o *JOSSO1ResourceDTO) SetServiceConnection(v ServiceConnectionDTO) {
 
 // GetSloLocation returns the SloLocation field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetSloLocation() LocationDTO {
-	if o == nil || o.SloLocation == nil {
+	if o == nil || isNil(o.SloLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -352,15 +352,15 @@ func (o *JOSSO1ResourceDTO) GetSloLocation() LocationDTO {
 // GetSloLocationOk returns a tuple with the SloLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetSloLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.SloLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.SloLocation) {
+    return nil, false
 	}
 	return o.SloLocation, true
 }
 
 // HasSloLocation returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasSloLocation() bool {
-	if o != nil && o.SloLocation != nil {
+	if o != nil && !isNil(o.SloLocation) {
 		return true
 	}
 
@@ -374,7 +374,7 @@ func (o *JOSSO1ResourceDTO) SetSloLocation(v LocationDTO) {
 
 // GetSloLocationEnabled returns the SloLocationEnabled field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetSloLocationEnabled() bool {
-	if o == nil || o.SloLocationEnabled == nil {
+	if o == nil || isNil(o.SloLocationEnabled) {
 		var ret bool
 		return ret
 	}
@@ -384,15 +384,15 @@ func (o *JOSSO1ResourceDTO) GetSloLocationEnabled() bool {
 // GetSloLocationEnabledOk returns a tuple with the SloLocationEnabled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetSloLocationEnabledOk() (*bool, bool) {
-	if o == nil || o.SloLocationEnabled == nil {
-		return nil, false
+	if o == nil || isNil(o.SloLocationEnabled) {
+    return nil, false
 	}
 	return o.SloLocationEnabled, true
 }
 
 // HasSloLocationEnabled returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasSloLocationEnabled() bool {
-	if o != nil && o.SloLocationEnabled != nil {
+	if o != nil && !isNil(o.SloLocationEnabled) {
 		return true
 	}
 
@@ -406,7 +406,7 @@ func (o *JOSSO1ResourceDTO) SetSloLocationEnabled(v bool) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -416,15 +416,15 @@ func (o *JOSSO1ResourceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -438,7 +438,7 @@ func (o *JOSSO1ResourceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *JOSSO1ResourceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -448,15 +448,15 @@ func (o *JOSSO1ResourceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *JOSSO1ResourceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *JOSSO1ResourceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -470,43 +470,43 @@ func (o *JOSSO1ResourceDTO) SetY(v float64) {
 
 func (o JOSSO1ResourceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Activation != nil {
+	if !isNil(o.Activation) {
 		toSerialize["activation"] = o.Activation
 	}
-	if o.DefaultResource != nil {
+	if !isNil(o.DefaultResource) {
 		toSerialize["defaultResource"] = o.DefaultResource
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IgnoredWebResources != nil {
+	if !isNil(o.IgnoredWebResources) {
 		toSerialize["ignoredWebResources"] = o.IgnoredWebResources
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.PartnerAppLocation != nil {
+	if !isNil(o.PartnerAppLocation) {
 		toSerialize["partnerAppLocation"] = o.PartnerAppLocation
 	}
-	if o.ServiceConnection != nil {
+	if !isNil(o.ServiceConnection) {
 		toSerialize["serviceConnection"] = o.ServiceConnection
 	}
-	if o.SloLocation != nil {
+	if !isNil(o.SloLocation) {
 		toSerialize["sloLocation"] = o.SloLocation
 	}
-	if o.SloLocationEnabled != nil {
+	if !isNil(o.SloLocationEnabled) {
 		toSerialize["sloLocationEnabled"] = o.SloLocationEnabled
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

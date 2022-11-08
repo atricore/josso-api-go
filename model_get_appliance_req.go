@@ -43,7 +43,7 @@ func NewGetApplianceReqWithDefaults() *GetApplianceReq {
 
 // GetIdOrName returns the IdOrName field value if set, zero value otherwise.
 func (o *GetApplianceReq) GetIdOrName() string {
-	if o == nil || o.IdOrName == nil {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *GetApplianceReq) GetIdOrName() string {
 // GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetApplianceReq) GetIdOrNameOk() (*string, bool) {
-	if o == nil || o.IdOrName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdOrName) {
+    return nil, false
 	}
 	return o.IdOrName, true
 }
 
 // HasIdOrName returns a boolean if a field has been set.
 func (o *GetApplianceReq) HasIdOrName() bool {
-	if o != nil && o.IdOrName != nil {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *GetApplianceReq) SetIdOrName(v string) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *GetApplianceReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *GetApplianceReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetApplianceReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *GetApplianceReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *GetApplianceReq) SetIdaName(v string) {
 
 func (o GetApplianceReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdOrName != nil {
+	if !isNil(o.IdOrName) {
 		toSerialize["idOrName"] = o.IdOrName
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
 

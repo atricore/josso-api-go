@@ -43,7 +43,7 @@ func NewStoreOidcRpReqWithDefaults() *StoreOidcRpReq {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreOidcRpReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreOidcRpReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreOidcRpReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreOidcRpReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreOidcRpReq) SetIdaName(v string) {
 
 // GetOidcRp returns the OidcRp field value if set, zero value otherwise.
 func (o *StoreOidcRpReq) GetOidcRp() ExternalOpenIDConnectRelayingPartyDTO {
-	if o == nil || o.OidcRp == nil {
+	if o == nil || isNil(o.OidcRp) {
 		var ret ExternalOpenIDConnectRelayingPartyDTO
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreOidcRpReq) GetOidcRp() ExternalOpenIDConnectRelayingPartyDTO {
 // GetOidcRpOk returns a tuple with the OidcRp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreOidcRpReq) GetOidcRpOk() (*ExternalOpenIDConnectRelayingPartyDTO, bool) {
-	if o == nil || o.OidcRp == nil {
-		return nil, false
+	if o == nil || isNil(o.OidcRp) {
+    return nil, false
 	}
 	return o.OidcRp, true
 }
 
 // HasOidcRp returns a boolean if a field has been set.
 func (o *StoreOidcRpReq) HasOidcRp() bool {
-	if o != nil && o.OidcRp != nil {
+	if o != nil && !isNil(o.OidcRp) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreOidcRpReq) SetOidcRp(v ExternalOpenIDConnectRelayingPartyDTO) {
 
 func (o StoreOidcRpReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.OidcRp != nil {
+	if !isNil(o.OidcRp) {
 		toSerialize["oidcRp"] = o.OidcRp
 	}
 

@@ -43,7 +43,7 @@ func NewStoreIntSaml2SpReqWithDefaults() *StoreIntSaml2SpReq {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreIntSaml2SpReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreIntSaml2SpReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIntSaml2SpReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreIntSaml2SpReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreIntSaml2SpReq) SetIdaName(v string) {
 
 // GetSp returns the Sp field value if set, zero value otherwise.
 func (o *StoreIntSaml2SpReq) GetSp() InternalSaml2ServiceProviderDTO {
-	if o == nil || o.Sp == nil {
+	if o == nil || isNil(o.Sp) {
 		var ret InternalSaml2ServiceProviderDTO
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreIntSaml2SpReq) GetSp() InternalSaml2ServiceProviderDTO {
 // GetSpOk returns a tuple with the Sp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIntSaml2SpReq) GetSpOk() (*InternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Sp == nil {
-		return nil, false
+	if o == nil || isNil(o.Sp) {
+    return nil, false
 	}
 	return o.Sp, true
 }
 
 // HasSp returns a boolean if a field has been set.
 func (o *StoreIntSaml2SpReq) HasSp() bool {
-	if o != nil && o.Sp != nil {
+	if o != nil && !isNil(o.Sp) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreIntSaml2SpReq) SetSp(v InternalSaml2ServiceProviderDTO) {
 
 func (o StoreIntSaml2SpReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Sp != nil {
+	if !isNil(o.Sp) {
 		toSerialize["sp"] = o.Sp
 	}
 

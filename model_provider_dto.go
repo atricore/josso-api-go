@@ -57,7 +57,7 @@ func NewProviderDTOWithDefaults() *ProviderDTO {
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *ProviderDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -67,15 +67,15 @@ func (o *ProviderDTO) GetActiveBindings() []string {
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *ProviderDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -89,7 +89,7 @@ func (o *ProviderDTO) SetActiveBindings(v []string) {
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *ProviderDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -99,15 +99,15 @@ func (o *ProviderDTO) GetActiveProfiles() []string {
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *ProviderDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -121,7 +121,7 @@ func (o *ProviderDTO) SetActiveProfiles(v []string) {
 
 // GetConfig returns the Config field value if set, zero value otherwise.
 func (o *ProviderDTO) GetConfig() ProviderConfigDTO {
-	if o == nil || o.Config == nil {
+	if o == nil || isNil(o.Config) {
 		var ret ProviderConfigDTO
 		return ret
 	}
@@ -131,15 +131,15 @@ func (o *ProviderDTO) GetConfig() ProviderConfigDTO {
 // GetConfigOk returns a tuple with the Config field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetConfigOk() (*ProviderConfigDTO, bool) {
-	if o == nil || o.Config == nil {
-		return nil, false
+	if o == nil || isNil(o.Config) {
+    return nil, false
 	}
 	return o.Config, true
 }
 
 // HasConfig returns a boolean if a field has been set.
 func (o *ProviderDTO) HasConfig() bool {
-	if o != nil && o.Config != nil {
+	if o != nil && !isNil(o.Config) {
 		return true
 	}
 
@@ -153,7 +153,7 @@ func (o *ProviderDTO) SetConfig(v ProviderConfigDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *ProviderDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -163,15 +163,15 @@ func (o *ProviderDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *ProviderDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -185,7 +185,7 @@ func (o *ProviderDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *ProviderDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -195,15 +195,15 @@ func (o *ProviderDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *ProviderDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -217,7 +217,7 @@ func (o *ProviderDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *ProviderDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -227,15 +227,15 @@ func (o *ProviderDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *ProviderDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -249,7 +249,7 @@ func (o *ProviderDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *ProviderDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -259,15 +259,15 @@ func (o *ProviderDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *ProviderDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -281,7 +281,7 @@ func (o *ProviderDTO) SetId(v int64) {
 
 // GetIdentityAppliance returns the IdentityAppliance field value if set, zero value otherwise.
 func (o *ProviderDTO) GetIdentityAppliance() IdentityApplianceDefinitionDTO {
-	if o == nil || o.IdentityAppliance == nil {
+	if o == nil || isNil(o.IdentityAppliance) {
 		var ret IdentityApplianceDefinitionDTO
 		return ret
 	}
@@ -291,15 +291,15 @@ func (o *ProviderDTO) GetIdentityAppliance() IdentityApplianceDefinitionDTO {
 // GetIdentityApplianceOk returns a tuple with the IdentityAppliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetIdentityApplianceOk() (*IdentityApplianceDefinitionDTO, bool) {
-	if o == nil || o.IdentityAppliance == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityAppliance) {
+    return nil, false
 	}
 	return o.IdentityAppliance, true
 }
 
 // HasIdentityAppliance returns a boolean if a field has been set.
 func (o *ProviderDTO) HasIdentityAppliance() bool {
-	if o != nil && o.IdentityAppliance != nil {
+	if o != nil && !isNil(o.IdentityAppliance) {
 		return true
 	}
 
@@ -313,7 +313,7 @@ func (o *ProviderDTO) SetIdentityAppliance(v IdentityApplianceDefinitionDTO) {
 
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.
 func (o *ProviderDTO) GetIsRemote() bool {
-	if o == nil || o.IsRemote == nil {
+	if o == nil || isNil(o.IsRemote) {
 		var ret bool
 		return ret
 	}
@@ -323,15 +323,15 @@ func (o *ProviderDTO) GetIsRemote() bool {
 // GetIsRemoteOk returns a tuple with the IsRemote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetIsRemoteOk() (*bool, bool) {
-	if o == nil || o.IsRemote == nil {
-		return nil, false
+	if o == nil || isNil(o.IsRemote) {
+    return nil, false
 	}
 	return o.IsRemote, true
 }
 
 // HasIsRemote returns a boolean if a field has been set.
 func (o *ProviderDTO) HasIsRemote() bool {
-	if o != nil && o.IsRemote != nil {
+	if o != nil && !isNil(o.IsRemote) {
 		return true
 	}
 
@@ -345,7 +345,7 @@ func (o *ProviderDTO) SetIsRemote(v bool) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *ProviderDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -355,15 +355,15 @@ func (o *ProviderDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *ProviderDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -377,7 +377,7 @@ func (o *ProviderDTO) SetLocation(v LocationDTO) {
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
 func (o *ProviderDTO) GetMetadata() ResourceDTO {
-	if o == nil || o.Metadata == nil {
+	if o == nil || isNil(o.Metadata) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -387,15 +387,15 @@ func (o *ProviderDTO) GetMetadata() ResourceDTO {
 // GetMetadataOk returns a tuple with the Metadata field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetMetadataOk() (*ResourceDTO, bool) {
-	if o == nil || o.Metadata == nil {
-		return nil, false
+	if o == nil || isNil(o.Metadata) {
+    return nil, false
 	}
 	return o.Metadata, true
 }
 
 // HasMetadata returns a boolean if a field has been set.
 func (o *ProviderDTO) HasMetadata() bool {
-	if o != nil && o.Metadata != nil {
+	if o != nil && !isNil(o.Metadata) {
 		return true
 	}
 
@@ -409,7 +409,7 @@ func (o *ProviderDTO) SetMetadata(v ResourceDTO) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ProviderDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -419,15 +419,15 @@ func (o *ProviderDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ProviderDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -441,7 +441,7 @@ func (o *ProviderDTO) SetName(v string) {
 
 // GetRemote returns the Remote field value if set, zero value otherwise.
 func (o *ProviderDTO) GetRemote() bool {
-	if o == nil || o.Remote == nil {
+	if o == nil || isNil(o.Remote) {
 		var ret bool
 		return ret
 	}
@@ -451,15 +451,15 @@ func (o *ProviderDTO) GetRemote() bool {
 // GetRemoteOk returns a tuple with the Remote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetRemoteOk() (*bool, bool) {
-	if o == nil || o.Remote == nil {
-		return nil, false
+	if o == nil || isNil(o.Remote) {
+    return nil, false
 	}
 	return o.Remote, true
 }
 
 // HasRemote returns a boolean if a field has been set.
 func (o *ProviderDTO) HasRemote() bool {
-	if o != nil && o.Remote != nil {
+	if o != nil && !isNil(o.Remote) {
 		return true
 	}
 
@@ -473,7 +473,7 @@ func (o *ProviderDTO) SetRemote(v bool) {
 
 // GetRole returns the Role field value if set, zero value otherwise.
 func (o *ProviderDTO) GetRole() string {
-	if o == nil || o.Role == nil {
+	if o == nil || isNil(o.Role) {
 		var ret string
 		return ret
 	}
@@ -483,15 +483,15 @@ func (o *ProviderDTO) GetRole() string {
 // GetRoleOk returns a tuple with the Role field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetRoleOk() (*string, bool) {
-	if o == nil || o.Role == nil {
-		return nil, false
+	if o == nil || isNil(o.Role) {
+    return nil, false
 	}
 	return o.Role, true
 }
 
 // HasRole returns a boolean if a field has been set.
 func (o *ProviderDTO) HasRole() bool {
-	if o != nil && o.Role != nil {
+	if o != nil && !isNil(o.Role) {
 		return true
 	}
 
@@ -505,7 +505,7 @@ func (o *ProviderDTO) SetRole(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *ProviderDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -515,15 +515,15 @@ func (o *ProviderDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *ProviderDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -537,7 +537,7 @@ func (o *ProviderDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *ProviderDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -547,15 +547,15 @@ func (o *ProviderDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *ProviderDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -569,52 +569,52 @@ func (o *ProviderDTO) SetY(v float64) {
 
 func (o ProviderDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.Config != nil {
+	if !isNil(o.Config) {
 		toSerialize["config"] = o.Config
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdentityAppliance != nil {
+	if !isNil(o.IdentityAppliance) {
 		toSerialize["identityAppliance"] = o.IdentityAppliance
 	}
-	if o.IsRemote != nil {
+	if !isNil(o.IsRemote) {
 		toSerialize["isRemote"] = o.IsRemote
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Metadata != nil {
+	if !isNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Remote != nil {
+	if !isNil(o.Remote) {
 		toSerialize["remote"] = o.Remote
 	}
-	if o.Role != nil {
+	if !isNil(o.Role) {
 		toSerialize["role"] = o.Role
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

@@ -66,7 +66,7 @@ func NewLdapIdentitySourceDTOWithDefaults() *LdapIdentitySourceDTO {
 
 // GetCredentialQueryString returns the CredentialQueryString field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetCredentialQueryString() string {
-	if o == nil || o.CredentialQueryString == nil {
+	if o == nil || isNil(o.CredentialQueryString) {
 		var ret string
 		return ret
 	}
@@ -76,15 +76,15 @@ func (o *LdapIdentitySourceDTO) GetCredentialQueryString() string {
 // GetCredentialQueryStringOk returns a tuple with the CredentialQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetCredentialQueryStringOk() (*string, bool) {
-	if o == nil || o.CredentialQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.CredentialQueryString) {
+    return nil, false
 	}
 	return o.CredentialQueryString, true
 }
 
 // HasCredentialQueryString returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasCredentialQueryString() bool {
-	if o != nil && o.CredentialQueryString != nil {
+	if o != nil && !isNil(o.CredentialQueryString) {
 		return true
 	}
 
@@ -98,7 +98,7 @@ func (o *LdapIdentitySourceDTO) SetCredentialQueryString(v string) {
 
 // GetCustomClass returns the CustomClass field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetCustomClass() CustomClassDTO {
-	if o == nil || o.CustomClass == nil {
+	if o == nil || isNil(o.CustomClass) {
 		var ret CustomClassDTO
 		return ret
 	}
@@ -108,15 +108,15 @@ func (o *LdapIdentitySourceDTO) GetCustomClass() CustomClassDTO {
 // GetCustomClassOk returns a tuple with the CustomClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetCustomClassOk() (*CustomClassDTO, bool) {
-	if o == nil || o.CustomClass == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomClass) {
+    return nil, false
 	}
 	return o.CustomClass, true
 }
 
 // HasCustomClass returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasCustomClass() bool {
-	if o != nil && o.CustomClass != nil {
+	if o != nil && !isNil(o.CustomClass) {
 		return true
 	}
 
@@ -130,7 +130,7 @@ func (o *LdapIdentitySourceDTO) SetCustomClass(v CustomClassDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -140,15 +140,15 @@ func (o *LdapIdentitySourceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -162,7 +162,7 @@ func (o *LdapIdentitySourceDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -172,15 +172,15 @@ func (o *LdapIdentitySourceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -194,7 +194,7 @@ func (o *LdapIdentitySourceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -204,15 +204,15 @@ func (o *LdapIdentitySourceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -226,7 +226,7 @@ func (o *LdapIdentitySourceDTO) SetId(v int64) {
 
 // GetIncludeOperationalAttributes returns the IncludeOperationalAttributes field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetIncludeOperationalAttributes() bool {
-	if o == nil || o.IncludeOperationalAttributes == nil {
+	if o == nil || isNil(o.IncludeOperationalAttributes) {
 		var ret bool
 		return ret
 	}
@@ -236,15 +236,15 @@ func (o *LdapIdentitySourceDTO) GetIncludeOperationalAttributes() bool {
 // GetIncludeOperationalAttributesOk returns a tuple with the IncludeOperationalAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetIncludeOperationalAttributesOk() (*bool, bool) {
-	if o == nil || o.IncludeOperationalAttributes == nil {
-		return nil, false
+	if o == nil || isNil(o.IncludeOperationalAttributes) {
+    return nil, false
 	}
 	return o.IncludeOperationalAttributes, true
 }
 
 // HasIncludeOperationalAttributes returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasIncludeOperationalAttributes() bool {
-	if o != nil && o.IncludeOperationalAttributes != nil {
+	if o != nil && !isNil(o.IncludeOperationalAttributes) {
 		return true
 	}
 
@@ -258,7 +258,7 @@ func (o *LdapIdentitySourceDTO) SetIncludeOperationalAttributes(v bool) {
 
 // GetInitialContextFactory returns the InitialContextFactory field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetInitialContextFactory() string {
-	if o == nil || o.InitialContextFactory == nil {
+	if o == nil || isNil(o.InitialContextFactory) {
 		var ret string
 		return ret
 	}
@@ -268,15 +268,15 @@ func (o *LdapIdentitySourceDTO) GetInitialContextFactory() string {
 // GetInitialContextFactoryOk returns a tuple with the InitialContextFactory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetInitialContextFactoryOk() (*string, bool) {
-	if o == nil || o.InitialContextFactory == nil {
-		return nil, false
+	if o == nil || isNil(o.InitialContextFactory) {
+    return nil, false
 	}
 	return o.InitialContextFactory, true
 }
 
 // HasInitialContextFactory returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasInitialContextFactory() bool {
-	if o != nil && o.InitialContextFactory != nil {
+	if o != nil && !isNil(o.InitialContextFactory) {
 		return true
 	}
 
@@ -290,7 +290,7 @@ func (o *LdapIdentitySourceDTO) SetInitialContextFactory(v string) {
 
 // GetLdapSearchScope returns the LdapSearchScope field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetLdapSearchScope() string {
-	if o == nil || o.LdapSearchScope == nil {
+	if o == nil || isNil(o.LdapSearchScope) {
 		var ret string
 		return ret
 	}
@@ -300,15 +300,15 @@ func (o *LdapIdentitySourceDTO) GetLdapSearchScope() string {
 // GetLdapSearchScopeOk returns a tuple with the LdapSearchScope field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetLdapSearchScopeOk() (*string, bool) {
-	if o == nil || o.LdapSearchScope == nil {
-		return nil, false
+	if o == nil || isNil(o.LdapSearchScope) {
+    return nil, false
 	}
 	return o.LdapSearchScope, true
 }
 
 // HasLdapSearchScope returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasLdapSearchScope() bool {
-	if o != nil && o.LdapSearchScope != nil {
+	if o != nil && !isNil(o.LdapSearchScope) {
 		return true
 	}
 
@@ -322,7 +322,7 @@ func (o *LdapIdentitySourceDTO) SetLdapSearchScope(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -332,15 +332,15 @@ func (o *LdapIdentitySourceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -354,7 +354,7 @@ func (o *LdapIdentitySourceDTO) SetName(v string) {
 
 // GetPrincipalUidAttributeID returns the PrincipalUidAttributeID field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetPrincipalUidAttributeID() string {
-	if o == nil || o.PrincipalUidAttributeID == nil {
+	if o == nil || isNil(o.PrincipalUidAttributeID) {
 		var ret string
 		return ret
 	}
@@ -364,15 +364,15 @@ func (o *LdapIdentitySourceDTO) GetPrincipalUidAttributeID() string {
 // GetPrincipalUidAttributeIDOk returns a tuple with the PrincipalUidAttributeID field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetPrincipalUidAttributeIDOk() (*string, bool) {
-	if o == nil || o.PrincipalUidAttributeID == nil {
-		return nil, false
+	if o == nil || isNil(o.PrincipalUidAttributeID) {
+    return nil, false
 	}
 	return o.PrincipalUidAttributeID, true
 }
 
 // HasPrincipalUidAttributeID returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasPrincipalUidAttributeID() bool {
-	if o != nil && o.PrincipalUidAttributeID != nil {
+	if o != nil && !isNil(o.PrincipalUidAttributeID) {
 		return true
 	}
 
@@ -386,7 +386,7 @@ func (o *LdapIdentitySourceDTO) SetPrincipalUidAttributeID(v string) {
 
 // GetProviderUrl returns the ProviderUrl field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetProviderUrl() string {
-	if o == nil || o.ProviderUrl == nil {
+	if o == nil || isNil(o.ProviderUrl) {
 		var ret string
 		return ret
 	}
@@ -396,15 +396,15 @@ func (o *LdapIdentitySourceDTO) GetProviderUrl() string {
 // GetProviderUrlOk returns a tuple with the ProviderUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetProviderUrlOk() (*string, bool) {
-	if o == nil || o.ProviderUrl == nil {
-		return nil, false
+	if o == nil || isNil(o.ProviderUrl) {
+    return nil, false
 	}
 	return o.ProviderUrl, true
 }
 
 // HasProviderUrl returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasProviderUrl() bool {
-	if o != nil && o.ProviderUrl != nil {
+	if o != nil && !isNil(o.ProviderUrl) {
 		return true
 	}
 
@@ -418,7 +418,7 @@ func (o *LdapIdentitySourceDTO) SetProviderUrl(v string) {
 
 // GetReferrals returns the Referrals field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetReferrals() string {
-	if o == nil || o.Referrals == nil {
+	if o == nil || isNil(o.Referrals) {
 		var ret string
 		return ret
 	}
@@ -428,15 +428,15 @@ func (o *LdapIdentitySourceDTO) GetReferrals() string {
 // GetReferralsOk returns a tuple with the Referrals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetReferralsOk() (*string, bool) {
-	if o == nil || o.Referrals == nil {
-		return nil, false
+	if o == nil || isNil(o.Referrals) {
+    return nil, false
 	}
 	return o.Referrals, true
 }
 
 // HasReferrals returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasReferrals() bool {
-	if o != nil && o.Referrals != nil {
+	if o != nil && !isNil(o.Referrals) {
 		return true
 	}
 
@@ -450,7 +450,7 @@ func (o *LdapIdentitySourceDTO) SetReferrals(v string) {
 
 // GetRoleAttributeID returns the RoleAttributeID field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetRoleAttributeID() string {
-	if o == nil || o.RoleAttributeID == nil {
+	if o == nil || isNil(o.RoleAttributeID) {
 		var ret string
 		return ret
 	}
@@ -460,15 +460,15 @@ func (o *LdapIdentitySourceDTO) GetRoleAttributeID() string {
 // GetRoleAttributeIDOk returns a tuple with the RoleAttributeID field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetRoleAttributeIDOk() (*string, bool) {
-	if o == nil || o.RoleAttributeID == nil {
-		return nil, false
+	if o == nil || isNil(o.RoleAttributeID) {
+    return nil, false
 	}
 	return o.RoleAttributeID, true
 }
 
 // HasRoleAttributeID returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasRoleAttributeID() bool {
-	if o != nil && o.RoleAttributeID != nil {
+	if o != nil && !isNil(o.RoleAttributeID) {
 		return true
 	}
 
@@ -482,7 +482,7 @@ func (o *LdapIdentitySourceDTO) SetRoleAttributeID(v string) {
 
 // GetRoleMatchingMode returns the RoleMatchingMode field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetRoleMatchingMode() string {
-	if o == nil || o.RoleMatchingMode == nil {
+	if o == nil || isNil(o.RoleMatchingMode) {
 		var ret string
 		return ret
 	}
@@ -492,15 +492,15 @@ func (o *LdapIdentitySourceDTO) GetRoleMatchingMode() string {
 // GetRoleMatchingModeOk returns a tuple with the RoleMatchingMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetRoleMatchingModeOk() (*string, bool) {
-	if o == nil || o.RoleMatchingMode == nil {
-		return nil, false
+	if o == nil || isNil(o.RoleMatchingMode) {
+    return nil, false
 	}
 	return o.RoleMatchingMode, true
 }
 
 // HasRoleMatchingMode returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasRoleMatchingMode() bool {
-	if o != nil && o.RoleMatchingMode != nil {
+	if o != nil && !isNil(o.RoleMatchingMode) {
 		return true
 	}
 
@@ -514,7 +514,7 @@ func (o *LdapIdentitySourceDTO) SetRoleMatchingMode(v string) {
 
 // GetRolesCtxDN returns the RolesCtxDN field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetRolesCtxDN() string {
-	if o == nil || o.RolesCtxDN == nil {
+	if o == nil || isNil(o.RolesCtxDN) {
 		var ret string
 		return ret
 	}
@@ -524,15 +524,15 @@ func (o *LdapIdentitySourceDTO) GetRolesCtxDN() string {
 // GetRolesCtxDNOk returns a tuple with the RolesCtxDN field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetRolesCtxDNOk() (*string, bool) {
-	if o == nil || o.RolesCtxDN == nil {
-		return nil, false
+	if o == nil || isNil(o.RolesCtxDN) {
+    return nil, false
 	}
 	return o.RolesCtxDN, true
 }
 
 // HasRolesCtxDN returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasRolesCtxDN() bool {
-	if o != nil && o.RolesCtxDN != nil {
+	if o != nil && !isNil(o.RolesCtxDN) {
 		return true
 	}
 
@@ -546,7 +546,7 @@ func (o *LdapIdentitySourceDTO) SetRolesCtxDN(v string) {
 
 // GetSecurityAuthentication returns the SecurityAuthentication field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetSecurityAuthentication() string {
-	if o == nil || o.SecurityAuthentication == nil {
+	if o == nil || isNil(o.SecurityAuthentication) {
 		var ret string
 		return ret
 	}
@@ -556,15 +556,15 @@ func (o *LdapIdentitySourceDTO) GetSecurityAuthentication() string {
 // GetSecurityAuthenticationOk returns a tuple with the SecurityAuthentication field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetSecurityAuthenticationOk() (*string, bool) {
-	if o == nil || o.SecurityAuthentication == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityAuthentication) {
+    return nil, false
 	}
 	return o.SecurityAuthentication, true
 }
 
 // HasSecurityAuthentication returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasSecurityAuthentication() bool {
-	if o != nil && o.SecurityAuthentication != nil {
+	if o != nil && !isNil(o.SecurityAuthentication) {
 		return true
 	}
 
@@ -578,7 +578,7 @@ func (o *LdapIdentitySourceDTO) SetSecurityAuthentication(v string) {
 
 // GetSecurityCredential returns the SecurityCredential field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetSecurityCredential() string {
-	if o == nil || o.SecurityCredential == nil {
+	if o == nil || isNil(o.SecurityCredential) {
 		var ret string
 		return ret
 	}
@@ -588,15 +588,15 @@ func (o *LdapIdentitySourceDTO) GetSecurityCredential() string {
 // GetSecurityCredentialOk returns a tuple with the SecurityCredential field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetSecurityCredentialOk() (*string, bool) {
-	if o == nil || o.SecurityCredential == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityCredential) {
+    return nil, false
 	}
 	return o.SecurityCredential, true
 }
 
 // HasSecurityCredential returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasSecurityCredential() bool {
-	if o != nil && o.SecurityCredential != nil {
+	if o != nil && !isNil(o.SecurityCredential) {
 		return true
 	}
 
@@ -610,7 +610,7 @@ func (o *LdapIdentitySourceDTO) SetSecurityCredential(v string) {
 
 // GetSecurityPrincipal returns the SecurityPrincipal field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetSecurityPrincipal() string {
-	if o == nil || o.SecurityPrincipal == nil {
+	if o == nil || isNil(o.SecurityPrincipal) {
 		var ret string
 		return ret
 	}
@@ -620,15 +620,15 @@ func (o *LdapIdentitySourceDTO) GetSecurityPrincipal() string {
 // GetSecurityPrincipalOk returns a tuple with the SecurityPrincipal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetSecurityPrincipalOk() (*string, bool) {
-	if o == nil || o.SecurityPrincipal == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityPrincipal) {
+    return nil, false
 	}
 	return o.SecurityPrincipal, true
 }
 
 // HasSecurityPrincipal returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasSecurityPrincipal() bool {
-	if o != nil && o.SecurityPrincipal != nil {
+	if o != nil && !isNil(o.SecurityPrincipal) {
 		return true
 	}
 
@@ -642,7 +642,7 @@ func (o *LdapIdentitySourceDTO) SetSecurityPrincipal(v string) {
 
 // GetUidAttributeID returns the UidAttributeID field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetUidAttributeID() string {
-	if o == nil || o.UidAttributeID == nil {
+	if o == nil || isNil(o.UidAttributeID) {
 		var ret string
 		return ret
 	}
@@ -652,15 +652,15 @@ func (o *LdapIdentitySourceDTO) GetUidAttributeID() string {
 // GetUidAttributeIDOk returns a tuple with the UidAttributeID field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetUidAttributeIDOk() (*string, bool) {
-	if o == nil || o.UidAttributeID == nil {
-		return nil, false
+	if o == nil || isNil(o.UidAttributeID) {
+    return nil, false
 	}
 	return o.UidAttributeID, true
 }
 
 // HasUidAttributeID returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasUidAttributeID() bool {
-	if o != nil && o.UidAttributeID != nil {
+	if o != nil && !isNil(o.UidAttributeID) {
 		return true
 	}
 
@@ -674,7 +674,7 @@ func (o *LdapIdentitySourceDTO) SetUidAttributeID(v string) {
 
 // GetUpdatePasswordEnabled returns the UpdatePasswordEnabled field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetUpdatePasswordEnabled() bool {
-	if o == nil || o.UpdatePasswordEnabled == nil {
+	if o == nil || isNil(o.UpdatePasswordEnabled) {
 		var ret bool
 		return ret
 	}
@@ -684,15 +684,15 @@ func (o *LdapIdentitySourceDTO) GetUpdatePasswordEnabled() bool {
 // GetUpdatePasswordEnabledOk returns a tuple with the UpdatePasswordEnabled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetUpdatePasswordEnabledOk() (*bool, bool) {
-	if o == nil || o.UpdatePasswordEnabled == nil {
-		return nil, false
+	if o == nil || isNil(o.UpdatePasswordEnabled) {
+    return nil, false
 	}
 	return o.UpdatePasswordEnabled, true
 }
 
 // HasUpdatePasswordEnabled returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasUpdatePasswordEnabled() bool {
-	if o != nil && o.UpdatePasswordEnabled != nil {
+	if o != nil && !isNil(o.UpdatePasswordEnabled) {
 		return true
 	}
 
@@ -706,7 +706,7 @@ func (o *LdapIdentitySourceDTO) SetUpdatePasswordEnabled(v bool) {
 
 // GetUpdateableCredentialAttribute returns the UpdateableCredentialAttribute field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetUpdateableCredentialAttribute() string {
-	if o == nil || o.UpdateableCredentialAttribute == nil {
+	if o == nil || isNil(o.UpdateableCredentialAttribute) {
 		var ret string
 		return ret
 	}
@@ -716,15 +716,15 @@ func (o *LdapIdentitySourceDTO) GetUpdateableCredentialAttribute() string {
 // GetUpdateableCredentialAttributeOk returns a tuple with the UpdateableCredentialAttribute field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetUpdateableCredentialAttributeOk() (*string, bool) {
-	if o == nil || o.UpdateableCredentialAttribute == nil {
-		return nil, false
+	if o == nil || isNil(o.UpdateableCredentialAttribute) {
+    return nil, false
 	}
 	return o.UpdateableCredentialAttribute, true
 }
 
 // HasUpdateableCredentialAttribute returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasUpdateableCredentialAttribute() bool {
-	if o != nil && o.UpdateableCredentialAttribute != nil {
+	if o != nil && !isNil(o.UpdateableCredentialAttribute) {
 		return true
 	}
 
@@ -738,7 +738,7 @@ func (o *LdapIdentitySourceDTO) SetUpdateableCredentialAttribute(v string) {
 
 // GetUserPropertiesQueryString returns the UserPropertiesQueryString field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetUserPropertiesQueryString() string {
-	if o == nil || o.UserPropertiesQueryString == nil {
+	if o == nil || isNil(o.UserPropertiesQueryString) {
 		var ret string
 		return ret
 	}
@@ -748,15 +748,15 @@ func (o *LdapIdentitySourceDTO) GetUserPropertiesQueryString() string {
 // GetUserPropertiesQueryStringOk returns a tuple with the UserPropertiesQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetUserPropertiesQueryStringOk() (*string, bool) {
-	if o == nil || o.UserPropertiesQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.UserPropertiesQueryString) {
+    return nil, false
 	}
 	return o.UserPropertiesQueryString, true
 }
 
 // HasUserPropertiesQueryString returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasUserPropertiesQueryString() bool {
-	if o != nil && o.UserPropertiesQueryString != nil {
+	if o != nil && !isNil(o.UserPropertiesQueryString) {
 		return true
 	}
 
@@ -770,7 +770,7 @@ func (o *LdapIdentitySourceDTO) SetUserPropertiesQueryString(v string) {
 
 // GetUsersCtxDN returns the UsersCtxDN field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetUsersCtxDN() string {
-	if o == nil || o.UsersCtxDN == nil {
+	if o == nil || isNil(o.UsersCtxDN) {
 		var ret string
 		return ret
 	}
@@ -780,15 +780,15 @@ func (o *LdapIdentitySourceDTO) GetUsersCtxDN() string {
 // GetUsersCtxDNOk returns a tuple with the UsersCtxDN field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetUsersCtxDNOk() (*string, bool) {
-	if o == nil || o.UsersCtxDN == nil {
-		return nil, false
+	if o == nil || isNil(o.UsersCtxDN) {
+    return nil, false
 	}
 	return o.UsersCtxDN, true
 }
 
 // HasUsersCtxDN returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasUsersCtxDN() bool {
-	if o != nil && o.UsersCtxDN != nil {
+	if o != nil && !isNil(o.UsersCtxDN) {
 		return true
 	}
 
@@ -802,7 +802,7 @@ func (o *LdapIdentitySourceDTO) SetUsersCtxDN(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -812,15 +812,15 @@ func (o *LdapIdentitySourceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -834,7 +834,7 @@ func (o *LdapIdentitySourceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *LdapIdentitySourceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -844,15 +844,15 @@ func (o *LdapIdentitySourceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LdapIdentitySourceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *LdapIdentitySourceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -866,79 +866,79 @@ func (o *LdapIdentitySourceDTO) SetY(v float64) {
 
 func (o LdapIdentitySourceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CredentialQueryString != nil {
+	if !isNil(o.CredentialQueryString) {
 		toSerialize["credentialQueryString"] = o.CredentialQueryString
 	}
-	if o.CustomClass != nil {
+	if !isNil(o.CustomClass) {
 		toSerialize["customClass"] = o.CustomClass
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IncludeOperationalAttributes != nil {
+	if !isNil(o.IncludeOperationalAttributes) {
 		toSerialize["includeOperationalAttributes"] = o.IncludeOperationalAttributes
 	}
-	if o.InitialContextFactory != nil {
+	if !isNil(o.InitialContextFactory) {
 		toSerialize["initialContextFactory"] = o.InitialContextFactory
 	}
-	if o.LdapSearchScope != nil {
+	if !isNil(o.LdapSearchScope) {
 		toSerialize["ldapSearchScope"] = o.LdapSearchScope
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.PrincipalUidAttributeID != nil {
+	if !isNil(o.PrincipalUidAttributeID) {
 		toSerialize["principalUidAttributeID"] = o.PrincipalUidAttributeID
 	}
-	if o.ProviderUrl != nil {
+	if !isNil(o.ProviderUrl) {
 		toSerialize["providerUrl"] = o.ProviderUrl
 	}
-	if o.Referrals != nil {
+	if !isNil(o.Referrals) {
 		toSerialize["referrals"] = o.Referrals
 	}
-	if o.RoleAttributeID != nil {
+	if !isNil(o.RoleAttributeID) {
 		toSerialize["roleAttributeID"] = o.RoleAttributeID
 	}
-	if o.RoleMatchingMode != nil {
+	if !isNil(o.RoleMatchingMode) {
 		toSerialize["roleMatchingMode"] = o.RoleMatchingMode
 	}
-	if o.RolesCtxDN != nil {
+	if !isNil(o.RolesCtxDN) {
 		toSerialize["rolesCtxDN"] = o.RolesCtxDN
 	}
-	if o.SecurityAuthentication != nil {
+	if !isNil(o.SecurityAuthentication) {
 		toSerialize["securityAuthentication"] = o.SecurityAuthentication
 	}
-	if o.SecurityCredential != nil {
+	if !isNil(o.SecurityCredential) {
 		toSerialize["securityCredential"] = o.SecurityCredential
 	}
-	if o.SecurityPrincipal != nil {
+	if !isNil(o.SecurityPrincipal) {
 		toSerialize["securityPrincipal"] = o.SecurityPrincipal
 	}
-	if o.UidAttributeID != nil {
+	if !isNil(o.UidAttributeID) {
 		toSerialize["uidAttributeID"] = o.UidAttributeID
 	}
-	if o.UpdatePasswordEnabled != nil {
+	if !isNil(o.UpdatePasswordEnabled) {
 		toSerialize["updatePasswordEnabled"] = o.UpdatePasswordEnabled
 	}
-	if o.UpdateableCredentialAttribute != nil {
+	if !isNil(o.UpdateableCredentialAttribute) {
 		toSerialize["updateableCredentialAttribute"] = o.UpdateableCredentialAttribute
 	}
-	if o.UserPropertiesQueryString != nil {
+	if !isNil(o.UserPropertiesQueryString) {
 		toSerialize["userPropertiesQueryString"] = o.UserPropertiesQueryString
 	}
-	if o.UsersCtxDN != nil {
+	if !isNil(o.UsersCtxDN) {
 		toSerialize["usersCtxDN"] = o.UsersCtxDN
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

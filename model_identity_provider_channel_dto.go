@@ -66,7 +66,7 @@ func NewIdentityProviderChannelDTOWithDefaults() *IdentityProviderChannelDTO {
 
 // GetAccountLinkagePolicy returns the AccountLinkagePolicy field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetAccountLinkagePolicy() AccountLinkagePolicyDTO {
-	if o == nil || o.AccountLinkagePolicy == nil {
+	if o == nil || isNil(o.AccountLinkagePolicy) {
 		var ret AccountLinkagePolicyDTO
 		return ret
 	}
@@ -76,15 +76,15 @@ func (o *IdentityProviderChannelDTO) GetAccountLinkagePolicy() AccountLinkagePol
 // GetAccountLinkagePolicyOk returns a tuple with the AccountLinkagePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetAccountLinkagePolicyOk() (*AccountLinkagePolicyDTO, bool) {
-	if o == nil || o.AccountLinkagePolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.AccountLinkagePolicy) {
+    return nil, false
 	}
 	return o.AccountLinkagePolicy, true
 }
 
 // HasAccountLinkagePolicy returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasAccountLinkagePolicy() bool {
-	if o != nil && o.AccountLinkagePolicy != nil {
+	if o != nil && !isNil(o.AccountLinkagePolicy) {
 		return true
 	}
 
@@ -98,7 +98,7 @@ func (o *IdentityProviderChannelDTO) SetAccountLinkagePolicy(v AccountLinkagePol
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -108,15 +108,15 @@ func (o *IdentityProviderChannelDTO) GetActiveBindings() []string {
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -130,7 +130,7 @@ func (o *IdentityProviderChannelDTO) SetActiveBindings(v []string) {
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -140,15 +140,15 @@ func (o *IdentityProviderChannelDTO) GetActiveProfiles() []string {
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -162,7 +162,7 @@ func (o *IdentityProviderChannelDTO) SetActiveProfiles(v []string) {
 
 // GetAuthenticationContract returns the AuthenticationContract field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetAuthenticationContract() AuthenticationContractDTO {
-	if o == nil || o.AuthenticationContract == nil {
+	if o == nil || isNil(o.AuthenticationContract) {
 		var ret AuthenticationContractDTO
 		return ret
 	}
@@ -172,15 +172,15 @@ func (o *IdentityProviderChannelDTO) GetAuthenticationContract() AuthenticationC
 // GetAuthenticationContractOk returns a tuple with the AuthenticationContract field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetAuthenticationContractOk() (*AuthenticationContractDTO, bool) {
-	if o == nil || o.AuthenticationContract == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthenticationContract) {
+    return nil, false
 	}
 	return o.AuthenticationContract, true
 }
 
 // HasAuthenticationContract returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasAuthenticationContract() bool {
-	if o != nil && o.AuthenticationContract != nil {
+	if o != nil && !isNil(o.AuthenticationContract) {
 		return true
 	}
 
@@ -194,7 +194,7 @@ func (o *IdentityProviderChannelDTO) SetAuthenticationContract(v AuthenticationC
 
 // GetAuthenticationMechanism returns the AuthenticationMechanism field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetAuthenticationMechanism() AuthenticationMechanismDTO {
-	if o == nil || o.AuthenticationMechanism == nil {
+	if o == nil || isNil(o.AuthenticationMechanism) {
 		var ret AuthenticationMechanismDTO
 		return ret
 	}
@@ -204,15 +204,15 @@ func (o *IdentityProviderChannelDTO) GetAuthenticationMechanism() Authentication
 // GetAuthenticationMechanismOk returns a tuple with the AuthenticationMechanism field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetAuthenticationMechanismOk() (*AuthenticationMechanismDTO, bool) {
-	if o == nil || o.AuthenticationMechanism == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthenticationMechanism) {
+    return nil, false
 	}
 	return o.AuthenticationMechanism, true
 }
 
 // HasAuthenticationMechanism returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasAuthenticationMechanism() bool {
-	if o != nil && o.AuthenticationMechanism != nil {
+	if o != nil && !isNil(o.AuthenticationMechanism) {
 		return true
 	}
 
@@ -226,7 +226,7 @@ func (o *IdentityProviderChannelDTO) SetAuthenticationMechanism(v Authentication
 
 // GetConnectionA returns the ConnectionA field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetConnectionA() FederatedConnectionDTO {
-	if o == nil || o.ConnectionA == nil {
+	if o == nil || isNil(o.ConnectionA) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -236,15 +236,15 @@ func (o *IdentityProviderChannelDTO) GetConnectionA() FederatedConnectionDTO {
 // GetConnectionAOk returns a tuple with the ConnectionA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetConnectionAOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionA == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionA) {
+    return nil, false
 	}
 	return o.ConnectionA, true
 }
 
 // HasConnectionA returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasConnectionA() bool {
-	if o != nil && o.ConnectionA != nil {
+	if o != nil && !isNil(o.ConnectionA) {
 		return true
 	}
 
@@ -258,7 +258,7 @@ func (o *IdentityProviderChannelDTO) SetConnectionA(v FederatedConnectionDTO) {
 
 // GetConnectionB returns the ConnectionB field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetConnectionB() FederatedConnectionDTO {
-	if o == nil || o.ConnectionB == nil {
+	if o == nil || isNil(o.ConnectionB) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -268,15 +268,15 @@ func (o *IdentityProviderChannelDTO) GetConnectionB() FederatedConnectionDTO {
 // GetConnectionBOk returns a tuple with the ConnectionB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetConnectionBOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionB == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionB) {
+    return nil, false
 	}
 	return o.ConnectionB, true
 }
 
 // HasConnectionB returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasConnectionB() bool {
-	if o != nil && o.ConnectionB != nil {
+	if o != nil && !isNil(o.ConnectionB) {
 		return true
 	}
 
@@ -290,7 +290,7 @@ func (o *IdentityProviderChannelDTO) SetConnectionB(v FederatedConnectionDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -300,15 +300,15 @@ func (o *IdentityProviderChannelDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -322,7 +322,7 @@ func (o *IdentityProviderChannelDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -332,15 +332,15 @@ func (o *IdentityProviderChannelDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -354,7 +354,7 @@ func (o *IdentityProviderChannelDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -364,15 +364,15 @@ func (o *IdentityProviderChannelDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -386,7 +386,7 @@ func (o *IdentityProviderChannelDTO) SetElementId(v string) {
 
 // GetEnableProxyExtension returns the EnableProxyExtension field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetEnableProxyExtension() bool {
-	if o == nil || o.EnableProxyExtension == nil {
+	if o == nil || isNil(o.EnableProxyExtension) {
 		var ret bool
 		return ret
 	}
@@ -396,15 +396,15 @@ func (o *IdentityProviderChannelDTO) GetEnableProxyExtension() bool {
 // GetEnableProxyExtensionOk returns a tuple with the EnableProxyExtension field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetEnableProxyExtensionOk() (*bool, bool) {
-	if o == nil || o.EnableProxyExtension == nil {
-		return nil, false
+	if o == nil || isNil(o.EnableProxyExtension) {
+    return nil, false
 	}
 	return o.EnableProxyExtension, true
 }
 
 // HasEnableProxyExtension returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasEnableProxyExtension() bool {
-	if o != nil && o.EnableProxyExtension != nil {
+	if o != nil && !isNil(o.EnableProxyExtension) {
 		return true
 	}
 
@@ -418,7 +418,7 @@ func (o *IdentityProviderChannelDTO) SetEnableProxyExtension(v bool) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -428,15 +428,15 @@ func (o *IdentityProviderChannelDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -450,7 +450,7 @@ func (o *IdentityProviderChannelDTO) SetId(v int64) {
 
 // GetIdentityMappingPolicy returns the IdentityMappingPolicy field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetIdentityMappingPolicy() IdentityMappingPolicyDTO {
-	if o == nil || o.IdentityMappingPolicy == nil {
+	if o == nil || isNil(o.IdentityMappingPolicy) {
 		var ret IdentityMappingPolicyDTO
 		return ret
 	}
@@ -460,15 +460,15 @@ func (o *IdentityProviderChannelDTO) GetIdentityMappingPolicy() IdentityMappingP
 // GetIdentityMappingPolicyOk returns a tuple with the IdentityMappingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetIdentityMappingPolicyOk() (*IdentityMappingPolicyDTO, bool) {
-	if o == nil || o.IdentityMappingPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityMappingPolicy) {
+    return nil, false
 	}
 	return o.IdentityMappingPolicy, true
 }
 
 // HasIdentityMappingPolicy returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasIdentityMappingPolicy() bool {
-	if o != nil && o.IdentityMappingPolicy != nil {
+	if o != nil && !isNil(o.IdentityMappingPolicy) {
 		return true
 	}
 
@@ -482,7 +482,7 @@ func (o *IdentityProviderChannelDTO) SetIdentityMappingPolicy(v IdentityMappingP
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -492,15 +492,15 @@ func (o *IdentityProviderChannelDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -514,7 +514,7 @@ func (o *IdentityProviderChannelDTO) SetLocation(v LocationDTO) {
 
 // GetMessageTtl returns the MessageTtl field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetMessageTtl() int32 {
-	if o == nil || o.MessageTtl == nil {
+	if o == nil || isNil(o.MessageTtl) {
 		var ret int32
 		return ret
 	}
@@ -524,15 +524,15 @@ func (o *IdentityProviderChannelDTO) GetMessageTtl() int32 {
 // GetMessageTtlOk returns a tuple with the MessageTtl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetMessageTtlOk() (*int32, bool) {
-	if o == nil || o.MessageTtl == nil {
-		return nil, false
+	if o == nil || isNil(o.MessageTtl) {
+    return nil, false
 	}
 	return o.MessageTtl, true
 }
 
 // HasMessageTtl returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasMessageTtl() bool {
-	if o != nil && o.MessageTtl != nil {
+	if o != nil && !isNil(o.MessageTtl) {
 		return true
 	}
 
@@ -546,7 +546,7 @@ func (o *IdentityProviderChannelDTO) SetMessageTtl(v int32) {
 
 // GetMessageTtlTolerance returns the MessageTtlTolerance field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetMessageTtlTolerance() int32 {
-	if o == nil || o.MessageTtlTolerance == nil {
+	if o == nil || isNil(o.MessageTtlTolerance) {
 		var ret int32
 		return ret
 	}
@@ -556,15 +556,15 @@ func (o *IdentityProviderChannelDTO) GetMessageTtlTolerance() int32 {
 // GetMessageTtlToleranceOk returns a tuple with the MessageTtlTolerance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetMessageTtlToleranceOk() (*int32, bool) {
-	if o == nil || o.MessageTtlTolerance == nil {
-		return nil, false
+	if o == nil || isNil(o.MessageTtlTolerance) {
+    return nil, false
 	}
 	return o.MessageTtlTolerance, true
 }
 
 // HasMessageTtlTolerance returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasMessageTtlTolerance() bool {
-	if o != nil && o.MessageTtlTolerance != nil {
+	if o != nil && !isNil(o.MessageTtlTolerance) {
 		return true
 	}
 
@@ -578,7 +578,7 @@ func (o *IdentityProviderChannelDTO) SetMessageTtlTolerance(v int32) {
 
 // GetMultivaluedAttrGroups returns the MultivaluedAttrGroups field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroups() bool {
-	if o == nil || o.MultivaluedAttrGroups == nil {
+	if o == nil || isNil(o.MultivaluedAttrGroups) {
 		var ret bool
 		return ret
 	}
@@ -588,15 +588,15 @@ func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroups() bool {
 // GetMultivaluedAttrGroupsOk returns a tuple with the MultivaluedAttrGroups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrGroupsOk() (*bool, bool) {
-	if o == nil || o.MultivaluedAttrGroups == nil {
-		return nil, false
+	if o == nil || isNil(o.MultivaluedAttrGroups) {
+    return nil, false
 	}
 	return o.MultivaluedAttrGroups, true
 }
 
 // HasMultivaluedAttrGroups returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasMultivaluedAttrGroups() bool {
-	if o != nil && o.MultivaluedAttrGroups != nil {
+	if o != nil && !isNil(o.MultivaluedAttrGroups) {
 		return true
 	}
 
@@ -610,7 +610,7 @@ func (o *IdentityProviderChannelDTO) SetMultivaluedAttrGroups(v bool) {
 
 // GetMultivaluedAttrInternal returns the MultivaluedAttrInternal field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternal() bool {
-	if o == nil || o.MultivaluedAttrInternal == nil {
+	if o == nil || isNil(o.MultivaluedAttrInternal) {
 		var ret bool
 		return ret
 	}
@@ -620,15 +620,15 @@ func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternal() bool {
 // GetMultivaluedAttrInternalOk returns a tuple with the MultivaluedAttrInternal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrInternalOk() (*bool, bool) {
-	if o == nil || o.MultivaluedAttrInternal == nil {
-		return nil, false
+	if o == nil || isNil(o.MultivaluedAttrInternal) {
+    return nil, false
 	}
 	return o.MultivaluedAttrInternal, true
 }
 
 // HasMultivaluedAttrInternal returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasMultivaluedAttrInternal() bool {
-	if o != nil && o.MultivaluedAttrInternal != nil {
+	if o != nil && !isNil(o.MultivaluedAttrInternal) {
 		return true
 	}
 
@@ -642,7 +642,7 @@ func (o *IdentityProviderChannelDTO) SetMultivaluedAttrInternal(v bool) {
 
 // GetMultivaluedAttrUserDefined returns the MultivaluedAttrUserDefined field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefined() bool {
-	if o == nil || o.MultivaluedAttrUserDefined == nil {
+	if o == nil || isNil(o.MultivaluedAttrUserDefined) {
 		var ret bool
 		return ret
 	}
@@ -652,15 +652,15 @@ func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefined() bool {
 // GetMultivaluedAttrUserDefinedOk returns a tuple with the MultivaluedAttrUserDefined field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetMultivaluedAttrUserDefinedOk() (*bool, bool) {
-	if o == nil || o.MultivaluedAttrUserDefined == nil {
-		return nil, false
+	if o == nil || isNil(o.MultivaluedAttrUserDefined) {
+    return nil, false
 	}
 	return o.MultivaluedAttrUserDefined, true
 }
 
 // HasMultivaluedAttrUserDefined returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasMultivaluedAttrUserDefined() bool {
-	if o != nil && o.MultivaluedAttrUserDefined != nil {
+	if o != nil && !isNil(o.MultivaluedAttrUserDefined) {
 		return true
 	}
 
@@ -674,7 +674,7 @@ func (o *IdentityProviderChannelDTO) SetMultivaluedAttrUserDefined(v bool) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -684,15 +684,15 @@ func (o *IdentityProviderChannelDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -706,7 +706,7 @@ func (o *IdentityProviderChannelDTO) SetName(v string) {
 
 // GetOverrideProviderSetup returns the OverrideProviderSetup field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetOverrideProviderSetup() bool {
-	if o == nil || o.OverrideProviderSetup == nil {
+	if o == nil || isNil(o.OverrideProviderSetup) {
 		var ret bool
 		return ret
 	}
@@ -716,15 +716,15 @@ func (o *IdentityProviderChannelDTO) GetOverrideProviderSetup() bool {
 // GetOverrideProviderSetupOk returns a tuple with the OverrideProviderSetup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetOverrideProviderSetupOk() (*bool, bool) {
-	if o == nil || o.OverrideProviderSetup == nil {
-		return nil, false
+	if o == nil || isNil(o.OverrideProviderSetup) {
+    return nil, false
 	}
 	return o.OverrideProviderSetup, true
 }
 
 // HasOverrideProviderSetup returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasOverrideProviderSetup() bool {
-	if o != nil && o.OverrideProviderSetup != nil {
+	if o != nil && !isNil(o.OverrideProviderSetup) {
 		return true
 	}
 
@@ -738,7 +738,7 @@ func (o *IdentityProviderChannelDTO) SetOverrideProviderSetup(v bool) {
 
 // GetPreferred returns the Preferred field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetPreferred() bool {
-	if o == nil || o.Preferred == nil {
+	if o == nil || isNil(o.Preferred) {
 		var ret bool
 		return ret
 	}
@@ -748,15 +748,15 @@ func (o *IdentityProviderChannelDTO) GetPreferred() bool {
 // GetPreferredOk returns a tuple with the Preferred field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetPreferredOk() (*bool, bool) {
-	if o == nil || o.Preferred == nil {
-		return nil, false
+	if o == nil || isNil(o.Preferred) {
+    return nil, false
 	}
 	return o.Preferred, true
 }
 
 // HasPreferred returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasPreferred() bool {
-	if o != nil && o.Preferred != nil {
+	if o != nil && !isNil(o.Preferred) {
 		return true
 	}
 
@@ -770,7 +770,7 @@ func (o *IdentityProviderChannelDTO) SetPreferred(v bool) {
 
 // GetSignAuthenticationRequests returns the SignAuthenticationRequests field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetSignAuthenticationRequests() bool {
-	if o == nil || o.SignAuthenticationRequests == nil {
+	if o == nil || isNil(o.SignAuthenticationRequests) {
 		var ret bool
 		return ret
 	}
@@ -780,15 +780,15 @@ func (o *IdentityProviderChannelDTO) GetSignAuthenticationRequests() bool {
 // GetSignAuthenticationRequestsOk returns a tuple with the SignAuthenticationRequests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetSignAuthenticationRequestsOk() (*bool, bool) {
-	if o == nil || o.SignAuthenticationRequests == nil {
-		return nil, false
+	if o == nil || isNil(o.SignAuthenticationRequests) {
+    return nil, false
 	}
 	return o.SignAuthenticationRequests, true
 }
 
 // HasSignAuthenticationRequests returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasSignAuthenticationRequests() bool {
-	if o != nil && o.SignAuthenticationRequests != nil {
+	if o != nil && !isNil(o.SignAuthenticationRequests) {
 		return true
 	}
 
@@ -802,7 +802,7 @@ func (o *IdentityProviderChannelDTO) SetSignAuthenticationRequests(v bool) {
 
 // GetSignatureHash returns the SignatureHash field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetSignatureHash() string {
-	if o == nil || o.SignatureHash == nil {
+	if o == nil || isNil(o.SignatureHash) {
 		var ret string
 		return ret
 	}
@@ -812,15 +812,15 @@ func (o *IdentityProviderChannelDTO) GetSignatureHash() string {
 // GetSignatureHashOk returns a tuple with the SignatureHash field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetSignatureHashOk() (*string, bool) {
-	if o == nil || o.SignatureHash == nil {
-		return nil, false
+	if o == nil || isNil(o.SignatureHash) {
+    return nil, false
 	}
 	return o.SignatureHash, true
 }
 
 // HasSignatureHash returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasSignatureHash() bool {
-	if o != nil && o.SignatureHash != nil {
+	if o != nil && !isNil(o.SignatureHash) {
 		return true
 	}
 
@@ -834,7 +834,7 @@ func (o *IdentityProviderChannelDTO) SetSignatureHash(v string) {
 
 // GetWantAssertionSigned returns the WantAssertionSigned field value if set, zero value otherwise.
 func (o *IdentityProviderChannelDTO) GetWantAssertionSigned() bool {
-	if o == nil || o.WantAssertionSigned == nil {
+	if o == nil || isNil(o.WantAssertionSigned) {
 		var ret bool
 		return ret
 	}
@@ -844,15 +844,15 @@ func (o *IdentityProviderChannelDTO) GetWantAssertionSigned() bool {
 // GetWantAssertionSignedOk returns a tuple with the WantAssertionSigned field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityProviderChannelDTO) GetWantAssertionSignedOk() (*bool, bool) {
-	if o == nil || o.WantAssertionSigned == nil {
-		return nil, false
+	if o == nil || isNil(o.WantAssertionSigned) {
+    return nil, false
 	}
 	return o.WantAssertionSigned, true
 }
 
 // HasWantAssertionSigned returns a boolean if a field has been set.
 func (o *IdentityProviderChannelDTO) HasWantAssertionSigned() bool {
-	if o != nil && o.WantAssertionSigned != nil {
+	if o != nil && !isNil(o.WantAssertionSigned) {
 		return true
 	}
 
@@ -866,79 +866,79 @@ func (o *IdentityProviderChannelDTO) SetWantAssertionSigned(v bool) {
 
 func (o IdentityProviderChannelDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccountLinkagePolicy != nil {
+	if !isNil(o.AccountLinkagePolicy) {
 		toSerialize["accountLinkagePolicy"] = o.AccountLinkagePolicy
 	}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.AuthenticationContract != nil {
+	if !isNil(o.AuthenticationContract) {
 		toSerialize["authenticationContract"] = o.AuthenticationContract
 	}
-	if o.AuthenticationMechanism != nil {
+	if !isNil(o.AuthenticationMechanism) {
 		toSerialize["authenticationMechanism"] = o.AuthenticationMechanism
 	}
-	if o.ConnectionA != nil {
+	if !isNil(o.ConnectionA) {
 		toSerialize["connectionA"] = o.ConnectionA
 	}
-	if o.ConnectionB != nil {
+	if !isNil(o.ConnectionB) {
 		toSerialize["connectionB"] = o.ConnectionB
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.EnableProxyExtension != nil {
+	if !isNil(o.EnableProxyExtension) {
 		toSerialize["enableProxyExtension"] = o.EnableProxyExtension
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdentityMappingPolicy != nil {
+	if !isNil(o.IdentityMappingPolicy) {
 		toSerialize["identityMappingPolicy"] = o.IdentityMappingPolicy
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.MessageTtl != nil {
+	if !isNil(o.MessageTtl) {
 		toSerialize["messageTtl"] = o.MessageTtl
 	}
-	if o.MessageTtlTolerance != nil {
+	if !isNil(o.MessageTtlTolerance) {
 		toSerialize["messageTtlTolerance"] = o.MessageTtlTolerance
 	}
-	if o.MultivaluedAttrGroups != nil {
+	if !isNil(o.MultivaluedAttrGroups) {
 		toSerialize["multivaluedAttrGroups"] = o.MultivaluedAttrGroups
 	}
-	if o.MultivaluedAttrInternal != nil {
+	if !isNil(o.MultivaluedAttrInternal) {
 		toSerialize["multivaluedAttrInternal"] = o.MultivaluedAttrInternal
 	}
-	if o.MultivaluedAttrUserDefined != nil {
+	if !isNil(o.MultivaluedAttrUserDefined) {
 		toSerialize["multivaluedAttrUserDefined"] = o.MultivaluedAttrUserDefined
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.OverrideProviderSetup != nil {
+	if !isNil(o.OverrideProviderSetup) {
 		toSerialize["overrideProviderSetup"] = o.OverrideProviderSetup
 	}
-	if o.Preferred != nil {
+	if !isNil(o.Preferred) {
 		toSerialize["preferred"] = o.Preferred
 	}
-	if o.SignAuthenticationRequests != nil {
+	if !isNil(o.SignAuthenticationRequests) {
 		toSerialize["signAuthenticationRequests"] = o.SignAuthenticationRequests
 	}
-	if o.SignatureHash != nil {
+	if !isNil(o.SignatureHash) {
 		toSerialize["signatureHash"] = o.SignatureHash
 	}
-	if o.WantAssertionSigned != nil {
+	if !isNil(o.WantAssertionSigned) {
 		toSerialize["wantAssertionSigned"] = o.WantAssertionSigned
 	}
 

@@ -48,7 +48,7 @@ func NewEmbeddedIdentityVaultDTOWithDefaults() *EmbeddedIdentityVaultDTO {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -58,15 +58,15 @@ func (o *EmbeddedIdentityVaultDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -80,7 +80,7 @@ func (o *EmbeddedIdentityVaultDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -90,15 +90,15 @@ func (o *EmbeddedIdentityVaultDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -112,7 +112,7 @@ func (o *EmbeddedIdentityVaultDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -122,15 +122,15 @@ func (o *EmbeddedIdentityVaultDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -144,7 +144,7 @@ func (o *EmbeddedIdentityVaultDTO) SetId(v int64) {
 
 // GetIdentityConnectorName returns the IdentityConnectorName field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetIdentityConnectorName() string {
-	if o == nil || o.IdentityConnectorName == nil {
+	if o == nil || isNil(o.IdentityConnectorName) {
 		var ret string
 		return ret
 	}
@@ -154,15 +154,15 @@ func (o *EmbeddedIdentityVaultDTO) GetIdentityConnectorName() string {
 // GetIdentityConnectorNameOk returns a tuple with the IdentityConnectorName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetIdentityConnectorNameOk() (*string, bool) {
-	if o == nil || o.IdentityConnectorName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityConnectorName) {
+    return nil, false
 	}
 	return o.IdentityConnectorName, true
 }
 
 // HasIdentityConnectorName returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasIdentityConnectorName() bool {
-	if o != nil && o.IdentityConnectorName != nil {
+	if o != nil && !isNil(o.IdentityConnectorName) {
 		return true
 	}
 
@@ -176,7 +176,7 @@ func (o *EmbeddedIdentityVaultDTO) SetIdentityConnectorName(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -186,15 +186,15 @@ func (o *EmbeddedIdentityVaultDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -208,7 +208,7 @@ func (o *EmbeddedIdentityVaultDTO) SetName(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -218,15 +218,15 @@ func (o *EmbeddedIdentityVaultDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -240,7 +240,7 @@ func (o *EmbeddedIdentityVaultDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *EmbeddedIdentityVaultDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -250,15 +250,15 @@ func (o *EmbeddedIdentityVaultDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EmbeddedIdentityVaultDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *EmbeddedIdentityVaultDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -272,25 +272,25 @@ func (o *EmbeddedIdentityVaultDTO) SetY(v float64) {
 
 func (o EmbeddedIdentityVaultDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdentityConnectorName != nil {
+	if !isNil(o.IdentityConnectorName) {
 		toSerialize["identityConnectorName"] = o.IdentityConnectorName
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

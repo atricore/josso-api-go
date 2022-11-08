@@ -43,7 +43,7 @@ func NewStoreDbIdVaultReqWithDefaults() *StoreDbIdVaultReq {
 
 // GetDbIdVault returns the DbIdVault field value if set, zero value otherwise.
 func (o *StoreDbIdVaultReq) GetDbIdVault() DbIdentityVaultDTO {
-	if o == nil || o.DbIdVault == nil {
+	if o == nil || isNil(o.DbIdVault) {
 		var ret DbIdentityVaultDTO
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreDbIdVaultReq) GetDbIdVault() DbIdentityVaultDTO {
 // GetDbIdVaultOk returns a tuple with the DbIdVault field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreDbIdVaultReq) GetDbIdVaultOk() (*DbIdentityVaultDTO, bool) {
-	if o == nil || o.DbIdVault == nil {
-		return nil, false
+	if o == nil || isNil(o.DbIdVault) {
+    return nil, false
 	}
 	return o.DbIdVault, true
 }
 
 // HasDbIdVault returns a boolean if a field has been set.
 func (o *StoreDbIdVaultReq) HasDbIdVault() bool {
-	if o != nil && o.DbIdVault != nil {
+	if o != nil && !isNil(o.DbIdVault) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreDbIdVaultReq) SetDbIdVault(v DbIdentityVaultDTO) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreDbIdVaultReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreDbIdVaultReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreDbIdVaultReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreDbIdVaultReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreDbIdVaultReq) SetIdaName(v string) {
 
 func (o StoreDbIdVaultReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DbIdVault != nil {
+	if !isNil(o.DbIdVault) {
 		toSerialize["dbIdVault"] = o.DbIdVault
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
 

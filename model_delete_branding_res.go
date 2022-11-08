@@ -43,7 +43,7 @@ func NewDeleteBrandingResWithDefaults() *DeleteBrandingRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *DeleteBrandingRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *DeleteBrandingRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DeleteBrandingRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *DeleteBrandingRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *DeleteBrandingRes) SetError(v string) {
 
 // GetRemoved returns the Removed field value if set, zero value otherwise.
 func (o *DeleteBrandingRes) GetRemoved() bool {
-	if o == nil || o.Removed == nil {
+	if o == nil || isNil(o.Removed) {
 		var ret bool
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *DeleteBrandingRes) GetRemoved() bool {
 // GetRemovedOk returns a tuple with the Removed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DeleteBrandingRes) GetRemovedOk() (*bool, bool) {
-	if o == nil || o.Removed == nil {
-		return nil, false
+	if o == nil || isNil(o.Removed) {
+    return nil, false
 	}
 	return o.Removed, true
 }
 
 // HasRemoved returns a boolean if a field has been set.
 func (o *DeleteBrandingRes) HasRemoved() bool {
-	if o != nil && o.Removed != nil {
+	if o != nil && !isNil(o.Removed) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *DeleteBrandingRes) SetRemoved(v bool) {
 
 func (o DeleteBrandingRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Removed != nil {
+	if !isNil(o.Removed) {
 		toSerialize["removed"] = o.Removed
 	}
 

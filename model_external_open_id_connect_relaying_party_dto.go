@@ -77,7 +77,7 @@ func NewExternalOpenIDConnectRelayingPartyDTOWithDefaults() *ExternalOpenIDConne
 
 // GetAccountLinkagePolicy returns the AccountLinkagePolicy field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicy() AccountLinkagePolicyDTO {
-	if o == nil || o.AccountLinkagePolicy == nil {
+	if o == nil || isNil(o.AccountLinkagePolicy) {
 		var ret AccountLinkagePolicyDTO
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicy() Accoun
 // GetAccountLinkagePolicyOk returns a tuple with the AccountLinkagePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAccountLinkagePolicyOk() (*AccountLinkagePolicyDTO, bool) {
-	if o == nil || o.AccountLinkagePolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.AccountLinkagePolicy) {
+    return nil, false
 	}
 	return o.AccountLinkagePolicy, true
 }
 
 // HasAccountLinkagePolicy returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasAccountLinkagePolicy() bool {
-	if o != nil && o.AccountLinkagePolicy != nil {
+	if o != nil && !isNil(o.AccountLinkagePolicy) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetAccountLinkagePolicy(v Accoun
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindings() []string {
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetActiveBindings(v []string) {
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfiles() []string {
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -173,7 +173,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetActiveProfiles(v []string) {
 
 // GetAuthorizedURIs returns the AuthorizedURIs field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIs() []string {
-	if o == nil || o.AuthorizedURIs == nil {
+	if o == nil || isNil(o.AuthorizedURIs) {
 		var ret []string
 		return ret
 	}
@@ -183,15 +183,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIs() []string {
 // GetAuthorizedURIsOk returns a tuple with the AuthorizedURIs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetAuthorizedURIsOk() ([]string, bool) {
-	if o == nil || o.AuthorizedURIs == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthorizedURIs) {
+    return nil, false
 	}
 	return o.AuthorizedURIs, true
 }
 
 // HasAuthorizedURIs returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasAuthorizedURIs() bool {
-	if o != nil && o.AuthorizedURIs != nil {
+	if o != nil && !isNil(o.AuthorizedURIs) {
 		return true
 	}
 
@@ -205,7 +205,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetAuthorizedURIs(v []string) {
 
 // GetClientAuthnMethod returns the ClientAuthnMethod field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientAuthnMethod() string {
-	if o == nil || o.ClientAuthnMethod == nil {
+	if o == nil || isNil(o.ClientAuthnMethod) {
 		var ret string
 		return ret
 	}
@@ -215,15 +215,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientAuthnMethod() string {
 // GetClientAuthnMethodOk returns a tuple with the ClientAuthnMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientAuthnMethodOk() (*string, bool) {
-	if o == nil || o.ClientAuthnMethod == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientAuthnMethod) {
+    return nil, false
 	}
 	return o.ClientAuthnMethod, true
 }
 
 // HasClientAuthnMethod returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasClientAuthnMethod() bool {
-	if o != nil && o.ClientAuthnMethod != nil {
+	if o != nil && !isNil(o.ClientAuthnMethod) {
 		return true
 	}
 
@@ -237,7 +237,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetClientAuthnMethod(v string) {
 
 // GetClientCert returns the ClientCert field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientCert() string {
-	if o == nil || o.ClientCert == nil {
+	if o == nil || isNil(o.ClientCert) {
 		var ret string
 		return ret
 	}
@@ -247,15 +247,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientCert() string {
 // GetClientCertOk returns a tuple with the ClientCert field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientCertOk() (*string, bool) {
-	if o == nil || o.ClientCert == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientCert) {
+    return nil, false
 	}
 	return o.ClientCert, true
 }
 
 // HasClientCert returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasClientCert() bool {
-	if o != nil && o.ClientCert != nil {
+	if o != nil && !isNil(o.ClientCert) {
 		return true
 	}
 
@@ -269,7 +269,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetClientCert(v string) {
 
 // GetClientId returns the ClientId field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientId() string {
-	if o == nil || o.ClientId == nil {
+	if o == nil || isNil(o.ClientId) {
 		var ret string
 		return ret
 	}
@@ -279,15 +279,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientId() string {
 // GetClientIdOk returns a tuple with the ClientId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientIdOk() (*string, bool) {
-	if o == nil || o.ClientId == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientId) {
+    return nil, false
 	}
 	return o.ClientId, true
 }
 
 // HasClientId returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasClientId() bool {
-	if o != nil && o.ClientId != nil {
+	if o != nil && !isNil(o.ClientId) {
 		return true
 	}
 
@@ -301,7 +301,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetClientId(v string) {
 
 // GetClientSecret returns the ClientSecret field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientSecret() string {
-	if o == nil || o.ClientSecret == nil {
+	if o == nil || isNil(o.ClientSecret) {
 		var ret string
 		return ret
 	}
@@ -311,15 +311,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientSecret() string {
 // GetClientSecretOk returns a tuple with the ClientSecret field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientSecretOk() (*string, bool) {
-	if o == nil || o.ClientSecret == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientSecret) {
+    return nil, false
 	}
 	return o.ClientSecret, true
 }
 
 // HasClientSecret returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasClientSecret() bool {
-	if o != nil && o.ClientSecret != nil {
+	if o != nil && !isNil(o.ClientSecret) {
 		return true
 	}
 
@@ -333,7 +333,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetClientSecret(v string) {
 
 // GetClientType returns the ClientType field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientType() string {
-	if o == nil || o.ClientType == nil {
+	if o == nil || isNil(o.ClientType) {
 		var ret string
 		return ret
 	}
@@ -343,15 +343,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientType() string {
 // GetClientTypeOk returns a tuple with the ClientType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetClientTypeOk() (*string, bool) {
-	if o == nil || o.ClientType == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientType) {
+    return nil, false
 	}
 	return o.ClientType, true
 }
 
 // HasClientType returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasClientType() bool {
-	if o != nil && o.ClientType != nil {
+	if o != nil && !isNil(o.ClientType) {
 		return true
 	}
 
@@ -365,7 +365,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetClientType(v string) {
 
 // GetConfig returns the Config field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetConfig() ProviderConfigDTO {
-	if o == nil || o.Config == nil {
+	if o == nil || isNil(o.Config) {
 		var ret ProviderConfigDTO
 		return ret
 	}
@@ -375,15 +375,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetConfig() ProviderConfigDTO {
 // GetConfigOk returns a tuple with the Config field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetConfigOk() (*ProviderConfigDTO, bool) {
-	if o == nil || o.Config == nil {
-		return nil, false
+	if o == nil || isNil(o.Config) {
+    return nil, false
 	}
 	return o.Config, true
 }
 
 // HasConfig returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasConfig() bool {
-	if o != nil && o.Config != nil {
+	if o != nil && !isNil(o.Config) {
 		return true
 	}
 
@@ -397,7 +397,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetConfig(v ProviderConfigDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -407,15 +407,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -429,7 +429,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -439,15 +439,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -461,7 +461,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -471,15 +471,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -493,7 +493,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetElementId(v string) {
 
 // GetEncryptionAlg returns the EncryptionAlg field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionAlg() string {
-	if o == nil || o.EncryptionAlg == nil {
+	if o == nil || isNil(o.EncryptionAlg) {
 		var ret string
 		return ret
 	}
@@ -503,15 +503,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionAlg() string {
 // GetEncryptionAlgOk returns a tuple with the EncryptionAlg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionAlgOk() (*string, bool) {
-	if o == nil || o.EncryptionAlg == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptionAlg) {
+    return nil, false
 	}
 	return o.EncryptionAlg, true
 }
 
 // HasEncryptionAlg returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasEncryptionAlg() bool {
-	if o != nil && o.EncryptionAlg != nil {
+	if o != nil && !isNil(o.EncryptionAlg) {
 		return true
 	}
 
@@ -525,7 +525,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetEncryptionAlg(v string) {
 
 // GetEncryptionMethod returns the EncryptionMethod field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionMethod() string {
-	if o == nil || o.EncryptionMethod == nil {
+	if o == nil || isNil(o.EncryptionMethod) {
 		var ret string
 		return ret
 	}
@@ -535,15 +535,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionMethod() string {
 // GetEncryptionMethodOk returns a tuple with the EncryptionMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetEncryptionMethodOk() (*string, bool) {
-	if o == nil || o.EncryptionMethod == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptionMethod) {
+    return nil, false
 	}
 	return o.EncryptionMethod, true
 }
 
 // HasEncryptionMethod returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasEncryptionMethod() bool {
-	if o != nil && o.EncryptionMethod != nil {
+	if o != nil && !isNil(o.EncryptionMethod) {
 		return true
 	}
 
@@ -557,7 +557,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetEncryptionMethod(v string) {
 
 // GetFederatedConnectionsA returns the FederatedConnectionsA field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsA() []FederatedConnectionDTO {
-	if o == nil || o.FederatedConnectionsA == nil {
+	if o == nil || isNil(o.FederatedConnectionsA) {
 		var ret []FederatedConnectionDTO
 		return ret
 	}
@@ -567,15 +567,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsA() []Fed
 // GetFederatedConnectionsAOk returns a tuple with the FederatedConnectionsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsAOk() ([]FederatedConnectionDTO, bool) {
-	if o == nil || o.FederatedConnectionsA == nil {
-		return nil, false
+	if o == nil || isNil(o.FederatedConnectionsA) {
+    return nil, false
 	}
 	return o.FederatedConnectionsA, true
 }
 
 // HasFederatedConnectionsA returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasFederatedConnectionsA() bool {
-	if o != nil && o.FederatedConnectionsA != nil {
+	if o != nil && !isNil(o.FederatedConnectionsA) {
 		return true
 	}
 
@@ -589,7 +589,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetFederatedConnectionsA(v []Fed
 
 // GetFederatedConnectionsB returns the FederatedConnectionsB field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsB() []FederatedConnectionDTO {
-	if o == nil || o.FederatedConnectionsB == nil {
+	if o == nil || isNil(o.FederatedConnectionsB) {
 		var ret []FederatedConnectionDTO
 		return ret
 	}
@@ -599,15 +599,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsB() []Fed
 // GetFederatedConnectionsBOk returns a tuple with the FederatedConnectionsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetFederatedConnectionsBOk() ([]FederatedConnectionDTO, bool) {
-	if o == nil || o.FederatedConnectionsB == nil {
-		return nil, false
+	if o == nil || isNil(o.FederatedConnectionsB) {
+    return nil, false
 	}
 	return o.FederatedConnectionsB, true
 }
 
 // HasFederatedConnectionsB returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasFederatedConnectionsB() bool {
-	if o != nil && o.FederatedConnectionsB != nil {
+	if o != nil && !isNil(o.FederatedConnectionsB) {
 		return true
 	}
 
@@ -621,7 +621,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetFederatedConnectionsB(v []Fed
 
 // GetGrants returns the Grants field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrants() []string {
-	if o == nil || o.Grants == nil {
+	if o == nil || isNil(o.Grants) {
 		var ret []string
 		return ret
 	}
@@ -631,15 +631,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrants() []string {
 // GetGrantsOk returns a tuple with the Grants field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetGrantsOk() ([]string, bool) {
-	if o == nil || o.Grants == nil {
-		return nil, false
+	if o == nil || isNil(o.Grants) {
+    return nil, false
 	}
 	return o.Grants, true
 }
 
 // HasGrants returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasGrants() bool {
-	if o != nil && o.Grants != nil {
+	if o != nil && !isNil(o.Grants) {
 		return true
 	}
 
@@ -653,7 +653,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetGrants(v []string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -663,15 +663,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -685,7 +685,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetId(v int64) {
 
 // GetIdTokenEncryptionAlg returns the IdTokenEncryptionAlg field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionAlg() string {
-	if o == nil || o.IdTokenEncryptionAlg == nil {
+	if o == nil || isNil(o.IdTokenEncryptionAlg) {
 		var ret string
 		return ret
 	}
@@ -695,15 +695,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionAlg() string
 // GetIdTokenEncryptionAlgOk returns a tuple with the IdTokenEncryptionAlg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionAlgOk() (*string, bool) {
-	if o == nil || o.IdTokenEncryptionAlg == nil {
-		return nil, false
+	if o == nil || isNil(o.IdTokenEncryptionAlg) {
+    return nil, false
 	}
 	return o.IdTokenEncryptionAlg, true
 }
 
 // HasIdTokenEncryptionAlg returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdTokenEncryptionAlg() bool {
-	if o != nil && o.IdTokenEncryptionAlg != nil {
+	if o != nil && !isNil(o.IdTokenEncryptionAlg) {
 		return true
 	}
 
@@ -717,7 +717,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdTokenEncryptionAlg(v string
 
 // GetIdTokenEncryptionMethod returns the IdTokenEncryptionMethod field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionMethod() string {
-	if o == nil || o.IdTokenEncryptionMethod == nil {
+	if o == nil || isNil(o.IdTokenEncryptionMethod) {
 		var ret string
 		return ret
 	}
@@ -727,15 +727,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionMethod() str
 // GetIdTokenEncryptionMethodOk returns a tuple with the IdTokenEncryptionMethod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenEncryptionMethodOk() (*string, bool) {
-	if o == nil || o.IdTokenEncryptionMethod == nil {
-		return nil, false
+	if o == nil || isNil(o.IdTokenEncryptionMethod) {
+    return nil, false
 	}
 	return o.IdTokenEncryptionMethod, true
 }
 
 // HasIdTokenEncryptionMethod returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdTokenEncryptionMethod() bool {
-	if o != nil && o.IdTokenEncryptionMethod != nil {
+	if o != nil && !isNil(o.IdTokenEncryptionMethod) {
 		return true
 	}
 
@@ -749,7 +749,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdTokenEncryptionMethod(v str
 
 // GetIdTokenSigningAlg returns the IdTokenSigningAlg field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenSigningAlg() string {
-	if o == nil || o.IdTokenSigningAlg == nil {
+	if o == nil || isNil(o.IdTokenSigningAlg) {
 		var ret string
 		return ret
 	}
@@ -759,15 +759,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenSigningAlg() string {
 // GetIdTokenSigningAlgOk returns a tuple with the IdTokenSigningAlg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdTokenSigningAlgOk() (*string, bool) {
-	if o == nil || o.IdTokenSigningAlg == nil {
-		return nil, false
+	if o == nil || isNil(o.IdTokenSigningAlg) {
+    return nil, false
 	}
 	return o.IdTokenSigningAlg, true
 }
 
 // HasIdTokenSigningAlg returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdTokenSigningAlg() bool {
-	if o != nil && o.IdTokenSigningAlg != nil {
+	if o != nil && !isNil(o.IdTokenSigningAlg) {
 		return true
 	}
 
@@ -781,7 +781,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdTokenSigningAlg(v string) {
 
 // GetIdentityAppliance returns the IdentityAppliance field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityAppliance() IdentityApplianceDefinitionDTO {
-	if o == nil || o.IdentityAppliance == nil {
+	if o == nil || isNil(o.IdentityAppliance) {
 		var ret IdentityApplianceDefinitionDTO
 		return ret
 	}
@@ -791,15 +791,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityAppliance() IdentityA
 // GetIdentityApplianceOk returns a tuple with the IdentityAppliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityApplianceOk() (*IdentityApplianceDefinitionDTO, bool) {
-	if o == nil || o.IdentityAppliance == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityAppliance) {
+    return nil, false
 	}
 	return o.IdentityAppliance, true
 }
 
 // HasIdentityAppliance returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityAppliance() bool {
-	if o != nil && o.IdentityAppliance != nil {
+	if o != nil && !isNil(o.IdentityAppliance) {
 		return true
 	}
 
@@ -813,7 +813,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityAppliance(v IdentityA
 
 // GetIdentityLookups returns the IdentityLookups field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookups() []IdentityLookupDTO {
-	if o == nil || o.IdentityLookups == nil {
+	if o == nil || isNil(o.IdentityLookups) {
 		var ret []IdentityLookupDTO
 		return ret
 	}
@@ -823,15 +823,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookups() []IdentityL
 // GetIdentityLookupsOk returns a tuple with the IdentityLookups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityLookupsOk() ([]IdentityLookupDTO, bool) {
-	if o == nil || o.IdentityLookups == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityLookups) {
+    return nil, false
 	}
 	return o.IdentityLookups, true
 }
 
 // HasIdentityLookups returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityLookups() bool {
-	if o != nil && o.IdentityLookups != nil {
+	if o != nil && !isNil(o.IdentityLookups) {
 		return true
 	}
 
@@ -845,7 +845,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityLookups(v []IdentityL
 
 // GetIdentityMappingPolicy returns the IdentityMappingPolicy field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicy() IdentityMappingPolicyDTO {
-	if o == nil || o.IdentityMappingPolicy == nil {
+	if o == nil || isNil(o.IdentityMappingPolicy) {
 		var ret IdentityMappingPolicyDTO
 		return ret
 	}
@@ -855,15 +855,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicy() Ident
 // GetIdentityMappingPolicyOk returns a tuple with the IdentityMappingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIdentityMappingPolicyOk() (*IdentityMappingPolicyDTO, bool) {
-	if o == nil || o.IdentityMappingPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityMappingPolicy) {
+    return nil, false
 	}
 	return o.IdentityMappingPolicy, true
 }
 
 // HasIdentityMappingPolicy returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIdentityMappingPolicy() bool {
-	if o != nil && o.IdentityMappingPolicy != nil {
+	if o != nil && !isNil(o.IdentityMappingPolicy) {
 		return true
 	}
 
@@ -877,7 +877,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIdentityMappingPolicy(v Ident
 
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIsRemote() bool {
-	if o == nil || o.IsRemote == nil {
+	if o == nil || isNil(o.IsRemote) {
 		var ret bool
 		return ret
 	}
@@ -887,15 +887,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIsRemote() bool {
 // GetIsRemoteOk returns a tuple with the IsRemote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetIsRemoteOk() (*bool, bool) {
-	if o == nil || o.IsRemote == nil {
-		return nil, false
+	if o == nil || isNil(o.IsRemote) {
+    return nil, false
 	}
 	return o.IsRemote, true
 }
 
 // HasIsRemote returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasIsRemote() bool {
-	if o != nil && o.IsRemote != nil {
+	if o != nil && !isNil(o.IsRemote) {
 		return true
 	}
 
@@ -909,7 +909,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetIsRemote(v bool) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -919,15 +919,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -941,7 +941,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetLocation(v LocationDTO) {
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetMetadata() ResourceDTO {
-	if o == nil || o.Metadata == nil {
+	if o == nil || isNil(o.Metadata) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -951,15 +951,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetMetadata() ResourceDTO {
 // GetMetadataOk returns a tuple with the Metadata field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetMetadataOk() (*ResourceDTO, bool) {
-	if o == nil || o.Metadata == nil {
-		return nil, false
+	if o == nil || isNil(o.Metadata) {
+    return nil, false
 	}
 	return o.Metadata, true
 }
 
 // HasMetadata returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasMetadata() bool {
-	if o != nil && o.Metadata != nil {
+	if o != nil && !isNil(o.Metadata) {
 		return true
 	}
 
@@ -973,7 +973,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetMetadata(v ResourceDTO) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -983,15 +983,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -1005,7 +1005,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetName(v string) {
 
 // GetPostLogoutRedirectionURIs returns the PostLogoutRedirectionURIs field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIs() []string {
-	if o == nil || o.PostLogoutRedirectionURIs == nil {
+	if o == nil || isNil(o.PostLogoutRedirectionURIs) {
 		var ret []string
 		return ret
 	}
@@ -1015,15 +1015,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIs() [
 // GetPostLogoutRedirectionURIsOk returns a tuple with the PostLogoutRedirectionURIs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetPostLogoutRedirectionURIsOk() ([]string, bool) {
-	if o == nil || o.PostLogoutRedirectionURIs == nil {
-		return nil, false
+	if o == nil || isNil(o.PostLogoutRedirectionURIs) {
+    return nil, false
 	}
 	return o.PostLogoutRedirectionURIs, true
 }
 
 // HasPostLogoutRedirectionURIs returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasPostLogoutRedirectionURIs() bool {
-	if o != nil && o.PostLogoutRedirectionURIs != nil {
+	if o != nil && !isNil(o.PostLogoutRedirectionURIs) {
 		return true
 	}
 
@@ -1037,7 +1037,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetPostLogoutRedirectionURIs(v [
 
 // GetRemote returns the Remote field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRemote() bool {
-	if o == nil || o.Remote == nil {
+	if o == nil || isNil(o.Remote) {
 		var ret bool
 		return ret
 	}
@@ -1047,15 +1047,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRemote() bool {
 // GetRemoteOk returns a tuple with the Remote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRemoteOk() (*bool, bool) {
-	if o == nil || o.Remote == nil {
-		return nil, false
+	if o == nil || isNil(o.Remote) {
+    return nil, false
 	}
 	return o.Remote, true
 }
 
 // HasRemote returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasRemote() bool {
-	if o != nil && o.Remote != nil {
+	if o != nil && !isNil(o.Remote) {
 		return true
 	}
 
@@ -1069,7 +1069,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetRemote(v bool) {
 
 // GetResponseTypes returns the ResponseTypes field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypes() []string {
-	if o == nil || o.ResponseTypes == nil {
+	if o == nil || isNil(o.ResponseTypes) {
 		var ret []string
 		return ret
 	}
@@ -1079,15 +1079,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypes() []string {
 // GetResponseTypesOk returns a tuple with the ResponseTypes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetResponseTypesOk() ([]string, bool) {
-	if o == nil || o.ResponseTypes == nil {
-		return nil, false
+	if o == nil || isNil(o.ResponseTypes) {
+    return nil, false
 	}
 	return o.ResponseTypes, true
 }
 
 // HasResponseTypes returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasResponseTypes() bool {
-	if o != nil && o.ResponseTypes != nil {
+	if o != nil && !isNil(o.ResponseTypes) {
 		return true
 	}
 
@@ -1101,7 +1101,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetResponseTypes(v []string) {
 
 // GetRole returns the Role field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRole() string {
-	if o == nil || o.Role == nil {
+	if o == nil || isNil(o.Role) {
 		var ret string
 		return ret
 	}
@@ -1111,15 +1111,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRole() string {
 // GetRoleOk returns a tuple with the Role field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetRoleOk() (*string, bool) {
-	if o == nil || o.Role == nil {
-		return nil, false
+	if o == nil || isNil(o.Role) {
+    return nil, false
 	}
 	return o.Role, true
 }
 
 // HasRole returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasRole() bool {
-	if o != nil && o.Role != nil {
+	if o != nil && !isNil(o.Role) {
 		return true
 	}
 
@@ -1133,7 +1133,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetRole(v string) {
 
 // GetSigningAlg returns the SigningAlg field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetSigningAlg() string {
-	if o == nil || o.SigningAlg == nil {
+	if o == nil || isNil(o.SigningAlg) {
 		var ret string
 		return ret
 	}
@@ -1143,15 +1143,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetSigningAlg() string {
 // GetSigningAlgOk returns a tuple with the SigningAlg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetSigningAlgOk() (*string, bool) {
-	if o == nil || o.SigningAlg == nil {
-		return nil, false
+	if o == nil || isNil(o.SigningAlg) {
+    return nil, false
 	}
 	return o.SigningAlg, true
 }
 
 // HasSigningAlg returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasSigningAlg() bool {
-	if o != nil && o.SigningAlg != nil {
+	if o != nil && !isNil(o.SigningAlg) {
 		return true
 	}
 
@@ -1165,7 +1165,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetSigningAlg(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -1175,15 +1175,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -1197,7 +1197,7 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -1207,15 +1207,15 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *ExternalOpenIDConnectRelayingPartyDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -1229,112 +1229,112 @@ func (o *ExternalOpenIDConnectRelayingPartyDTO) SetY(v float64) {
 
 func (o ExternalOpenIDConnectRelayingPartyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccountLinkagePolicy != nil {
+	if !isNil(o.AccountLinkagePolicy) {
 		toSerialize["accountLinkagePolicy"] = o.AccountLinkagePolicy
 	}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.AuthorizedURIs != nil {
+	if !isNil(o.AuthorizedURIs) {
 		toSerialize["authorizedURIs"] = o.AuthorizedURIs
 	}
-	if o.ClientAuthnMethod != nil {
+	if !isNil(o.ClientAuthnMethod) {
 		toSerialize["clientAuthnMethod"] = o.ClientAuthnMethod
 	}
-	if o.ClientCert != nil {
+	if !isNil(o.ClientCert) {
 		toSerialize["clientCert"] = o.ClientCert
 	}
-	if o.ClientId != nil {
+	if !isNil(o.ClientId) {
 		toSerialize["clientId"] = o.ClientId
 	}
-	if o.ClientSecret != nil {
+	if !isNil(o.ClientSecret) {
 		toSerialize["clientSecret"] = o.ClientSecret
 	}
-	if o.ClientType != nil {
+	if !isNil(o.ClientType) {
 		toSerialize["clientType"] = o.ClientType
 	}
-	if o.Config != nil {
+	if !isNil(o.Config) {
 		toSerialize["config"] = o.Config
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.EncryptionAlg != nil {
+	if !isNil(o.EncryptionAlg) {
 		toSerialize["encryptionAlg"] = o.EncryptionAlg
 	}
-	if o.EncryptionMethod != nil {
+	if !isNil(o.EncryptionMethod) {
 		toSerialize["encryptionMethod"] = o.EncryptionMethod
 	}
-	if o.FederatedConnectionsA != nil {
+	if !isNil(o.FederatedConnectionsA) {
 		toSerialize["federatedConnectionsA"] = o.FederatedConnectionsA
 	}
-	if o.FederatedConnectionsB != nil {
+	if !isNil(o.FederatedConnectionsB) {
 		toSerialize["federatedConnectionsB"] = o.FederatedConnectionsB
 	}
-	if o.Grants != nil {
+	if !isNil(o.Grants) {
 		toSerialize["grants"] = o.Grants
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdTokenEncryptionAlg != nil {
+	if !isNil(o.IdTokenEncryptionAlg) {
 		toSerialize["idTokenEncryptionAlg"] = o.IdTokenEncryptionAlg
 	}
-	if o.IdTokenEncryptionMethod != nil {
+	if !isNil(o.IdTokenEncryptionMethod) {
 		toSerialize["idTokenEncryptionMethod"] = o.IdTokenEncryptionMethod
 	}
-	if o.IdTokenSigningAlg != nil {
+	if !isNil(o.IdTokenSigningAlg) {
 		toSerialize["idTokenSigningAlg"] = o.IdTokenSigningAlg
 	}
-	if o.IdentityAppliance != nil {
+	if !isNil(o.IdentityAppliance) {
 		toSerialize["identityAppliance"] = o.IdentityAppliance
 	}
-	if o.IdentityLookups != nil {
+	if !isNil(o.IdentityLookups) {
 		toSerialize["identityLookups"] = o.IdentityLookups
 	}
-	if o.IdentityMappingPolicy != nil {
+	if !isNil(o.IdentityMappingPolicy) {
 		toSerialize["identityMappingPolicy"] = o.IdentityMappingPolicy
 	}
-	if o.IsRemote != nil {
+	if !isNil(o.IsRemote) {
 		toSerialize["isRemote"] = o.IsRemote
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Metadata != nil {
+	if !isNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.PostLogoutRedirectionURIs != nil {
+	if !isNil(o.PostLogoutRedirectionURIs) {
 		toSerialize["postLogoutRedirectionURIs"] = o.PostLogoutRedirectionURIs
 	}
-	if o.Remote != nil {
+	if !isNil(o.Remote) {
 		toSerialize["remote"] = o.Remote
 	}
-	if o.ResponseTypes != nil {
+	if !isNil(o.ResponseTypes) {
 		toSerialize["responseTypes"] = o.ResponseTypes
 	}
-	if o.Role != nil {
+	if !isNil(o.Role) {
 		toSerialize["role"] = o.Role
 	}
-	if o.SigningAlg != nil {
+	if !isNil(o.SigningAlg) {
 		toSerialize["signingAlg"] = o.SigningAlg
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

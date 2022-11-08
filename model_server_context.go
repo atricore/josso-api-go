@@ -44,7 +44,7 @@ func NewServerContextWithDefaults() *ServerContext {
 
 // GetAccessToken returns the AccessToken field value if set, zero value otherwise.
 func (o *ServerContext) GetAccessToken() string {
-	if o == nil || o.AccessToken == nil {
+	if o == nil || isNil(o.AccessToken) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *ServerContext) GetAccessToken() string {
 // GetAccessTokenOk returns a tuple with the AccessToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServerContext) GetAccessTokenOk() (*string, bool) {
-	if o == nil || o.AccessToken == nil {
-		return nil, false
+	if o == nil || isNil(o.AccessToken) {
+    return nil, false
 	}
 	return o.AccessToken, true
 }
 
 // HasAccessToken returns a boolean if a field has been set.
 func (o *ServerContext) HasAccessToken() bool {
-	if o != nil && o.AccessToken != nil {
+	if o != nil && !isNil(o.AccessToken) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *ServerContext) SetAccessToken(v string) {
 
 // GetRefreshToken returns the RefreshToken field value if set, zero value otherwise.
 func (o *ServerContext) GetRefreshToken() string {
-	if o == nil || o.RefreshToken == nil {
+	if o == nil || isNil(o.RefreshToken) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *ServerContext) GetRefreshToken() string {
 // GetRefreshTokenOk returns a tuple with the RefreshToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServerContext) GetRefreshTokenOk() (*string, bool) {
-	if o == nil || o.RefreshToken == nil {
-		return nil, false
+	if o == nil || isNil(o.RefreshToken) {
+    return nil, false
 	}
 	return o.RefreshToken, true
 }
 
 // HasRefreshToken returns a boolean if a field has been set.
 func (o *ServerContext) HasRefreshToken() bool {
-	if o != nil && o.RefreshToken != nil {
+	if o != nil && !isNil(o.RefreshToken) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *ServerContext) SetRefreshToken(v string) {
 
 // GetServerId returns the ServerId field value if set, zero value otherwise.
 func (o *ServerContext) GetServerId() string {
-	if o == nil || o.ServerId == nil {
+	if o == nil || isNil(o.ServerId) {
 		var ret string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *ServerContext) GetServerId() string {
 // GetServerIdOk returns a tuple with the ServerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServerContext) GetServerIdOk() (*string, bool) {
-	if o == nil || o.ServerId == nil {
-		return nil, false
+	if o == nil || isNil(o.ServerId) {
+    return nil, false
 	}
 	return o.ServerId, true
 }
 
 // HasServerId returns a boolean if a field has been set.
 func (o *ServerContext) HasServerId() bool {
-	if o != nil && o.ServerId != nil {
+	if o != nil && !isNil(o.ServerId) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *ServerContext) SetServerId(v string) {
 
 func (o ServerContext) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccessToken != nil {
+	if !isNil(o.AccessToken) {
 		toSerialize["accessToken"] = o.AccessToken
 	}
-	if o.RefreshToken != nil {
+	if !isNil(o.RefreshToken) {
 		toSerialize["refreshToken"] = o.RefreshToken
 	}
-	if o.ServerId != nil {
+	if !isNil(o.ServerId) {
 		toSerialize["serverId"] = o.ServerId
 	}
 

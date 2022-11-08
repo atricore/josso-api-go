@@ -43,7 +43,7 @@ func NewSubjectAuthenticationPolicyDTOWithDefaults() *SubjectAuthenticationPolic
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *SubjectAuthenticationPolicyDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *SubjectAuthenticationPolicyDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectAuthenticationPolicyDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *SubjectAuthenticationPolicyDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *SubjectAuthenticationPolicyDTO) SetDescription(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SubjectAuthenticationPolicyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *SubjectAuthenticationPolicyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectAuthenticationPolicyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SubjectAuthenticationPolicyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *SubjectAuthenticationPolicyDTO) SetName(v string) {
 
 func (o SubjectAuthenticationPolicyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
 

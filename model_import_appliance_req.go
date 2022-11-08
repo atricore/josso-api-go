@@ -48,7 +48,7 @@ func NewImportApplianceReqWithDefaults() *ImportApplianceReq {
 
 // GetBase64Json returns the Base64Json field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetBase64Json() string {
-	if o == nil || o.Base64Json == nil {
+	if o == nil || isNil(o.Base64Json) {
 		var ret string
 		return ret
 	}
@@ -58,15 +58,15 @@ func (o *ImportApplianceReq) GetBase64Json() string {
 // GetBase64JsonOk returns a tuple with the Base64Json field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetBase64JsonOk() (*string, bool) {
-	if o == nil || o.Base64Json == nil {
-		return nil, false
+	if o == nil || isNil(o.Base64Json) {
+    return nil, false
 	}
 	return o.Base64Json, true
 }
 
 // HasBase64Json returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasBase64Json() bool {
-	if o != nil && o.Base64Json != nil {
+	if o != nil && !isNil(o.Base64Json) {
 		return true
 	}
 
@@ -80,7 +80,7 @@ func (o *ImportApplianceReq) SetBase64Json(v string) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -90,15 +90,15 @@ func (o *ImportApplianceReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -112,7 +112,7 @@ func (o *ImportApplianceReq) SetIdaName(v string) {
 
 // GetModify returns the Modify field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetModify() bool {
-	if o == nil || o.Modify == nil {
+	if o == nil || isNil(o.Modify) {
 		var ret bool
 		return ret
 	}
@@ -122,15 +122,15 @@ func (o *ImportApplianceReq) GetModify() bool {
 // GetModifyOk returns a tuple with the Modify field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetModifyOk() (*bool, bool) {
-	if o == nil || o.Modify == nil {
-		return nil, false
+	if o == nil || isNil(o.Modify) {
+    return nil, false
 	}
 	return o.Modify, true
 }
 
 // HasModify returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasModify() bool {
-	if o != nil && o.Modify != nil {
+	if o != nil && !isNil(o.Modify) {
 		return true
 	}
 
@@ -144,7 +144,7 @@ func (o *ImportApplianceReq) SetModify(v bool) {
 
 // GetNewDescription returns the NewDescription field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetNewDescription() string {
-	if o == nil || o.NewDescription == nil {
+	if o == nil || isNil(o.NewDescription) {
 		var ret string
 		return ret
 	}
@@ -154,15 +154,15 @@ func (o *ImportApplianceReq) GetNewDescription() string {
 // GetNewDescriptionOk returns a tuple with the NewDescription field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetNewDescriptionOk() (*string, bool) {
-	if o == nil || o.NewDescription == nil {
-		return nil, false
+	if o == nil || isNil(o.NewDescription) {
+    return nil, false
 	}
 	return o.NewDescription, true
 }
 
 // HasNewDescription returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasNewDescription() bool {
-	if o != nil && o.NewDescription != nil {
+	if o != nil && !isNil(o.NewDescription) {
 		return true
 	}
 
@@ -176,7 +176,7 @@ func (o *ImportApplianceReq) SetNewDescription(v string) {
 
 // GetNewLocation returns the NewLocation field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetNewLocation() string {
-	if o == nil || o.NewLocation == nil {
+	if o == nil || isNil(o.NewLocation) {
 		var ret string
 		return ret
 	}
@@ -186,15 +186,15 @@ func (o *ImportApplianceReq) GetNewLocation() string {
 // GetNewLocationOk returns a tuple with the NewLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetNewLocationOk() (*string, bool) {
-	if o == nil || o.NewLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.NewLocation) {
+    return nil, false
 	}
 	return o.NewLocation, true
 }
 
 // HasNewLocation returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasNewLocation() bool {
-	if o != nil && o.NewLocation != nil {
+	if o != nil && !isNil(o.NewLocation) {
 		return true
 	}
 
@@ -208,7 +208,7 @@ func (o *ImportApplianceReq) SetNewLocation(v string) {
 
 // GetNewName returns the NewName field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetNewName() string {
-	if o == nil || o.NewName == nil {
+	if o == nil || isNil(o.NewName) {
 		var ret string
 		return ret
 	}
@@ -218,15 +218,15 @@ func (o *ImportApplianceReq) GetNewName() string {
 // GetNewNameOk returns a tuple with the NewName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetNewNameOk() (*string, bool) {
-	if o == nil || o.NewName == nil {
-		return nil, false
+	if o == nil || isNil(o.NewName) {
+    return nil, false
 	}
 	return o.NewName, true
 }
 
 // HasNewName returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasNewName() bool {
-	if o != nil && o.NewName != nil {
+	if o != nil && !isNil(o.NewName) {
 		return true
 	}
 
@@ -240,7 +240,7 @@ func (o *ImportApplianceReq) SetNewName(v string) {
 
 // GetNewNamespace returns the NewNamespace field value if set, zero value otherwise.
 func (o *ImportApplianceReq) GetNewNamespace() string {
-	if o == nil || o.NewNamespace == nil {
+	if o == nil || isNil(o.NewNamespace) {
 		var ret string
 		return ret
 	}
@@ -250,15 +250,15 @@ func (o *ImportApplianceReq) GetNewNamespace() string {
 // GetNewNamespaceOk returns a tuple with the NewNamespace field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImportApplianceReq) GetNewNamespaceOk() (*string, bool) {
-	if o == nil || o.NewNamespace == nil {
-		return nil, false
+	if o == nil || isNil(o.NewNamespace) {
+    return nil, false
 	}
 	return o.NewNamespace, true
 }
 
 // HasNewNamespace returns a boolean if a field has been set.
 func (o *ImportApplianceReq) HasNewNamespace() bool {
-	if o != nil && o.NewNamespace != nil {
+	if o != nil && !isNil(o.NewNamespace) {
 		return true
 	}
 
@@ -272,25 +272,25 @@ func (o *ImportApplianceReq) SetNewNamespace(v string) {
 
 func (o ImportApplianceReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Base64Json != nil {
+	if !isNil(o.Base64Json) {
 		toSerialize["base64Json"] = o.Base64Json
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Modify != nil {
+	if !isNil(o.Modify) {
 		toSerialize["modify"] = o.Modify
 	}
-	if o.NewDescription != nil {
+	if !isNil(o.NewDescription) {
 		toSerialize["newDescription"] = o.NewDescription
 	}
-	if o.NewLocation != nil {
+	if !isNil(o.NewLocation) {
 		toSerialize["newLocation"] = o.NewLocation
 	}
-	if o.NewName != nil {
+	if !isNil(o.NewName) {
 		toSerialize["newName"] = o.NewName
 	}
-	if o.NewNamespace != nil {
+	if !isNil(o.NewNamespace) {
 		toSerialize["newNamespace"] = o.NewNamespace
 	}
 

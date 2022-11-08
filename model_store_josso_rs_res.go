@@ -44,7 +44,7 @@ func NewStoreJossoRsResWithDefaults() *StoreJossoRsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *StoreJossoRsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *StoreJossoRsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreJossoRsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *StoreJossoRsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *StoreJossoRsRes) SetError(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *StoreJossoRsRes) GetResource() JOSSO1ResourceDTO {
-	if o == nil || o.Resource == nil {
+	if o == nil || isNil(o.Resource) {
 		var ret JOSSO1ResourceDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *StoreJossoRsRes) GetResource() JOSSO1ResourceDTO {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreJossoRsRes) GetResourceOk() (*JOSSO1ResourceDTO, bool) {
-	if o == nil || o.Resource == nil {
-		return nil, false
+	if o == nil || isNil(o.Resource) {
+    return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *StoreJossoRsRes) HasResource() bool {
-	if o != nil && o.Resource != nil {
+	if o != nil && !isNil(o.Resource) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *StoreJossoRsRes) SetResource(v JOSSO1ResourceDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *StoreJossoRsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *StoreJossoRsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreJossoRsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *StoreJossoRsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *StoreJossoRsRes) SetValidationErrors(v []string) {
 
 func (o StoreJossoRsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Resource != nil {
+	if !isNil(o.Resource) {
 		toSerialize["resource"] = o.Resource
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

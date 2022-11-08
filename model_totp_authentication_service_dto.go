@@ -52,7 +52,7 @@ func NewTOTPAuthenticationServiceDTOWithDefaults() *TOTPAuthenticationServiceDTO
 
 // GetCrypto returns the Crypto field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetCrypto() string {
-	if o == nil || o.Crypto == nil {
+	if o == nil || isNil(o.Crypto) {
 		var ret string
 		return ret
 	}
@@ -62,15 +62,15 @@ func (o *TOTPAuthenticationServiceDTO) GetCrypto() string {
 // GetCryptoOk returns a tuple with the Crypto field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetCryptoOk() (*string, bool) {
-	if o == nil || o.Crypto == nil {
-		return nil, false
+	if o == nil || isNil(o.Crypto) {
+    return nil, false
 	}
 	return o.Crypto, true
 }
 
 // HasCrypto returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasCrypto() bool {
-	if o != nil && o.Crypto != nil {
+	if o != nil && !isNil(o.Crypto) {
 		return true
 	}
 
@@ -84,7 +84,7 @@ func (o *TOTPAuthenticationServiceDTO) SetCrypto(v string) {
 
 // GetDelegatedAuthentications returns the DelegatedAuthentications field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetDelegatedAuthentications() []DelegatedAuthenticationDTO {
-	if o == nil || o.DelegatedAuthentications == nil {
+	if o == nil || isNil(o.DelegatedAuthentications) {
 		var ret []DelegatedAuthenticationDTO
 		return ret
 	}
@@ -94,15 +94,15 @@ func (o *TOTPAuthenticationServiceDTO) GetDelegatedAuthentications() []Delegated
 // GetDelegatedAuthenticationsOk returns a tuple with the DelegatedAuthentications field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetDelegatedAuthenticationsOk() ([]DelegatedAuthenticationDTO, bool) {
-	if o == nil || o.DelegatedAuthentications == nil {
-		return nil, false
+	if o == nil || isNil(o.DelegatedAuthentications) {
+    return nil, false
 	}
 	return o.DelegatedAuthentications, true
 }
 
 // HasDelegatedAuthentications returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasDelegatedAuthentications() bool {
-	if o != nil && o.DelegatedAuthentications != nil {
+	if o != nil && !isNil(o.DelegatedAuthentications) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *TOTPAuthenticationServiceDTO) SetDelegatedAuthentications(v []Delegated
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -126,15 +126,15 @@ func (o *TOTPAuthenticationServiceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *TOTPAuthenticationServiceDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -158,15 +158,15 @@ func (o *TOTPAuthenticationServiceDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *TOTPAuthenticationServiceDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -190,15 +190,15 @@ func (o *TOTPAuthenticationServiceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *TOTPAuthenticationServiceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -222,15 +222,15 @@ func (o *TOTPAuthenticationServiceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *TOTPAuthenticationServiceDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -254,15 +254,15 @@ func (o *TOTPAuthenticationServiceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -276,7 +276,7 @@ func (o *TOTPAuthenticationServiceDTO) SetName(v string) {
 
 // GetReturnDigits returns the ReturnDigits field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetReturnDigits() int32 {
-	if o == nil || o.ReturnDigits == nil {
+	if o == nil || isNil(o.ReturnDigits) {
 		var ret int32
 		return ret
 	}
@@ -286,15 +286,15 @@ func (o *TOTPAuthenticationServiceDTO) GetReturnDigits() int32 {
 // GetReturnDigitsOk returns a tuple with the ReturnDigits field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetReturnDigitsOk() (*int32, bool) {
-	if o == nil || o.ReturnDigits == nil {
-		return nil, false
+	if o == nil || isNil(o.ReturnDigits) {
+    return nil, false
 	}
 	return o.ReturnDigits, true
 }
 
 // HasReturnDigits returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasReturnDigits() bool {
-	if o != nil && o.ReturnDigits != nil {
+	if o != nil && !isNil(o.ReturnDigits) {
 		return true
 	}
 
@@ -308,7 +308,7 @@ func (o *TOTPAuthenticationServiceDTO) SetReturnDigits(v int32) {
 
 // GetSecretCredential returns the SecretCredential field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetSecretCredential() string {
-	if o == nil || o.SecretCredential == nil {
+	if o == nil || isNil(o.SecretCredential) {
 		var ret string
 		return ret
 	}
@@ -318,15 +318,15 @@ func (o *TOTPAuthenticationServiceDTO) GetSecretCredential() string {
 // GetSecretCredentialOk returns a tuple with the SecretCredential field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetSecretCredentialOk() (*string, bool) {
-	if o == nil || o.SecretCredential == nil {
-		return nil, false
+	if o == nil || isNil(o.SecretCredential) {
+    return nil, false
 	}
 	return o.SecretCredential, true
 }
 
 // HasSecretCredential returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasSecretCredential() bool {
-	if o != nil && o.SecretCredential != nil {
+	if o != nil && !isNil(o.SecretCredential) {
 		return true
 	}
 
@@ -340,7 +340,7 @@ func (o *TOTPAuthenticationServiceDTO) SetSecretCredential(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -350,15 +350,15 @@ func (o *TOTPAuthenticationServiceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -372,7 +372,7 @@ func (o *TOTPAuthenticationServiceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *TOTPAuthenticationServiceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -382,15 +382,15 @@ func (o *TOTPAuthenticationServiceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TOTPAuthenticationServiceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *TOTPAuthenticationServiceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -404,37 +404,37 @@ func (o *TOTPAuthenticationServiceDTO) SetY(v float64) {
 
 func (o TOTPAuthenticationServiceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Crypto != nil {
+	if !isNil(o.Crypto) {
 		toSerialize["crypto"] = o.Crypto
 	}
-	if o.DelegatedAuthentications != nil {
+	if !isNil(o.DelegatedAuthentications) {
 		toSerialize["delegatedAuthentications"] = o.DelegatedAuthentications
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.ReturnDigits != nil {
+	if !isNil(o.ReturnDigits) {
 		toSerialize["returnDigits"] = o.ReturnDigits
 	}
-	if o.SecretCredential != nil {
+	if !isNil(o.SecretCredential) {
 		toSerialize["secretCredential"] = o.SecretCredential
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

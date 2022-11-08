@@ -46,7 +46,7 @@ func NewAccountLinkagePolicyDTOWithDefaults() *AccountLinkagePolicyDTO {
 
 // GetCustomLinkEmitter returns the CustomLinkEmitter field value if set, zero value otherwise.
 func (o *AccountLinkagePolicyDTO) GetCustomLinkEmitter() string {
-	if o == nil || o.CustomLinkEmitter == nil {
+	if o == nil || isNil(o.CustomLinkEmitter) {
 		var ret string
 		return ret
 	}
@@ -56,15 +56,15 @@ func (o *AccountLinkagePolicyDTO) GetCustomLinkEmitter() string {
 // GetCustomLinkEmitterOk returns a tuple with the CustomLinkEmitter field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AccountLinkagePolicyDTO) GetCustomLinkEmitterOk() (*string, bool) {
-	if o == nil || o.CustomLinkEmitter == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomLinkEmitter) {
+    return nil, false
 	}
 	return o.CustomLinkEmitter, true
 }
 
 // HasCustomLinkEmitter returns a boolean if a field has been set.
 func (o *AccountLinkagePolicyDTO) HasCustomLinkEmitter() bool {
-	if o != nil && o.CustomLinkEmitter != nil {
+	if o != nil && !isNil(o.CustomLinkEmitter) {
 		return true
 	}
 
@@ -78,7 +78,7 @@ func (o *AccountLinkagePolicyDTO) SetCustomLinkEmitter(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *AccountLinkagePolicyDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -88,15 +88,15 @@ func (o *AccountLinkagePolicyDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AccountLinkagePolicyDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *AccountLinkagePolicyDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *AccountLinkagePolicyDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *AccountLinkagePolicyDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -120,15 +120,15 @@ func (o *AccountLinkagePolicyDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AccountLinkagePolicyDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *AccountLinkagePolicyDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *AccountLinkagePolicyDTO) SetId(v int64) {
 
 // GetLinkEmitterType returns the LinkEmitterType field value if set, zero value otherwise.
 func (o *AccountLinkagePolicyDTO) GetLinkEmitterType() string {
-	if o == nil || o.LinkEmitterType == nil {
+	if o == nil || isNil(o.LinkEmitterType) {
 		var ret string
 		return ret
 	}
@@ -152,15 +152,15 @@ func (o *AccountLinkagePolicyDTO) GetLinkEmitterType() string {
 // GetLinkEmitterTypeOk returns a tuple with the LinkEmitterType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AccountLinkagePolicyDTO) GetLinkEmitterTypeOk() (*string, bool) {
-	if o == nil || o.LinkEmitterType == nil {
-		return nil, false
+	if o == nil || isNil(o.LinkEmitterType) {
+    return nil, false
 	}
 	return o.LinkEmitterType, true
 }
 
 // HasLinkEmitterType returns a boolean if a field has been set.
 func (o *AccountLinkagePolicyDTO) HasLinkEmitterType() bool {
-	if o != nil && o.LinkEmitterType != nil {
+	if o != nil && !isNil(o.LinkEmitterType) {
 		return true
 	}
 
@@ -174,7 +174,7 @@ func (o *AccountLinkagePolicyDTO) SetLinkEmitterType(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *AccountLinkagePolicyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -184,15 +184,15 @@ func (o *AccountLinkagePolicyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AccountLinkagePolicyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *AccountLinkagePolicyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -206,19 +206,19 @@ func (o *AccountLinkagePolicyDTO) SetName(v string) {
 
 func (o AccountLinkagePolicyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CustomLinkEmitter != nil {
+	if !isNil(o.CustomLinkEmitter) {
 		toSerialize["customLinkEmitter"] = o.CustomLinkEmitter
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.LinkEmitterType != nil {
+	if !isNil(o.LinkEmitterType) {
 		toSerialize["linkEmitterType"] = o.LinkEmitterType
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
 

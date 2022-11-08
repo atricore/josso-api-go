@@ -50,7 +50,7 @@ func NewSamlR2IDPConfigDTOWithDefaults() *SamlR2IDPConfigDTO {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -60,15 +60,15 @@ func (o *SamlR2IDPConfigDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -82,7 +82,7 @@ func (o *SamlR2IDPConfigDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -92,15 +92,15 @@ func (o *SamlR2IDPConfigDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -114,7 +114,7 @@ func (o *SamlR2IDPConfigDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -124,15 +124,15 @@ func (o *SamlR2IDPConfigDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -146,7 +146,7 @@ func (o *SamlR2IDPConfigDTO) SetElementId(v string) {
 
 // GetEncrypter returns the Encrypter field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetEncrypter() KeystoreDTO {
-	if o == nil || o.Encrypter == nil {
+	if o == nil || isNil(o.Encrypter) {
 		var ret KeystoreDTO
 		return ret
 	}
@@ -156,15 +156,15 @@ func (o *SamlR2IDPConfigDTO) GetEncrypter() KeystoreDTO {
 // GetEncrypterOk returns a tuple with the Encrypter field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetEncrypterOk() (*KeystoreDTO, bool) {
-	if o == nil || o.Encrypter == nil {
-		return nil, false
+	if o == nil || isNil(o.Encrypter) {
+    return nil, false
 	}
 	return o.Encrypter, true
 }
 
 // HasEncrypter returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasEncrypter() bool {
-	if o != nil && o.Encrypter != nil {
+	if o != nil && !isNil(o.Encrypter) {
 		return true
 	}
 
@@ -178,7 +178,7 @@ func (o *SamlR2IDPConfigDTO) SetEncrypter(v KeystoreDTO) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -188,15 +188,15 @@ func (o *SamlR2IDPConfigDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -210,7 +210,7 @@ func (o *SamlR2IDPConfigDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -220,15 +220,15 @@ func (o *SamlR2IDPConfigDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -242,7 +242,7 @@ func (o *SamlR2IDPConfigDTO) SetName(v string) {
 
 // GetSigner returns the Signer field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetSigner() KeystoreDTO {
-	if o == nil || o.Signer == nil {
+	if o == nil || isNil(o.Signer) {
 		var ret KeystoreDTO
 		return ret
 	}
@@ -252,15 +252,15 @@ func (o *SamlR2IDPConfigDTO) GetSigner() KeystoreDTO {
 // GetSignerOk returns a tuple with the Signer field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetSignerOk() (*KeystoreDTO, bool) {
-	if o == nil || o.Signer == nil {
-		return nil, false
+	if o == nil || isNil(o.Signer) {
+    return nil, false
 	}
 	return o.Signer, true
 }
 
 // HasSigner returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasSigner() bool {
-	if o != nil && o.Signer != nil {
+	if o != nil && !isNil(o.Signer) {
 		return true
 	}
 
@@ -274,7 +274,7 @@ func (o *SamlR2IDPConfigDTO) SetSigner(v KeystoreDTO) {
 
 // GetUseSampleStore returns the UseSampleStore field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetUseSampleStore() bool {
-	if o == nil || o.UseSampleStore == nil {
+	if o == nil || isNil(o.UseSampleStore) {
 		var ret bool
 		return ret
 	}
@@ -284,15 +284,15 @@ func (o *SamlR2IDPConfigDTO) GetUseSampleStore() bool {
 // GetUseSampleStoreOk returns a tuple with the UseSampleStore field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetUseSampleStoreOk() (*bool, bool) {
-	if o == nil || o.UseSampleStore == nil {
-		return nil, false
+	if o == nil || isNil(o.UseSampleStore) {
+    return nil, false
 	}
 	return o.UseSampleStore, true
 }
 
 // HasUseSampleStore returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasUseSampleStore() bool {
-	if o != nil && o.UseSampleStore != nil {
+	if o != nil && !isNil(o.UseSampleStore) {
 		return true
 	}
 
@@ -306,7 +306,7 @@ func (o *SamlR2IDPConfigDTO) SetUseSampleStore(v bool) {
 
 // GetUseSystemStore returns the UseSystemStore field value if set, zero value otherwise.
 func (o *SamlR2IDPConfigDTO) GetUseSystemStore() bool {
-	if o == nil || o.UseSystemStore == nil {
+	if o == nil || isNil(o.UseSystemStore) {
 		var ret bool
 		return ret
 	}
@@ -316,15 +316,15 @@ func (o *SamlR2IDPConfigDTO) GetUseSystemStore() bool {
 // GetUseSystemStoreOk returns a tuple with the UseSystemStore field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SamlR2IDPConfigDTO) GetUseSystemStoreOk() (*bool, bool) {
-	if o == nil || o.UseSystemStore == nil {
-		return nil, false
+	if o == nil || isNil(o.UseSystemStore) {
+    return nil, false
 	}
 	return o.UseSystemStore, true
 }
 
 // HasUseSystemStore returns a boolean if a field has been set.
 func (o *SamlR2IDPConfigDTO) HasUseSystemStore() bool {
-	if o != nil && o.UseSystemStore != nil {
+	if o != nil && !isNil(o.UseSystemStore) {
 		return true
 	}
 
@@ -338,31 +338,31 @@ func (o *SamlR2IDPConfigDTO) SetUseSystemStore(v bool) {
 
 func (o SamlR2IDPConfigDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Encrypter != nil {
+	if !isNil(o.Encrypter) {
 		toSerialize["encrypter"] = o.Encrypter
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Signer != nil {
+	if !isNil(o.Signer) {
 		toSerialize["signer"] = o.Signer
 	}
-	if o.UseSampleStore != nil {
+	if !isNil(o.UseSampleStore) {
 		toSerialize["useSampleStore"] = o.UseSampleStore
 	}
-	if o.UseSystemStore != nil {
+	if !isNil(o.UseSystemStore) {
 		toSerialize["useSystemStore"] = o.UseSystemStore
 	}
 

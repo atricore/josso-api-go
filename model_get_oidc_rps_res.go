@@ -44,7 +44,7 @@ func NewGetOidcRpsResWithDefaults() *GetOidcRpsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetOidcRpsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetOidcRpsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetOidcRpsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetOidcRpsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetOidcRpsRes) SetError(v string) {
 
 // GetOidcRps returns the OidcRps field value if set, zero value otherwise.
 func (o *GetOidcRpsRes) GetOidcRps() []ExternalOpenIDConnectRelayingPartyDTO {
-	if o == nil || o.OidcRps == nil {
+	if o == nil || isNil(o.OidcRps) {
 		var ret []ExternalOpenIDConnectRelayingPartyDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetOidcRpsRes) GetOidcRps() []ExternalOpenIDConnectRelayingPartyDTO {
 // GetOidcRpsOk returns a tuple with the OidcRps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetOidcRpsRes) GetOidcRpsOk() ([]ExternalOpenIDConnectRelayingPartyDTO, bool) {
-	if o == nil || o.OidcRps == nil {
-		return nil, false
+	if o == nil || isNil(o.OidcRps) {
+    return nil, false
 	}
 	return o.OidcRps, true
 }
 
 // HasOidcRps returns a boolean if a field has been set.
 func (o *GetOidcRpsRes) HasOidcRps() bool {
-	if o != nil && o.OidcRps != nil {
+	if o != nil && !isNil(o.OidcRps) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetOidcRpsRes) SetOidcRps(v []ExternalOpenIDConnectRelayingPartyDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetOidcRpsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetOidcRpsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetOidcRpsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetOidcRpsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetOidcRpsRes) SetValidationErrors(v []string) {
 
 func (o GetOidcRpsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.OidcRps != nil {
+	if !isNil(o.OidcRps) {
 		toSerialize["oidcRps"] = o.OidcRps
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

@@ -45,7 +45,7 @@ func NewGroupDTOWithDefaults() *GroupDTO {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *GroupDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *GroupDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GroupDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *GroupDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *GroupDTO) SetDescription(v string) {
 
 // GetExtraAttributes returns the ExtraAttributes field value if set, zero value otherwise.
 func (o *GroupDTO) GetExtraAttributes() []AttributeValueDTO {
-	if o == nil || o.ExtraAttributes == nil {
+	if o == nil || isNil(o.ExtraAttributes) {
 		var ret []AttributeValueDTO
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *GroupDTO) GetExtraAttributes() []AttributeValueDTO {
 // GetExtraAttributesOk returns a tuple with the ExtraAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GroupDTO) GetExtraAttributesOk() ([]AttributeValueDTO, bool) {
-	if o == nil || o.ExtraAttributes == nil {
-		return nil, false
+	if o == nil || isNil(o.ExtraAttributes) {
+    return nil, false
 	}
 	return o.ExtraAttributes, true
 }
 
 // HasExtraAttributes returns a boolean if a field has been set.
 func (o *GroupDTO) HasExtraAttributes() bool {
-	if o != nil && o.ExtraAttributes != nil {
+	if o != nil && !isNil(o.ExtraAttributes) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *GroupDTO) SetExtraAttributes(v []AttributeValueDTO) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *GroupDTO) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *GroupDTO) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GroupDTO) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *GroupDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *GroupDTO) SetId(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *GroupDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *GroupDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GroupDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *GroupDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *GroupDTO) SetName(v string) {
 
 func (o GroupDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ExtraAttributes != nil {
+	if !isNil(o.ExtraAttributes) {
 		toSerialize["extraAttributes"] = o.ExtraAttributes
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
 

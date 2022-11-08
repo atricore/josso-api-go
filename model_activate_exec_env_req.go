@@ -51,7 +51,7 @@ func NewActivateExecEnvReqWithDefaults() *ActivateExecEnvReq {
 
 // GetActivateSamples returns the ActivateSamples field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetActivateSamples() bool {
-	if o == nil || o.ActivateSamples == nil {
+	if o == nil || isNil(o.ActivateSamples) {
 		var ret bool
 		return ret
 	}
@@ -61,15 +61,15 @@ func (o *ActivateExecEnvReq) GetActivateSamples() bool {
 // GetActivateSamplesOk returns a tuple with the ActivateSamples field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetActivateSamplesOk() (*bool, bool) {
-	if o == nil || o.ActivateSamples == nil {
-		return nil, false
+	if o == nil || isNil(o.ActivateSamples) {
+    return nil, false
 	}
 	return o.ActivateSamples, true
 }
 
 // HasActivateSamples returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasActivateSamples() bool {
-	if o != nil && o.ActivateSamples != nil {
+	if o != nil && !isNil(o.ActivateSamples) {
 		return true
 	}
 
@@ -83,7 +83,7 @@ func (o *ActivateExecEnvReq) SetActivateSamples(v bool) {
 
 // GetApplianceId returns the ApplianceId field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetApplianceId() string {
-	if o == nil || o.ApplianceId == nil {
+	if o == nil || isNil(o.ApplianceId) {
 		var ret string
 		return ret
 	}
@@ -93,15 +93,15 @@ func (o *ActivateExecEnvReq) GetApplianceId() string {
 // GetApplianceIdOk returns a tuple with the ApplianceId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetApplianceIdOk() (*string, bool) {
-	if o == nil || o.ApplianceId == nil {
-		return nil, false
+	if o == nil || isNil(o.ApplianceId) {
+    return nil, false
 	}
 	return o.ApplianceId, true
 }
 
 // HasApplianceId returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasApplianceId() bool {
-	if o != nil && o.ApplianceId != nil {
+	if o != nil && !isNil(o.ApplianceId) {
 		return true
 	}
 
@@ -115,7 +115,7 @@ func (o *ActivateExecEnvReq) SetApplianceId(v string) {
 
 // GetDestination returns the Destination field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetDestination() string {
-	if o == nil || o.Destination == nil {
+	if o == nil || isNil(o.Destination) {
 		var ret string
 		return ret
 	}
@@ -125,15 +125,15 @@ func (o *ActivateExecEnvReq) GetDestination() string {
 // GetDestinationOk returns a tuple with the Destination field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetDestinationOk() (*string, bool) {
-	if o == nil || o.Destination == nil {
-		return nil, false
+	if o == nil || isNil(o.Destination) {
+    return nil, false
 	}
 	return o.Destination, true
 }
 
 // HasDestination returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasDestination() bool {
-	if o != nil && o.Destination != nil {
+	if o != nil && !isNil(o.Destination) {
 		return true
 	}
 
@@ -147,7 +147,7 @@ func (o *ActivateExecEnvReq) SetDestination(v string) {
 
 // GetExecEnvFolder returns the ExecEnvFolder field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetExecEnvFolder() string {
-	if o == nil || o.ExecEnvFolder == nil {
+	if o == nil || isNil(o.ExecEnvFolder) {
 		var ret string
 		return ret
 	}
@@ -157,15 +157,15 @@ func (o *ActivateExecEnvReq) GetExecEnvFolder() string {
 // GetExecEnvFolderOk returns a tuple with the ExecEnvFolder field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetExecEnvFolderOk() (*string, bool) {
-	if o == nil || o.ExecEnvFolder == nil {
-		return nil, false
+	if o == nil || isNil(o.ExecEnvFolder) {
+    return nil, false
 	}
 	return o.ExecEnvFolder, true
 }
 
 // HasExecEnvFolder returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasExecEnvFolder() bool {
-	if o != nil && o.ExecEnvFolder != nil {
+	if o != nil && !isNil(o.ExecEnvFolder) {
 		return true
 	}
 
@@ -179,7 +179,7 @@ func (o *ActivateExecEnvReq) SetExecEnvFolder(v string) {
 
 // GetExecEnvName returns the ExecEnvName field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetExecEnvName() string {
-	if o == nil || o.ExecEnvName == nil {
+	if o == nil || isNil(o.ExecEnvName) {
 		var ret string
 		return ret
 	}
@@ -189,15 +189,15 @@ func (o *ActivateExecEnvReq) GetExecEnvName() string {
 // GetExecEnvNameOk returns a tuple with the ExecEnvName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetExecEnvNameOk() (*string, bool) {
-	if o == nil || o.ExecEnvName == nil {
-		return nil, false
+	if o == nil || isNil(o.ExecEnvName) {
+    return nil, false
 	}
 	return o.ExecEnvName, true
 }
 
 // HasExecEnvName returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasExecEnvName() bool {
-	if o != nil && o.ExecEnvName != nil {
+	if o != nil && !isNil(o.ExecEnvName) {
 		return true
 	}
 
@@ -211,7 +211,7 @@ func (o *ActivateExecEnvReq) SetExecEnvName(v string) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -221,15 +221,15 @@ func (o *ActivateExecEnvReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -243,7 +243,7 @@ func (o *ActivateExecEnvReq) SetIdaName(v string) {
 
 // GetPassword returns the Password field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetPassword() string {
-	if o == nil || o.Password == nil {
+	if o == nil || isNil(o.Password) {
 		var ret string
 		return ret
 	}
@@ -253,15 +253,15 @@ func (o *ActivateExecEnvReq) GetPassword() string {
 // GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
-		return nil, false
+	if o == nil || isNil(o.Password) {
+    return nil, false
 	}
 	return o.Password, true
 }
 
 // HasPassword returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasPassword() bool {
-	if o != nil && o.Password != nil {
+	if o != nil && !isNil(o.Password) {
 		return true
 	}
 
@@ -275,7 +275,7 @@ func (o *ActivateExecEnvReq) SetPassword(v string) {
 
 // GetReactivate returns the Reactivate field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetReactivate() bool {
-	if o == nil || o.Reactivate == nil {
+	if o == nil || isNil(o.Reactivate) {
 		var ret bool
 		return ret
 	}
@@ -285,15 +285,15 @@ func (o *ActivateExecEnvReq) GetReactivate() bool {
 // GetReactivateOk returns a tuple with the Reactivate field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetReactivateOk() (*bool, bool) {
-	if o == nil || o.Reactivate == nil {
-		return nil, false
+	if o == nil || isNil(o.Reactivate) {
+    return nil, false
 	}
 	return o.Reactivate, true
 }
 
 // HasReactivate returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasReactivate() bool {
-	if o != nil && o.Reactivate != nil {
+	if o != nil && !isNil(o.Reactivate) {
 		return true
 	}
 
@@ -307,7 +307,7 @@ func (o *ActivateExecEnvReq) SetReactivate(v bool) {
 
 // GetReplace returns the Replace field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetReplace() bool {
-	if o == nil || o.Replace == nil {
+	if o == nil || isNil(o.Replace) {
 		var ret bool
 		return ret
 	}
@@ -317,15 +317,15 @@ func (o *ActivateExecEnvReq) GetReplace() bool {
 // GetReplaceOk returns a tuple with the Replace field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetReplaceOk() (*bool, bool) {
-	if o == nil || o.Replace == nil {
-		return nil, false
+	if o == nil || isNil(o.Replace) {
+    return nil, false
 	}
 	return o.Replace, true
 }
 
 // HasReplace returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasReplace() bool {
-	if o != nil && o.Replace != nil {
+	if o != nil && !isNil(o.Replace) {
 		return true
 	}
 
@@ -339,7 +339,7 @@ func (o *ActivateExecEnvReq) SetReplace(v bool) {
 
 // GetUsername returns the Username field value if set, zero value otherwise.
 func (o *ActivateExecEnvReq) GetUsername() string {
-	if o == nil || o.Username == nil {
+	if o == nil || isNil(o.Username) {
 		var ret string
 		return ret
 	}
@@ -349,15 +349,15 @@ func (o *ActivateExecEnvReq) GetUsername() string {
 // GetUsernameOk returns a tuple with the Username field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ActivateExecEnvReq) GetUsernameOk() (*string, bool) {
-	if o == nil || o.Username == nil {
-		return nil, false
+	if o == nil || isNil(o.Username) {
+    return nil, false
 	}
 	return o.Username, true
 }
 
 // HasUsername returns a boolean if a field has been set.
 func (o *ActivateExecEnvReq) HasUsername() bool {
-	if o != nil && o.Username != nil {
+	if o != nil && !isNil(o.Username) {
 		return true
 	}
 
@@ -371,34 +371,34 @@ func (o *ActivateExecEnvReq) SetUsername(v string) {
 
 func (o ActivateExecEnvReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ActivateSamples != nil {
+	if !isNil(o.ActivateSamples) {
 		toSerialize["activateSamples"] = o.ActivateSamples
 	}
-	if o.ApplianceId != nil {
+	if !isNil(o.ApplianceId) {
 		toSerialize["applianceId"] = o.ApplianceId
 	}
-	if o.Destination != nil {
+	if !isNil(o.Destination) {
 		toSerialize["destination"] = o.Destination
 	}
-	if o.ExecEnvFolder != nil {
+	if !isNil(o.ExecEnvFolder) {
 		toSerialize["execEnvFolder"] = o.ExecEnvFolder
 	}
-	if o.ExecEnvName != nil {
+	if !isNil(o.ExecEnvName) {
 		toSerialize["execEnvName"] = o.ExecEnvName
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Password != nil {
+	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
 	}
-	if o.Reactivate != nil {
+	if !isNil(o.Reactivate) {
 		toSerialize["reactivate"] = o.Reactivate
 	}
-	if o.Replace != nil {
+	if !isNil(o.Replace) {
 		toSerialize["replace"] = o.Replace
 	}
-	if o.Username != nil {
+	if !isNil(o.Username) {
 		toSerialize["username"] = o.Username
 	}
 

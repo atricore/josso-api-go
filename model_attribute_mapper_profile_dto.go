@@ -47,7 +47,7 @@ func NewAttributeMapperProfileDTOWithDefaults() *AttributeMapperProfileDTO {
 
 // GetAttributeMaps returns the AttributeMaps field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetAttributeMaps() []AttributeMappingDTO {
-	if o == nil || o.AttributeMaps == nil {
+	if o == nil || isNil(o.AttributeMaps) {
 		var ret []AttributeMappingDTO
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *AttributeMapperProfileDTO) GetAttributeMaps() []AttributeMappingDTO {
 // GetAttributeMapsOk returns a tuple with the AttributeMaps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetAttributeMapsOk() ([]AttributeMappingDTO, bool) {
-	if o == nil || o.AttributeMaps == nil {
-		return nil, false
+	if o == nil || isNil(o.AttributeMaps) {
+    return nil, false
 	}
 	return o.AttributeMaps, true
 }
 
 // HasAttributeMaps returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasAttributeMaps() bool {
-	if o != nil && o.AttributeMaps != nil {
+	if o != nil && !isNil(o.AttributeMaps) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *AttributeMapperProfileDTO) SetAttributeMaps(v []AttributeMappingDTO) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *AttributeMapperProfileDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *AttributeMapperProfileDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *AttributeMapperProfileDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *AttributeMapperProfileDTO) SetId(v int64) {
 
 // GetIncludeNonMappedProperties returns the IncludeNonMappedProperties field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetIncludeNonMappedProperties() bool {
-	if o == nil || o.IncludeNonMappedProperties == nil {
+	if o == nil || isNil(o.IncludeNonMappedProperties) {
 		var ret bool
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *AttributeMapperProfileDTO) GetIncludeNonMappedProperties() bool {
 // GetIncludeNonMappedPropertiesOk returns a tuple with the IncludeNonMappedProperties field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetIncludeNonMappedPropertiesOk() (*bool, bool) {
-	if o == nil || o.IncludeNonMappedProperties == nil {
-		return nil, false
+	if o == nil || isNil(o.IncludeNonMappedProperties) {
+    return nil, false
 	}
 	return o.IncludeNonMappedProperties, true
 }
 
 // HasIncludeNonMappedProperties returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasIncludeNonMappedProperties() bool {
-	if o != nil && o.IncludeNonMappedProperties != nil {
+	if o != nil && !isNil(o.IncludeNonMappedProperties) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *AttributeMapperProfileDTO) SetIncludeNonMappedProperties(v bool) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *AttributeMapperProfileDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *AttributeMapperProfileDTO) SetName(v string) {
 
 // GetProfileType returns the ProfileType field value if set, zero value otherwise.
 func (o *AttributeMapperProfileDTO) GetProfileType() string {
-	if o == nil || o.ProfileType == nil {
+	if o == nil || isNil(o.ProfileType) {
 		var ret string
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *AttributeMapperProfileDTO) GetProfileType() string {
 // GetProfileTypeOk returns a tuple with the ProfileType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AttributeMapperProfileDTO) GetProfileTypeOk() (*string, bool) {
-	if o == nil || o.ProfileType == nil {
-		return nil, false
+	if o == nil || isNil(o.ProfileType) {
+    return nil, false
 	}
 	return o.ProfileType, true
 }
 
 // HasProfileType returns a boolean if a field has been set.
 func (o *AttributeMapperProfileDTO) HasProfileType() bool {
-	if o != nil && o.ProfileType != nil {
+	if o != nil && !isNil(o.ProfileType) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *AttributeMapperProfileDTO) SetProfileType(v string) {
 
 func (o AttributeMapperProfileDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AttributeMaps != nil {
+	if !isNil(o.AttributeMaps) {
 		toSerialize["attributeMaps"] = o.AttributeMaps
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IncludeNonMappedProperties != nil {
+	if !isNil(o.IncludeNonMappedProperties) {
 		toSerialize["includeNonMappedProperties"] = o.IncludeNonMappedProperties
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.ProfileType != nil {
+	if !isNil(o.ProfileType) {
 		toSerialize["profileType"] = o.ProfileType
 	}
 

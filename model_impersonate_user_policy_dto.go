@@ -46,7 +46,7 @@ func NewImpersonateUserPolicyDTOWithDefaults() *ImpersonateUserPolicyDTO {
 
 // GetCustomImpersonateUserPolicy returns the CustomImpersonateUserPolicy field value if set, zero value otherwise.
 func (o *ImpersonateUserPolicyDTO) GetCustomImpersonateUserPolicy() string {
-	if o == nil || o.CustomImpersonateUserPolicy == nil {
+	if o == nil || isNil(o.CustomImpersonateUserPolicy) {
 		var ret string
 		return ret
 	}
@@ -56,15 +56,15 @@ func (o *ImpersonateUserPolicyDTO) GetCustomImpersonateUserPolicy() string {
 // GetCustomImpersonateUserPolicyOk returns a tuple with the CustomImpersonateUserPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImpersonateUserPolicyDTO) GetCustomImpersonateUserPolicyOk() (*string, bool) {
-	if o == nil || o.CustomImpersonateUserPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomImpersonateUserPolicy) {
+    return nil, false
 	}
 	return o.CustomImpersonateUserPolicy, true
 }
 
 // HasCustomImpersonateUserPolicy returns a boolean if a field has been set.
 func (o *ImpersonateUserPolicyDTO) HasCustomImpersonateUserPolicy() bool {
-	if o != nil && o.CustomImpersonateUserPolicy != nil {
+	if o != nil && !isNil(o.CustomImpersonateUserPolicy) {
 		return true
 	}
 
@@ -78,7 +78,7 @@ func (o *ImpersonateUserPolicyDTO) SetCustomImpersonateUserPolicy(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *ImpersonateUserPolicyDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -88,15 +88,15 @@ func (o *ImpersonateUserPolicyDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImpersonateUserPolicyDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *ImpersonateUserPolicyDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *ImpersonateUserPolicyDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *ImpersonateUserPolicyDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -120,15 +120,15 @@ func (o *ImpersonateUserPolicyDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImpersonateUserPolicyDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *ImpersonateUserPolicyDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *ImpersonateUserPolicyDTO) SetId(v int64) {
 
 // GetImpersonateUserPolicyType returns the ImpersonateUserPolicyType field value if set, zero value otherwise.
 func (o *ImpersonateUserPolicyDTO) GetImpersonateUserPolicyType() string {
-	if o == nil || o.ImpersonateUserPolicyType == nil {
+	if o == nil || isNil(o.ImpersonateUserPolicyType) {
 		var ret string
 		return ret
 	}
@@ -152,15 +152,15 @@ func (o *ImpersonateUserPolicyDTO) GetImpersonateUserPolicyType() string {
 // GetImpersonateUserPolicyTypeOk returns a tuple with the ImpersonateUserPolicyType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImpersonateUserPolicyDTO) GetImpersonateUserPolicyTypeOk() (*string, bool) {
-	if o == nil || o.ImpersonateUserPolicyType == nil {
-		return nil, false
+	if o == nil || isNil(o.ImpersonateUserPolicyType) {
+    return nil, false
 	}
 	return o.ImpersonateUserPolicyType, true
 }
 
 // HasImpersonateUserPolicyType returns a boolean if a field has been set.
 func (o *ImpersonateUserPolicyDTO) HasImpersonateUserPolicyType() bool {
-	if o != nil && o.ImpersonateUserPolicyType != nil {
+	if o != nil && !isNil(o.ImpersonateUserPolicyType) {
 		return true
 	}
 
@@ -174,7 +174,7 @@ func (o *ImpersonateUserPolicyDTO) SetImpersonateUserPolicyType(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ImpersonateUserPolicyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -184,15 +184,15 @@ func (o *ImpersonateUserPolicyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ImpersonateUserPolicyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ImpersonateUserPolicyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -206,19 +206,19 @@ func (o *ImpersonateUserPolicyDTO) SetName(v string) {
 
 func (o ImpersonateUserPolicyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CustomImpersonateUserPolicy != nil {
+	if !isNil(o.CustomImpersonateUserPolicy) {
 		toSerialize["customImpersonateUserPolicy"] = o.CustomImpersonateUserPolicy
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.ImpersonateUserPolicyType != nil {
+	if !isNil(o.ImpersonateUserPolicyType) {
 		toSerialize["impersonateUserPolicyType"] = o.ImpersonateUserPolicyType
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
 

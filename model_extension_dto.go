@@ -47,7 +47,7 @@ func NewExtensionDTOWithDefaults() *ExtensionDTO {
 
 // GetClassifier returns the Classifier field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetClassifier() string {
-	if o == nil || o.Classifier == nil {
+	if o == nil || isNil(o.Classifier) {
 		var ret string
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *ExtensionDTO) GetClassifier() string {
 // GetClassifierOk returns a tuple with the Classifier field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetClassifierOk() (*string, bool) {
-	if o == nil || o.Classifier == nil {
-		return nil, false
+	if o == nil || isNil(o.Classifier) {
+    return nil, false
 	}
 	return o.Classifier, true
 }
 
 // HasClassifier returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasClassifier() bool {
-	if o != nil && o.Classifier != nil {
+	if o != nil && !isNil(o.Classifier) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *ExtensionDTO) SetClassifier(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *ExtensionDTO) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *ExtensionDTO) SetId(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *ExtensionDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *ExtensionDTO) SetName(v string) {
 
 // GetNamespace returns the Namespace field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetNamespace() string {
-	if o == nil || o.Namespace == nil {
+	if o == nil || isNil(o.Namespace) {
 		var ret string
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *ExtensionDTO) GetNamespace() string {
 // GetNamespaceOk returns a tuple with the Namespace field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetNamespaceOk() (*string, bool) {
-	if o == nil || o.Namespace == nil {
-		return nil, false
+	if o == nil || isNil(o.Namespace) {
+    return nil, false
 	}
 	return o.Namespace, true
 }
 
 // HasNamespace returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasNamespace() bool {
-	if o != nil && o.Namespace != nil {
+	if o != nil && !isNil(o.Namespace) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *ExtensionDTO) SetNamespace(v string) {
 
 // GetProvider returns the Provider field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetProvider() string {
-	if o == nil || o.Provider == nil {
+	if o == nil || isNil(o.Provider) {
 		var ret string
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *ExtensionDTO) GetProvider() string {
 // GetProviderOk returns a tuple with the Provider field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetProviderOk() (*string, bool) {
-	if o == nil || o.Provider == nil {
-		return nil, false
+	if o == nil || isNil(o.Provider) {
+    return nil, false
 	}
 	return o.Provider, true
 }
 
 // HasProvider returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasProvider() bool {
-	if o != nil && o.Provider != nil {
+	if o != nil && !isNil(o.Provider) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *ExtensionDTO) SetProvider(v string) {
 
 // GetVersion returns the Version field value if set, zero value otherwise.
 func (o *ExtensionDTO) GetVersion() string {
-	if o == nil || o.Version == nil {
+	if o == nil || isNil(o.Version) {
 		var ret string
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *ExtensionDTO) GetVersion() string {
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ExtensionDTO) GetVersionOk() (*string, bool) {
-	if o == nil || o.Version == nil {
-		return nil, false
+	if o == nil || isNil(o.Version) {
+    return nil, false
 	}
 	return o.Version, true
 }
 
 // HasVersion returns a boolean if a field has been set.
 func (o *ExtensionDTO) HasVersion() bool {
-	if o != nil && o.Version != nil {
+	if o != nil && !isNil(o.Version) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *ExtensionDTO) SetVersion(v string) {
 
 func (o ExtensionDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Classifier != nil {
+	if !isNil(o.Classifier) {
 		toSerialize["classifier"] = o.Classifier
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Namespace != nil {
+	if !isNil(o.Namespace) {
 		toSerialize["namespace"] = o.Namespace
 	}
-	if o.Provider != nil {
+	if !isNil(o.Provider) {
 		toSerialize["provider"] = o.Provider
 	}
-	if o.Version != nil {
+	if !isNil(o.Version) {
 		toSerialize["version"] = o.Version
 	}
 

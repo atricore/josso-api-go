@@ -44,7 +44,7 @@ func NewStoreExtSaml2SpResWithDefaults() *StoreExtSaml2SpRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *StoreExtSaml2SpRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *StoreExtSaml2SpRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreExtSaml2SpRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *StoreExtSaml2SpRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *StoreExtSaml2SpRes) SetError(v string) {
 
 // GetSp returns the Sp field value if set, zero value otherwise.
 func (o *StoreExtSaml2SpRes) GetSp() ExternalSaml2ServiceProviderDTO {
-	if o == nil || o.Sp == nil {
+	if o == nil || isNil(o.Sp) {
 		var ret ExternalSaml2ServiceProviderDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *StoreExtSaml2SpRes) GetSp() ExternalSaml2ServiceProviderDTO {
 // GetSpOk returns a tuple with the Sp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreExtSaml2SpRes) GetSpOk() (*ExternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Sp == nil {
-		return nil, false
+	if o == nil || isNil(o.Sp) {
+    return nil, false
 	}
 	return o.Sp, true
 }
 
 // HasSp returns a boolean if a field has been set.
 func (o *StoreExtSaml2SpRes) HasSp() bool {
-	if o != nil && o.Sp != nil {
+	if o != nil && !isNil(o.Sp) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *StoreExtSaml2SpRes) SetSp(v ExternalSaml2ServiceProviderDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *StoreExtSaml2SpRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *StoreExtSaml2SpRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreExtSaml2SpRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *StoreExtSaml2SpRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *StoreExtSaml2SpRes) SetValidationErrors(v []string) {
 
 func (o StoreExtSaml2SpRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Sp != nil {
+	if !isNil(o.Sp) {
 		toSerialize["sp"] = o.Sp
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

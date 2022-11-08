@@ -43,7 +43,7 @@ func NewStoreIdVaultReqWithDefaults() *StoreIdVaultReq {
 
 // GetIdVault returns the IdVault field value if set, zero value otherwise.
 func (o *StoreIdVaultReq) GetIdVault() EmbeddedIdentityVaultDTO {
-	if o == nil || o.IdVault == nil {
+	if o == nil || isNil(o.IdVault) {
 		var ret EmbeddedIdentityVaultDTO
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreIdVaultReq) GetIdVault() EmbeddedIdentityVaultDTO {
 // GetIdVaultOk returns a tuple with the IdVault field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdVaultReq) GetIdVaultOk() (*EmbeddedIdentityVaultDTO, bool) {
-	if o == nil || o.IdVault == nil {
-		return nil, false
+	if o == nil || isNil(o.IdVault) {
+    return nil, false
 	}
 	return o.IdVault, true
 }
 
 // HasIdVault returns a boolean if a field has been set.
 func (o *StoreIdVaultReq) HasIdVault() bool {
-	if o != nil && o.IdVault != nil {
+	if o != nil && !isNil(o.IdVault) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreIdVaultReq) SetIdVault(v EmbeddedIdentityVaultDTO) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreIdVaultReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreIdVaultReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdVaultReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreIdVaultReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreIdVaultReq) SetIdaName(v string) {
 
 func (o StoreIdVaultReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdVault != nil {
+	if !isNil(o.IdVault) {
 		toSerialize["idVault"] = o.IdVault
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
 

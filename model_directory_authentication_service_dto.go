@@ -63,7 +63,7 @@ func NewDirectoryAuthenticationServiceDTOWithDefaults() *DirectoryAuthentication
 
 // GetCustomClass returns the CustomClass field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetCustomClass() CustomClassDTO {
-	if o == nil || o.CustomClass == nil {
+	if o == nil || isNil(o.CustomClass) {
 		var ret CustomClassDTO
 		return ret
 	}
@@ -73,15 +73,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetCustomClass() CustomClassDTO {
 // GetCustomClassOk returns a tuple with the CustomClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetCustomClassOk() (*CustomClassDTO, bool) {
-	if o == nil || o.CustomClass == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomClass) {
+    return nil, false
 	}
 	return o.CustomClass, true
 }
 
 // HasCustomClass returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasCustomClass() bool {
-	if o != nil && o.CustomClass != nil {
+	if o != nil && !isNil(o.CustomClass) {
 		return true
 	}
 
@@ -95,7 +95,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetCustomClass(v CustomClassDTO) {
 
 // GetDelegatedAuthentications returns the DelegatedAuthentications field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetDelegatedAuthentications() []DelegatedAuthenticationDTO {
-	if o == nil || o.DelegatedAuthentications == nil {
+	if o == nil || isNil(o.DelegatedAuthentications) {
 		var ret []DelegatedAuthenticationDTO
 		return ret
 	}
@@ -105,15 +105,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetDelegatedAuthentications() []Dele
 // GetDelegatedAuthenticationsOk returns a tuple with the DelegatedAuthentications field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetDelegatedAuthenticationsOk() ([]DelegatedAuthenticationDTO, bool) {
-	if o == nil || o.DelegatedAuthentications == nil {
-		return nil, false
+	if o == nil || isNil(o.DelegatedAuthentications) {
+    return nil, false
 	}
 	return o.DelegatedAuthentications, true
 }
 
 // HasDelegatedAuthentications returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasDelegatedAuthentications() bool {
-	if o != nil && o.DelegatedAuthentications != nil {
+	if o != nil && !isNil(o.DelegatedAuthentications) {
 		return true
 	}
 
@@ -127,7 +127,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetDelegatedAuthentications(v []Dele
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -137,15 +137,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -159,7 +159,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -169,15 +169,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -191,7 +191,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -201,15 +201,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -223,7 +223,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -233,15 +233,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -255,7 +255,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetId(v int64) {
 
 // GetIncludeOperationalAttributes returns the IncludeOperationalAttributes field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetIncludeOperationalAttributes() bool {
-	if o == nil || o.IncludeOperationalAttributes == nil {
+	if o == nil || isNil(o.IncludeOperationalAttributes) {
 		var ret bool
 		return ret
 	}
@@ -265,15 +265,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetIncludeOperationalAttributes() bo
 // GetIncludeOperationalAttributesOk returns a tuple with the IncludeOperationalAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetIncludeOperationalAttributesOk() (*bool, bool) {
-	if o == nil || o.IncludeOperationalAttributes == nil {
-		return nil, false
+	if o == nil || isNil(o.IncludeOperationalAttributes) {
+    return nil, false
 	}
 	return o.IncludeOperationalAttributes, true
 }
 
 // HasIncludeOperationalAttributes returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasIncludeOperationalAttributes() bool {
-	if o != nil && o.IncludeOperationalAttributes != nil {
+	if o != nil && !isNil(o.IncludeOperationalAttributes) {
 		return true
 	}
 
@@ -287,7 +287,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetIncludeOperationalAttributes(v bo
 
 // GetInitialContextFactory returns the InitialContextFactory field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetInitialContextFactory() string {
-	if o == nil || o.InitialContextFactory == nil {
+	if o == nil || isNil(o.InitialContextFactory) {
 		var ret string
 		return ret
 	}
@@ -297,15 +297,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetInitialContextFactory() string {
 // GetInitialContextFactoryOk returns a tuple with the InitialContextFactory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetInitialContextFactoryOk() (*string, bool) {
-	if o == nil || o.InitialContextFactory == nil {
-		return nil, false
+	if o == nil || isNil(o.InitialContextFactory) {
+    return nil, false
 	}
 	return o.InitialContextFactory, true
 }
 
 // HasInitialContextFactory returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasInitialContextFactory() bool {
-	if o != nil && o.InitialContextFactory != nil {
+	if o != nil && !isNil(o.InitialContextFactory) {
 		return true
 	}
 
@@ -319,7 +319,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetInitialContextFactory(v string) {
 
 // GetLdapSearchScope returns the LdapSearchScope field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetLdapSearchScope() string {
-	if o == nil || o.LdapSearchScope == nil {
+	if o == nil || isNil(o.LdapSearchScope) {
 		var ret string
 		return ret
 	}
@@ -329,15 +329,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetLdapSearchScope() string {
 // GetLdapSearchScopeOk returns a tuple with the LdapSearchScope field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetLdapSearchScopeOk() (*string, bool) {
-	if o == nil || o.LdapSearchScope == nil {
-		return nil, false
+	if o == nil || isNil(o.LdapSearchScope) {
+    return nil, false
 	}
 	return o.LdapSearchScope, true
 }
 
 // HasLdapSearchScope returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasLdapSearchScope() bool {
-	if o != nil && o.LdapSearchScope != nil {
+	if o != nil && !isNil(o.LdapSearchScope) {
 		return true
 	}
 
@@ -351,7 +351,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetLdapSearchScope(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -361,15 +361,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -383,7 +383,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetName(v string) {
 
 // GetPasswordPolicy returns the PasswordPolicy field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetPasswordPolicy() string {
-	if o == nil || o.PasswordPolicy == nil {
+	if o == nil || isNil(o.PasswordPolicy) {
 		var ret string
 		return ret
 	}
@@ -393,15 +393,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetPasswordPolicy() string {
 // GetPasswordPolicyOk returns a tuple with the PasswordPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetPasswordPolicyOk() (*string, bool) {
-	if o == nil || o.PasswordPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.PasswordPolicy) {
+    return nil, false
 	}
 	return o.PasswordPolicy, true
 }
 
 // HasPasswordPolicy returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasPasswordPolicy() bool {
-	if o != nil && o.PasswordPolicy != nil {
+	if o != nil && !isNil(o.PasswordPolicy) {
 		return true
 	}
 
@@ -415,7 +415,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetPasswordPolicy(v string) {
 
 // GetPerformDnSearch returns the PerformDnSearch field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetPerformDnSearch() bool {
-	if o == nil || o.PerformDnSearch == nil {
+	if o == nil || isNil(o.PerformDnSearch) {
 		var ret bool
 		return ret
 	}
@@ -425,15 +425,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetPerformDnSearch() bool {
 // GetPerformDnSearchOk returns a tuple with the PerformDnSearch field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetPerformDnSearchOk() (*bool, bool) {
-	if o == nil || o.PerformDnSearch == nil {
-		return nil, false
+	if o == nil || isNil(o.PerformDnSearch) {
+    return nil, false
 	}
 	return o.PerformDnSearch, true
 }
 
 // HasPerformDnSearch returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasPerformDnSearch() bool {
-	if o != nil && o.PerformDnSearch != nil {
+	if o != nil && !isNil(o.PerformDnSearch) {
 		return true
 	}
 
@@ -447,7 +447,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetPerformDnSearch(v bool) {
 
 // GetPrincipalUidAttributeID returns the PrincipalUidAttributeID field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetPrincipalUidAttributeID() string {
-	if o == nil || o.PrincipalUidAttributeID == nil {
+	if o == nil || isNil(o.PrincipalUidAttributeID) {
 		var ret string
 		return ret
 	}
@@ -457,15 +457,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetPrincipalUidAttributeID() string 
 // GetPrincipalUidAttributeIDOk returns a tuple with the PrincipalUidAttributeID field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetPrincipalUidAttributeIDOk() (*string, bool) {
-	if o == nil || o.PrincipalUidAttributeID == nil {
-		return nil, false
+	if o == nil || isNil(o.PrincipalUidAttributeID) {
+    return nil, false
 	}
 	return o.PrincipalUidAttributeID, true
 }
 
 // HasPrincipalUidAttributeID returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasPrincipalUidAttributeID() bool {
-	if o != nil && o.PrincipalUidAttributeID != nil {
+	if o != nil && !isNil(o.PrincipalUidAttributeID) {
 		return true
 	}
 
@@ -479,7 +479,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetPrincipalUidAttributeID(v string)
 
 // GetProviderUrl returns the ProviderUrl field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetProviderUrl() string {
-	if o == nil || o.ProviderUrl == nil {
+	if o == nil || isNil(o.ProviderUrl) {
 		var ret string
 		return ret
 	}
@@ -489,15 +489,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetProviderUrl() string {
 // GetProviderUrlOk returns a tuple with the ProviderUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetProviderUrlOk() (*string, bool) {
-	if o == nil || o.ProviderUrl == nil {
-		return nil, false
+	if o == nil || isNil(o.ProviderUrl) {
+    return nil, false
 	}
 	return o.ProviderUrl, true
 }
 
 // HasProviderUrl returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasProviderUrl() bool {
-	if o != nil && o.ProviderUrl != nil {
+	if o != nil && !isNil(o.ProviderUrl) {
 		return true
 	}
 
@@ -511,7 +511,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetProviderUrl(v string) {
 
 // GetReferrals returns the Referrals field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetReferrals() string {
-	if o == nil || o.Referrals == nil {
+	if o == nil || isNil(o.Referrals) {
 		var ret string
 		return ret
 	}
@@ -521,15 +521,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetReferrals() string {
 // GetReferralsOk returns a tuple with the Referrals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetReferralsOk() (*string, bool) {
-	if o == nil || o.Referrals == nil {
-		return nil, false
+	if o == nil || isNil(o.Referrals) {
+    return nil, false
 	}
 	return o.Referrals, true
 }
 
 // HasReferrals returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasReferrals() bool {
-	if o != nil && o.Referrals != nil {
+	if o != nil && !isNil(o.Referrals) {
 		return true
 	}
 
@@ -543,7 +543,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetReferrals(v string) {
 
 // GetSecurityAuthentication returns the SecurityAuthentication field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityAuthentication() string {
-	if o == nil || o.SecurityAuthentication == nil {
+	if o == nil || isNil(o.SecurityAuthentication) {
 		var ret string
 		return ret
 	}
@@ -553,15 +553,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetSecurityAuthentication() string {
 // GetSecurityAuthenticationOk returns a tuple with the SecurityAuthentication field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityAuthenticationOk() (*string, bool) {
-	if o == nil || o.SecurityAuthentication == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityAuthentication) {
+    return nil, false
 	}
 	return o.SecurityAuthentication, true
 }
 
 // HasSecurityAuthentication returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasSecurityAuthentication() bool {
-	if o != nil && o.SecurityAuthentication != nil {
+	if o != nil && !isNil(o.SecurityAuthentication) {
 		return true
 	}
 
@@ -575,7 +575,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetSecurityAuthentication(v string) 
 
 // GetSecurityCredential returns the SecurityCredential field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityCredential() string {
-	if o == nil || o.SecurityCredential == nil {
+	if o == nil || isNil(o.SecurityCredential) {
 		var ret string
 		return ret
 	}
@@ -585,15 +585,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetSecurityCredential() string {
 // GetSecurityCredentialOk returns a tuple with the SecurityCredential field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityCredentialOk() (*string, bool) {
-	if o == nil || o.SecurityCredential == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityCredential) {
+    return nil, false
 	}
 	return o.SecurityCredential, true
 }
 
 // HasSecurityCredential returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasSecurityCredential() bool {
-	if o != nil && o.SecurityCredential != nil {
+	if o != nil && !isNil(o.SecurityCredential) {
 		return true
 	}
 
@@ -607,7 +607,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetSecurityCredential(v string) {
 
 // GetSecurityPrincipal returns the SecurityPrincipal field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityPrincipal() string {
-	if o == nil || o.SecurityPrincipal == nil {
+	if o == nil || isNil(o.SecurityPrincipal) {
 		var ret string
 		return ret
 	}
@@ -617,15 +617,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetSecurityPrincipal() string {
 // GetSecurityPrincipalOk returns a tuple with the SecurityPrincipal field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetSecurityPrincipalOk() (*string, bool) {
-	if o == nil || o.SecurityPrincipal == nil {
-		return nil, false
+	if o == nil || isNil(o.SecurityPrincipal) {
+    return nil, false
 	}
 	return o.SecurityPrincipal, true
 }
 
 // HasSecurityPrincipal returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasSecurityPrincipal() bool {
-	if o != nil && o.SecurityPrincipal != nil {
+	if o != nil && !isNil(o.SecurityPrincipal) {
 		return true
 	}
 
@@ -639,7 +639,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetSecurityPrincipal(v string) {
 
 // GetSimpleAuthnSaml2AuthnCtxClass returns the SimpleAuthnSaml2AuthnCtxClass field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetSimpleAuthnSaml2AuthnCtxClass() string {
-	if o == nil || o.SimpleAuthnSaml2AuthnCtxClass == nil {
+	if o == nil || isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		var ret string
 		return ret
 	}
@@ -649,15 +649,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetSimpleAuthnSaml2AuthnCtxClass() s
 // GetSimpleAuthnSaml2AuthnCtxClassOk returns a tuple with the SimpleAuthnSaml2AuthnCtxClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetSimpleAuthnSaml2AuthnCtxClassOk() (*string, bool) {
-	if o == nil || o.SimpleAuthnSaml2AuthnCtxClass == nil {
-		return nil, false
+	if o == nil || isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
+    return nil, false
 	}
 	return o.SimpleAuthnSaml2AuthnCtxClass, true
 }
 
 // HasSimpleAuthnSaml2AuthnCtxClass returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasSimpleAuthnSaml2AuthnCtxClass() bool {
-	if o != nil && o.SimpleAuthnSaml2AuthnCtxClass != nil {
+	if o != nil && !isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		return true
 	}
 
@@ -671,7 +671,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetSimpleAuthnSaml2AuthnCtxClass(v s
 
 // GetUsersCtxDN returns the UsersCtxDN field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetUsersCtxDN() string {
-	if o == nil || o.UsersCtxDN == nil {
+	if o == nil || isNil(o.UsersCtxDN) {
 		var ret string
 		return ret
 	}
@@ -681,15 +681,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetUsersCtxDN() string {
 // GetUsersCtxDNOk returns a tuple with the UsersCtxDN field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetUsersCtxDNOk() (*string, bool) {
-	if o == nil || o.UsersCtxDN == nil {
-		return nil, false
+	if o == nil || isNil(o.UsersCtxDN) {
+    return nil, false
 	}
 	return o.UsersCtxDN, true
 }
 
 // HasUsersCtxDN returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasUsersCtxDN() bool {
-	if o != nil && o.UsersCtxDN != nil {
+	if o != nil && !isNil(o.UsersCtxDN) {
 		return true
 	}
 
@@ -703,7 +703,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetUsersCtxDN(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -713,15 +713,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -735,7 +735,7 @@ func (o *DirectoryAuthenticationServiceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *DirectoryAuthenticationServiceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -745,15 +745,15 @@ func (o *DirectoryAuthenticationServiceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DirectoryAuthenticationServiceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *DirectoryAuthenticationServiceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -767,70 +767,70 @@ func (o *DirectoryAuthenticationServiceDTO) SetY(v float64) {
 
 func (o DirectoryAuthenticationServiceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CustomClass != nil {
+	if !isNil(o.CustomClass) {
 		toSerialize["customClass"] = o.CustomClass
 	}
-	if o.DelegatedAuthentications != nil {
+	if !isNil(o.DelegatedAuthentications) {
 		toSerialize["delegatedAuthentications"] = o.DelegatedAuthentications
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IncludeOperationalAttributes != nil {
+	if !isNil(o.IncludeOperationalAttributes) {
 		toSerialize["includeOperationalAttributes"] = o.IncludeOperationalAttributes
 	}
-	if o.InitialContextFactory != nil {
+	if !isNil(o.InitialContextFactory) {
 		toSerialize["initialContextFactory"] = o.InitialContextFactory
 	}
-	if o.LdapSearchScope != nil {
+	if !isNil(o.LdapSearchScope) {
 		toSerialize["ldapSearchScope"] = o.LdapSearchScope
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.PasswordPolicy != nil {
+	if !isNil(o.PasswordPolicy) {
 		toSerialize["passwordPolicy"] = o.PasswordPolicy
 	}
-	if o.PerformDnSearch != nil {
+	if !isNil(o.PerformDnSearch) {
 		toSerialize["performDnSearch"] = o.PerformDnSearch
 	}
-	if o.PrincipalUidAttributeID != nil {
+	if !isNil(o.PrincipalUidAttributeID) {
 		toSerialize["principalUidAttributeID"] = o.PrincipalUidAttributeID
 	}
-	if o.ProviderUrl != nil {
+	if !isNil(o.ProviderUrl) {
 		toSerialize["providerUrl"] = o.ProviderUrl
 	}
-	if o.Referrals != nil {
+	if !isNil(o.Referrals) {
 		toSerialize["referrals"] = o.Referrals
 	}
-	if o.SecurityAuthentication != nil {
+	if !isNil(o.SecurityAuthentication) {
 		toSerialize["securityAuthentication"] = o.SecurityAuthentication
 	}
-	if o.SecurityCredential != nil {
+	if !isNil(o.SecurityCredential) {
 		toSerialize["securityCredential"] = o.SecurityCredential
 	}
-	if o.SecurityPrincipal != nil {
+	if !isNil(o.SecurityPrincipal) {
 		toSerialize["securityPrincipal"] = o.SecurityPrincipal
 	}
-	if o.SimpleAuthnSaml2AuthnCtxClass != nil {
+	if !isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		toSerialize["simpleAuthnSaml2AuthnCtxClass"] = o.SimpleAuthnSaml2AuthnCtxClass
 	}
-	if o.UsersCtxDN != nil {
+	if !isNil(o.UsersCtxDN) {
 		toSerialize["usersCtxDN"] = o.UsersCtxDN
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

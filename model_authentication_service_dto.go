@@ -49,7 +49,7 @@ func NewAuthenticationServiceDTOWithDefaults() *AuthenticationServiceDTO {
 
 // GetDelegatedAuthentications returns the DelegatedAuthentications field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetDelegatedAuthentications() []DelegatedAuthenticationDTO {
-	if o == nil || o.DelegatedAuthentications == nil {
+	if o == nil || isNil(o.DelegatedAuthentications) {
 		var ret []DelegatedAuthenticationDTO
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *AuthenticationServiceDTO) GetDelegatedAuthentications() []DelegatedAuth
 // GetDelegatedAuthenticationsOk returns a tuple with the DelegatedAuthentications field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetDelegatedAuthenticationsOk() ([]DelegatedAuthenticationDTO, bool) {
-	if o == nil || o.DelegatedAuthentications == nil {
-		return nil, false
+	if o == nil || isNil(o.DelegatedAuthentications) {
+    return nil, false
 	}
 	return o.DelegatedAuthentications, true
 }
 
 // HasDelegatedAuthentications returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasDelegatedAuthentications() bool {
-	if o != nil && o.DelegatedAuthentications != nil {
+	if o != nil && !isNil(o.DelegatedAuthentications) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *AuthenticationServiceDTO) SetDelegatedAuthentications(v []DelegatedAuth
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *AuthenticationServiceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *AuthenticationServiceDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *AuthenticationServiceDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *AuthenticationServiceDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *AuthenticationServiceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *AuthenticationServiceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *AuthenticationServiceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *AuthenticationServiceDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *AuthenticationServiceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -241,7 +241,7 @@ func (o *AuthenticationServiceDTO) SetName(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -251,15 +251,15 @@ func (o *AuthenticationServiceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -273,7 +273,7 @@ func (o *AuthenticationServiceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *AuthenticationServiceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -283,15 +283,15 @@ func (o *AuthenticationServiceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *AuthenticationServiceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *AuthenticationServiceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -305,28 +305,28 @@ func (o *AuthenticationServiceDTO) SetY(v float64) {
 
 func (o AuthenticationServiceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DelegatedAuthentications != nil {
+	if !isNil(o.DelegatedAuthentications) {
 		toSerialize["delegatedAuthentications"] = o.DelegatedAuthentications
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

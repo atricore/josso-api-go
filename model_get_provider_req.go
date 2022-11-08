@@ -44,7 +44,7 @@ func NewGetProviderReqWithDefaults() *GetProviderReq {
 
 // GetIdOrName returns the IdOrName field value if set, zero value otherwise.
 func (o *GetProviderReq) GetIdOrName() string {
-	if o == nil || o.IdOrName == nil {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetProviderReq) GetIdOrName() string {
 // GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProviderReq) GetIdOrNameOk() (*string, bool) {
-	if o == nil || o.IdOrName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdOrName) {
+    return nil, false
 	}
 	return o.IdOrName, true
 }
 
 // HasIdOrName returns a boolean if a field has been set.
 func (o *GetProviderReq) HasIdOrName() bool {
-	if o != nil && o.IdOrName != nil {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetProviderReq) SetIdOrName(v string) {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *GetProviderReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetProviderReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProviderReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *GetProviderReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetProviderReq) SetIdaName(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *GetProviderReq) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetProviderReq) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProviderReq) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *GetProviderReq) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetProviderReq) SetName(v string) {
 
 func (o GetProviderReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdOrName != nil {
+	if !isNil(o.IdOrName) {
 		toSerialize["idOrName"] = o.IdOrName
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
 

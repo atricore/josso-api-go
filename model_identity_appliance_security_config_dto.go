@@ -52,7 +52,7 @@ func NewIdentityApplianceSecurityConfigDTOWithDefaults() *IdentityApplianceSecur
 
 // GetEncryptSensitiveData returns the EncryptSensitiveData field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptSensitiveData() bool {
-	if o == nil || o.EncryptSensitiveData == nil {
+	if o == nil || isNil(o.EncryptSensitiveData) {
 		var ret bool
 		return ret
 	}
@@ -62,15 +62,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetEncryptSensitiveData() bool {
 // GetEncryptSensitiveDataOk returns a tuple with the EncryptSensitiveData field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptSensitiveDataOk() (*bool, bool) {
-	if o == nil || o.EncryptSensitiveData == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptSensitiveData) {
+    return nil, false
 	}
 	return o.EncryptSensitiveData, true
 }
 
 // HasEncryptSensitiveData returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasEncryptSensitiveData() bool {
-	if o != nil && o.EncryptSensitiveData != nil {
+	if o != nil && !isNil(o.EncryptSensitiveData) {
 		return true
 	}
 
@@ -84,7 +84,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetEncryptSensitiveData(v bool) {
 
 // GetEncryption returns the Encryption field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryption() string {
-	if o == nil || o.Encryption == nil {
+	if o == nil || isNil(o.Encryption) {
 		var ret string
 		return ret
 	}
@@ -94,15 +94,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetEncryption() string {
 // GetEncryptionOk returns a tuple with the Encryption field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionOk() (*string, bool) {
-	if o == nil || o.Encryption == nil {
-		return nil, false
+	if o == nil || isNil(o.Encryption) {
+    return nil, false
 	}
 	return o.Encryption, true
 }
 
 // HasEncryption returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasEncryption() bool {
-	if o != nil && o.Encryption != nil {
+	if o != nil && !isNil(o.Encryption) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetEncryption(v string) {
 
 // GetEncryptionConfig returns the EncryptionConfig field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfig() string {
-	if o == nil || o.EncryptionConfig == nil {
+	if o == nil || isNil(o.EncryptionConfig) {
 		var ret string
 		return ret
 	}
@@ -126,15 +126,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfig() string {
 // GetEncryptionConfigOk returns a tuple with the EncryptionConfig field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfigOk() (*string, bool) {
-	if o == nil || o.EncryptionConfig == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptionConfig) {
+    return nil, false
 	}
 	return o.EncryptionConfig, true
 }
 
 // HasEncryptionConfig returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasEncryptionConfig() bool {
-	if o != nil && o.EncryptionConfig != nil {
+	if o != nil && !isNil(o.EncryptionConfig) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetEncryptionConfig(v string) {
 
 // GetEncryptionConfigFile returns the EncryptionConfigFile field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfigFile() string {
-	if o == nil || o.EncryptionConfigFile == nil {
+	if o == nil || isNil(o.EncryptionConfigFile) {
 		var ret string
 		return ret
 	}
@@ -158,15 +158,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfigFile() string {
 // GetEncryptionConfigFileOk returns a tuple with the EncryptionConfigFile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionConfigFileOk() (*string, bool) {
-	if o == nil || o.EncryptionConfigFile == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptionConfigFile) {
+    return nil, false
 	}
 	return o.EncryptionConfigFile, true
 }
 
 // HasEncryptionConfigFile returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasEncryptionConfigFile() bool {
-	if o != nil && o.EncryptionConfigFile != nil {
+	if o != nil && !isNil(o.EncryptionConfigFile) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetEncryptionConfigFile(v string) {
 
 // GetEncryptionPassword returns the EncryptionPassword field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionPassword() string {
-	if o == nil || o.EncryptionPassword == nil {
+	if o == nil || isNil(o.EncryptionPassword) {
 		var ret string
 		return ret
 	}
@@ -190,15 +190,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionPassword() string {
 // GetEncryptionPasswordOk returns a tuple with the EncryptionPassword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetEncryptionPasswordOk() (*string, bool) {
-	if o == nil || o.EncryptionPassword == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptionPassword) {
+    return nil, false
 	}
 	return o.EncryptionPassword, true
 }
 
 // HasEncryptionPassword returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasEncryptionPassword() bool {
-	if o != nil && o.EncryptionPassword != nil {
+	if o != nil && !isNil(o.EncryptionPassword) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetEncryptionPassword(v string) {
 
 // GetExternalConfig returns the ExternalConfig field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfig() bool {
-	if o == nil || o.ExternalConfig == nil {
+	if o == nil || isNil(o.ExternalConfig) {
 		var ret bool
 		return ret
 	}
@@ -222,15 +222,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfig() bool {
 // GetExternalConfigOk returns a tuple with the ExternalConfig field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfigOk() (*bool, bool) {
-	if o == nil || o.ExternalConfig == nil {
-		return nil, false
+	if o == nil || isNil(o.ExternalConfig) {
+    return nil, false
 	}
 	return o.ExternalConfig, true
 }
 
 // HasExternalConfig returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasExternalConfig() bool {
-	if o != nil && o.ExternalConfig != nil {
+	if o != nil && !isNil(o.ExternalConfig) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetExternalConfig(v bool) {
 
 // GetExternalConfigFile returns the ExternalConfigFile field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfigFile() string {
-	if o == nil || o.ExternalConfigFile == nil {
+	if o == nil || isNil(o.ExternalConfigFile) {
 		var ret string
 		return ret
 	}
@@ -254,15 +254,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfigFile() string {
 // GetExternalConfigFileOk returns a tuple with the ExternalConfigFile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetExternalConfigFileOk() (*string, bool) {
-	if o == nil || o.ExternalConfigFile == nil {
-		return nil, false
+	if o == nil || isNil(o.ExternalConfigFile) {
+    return nil, false
 	}
 	return o.ExternalConfigFile, true
 }
 
 // HasExternalConfigFile returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasExternalConfigFile() bool {
-	if o != nil && o.ExternalConfigFile != nil {
+	if o != nil && !isNil(o.ExternalConfigFile) {
 		return true
 	}
 
@@ -276,7 +276,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetExternalConfigFile(v string) {
 
 // GetPasswordProperty returns the PasswordProperty field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetPasswordProperty() string {
-	if o == nil || o.PasswordProperty == nil {
+	if o == nil || isNil(o.PasswordProperty) {
 		var ret string
 		return ret
 	}
@@ -286,15 +286,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetPasswordProperty() string {
 // GetPasswordPropertyOk returns a tuple with the PasswordProperty field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetPasswordPropertyOk() (*string, bool) {
-	if o == nil || o.PasswordProperty == nil {
-		return nil, false
+	if o == nil || isNil(o.PasswordProperty) {
+    return nil, false
 	}
 	return o.PasswordProperty, true
 }
 
 // HasPasswordProperty returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasPasswordProperty() bool {
-	if o != nil && o.PasswordProperty != nil {
+	if o != nil && !isNil(o.PasswordProperty) {
 		return true
 	}
 
@@ -308,7 +308,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetPasswordProperty(v string) {
 
 // GetSalt returns the Salt field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetSalt() string {
-	if o == nil || o.Salt == nil {
+	if o == nil || isNil(o.Salt) {
 		var ret string
 		return ret
 	}
@@ -318,15 +318,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetSalt() string {
 // GetSaltOk returns a tuple with the Salt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetSaltOk() (*string, bool) {
-	if o == nil || o.Salt == nil {
-		return nil, false
+	if o == nil || isNil(o.Salt) {
+    return nil, false
 	}
 	return o.Salt, true
 }
 
 // HasSalt returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasSalt() bool {
-	if o != nil && o.Salt != nil {
+	if o != nil && !isNil(o.Salt) {
 		return true
 	}
 
@@ -340,7 +340,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetSalt(v string) {
 
 // GetSaltProperty returns the SaltProperty field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetSaltProperty() string {
-	if o == nil || o.SaltProperty == nil {
+	if o == nil || isNil(o.SaltProperty) {
 		var ret string
 		return ret
 	}
@@ -350,15 +350,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetSaltProperty() string {
 // GetSaltPropertyOk returns a tuple with the SaltProperty field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetSaltPropertyOk() (*string, bool) {
-	if o == nil || o.SaltProperty == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltProperty) {
+    return nil, false
 	}
 	return o.SaltProperty, true
 }
 
 // HasSaltProperty returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasSaltProperty() bool {
-	if o != nil && o.SaltProperty != nil {
+	if o != nil && !isNil(o.SaltProperty) {
 		return true
 	}
 
@@ -372,7 +372,7 @@ func (o *IdentityApplianceSecurityConfigDTO) SetSaltProperty(v string) {
 
 // GetSaltValue returns the SaltValue field value if set, zero value otherwise.
 func (o *IdentityApplianceSecurityConfigDTO) GetSaltValue() string {
-	if o == nil || o.SaltValue == nil {
+	if o == nil || isNil(o.SaltValue) {
 		var ret string
 		return ret
 	}
@@ -382,15 +382,15 @@ func (o *IdentityApplianceSecurityConfigDTO) GetSaltValue() string {
 // GetSaltValueOk returns a tuple with the SaltValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceSecurityConfigDTO) GetSaltValueOk() (*string, bool) {
-	if o == nil || o.SaltValue == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltValue) {
+    return nil, false
 	}
 	return o.SaltValue, true
 }
 
 // HasSaltValue returns a boolean if a field has been set.
 func (o *IdentityApplianceSecurityConfigDTO) HasSaltValue() bool {
-	if o != nil && o.SaltValue != nil {
+	if o != nil && !isNil(o.SaltValue) {
 		return true
 	}
 
@@ -404,37 +404,37 @@ func (o *IdentityApplianceSecurityConfigDTO) SetSaltValue(v string) {
 
 func (o IdentityApplianceSecurityConfigDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.EncryptSensitiveData != nil {
+	if !isNil(o.EncryptSensitiveData) {
 		toSerialize["encryptSensitiveData"] = o.EncryptSensitiveData
 	}
-	if o.Encryption != nil {
+	if !isNil(o.Encryption) {
 		toSerialize["encryption"] = o.Encryption
 	}
-	if o.EncryptionConfig != nil {
+	if !isNil(o.EncryptionConfig) {
 		toSerialize["encryptionConfig"] = o.EncryptionConfig
 	}
-	if o.EncryptionConfigFile != nil {
+	if !isNil(o.EncryptionConfigFile) {
 		toSerialize["encryptionConfigFile"] = o.EncryptionConfigFile
 	}
-	if o.EncryptionPassword != nil {
+	if !isNil(o.EncryptionPassword) {
 		toSerialize["encryptionPassword"] = o.EncryptionPassword
 	}
-	if o.ExternalConfig != nil {
+	if !isNil(o.ExternalConfig) {
 		toSerialize["externalConfig"] = o.ExternalConfig
 	}
-	if o.ExternalConfigFile != nil {
+	if !isNil(o.ExternalConfigFile) {
 		toSerialize["externalConfigFile"] = o.ExternalConfigFile
 	}
-	if o.PasswordProperty != nil {
+	if !isNil(o.PasswordProperty) {
 		toSerialize["passwordProperty"] = o.PasswordProperty
 	}
-	if o.Salt != nil {
+	if !isNil(o.Salt) {
 		toSerialize["salt"] = o.Salt
 	}
-	if o.SaltProperty != nil {
+	if !isNil(o.SaltProperty) {
 		toSerialize["saltProperty"] = o.SaltProperty
 	}
-	if o.SaltValue != nil {
+	if !isNil(o.SaltValue) {
 		toSerialize["saltValue"] = o.SaltValue
 	}
 

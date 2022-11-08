@@ -43,7 +43,7 @@ func NewStoreIdPReqWithDefaults() *StoreIdPReq {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreIdPReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreIdPReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdPReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreIdPReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreIdPReq) SetIdaName(v string) {
 
 // GetIdp returns the Idp field value if set, zero value otherwise.
 func (o *StoreIdPReq) GetIdp() IdentityProviderDTO {
-	if o == nil || o.Idp == nil {
+	if o == nil || isNil(o.Idp) {
 		var ret IdentityProviderDTO
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreIdPReq) GetIdp() IdentityProviderDTO {
 // GetIdpOk returns a tuple with the Idp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdPReq) GetIdpOk() (*IdentityProviderDTO, bool) {
-	if o == nil || o.Idp == nil {
-		return nil, false
+	if o == nil || isNil(o.Idp) {
+    return nil, false
 	}
 	return o.Idp, true
 }
 
 // HasIdp returns a boolean if a field has been set.
 func (o *StoreIdPReq) HasIdp() bool {
-	if o != nil && o.Idp != nil {
+	if o != nil && !isNil(o.Idp) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreIdPReq) SetIdp(v IdentityProviderDTO) {
 
 func (o StoreIdPReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Idp != nil {
+	if !isNil(o.Idp) {
 		toSerialize["idp"] = o.Idp
 	}
 

@@ -44,7 +44,7 @@ func NewGetProvidersResWithDefaults() *GetProvidersRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetProvidersRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetProvidersRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProvidersRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetProvidersRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetProvidersRes) SetError(v string) {
 
 // GetProviders returns the Providers field value if set, zero value otherwise.
 func (o *GetProvidersRes) GetProviders() []ProviderContainerDTO {
-	if o == nil || o.Providers == nil {
+	if o == nil || isNil(o.Providers) {
 		var ret []ProviderContainerDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetProvidersRes) GetProviders() []ProviderContainerDTO {
 // GetProvidersOk returns a tuple with the Providers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProvidersRes) GetProvidersOk() ([]ProviderContainerDTO, bool) {
-	if o == nil || o.Providers == nil {
-		return nil, false
+	if o == nil || isNil(o.Providers) {
+    return nil, false
 	}
 	return o.Providers, true
 }
 
 // HasProviders returns a boolean if a field has been set.
 func (o *GetProvidersRes) HasProviders() bool {
-	if o != nil && o.Providers != nil {
+	if o != nil && !isNil(o.Providers) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetProvidersRes) SetProviders(v []ProviderContainerDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetProvidersRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetProvidersRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetProvidersRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetProvidersRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetProvidersRes) SetValidationErrors(v []string) {
 
 func (o GetProvidersRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Providers != nil {
+	if !isNil(o.Providers) {
 		toSerialize["providers"] = o.Providers
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

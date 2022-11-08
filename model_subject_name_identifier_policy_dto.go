@@ -46,7 +46,7 @@ func NewSubjectNameIdentifierPolicyDTOWithDefaults() *SubjectNameIdentifierPolic
 
 // GetDescriptionKey returns the DescriptionKey field value if set, zero value otherwise.
 func (o *SubjectNameIdentifierPolicyDTO) GetDescriptionKey() string {
-	if o == nil || o.DescriptionKey == nil {
+	if o == nil || isNil(o.DescriptionKey) {
 		var ret string
 		return ret
 	}
@@ -56,15 +56,15 @@ func (o *SubjectNameIdentifierPolicyDTO) GetDescriptionKey() string {
 // GetDescriptionKeyOk returns a tuple with the DescriptionKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectNameIdentifierPolicyDTO) GetDescriptionKeyOk() (*string, bool) {
-	if o == nil || o.DescriptionKey == nil {
-		return nil, false
+	if o == nil || isNil(o.DescriptionKey) {
+    return nil, false
 	}
 	return o.DescriptionKey, true
 }
 
 // HasDescriptionKey returns a boolean if a field has been set.
 func (o *SubjectNameIdentifierPolicyDTO) HasDescriptionKey() bool {
-	if o != nil && o.DescriptionKey != nil {
+	if o != nil && !isNil(o.DescriptionKey) {
 		return true
 	}
 
@@ -78,7 +78,7 @@ func (o *SubjectNameIdentifierPolicyDTO) SetDescriptionKey(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SubjectNameIdentifierPolicyDTO) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -88,15 +88,15 @@ func (o *SubjectNameIdentifierPolicyDTO) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectNameIdentifierPolicyDTO) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SubjectNameIdentifierPolicyDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *SubjectNameIdentifierPolicyDTO) SetId(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SubjectNameIdentifierPolicyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -120,15 +120,15 @@ func (o *SubjectNameIdentifierPolicyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectNameIdentifierPolicyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SubjectNameIdentifierPolicyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *SubjectNameIdentifierPolicyDTO) SetName(v string) {
 
 // GetSubjectAttribute returns the SubjectAttribute field value if set, zero value otherwise.
 func (o *SubjectNameIdentifierPolicyDTO) GetSubjectAttribute() string {
-	if o == nil || o.SubjectAttribute == nil {
+	if o == nil || isNil(o.SubjectAttribute) {
 		var ret string
 		return ret
 	}
@@ -152,15 +152,15 @@ func (o *SubjectNameIdentifierPolicyDTO) GetSubjectAttribute() string {
 // GetSubjectAttributeOk returns a tuple with the SubjectAttribute field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectNameIdentifierPolicyDTO) GetSubjectAttributeOk() (*string, bool) {
-	if o == nil || o.SubjectAttribute == nil {
-		return nil, false
+	if o == nil || isNil(o.SubjectAttribute) {
+    return nil, false
 	}
 	return o.SubjectAttribute, true
 }
 
 // HasSubjectAttribute returns a boolean if a field has been set.
 func (o *SubjectNameIdentifierPolicyDTO) HasSubjectAttribute() bool {
-	if o != nil && o.SubjectAttribute != nil {
+	if o != nil && !isNil(o.SubjectAttribute) {
 		return true
 	}
 
@@ -174,7 +174,7 @@ func (o *SubjectNameIdentifierPolicyDTO) SetSubjectAttribute(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *SubjectNameIdentifierPolicyDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -184,15 +184,15 @@ func (o *SubjectNameIdentifierPolicyDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SubjectNameIdentifierPolicyDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *SubjectNameIdentifierPolicyDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -206,19 +206,19 @@ func (o *SubjectNameIdentifierPolicyDTO) SetType(v string) {
 
 func (o SubjectNameIdentifierPolicyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DescriptionKey != nil {
+	if !isNil(o.DescriptionKey) {
 		toSerialize["descriptionKey"] = o.DescriptionKey
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.SubjectAttribute != nil {
+	if !isNil(o.SubjectAttribute) {
 		toSerialize["subjectAttribute"] = o.SubjectAttribute
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

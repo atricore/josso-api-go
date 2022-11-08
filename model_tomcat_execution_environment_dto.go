@@ -58,7 +58,7 @@ func NewTomcatExecutionEnvironmentDTOWithDefaults() *TomcatExecutionEnvironmentD
 
 // GetActivations returns the Activations field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetActivations() []ActivationDTO {
-	if o == nil || o.Activations == nil {
+	if o == nil || isNil(o.Activations) {
 		var ret []ActivationDTO
 		return ret
 	}
@@ -68,15 +68,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetActivations() []ActivationDTO {
 // GetActivationsOk returns a tuple with the Activations field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetActivationsOk() ([]ActivationDTO, bool) {
-	if o == nil || o.Activations == nil {
-		return nil, false
+	if o == nil || isNil(o.Activations) {
+    return nil, false
 	}
 	return o.Activations, true
 }
 
 // HasActivations returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasActivations() bool {
-	if o != nil && o.Activations != nil {
+	if o != nil && !isNil(o.Activations) {
 		return true
 	}
 
@@ -90,7 +90,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetActivations(v []ActivationDTO) {
 
 // GetActive returns the Active field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetActive() bool {
-	if o == nil || o.Active == nil {
+	if o == nil || isNil(o.Active) {
 		var ret bool
 		return ret
 	}
@@ -100,15 +100,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetActive() bool {
 // GetActiveOk returns a tuple with the Active field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetActiveOk() (*bool, bool) {
-	if o == nil || o.Active == nil {
-		return nil, false
+	if o == nil || isNil(o.Active) {
+    return nil, false
 	}
 	return o.Active, true
 }
 
 // HasActive returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasActive() bool {
-	if o != nil && o.Active != nil {
+	if o != nil && !isNil(o.Active) {
 		return true
 	}
 
@@ -122,7 +122,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetActive(v bool) {
 
 // GetBindingLocation returns the BindingLocation field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetBindingLocation() LocationDTO {
-	if o == nil || o.BindingLocation == nil {
+	if o == nil || isNil(o.BindingLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -132,15 +132,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetBindingLocation() LocationDTO {
 // GetBindingLocationOk returns a tuple with the BindingLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetBindingLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.BindingLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.BindingLocation) {
+    return nil, false
 	}
 	return o.BindingLocation, true
 }
 
 // HasBindingLocation returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasBindingLocation() bool {
-	if o != nil && o.BindingLocation != nil {
+	if o != nil && !isNil(o.BindingLocation) {
 		return true
 	}
 
@@ -154,7 +154,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetBindingLocation(v LocationDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -164,15 +164,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -186,7 +186,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -196,15 +196,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -218,7 +218,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -228,15 +228,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -250,7 +250,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -260,15 +260,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -282,7 +282,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetId(v int64) {
 
 // GetInstallDemoApps returns the InstallDemoApps field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetInstallDemoApps() bool {
-	if o == nil || o.InstallDemoApps == nil {
+	if o == nil || isNil(o.InstallDemoApps) {
 		var ret bool
 		return ret
 	}
@@ -292,15 +292,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetInstallDemoApps() bool {
 // GetInstallDemoAppsOk returns a tuple with the InstallDemoApps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetInstallDemoAppsOk() (*bool, bool) {
-	if o == nil || o.InstallDemoApps == nil {
-		return nil, false
+	if o == nil || isNil(o.InstallDemoApps) {
+    return nil, false
 	}
 	return o.InstallDemoApps, true
 }
 
 // HasInstallDemoApps returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasInstallDemoApps() bool {
-	if o != nil && o.InstallDemoApps != nil {
+	if o != nil && !isNil(o.InstallDemoApps) {
 		return true
 	}
 
@@ -314,7 +314,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetInstallDemoApps(v bool) {
 
 // GetInstallUri returns the InstallUri field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetInstallUri() string {
-	if o == nil || o.InstallUri == nil {
+	if o == nil || isNil(o.InstallUri) {
 		var ret string
 		return ret
 	}
@@ -324,15 +324,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetInstallUri() string {
 // GetInstallUriOk returns a tuple with the InstallUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetInstallUriOk() (*string, bool) {
-	if o == nil || o.InstallUri == nil {
-		return nil, false
+	if o == nil || isNil(o.InstallUri) {
+    return nil, false
 	}
 	return o.InstallUri, true
 }
 
 // HasInstallUri returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasInstallUri() bool {
-	if o != nil && o.InstallUri != nil {
+	if o != nil && !isNil(o.InstallUri) {
 		return true
 	}
 
@@ -346,7 +346,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetInstallUri(v string) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetLocation() string {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -356,15 +356,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetLocationOk() (*string, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -378,7 +378,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetLocation(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -388,15 +388,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -410,7 +410,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetName(v string) {
 
 // GetOverwriteOriginalSetup returns the OverwriteOriginalSetup field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetOverwriteOriginalSetup() bool {
-	if o == nil || o.OverwriteOriginalSetup == nil {
+	if o == nil || isNil(o.OverwriteOriginalSetup) {
 		var ret bool
 		return ret
 	}
@@ -420,15 +420,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetOverwriteOriginalSetup() bool {
 // GetOverwriteOriginalSetupOk returns a tuple with the OverwriteOriginalSetup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetOverwriteOriginalSetupOk() (*bool, bool) {
-	if o == nil || o.OverwriteOriginalSetup == nil {
-		return nil, false
+	if o == nil || isNil(o.OverwriteOriginalSetup) {
+    return nil, false
 	}
 	return o.OverwriteOriginalSetup, true
 }
 
 // HasOverwriteOriginalSetup returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasOverwriteOriginalSetup() bool {
-	if o != nil && o.OverwriteOriginalSetup != nil {
+	if o != nil && !isNil(o.OverwriteOriginalSetup) {
 		return true
 	}
 
@@ -442,7 +442,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetOverwriteOriginalSetup(v bool) {
 
 // GetPlatformId returns the PlatformId field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetPlatformId() string {
-	if o == nil || o.PlatformId == nil {
+	if o == nil || isNil(o.PlatformId) {
 		var ret string
 		return ret
 	}
@@ -452,15 +452,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetPlatformId() string {
 // GetPlatformIdOk returns a tuple with the PlatformId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetPlatformIdOk() (*string, bool) {
-	if o == nil || o.PlatformId == nil {
-		return nil, false
+	if o == nil || isNil(o.PlatformId) {
+    return nil, false
 	}
 	return o.PlatformId, true
 }
 
 // HasPlatformId returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasPlatformId() bool {
-	if o != nil && o.PlatformId != nil {
+	if o != nil && !isNil(o.PlatformId) {
 		return true
 	}
 
@@ -474,7 +474,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetPlatformId(v string) {
 
 // GetTargetJDK returns the TargetJDK field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetTargetJDK() string {
-	if o == nil || o.TargetJDK == nil {
+	if o == nil || isNil(o.TargetJDK) {
 		var ret string
 		return ret
 	}
@@ -484,15 +484,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetTargetJDK() string {
 // GetTargetJDKOk returns a tuple with the TargetJDK field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetTargetJDKOk() (*string, bool) {
-	if o == nil || o.TargetJDK == nil {
-		return nil, false
+	if o == nil || isNil(o.TargetJDK) {
+    return nil, false
 	}
 	return o.TargetJDK, true
 }
 
 // HasTargetJDK returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasTargetJDK() bool {
-	if o != nil && o.TargetJDK != nil {
+	if o != nil && !isNil(o.TargetJDK) {
 		return true
 	}
 
@@ -506,7 +506,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetTargetJDK(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -516,15 +516,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -538,7 +538,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetType(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -548,15 +548,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -570,7 +570,7 @@ func (o *TomcatExecutionEnvironmentDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *TomcatExecutionEnvironmentDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -580,15 +580,15 @@ func (o *TomcatExecutionEnvironmentDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TomcatExecutionEnvironmentDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *TomcatExecutionEnvironmentDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -602,55 +602,55 @@ func (o *TomcatExecutionEnvironmentDTO) SetY(v float64) {
 
 func (o TomcatExecutionEnvironmentDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Activations != nil {
+	if !isNil(o.Activations) {
 		toSerialize["activations"] = o.Activations
 	}
-	if o.Active != nil {
+	if !isNil(o.Active) {
 		toSerialize["active"] = o.Active
 	}
-	if o.BindingLocation != nil {
+	if !isNil(o.BindingLocation) {
 		toSerialize["bindingLocation"] = o.BindingLocation
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.InstallDemoApps != nil {
+	if !isNil(o.InstallDemoApps) {
 		toSerialize["installDemoApps"] = o.InstallDemoApps
 	}
-	if o.InstallUri != nil {
+	if !isNil(o.InstallUri) {
 		toSerialize["installUri"] = o.InstallUri
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.OverwriteOriginalSetup != nil {
+	if !isNil(o.OverwriteOriginalSetup) {
 		toSerialize["overwriteOriginalSetup"] = o.OverwriteOriginalSetup
 	}
-	if o.PlatformId != nil {
+	if !isNil(o.PlatformId) {
 		toSerialize["platformId"] = o.PlatformId
 	}
-	if o.TargetJDK != nil {
+	if !isNil(o.TargetJDK) {
 		toSerialize["targetJDK"] = o.TargetJDK
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

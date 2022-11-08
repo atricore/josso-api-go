@@ -44,7 +44,7 @@ func NewGetIntSaml2SpsResWithDefaults() *GetIntSaml2SpsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetIntSaml2SpsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetIntSaml2SpsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetIntSaml2SpsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetIntSaml2SpsRes) SetError(v string) {
 
 // GetSps returns the Sps field value if set, zero value otherwise.
 func (o *GetIntSaml2SpsRes) GetSps() []InternalSaml2ServiceProviderDTO {
-	if o == nil || o.Sps == nil {
+	if o == nil || isNil(o.Sps) {
 		var ret []InternalSaml2ServiceProviderDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetIntSaml2SpsRes) GetSps() []InternalSaml2ServiceProviderDTO {
 // GetSpsOk returns a tuple with the Sps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpsRes) GetSpsOk() ([]InternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Sps == nil {
-		return nil, false
+	if o == nil || isNil(o.Sps) {
+    return nil, false
 	}
 	return o.Sps, true
 }
 
 // HasSps returns a boolean if a field has been set.
 func (o *GetIntSaml2SpsRes) HasSps() bool {
-	if o != nil && o.Sps != nil {
+	if o != nil && !isNil(o.Sps) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetIntSaml2SpsRes) SetSps(v []InternalSaml2ServiceProviderDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetIntSaml2SpsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetIntSaml2SpsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetIntSaml2SpsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetIntSaml2SpsRes) SetValidationErrors(v []string) {
 
 func (o GetIntSaml2SpsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Sps != nil {
+	if !isNil(o.Sps) {
 		toSerialize["sps"] = o.Sps
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

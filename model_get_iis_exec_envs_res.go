@@ -44,7 +44,7 @@ func NewGetIisExecEnvsResWithDefaults() *GetIisExecEnvsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetIisExecEnvsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetIisExecEnvsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIisExecEnvsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetIisExecEnvsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetIisExecEnvsRes) SetError(v string) {
 
 // GetIisExecEnv returns the IisExecEnv field value if set, zero value otherwise.
 func (o *GetIisExecEnvsRes) GetIisExecEnv() []WindowsIISExecutionEnvironmentDTO {
-	if o == nil || o.IisExecEnv == nil {
+	if o == nil || isNil(o.IisExecEnv) {
 		var ret []WindowsIISExecutionEnvironmentDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetIisExecEnvsRes) GetIisExecEnv() []WindowsIISExecutionEnvironmentDTO 
 // GetIisExecEnvOk returns a tuple with the IisExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIisExecEnvsRes) GetIisExecEnvOk() ([]WindowsIISExecutionEnvironmentDTO, bool) {
-	if o == nil || o.IisExecEnv == nil {
-		return nil, false
+	if o == nil || isNil(o.IisExecEnv) {
+    return nil, false
 	}
 	return o.IisExecEnv, true
 }
 
 // HasIisExecEnv returns a boolean if a field has been set.
 func (o *GetIisExecEnvsRes) HasIisExecEnv() bool {
-	if o != nil && o.IisExecEnv != nil {
+	if o != nil && !isNil(o.IisExecEnv) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetIisExecEnvsRes) SetIisExecEnv(v []WindowsIISExecutionEnvironmentDTO)
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetIisExecEnvsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetIisExecEnvsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIisExecEnvsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetIisExecEnvsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetIisExecEnvsRes) SetValidationErrors(v []string) {
 
 func (o GetIisExecEnvsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.IisExecEnv != nil {
+	if !isNil(o.IisExecEnv) {
 		toSerialize["iisExecEnv"] = o.IisExecEnv
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

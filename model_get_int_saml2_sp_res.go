@@ -45,7 +45,7 @@ func NewGetIntSaml2SpResWithDefaults() *GetIntSaml2SpRes {
 
 // GetConfig returns the Config field value if set, zero value otherwise.
 func (o *GetIntSaml2SpRes) GetConfig() SamlR2SPConfigDTO {
-	if o == nil || o.Config == nil {
+	if o == nil || isNil(o.Config) {
 		var ret SamlR2SPConfigDTO
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *GetIntSaml2SpRes) GetConfig() SamlR2SPConfigDTO {
 // GetConfigOk returns a tuple with the Config field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpRes) GetConfigOk() (*SamlR2SPConfigDTO, bool) {
-	if o == nil || o.Config == nil {
-		return nil, false
+	if o == nil || isNil(o.Config) {
+    return nil, false
 	}
 	return o.Config, true
 }
 
 // HasConfig returns a boolean if a field has been set.
 func (o *GetIntSaml2SpRes) HasConfig() bool {
-	if o != nil && o.Config != nil {
+	if o != nil && !isNil(o.Config) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *GetIntSaml2SpRes) SetConfig(v SamlR2SPConfigDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetIntSaml2SpRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *GetIntSaml2SpRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetIntSaml2SpRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *GetIntSaml2SpRes) SetError(v string) {
 
 // GetSp returns the Sp field value if set, zero value otherwise.
 func (o *GetIntSaml2SpRes) GetSp() InternalSaml2ServiceProviderDTO {
-	if o == nil || o.Sp == nil {
+	if o == nil || isNil(o.Sp) {
 		var ret InternalSaml2ServiceProviderDTO
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *GetIntSaml2SpRes) GetSp() InternalSaml2ServiceProviderDTO {
 // GetSpOk returns a tuple with the Sp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpRes) GetSpOk() (*InternalSaml2ServiceProviderDTO, bool) {
-	if o == nil || o.Sp == nil {
-		return nil, false
+	if o == nil || isNil(o.Sp) {
+    return nil, false
 	}
 	return o.Sp, true
 }
 
 // HasSp returns a boolean if a field has been set.
 func (o *GetIntSaml2SpRes) HasSp() bool {
-	if o != nil && o.Sp != nil {
+	if o != nil && !isNil(o.Sp) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *GetIntSaml2SpRes) SetSp(v InternalSaml2ServiceProviderDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetIntSaml2SpRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *GetIntSaml2SpRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIntSaml2SpRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetIntSaml2SpRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *GetIntSaml2SpRes) SetValidationErrors(v []string) {
 
 func (o GetIntSaml2SpRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Config != nil {
+	if !isNil(o.Config) {
 		toSerialize["config"] = o.Config
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Sp != nil {
+	if !isNil(o.Sp) {
 		toSerialize["sp"] = o.Sp
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

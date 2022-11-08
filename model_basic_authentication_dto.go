@@ -59,7 +59,7 @@ func NewBasicAuthenticationDTOWithDefaults() *BasicAuthenticationDTO {
 
 // GetDelegatedAuthentication returns the DelegatedAuthentication field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetDelegatedAuthentication() DelegatedAuthenticationDTO {
-	if o == nil || o.DelegatedAuthentication == nil {
+	if o == nil || isNil(o.DelegatedAuthentication) {
 		var ret DelegatedAuthenticationDTO
 		return ret
 	}
@@ -69,15 +69,15 @@ func (o *BasicAuthenticationDTO) GetDelegatedAuthentication() DelegatedAuthentic
 // GetDelegatedAuthenticationOk returns a tuple with the DelegatedAuthentication field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetDelegatedAuthenticationOk() (*DelegatedAuthenticationDTO, bool) {
-	if o == nil || o.DelegatedAuthentication == nil {
-		return nil, false
+	if o == nil || isNil(o.DelegatedAuthentication) {
+    return nil, false
 	}
 	return o.DelegatedAuthentication, true
 }
 
 // HasDelegatedAuthentication returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasDelegatedAuthentication() bool {
-	if o != nil && o.DelegatedAuthentication != nil {
+	if o != nil && !isNil(o.DelegatedAuthentication) {
 		return true
 	}
 
@@ -91,7 +91,7 @@ func (o *BasicAuthenticationDTO) SetDelegatedAuthentication(v DelegatedAuthentic
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -101,15 +101,15 @@ func (o *BasicAuthenticationDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -123,7 +123,7 @@ func (o *BasicAuthenticationDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -133,15 +133,15 @@ func (o *BasicAuthenticationDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -155,7 +155,7 @@ func (o *BasicAuthenticationDTO) SetElementId(v string) {
 
 // GetEnabled returns the Enabled field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetEnabled() bool {
-	if o == nil || o.Enabled == nil {
+	if o == nil || isNil(o.Enabled) {
 		var ret bool
 		return ret
 	}
@@ -165,15 +165,15 @@ func (o *BasicAuthenticationDTO) GetEnabled() bool {
 // GetEnabledOk returns a tuple with the Enabled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetEnabledOk() (*bool, bool) {
-	if o == nil || o.Enabled == nil {
-		return nil, false
+	if o == nil || isNil(o.Enabled) {
+    return nil, false
 	}
 	return o.Enabled, true
 }
 
 // HasEnabled returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasEnabled() bool {
-	if o != nil && o.Enabled != nil {
+	if o != nil && !isNil(o.Enabled) {
 		return true
 	}
 
@@ -187,7 +187,7 @@ func (o *BasicAuthenticationDTO) SetEnabled(v bool) {
 
 // GetHashAlgorithm returns the HashAlgorithm field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetHashAlgorithm() string {
-	if o == nil || o.HashAlgorithm == nil {
+	if o == nil || isNil(o.HashAlgorithm) {
 		var ret string
 		return ret
 	}
@@ -197,15 +197,15 @@ func (o *BasicAuthenticationDTO) GetHashAlgorithm() string {
 // GetHashAlgorithmOk returns a tuple with the HashAlgorithm field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetHashAlgorithmOk() (*string, bool) {
-	if o == nil || o.HashAlgorithm == nil {
-		return nil, false
+	if o == nil || isNil(o.HashAlgorithm) {
+    return nil, false
 	}
 	return o.HashAlgorithm, true
 }
 
 // HasHashAlgorithm returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasHashAlgorithm() bool {
-	if o != nil && o.HashAlgorithm != nil {
+	if o != nil && !isNil(o.HashAlgorithm) {
 		return true
 	}
 
@@ -219,7 +219,7 @@ func (o *BasicAuthenticationDTO) SetHashAlgorithm(v string) {
 
 // GetHashEncoding returns the HashEncoding field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetHashEncoding() string {
-	if o == nil || o.HashEncoding == nil {
+	if o == nil || isNil(o.HashEncoding) {
 		var ret string
 		return ret
 	}
@@ -229,15 +229,15 @@ func (o *BasicAuthenticationDTO) GetHashEncoding() string {
 // GetHashEncodingOk returns a tuple with the HashEncoding field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetHashEncodingOk() (*string, bool) {
-	if o == nil || o.HashEncoding == nil {
-		return nil, false
+	if o == nil || isNil(o.HashEncoding) {
+    return nil, false
 	}
 	return o.HashEncoding, true
 }
 
 // HasHashEncoding returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasHashEncoding() bool {
-	if o != nil && o.HashEncoding != nil {
+	if o != nil && !isNil(o.HashEncoding) {
 		return true
 	}
 
@@ -251,7 +251,7 @@ func (o *BasicAuthenticationDTO) SetHashEncoding(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -261,15 +261,15 @@ func (o *BasicAuthenticationDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -283,7 +283,7 @@ func (o *BasicAuthenticationDTO) SetId(v int64) {
 
 // GetIgnorePasswordCase returns the IgnorePasswordCase field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetIgnorePasswordCase() bool {
-	if o == nil || o.IgnorePasswordCase == nil {
+	if o == nil || isNil(o.IgnorePasswordCase) {
 		var ret bool
 		return ret
 	}
@@ -293,15 +293,15 @@ func (o *BasicAuthenticationDTO) GetIgnorePasswordCase() bool {
 // GetIgnorePasswordCaseOk returns a tuple with the IgnorePasswordCase field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetIgnorePasswordCaseOk() (*bool, bool) {
-	if o == nil || o.IgnorePasswordCase == nil {
-		return nil, false
+	if o == nil || isNil(o.IgnorePasswordCase) {
+    return nil, false
 	}
 	return o.IgnorePasswordCase, true
 }
 
 // HasIgnorePasswordCase returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasIgnorePasswordCase() bool {
-	if o != nil && o.IgnorePasswordCase != nil {
+	if o != nil && !isNil(o.IgnorePasswordCase) {
 		return true
 	}
 
@@ -315,7 +315,7 @@ func (o *BasicAuthenticationDTO) SetIgnorePasswordCase(v bool) {
 
 // GetIgnoreUsernameCase returns the IgnoreUsernameCase field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetIgnoreUsernameCase() bool {
-	if o == nil || o.IgnoreUsernameCase == nil {
+	if o == nil || isNil(o.IgnoreUsernameCase) {
 		var ret bool
 		return ret
 	}
@@ -325,15 +325,15 @@ func (o *BasicAuthenticationDTO) GetIgnoreUsernameCase() bool {
 // GetIgnoreUsernameCaseOk returns a tuple with the IgnoreUsernameCase field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetIgnoreUsernameCaseOk() (*bool, bool) {
-	if o == nil || o.IgnoreUsernameCase == nil {
-		return nil, false
+	if o == nil || isNil(o.IgnoreUsernameCase) {
+    return nil, false
 	}
 	return o.IgnoreUsernameCase, true
 }
 
 // HasIgnoreUsernameCase returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasIgnoreUsernameCase() bool {
-	if o != nil && o.IgnoreUsernameCase != nil {
+	if o != nil && !isNil(o.IgnoreUsernameCase) {
 		return true
 	}
 
@@ -347,7 +347,7 @@ func (o *BasicAuthenticationDTO) SetIgnoreUsernameCase(v bool) {
 
 // GetImpersonateUserPolicy returns the ImpersonateUserPolicy field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetImpersonateUserPolicy() ImpersonateUserPolicyDTO {
-	if o == nil || o.ImpersonateUserPolicy == nil {
+	if o == nil || isNil(o.ImpersonateUserPolicy) {
 		var ret ImpersonateUserPolicyDTO
 		return ret
 	}
@@ -357,15 +357,15 @@ func (o *BasicAuthenticationDTO) GetImpersonateUserPolicy() ImpersonateUserPolic
 // GetImpersonateUserPolicyOk returns a tuple with the ImpersonateUserPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetImpersonateUserPolicyOk() (*ImpersonateUserPolicyDTO, bool) {
-	if o == nil || o.ImpersonateUserPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.ImpersonateUserPolicy) {
+    return nil, false
 	}
 	return o.ImpersonateUserPolicy, true
 }
 
 // HasImpersonateUserPolicy returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasImpersonateUserPolicy() bool {
-	if o != nil && o.ImpersonateUserPolicy != nil {
+	if o != nil && !isNil(o.ImpersonateUserPolicy) {
 		return true
 	}
 
@@ -379,7 +379,7 @@ func (o *BasicAuthenticationDTO) SetImpersonateUserPolicy(v ImpersonateUserPolic
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -389,15 +389,15 @@ func (o *BasicAuthenticationDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -411,7 +411,7 @@ func (o *BasicAuthenticationDTO) SetName(v string) {
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetPriority() int32 {
-	if o == nil || o.Priority == nil {
+	if o == nil || isNil(o.Priority) {
 		var ret int32
 		return ret
 	}
@@ -421,15 +421,15 @@ func (o *BasicAuthenticationDTO) GetPriority() int32 {
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetPriorityOk() (*int32, bool) {
-	if o == nil || o.Priority == nil {
-		return nil, false
+	if o == nil || isNil(o.Priority) {
+    return nil, false
 	}
 	return o.Priority, true
 }
 
 // HasPriority returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasPriority() bool {
-	if o != nil && o.Priority != nil {
+	if o != nil && !isNil(o.Priority) {
 		return true
 	}
 
@@ -443,7 +443,7 @@ func (o *BasicAuthenticationDTO) SetPriority(v int32) {
 
 // GetSaltLength returns the SaltLength field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetSaltLength() int32 {
-	if o == nil || o.SaltLength == nil {
+	if o == nil || isNil(o.SaltLength) {
 		var ret int32
 		return ret
 	}
@@ -453,15 +453,15 @@ func (o *BasicAuthenticationDTO) GetSaltLength() int32 {
 // GetSaltLengthOk returns a tuple with the SaltLength field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetSaltLengthOk() (*int32, bool) {
-	if o == nil || o.SaltLength == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltLength) {
+    return nil, false
 	}
 	return o.SaltLength, true
 }
 
 // HasSaltLength returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasSaltLength() bool {
-	if o != nil && o.SaltLength != nil {
+	if o != nil && !isNil(o.SaltLength) {
 		return true
 	}
 
@@ -475,7 +475,7 @@ func (o *BasicAuthenticationDTO) SetSaltLength(v int32) {
 
 // GetSaltPrefix returns the SaltPrefix field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetSaltPrefix() string {
-	if o == nil || o.SaltPrefix == nil {
+	if o == nil || isNil(o.SaltPrefix) {
 		var ret string
 		return ret
 	}
@@ -485,15 +485,15 @@ func (o *BasicAuthenticationDTO) GetSaltPrefix() string {
 // GetSaltPrefixOk returns a tuple with the SaltPrefix field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetSaltPrefixOk() (*string, bool) {
-	if o == nil || o.SaltPrefix == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltPrefix) {
+    return nil, false
 	}
 	return o.SaltPrefix, true
 }
 
 // HasSaltPrefix returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasSaltPrefix() bool {
-	if o != nil && o.SaltPrefix != nil {
+	if o != nil && !isNil(o.SaltPrefix) {
 		return true
 	}
 
@@ -507,7 +507,7 @@ func (o *BasicAuthenticationDTO) SetSaltPrefix(v string) {
 
 // GetSaltSuffix returns the SaltSuffix field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetSaltSuffix() string {
-	if o == nil || o.SaltSuffix == nil {
+	if o == nil || isNil(o.SaltSuffix) {
 		var ret string
 		return ret
 	}
@@ -517,15 +517,15 @@ func (o *BasicAuthenticationDTO) GetSaltSuffix() string {
 // GetSaltSuffixOk returns a tuple with the SaltSuffix field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetSaltSuffixOk() (*string, bool) {
-	if o == nil || o.SaltSuffix == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltSuffix) {
+    return nil, false
 	}
 	return o.SaltSuffix, true
 }
 
 // HasSaltSuffix returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasSaltSuffix() bool {
-	if o != nil && o.SaltSuffix != nil {
+	if o != nil && !isNil(o.SaltSuffix) {
 		return true
 	}
 
@@ -539,7 +539,7 @@ func (o *BasicAuthenticationDTO) SetSaltSuffix(v string) {
 
 // GetSimpleAuthnSaml2AuthnCtxClass returns the SimpleAuthnSaml2AuthnCtxClass field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetSimpleAuthnSaml2AuthnCtxClass() string {
-	if o == nil || o.SimpleAuthnSaml2AuthnCtxClass == nil {
+	if o == nil || isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		var ret string
 		return ret
 	}
@@ -549,15 +549,15 @@ func (o *BasicAuthenticationDTO) GetSimpleAuthnSaml2AuthnCtxClass() string {
 // GetSimpleAuthnSaml2AuthnCtxClassOk returns a tuple with the SimpleAuthnSaml2AuthnCtxClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetSimpleAuthnSaml2AuthnCtxClassOk() (*string, bool) {
-	if o == nil || o.SimpleAuthnSaml2AuthnCtxClass == nil {
-		return nil, false
+	if o == nil || isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
+    return nil, false
 	}
 	return o.SimpleAuthnSaml2AuthnCtxClass, true
 }
 
 // HasSimpleAuthnSaml2AuthnCtxClass returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasSimpleAuthnSaml2AuthnCtxClass() bool {
-	if o != nil && o.SimpleAuthnSaml2AuthnCtxClass != nil {
+	if o != nil && !isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		return true
 	}
 
@@ -571,7 +571,7 @@ func (o *BasicAuthenticationDTO) SetSimpleAuthnSaml2AuthnCtxClass(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -581,15 +581,15 @@ func (o *BasicAuthenticationDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -603,7 +603,7 @@ func (o *BasicAuthenticationDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *BasicAuthenticationDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -613,15 +613,15 @@ func (o *BasicAuthenticationDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BasicAuthenticationDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *BasicAuthenticationDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -635,58 +635,58 @@ func (o *BasicAuthenticationDTO) SetY(v float64) {
 
 func (o BasicAuthenticationDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DelegatedAuthentication != nil {
+	if !isNil(o.DelegatedAuthentication) {
 		toSerialize["delegatedAuthentication"] = o.DelegatedAuthentication
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Enabled != nil {
+	if !isNil(o.Enabled) {
 		toSerialize["enabled"] = o.Enabled
 	}
-	if o.HashAlgorithm != nil {
+	if !isNil(o.HashAlgorithm) {
 		toSerialize["hashAlgorithm"] = o.HashAlgorithm
 	}
-	if o.HashEncoding != nil {
+	if !isNil(o.HashEncoding) {
 		toSerialize["hashEncoding"] = o.HashEncoding
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IgnorePasswordCase != nil {
+	if !isNil(o.IgnorePasswordCase) {
 		toSerialize["ignorePasswordCase"] = o.IgnorePasswordCase
 	}
-	if o.IgnoreUsernameCase != nil {
+	if !isNil(o.IgnoreUsernameCase) {
 		toSerialize["ignoreUsernameCase"] = o.IgnoreUsernameCase
 	}
-	if o.ImpersonateUserPolicy != nil {
+	if !isNil(o.ImpersonateUserPolicy) {
 		toSerialize["impersonateUserPolicy"] = o.ImpersonateUserPolicy
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Priority != nil {
+	if !isNil(o.Priority) {
 		toSerialize["priority"] = o.Priority
 	}
-	if o.SaltLength != nil {
+	if !isNil(o.SaltLength) {
 		toSerialize["saltLength"] = o.SaltLength
 	}
-	if o.SaltPrefix != nil {
+	if !isNil(o.SaltPrefix) {
 		toSerialize["saltPrefix"] = o.SaltPrefix
 	}
-	if o.SaltSuffix != nil {
+	if !isNil(o.SaltSuffix) {
 		toSerialize["saltSuffix"] = o.SaltSuffix
 	}
-	if o.SimpleAuthnSaml2AuthnCtxClass != nil {
+	if !isNil(o.SimpleAuthnSaml2AuthnCtxClass) {
 		toSerialize["simpleAuthnSaml2AuthnCtxClass"] = o.SimpleAuthnSaml2AuthnCtxClass
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

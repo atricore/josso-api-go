@@ -47,7 +47,7 @@ func NewOIDCSignOnResponseWithDefaults() *OIDCSignOnResponse {
 
 // GetAccessToken returns the AccessToken field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetAccessToken() string {
-	if o == nil || o.AccessToken == nil {
+	if o == nil || isNil(o.AccessToken) {
 		var ret string
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *OIDCSignOnResponse) GetAccessToken() string {
 // GetAccessTokenOk returns a tuple with the AccessToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetAccessTokenOk() (*string, bool) {
-	if o == nil || o.AccessToken == nil {
-		return nil, false
+	if o == nil || isNil(o.AccessToken) {
+    return nil, false
 	}
 	return o.AccessToken, true
 }
 
 // HasAccessToken returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasAccessToken() bool {
-	if o != nil && o.AccessToken != nil {
+	if o != nil && !isNil(o.AccessToken) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *OIDCSignOnResponse) SetAccessToken(v string) {
 
 // GetAuthenticatedUser returns the AuthenticatedUser field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetAuthenticatedUser() UserDTO {
-	if o == nil || o.AuthenticatedUser == nil {
+	if o == nil || isNil(o.AuthenticatedUser) {
 		var ret UserDTO
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *OIDCSignOnResponse) GetAuthenticatedUser() UserDTO {
 // GetAuthenticatedUserOk returns a tuple with the AuthenticatedUser field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetAuthenticatedUserOk() (*UserDTO, bool) {
-	if o == nil || o.AuthenticatedUser == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthenticatedUser) {
+    return nil, false
 	}
 	return o.AuthenticatedUser, true
 }
 
 // HasAuthenticatedUser returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasAuthenticatedUser() bool {
-	if o != nil && o.AuthenticatedUser != nil {
+	if o != nil && !isNil(o.AuthenticatedUser) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *OIDCSignOnResponse) SetAuthenticatedUser(v UserDTO) {
 
 // GetIdToken returns the IdToken field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetIdToken() string {
-	if o == nil || o.IdToken == nil {
+	if o == nil || isNil(o.IdToken) {
 		var ret string
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *OIDCSignOnResponse) GetIdToken() string {
 // GetIdTokenOk returns a tuple with the IdToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetIdTokenOk() (*string, bool) {
-	if o == nil || o.IdToken == nil {
-		return nil, false
+	if o == nil || isNil(o.IdToken) {
+    return nil, false
 	}
 	return o.IdToken, true
 }
 
 // HasIdToken returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasIdToken() bool {
-	if o != nil && o.IdToken != nil {
+	if o != nil && !isNil(o.IdToken) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *OIDCSignOnResponse) SetIdToken(v string) {
 
 // GetRefreshToken returns the RefreshToken field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetRefreshToken() string {
-	if o == nil || o.RefreshToken == nil {
+	if o == nil || isNil(o.RefreshToken) {
 		var ret string
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *OIDCSignOnResponse) GetRefreshToken() string {
 // GetRefreshTokenOk returns a tuple with the RefreshToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetRefreshTokenOk() (*string, bool) {
-	if o == nil || o.RefreshToken == nil {
-		return nil, false
+	if o == nil || isNil(o.RefreshToken) {
+    return nil, false
 	}
 	return o.RefreshToken, true
 }
 
 // HasRefreshToken returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasRefreshToken() bool {
-	if o != nil && o.RefreshToken != nil {
+	if o != nil && !isNil(o.RefreshToken) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *OIDCSignOnResponse) SetRefreshToken(v string) {
 
 // GetServer returns the Server field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetServer() ServerContext {
-	if o == nil || o.Server == nil {
+	if o == nil || isNil(o.Server) {
 		var ret ServerContext
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *OIDCSignOnResponse) GetServer() ServerContext {
 // GetServerOk returns a tuple with the Server field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetServerOk() (*ServerContext, bool) {
-	if o == nil || o.Server == nil {
-		return nil, false
+	if o == nil || isNil(o.Server) {
+    return nil, false
 	}
 	return o.Server, true
 }
 
 // HasServer returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasServer() bool {
-	if o != nil && o.Server != nil {
+	if o != nil && !isNil(o.Server) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *OIDCSignOnResponse) SetServer(v ServerContext) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *OIDCSignOnResponse) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *OIDCSignOnResponse) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnResponse) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *OIDCSignOnResponse) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *OIDCSignOnResponse) SetValidationErrors(v []string) {
 
 func (o OIDCSignOnResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccessToken != nil {
+	if !isNil(o.AccessToken) {
 		toSerialize["accessToken"] = o.AccessToken
 	}
-	if o.AuthenticatedUser != nil {
+	if !isNil(o.AuthenticatedUser) {
 		toSerialize["authenticatedUser"] = o.AuthenticatedUser
 	}
-	if o.IdToken != nil {
+	if !isNil(o.IdToken) {
 		toSerialize["idToken"] = o.IdToken
 	}
-	if o.RefreshToken != nil {
+	if !isNil(o.RefreshToken) {
 		toSerialize["refreshToken"] = o.RefreshToken
 	}
-	if o.Server != nil {
+	if !isNil(o.Server) {
 		toSerialize["server"] = o.Server
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

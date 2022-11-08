@@ -53,7 +53,7 @@ func NewCustomBrandingDefinitionDTOWithDefaults() *CustomBrandingDefinitionDTO {
 
 // GetBundleSymbolicName returns the BundleSymbolicName field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetBundleSymbolicName() string {
-	if o == nil || o.BundleSymbolicName == nil {
+	if o == nil || isNil(o.BundleSymbolicName) {
 		var ret string
 		return ret
 	}
@@ -63,15 +63,15 @@ func (o *CustomBrandingDefinitionDTO) GetBundleSymbolicName() string {
 // GetBundleSymbolicNameOk returns a tuple with the BundleSymbolicName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetBundleSymbolicNameOk() (*string, bool) {
-	if o == nil || o.BundleSymbolicName == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleSymbolicName) {
+    return nil, false
 	}
 	return o.BundleSymbolicName, true
 }
 
 // HasBundleSymbolicName returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasBundleSymbolicName() bool {
-	if o != nil && o.BundleSymbolicName != nil {
+	if o != nil && !isNil(o.BundleSymbolicName) {
 		return true
 	}
 
@@ -85,7 +85,7 @@ func (o *CustomBrandingDefinitionDTO) SetBundleSymbolicName(v string) {
 
 // GetBundleUri returns the BundleUri field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetBundleUri() string {
-	if o == nil || o.BundleUri == nil {
+	if o == nil || isNil(o.BundleUri) {
 		var ret string
 		return ret
 	}
@@ -95,15 +95,15 @@ func (o *CustomBrandingDefinitionDTO) GetBundleUri() string {
 // GetBundleUriOk returns a tuple with the BundleUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetBundleUriOk() (*string, bool) {
-	if o == nil || o.BundleUri == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleUri) {
+    return nil, false
 	}
 	return o.BundleUri, true
 }
 
 // HasBundleUri returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasBundleUri() bool {
-	if o != nil && o.BundleUri != nil {
+	if o != nil && !isNil(o.BundleUri) {
 		return true
 	}
 
@@ -117,7 +117,7 @@ func (o *CustomBrandingDefinitionDTO) SetBundleUri(v string) {
 
 // GetCustomOpenIdAppClazz returns the CustomOpenIdAppClazz field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetCustomOpenIdAppClazz() string {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
 		var ret string
 		return ret
 	}
@@ -127,15 +127,15 @@ func (o *CustomBrandingDefinitionDTO) GetCustomOpenIdAppClazz() string {
 // GetCustomOpenIdAppClazzOk returns a tuple with the CustomOpenIdAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetCustomOpenIdAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
+    return nil, false
 	}
 	return o.CustomOpenIdAppClazz, true
 }
 
 // HasCustomOpenIdAppClazz returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasCustomOpenIdAppClazz() bool {
-	if o != nil && o.CustomOpenIdAppClazz != nil {
+	if o != nil && !isNil(o.CustomOpenIdAppClazz) {
 		return true
 	}
 
@@ -149,7 +149,7 @@ func (o *CustomBrandingDefinitionDTO) SetCustomOpenIdAppClazz(v string) {
 
 // GetCustomSsoAppClazz returns the CustomSsoAppClazz field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetCustomSsoAppClazz() string {
-	if o == nil || o.CustomSsoAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoAppClazz) {
 		var ret string
 		return ret
 	}
@@ -159,15 +159,15 @@ func (o *CustomBrandingDefinitionDTO) GetCustomSsoAppClazz() string {
 // GetCustomSsoAppClazzOk returns a tuple with the CustomSsoAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetCustomSsoAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoAppClazz, true
 }
 
 // HasCustomSsoAppClazz returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasCustomSsoAppClazz() bool {
-	if o != nil && o.CustomSsoAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoAppClazz) {
 		return true
 	}
 
@@ -181,7 +181,7 @@ func (o *CustomBrandingDefinitionDTO) SetCustomSsoAppClazz(v string) {
 
 // GetCustomSsoIdPAppClazz returns the CustomSsoIdPAppClazz field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetCustomSsoIdPAppClazz() string {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
 		var ret string
 		return ret
 	}
@@ -191,15 +191,15 @@ func (o *CustomBrandingDefinitionDTO) GetCustomSsoIdPAppClazz() string {
 // GetCustomSsoIdPAppClazzOk returns a tuple with the CustomSsoIdPAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetCustomSsoIdPAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoIdPAppClazz, true
 }
 
 // HasCustomSsoIdPAppClazz returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasCustomSsoIdPAppClazz() bool {
-	if o != nil && o.CustomSsoIdPAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoIdPAppClazz) {
 		return true
 	}
 
@@ -213,7 +213,7 @@ func (o *CustomBrandingDefinitionDTO) SetCustomSsoIdPAppClazz(v string) {
 
 // GetDefaultLocale returns the DefaultLocale field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetDefaultLocale() string {
-	if o == nil || o.DefaultLocale == nil {
+	if o == nil || isNil(o.DefaultLocale) {
 		var ret string
 		return ret
 	}
@@ -223,15 +223,15 @@ func (o *CustomBrandingDefinitionDTO) GetDefaultLocale() string {
 // GetDefaultLocaleOk returns a tuple with the DefaultLocale field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetDefaultLocaleOk() (*string, bool) {
-	if o == nil || o.DefaultLocale == nil {
-		return nil, false
+	if o == nil || isNil(o.DefaultLocale) {
+    return nil, false
 	}
 	return o.DefaultLocale, true
 }
 
 // HasDefaultLocale returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasDefaultLocale() bool {
-	if o != nil && o.DefaultLocale != nil {
+	if o != nil && !isNil(o.DefaultLocale) {
 		return true
 	}
 
@@ -245,7 +245,7 @@ func (o *CustomBrandingDefinitionDTO) SetDefaultLocale(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -255,15 +255,15 @@ func (o *CustomBrandingDefinitionDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -277,7 +277,7 @@ func (o *CustomBrandingDefinitionDTO) SetDescription(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -287,15 +287,15 @@ func (o *CustomBrandingDefinitionDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -309,7 +309,7 @@ func (o *CustomBrandingDefinitionDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -319,15 +319,15 @@ func (o *CustomBrandingDefinitionDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -341,7 +341,7 @@ func (o *CustomBrandingDefinitionDTO) SetName(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetResource() string {
-	if o == nil || o.Resource == nil {
+	if o == nil || isNil(o.Resource) {
 		var ret string
 		return ret
 	}
@@ -351,15 +351,15 @@ func (o *CustomBrandingDefinitionDTO) GetResource() string {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetResourceOk() (*string, bool) {
-	if o == nil || o.Resource == nil {
-		return nil, false
+	if o == nil || isNil(o.Resource) {
+    return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasResource() bool {
-	if o != nil && o.Resource != nil {
+	if o != nil && !isNil(o.Resource) {
 		return true
 	}
 
@@ -373,7 +373,7 @@ func (o *CustomBrandingDefinitionDTO) SetResource(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -383,15 +383,15 @@ func (o *CustomBrandingDefinitionDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -405,7 +405,7 @@ func (o *CustomBrandingDefinitionDTO) SetType(v string) {
 
 // GetWebBrandingId returns the WebBrandingId field value if set, zero value otherwise.
 func (o *CustomBrandingDefinitionDTO) GetWebBrandingId() string {
-	if o == nil || o.WebBrandingId == nil {
+	if o == nil || isNil(o.WebBrandingId) {
 		var ret string
 		return ret
 	}
@@ -415,15 +415,15 @@ func (o *CustomBrandingDefinitionDTO) GetWebBrandingId() string {
 // GetWebBrandingIdOk returns a tuple with the WebBrandingId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomBrandingDefinitionDTO) GetWebBrandingIdOk() (*string, bool) {
-	if o == nil || o.WebBrandingId == nil {
-		return nil, false
+	if o == nil || isNil(o.WebBrandingId) {
+    return nil, false
 	}
 	return o.WebBrandingId, true
 }
 
 // HasWebBrandingId returns a boolean if a field has been set.
 func (o *CustomBrandingDefinitionDTO) HasWebBrandingId() bool {
-	if o != nil && o.WebBrandingId != nil {
+	if o != nil && !isNil(o.WebBrandingId) {
 		return true
 	}
 
@@ -437,40 +437,40 @@ func (o *CustomBrandingDefinitionDTO) SetWebBrandingId(v string) {
 
 func (o CustomBrandingDefinitionDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BundleSymbolicName != nil {
+	if !isNil(o.BundleSymbolicName) {
 		toSerialize["bundleSymbolicName"] = o.BundleSymbolicName
 	}
-	if o.BundleUri != nil {
+	if !isNil(o.BundleUri) {
 		toSerialize["bundleUri"] = o.BundleUri
 	}
-	if o.CustomOpenIdAppClazz != nil {
+	if !isNil(o.CustomOpenIdAppClazz) {
 		toSerialize["customOpenIdAppClazz"] = o.CustomOpenIdAppClazz
 	}
-	if o.CustomSsoAppClazz != nil {
+	if !isNil(o.CustomSsoAppClazz) {
 		toSerialize["customSsoAppClazz"] = o.CustomSsoAppClazz
 	}
-	if o.CustomSsoIdPAppClazz != nil {
+	if !isNil(o.CustomSsoIdPAppClazz) {
 		toSerialize["customSsoIdPAppClazz"] = o.CustomSsoIdPAppClazz
 	}
-	if o.DefaultLocale != nil {
+	if !isNil(o.DefaultLocale) {
 		toSerialize["defaultLocale"] = o.DefaultLocale
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Resource != nil {
+	if !isNil(o.Resource) {
 		toSerialize["resource"] = o.Resource
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.WebBrandingId != nil {
+	if !isNil(o.WebBrandingId) {
 		toSerialize["webBrandingId"] = o.WebBrandingId
 	}
 

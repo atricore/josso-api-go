@@ -44,7 +44,7 @@ func NewGetIdSourceDbsResWithDefaults() *GetIdSourceDbsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetIdSourceDbsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetIdSourceDbsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdSourceDbsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetIdSourceDbsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetIdSourceDbsRes) SetError(v string) {
 
 // GetIdSourceDbs returns the IdSourceDbs field value if set, zero value otherwise.
 func (o *GetIdSourceDbsRes) GetIdSourceDbs() []DbIdentitySourceDTO {
-	if o == nil || o.IdSourceDbs == nil {
+	if o == nil || isNil(o.IdSourceDbs) {
 		var ret []DbIdentitySourceDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetIdSourceDbsRes) GetIdSourceDbs() []DbIdentitySourceDTO {
 // GetIdSourceDbsOk returns a tuple with the IdSourceDbs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdSourceDbsRes) GetIdSourceDbsOk() ([]DbIdentitySourceDTO, bool) {
-	if o == nil || o.IdSourceDbs == nil {
-		return nil, false
+	if o == nil || isNil(o.IdSourceDbs) {
+    return nil, false
 	}
 	return o.IdSourceDbs, true
 }
 
 // HasIdSourceDbs returns a boolean if a field has been set.
 func (o *GetIdSourceDbsRes) HasIdSourceDbs() bool {
-	if o != nil && o.IdSourceDbs != nil {
+	if o != nil && !isNil(o.IdSourceDbs) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetIdSourceDbsRes) SetIdSourceDbs(v []DbIdentitySourceDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetIdSourceDbsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetIdSourceDbsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdSourceDbsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetIdSourceDbsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetIdSourceDbsRes) SetValidationErrors(v []string) {
 
 func (o GetIdSourceDbsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.IdSourceDbs != nil {
+	if !isNil(o.IdSourceDbs) {
 		toSerialize["idSourceDbs"] = o.IdSourceDbs
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

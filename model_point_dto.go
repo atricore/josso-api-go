@@ -43,7 +43,7 @@ func NewPointDTOWithDefaults() *PointDTO {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *PointDTO) GetX() int64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret int64
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *PointDTO) GetX() int64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PointDTO) GetXOk() (*int64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *PointDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *PointDTO) SetX(v int64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *PointDTO) GetY() int64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret int64
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *PointDTO) GetY() int64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PointDTO) GetYOk() (*int64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *PointDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *PointDTO) SetY(v int64) {
 
 func (o PointDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

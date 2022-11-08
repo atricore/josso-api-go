@@ -49,7 +49,7 @@ func NewLocationDTOWithDefaults() *LocationDTO {
 
 // GetContext returns the Context field value if set, zero value otherwise.
 func (o *LocationDTO) GetContext() string {
-	if o == nil || o.Context == nil {
+	if o == nil || isNil(o.Context) {
 		var ret string
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *LocationDTO) GetContext() string {
 // GetContextOk returns a tuple with the Context field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetContextOk() (*string, bool) {
-	if o == nil || o.Context == nil {
-		return nil, false
+	if o == nil || isNil(o.Context) {
+    return nil, false
 	}
 	return o.Context, true
 }
 
 // HasContext returns a boolean if a field has been set.
 func (o *LocationDTO) HasContext() bool {
-	if o != nil && o.Context != nil {
+	if o != nil && !isNil(o.Context) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *LocationDTO) SetContext(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *LocationDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *LocationDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *LocationDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *LocationDTO) SetElementId(v string) {
 
 // GetHost returns the Host field value if set, zero value otherwise.
 func (o *LocationDTO) GetHost() string {
-	if o == nil || o.Host == nil {
+	if o == nil || isNil(o.Host) {
 		var ret string
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *LocationDTO) GetHost() string {
 // GetHostOk returns a tuple with the Host field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetHostOk() (*string, bool) {
-	if o == nil || o.Host == nil {
-		return nil, false
+	if o == nil || isNil(o.Host) {
+    return nil, false
 	}
 	return o.Host, true
 }
 
 // HasHost returns a boolean if a field has been set.
 func (o *LocationDTO) HasHost() bool {
-	if o != nil && o.Host != nil {
+	if o != nil && !isNil(o.Host) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *LocationDTO) SetHost(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *LocationDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *LocationDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *LocationDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *LocationDTO) SetId(v int64) {
 
 // GetLocationAsString returns the LocationAsString field value if set, zero value otherwise.
 func (o *LocationDTO) GetLocationAsString() string {
-	if o == nil || o.LocationAsString == nil {
+	if o == nil || isNil(o.LocationAsString) {
 		var ret string
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *LocationDTO) GetLocationAsString() string {
 // GetLocationAsStringOk returns a tuple with the LocationAsString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetLocationAsStringOk() (*string, bool) {
-	if o == nil || o.LocationAsString == nil {
-		return nil, false
+	if o == nil || isNil(o.LocationAsString) {
+    return nil, false
 	}
 	return o.LocationAsString, true
 }
 
 // HasLocationAsString returns a boolean if a field has been set.
 func (o *LocationDTO) HasLocationAsString() bool {
-	if o != nil && o.LocationAsString != nil {
+	if o != nil && !isNil(o.LocationAsString) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *LocationDTO) SetLocationAsString(v string) {
 
 // GetPort returns the Port field value if set, zero value otherwise.
 func (o *LocationDTO) GetPort() int32 {
-	if o == nil || o.Port == nil {
+	if o == nil || isNil(o.Port) {
 		var ret int32
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *LocationDTO) GetPort() int32 {
 // GetPortOk returns a tuple with the Port field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetPortOk() (*int32, bool) {
-	if o == nil || o.Port == nil {
-		return nil, false
+	if o == nil || isNil(o.Port) {
+    return nil, false
 	}
 	return o.Port, true
 }
 
 // HasPort returns a boolean if a field has been set.
 func (o *LocationDTO) HasPort() bool {
-	if o != nil && o.Port != nil {
+	if o != nil && !isNil(o.Port) {
 		return true
 	}
 
@@ -241,7 +241,7 @@ func (o *LocationDTO) SetPort(v int32) {
 
 // GetProtocol returns the Protocol field value if set, zero value otherwise.
 func (o *LocationDTO) GetProtocol() string {
-	if o == nil || o.Protocol == nil {
+	if o == nil || isNil(o.Protocol) {
 		var ret string
 		return ret
 	}
@@ -251,15 +251,15 @@ func (o *LocationDTO) GetProtocol() string {
 // GetProtocolOk returns a tuple with the Protocol field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetProtocolOk() (*string, bool) {
-	if o == nil || o.Protocol == nil {
-		return nil, false
+	if o == nil || isNil(o.Protocol) {
+    return nil, false
 	}
 	return o.Protocol, true
 }
 
 // HasProtocol returns a boolean if a field has been set.
 func (o *LocationDTO) HasProtocol() bool {
-	if o != nil && o.Protocol != nil {
+	if o != nil && !isNil(o.Protocol) {
 		return true
 	}
 
@@ -273,7 +273,7 @@ func (o *LocationDTO) SetProtocol(v string) {
 
 // GetUri returns the Uri field value if set, zero value otherwise.
 func (o *LocationDTO) GetUri() string {
-	if o == nil || o.Uri == nil {
+	if o == nil || isNil(o.Uri) {
 		var ret string
 		return ret
 	}
@@ -283,15 +283,15 @@ func (o *LocationDTO) GetUri() string {
 // GetUriOk returns a tuple with the Uri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *LocationDTO) GetUriOk() (*string, bool) {
-	if o == nil || o.Uri == nil {
-		return nil, false
+	if o == nil || isNil(o.Uri) {
+    return nil, false
 	}
 	return o.Uri, true
 }
 
 // HasUri returns a boolean if a field has been set.
 func (o *LocationDTO) HasUri() bool {
-	if o != nil && o.Uri != nil {
+	if o != nil && !isNil(o.Uri) {
 		return true
 	}
 
@@ -305,28 +305,28 @@ func (o *LocationDTO) SetUri(v string) {
 
 func (o LocationDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Context != nil {
+	if !isNil(o.Context) {
 		toSerialize["context"] = o.Context
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Host != nil {
+	if !isNil(o.Host) {
 		toSerialize["host"] = o.Host
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.LocationAsString != nil {
+	if !isNil(o.LocationAsString) {
 		toSerialize["locationAsString"] = o.LocationAsString
 	}
-	if o.Port != nil {
+	if !isNil(o.Port) {
 		toSerialize["port"] = o.Port
 	}
-	if o.Protocol != nil {
+	if !isNil(o.Protocol) {
 		toSerialize["protocol"] = o.Protocol
 	}
-	if o.Uri != nil {
+	if !isNil(o.Uri) {
 		toSerialize["uri"] = o.Uri
 	}
 

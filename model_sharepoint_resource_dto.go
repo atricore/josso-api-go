@@ -58,7 +58,7 @@ func NewSharepointResourceDTOWithDefaults() *SharepointResourceDTO {
 
 // GetActivation returns the Activation field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetActivation() ActivationDTO {
-	if o == nil || o.Activation == nil {
+	if o == nil || isNil(o.Activation) {
 		var ret ActivationDTO
 		return ret
 	}
@@ -68,15 +68,15 @@ func (o *SharepointResourceDTO) GetActivation() ActivationDTO {
 // GetActivationOk returns a tuple with the Activation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetActivationOk() (*ActivationDTO, bool) {
-	if o == nil || o.Activation == nil {
-		return nil, false
+	if o == nil || isNil(o.Activation) {
+    return nil, false
 	}
 	return o.Activation, true
 }
 
 // HasActivation returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasActivation() bool {
-	if o != nil && o.Activation != nil {
+	if o != nil && !isNil(o.Activation) {
 		return true
 	}
 
@@ -90,7 +90,7 @@ func (o *SharepointResourceDTO) SetActivation(v ActivationDTO) {
 
 // GetDefaultResource returns the DefaultResource field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetDefaultResource() string {
-	if o == nil || o.DefaultResource == nil {
+	if o == nil || isNil(o.DefaultResource) {
 		var ret string
 		return ret
 	}
@@ -100,15 +100,15 @@ func (o *SharepointResourceDTO) GetDefaultResource() string {
 // GetDefaultResourceOk returns a tuple with the DefaultResource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetDefaultResourceOk() (*string, bool) {
-	if o == nil || o.DefaultResource == nil {
-		return nil, false
+	if o == nil || isNil(o.DefaultResource) {
+    return nil, false
 	}
 	return o.DefaultResource, true
 }
 
 // HasDefaultResource returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasDefaultResource() bool {
-	if o != nil && o.DefaultResource != nil {
+	if o != nil && !isNil(o.DefaultResource) {
 		return true
 	}
 
@@ -122,7 +122,7 @@ func (o *SharepointResourceDTO) SetDefaultResource(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -132,15 +132,15 @@ func (o *SharepointResourceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -154,7 +154,7 @@ func (o *SharepointResourceDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -164,15 +164,15 @@ func (o *SharepointResourceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -186,7 +186,7 @@ func (o *SharepointResourceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -196,15 +196,15 @@ func (o *SharepointResourceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -218,7 +218,7 @@ func (o *SharepointResourceDTO) SetId(v int64) {
 
 // GetIgnoredWebResources returns the IgnoredWebResources field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetIgnoredWebResources() []string {
-	if o == nil || o.IgnoredWebResources == nil {
+	if o == nil || isNil(o.IgnoredWebResources) {
 		var ret []string
 		return ret
 	}
@@ -228,15 +228,15 @@ func (o *SharepointResourceDTO) GetIgnoredWebResources() []string {
 // GetIgnoredWebResourcesOk returns a tuple with the IgnoredWebResources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetIgnoredWebResourcesOk() ([]string, bool) {
-	if o == nil || o.IgnoredWebResources == nil {
-		return nil, false
+	if o == nil || isNil(o.IgnoredWebResources) {
+    return nil, false
 	}
 	return o.IgnoredWebResources, true
 }
 
 // HasIgnoredWebResources returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasIgnoredWebResources() bool {
-	if o != nil && o.IgnoredWebResources != nil {
+	if o != nil && !isNil(o.IgnoredWebResources) {
 		return true
 	}
 
@@ -250,7 +250,7 @@ func (o *SharepointResourceDTO) SetIgnoredWebResources(v []string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -260,15 +260,15 @@ func (o *SharepointResourceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -282,7 +282,7 @@ func (o *SharepointResourceDTO) SetName(v string) {
 
 // GetPartnerAppLocation returns the PartnerAppLocation field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetPartnerAppLocation() LocationDTO {
-	if o == nil || o.PartnerAppLocation == nil {
+	if o == nil || isNil(o.PartnerAppLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -292,15 +292,15 @@ func (o *SharepointResourceDTO) GetPartnerAppLocation() LocationDTO {
 // GetPartnerAppLocationOk returns a tuple with the PartnerAppLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetPartnerAppLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.PartnerAppLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.PartnerAppLocation) {
+    return nil, false
 	}
 	return o.PartnerAppLocation, true
 }
 
 // HasPartnerAppLocation returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasPartnerAppLocation() bool {
-	if o != nil && o.PartnerAppLocation != nil {
+	if o != nil && !isNil(o.PartnerAppLocation) {
 		return true
 	}
 
@@ -314,7 +314,7 @@ func (o *SharepointResourceDTO) SetPartnerAppLocation(v LocationDTO) {
 
 // GetRelayingPartyLocation returns the RelayingPartyLocation field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetRelayingPartyLocation() LocationDTO {
-	if o == nil || o.RelayingPartyLocation == nil {
+	if o == nil || isNil(o.RelayingPartyLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -324,15 +324,15 @@ func (o *SharepointResourceDTO) GetRelayingPartyLocation() LocationDTO {
 // GetRelayingPartyLocationOk returns a tuple with the RelayingPartyLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetRelayingPartyLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.RelayingPartyLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.RelayingPartyLocation) {
+    return nil, false
 	}
 	return o.RelayingPartyLocation, true
 }
 
 // HasRelayingPartyLocation returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasRelayingPartyLocation() bool {
-	if o != nil && o.RelayingPartyLocation != nil {
+	if o != nil && !isNil(o.RelayingPartyLocation) {
 		return true
 	}
 
@@ -346,7 +346,7 @@ func (o *SharepointResourceDTO) SetRelayingPartyLocation(v LocationDTO) {
 
 // GetServiceConnection returns the ServiceConnection field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetServiceConnection() ServiceConnectionDTO {
-	if o == nil || o.ServiceConnection == nil {
+	if o == nil || isNil(o.ServiceConnection) {
 		var ret ServiceConnectionDTO
 		return ret
 	}
@@ -356,15 +356,15 @@ func (o *SharepointResourceDTO) GetServiceConnection() ServiceConnectionDTO {
 // GetServiceConnectionOk returns a tuple with the ServiceConnection field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetServiceConnectionOk() (*ServiceConnectionDTO, bool) {
-	if o == nil || o.ServiceConnection == nil {
-		return nil, false
+	if o == nil || isNil(o.ServiceConnection) {
+    return nil, false
 	}
 	return o.ServiceConnection, true
 }
 
 // HasServiceConnection returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasServiceConnection() bool {
-	if o != nil && o.ServiceConnection != nil {
+	if o != nil && !isNil(o.ServiceConnection) {
 		return true
 	}
 
@@ -378,7 +378,7 @@ func (o *SharepointResourceDTO) SetServiceConnection(v ServiceConnectionDTO) {
 
 // GetSloLocation returns the SloLocation field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetSloLocation() LocationDTO {
-	if o == nil || o.SloLocation == nil {
+	if o == nil || isNil(o.SloLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -388,15 +388,15 @@ func (o *SharepointResourceDTO) GetSloLocation() LocationDTO {
 // GetSloLocationOk returns a tuple with the SloLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetSloLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.SloLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.SloLocation) {
+    return nil, false
 	}
 	return o.SloLocation, true
 }
 
 // HasSloLocation returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasSloLocation() bool {
-	if o != nil && o.SloLocation != nil {
+	if o != nil && !isNil(o.SloLocation) {
 		return true
 	}
 
@@ -410,7 +410,7 @@ func (o *SharepointResourceDTO) SetSloLocation(v LocationDTO) {
 
 // GetSloLocationEnabled returns the SloLocationEnabled field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetSloLocationEnabled() bool {
-	if o == nil || o.SloLocationEnabled == nil {
+	if o == nil || isNil(o.SloLocationEnabled) {
 		var ret bool
 		return ret
 	}
@@ -420,15 +420,15 @@ func (o *SharepointResourceDTO) GetSloLocationEnabled() bool {
 // GetSloLocationEnabledOk returns a tuple with the SloLocationEnabled field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetSloLocationEnabledOk() (*bool, bool) {
-	if o == nil || o.SloLocationEnabled == nil {
-		return nil, false
+	if o == nil || isNil(o.SloLocationEnabled) {
+    return nil, false
 	}
 	return o.SloLocationEnabled, true
 }
 
 // HasSloLocationEnabled returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasSloLocationEnabled() bool {
-	if o != nil && o.SloLocationEnabled != nil {
+	if o != nil && !isNil(o.SloLocationEnabled) {
 		return true
 	}
 
@@ -442,7 +442,7 @@ func (o *SharepointResourceDTO) SetSloLocationEnabled(v bool) {
 
 // GetStsEncryptingCertSubject returns the StsEncryptingCertSubject field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetStsEncryptingCertSubject() string {
-	if o == nil || o.StsEncryptingCertSubject == nil {
+	if o == nil || isNil(o.StsEncryptingCertSubject) {
 		var ret string
 		return ret
 	}
@@ -452,15 +452,15 @@ func (o *SharepointResourceDTO) GetStsEncryptingCertSubject() string {
 // GetStsEncryptingCertSubjectOk returns a tuple with the StsEncryptingCertSubject field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetStsEncryptingCertSubjectOk() (*string, bool) {
-	if o == nil || o.StsEncryptingCertSubject == nil {
-		return nil, false
+	if o == nil || isNil(o.StsEncryptingCertSubject) {
+    return nil, false
 	}
 	return o.StsEncryptingCertSubject, true
 }
 
 // HasStsEncryptingCertSubject returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasStsEncryptingCertSubject() bool {
-	if o != nil && o.StsEncryptingCertSubject != nil {
+	if o != nil && !isNil(o.StsEncryptingCertSubject) {
 		return true
 	}
 
@@ -474,7 +474,7 @@ func (o *SharepointResourceDTO) SetStsEncryptingCertSubject(v string) {
 
 // GetStsMetadata returns the StsMetadata field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetStsMetadata() ResourceDTO {
-	if o == nil || o.StsMetadata == nil {
+	if o == nil || isNil(o.StsMetadata) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -484,15 +484,15 @@ func (o *SharepointResourceDTO) GetStsMetadata() ResourceDTO {
 // GetStsMetadataOk returns a tuple with the StsMetadata field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetStsMetadataOk() (*ResourceDTO, bool) {
-	if o == nil || o.StsMetadata == nil {
-		return nil, false
+	if o == nil || isNil(o.StsMetadata) {
+    return nil, false
 	}
 	return o.StsMetadata, true
 }
 
 // HasStsMetadata returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasStsMetadata() bool {
-	if o != nil && o.StsMetadata != nil {
+	if o != nil && !isNil(o.StsMetadata) {
 		return true
 	}
 
@@ -506,7 +506,7 @@ func (o *SharepointResourceDTO) SetStsMetadata(v ResourceDTO) {
 
 // GetStsSigningCertSubject returns the StsSigningCertSubject field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetStsSigningCertSubject() string {
-	if o == nil || o.StsSigningCertSubject == nil {
+	if o == nil || isNil(o.StsSigningCertSubject) {
 		var ret string
 		return ret
 	}
@@ -516,15 +516,15 @@ func (o *SharepointResourceDTO) GetStsSigningCertSubject() string {
 // GetStsSigningCertSubjectOk returns a tuple with the StsSigningCertSubject field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetStsSigningCertSubjectOk() (*string, bool) {
-	if o == nil || o.StsSigningCertSubject == nil {
-		return nil, false
+	if o == nil || isNil(o.StsSigningCertSubject) {
+    return nil, false
 	}
 	return o.StsSigningCertSubject, true
 }
 
 // HasStsSigningCertSubject returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasStsSigningCertSubject() bool {
-	if o != nil && o.StsSigningCertSubject != nil {
+	if o != nil && !isNil(o.StsSigningCertSubject) {
 		return true
 	}
 
@@ -538,7 +538,7 @@ func (o *SharepointResourceDTO) SetStsSigningCertSubject(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -548,15 +548,15 @@ func (o *SharepointResourceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -570,7 +570,7 @@ func (o *SharepointResourceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *SharepointResourceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -580,15 +580,15 @@ func (o *SharepointResourceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SharepointResourceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *SharepointResourceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -602,55 +602,55 @@ func (o *SharepointResourceDTO) SetY(v float64) {
 
 func (o SharepointResourceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Activation != nil {
+	if !isNil(o.Activation) {
 		toSerialize["activation"] = o.Activation
 	}
-	if o.DefaultResource != nil {
+	if !isNil(o.DefaultResource) {
 		toSerialize["defaultResource"] = o.DefaultResource
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IgnoredWebResources != nil {
+	if !isNil(o.IgnoredWebResources) {
 		toSerialize["ignoredWebResources"] = o.IgnoredWebResources
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.PartnerAppLocation != nil {
+	if !isNil(o.PartnerAppLocation) {
 		toSerialize["partnerAppLocation"] = o.PartnerAppLocation
 	}
-	if o.RelayingPartyLocation != nil {
+	if !isNil(o.RelayingPartyLocation) {
 		toSerialize["relayingPartyLocation"] = o.RelayingPartyLocation
 	}
-	if o.ServiceConnection != nil {
+	if !isNil(o.ServiceConnection) {
 		toSerialize["serviceConnection"] = o.ServiceConnection
 	}
-	if o.SloLocation != nil {
+	if !isNil(o.SloLocation) {
 		toSerialize["sloLocation"] = o.SloLocation
 	}
-	if o.SloLocationEnabled != nil {
+	if !isNil(o.SloLocationEnabled) {
 		toSerialize["sloLocationEnabled"] = o.SloLocationEnabled
 	}
-	if o.StsEncryptingCertSubject != nil {
+	if !isNil(o.StsEncryptingCertSubject) {
 		toSerialize["stsEncryptingCertSubject"] = o.StsEncryptingCertSubject
 	}
-	if o.StsMetadata != nil {
+	if !isNil(o.StsMetadata) {
 		toSerialize["stsMetadata"] = o.StsMetadata
 	}
-	if o.StsSigningCertSubject != nil {
+	if !isNil(o.StsSigningCertSubject) {
 		toSerialize["stsSigningCertSubject"] = o.StsSigningCertSubject
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

@@ -50,7 +50,7 @@ func NewFederatedConnectionDTOWithDefaults() *FederatedConnectionDTO {
 
 // GetChannelA returns the ChannelA field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetChannelA() FederatedChannelDTO {
-	if o == nil || o.ChannelA == nil {
+	if o == nil || isNil(o.ChannelA) {
 		var ret FederatedChannelDTO
 		return ret
 	}
@@ -60,15 +60,15 @@ func (o *FederatedConnectionDTO) GetChannelA() FederatedChannelDTO {
 // GetChannelAOk returns a tuple with the ChannelA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetChannelAOk() (*FederatedChannelDTO, bool) {
-	if o == nil || o.ChannelA == nil {
-		return nil, false
+	if o == nil || isNil(o.ChannelA) {
+    return nil, false
 	}
 	return o.ChannelA, true
 }
 
 // HasChannelA returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasChannelA() bool {
-	if o != nil && o.ChannelA != nil {
+	if o != nil && !isNil(o.ChannelA) {
 		return true
 	}
 
@@ -82,7 +82,7 @@ func (o *FederatedConnectionDTO) SetChannelA(v FederatedChannelDTO) {
 
 // GetChannelB returns the ChannelB field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetChannelB() FederatedChannelDTO {
-	if o == nil || o.ChannelB == nil {
+	if o == nil || isNil(o.ChannelB) {
 		var ret FederatedChannelDTO
 		return ret
 	}
@@ -92,15 +92,15 @@ func (o *FederatedConnectionDTO) GetChannelB() FederatedChannelDTO {
 // GetChannelBOk returns a tuple with the ChannelB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetChannelBOk() (*FederatedChannelDTO, bool) {
-	if o == nil || o.ChannelB == nil {
-		return nil, false
+	if o == nil || isNil(o.ChannelB) {
+    return nil, false
 	}
 	return o.ChannelB, true
 }
 
 // HasChannelB returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasChannelB() bool {
-	if o != nil && o.ChannelB != nil {
+	if o != nil && !isNil(o.ChannelB) {
 		return true
 	}
 
@@ -114,7 +114,7 @@ func (o *FederatedConnectionDTO) SetChannelB(v FederatedChannelDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -124,15 +124,15 @@ func (o *FederatedConnectionDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -146,7 +146,7 @@ func (o *FederatedConnectionDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -156,15 +156,15 @@ func (o *FederatedConnectionDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -178,7 +178,7 @@ func (o *FederatedConnectionDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -188,15 +188,15 @@ func (o *FederatedConnectionDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -210,7 +210,7 @@ func (o *FederatedConnectionDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -220,15 +220,15 @@ func (o *FederatedConnectionDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -242,7 +242,7 @@ func (o *FederatedConnectionDTO) SetName(v string) {
 
 // GetRoleA returns the RoleA field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetRoleA() FederatedProviderDTO {
-	if o == nil || o.RoleA == nil {
+	if o == nil || isNil(o.RoleA) {
 		var ret FederatedProviderDTO
 		return ret
 	}
@@ -252,15 +252,15 @@ func (o *FederatedConnectionDTO) GetRoleA() FederatedProviderDTO {
 // GetRoleAOk returns a tuple with the RoleA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetRoleAOk() (*FederatedProviderDTO, bool) {
-	if o == nil || o.RoleA == nil {
-		return nil, false
+	if o == nil || isNil(o.RoleA) {
+    return nil, false
 	}
 	return o.RoleA, true
 }
 
 // HasRoleA returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasRoleA() bool {
-	if o != nil && o.RoleA != nil {
+	if o != nil && !isNil(o.RoleA) {
 		return true
 	}
 
@@ -274,7 +274,7 @@ func (o *FederatedConnectionDTO) SetRoleA(v FederatedProviderDTO) {
 
 // GetRoleB returns the RoleB field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetRoleB() FederatedProviderDTO {
-	if o == nil || o.RoleB == nil {
+	if o == nil || isNil(o.RoleB) {
 		var ret FederatedProviderDTO
 		return ret
 	}
@@ -284,15 +284,15 @@ func (o *FederatedConnectionDTO) GetRoleB() FederatedProviderDTO {
 // GetRoleBOk returns a tuple with the RoleB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetRoleBOk() (*FederatedProviderDTO, bool) {
-	if o == nil || o.RoleB == nil {
-		return nil, false
+	if o == nil || isNil(o.RoleB) {
+    return nil, false
 	}
 	return o.RoleB, true
 }
 
 // HasRoleB returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasRoleB() bool {
-	if o != nil && o.RoleB != nil {
+	if o != nil && !isNil(o.RoleB) {
 		return true
 	}
 
@@ -306,7 +306,7 @@ func (o *FederatedConnectionDTO) SetRoleB(v FederatedProviderDTO) {
 
 // GetWaypoints returns the Waypoints field value if set, zero value otherwise.
 func (o *FederatedConnectionDTO) GetWaypoints() []PointDTO {
-	if o == nil || o.Waypoints == nil {
+	if o == nil || isNil(o.Waypoints) {
 		var ret []PointDTO
 		return ret
 	}
@@ -316,15 +316,15 @@ func (o *FederatedConnectionDTO) GetWaypoints() []PointDTO {
 // GetWaypointsOk returns a tuple with the Waypoints field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedConnectionDTO) GetWaypointsOk() ([]PointDTO, bool) {
-	if o == nil || o.Waypoints == nil {
-		return nil, false
+	if o == nil || isNil(o.Waypoints) {
+    return nil, false
 	}
 	return o.Waypoints, true
 }
 
 // HasWaypoints returns a boolean if a field has been set.
 func (o *FederatedConnectionDTO) HasWaypoints() bool {
-	if o != nil && o.Waypoints != nil {
+	if o != nil && !isNil(o.Waypoints) {
 		return true
 	}
 
@@ -338,31 +338,31 @@ func (o *FederatedConnectionDTO) SetWaypoints(v []PointDTO) {
 
 func (o FederatedConnectionDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ChannelA != nil {
+	if !isNil(o.ChannelA) {
 		toSerialize["channelA"] = o.ChannelA
 	}
-	if o.ChannelB != nil {
+	if !isNil(o.ChannelB) {
 		toSerialize["channelB"] = o.ChannelB
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.RoleA != nil {
+	if !isNil(o.RoleA) {
 		toSerialize["roleA"] = o.RoleA
 	}
-	if o.RoleB != nil {
+	if !isNil(o.RoleB) {
 		toSerialize["roleB"] = o.RoleB
 	}
-	if o.Waypoints != nil {
+	if !isNil(o.Waypoints) {
 		toSerialize["waypoints"] = o.Waypoints
 	}
 

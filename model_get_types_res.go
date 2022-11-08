@@ -49,7 +49,7 @@ func NewGetTypesResWithDefaults() *GetTypesRes {
 
 // GetAttributeMapperProfileDTO returns the AttributeMapperProfileDTO field value if set, zero value otherwise.
 func (o *GetTypesRes) GetAttributeMapperProfileDTO() AttributeMapperProfileDTO {
-	if o == nil || o.AttributeMapperProfileDTO == nil {
+	if o == nil || isNil(o.AttributeMapperProfileDTO) {
 		var ret AttributeMapperProfileDTO
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *GetTypesRes) GetAttributeMapperProfileDTO() AttributeMapperProfileDTO {
 // GetAttributeMapperProfileDTOOk returns a tuple with the AttributeMapperProfileDTO field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetAttributeMapperProfileDTOOk() (*AttributeMapperProfileDTO, bool) {
-	if o == nil || o.AttributeMapperProfileDTO == nil {
-		return nil, false
+	if o == nil || isNil(o.AttributeMapperProfileDTO) {
+    return nil, false
 	}
 	return o.AttributeMapperProfileDTO, true
 }
 
 // HasAttributeMapperProfileDTO returns a boolean if a field has been set.
 func (o *GetTypesRes) HasAttributeMapperProfileDTO() bool {
-	if o != nil && o.AttributeMapperProfileDTO != nil {
+	if o != nil && !isNil(o.AttributeMapperProfileDTO) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *GetTypesRes) SetAttributeMapperProfileDTO(v AttributeMapperProfileDTO) 
 
 // GetBasicAuthnMechanism returns the BasicAuthnMechanism field value if set, zero value otherwise.
 func (o *GetTypesRes) GetBasicAuthnMechanism() BasicAuthenticationDTO {
-	if o == nil || o.BasicAuthnMechanism == nil {
+	if o == nil || isNil(o.BasicAuthnMechanism) {
 		var ret BasicAuthenticationDTO
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *GetTypesRes) GetBasicAuthnMechanism() BasicAuthenticationDTO {
 // GetBasicAuthnMechanismOk returns a tuple with the BasicAuthnMechanism field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetBasicAuthnMechanismOk() (*BasicAuthenticationDTO, bool) {
-	if o == nil || o.BasicAuthnMechanism == nil {
-		return nil, false
+	if o == nil || isNil(o.BasicAuthnMechanism) {
+    return nil, false
 	}
 	return o.BasicAuthnMechanism, true
 }
 
 // HasBasicAuthnMechanism returns a boolean if a field has been set.
 func (o *GetTypesRes) HasBasicAuthnMechanism() bool {
-	if o != nil && o.BasicAuthnMechanism != nil {
+	if o != nil && !isNil(o.BasicAuthnMechanism) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *GetTypesRes) SetBasicAuthnMechanism(v BasicAuthenticationDTO) {
 
 // GetBindAuthn returns the BindAuthn field value if set, zero value otherwise.
 func (o *GetTypesRes) GetBindAuthn() BindAuthenticationDTO {
-	if o == nil || o.BindAuthn == nil {
+	if o == nil || isNil(o.BindAuthn) {
 		var ret BindAuthenticationDTO
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *GetTypesRes) GetBindAuthn() BindAuthenticationDTO {
 // GetBindAuthnOk returns a tuple with the BindAuthn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetBindAuthnOk() (*BindAuthenticationDTO, bool) {
-	if o == nil || o.BindAuthn == nil {
-		return nil, false
+	if o == nil || isNil(o.BindAuthn) {
+    return nil, false
 	}
 	return o.BindAuthn, true
 }
 
 // HasBindAuthn returns a boolean if a field has been set.
 func (o *GetTypesRes) HasBindAuthn() bool {
-	if o != nil && o.BindAuthn != nil {
+	if o != nil && !isNil(o.BindAuthn) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *GetTypesRes) SetBindAuthn(v BindAuthenticationDTO) {
 
 // GetBuiltInAttributeProfile returns the BuiltInAttributeProfile field value if set, zero value otherwise.
 func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO {
-	if o == nil || o.BuiltInAttributeProfile == nil {
+	if o == nil || isNil(o.BuiltInAttributeProfile) {
 		var ret BuiltInAttributeProfileDTO
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *GetTypesRes) GetBuiltInAttributeProfile() BuiltInAttributeProfileDTO {
 // GetBuiltInAttributeProfileOk returns a tuple with the BuiltInAttributeProfile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetBuiltInAttributeProfileOk() (*BuiltInAttributeProfileDTO, bool) {
-	if o == nil || o.BuiltInAttributeProfile == nil {
-		return nil, false
+	if o == nil || isNil(o.BuiltInAttributeProfile) {
+    return nil, false
 	}
 	return o.BuiltInAttributeProfile, true
 }
 
 // HasBuiltInAttributeProfile returns a boolean if a field has been set.
 func (o *GetTypesRes) HasBuiltInAttributeProfile() bool {
-	if o != nil && o.BuiltInAttributeProfile != nil {
+	if o != nil && !isNil(o.BuiltInAttributeProfile) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *GetTypesRes) SetBuiltInAttributeProfile(v BuiltInAttributeProfileDTO) {
 
 // GetDirectoryAuthnSvc returns the DirectoryAuthnSvc field value if set, zero value otherwise.
 func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO {
-	if o == nil || o.DirectoryAuthnSvc == nil {
+	if o == nil || isNil(o.DirectoryAuthnSvc) {
 		var ret DirectoryAuthenticationServiceDTO
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *GetTypesRes) GetDirectoryAuthnSvc() DirectoryAuthenticationServiceDTO {
 // GetDirectoryAuthnSvcOk returns a tuple with the DirectoryAuthnSvc field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetDirectoryAuthnSvcOk() (*DirectoryAuthenticationServiceDTO, bool) {
-	if o == nil || o.DirectoryAuthnSvc == nil {
-		return nil, false
+	if o == nil || isNil(o.DirectoryAuthnSvc) {
+    return nil, false
 	}
 	return o.DirectoryAuthnSvc, true
 }
 
 // HasDirectoryAuthnSvc returns a boolean if a field has been set.
 func (o *GetTypesRes) HasDirectoryAuthnSvc() bool {
-	if o != nil && o.DirectoryAuthnSvc != nil {
+	if o != nil && !isNil(o.DirectoryAuthnSvc) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *GetTypesRes) SetDirectoryAuthnSvc(v DirectoryAuthenticationServiceDTO) 
 
 // GetIdpc returns the Idpc field value if set, zero value otherwise.
 func (o *GetTypesRes) GetIdpc() IdentityProviderChannelDTO {
-	if o == nil || o.Idpc == nil {
+	if o == nil || isNil(o.Idpc) {
 		var ret IdentityProviderChannelDTO
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *GetTypesRes) GetIdpc() IdentityProviderChannelDTO {
 // GetIdpcOk returns a tuple with the Idpc field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetIdpcOk() (*IdentityProviderChannelDTO, bool) {
-	if o == nil || o.Idpc == nil {
-		return nil, false
+	if o == nil || isNil(o.Idpc) {
+    return nil, false
 	}
 	return o.Idpc, true
 }
 
 // HasIdpc returns a boolean if a field has been set.
 func (o *GetTypesRes) HasIdpc() bool {
-	if o != nil && o.Idpc != nil {
+	if o != nil && !isNil(o.Idpc) {
 		return true
 	}
 
@@ -241,7 +241,7 @@ func (o *GetTypesRes) SetIdpc(v IdentityProviderChannelDTO) {
 
 // GetSpc returns the Spc field value if set, zero value otherwise.
 func (o *GetTypesRes) GetSpc() InternalSaml2ServiceProviderChannelDTO {
-	if o == nil || o.Spc == nil {
+	if o == nil || isNil(o.Spc) {
 		var ret InternalSaml2ServiceProviderChannelDTO
 		return ret
 	}
@@ -251,15 +251,15 @@ func (o *GetTypesRes) GetSpc() InternalSaml2ServiceProviderChannelDTO {
 // GetSpcOk returns a tuple with the Spc field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetSpcOk() (*InternalSaml2ServiceProviderChannelDTO, bool) {
-	if o == nil || o.Spc == nil {
-		return nil, false
+	if o == nil || isNil(o.Spc) {
+    return nil, false
 	}
 	return o.Spc, true
 }
 
 // HasSpc returns a boolean if a field has been set.
 func (o *GetTypesRes) HasSpc() bool {
-	if o != nil && o.Spc != nil {
+	if o != nil && !isNil(o.Spc) {
 		return true
 	}
 
@@ -273,7 +273,7 @@ func (o *GetTypesRes) SetSpc(v InternalSaml2ServiceProviderChannelDTO) {
 
 // GetTotpAuthnSvc returns the TotpAuthnSvc field value if set, zero value otherwise.
 func (o *GetTypesRes) GetTotpAuthnSvc() TOTPAuthenticationServiceDTO {
-	if o == nil || o.TotpAuthnSvc == nil {
+	if o == nil || isNil(o.TotpAuthnSvc) {
 		var ret TOTPAuthenticationServiceDTO
 		return ret
 	}
@@ -283,15 +283,15 @@ func (o *GetTypesRes) GetTotpAuthnSvc() TOTPAuthenticationServiceDTO {
 // GetTotpAuthnSvcOk returns a tuple with the TotpAuthnSvc field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTypesRes) GetTotpAuthnSvcOk() (*TOTPAuthenticationServiceDTO, bool) {
-	if o == nil || o.TotpAuthnSvc == nil {
-		return nil, false
+	if o == nil || isNil(o.TotpAuthnSvc) {
+    return nil, false
 	}
 	return o.TotpAuthnSvc, true
 }
 
 // HasTotpAuthnSvc returns a boolean if a field has been set.
 func (o *GetTypesRes) HasTotpAuthnSvc() bool {
-	if o != nil && o.TotpAuthnSvc != nil {
+	if o != nil && !isNil(o.TotpAuthnSvc) {
 		return true
 	}
 
@@ -305,28 +305,28 @@ func (o *GetTypesRes) SetTotpAuthnSvc(v TOTPAuthenticationServiceDTO) {
 
 func (o GetTypesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AttributeMapperProfileDTO != nil {
+	if !isNil(o.AttributeMapperProfileDTO) {
 		toSerialize["attributeMapperProfileDTO"] = o.AttributeMapperProfileDTO
 	}
-	if o.BasicAuthnMechanism != nil {
+	if !isNil(o.BasicAuthnMechanism) {
 		toSerialize["basicAuthnMechanism"] = o.BasicAuthnMechanism
 	}
-	if o.BindAuthn != nil {
+	if !isNil(o.BindAuthn) {
 		toSerialize["bindAuthn"] = o.BindAuthn
 	}
-	if o.BuiltInAttributeProfile != nil {
+	if !isNil(o.BuiltInAttributeProfile) {
 		toSerialize["builtInAttributeProfile"] = o.BuiltInAttributeProfile
 	}
-	if o.DirectoryAuthnSvc != nil {
+	if !isNil(o.DirectoryAuthnSvc) {
 		toSerialize["directoryAuthnSvc"] = o.DirectoryAuthnSvc
 	}
-	if o.Idpc != nil {
+	if !isNil(o.Idpc) {
 		toSerialize["idpc"] = o.Idpc
 	}
-	if o.Spc != nil {
+	if !isNil(o.Spc) {
 		toSerialize["spc"] = o.Spc
 	}
-	if o.TotpAuthnSvc != nil {
+	if !isNil(o.TotpAuthnSvc) {
 		toSerialize["totpAuthnSvc"] = o.TotpAuthnSvc
 	}
 

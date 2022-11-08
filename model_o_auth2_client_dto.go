@@ -44,7 +44,7 @@ func NewOAuth2ClientDTOWithDefaults() *OAuth2ClientDTO {
 
 // GetBaseURL returns the BaseURL field value if set, zero value otherwise.
 func (o *OAuth2ClientDTO) GetBaseURL() string {
-	if o == nil || o.BaseURL == nil {
+	if o == nil || isNil(o.BaseURL) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *OAuth2ClientDTO) GetBaseURL() string {
 // GetBaseURLOk returns a tuple with the BaseURL field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OAuth2ClientDTO) GetBaseURLOk() (*string, bool) {
-	if o == nil || o.BaseURL == nil {
-		return nil, false
+	if o == nil || isNil(o.BaseURL) {
+    return nil, false
 	}
 	return o.BaseURL, true
 }
 
 // HasBaseURL returns a boolean if a field has been set.
 func (o *OAuth2ClientDTO) HasBaseURL() bool {
-	if o != nil && o.BaseURL != nil {
+	if o != nil && !isNil(o.BaseURL) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *OAuth2ClientDTO) SetBaseURL(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *OAuth2ClientDTO) GetId() string {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *OAuth2ClientDTO) GetId() string {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OAuth2ClientDTO) GetIdOk() (*string, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *OAuth2ClientDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *OAuth2ClientDTO) SetId(v string) {
 
 // GetSecret returns the Secret field value if set, zero value otherwise.
 func (o *OAuth2ClientDTO) GetSecret() string {
-	if o == nil || o.Secret == nil {
+	if o == nil || isNil(o.Secret) {
 		var ret string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *OAuth2ClientDTO) GetSecret() string {
 // GetSecretOk returns a tuple with the Secret field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OAuth2ClientDTO) GetSecretOk() (*string, bool) {
-	if o == nil || o.Secret == nil {
-		return nil, false
+	if o == nil || isNil(o.Secret) {
+    return nil, false
 	}
 	return o.Secret, true
 }
 
 // HasSecret returns a boolean if a field has been set.
 func (o *OAuth2ClientDTO) HasSecret() bool {
-	if o != nil && o.Secret != nil {
+	if o != nil && !isNil(o.Secret) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *OAuth2ClientDTO) SetSecret(v string) {
 
 func (o OAuth2ClientDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BaseURL != nil {
+	if !isNil(o.BaseURL) {
 		toSerialize["baseURL"] = o.BaseURL
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Secret != nil {
+	if !isNil(o.Secret) {
 		toSerialize["secret"] = o.Secret
 	}
 

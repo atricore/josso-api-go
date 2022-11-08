@@ -50,7 +50,7 @@ func NewStoreBrandingReqWithDefaults() *StoreBrandingReq {
 
 // GetBundleArtifact returns the BundleArtifact field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetBundleArtifact() string {
-	if o == nil || o.BundleArtifact == nil {
+	if o == nil || isNil(o.BundleArtifact) {
 		var ret string
 		return ret
 	}
@@ -60,15 +60,15 @@ func (o *StoreBrandingReq) GetBundleArtifact() string {
 // GetBundleArtifactOk returns a tuple with the BundleArtifact field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetBundleArtifactOk() (*string, bool) {
-	if o == nil || o.BundleArtifact == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleArtifact) {
+    return nil, false
 	}
 	return o.BundleArtifact, true
 }
 
 // HasBundleArtifact returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasBundleArtifact() bool {
-	if o != nil && o.BundleArtifact != nil {
+	if o != nil && !isNil(o.BundleArtifact) {
 		return true
 	}
 
@@ -82,7 +82,7 @@ func (o *StoreBrandingReq) SetBundleArtifact(v string) {
 
 // GetBundleGroup returns the BundleGroup field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetBundleGroup() string {
-	if o == nil || o.BundleGroup == nil {
+	if o == nil || isNil(o.BundleGroup) {
 		var ret string
 		return ret
 	}
@@ -92,15 +92,15 @@ func (o *StoreBrandingReq) GetBundleGroup() string {
 // GetBundleGroupOk returns a tuple with the BundleGroup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetBundleGroupOk() (*string, bool) {
-	if o == nil || o.BundleGroup == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleGroup) {
+    return nil, false
 	}
 	return o.BundleGroup, true
 }
 
 // HasBundleGroup returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasBundleGroup() bool {
-	if o != nil && o.BundleGroup != nil {
+	if o != nil && !isNil(o.BundleGroup) {
 		return true
 	}
 
@@ -114,7 +114,7 @@ func (o *StoreBrandingReq) SetBundleGroup(v string) {
 
 // GetBundleVersion returns the BundleVersion field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetBundleVersion() string {
-	if o == nil || o.BundleVersion == nil {
+	if o == nil || isNil(o.BundleVersion) {
 		var ret string
 		return ret
 	}
@@ -124,15 +124,15 @@ func (o *StoreBrandingReq) GetBundleVersion() string {
 // GetBundleVersionOk returns a tuple with the BundleVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetBundleVersionOk() (*string, bool) {
-	if o == nil || o.BundleVersion == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleVersion) {
+    return nil, false
 	}
 	return o.BundleVersion, true
 }
 
 // HasBundleVersion returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasBundleVersion() bool {
-	if o != nil && o.BundleVersion != nil {
+	if o != nil && !isNil(o.BundleVersion) {
 		return true
 	}
 
@@ -146,7 +146,7 @@ func (o *StoreBrandingReq) SetBundleVersion(v string) {
 
 // GetCustomOpenIdAppClazz returns the CustomOpenIdAppClazz field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetCustomOpenIdAppClazz() string {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
 		var ret string
 		return ret
 	}
@@ -156,15 +156,15 @@ func (o *StoreBrandingReq) GetCustomOpenIdAppClazz() string {
 // GetCustomOpenIdAppClazzOk returns a tuple with the CustomOpenIdAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetCustomOpenIdAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
+    return nil, false
 	}
 	return o.CustomOpenIdAppClazz, true
 }
 
 // HasCustomOpenIdAppClazz returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasCustomOpenIdAppClazz() bool {
-	if o != nil && o.CustomOpenIdAppClazz != nil {
+	if o != nil && !isNil(o.CustomOpenIdAppClazz) {
 		return true
 	}
 
@@ -178,7 +178,7 @@ func (o *StoreBrandingReq) SetCustomOpenIdAppClazz(v string) {
 
 // GetCustomSsoAppClazz returns the CustomSsoAppClazz field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetCustomSsoAppClazz() string {
-	if o == nil || o.CustomSsoAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoAppClazz) {
 		var ret string
 		return ret
 	}
@@ -188,15 +188,15 @@ func (o *StoreBrandingReq) GetCustomSsoAppClazz() string {
 // GetCustomSsoAppClazzOk returns a tuple with the CustomSsoAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetCustomSsoAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoAppClazz, true
 }
 
 // HasCustomSsoAppClazz returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasCustomSsoAppClazz() bool {
-	if o != nil && o.CustomSsoAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoAppClazz) {
 		return true
 	}
 
@@ -210,7 +210,7 @@ func (o *StoreBrandingReq) SetCustomSsoAppClazz(v string) {
 
 // GetCustomSsoIdPAppClazz returns the CustomSsoIdPAppClazz field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetCustomSsoIdPAppClazz() string {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
 		var ret string
 		return ret
 	}
@@ -220,15 +220,15 @@ func (o *StoreBrandingReq) GetCustomSsoIdPAppClazz() string {
 // GetCustomSsoIdPAppClazzOk returns a tuple with the CustomSsoIdPAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetCustomSsoIdPAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoIdPAppClazz, true
 }
 
 // HasCustomSsoIdPAppClazz returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasCustomSsoIdPAppClazz() bool {
-	if o != nil && o.CustomSsoIdPAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoIdPAppClazz) {
 		return true
 	}
 
@@ -242,7 +242,7 @@ func (o *StoreBrandingReq) SetCustomSsoIdPAppClazz(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -252,15 +252,15 @@ func (o *StoreBrandingReq) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -274,7 +274,7 @@ func (o *StoreBrandingReq) SetDescription(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -284,15 +284,15 @@ func (o *StoreBrandingReq) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -306,7 +306,7 @@ func (o *StoreBrandingReq) SetName(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *StoreBrandingReq) GetResource() string {
-	if o == nil || o.Resource == nil {
+	if o == nil || isNil(o.Resource) {
 		var ret string
 		return ret
 	}
@@ -316,15 +316,15 @@ func (o *StoreBrandingReq) GetResource() string {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingReq) GetResourceOk() (*string, bool) {
-	if o == nil || o.Resource == nil {
-		return nil, false
+	if o == nil || isNil(o.Resource) {
+    return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *StoreBrandingReq) HasResource() bool {
-	if o != nil && o.Resource != nil {
+	if o != nil && !isNil(o.Resource) {
 		return true
 	}
 
@@ -338,31 +338,31 @@ func (o *StoreBrandingReq) SetResource(v string) {
 
 func (o StoreBrandingReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BundleArtifact != nil {
+	if !isNil(o.BundleArtifact) {
 		toSerialize["bundleArtifact"] = o.BundleArtifact
 	}
-	if o.BundleGroup != nil {
+	if !isNil(o.BundleGroup) {
 		toSerialize["bundleGroup"] = o.BundleGroup
 	}
-	if o.BundleVersion != nil {
+	if !isNil(o.BundleVersion) {
 		toSerialize["bundleVersion"] = o.BundleVersion
 	}
-	if o.CustomOpenIdAppClazz != nil {
+	if !isNil(o.CustomOpenIdAppClazz) {
 		toSerialize["customOpenIdAppClazz"] = o.CustomOpenIdAppClazz
 	}
-	if o.CustomSsoAppClazz != nil {
+	if !isNil(o.CustomSsoAppClazz) {
 		toSerialize["customSsoAppClazz"] = o.CustomSsoAppClazz
 	}
-	if o.CustomSsoIdPAppClazz != nil {
+	if !isNil(o.CustomSsoIdPAppClazz) {
 		toSerialize["customSsoIdPAppClazz"] = o.CustomSsoIdPAppClazz
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Resource != nil {
+	if !isNil(o.Resource) {
 		toSerialize["resource"] = o.Resource
 	}
 

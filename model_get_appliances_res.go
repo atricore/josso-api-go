@@ -44,7 +44,7 @@ func NewGetAppliancesResWithDefaults() *GetAppliancesRes {
 
 // GetAppliances returns the Appliances field value if set, zero value otherwise.
 func (o *GetAppliancesRes) GetAppliances() []IdentityApplianceDefinitionDTO {
-	if o == nil || o.Appliances == nil {
+	if o == nil || isNil(o.Appliances) {
 		var ret []IdentityApplianceDefinitionDTO
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetAppliancesRes) GetAppliances() []IdentityApplianceDefinitionDTO {
 // GetAppliancesOk returns a tuple with the Appliances field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAppliancesRes) GetAppliancesOk() ([]IdentityApplianceDefinitionDTO, bool) {
-	if o == nil || o.Appliances == nil {
-		return nil, false
+	if o == nil || isNil(o.Appliances) {
+    return nil, false
 	}
 	return o.Appliances, true
 }
 
 // HasAppliances returns a boolean if a field has been set.
 func (o *GetAppliancesRes) HasAppliances() bool {
-	if o != nil && o.Appliances != nil {
+	if o != nil && !isNil(o.Appliances) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetAppliancesRes) SetAppliances(v []IdentityApplianceDefinitionDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetAppliancesRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetAppliancesRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAppliancesRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetAppliancesRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetAppliancesRes) SetError(v string) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetAppliancesRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetAppliancesRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAppliancesRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetAppliancesRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetAppliancesRes) SetValidationErrors(v []string) {
 
 func (o GetAppliancesRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Appliances != nil {
+	if !isNil(o.Appliances) {
 		toSerialize["appliances"] = o.Appliances
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

@@ -45,7 +45,7 @@ func NewBuiltInAttributeProfileDTOWithDefaults() *BuiltInAttributeProfileDTO {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *BuiltInAttributeProfileDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *BuiltInAttributeProfileDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BuiltInAttributeProfileDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *BuiltInAttributeProfileDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *BuiltInAttributeProfileDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *BuiltInAttributeProfileDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *BuiltInAttributeProfileDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BuiltInAttributeProfileDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *BuiltInAttributeProfileDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *BuiltInAttributeProfileDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *BuiltInAttributeProfileDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *BuiltInAttributeProfileDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BuiltInAttributeProfileDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *BuiltInAttributeProfileDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *BuiltInAttributeProfileDTO) SetName(v string) {
 
 // GetProfileType returns the ProfileType field value if set, zero value otherwise.
 func (o *BuiltInAttributeProfileDTO) GetProfileType() string {
-	if o == nil || o.ProfileType == nil {
+	if o == nil || isNil(o.ProfileType) {
 		var ret string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *BuiltInAttributeProfileDTO) GetProfileType() string {
 // GetProfileTypeOk returns a tuple with the ProfileType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BuiltInAttributeProfileDTO) GetProfileTypeOk() (*string, bool) {
-	if o == nil || o.ProfileType == nil {
-		return nil, false
+	if o == nil || isNil(o.ProfileType) {
+    return nil, false
 	}
 	return o.ProfileType, true
 }
 
 // HasProfileType returns a boolean if a field has been set.
 func (o *BuiltInAttributeProfileDTO) HasProfileType() bool {
-	if o != nil && o.ProfileType != nil {
+	if o != nil && !isNil(o.ProfileType) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *BuiltInAttributeProfileDTO) SetProfileType(v string) {
 
 func (o BuiltInAttributeProfileDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.ProfileType != nil {
+	if !isNil(o.ProfileType) {
 		toSerialize["profileType"] = o.ProfileType
 	}
 

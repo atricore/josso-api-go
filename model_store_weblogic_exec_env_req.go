@@ -43,7 +43,7 @@ func NewStoreWeblogicExecEnvReqWithDefaults() *StoreWeblogicExecEnvReq {
 
 // GetExecEnv returns the ExecEnv field value if set, zero value otherwise.
 func (o *StoreWeblogicExecEnvReq) GetExecEnv() WeblogicExecutionEnvironmentDTO {
-	if o == nil || o.ExecEnv == nil {
+	if o == nil || isNil(o.ExecEnv) {
 		var ret WeblogicExecutionEnvironmentDTO
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreWeblogicExecEnvReq) GetExecEnv() WeblogicExecutionEnvironmentDTO {
 // GetExecEnvOk returns a tuple with the ExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreWeblogicExecEnvReq) GetExecEnvOk() (*WeblogicExecutionEnvironmentDTO, bool) {
-	if o == nil || o.ExecEnv == nil {
-		return nil, false
+	if o == nil || isNil(o.ExecEnv) {
+    return nil, false
 	}
 	return o.ExecEnv, true
 }
 
 // HasExecEnv returns a boolean if a field has been set.
 func (o *StoreWeblogicExecEnvReq) HasExecEnv() bool {
-	if o != nil && o.ExecEnv != nil {
+	if o != nil && !isNil(o.ExecEnv) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreWeblogicExecEnvReq) SetExecEnv(v WeblogicExecutionEnvironmentDTO) 
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreWeblogicExecEnvReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreWeblogicExecEnvReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreWeblogicExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreWeblogicExecEnvReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreWeblogicExecEnvReq) SetIdaName(v string) {
 
 func (o StoreWeblogicExecEnvReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ExecEnv != nil {
+	if !isNil(o.ExecEnv) {
 		toSerialize["execEnv"] = o.ExecEnv
 	}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
 

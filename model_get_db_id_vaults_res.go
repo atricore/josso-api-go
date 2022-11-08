@@ -44,7 +44,7 @@ func NewGetDbIdVaultsResWithDefaults() *GetDbIdVaultsRes {
 
 // GetDbIdVaults returns the DbIdVaults field value if set, zero value otherwise.
 func (o *GetDbIdVaultsRes) GetDbIdVaults() []DbIdentityVaultDTO {
-	if o == nil || o.DbIdVaults == nil {
+	if o == nil || isNil(o.DbIdVaults) {
 		var ret []DbIdentityVaultDTO
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetDbIdVaultsRes) GetDbIdVaults() []DbIdentityVaultDTO {
 // GetDbIdVaultsOk returns a tuple with the DbIdVaults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetDbIdVaultsRes) GetDbIdVaultsOk() ([]DbIdentityVaultDTO, bool) {
-	if o == nil || o.DbIdVaults == nil {
-		return nil, false
+	if o == nil || isNil(o.DbIdVaults) {
+    return nil, false
 	}
 	return o.DbIdVaults, true
 }
 
 // HasDbIdVaults returns a boolean if a field has been set.
 func (o *GetDbIdVaultsRes) HasDbIdVaults() bool {
-	if o != nil && o.DbIdVaults != nil {
+	if o != nil && !isNil(o.DbIdVaults) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetDbIdVaultsRes) SetDbIdVaults(v []DbIdentityVaultDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetDbIdVaultsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetDbIdVaultsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetDbIdVaultsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetDbIdVaultsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetDbIdVaultsRes) SetError(v string) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetDbIdVaultsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetDbIdVaultsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetDbIdVaultsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetDbIdVaultsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetDbIdVaultsRes) SetValidationErrors(v []string) {
 
 func (o GetDbIdVaultsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DbIdVaults != nil {
+	if !isNil(o.DbIdVaults) {
 		toSerialize["dbIdVaults"] = o.DbIdVaults
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

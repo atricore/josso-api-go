@@ -52,7 +52,7 @@ func NewFederatedChannelDTOWithDefaults() *FederatedChannelDTO {
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -62,15 +62,15 @@ func (o *FederatedChannelDTO) GetActiveBindings() []string {
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -84,7 +84,7 @@ func (o *FederatedChannelDTO) SetActiveBindings(v []string) {
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -94,15 +94,15 @@ func (o *FederatedChannelDTO) GetActiveProfiles() []string {
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *FederatedChannelDTO) SetActiveProfiles(v []string) {
 
 // GetConnectionA returns the ConnectionA field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetConnectionA() FederatedConnectionDTO {
-	if o == nil || o.ConnectionA == nil {
+	if o == nil || isNil(o.ConnectionA) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -126,15 +126,15 @@ func (o *FederatedChannelDTO) GetConnectionA() FederatedConnectionDTO {
 // GetConnectionAOk returns a tuple with the ConnectionA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetConnectionAOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionA == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionA) {
+    return nil, false
 	}
 	return o.ConnectionA, true
 }
 
 // HasConnectionA returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasConnectionA() bool {
-	if o != nil && o.ConnectionA != nil {
+	if o != nil && !isNil(o.ConnectionA) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *FederatedChannelDTO) SetConnectionA(v FederatedConnectionDTO) {
 
 // GetConnectionB returns the ConnectionB field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetConnectionB() FederatedConnectionDTO {
-	if o == nil || o.ConnectionB == nil {
+	if o == nil || isNil(o.ConnectionB) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -158,15 +158,15 @@ func (o *FederatedChannelDTO) GetConnectionB() FederatedConnectionDTO {
 // GetConnectionBOk returns a tuple with the ConnectionB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetConnectionBOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionB == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionB) {
+    return nil, false
 	}
 	return o.ConnectionB, true
 }
 
 // HasConnectionB returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasConnectionB() bool {
-	if o != nil && o.ConnectionB != nil {
+	if o != nil && !isNil(o.ConnectionB) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *FederatedChannelDTO) SetConnectionB(v FederatedConnectionDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -190,15 +190,15 @@ func (o *FederatedChannelDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *FederatedChannelDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -222,15 +222,15 @@ func (o *FederatedChannelDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *FederatedChannelDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -254,15 +254,15 @@ func (o *FederatedChannelDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -276,7 +276,7 @@ func (o *FederatedChannelDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -286,15 +286,15 @@ func (o *FederatedChannelDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -308,7 +308,7 @@ func (o *FederatedChannelDTO) SetId(v int64) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -318,15 +318,15 @@ func (o *FederatedChannelDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -340,7 +340,7 @@ func (o *FederatedChannelDTO) SetLocation(v LocationDTO) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -350,15 +350,15 @@ func (o *FederatedChannelDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -372,7 +372,7 @@ func (o *FederatedChannelDTO) SetName(v string) {
 
 // GetOverrideProviderSetup returns the OverrideProviderSetup field value if set, zero value otherwise.
 func (o *FederatedChannelDTO) GetOverrideProviderSetup() bool {
-	if o == nil || o.OverrideProviderSetup == nil {
+	if o == nil || isNil(o.OverrideProviderSetup) {
 		var ret bool
 		return ret
 	}
@@ -382,15 +382,15 @@ func (o *FederatedChannelDTO) GetOverrideProviderSetup() bool {
 // GetOverrideProviderSetupOk returns a tuple with the OverrideProviderSetup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FederatedChannelDTO) GetOverrideProviderSetupOk() (*bool, bool) {
-	if o == nil || o.OverrideProviderSetup == nil {
-		return nil, false
+	if o == nil || isNil(o.OverrideProviderSetup) {
+    return nil, false
 	}
 	return o.OverrideProviderSetup, true
 }
 
 // HasOverrideProviderSetup returns a boolean if a field has been set.
 func (o *FederatedChannelDTO) HasOverrideProviderSetup() bool {
-	if o != nil && o.OverrideProviderSetup != nil {
+	if o != nil && !isNil(o.OverrideProviderSetup) {
 		return true
 	}
 
@@ -404,37 +404,37 @@ func (o *FederatedChannelDTO) SetOverrideProviderSetup(v bool) {
 
 func (o FederatedChannelDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.ConnectionA != nil {
+	if !isNil(o.ConnectionA) {
 		toSerialize["connectionA"] = o.ConnectionA
 	}
-	if o.ConnectionB != nil {
+	if !isNil(o.ConnectionB) {
 		toSerialize["connectionB"] = o.ConnectionB
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.OverrideProviderSetup != nil {
+	if !isNil(o.OverrideProviderSetup) {
 		toSerialize["overrideProviderSetup"] = o.OverrideProviderSetup
 	}
 

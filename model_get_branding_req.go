@@ -42,7 +42,7 @@ func NewGetBrandingReqWithDefaults() *GetBrandingReq {
 
 // GetNameOrId returns the NameOrId field value if set, zero value otherwise.
 func (o *GetBrandingReq) GetNameOrId() string {
-	if o == nil || o.NameOrId == nil {
+	if o == nil || isNil(o.NameOrId) {
 		var ret string
 		return ret
 	}
@@ -52,15 +52,15 @@ func (o *GetBrandingReq) GetNameOrId() string {
 // GetNameOrIdOk returns a tuple with the NameOrId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingReq) GetNameOrIdOk() (*string, bool) {
-	if o == nil || o.NameOrId == nil {
-		return nil, false
+	if o == nil || isNil(o.NameOrId) {
+    return nil, false
 	}
 	return o.NameOrId, true
 }
 
 // HasNameOrId returns a boolean if a field has been set.
 func (o *GetBrandingReq) HasNameOrId() bool {
-	if o != nil && o.NameOrId != nil {
+	if o != nil && !isNil(o.NameOrId) {
 		return true
 	}
 
@@ -74,7 +74,7 @@ func (o *GetBrandingReq) SetNameOrId(v string) {
 
 func (o GetBrandingReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.NameOrId != nil {
+	if !isNil(o.NameOrId) {
 		toSerialize["nameOrId"] = o.NameOrId
 	}
 

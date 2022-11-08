@@ -46,6 +46,7 @@ Method | HTTP request | Description
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
 [**DeleteWeblogicExecEnv**](DefaultApi.md#DeleteWeblogicExecEnv) | **Delete** /iam-deploy/weblogicexecenv | 
+[**ExportExecEnvCfg**](DefaultApi.md#ExportExecEnvCfg) | **Get** /iam-deploy/execenv/cfg | 
 [**GetAllBrandings**](DefaultApi.md#GetAllBrandings) | **Get** /iam-branding/brandings | 
 [**GetAppliance**](DefaultApi.md#GetAppliance) | **Get** /iam-deploy/appliance | 
 [**GetApplianceContainer**](DefaultApi.md#GetApplianceContainer) | **Get** /iam-deploy/appliance-container | 
@@ -2795,6 +2796,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ExportExecEnvCfg
+
+> ExportExecEnvCfgRes ExportExecEnvCfg(ctx).ExportExecEnvCfgReq(exportExecEnvCfgReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    exportExecEnvCfgReq := *openapiclient.NewExportExecEnvCfgReq() // ExportExecEnvCfgReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.ExportExecEnvCfg(context.Background()).ExportExecEnvCfgReq(exportExecEnvCfgReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.ExportExecEnvCfg``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ExportExecEnvCfg`: ExportExecEnvCfgRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.ExportExecEnvCfg`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiExportExecEnvCfgRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportExecEnvCfgReq** | [**ExportExecEnvCfgReq**](ExportExecEnvCfgReq.md) |  | 
+
+### Return type
+
+[**ExportExecEnvCfgRes**](ExportExecEnvCfgRes.md)
 
 ### Authorization
 

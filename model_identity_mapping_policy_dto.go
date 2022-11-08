@@ -47,7 +47,7 @@ func NewIdentityMappingPolicyDTOWithDefaults() *IdentityMappingPolicyDTO {
 
 // GetCustomMapper returns the CustomMapper field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetCustomMapper() string {
-	if o == nil || o.CustomMapper == nil {
+	if o == nil || isNil(o.CustomMapper) {
 		var ret string
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *IdentityMappingPolicyDTO) GetCustomMapper() string {
 // GetCustomMapperOk returns a tuple with the CustomMapper field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetCustomMapperOk() (*string, bool) {
-	if o == nil || o.CustomMapper == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomMapper) {
+    return nil, false
 	}
 	return o.CustomMapper, true
 }
 
 // HasCustomMapper returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasCustomMapper() bool {
-	if o != nil && o.CustomMapper != nil {
+	if o != nil && !isNil(o.CustomMapper) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *IdentityMappingPolicyDTO) SetCustomMapper(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *IdentityMappingPolicyDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *IdentityMappingPolicyDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *IdentityMappingPolicyDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *IdentityMappingPolicyDTO) SetId(v int64) {
 
 // GetMappingType returns the MappingType field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetMappingType() string {
-	if o == nil || o.MappingType == nil {
+	if o == nil || isNil(o.MappingType) {
 		var ret string
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *IdentityMappingPolicyDTO) GetMappingType() string {
 // GetMappingTypeOk returns a tuple with the MappingType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetMappingTypeOk() (*string, bool) {
-	if o == nil || o.MappingType == nil {
-		return nil, false
+	if o == nil || isNil(o.MappingType) {
+    return nil, false
 	}
 	return o.MappingType, true
 }
 
 // HasMappingType returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasMappingType() bool {
-	if o != nil && o.MappingType != nil {
+	if o != nil && !isNil(o.MappingType) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *IdentityMappingPolicyDTO) SetMappingType(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *IdentityMappingPolicyDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *IdentityMappingPolicyDTO) SetName(v string) {
 
 // GetUseLocalId returns the UseLocalId field value if set, zero value otherwise.
 func (o *IdentityMappingPolicyDTO) GetUseLocalId() bool {
-	if o == nil || o.UseLocalId == nil {
+	if o == nil || isNil(o.UseLocalId) {
 		var ret bool
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *IdentityMappingPolicyDTO) GetUseLocalId() bool {
 // GetUseLocalIdOk returns a tuple with the UseLocalId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityMappingPolicyDTO) GetUseLocalIdOk() (*bool, bool) {
-	if o == nil || o.UseLocalId == nil {
-		return nil, false
+	if o == nil || isNil(o.UseLocalId) {
+    return nil, false
 	}
 	return o.UseLocalId, true
 }
 
 // HasUseLocalId returns a boolean if a field has been set.
 func (o *IdentityMappingPolicyDTO) HasUseLocalId() bool {
-	if o != nil && o.UseLocalId != nil {
+	if o != nil && !isNil(o.UseLocalId) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *IdentityMappingPolicyDTO) SetUseLocalId(v bool) {
 
 func (o IdentityMappingPolicyDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CustomMapper != nil {
+	if !isNil(o.CustomMapper) {
 		toSerialize["customMapper"] = o.CustomMapper
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.MappingType != nil {
+	if !isNil(o.MappingType) {
 		toSerialize["mappingType"] = o.MappingType
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.UseLocalId != nil {
+	if !isNil(o.UseLocalId) {
 		toSerialize["useLocalId"] = o.UseLocalId
 	}
 

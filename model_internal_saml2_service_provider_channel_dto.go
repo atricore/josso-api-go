@@ -68,7 +68,7 @@ func NewInternalSaml2ServiceProviderChannelDTOWithDefaults() *InternalSaml2Servi
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -78,15 +78,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindings() []string {
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -100,7 +100,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetActiveBindings(v []string) {
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -110,15 +110,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfiles() []string {
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -132,7 +132,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetActiveProfiles(v []string) {
 
 // GetAttributeProfile returns the AttributeProfile field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAttributeProfile() AttributeProfileDTO {
-	if o == nil || o.AttributeProfile == nil {
+	if o == nil || isNil(o.AttributeProfile) {
 		var ret AttributeProfileDTO
 		return ret
 	}
@@ -142,15 +142,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetAttributeProfile() Attribute
 // GetAttributeProfileOk returns a tuple with the AttributeProfile field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAttributeProfileOk() (*AttributeProfileDTO, bool) {
-	if o == nil || o.AttributeProfile == nil {
-		return nil, false
+	if o == nil || isNil(o.AttributeProfile) {
+    return nil, false
 	}
 	return o.AttributeProfile, true
 }
 
 // HasAttributeProfile returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasAttributeProfile() bool {
-	if o != nil && o.AttributeProfile != nil {
+	if o != nil && !isNil(o.AttributeProfile) {
 		return true
 	}
 
@@ -164,7 +164,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetAttributeProfile(v Attribute
 
 // GetAuthenticationContract returns the AuthenticationContract field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationContract() AuthenticationContractDTO {
-	if o == nil || o.AuthenticationContract == nil {
+	if o == nil || isNil(o.AuthenticationContract) {
 		var ret AuthenticationContractDTO
 		return ret
 	}
@@ -174,15 +174,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationContract() Aut
 // GetAuthenticationContractOk returns a tuple with the AuthenticationContract field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationContractOk() (*AuthenticationContractDTO, bool) {
-	if o == nil || o.AuthenticationContract == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthenticationContract) {
+    return nil, false
 	}
 	return o.AuthenticationContract, true
 }
 
 // HasAuthenticationContract returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasAuthenticationContract() bool {
-	if o != nil && o.AuthenticationContract != nil {
+	if o != nil && !isNil(o.AuthenticationContract) {
 		return true
 	}
 
@@ -196,7 +196,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetAuthenticationContract(v Aut
 
 // GetAuthenticationMechanism returns the AuthenticationMechanism field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationMechanism() AuthenticationMechanismDTO {
-	if o == nil || o.AuthenticationMechanism == nil {
+	if o == nil || isNil(o.AuthenticationMechanism) {
 		var ret AuthenticationMechanismDTO
 		return ret
 	}
@@ -206,15 +206,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationMechanism() Au
 // GetAuthenticationMechanismOk returns a tuple with the AuthenticationMechanism field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetAuthenticationMechanismOk() (*AuthenticationMechanismDTO, bool) {
-	if o == nil || o.AuthenticationMechanism == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthenticationMechanism) {
+    return nil, false
 	}
 	return o.AuthenticationMechanism, true
 }
 
 // HasAuthenticationMechanism returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasAuthenticationMechanism() bool {
-	if o != nil && o.AuthenticationMechanism != nil {
+	if o != nil && !isNil(o.AuthenticationMechanism) {
 		return true
 	}
 
@@ -228,7 +228,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetAuthenticationMechanism(v Au
 
 // GetConnectionA returns the ConnectionA field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionA() FederatedConnectionDTO {
-	if o == nil || o.ConnectionA == nil {
+	if o == nil || isNil(o.ConnectionA) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -238,15 +238,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionA() FederatedConne
 // GetConnectionAOk returns a tuple with the ConnectionA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionAOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionA == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionA) {
+    return nil, false
 	}
 	return o.ConnectionA, true
 }
 
 // HasConnectionA returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasConnectionA() bool {
-	if o != nil && o.ConnectionA != nil {
+	if o != nil && !isNil(o.ConnectionA) {
 		return true
 	}
 
@@ -260,7 +260,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetConnectionA(v FederatedConne
 
 // GetConnectionB returns the ConnectionB field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionB() FederatedConnectionDTO {
-	if o == nil || o.ConnectionB == nil {
+	if o == nil || isNil(o.ConnectionB) {
 		var ret FederatedConnectionDTO
 		return ret
 	}
@@ -270,15 +270,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionB() FederatedConne
 // GetConnectionBOk returns a tuple with the ConnectionB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetConnectionBOk() (*FederatedConnectionDTO, bool) {
-	if o == nil || o.ConnectionB == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionB) {
+    return nil, false
 	}
 	return o.ConnectionB, true
 }
 
 // HasConnectionB returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasConnectionB() bool {
-	if o != nil && o.ConnectionB != nil {
+	if o != nil && !isNil(o.ConnectionB) {
 		return true
 	}
 
@@ -292,7 +292,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetConnectionB(v FederatedConne
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -302,15 +302,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -324,7 +324,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -334,15 +334,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -356,7 +356,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -366,15 +366,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -388,7 +388,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetElementId(v string) {
 
 // GetEmissionPolicy returns the EmissionPolicy field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEmissionPolicy() AuthenticationAssertionEmissionPolicyDTO {
-	if o == nil || o.EmissionPolicy == nil {
+	if o == nil || isNil(o.EmissionPolicy) {
 		var ret AuthenticationAssertionEmissionPolicyDTO
 		return ret
 	}
@@ -398,15 +398,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetEmissionPolicy() Authenticat
 // GetEmissionPolicyOk returns a tuple with the EmissionPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEmissionPolicyOk() (*AuthenticationAssertionEmissionPolicyDTO, bool) {
-	if o == nil || o.EmissionPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.EmissionPolicy) {
+    return nil, false
 	}
 	return o.EmissionPolicy, true
 }
 
 // HasEmissionPolicy returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasEmissionPolicy() bool {
-	if o != nil && o.EmissionPolicy != nil {
+	if o != nil && !isNil(o.EmissionPolicy) {
 		return true
 	}
 
@@ -420,7 +420,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetEmissionPolicy(v Authenticat
 
 // GetEncryptAssertion returns the EncryptAssertion field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertion() bool {
-	if o == nil || o.EncryptAssertion == nil {
+	if o == nil || isNil(o.EncryptAssertion) {
 		var ret bool
 		return ret
 	}
@@ -430,15 +430,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertion() bool {
 // GetEncryptAssertionOk returns a tuple with the EncryptAssertion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertionOk() (*bool, bool) {
-	if o == nil || o.EncryptAssertion == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptAssertion) {
+    return nil, false
 	}
 	return o.EncryptAssertion, true
 }
 
 // HasEncryptAssertion returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasEncryptAssertion() bool {
-	if o != nil && o.EncryptAssertion != nil {
+	if o != nil && !isNil(o.EncryptAssertion) {
 		return true
 	}
 
@@ -452,7 +452,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetEncryptAssertion(v bool) {
 
 // GetEncryptAssertionAlgorithm returns the EncryptAssertionAlgorithm field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertionAlgorithm() string {
-	if o == nil || o.EncryptAssertionAlgorithm == nil {
+	if o == nil || isNil(o.EncryptAssertionAlgorithm) {
 		var ret string
 		return ret
 	}
@@ -462,15 +462,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertionAlgorithm() 
 // GetEncryptAssertionAlgorithmOk returns a tuple with the EncryptAssertionAlgorithm field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetEncryptAssertionAlgorithmOk() (*string, bool) {
-	if o == nil || o.EncryptAssertionAlgorithm == nil {
-		return nil, false
+	if o == nil || isNil(o.EncryptAssertionAlgorithm) {
+    return nil, false
 	}
 	return o.EncryptAssertionAlgorithm, true
 }
 
 // HasEncryptAssertionAlgorithm returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasEncryptAssertionAlgorithm() bool {
-	if o != nil && o.EncryptAssertionAlgorithm != nil {
+	if o != nil && !isNil(o.EncryptAssertionAlgorithm) {
 		return true
 	}
 
@@ -484,7 +484,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetEncryptAssertionAlgorithm(v 
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -494,15 +494,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -516,7 +516,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetId(v int64) {
 
 // GetIgnoreRequestedNameIDPolicy returns the IgnoreRequestedNameIDPolicy field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetIgnoreRequestedNameIDPolicy() bool {
-	if o == nil || o.IgnoreRequestedNameIDPolicy == nil {
+	if o == nil || isNil(o.IgnoreRequestedNameIDPolicy) {
 		var ret bool
 		return ret
 	}
@@ -526,15 +526,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetIgnoreRequestedNameIDPolicy(
 // GetIgnoreRequestedNameIDPolicyOk returns a tuple with the IgnoreRequestedNameIDPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetIgnoreRequestedNameIDPolicyOk() (*bool, bool) {
-	if o == nil || o.IgnoreRequestedNameIDPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.IgnoreRequestedNameIDPolicy) {
+    return nil, false
 	}
 	return o.IgnoreRequestedNameIDPolicy, true
 }
 
 // HasIgnoreRequestedNameIDPolicy returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasIgnoreRequestedNameIDPolicy() bool {
-	if o != nil && o.IgnoreRequestedNameIDPolicy != nil {
+	if o != nil && !isNil(o.IgnoreRequestedNameIDPolicy) {
 		return true
 	}
 
@@ -548,7 +548,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetIgnoreRequestedNameIDPolicy(
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -558,15 +558,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -580,7 +580,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetLocation(v LocationDTO) {
 
 // GetMessageTtl returns the MessageTtl field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtl() int32 {
-	if o == nil || o.MessageTtl == nil {
+	if o == nil || isNil(o.MessageTtl) {
 		var ret int32
 		return ret
 	}
@@ -590,15 +590,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtl() int32 {
 // GetMessageTtlOk returns a tuple with the MessageTtl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtlOk() (*int32, bool) {
-	if o == nil || o.MessageTtl == nil {
-		return nil, false
+	if o == nil || isNil(o.MessageTtl) {
+    return nil, false
 	}
 	return o.MessageTtl, true
 }
 
 // HasMessageTtl returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasMessageTtl() bool {
-	if o != nil && o.MessageTtl != nil {
+	if o != nil && !isNil(o.MessageTtl) {
 		return true
 	}
 
@@ -612,7 +612,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetMessageTtl(v int32) {
 
 // GetMessageTtlTolerance returns the MessageTtlTolerance field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtlTolerance() int32 {
-	if o == nil || o.MessageTtlTolerance == nil {
+	if o == nil || isNil(o.MessageTtlTolerance) {
 		var ret int32
 		return ret
 	}
@@ -622,15 +622,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtlTolerance() int32 
 // GetMessageTtlToleranceOk returns a tuple with the MessageTtlTolerance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetMessageTtlToleranceOk() (*int32, bool) {
-	if o == nil || o.MessageTtlTolerance == nil {
-		return nil, false
+	if o == nil || isNil(o.MessageTtlTolerance) {
+    return nil, false
 	}
 	return o.MessageTtlTolerance, true
 }
 
 // HasMessageTtlTolerance returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasMessageTtlTolerance() bool {
-	if o != nil && o.MessageTtlTolerance != nil {
+	if o != nil && !isNil(o.MessageTtlTolerance) {
 		return true
 	}
 
@@ -644,7 +644,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetMessageTtlTolerance(v int32)
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -654,15 +654,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -676,7 +676,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetName(v string) {
 
 // GetOverrideProviderSetup returns the OverrideProviderSetup field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetOverrideProviderSetup() bool {
-	if o == nil || o.OverrideProviderSetup == nil {
+	if o == nil || isNil(o.OverrideProviderSetup) {
 		var ret bool
 		return ret
 	}
@@ -686,15 +686,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetOverrideProviderSetup() bool
 // GetOverrideProviderSetupOk returns a tuple with the OverrideProviderSetup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetOverrideProviderSetupOk() (*bool, bool) {
-	if o == nil || o.OverrideProviderSetup == nil {
-		return nil, false
+	if o == nil || isNil(o.OverrideProviderSetup) {
+    return nil, false
 	}
 	return o.OverrideProviderSetup, true
 }
 
 // HasOverrideProviderSetup returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasOverrideProviderSetup() bool {
-	if o != nil && o.OverrideProviderSetup != nil {
+	if o != nil && !isNil(o.OverrideProviderSetup) {
 		return true
 	}
 
@@ -708,7 +708,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetOverrideProviderSetup(v bool
 
 // GetRequiredRoles returns the RequiredRoles field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRoles() []string {
-	if o == nil || o.RequiredRoles == nil {
+	if o == nil || isNil(o.RequiredRoles) {
 		var ret []string
 		return ret
 	}
@@ -718,15 +718,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRoles() []string {
 // GetRequiredRolesOk returns a tuple with the RequiredRoles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesOk() ([]string, bool) {
-	if o == nil || o.RequiredRoles == nil {
-		return nil, false
+	if o == nil || isNil(o.RequiredRoles) {
+    return nil, false
 	}
 	return o.RequiredRoles, true
 }
 
 // HasRequiredRoles returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasRequiredRoles() bool {
-	if o != nil && o.RequiredRoles != nil {
+	if o != nil && !isNil(o.RequiredRoles) {
 		return true
 	}
 
@@ -740,7 +740,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetRequiredRoles(v []string) {
 
 // GetRequiredRolesMatchMode returns the RequiredRolesMatchMode field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesMatchMode() int32 {
-	if o == nil || o.RequiredRolesMatchMode == nil {
+	if o == nil || isNil(o.RequiredRolesMatchMode) {
 		var ret int32
 		return ret
 	}
@@ -750,15 +750,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesMatchMode() int
 // GetRequiredRolesMatchModeOk returns a tuple with the RequiredRolesMatchMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRequiredRolesMatchModeOk() (*int32, bool) {
-	if o == nil || o.RequiredRolesMatchMode == nil {
-		return nil, false
+	if o == nil || isNil(o.RequiredRolesMatchMode) {
+    return nil, false
 	}
 	return o.RequiredRolesMatchMode, true
 }
 
 // HasRequiredRolesMatchMode returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasRequiredRolesMatchMode() bool {
-	if o != nil && o.RequiredRolesMatchMode != nil {
+	if o != nil && !isNil(o.RequiredRolesMatchMode) {
 		return true
 	}
 
@@ -772,7 +772,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetRequiredRolesMatchMode(v int
 
 // GetRestrictedRoles returns the RestrictedRoles field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRoles() []string {
-	if o == nil || o.RestrictedRoles == nil {
+	if o == nil || isNil(o.RestrictedRoles) {
 		var ret []string
 		return ret
 	}
@@ -782,15 +782,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRoles() []string {
 // GetRestrictedRolesOk returns a tuple with the RestrictedRoles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesOk() ([]string, bool) {
-	if o == nil || o.RestrictedRoles == nil {
-		return nil, false
+	if o == nil || isNil(o.RestrictedRoles) {
+    return nil, false
 	}
 	return o.RestrictedRoles, true
 }
 
 // HasRestrictedRoles returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasRestrictedRoles() bool {
-	if o != nil && o.RestrictedRoles != nil {
+	if o != nil && !isNil(o.RestrictedRoles) {
 		return true
 	}
 
@@ -804,7 +804,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetRestrictedRoles(v []string) 
 
 // GetRestrictedRolesMatchMode returns the RestrictedRolesMatchMode field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesMatchMode() int32 {
-	if o == nil || o.RestrictedRolesMatchMode == nil {
+	if o == nil || isNil(o.RestrictedRolesMatchMode) {
 		var ret int32
 		return ret
 	}
@@ -814,15 +814,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesMatchMode() i
 // GetRestrictedRolesMatchModeOk returns a tuple with the RestrictedRolesMatchMode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetRestrictedRolesMatchModeOk() (*int32, bool) {
-	if o == nil || o.RestrictedRolesMatchMode == nil {
-		return nil, false
+	if o == nil || isNil(o.RestrictedRolesMatchMode) {
+    return nil, false
 	}
 	return o.RestrictedRolesMatchMode, true
 }
 
 // HasRestrictedRolesMatchMode returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasRestrictedRolesMatchMode() bool {
-	if o != nil && o.RestrictedRolesMatchMode != nil {
+	if o != nil && !isNil(o.RestrictedRolesMatchMode) {
 		return true
 	}
 
@@ -836,7 +836,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetRestrictedRolesMatchMode(v i
 
 // GetSignatureHash returns the SignatureHash field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetSignatureHash() string {
-	if o == nil || o.SignatureHash == nil {
+	if o == nil || isNil(o.SignatureHash) {
 		var ret string
 		return ret
 	}
@@ -846,15 +846,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetSignatureHash() string {
 // GetSignatureHashOk returns a tuple with the SignatureHash field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetSignatureHashOk() (*string, bool) {
-	if o == nil || o.SignatureHash == nil {
-		return nil, false
+	if o == nil || isNil(o.SignatureHash) {
+    return nil, false
 	}
 	return o.SignatureHash, true
 }
 
 // HasSignatureHash returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasSignatureHash() bool {
-	if o != nil && o.SignatureHash != nil {
+	if o != nil && !isNil(o.SignatureHash) {
 		return true
 	}
 
@@ -868,7 +868,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetSignatureHash(v string) {
 
 // GetSubjectNameIDPolicy returns the SubjectNameIDPolicy field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetSubjectNameIDPolicy() SubjectNameIdentifierPolicyDTO {
-	if o == nil || o.SubjectNameIDPolicy == nil {
+	if o == nil || isNil(o.SubjectNameIDPolicy) {
 		var ret SubjectNameIdentifierPolicyDTO
 		return ret
 	}
@@ -878,15 +878,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetSubjectNameIDPolicy() Subjec
 // GetSubjectNameIDPolicyOk returns a tuple with the SubjectNameIDPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetSubjectNameIDPolicyOk() (*SubjectNameIdentifierPolicyDTO, bool) {
-	if o == nil || o.SubjectNameIDPolicy == nil {
-		return nil, false
+	if o == nil || isNil(o.SubjectNameIDPolicy) {
+    return nil, false
 	}
 	return o.SubjectNameIDPolicy, true
 }
 
 // HasSubjectNameIDPolicy returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasSubjectNameIDPolicy() bool {
-	if o != nil && o.SubjectNameIDPolicy != nil {
+	if o != nil && !isNil(o.SubjectNameIDPolicy) {
 		return true
 	}
 
@@ -900,7 +900,7 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetSubjectNameIDPolicy(v Subjec
 
 // GetWantAuthnRequestsSigned returns the WantAuthnRequestsSigned field value if set, zero value otherwise.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetWantAuthnRequestsSigned() bool {
-	if o == nil || o.WantAuthnRequestsSigned == nil {
+	if o == nil || isNil(o.WantAuthnRequestsSigned) {
 		var ret bool
 		return ret
 	}
@@ -910,15 +910,15 @@ func (o *InternalSaml2ServiceProviderChannelDTO) GetWantAuthnRequestsSigned() bo
 // GetWantAuthnRequestsSignedOk returns a tuple with the WantAuthnRequestsSigned field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) GetWantAuthnRequestsSignedOk() (*bool, bool) {
-	if o == nil || o.WantAuthnRequestsSigned == nil {
-		return nil, false
+	if o == nil || isNil(o.WantAuthnRequestsSigned) {
+    return nil, false
 	}
 	return o.WantAuthnRequestsSigned, true
 }
 
 // HasWantAuthnRequestsSigned returns a boolean if a field has been set.
 func (o *InternalSaml2ServiceProviderChannelDTO) HasWantAuthnRequestsSigned() bool {
-	if o != nil && o.WantAuthnRequestsSigned != nil {
+	if o != nil && !isNil(o.WantAuthnRequestsSigned) {
 		return true
 	}
 
@@ -932,85 +932,85 @@ func (o *InternalSaml2ServiceProviderChannelDTO) SetWantAuthnRequestsSigned(v bo
 
 func (o InternalSaml2ServiceProviderChannelDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.AttributeProfile != nil {
+	if !isNil(o.AttributeProfile) {
 		toSerialize["attributeProfile"] = o.AttributeProfile
 	}
-	if o.AuthenticationContract != nil {
+	if !isNil(o.AuthenticationContract) {
 		toSerialize["authenticationContract"] = o.AuthenticationContract
 	}
-	if o.AuthenticationMechanism != nil {
+	if !isNil(o.AuthenticationMechanism) {
 		toSerialize["authenticationMechanism"] = o.AuthenticationMechanism
 	}
-	if o.ConnectionA != nil {
+	if !isNil(o.ConnectionA) {
 		toSerialize["connectionA"] = o.ConnectionA
 	}
-	if o.ConnectionB != nil {
+	if !isNil(o.ConnectionB) {
 		toSerialize["connectionB"] = o.ConnectionB
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.EmissionPolicy != nil {
+	if !isNil(o.EmissionPolicy) {
 		toSerialize["emissionPolicy"] = o.EmissionPolicy
 	}
-	if o.EncryptAssertion != nil {
+	if !isNil(o.EncryptAssertion) {
 		toSerialize["encryptAssertion"] = o.EncryptAssertion
 	}
-	if o.EncryptAssertionAlgorithm != nil {
+	if !isNil(o.EncryptAssertionAlgorithm) {
 		toSerialize["encryptAssertionAlgorithm"] = o.EncryptAssertionAlgorithm
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IgnoreRequestedNameIDPolicy != nil {
+	if !isNil(o.IgnoreRequestedNameIDPolicy) {
 		toSerialize["ignoreRequestedNameIDPolicy"] = o.IgnoreRequestedNameIDPolicy
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.MessageTtl != nil {
+	if !isNil(o.MessageTtl) {
 		toSerialize["messageTtl"] = o.MessageTtl
 	}
-	if o.MessageTtlTolerance != nil {
+	if !isNil(o.MessageTtlTolerance) {
 		toSerialize["messageTtlTolerance"] = o.MessageTtlTolerance
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.OverrideProviderSetup != nil {
+	if !isNil(o.OverrideProviderSetup) {
 		toSerialize["overrideProviderSetup"] = o.OverrideProviderSetup
 	}
-	if o.RequiredRoles != nil {
+	if !isNil(o.RequiredRoles) {
 		toSerialize["requiredRoles"] = o.RequiredRoles
 	}
-	if o.RequiredRolesMatchMode != nil {
+	if !isNil(o.RequiredRolesMatchMode) {
 		toSerialize["requiredRolesMatchMode"] = o.RequiredRolesMatchMode
 	}
-	if o.RestrictedRoles != nil {
+	if !isNil(o.RestrictedRoles) {
 		toSerialize["restrictedRoles"] = o.RestrictedRoles
 	}
-	if o.RestrictedRolesMatchMode != nil {
+	if !isNil(o.RestrictedRolesMatchMode) {
 		toSerialize["restrictedRolesMatchMode"] = o.RestrictedRolesMatchMode
 	}
-	if o.SignatureHash != nil {
+	if !isNil(o.SignatureHash) {
 		toSerialize["signatureHash"] = o.SignatureHash
 	}
-	if o.SubjectNameIDPolicy != nil {
+	if !isNil(o.SubjectNameIDPolicy) {
 		toSerialize["subjectNameIDPolicy"] = o.SubjectNameIDPolicy
 	}
-	if o.WantAuthnRequestsSigned != nil {
+	if !isNil(o.WantAuthnRequestsSigned) {
 		toSerialize["wantAuthnRequestsSigned"] = o.WantAuthnRequestsSigned
 	}
 

@@ -52,7 +52,7 @@ func NewGetBrandingResWithDefaults() *GetBrandingRes {
 
 // GetBundleArtifact returns the BundleArtifact field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetBundleArtifact() string {
-	if o == nil || o.BundleArtifact == nil {
+	if o == nil || isNil(o.BundleArtifact) {
 		var ret string
 		return ret
 	}
@@ -62,15 +62,15 @@ func (o *GetBrandingRes) GetBundleArtifact() string {
 // GetBundleArtifactOk returns a tuple with the BundleArtifact field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetBundleArtifactOk() (*string, bool) {
-	if o == nil || o.BundleArtifact == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleArtifact) {
+    return nil, false
 	}
 	return o.BundleArtifact, true
 }
 
 // HasBundleArtifact returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasBundleArtifact() bool {
-	if o != nil && o.BundleArtifact != nil {
+	if o != nil && !isNil(o.BundleArtifact) {
 		return true
 	}
 
@@ -84,7 +84,7 @@ func (o *GetBrandingRes) SetBundleArtifact(v string) {
 
 // GetBundleGroup returns the BundleGroup field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetBundleGroup() string {
-	if o == nil || o.BundleGroup == nil {
+	if o == nil || isNil(o.BundleGroup) {
 		var ret string
 		return ret
 	}
@@ -94,15 +94,15 @@ func (o *GetBrandingRes) GetBundleGroup() string {
 // GetBundleGroupOk returns a tuple with the BundleGroup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetBundleGroupOk() (*string, bool) {
-	if o == nil || o.BundleGroup == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleGroup) {
+    return nil, false
 	}
 	return o.BundleGroup, true
 }
 
 // HasBundleGroup returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasBundleGroup() bool {
-	if o != nil && o.BundleGroup != nil {
+	if o != nil && !isNil(o.BundleGroup) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *GetBrandingRes) SetBundleGroup(v string) {
 
 // GetBundleVersion returns the BundleVersion field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetBundleVersion() string {
-	if o == nil || o.BundleVersion == nil {
+	if o == nil || isNil(o.BundleVersion) {
 		var ret string
 		return ret
 	}
@@ -126,15 +126,15 @@ func (o *GetBrandingRes) GetBundleVersion() string {
 // GetBundleVersionOk returns a tuple with the BundleVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetBundleVersionOk() (*string, bool) {
-	if o == nil || o.BundleVersion == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleVersion) {
+    return nil, false
 	}
 	return o.BundleVersion, true
 }
 
 // HasBundleVersion returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasBundleVersion() bool {
-	if o != nil && o.BundleVersion != nil {
+	if o != nil && !isNil(o.BundleVersion) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *GetBrandingRes) SetBundleVersion(v string) {
 
 // GetCustomOpenIdAppClazz returns the CustomOpenIdAppClazz field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetCustomOpenIdAppClazz() string {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
 		var ret string
 		return ret
 	}
@@ -158,15 +158,15 @@ func (o *GetBrandingRes) GetCustomOpenIdAppClazz() string {
 // GetCustomOpenIdAppClazzOk returns a tuple with the CustomOpenIdAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetCustomOpenIdAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomOpenIdAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomOpenIdAppClazz) {
+    return nil, false
 	}
 	return o.CustomOpenIdAppClazz, true
 }
 
 // HasCustomOpenIdAppClazz returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasCustomOpenIdAppClazz() bool {
-	if o != nil && o.CustomOpenIdAppClazz != nil {
+	if o != nil && !isNil(o.CustomOpenIdAppClazz) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *GetBrandingRes) SetCustomOpenIdAppClazz(v string) {
 
 // GetCustomSsoAppClazz returns the CustomSsoAppClazz field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetCustomSsoAppClazz() string {
-	if o == nil || o.CustomSsoAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoAppClazz) {
 		var ret string
 		return ret
 	}
@@ -190,15 +190,15 @@ func (o *GetBrandingRes) GetCustomSsoAppClazz() string {
 // GetCustomSsoAppClazzOk returns a tuple with the CustomSsoAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetCustomSsoAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoAppClazz, true
 }
 
 // HasCustomSsoAppClazz returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasCustomSsoAppClazz() bool {
-	if o != nil && o.CustomSsoAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoAppClazz) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *GetBrandingRes) SetCustomSsoAppClazz(v string) {
 
 // GetCustomSsoIdPAppClazz returns the CustomSsoIdPAppClazz field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetCustomSsoIdPAppClazz() string {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
 		var ret string
 		return ret
 	}
@@ -222,15 +222,15 @@ func (o *GetBrandingRes) GetCustomSsoIdPAppClazz() string {
 // GetCustomSsoIdPAppClazzOk returns a tuple with the CustomSsoIdPAppClazz field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetCustomSsoIdPAppClazzOk() (*string, bool) {
-	if o == nil || o.CustomSsoIdPAppClazz == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomSsoIdPAppClazz) {
+    return nil, false
 	}
 	return o.CustomSsoIdPAppClazz, true
 }
 
 // HasCustomSsoIdPAppClazz returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasCustomSsoIdPAppClazz() bool {
-	if o != nil && o.CustomSsoIdPAppClazz != nil {
+	if o != nil && !isNil(o.CustomSsoIdPAppClazz) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *GetBrandingRes) SetCustomSsoIdPAppClazz(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -254,15 +254,15 @@ func (o *GetBrandingRes) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -276,7 +276,7 @@ func (o *GetBrandingRes) SetDescription(v string) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -286,15 +286,15 @@ func (o *GetBrandingRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -308,7 +308,7 @@ func (o *GetBrandingRes) SetError(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -318,15 +318,15 @@ func (o *GetBrandingRes) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -340,7 +340,7 @@ func (o *GetBrandingRes) SetName(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetResource() string {
-	if o == nil || o.Resource == nil {
+	if o == nil || isNil(o.Resource) {
 		var ret string
 		return ret
 	}
@@ -350,15 +350,15 @@ func (o *GetBrandingRes) GetResource() string {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetResourceOk() (*string, bool) {
-	if o == nil || o.Resource == nil {
-		return nil, false
+	if o == nil || isNil(o.Resource) {
+    return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasResource() bool {
-	if o != nil && o.Resource != nil {
+	if o != nil && !isNil(o.Resource) {
 		return true
 	}
 
@@ -372,7 +372,7 @@ func (o *GetBrandingRes) SetResource(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *GetBrandingRes) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -382,15 +382,15 @@ func (o *GetBrandingRes) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetBrandingRes) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *GetBrandingRes) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -404,37 +404,37 @@ func (o *GetBrandingRes) SetType(v string) {
 
 func (o GetBrandingRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BundleArtifact != nil {
+	if !isNil(o.BundleArtifact) {
 		toSerialize["bundleArtifact"] = o.BundleArtifact
 	}
-	if o.BundleGroup != nil {
+	if !isNil(o.BundleGroup) {
 		toSerialize["bundleGroup"] = o.BundleGroup
 	}
-	if o.BundleVersion != nil {
+	if !isNil(o.BundleVersion) {
 		toSerialize["bundleVersion"] = o.BundleVersion
 	}
-	if o.CustomOpenIdAppClazz != nil {
+	if !isNil(o.CustomOpenIdAppClazz) {
 		toSerialize["customOpenIdAppClazz"] = o.CustomOpenIdAppClazz
 	}
-	if o.CustomSsoAppClazz != nil {
+	if !isNil(o.CustomSsoAppClazz) {
 		toSerialize["customSsoAppClazz"] = o.CustomSsoAppClazz
 	}
-	if o.CustomSsoIdPAppClazz != nil {
+	if !isNil(o.CustomSsoIdPAppClazz) {
 		toSerialize["customSsoIdPAppClazz"] = o.CustomSsoIdPAppClazz
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Resource != nil {
+	if !isNil(o.Resource) {
 		toSerialize["resource"] = o.Resource
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

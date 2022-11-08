@@ -47,7 +47,7 @@ func NewBindAuthenticationDTOWithDefaults() *BindAuthenticationDTO {
 
 // GetDelegatedAuthentication returns the DelegatedAuthentication field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetDelegatedAuthentication() DelegatedAuthenticationDTO {
-	if o == nil || o.DelegatedAuthentication == nil {
+	if o == nil || isNil(o.DelegatedAuthentication) {
 		var ret DelegatedAuthenticationDTO
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *BindAuthenticationDTO) GetDelegatedAuthentication() DelegatedAuthentica
 // GetDelegatedAuthenticationOk returns a tuple with the DelegatedAuthentication field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetDelegatedAuthenticationOk() (*DelegatedAuthenticationDTO, bool) {
-	if o == nil || o.DelegatedAuthentication == nil {
-		return nil, false
+	if o == nil || isNil(o.DelegatedAuthentication) {
+    return nil, false
 	}
 	return o.DelegatedAuthentication, true
 }
 
 // HasDelegatedAuthentication returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasDelegatedAuthentication() bool {
-	if o != nil && o.DelegatedAuthentication != nil {
+	if o != nil && !isNil(o.DelegatedAuthentication) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *BindAuthenticationDTO) SetDelegatedAuthentication(v DelegatedAuthentica
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *BindAuthenticationDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *BindAuthenticationDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *BindAuthenticationDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *BindAuthenticationDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *BindAuthenticationDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *BindAuthenticationDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *BindAuthenticationDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *BindAuthenticationDTO) SetName(v string) {
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
 func (o *BindAuthenticationDTO) GetPriority() int32 {
-	if o == nil || o.Priority == nil {
+	if o == nil || isNil(o.Priority) {
 		var ret int32
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *BindAuthenticationDTO) GetPriority() int32 {
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BindAuthenticationDTO) GetPriorityOk() (*int32, bool) {
-	if o == nil || o.Priority == nil {
-		return nil, false
+	if o == nil || isNil(o.Priority) {
+    return nil, false
 	}
 	return o.Priority, true
 }
 
 // HasPriority returns a boolean if a field has been set.
 func (o *BindAuthenticationDTO) HasPriority() bool {
-	if o != nil && o.Priority != nil {
+	if o != nil && !isNil(o.Priority) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *BindAuthenticationDTO) SetPriority(v int32) {
 
 func (o BindAuthenticationDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DelegatedAuthentication != nil {
+	if !isNil(o.DelegatedAuthentication) {
 		toSerialize["delegatedAuthentication"] = o.DelegatedAuthentication
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Priority != nil {
+	if !isNil(o.Priority) {
 		toSerialize["priority"] = o.Priority
 	}
 

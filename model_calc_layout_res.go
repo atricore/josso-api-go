@@ -44,7 +44,7 @@ func NewCalcLayoutResWithDefaults() *CalcLayoutRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *CalcLayoutRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *CalcLayoutRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CalcLayoutRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *CalcLayoutRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *CalcLayoutRes) SetError(v string) {
 
 // GetExport returns the Export field value if set, zero value otherwise.
 func (o *CalcLayoutRes) GetExport() string {
-	if o == nil || o.Export == nil {
+	if o == nil || isNil(o.Export) {
 		var ret string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *CalcLayoutRes) GetExport() string {
 // GetExportOk returns a tuple with the Export field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CalcLayoutRes) GetExportOk() (*string, bool) {
-	if o == nil || o.Export == nil {
-		return nil, false
+	if o == nil || isNil(o.Export) {
+    return nil, false
 	}
 	return o.Export, true
 }
 
 // HasExport returns a boolean if a field has been set.
 func (o *CalcLayoutRes) HasExport() bool {
-	if o != nil && o.Export != nil {
+	if o != nil && !isNil(o.Export) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *CalcLayoutRes) SetExport(v string) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *CalcLayoutRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *CalcLayoutRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CalcLayoutRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *CalcLayoutRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *CalcLayoutRes) SetValidationErrors(v []string) {
 
 func (o CalcLayoutRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Export != nil {
+	if !isNil(o.Export) {
 		toSerialize["export"] = o.Export
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

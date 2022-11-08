@@ -45,7 +45,7 @@ func NewProviderContainerDTOWithDefaults() *ProviderContainerDTO {
 
 // GetFederatedProvider returns the FederatedProvider field value if set, zero value otherwise.
 func (o *ProviderContainerDTO) GetFederatedProvider() FederatedProviderDTO {
-	if o == nil || o.FederatedProvider == nil {
+	if o == nil || isNil(o.FederatedProvider) {
 		var ret FederatedProviderDTO
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *ProviderContainerDTO) GetFederatedProvider() FederatedProviderDTO {
 // GetFederatedProviderOk returns a tuple with the FederatedProvider field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderContainerDTO) GetFederatedProviderOk() (*FederatedProviderDTO, bool) {
-	if o == nil || o.FederatedProvider == nil {
-		return nil, false
+	if o == nil || isNil(o.FederatedProvider) {
+    return nil, false
 	}
 	return o.FederatedProvider, true
 }
 
 // HasFederatedProvider returns a boolean if a field has been set.
 func (o *ProviderContainerDTO) HasFederatedProvider() bool {
-	if o != nil && o.FederatedProvider != nil {
+	if o != nil && !isNil(o.FederatedProvider) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *ProviderContainerDTO) SetFederatedProvider(v FederatedProviderDTO) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *ProviderContainerDTO) GetLocation() string {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *ProviderContainerDTO) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderContainerDTO) GetLocationOk() (*string, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *ProviderContainerDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *ProviderContainerDTO) SetLocation(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ProviderContainerDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *ProviderContainerDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderContainerDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ProviderContainerDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *ProviderContainerDTO) SetName(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *ProviderContainerDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *ProviderContainerDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ProviderContainerDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *ProviderContainerDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *ProviderContainerDTO) SetType(v string) {
 
 func (o ProviderContainerDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.FederatedProvider != nil {
+	if !isNil(o.FederatedProvider) {
 		toSerialize["federatedProvider"] = o.FederatedProvider
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

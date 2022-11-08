@@ -44,7 +44,7 @@ func NewStoreIdVaultResWithDefaults() *StoreIdVaultRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *StoreIdVaultRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *StoreIdVaultRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdVaultRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *StoreIdVaultRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *StoreIdVaultRes) SetError(v string) {
 
 // GetIdVault returns the IdVault field value if set, zero value otherwise.
 func (o *StoreIdVaultRes) GetIdVault() EmbeddedIdentityVaultDTO {
-	if o == nil || o.IdVault == nil {
+	if o == nil || isNil(o.IdVault) {
 		var ret EmbeddedIdentityVaultDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *StoreIdVaultRes) GetIdVault() EmbeddedIdentityVaultDTO {
 // GetIdVaultOk returns a tuple with the IdVault field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdVaultRes) GetIdVaultOk() (*EmbeddedIdentityVaultDTO, bool) {
-	if o == nil || o.IdVault == nil {
-		return nil, false
+	if o == nil || isNil(o.IdVault) {
+    return nil, false
 	}
 	return o.IdVault, true
 }
 
 // HasIdVault returns a boolean if a field has been set.
 func (o *StoreIdVaultRes) HasIdVault() bool {
-	if o != nil && o.IdVault != nil {
+	if o != nil && !isNil(o.IdVault) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *StoreIdVaultRes) SetIdVault(v EmbeddedIdentityVaultDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *StoreIdVaultRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *StoreIdVaultRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIdVaultRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *StoreIdVaultRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *StoreIdVaultRes) SetValidationErrors(v []string) {
 
 func (o StoreIdVaultRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.IdVault != nil {
+	if !isNil(o.IdVault) {
 		toSerialize["idVault"] = o.IdVault
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

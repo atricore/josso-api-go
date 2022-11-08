@@ -43,7 +43,7 @@ func NewStoreIisExecEnvReqWithDefaults() *StoreIisExecEnvReq {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreIisExecEnvReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreIisExecEnvReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIisExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreIisExecEnvReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreIisExecEnvReq) SetIdaName(v string) {
 
 // GetIisExecEnv returns the IisExecEnv field value if set, zero value otherwise.
 func (o *StoreIisExecEnvReq) GetIisExecEnv() WindowsIISExecutionEnvironmentDTO {
-	if o == nil || o.IisExecEnv == nil {
+	if o == nil || isNil(o.IisExecEnv) {
 		var ret WindowsIISExecutionEnvironmentDTO
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreIisExecEnvReq) GetIisExecEnv() WindowsIISExecutionEnvironmentDTO {
 // GetIisExecEnvOk returns a tuple with the IisExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreIisExecEnvReq) GetIisExecEnvOk() (*WindowsIISExecutionEnvironmentDTO, bool) {
-	if o == nil || o.IisExecEnv == nil {
-		return nil, false
+	if o == nil || isNil(o.IisExecEnv) {
+    return nil, false
 	}
 	return o.IisExecEnv, true
 }
 
 // HasIisExecEnv returns a boolean if a field has been set.
 func (o *StoreIisExecEnvReq) HasIisExecEnv() bool {
-	if o != nil && o.IisExecEnv != nil {
+	if o != nil && !isNil(o.IisExecEnv) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreIisExecEnvReq) SetIisExecEnv(v WindowsIISExecutionEnvironmentDTO) 
 
 func (o StoreIisExecEnvReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.IisExecEnv != nil {
+	if !isNil(o.IisExecEnv) {
 		toSerialize["iisExecEnv"] = o.IisExecEnv
 	}
 

@@ -59,7 +59,7 @@ func NewWindowsIISExecutionEnvironmentDTOWithDefaults() *WindowsIISExecutionEnvi
 
 // GetActivations returns the Activations field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetActivations() []ActivationDTO {
-	if o == nil || o.Activations == nil {
+	if o == nil || isNil(o.Activations) {
 		var ret []ActivationDTO
 		return ret
 	}
@@ -69,15 +69,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetActivations() []ActivationDTO {
 // GetActivationsOk returns a tuple with the Activations field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetActivationsOk() ([]ActivationDTO, bool) {
-	if o == nil || o.Activations == nil {
-		return nil, false
+	if o == nil || isNil(o.Activations) {
+    return nil, false
 	}
 	return o.Activations, true
 }
 
 // HasActivations returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasActivations() bool {
-	if o != nil && o.Activations != nil {
+	if o != nil && !isNil(o.Activations) {
 		return true
 	}
 
@@ -91,7 +91,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetActivations(v []ActivationDTO) {
 
 // GetActive returns the Active field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetActive() bool {
-	if o == nil || o.Active == nil {
+	if o == nil || isNil(o.Active) {
 		var ret bool
 		return ret
 	}
@@ -101,15 +101,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetActive() bool {
 // GetActiveOk returns a tuple with the Active field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetActiveOk() (*bool, bool) {
-	if o == nil || o.Active == nil {
-		return nil, false
+	if o == nil || isNil(o.Active) {
+    return nil, false
 	}
 	return o.Active, true
 }
 
 // HasActive returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasActive() bool {
-	if o != nil && o.Active != nil {
+	if o != nil && !isNil(o.Active) {
 		return true
 	}
 
@@ -123,7 +123,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetActive(v bool) {
 
 // GetBindingLocation returns the BindingLocation field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetBindingLocation() LocationDTO {
-	if o == nil || o.BindingLocation == nil {
+	if o == nil || isNil(o.BindingLocation) {
 		var ret LocationDTO
 		return ret
 	}
@@ -133,15 +133,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetBindingLocation() LocationDTO {
 // GetBindingLocationOk returns a tuple with the BindingLocation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetBindingLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.BindingLocation == nil {
-		return nil, false
+	if o == nil || isNil(o.BindingLocation) {
+    return nil, false
 	}
 	return o.BindingLocation, true
 }
 
 // HasBindingLocation returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasBindingLocation() bool {
-	if o != nil && o.BindingLocation != nil {
+	if o != nil && !isNil(o.BindingLocation) {
 		return true
 	}
 
@@ -155,7 +155,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetBindingLocation(v LocationDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -165,15 +165,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -187,7 +187,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -197,15 +197,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -219,7 +219,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -229,15 +229,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -251,7 +251,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -261,15 +261,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -283,7 +283,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetId(v int64) {
 
 // GetInstallDemoApps returns the InstallDemoApps field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetInstallDemoApps() bool {
-	if o == nil || o.InstallDemoApps == nil {
+	if o == nil || isNil(o.InstallDemoApps) {
 		var ret bool
 		return ret
 	}
@@ -293,15 +293,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetInstallDemoApps() bool {
 // GetInstallDemoAppsOk returns a tuple with the InstallDemoApps field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetInstallDemoAppsOk() (*bool, bool) {
-	if o == nil || o.InstallDemoApps == nil {
-		return nil, false
+	if o == nil || isNil(o.InstallDemoApps) {
+    return nil, false
 	}
 	return o.InstallDemoApps, true
 }
 
 // HasInstallDemoApps returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasInstallDemoApps() bool {
-	if o != nil && o.InstallDemoApps != nil {
+	if o != nil && !isNil(o.InstallDemoApps) {
 		return true
 	}
 
@@ -315,7 +315,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetInstallDemoApps(v bool) {
 
 // GetInstallUri returns the InstallUri field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetInstallUri() string {
-	if o == nil || o.InstallUri == nil {
+	if o == nil || isNil(o.InstallUri) {
 		var ret string
 		return ret
 	}
@@ -325,15 +325,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetInstallUri() string {
 // GetInstallUriOk returns a tuple with the InstallUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetInstallUriOk() (*string, bool) {
-	if o == nil || o.InstallUri == nil {
-		return nil, false
+	if o == nil || isNil(o.InstallUri) {
+    return nil, false
 	}
 	return o.InstallUri, true
 }
 
 // HasInstallUri returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasInstallUri() bool {
-	if o != nil && o.InstallUri != nil {
+	if o != nil && !isNil(o.InstallUri) {
 		return true
 	}
 
@@ -347,7 +347,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetInstallUri(v string) {
 
 // GetIsapiExtensionPath returns the IsapiExtensionPath field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetIsapiExtensionPath() string {
-	if o == nil || o.IsapiExtensionPath == nil {
+	if o == nil || isNil(o.IsapiExtensionPath) {
 		var ret string
 		return ret
 	}
@@ -357,15 +357,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetIsapiExtensionPath() string {
 // GetIsapiExtensionPathOk returns a tuple with the IsapiExtensionPath field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetIsapiExtensionPathOk() (*string, bool) {
-	if o == nil || o.IsapiExtensionPath == nil {
-		return nil, false
+	if o == nil || isNil(o.IsapiExtensionPath) {
+    return nil, false
 	}
 	return o.IsapiExtensionPath, true
 }
 
 // HasIsapiExtensionPath returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasIsapiExtensionPath() bool {
-	if o != nil && o.IsapiExtensionPath != nil {
+	if o != nil && !isNil(o.IsapiExtensionPath) {
 		return true
 	}
 
@@ -379,7 +379,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetIsapiExtensionPath(v string) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetLocation() string {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret string
 		return ret
 	}
@@ -389,15 +389,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetLocation() string {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetLocationOk() (*string, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -411,7 +411,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetLocation(v string) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -421,15 +421,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -443,7 +443,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetName(v string) {
 
 // GetOverwriteOriginalSetup returns the OverwriteOriginalSetup field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetOverwriteOriginalSetup() bool {
-	if o == nil || o.OverwriteOriginalSetup == nil {
+	if o == nil || isNil(o.OverwriteOriginalSetup) {
 		var ret bool
 		return ret
 	}
@@ -453,15 +453,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetOverwriteOriginalSetup() bool {
 // GetOverwriteOriginalSetupOk returns a tuple with the OverwriteOriginalSetup field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetOverwriteOriginalSetupOk() (*bool, bool) {
-	if o == nil || o.OverwriteOriginalSetup == nil {
-		return nil, false
+	if o == nil || isNil(o.OverwriteOriginalSetup) {
+    return nil, false
 	}
 	return o.OverwriteOriginalSetup, true
 }
 
 // HasOverwriteOriginalSetup returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasOverwriteOriginalSetup() bool {
-	if o != nil && o.OverwriteOriginalSetup != nil {
+	if o != nil && !isNil(o.OverwriteOriginalSetup) {
 		return true
 	}
 
@@ -475,7 +475,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetOverwriteOriginalSetup(v bool) {
 
 // GetPlatformId returns the PlatformId field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetPlatformId() string {
-	if o == nil || o.PlatformId == nil {
+	if o == nil || isNil(o.PlatformId) {
 		var ret string
 		return ret
 	}
@@ -485,15 +485,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetPlatformId() string {
 // GetPlatformIdOk returns a tuple with the PlatformId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetPlatformIdOk() (*string, bool) {
-	if o == nil || o.PlatformId == nil {
-		return nil, false
+	if o == nil || isNil(o.PlatformId) {
+    return nil, false
 	}
 	return o.PlatformId, true
 }
 
 // HasPlatformId returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasPlatformId() bool {
-	if o != nil && o.PlatformId != nil {
+	if o != nil && !isNil(o.PlatformId) {
 		return true
 	}
 
@@ -507,7 +507,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetPlatformId(v string) {
 
 // GetTargetJDK returns the TargetJDK field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetTargetJDK() string {
-	if o == nil || o.TargetJDK == nil {
+	if o == nil || isNil(o.TargetJDK) {
 		var ret string
 		return ret
 	}
@@ -517,15 +517,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetTargetJDK() string {
 // GetTargetJDKOk returns a tuple with the TargetJDK field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetTargetJDKOk() (*string, bool) {
-	if o == nil || o.TargetJDK == nil {
-		return nil, false
+	if o == nil || isNil(o.TargetJDK) {
+    return nil, false
 	}
 	return o.TargetJDK, true
 }
 
 // HasTargetJDK returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasTargetJDK() bool {
-	if o != nil && o.TargetJDK != nil {
+	if o != nil && !isNil(o.TargetJDK) {
 		return true
 	}
 
@@ -539,7 +539,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetTargetJDK(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -549,15 +549,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -571,7 +571,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetType(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -581,15 +581,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -603,7 +603,7 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *WindowsIISExecutionEnvironmentDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -613,15 +613,15 @@ func (o *WindowsIISExecutionEnvironmentDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *WindowsIISExecutionEnvironmentDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -635,58 +635,58 @@ func (o *WindowsIISExecutionEnvironmentDTO) SetY(v float64) {
 
 func (o WindowsIISExecutionEnvironmentDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Activations != nil {
+	if !isNil(o.Activations) {
 		toSerialize["activations"] = o.Activations
 	}
-	if o.Active != nil {
+	if !isNil(o.Active) {
 		toSerialize["active"] = o.Active
 	}
-	if o.BindingLocation != nil {
+	if !isNil(o.BindingLocation) {
 		toSerialize["bindingLocation"] = o.BindingLocation
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.InstallDemoApps != nil {
+	if !isNil(o.InstallDemoApps) {
 		toSerialize["installDemoApps"] = o.InstallDemoApps
 	}
-	if o.InstallUri != nil {
+	if !isNil(o.InstallUri) {
 		toSerialize["installUri"] = o.InstallUri
 	}
-	if o.IsapiExtensionPath != nil {
+	if !isNil(o.IsapiExtensionPath) {
 		toSerialize["isapiExtensionPath"] = o.IsapiExtensionPath
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.OverwriteOriginalSetup != nil {
+	if !isNil(o.OverwriteOriginalSetup) {
 		toSerialize["overwriteOriginalSetup"] = o.OverwriteOriginalSetup
 	}
-	if o.PlatformId != nil {
+	if !isNil(o.PlatformId) {
 		toSerialize["platformId"] = o.PlatformId
 	}
-	if o.TargetJDK != nil {
+	if !isNil(o.TargetJDK) {
 		toSerialize["targetJDK"] = o.TargetJDK
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

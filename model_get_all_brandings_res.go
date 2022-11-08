@@ -43,7 +43,7 @@ func NewGetAllBrandingsResWithDefaults() *GetAllBrandingsRes {
 
 // GetBrandings returns the Brandings field value if set, zero value otherwise.
 func (o *GetAllBrandingsRes) GetBrandings() []BrandingDefinitionDTO {
-	if o == nil || o.Brandings == nil {
+	if o == nil || isNil(o.Brandings) {
 		var ret []BrandingDefinitionDTO
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *GetAllBrandingsRes) GetBrandings() []BrandingDefinitionDTO {
 // GetBrandingsOk returns a tuple with the Brandings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAllBrandingsRes) GetBrandingsOk() ([]BrandingDefinitionDTO, bool) {
-	if o == nil || o.Brandings == nil {
-		return nil, false
+	if o == nil || isNil(o.Brandings) {
+    return nil, false
 	}
 	return o.Brandings, true
 }
 
 // HasBrandings returns a boolean if a field has been set.
 func (o *GetAllBrandingsRes) HasBrandings() bool {
-	if o != nil && o.Brandings != nil {
+	if o != nil && !isNil(o.Brandings) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *GetAllBrandingsRes) SetBrandings(v []BrandingDefinitionDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetAllBrandingsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *GetAllBrandingsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAllBrandingsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetAllBrandingsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *GetAllBrandingsRes) SetError(v string) {
 
 func (o GetAllBrandingsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Brandings != nil {
+	if !isNil(o.Brandings) {
 		toSerialize["brandings"] = o.Brandings
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
 

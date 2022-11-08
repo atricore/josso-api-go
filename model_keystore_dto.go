@@ -52,7 +52,7 @@ func NewKeystoreDTOWithDefaults() *KeystoreDTO {
 
 // GetCertificateAlias returns the CertificateAlias field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetCertificateAlias() string {
-	if o == nil || o.CertificateAlias == nil {
+	if o == nil || isNil(o.CertificateAlias) {
 		var ret string
 		return ret
 	}
@@ -62,15 +62,15 @@ func (o *KeystoreDTO) GetCertificateAlias() string {
 // GetCertificateAliasOk returns a tuple with the CertificateAlias field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetCertificateAliasOk() (*string, bool) {
-	if o == nil || o.CertificateAlias == nil {
-		return nil, false
+	if o == nil || isNil(o.CertificateAlias) {
+    return nil, false
 	}
 	return o.CertificateAlias, true
 }
 
 // HasCertificateAlias returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasCertificateAlias() bool {
-	if o != nil && o.CertificateAlias != nil {
+	if o != nil && !isNil(o.CertificateAlias) {
 		return true
 	}
 
@@ -84,7 +84,7 @@ func (o *KeystoreDTO) SetCertificateAlias(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -94,15 +94,15 @@ func (o *KeystoreDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -116,7 +116,7 @@ func (o *KeystoreDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -126,15 +126,15 @@ func (o *KeystoreDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -148,7 +148,7 @@ func (o *KeystoreDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -158,15 +158,15 @@ func (o *KeystoreDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -180,7 +180,7 @@ func (o *KeystoreDTO) SetId(v int64) {
 
 // GetKeystorePassOnly returns the KeystorePassOnly field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetKeystorePassOnly() bool {
-	if o == nil || o.KeystorePassOnly == nil {
+	if o == nil || isNil(o.KeystorePassOnly) {
 		var ret bool
 		return ret
 	}
@@ -190,15 +190,15 @@ func (o *KeystoreDTO) GetKeystorePassOnly() bool {
 // GetKeystorePassOnlyOk returns a tuple with the KeystorePassOnly field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetKeystorePassOnlyOk() (*bool, bool) {
-	if o == nil || o.KeystorePassOnly == nil {
-		return nil, false
+	if o == nil || isNil(o.KeystorePassOnly) {
+    return nil, false
 	}
 	return o.KeystorePassOnly, true
 }
 
 // HasKeystorePassOnly returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasKeystorePassOnly() bool {
-	if o != nil && o.KeystorePassOnly != nil {
+	if o != nil && !isNil(o.KeystorePassOnly) {
 		return true
 	}
 
@@ -212,7 +212,7 @@ func (o *KeystoreDTO) SetKeystorePassOnly(v bool) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -222,15 +222,15 @@ func (o *KeystoreDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -244,7 +244,7 @@ func (o *KeystoreDTO) SetName(v string) {
 
 // GetPassword returns the Password field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetPassword() string {
-	if o == nil || o.Password == nil {
+	if o == nil || isNil(o.Password) {
 		var ret string
 		return ret
 	}
@@ -254,15 +254,15 @@ func (o *KeystoreDTO) GetPassword() string {
 // GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
-		return nil, false
+	if o == nil || isNil(o.Password) {
+    return nil, false
 	}
 	return o.Password, true
 }
 
 // HasPassword returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasPassword() bool {
-	if o != nil && o.Password != nil {
+	if o != nil && !isNil(o.Password) {
 		return true
 	}
 
@@ -276,7 +276,7 @@ func (o *KeystoreDTO) SetPassword(v string) {
 
 // GetPrivateKeyName returns the PrivateKeyName field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetPrivateKeyName() string {
-	if o == nil || o.PrivateKeyName == nil {
+	if o == nil || isNil(o.PrivateKeyName) {
 		var ret string
 		return ret
 	}
@@ -286,15 +286,15 @@ func (o *KeystoreDTO) GetPrivateKeyName() string {
 // GetPrivateKeyNameOk returns a tuple with the PrivateKeyName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetPrivateKeyNameOk() (*string, bool) {
-	if o == nil || o.PrivateKeyName == nil {
-		return nil, false
+	if o == nil || isNil(o.PrivateKeyName) {
+    return nil, false
 	}
 	return o.PrivateKeyName, true
 }
 
 // HasPrivateKeyName returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasPrivateKeyName() bool {
-	if o != nil && o.PrivateKeyName != nil {
+	if o != nil && !isNil(o.PrivateKeyName) {
 		return true
 	}
 
@@ -308,7 +308,7 @@ func (o *KeystoreDTO) SetPrivateKeyName(v string) {
 
 // GetPrivateKeyPassword returns the PrivateKeyPassword field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetPrivateKeyPassword() string {
-	if o == nil || o.PrivateKeyPassword == nil {
+	if o == nil || isNil(o.PrivateKeyPassword) {
 		var ret string
 		return ret
 	}
@@ -318,15 +318,15 @@ func (o *KeystoreDTO) GetPrivateKeyPassword() string {
 // GetPrivateKeyPasswordOk returns a tuple with the PrivateKeyPassword field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetPrivateKeyPasswordOk() (*string, bool) {
-	if o == nil || o.PrivateKeyPassword == nil {
-		return nil, false
+	if o == nil || isNil(o.PrivateKeyPassword) {
+    return nil, false
 	}
 	return o.PrivateKeyPassword, true
 }
 
 // HasPrivateKeyPassword returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasPrivateKeyPassword() bool {
-	if o != nil && o.PrivateKeyPassword != nil {
+	if o != nil && !isNil(o.PrivateKeyPassword) {
 		return true
 	}
 
@@ -340,7 +340,7 @@ func (o *KeystoreDTO) SetPrivateKeyPassword(v string) {
 
 // GetStore returns the Store field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetStore() ResourceDTO {
-	if o == nil || o.Store == nil {
+	if o == nil || isNil(o.Store) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -350,15 +350,15 @@ func (o *KeystoreDTO) GetStore() ResourceDTO {
 // GetStoreOk returns a tuple with the Store field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetStoreOk() (*ResourceDTO, bool) {
-	if o == nil || o.Store == nil {
-		return nil, false
+	if o == nil || isNil(o.Store) {
+    return nil, false
 	}
 	return o.Store, true
 }
 
 // HasStore returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasStore() bool {
-	if o != nil && o.Store != nil {
+	if o != nil && !isNil(o.Store) {
 		return true
 	}
 
@@ -372,7 +372,7 @@ func (o *KeystoreDTO) SetStore(v ResourceDTO) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *KeystoreDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -382,15 +382,15 @@ func (o *KeystoreDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KeystoreDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *KeystoreDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -404,37 +404,37 @@ func (o *KeystoreDTO) SetType(v string) {
 
 func (o KeystoreDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.CertificateAlias != nil {
+	if !isNil(o.CertificateAlias) {
 		toSerialize["certificateAlias"] = o.CertificateAlias
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.KeystorePassOnly != nil {
+	if !isNil(o.KeystorePassOnly) {
 		toSerialize["keystorePassOnly"] = o.KeystorePassOnly
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Password != nil {
+	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
 	}
-	if o.PrivateKeyName != nil {
+	if !isNil(o.PrivateKeyName) {
 		toSerialize["privateKeyName"] = o.PrivateKeyName
 	}
-	if o.PrivateKeyPassword != nil {
+	if !isNil(o.PrivateKeyPassword) {
 		toSerialize["privateKeyPassword"] = o.PrivateKeyPassword
 	}
-	if o.Store != nil {
+	if !isNil(o.Store) {
 		toSerialize["store"] = o.Store
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

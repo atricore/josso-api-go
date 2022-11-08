@@ -47,7 +47,7 @@ func NewBrandingDefinitionDTOWithDefaults() *BrandingDefinitionDTO {
 
 // GetDefaultLocale returns the DefaultLocale field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetDefaultLocale() string {
-	if o == nil || o.DefaultLocale == nil {
+	if o == nil || isNil(o.DefaultLocale) {
 		var ret string
 		return ret
 	}
@@ -57,15 +57,15 @@ func (o *BrandingDefinitionDTO) GetDefaultLocale() string {
 // GetDefaultLocaleOk returns a tuple with the DefaultLocale field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetDefaultLocaleOk() (*string, bool) {
-	if o == nil || o.DefaultLocale == nil {
-		return nil, false
+	if o == nil || isNil(o.DefaultLocale) {
+    return nil, false
 	}
 	return o.DefaultLocale, true
 }
 
 // HasDefaultLocale returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasDefaultLocale() bool {
-	if o != nil && o.DefaultLocale != nil {
+	if o != nil && !isNil(o.DefaultLocale) {
 		return true
 	}
 
@@ -79,7 +79,7 @@ func (o *BrandingDefinitionDTO) SetDefaultLocale(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -89,15 +89,15 @@ func (o *BrandingDefinitionDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -111,7 +111,7 @@ func (o *BrandingDefinitionDTO) SetDescription(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -121,15 +121,15 @@ func (o *BrandingDefinitionDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -143,7 +143,7 @@ func (o *BrandingDefinitionDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -153,15 +153,15 @@ func (o *BrandingDefinitionDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -175,7 +175,7 @@ func (o *BrandingDefinitionDTO) SetName(v string) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -185,15 +185,15 @@ func (o *BrandingDefinitionDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -207,7 +207,7 @@ func (o *BrandingDefinitionDTO) SetType(v string) {
 
 // GetWebBrandingId returns the WebBrandingId field value if set, zero value otherwise.
 func (o *BrandingDefinitionDTO) GetWebBrandingId() string {
-	if o == nil || o.WebBrandingId == nil {
+	if o == nil || isNil(o.WebBrandingId) {
 		var ret string
 		return ret
 	}
@@ -217,15 +217,15 @@ func (o *BrandingDefinitionDTO) GetWebBrandingId() string {
 // GetWebBrandingIdOk returns a tuple with the WebBrandingId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *BrandingDefinitionDTO) GetWebBrandingIdOk() (*string, bool) {
-	if o == nil || o.WebBrandingId == nil {
-		return nil, false
+	if o == nil || isNil(o.WebBrandingId) {
+    return nil, false
 	}
 	return o.WebBrandingId, true
 }
 
 // HasWebBrandingId returns a boolean if a field has been set.
 func (o *BrandingDefinitionDTO) HasWebBrandingId() bool {
-	if o != nil && o.WebBrandingId != nil {
+	if o != nil && !isNil(o.WebBrandingId) {
 		return true
 	}
 
@@ -239,22 +239,22 @@ func (o *BrandingDefinitionDTO) SetWebBrandingId(v string) {
 
 func (o BrandingDefinitionDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DefaultLocale != nil {
+	if !isNil(o.DefaultLocale) {
 		toSerialize["defaultLocale"] = o.DefaultLocale
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.WebBrandingId != nil {
+	if !isNil(o.WebBrandingId) {
 		toSerialize["webBrandingId"] = o.WebBrandingId
 	}
 

@@ -48,7 +48,7 @@ func NewCustomClassDTOWithDefaults() *CustomClassDTO {
 
 // GetCardinality returns the Cardinality field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetCardinality() string {
-	if o == nil || o.Cardinality == nil {
+	if o == nil || isNil(o.Cardinality) {
 		var ret string
 		return ret
 	}
@@ -58,15 +58,15 @@ func (o *CustomClassDTO) GetCardinality() string {
 // GetCardinalityOk returns a tuple with the Cardinality field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetCardinalityOk() (*string, bool) {
-	if o == nil || o.Cardinality == nil {
-		return nil, false
+	if o == nil || isNil(o.Cardinality) {
+    return nil, false
 	}
 	return o.Cardinality, true
 }
 
 // HasCardinality returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasCardinality() bool {
-	if o != nil && o.Cardinality != nil {
+	if o != nil && !isNil(o.Cardinality) {
 		return true
 	}
 
@@ -80,7 +80,7 @@ func (o *CustomClassDTO) SetCardinality(v string) {
 
 // GetFqcn returns the Fqcn field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetFqcn() string {
-	if o == nil || o.Fqcn == nil {
+	if o == nil || isNil(o.Fqcn) {
 		var ret string
 		return ret
 	}
@@ -90,15 +90,15 @@ func (o *CustomClassDTO) GetFqcn() string {
 // GetFqcnOk returns a tuple with the Fqcn field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetFqcnOk() (*string, bool) {
-	if o == nil || o.Fqcn == nil {
-		return nil, false
+	if o == nil || isNil(o.Fqcn) {
+    return nil, false
 	}
 	return o.Fqcn, true
 }
 
 // HasFqcn returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasFqcn() bool {
-	if o != nil && o.Fqcn != nil {
+	if o != nil && !isNil(o.Fqcn) {
 		return true
 	}
 
@@ -112,7 +112,7 @@ func (o *CustomClassDTO) SetFqcn(v string) {
 
 // GetOsgiFilter returns the OsgiFilter field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetOsgiFilter() string {
-	if o == nil || o.OsgiFilter == nil {
+	if o == nil || isNil(o.OsgiFilter) {
 		var ret string
 		return ret
 	}
@@ -122,15 +122,15 @@ func (o *CustomClassDTO) GetOsgiFilter() string {
 // GetOsgiFilterOk returns a tuple with the OsgiFilter field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetOsgiFilterOk() (*string, bool) {
-	if o == nil || o.OsgiFilter == nil {
-		return nil, false
+	if o == nil || isNil(o.OsgiFilter) {
+    return nil, false
 	}
 	return o.OsgiFilter, true
 }
 
 // HasOsgiFilter returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasOsgiFilter() bool {
-	if o != nil && o.OsgiFilter != nil {
+	if o != nil && !isNil(o.OsgiFilter) {
 		return true
 	}
 
@@ -144,7 +144,7 @@ func (o *CustomClassDTO) SetOsgiFilter(v string) {
 
 // GetOsgiService returns the OsgiService field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetOsgiService() bool {
-	if o == nil || o.OsgiService == nil {
+	if o == nil || isNil(o.OsgiService) {
 		var ret bool
 		return ret
 	}
@@ -154,15 +154,15 @@ func (o *CustomClassDTO) GetOsgiService() bool {
 // GetOsgiServiceOk returns a tuple with the OsgiService field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetOsgiServiceOk() (*bool, bool) {
-	if o == nil || o.OsgiService == nil {
-		return nil, false
+	if o == nil || isNil(o.OsgiService) {
+    return nil, false
 	}
 	return o.OsgiService, true
 }
 
 // HasOsgiService returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasOsgiService() bool {
-	if o != nil && o.OsgiService != nil {
+	if o != nil && !isNil(o.OsgiService) {
 		return true
 	}
 
@@ -176,7 +176,7 @@ func (o *CustomClassDTO) SetOsgiService(v bool) {
 
 // GetProperties returns the Properties field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetProperties() []CustomClassPropertyDTO {
-	if o == nil || o.Properties == nil {
+	if o == nil || isNil(o.Properties) {
 		var ret []CustomClassPropertyDTO
 		return ret
 	}
@@ -186,15 +186,15 @@ func (o *CustomClassDTO) GetProperties() []CustomClassPropertyDTO {
 // GetPropertiesOk returns a tuple with the Properties field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetPropertiesOk() ([]CustomClassPropertyDTO, bool) {
-	if o == nil || o.Properties == nil {
-		return nil, false
+	if o == nil || isNil(o.Properties) {
+    return nil, false
 	}
 	return o.Properties, true
 }
 
 // HasProperties returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasProperties() bool {
-	if o != nil && o.Properties != nil {
+	if o != nil && !isNil(o.Properties) {
 		return true
 	}
 
@@ -208,7 +208,7 @@ func (o *CustomClassDTO) SetProperties(v []CustomClassPropertyDTO) {
 
 // GetTimeoutSecs returns the TimeoutSecs field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetTimeoutSecs() int32 {
-	if o == nil || o.TimeoutSecs == nil {
+	if o == nil || isNil(o.TimeoutSecs) {
 		var ret int32
 		return ret
 	}
@@ -218,15 +218,15 @@ func (o *CustomClassDTO) GetTimeoutSecs() int32 {
 // GetTimeoutSecsOk returns a tuple with the TimeoutSecs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetTimeoutSecsOk() (*int32, bool) {
-	if o == nil || o.TimeoutSecs == nil {
-		return nil, false
+	if o == nil || isNil(o.TimeoutSecs) {
+    return nil, false
 	}
 	return o.TimeoutSecs, true
 }
 
 // HasTimeoutSecs returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasTimeoutSecs() bool {
-	if o != nil && o.TimeoutSecs != nil {
+	if o != nil && !isNil(o.TimeoutSecs) {
 		return true
 	}
 
@@ -240,7 +240,7 @@ func (o *CustomClassDTO) SetTimeoutSecs(v int32) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *CustomClassDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -250,15 +250,15 @@ func (o *CustomClassDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CustomClassDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *CustomClassDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -272,25 +272,25 @@ func (o *CustomClassDTO) SetType(v string) {
 
 func (o CustomClassDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Cardinality != nil {
+	if !isNil(o.Cardinality) {
 		toSerialize["cardinality"] = o.Cardinality
 	}
-	if o.Fqcn != nil {
+	if !isNil(o.Fqcn) {
 		toSerialize["fqcn"] = o.Fqcn
 	}
-	if o.OsgiFilter != nil {
+	if !isNil(o.OsgiFilter) {
 		toSerialize["osgiFilter"] = o.OsgiFilter
 	}
-	if o.OsgiService != nil {
+	if !isNil(o.OsgiService) {
 		toSerialize["osgiService"] = o.OsgiService
 	}
-	if o.Properties != nil {
+	if !isNil(o.Properties) {
 		toSerialize["properties"] = o.Properties
 	}
-	if o.TimeoutSecs != nil {
+	if !isNil(o.TimeoutSecs) {
 		toSerialize["timeoutSecs"] = o.TimeoutSecs
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

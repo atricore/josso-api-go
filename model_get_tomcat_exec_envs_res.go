@@ -44,7 +44,7 @@ func NewGetTomcatExecEnvsResWithDefaults() *GetTomcatExecEnvsRes {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetTomcatExecEnvsRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *GetTomcatExecEnvsRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTomcatExecEnvsRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetTomcatExecEnvsRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *GetTomcatExecEnvsRes) SetError(v string) {
 
 // GetTomcatExecEnv returns the TomcatExecEnv field value if set, zero value otherwise.
 func (o *GetTomcatExecEnvsRes) GetTomcatExecEnv() []TomcatExecutionEnvironmentDTO {
-	if o == nil || o.TomcatExecEnv == nil {
+	if o == nil || isNil(o.TomcatExecEnv) {
 		var ret []TomcatExecutionEnvironmentDTO
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *GetTomcatExecEnvsRes) GetTomcatExecEnv() []TomcatExecutionEnvironmentDT
 // GetTomcatExecEnvOk returns a tuple with the TomcatExecEnv field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTomcatExecEnvsRes) GetTomcatExecEnvOk() ([]TomcatExecutionEnvironmentDTO, bool) {
-	if o == nil || o.TomcatExecEnv == nil {
-		return nil, false
+	if o == nil || isNil(o.TomcatExecEnv) {
+    return nil, false
 	}
 	return o.TomcatExecEnv, true
 }
 
 // HasTomcatExecEnv returns a boolean if a field has been set.
 func (o *GetTomcatExecEnvsRes) HasTomcatExecEnv() bool {
-	if o != nil && o.TomcatExecEnv != nil {
+	if o != nil && !isNil(o.TomcatExecEnv) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *GetTomcatExecEnvsRes) SetTomcatExecEnv(v []TomcatExecutionEnvironmentDT
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetTomcatExecEnvsRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *GetTomcatExecEnvsRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetTomcatExecEnvsRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetTomcatExecEnvsRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *GetTomcatExecEnvsRes) SetValidationErrors(v []string) {
 
 func (o GetTomcatExecEnvsRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.TomcatExecEnv != nil {
+	if !isNil(o.TomcatExecEnv) {
 		toSerialize["tomcatExecEnv"] = o.TomcatExecEnv
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

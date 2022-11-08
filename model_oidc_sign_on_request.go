@@ -46,7 +46,7 @@ func NewOIDCSignOnRequestWithDefaults() *OIDCSignOnRequest {
 
 // GetClientId returns the ClientId field value if set, zero value otherwise.
 func (o *OIDCSignOnRequest) GetClientId() string {
-	if o == nil || o.ClientId == nil {
+	if o == nil || isNil(o.ClientId) {
 		var ret string
 		return ret
 	}
@@ -56,15 +56,15 @@ func (o *OIDCSignOnRequest) GetClientId() string {
 // GetClientIdOk returns a tuple with the ClientId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnRequest) GetClientIdOk() (*string, bool) {
-	if o == nil || o.ClientId == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientId) {
+    return nil, false
 	}
 	return o.ClientId, true
 }
 
 // HasClientId returns a boolean if a field has been set.
 func (o *OIDCSignOnRequest) HasClientId() bool {
-	if o != nil && o.ClientId != nil {
+	if o != nil && !isNil(o.ClientId) {
 		return true
 	}
 
@@ -78,7 +78,7 @@ func (o *OIDCSignOnRequest) SetClientId(v string) {
 
 // GetPassword returns the Password field value if set, zero value otherwise.
 func (o *OIDCSignOnRequest) GetPassword() string {
-	if o == nil || o.Password == nil {
+	if o == nil || isNil(o.Password) {
 		var ret string
 		return ret
 	}
@@ -88,15 +88,15 @@ func (o *OIDCSignOnRequest) GetPassword() string {
 // GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnRequest) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
-		return nil, false
+	if o == nil || isNil(o.Password) {
+    return nil, false
 	}
 	return o.Password, true
 }
 
 // HasPassword returns a boolean if a field has been set.
 func (o *OIDCSignOnRequest) HasPassword() bool {
-	if o != nil && o.Password != nil {
+	if o != nil && !isNil(o.Password) {
 		return true
 	}
 
@@ -110,7 +110,7 @@ func (o *OIDCSignOnRequest) SetPassword(v string) {
 
 // GetSecret returns the Secret field value if set, zero value otherwise.
 func (o *OIDCSignOnRequest) GetSecret() string {
-	if o == nil || o.Secret == nil {
+	if o == nil || isNil(o.Secret) {
 		var ret string
 		return ret
 	}
@@ -120,15 +120,15 @@ func (o *OIDCSignOnRequest) GetSecret() string {
 // GetSecretOk returns a tuple with the Secret field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnRequest) GetSecretOk() (*string, bool) {
-	if o == nil || o.Secret == nil {
-		return nil, false
+	if o == nil || isNil(o.Secret) {
+    return nil, false
 	}
 	return o.Secret, true
 }
 
 // HasSecret returns a boolean if a field has been set.
 func (o *OIDCSignOnRequest) HasSecret() bool {
-	if o != nil && o.Secret != nil {
+	if o != nil && !isNil(o.Secret) {
 		return true
 	}
 
@@ -142,7 +142,7 @@ func (o *OIDCSignOnRequest) SetSecret(v string) {
 
 // GetServer returns the Server field value if set, zero value otherwise.
 func (o *OIDCSignOnRequest) GetServer() ServerContext {
-	if o == nil || o.Server == nil {
+	if o == nil || isNil(o.Server) {
 		var ret ServerContext
 		return ret
 	}
@@ -152,15 +152,15 @@ func (o *OIDCSignOnRequest) GetServer() ServerContext {
 // GetServerOk returns a tuple with the Server field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnRequest) GetServerOk() (*ServerContext, bool) {
-	if o == nil || o.Server == nil {
-		return nil, false
+	if o == nil || isNil(o.Server) {
+    return nil, false
 	}
 	return o.Server, true
 }
 
 // HasServer returns a boolean if a field has been set.
 func (o *OIDCSignOnRequest) HasServer() bool {
-	if o != nil && o.Server != nil {
+	if o != nil && !isNil(o.Server) {
 		return true
 	}
 
@@ -174,7 +174,7 @@ func (o *OIDCSignOnRequest) SetServer(v ServerContext) {
 
 // GetUsername returns the Username field value if set, zero value otherwise.
 func (o *OIDCSignOnRequest) GetUsername() string {
-	if o == nil || o.Username == nil {
+	if o == nil || isNil(o.Username) {
 		var ret string
 		return ret
 	}
@@ -184,15 +184,15 @@ func (o *OIDCSignOnRequest) GetUsername() string {
 // GetUsernameOk returns a tuple with the Username field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *OIDCSignOnRequest) GetUsernameOk() (*string, bool) {
-	if o == nil || o.Username == nil {
-		return nil, false
+	if o == nil || isNil(o.Username) {
+    return nil, false
 	}
 	return o.Username, true
 }
 
 // HasUsername returns a boolean if a field has been set.
 func (o *OIDCSignOnRequest) HasUsername() bool {
-	if o != nil && o.Username != nil {
+	if o != nil && !isNil(o.Username) {
 		return true
 	}
 
@@ -206,19 +206,19 @@ func (o *OIDCSignOnRequest) SetUsername(v string) {
 
 func (o OIDCSignOnRequest) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.ClientId != nil {
+	if !isNil(o.ClientId) {
 		toSerialize["clientId"] = o.ClientId
 	}
-	if o.Password != nil {
+	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
 	}
-	if o.Secret != nil {
+	if !isNil(o.Secret) {
 		toSerialize["secret"] = o.Secret
 	}
-	if o.Server != nil {
+	if !isNil(o.Server) {
 		toSerialize["server"] = o.Server
 	}
-	if o.Username != nil {
+	if !isNil(o.Username) {
 		toSerialize["username"] = o.Username
 	}
 

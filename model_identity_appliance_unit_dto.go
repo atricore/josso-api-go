@@ -50,7 +50,7 @@ func NewIdentityApplianceUnitDTOWithDefaults() *IdentityApplianceUnitDTO {
 
 // GetBundleName returns the BundleName field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetBundleName() string {
-	if o == nil || o.BundleName == nil {
+	if o == nil || isNil(o.BundleName) {
 		var ret string
 		return ret
 	}
@@ -60,15 +60,15 @@ func (o *IdentityApplianceUnitDTO) GetBundleName() string {
 // GetBundleNameOk returns a tuple with the BundleName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetBundleNameOk() (*string, bool) {
-	if o == nil || o.BundleName == nil {
-		return nil, false
+	if o == nil || isNil(o.BundleName) {
+    return nil, false
 	}
 	return o.BundleName, true
 }
 
 // HasBundleName returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasBundleName() bool {
-	if o != nil && o.BundleName != nil {
+	if o != nil && !isNil(o.BundleName) {
 		return true
 	}
 
@@ -82,7 +82,7 @@ func (o *IdentityApplianceUnitDTO) SetBundleName(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -92,15 +92,15 @@ func (o *IdentityApplianceUnitDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -114,7 +114,7 @@ func (o *IdentityApplianceUnitDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -124,15 +124,15 @@ func (o *IdentityApplianceUnitDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -146,7 +146,7 @@ func (o *IdentityApplianceUnitDTO) SetElementId(v string) {
 
 // GetGroup returns the Group field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetGroup() string {
-	if o == nil || o.Group == nil {
+	if o == nil || isNil(o.Group) {
 		var ret string
 		return ret
 	}
@@ -156,15 +156,15 @@ func (o *IdentityApplianceUnitDTO) GetGroup() string {
 // GetGroupOk returns a tuple with the Group field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetGroupOk() (*string, bool) {
-	if o == nil || o.Group == nil {
-		return nil, false
+	if o == nil || isNil(o.Group) {
+    return nil, false
 	}
 	return o.Group, true
 }
 
 // HasGroup returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasGroup() bool {
-	if o != nil && o.Group != nil {
+	if o != nil && !isNil(o.Group) {
 		return true
 	}
 
@@ -178,7 +178,7 @@ func (o *IdentityApplianceUnitDTO) SetGroup(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -188,15 +188,15 @@ func (o *IdentityApplianceUnitDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -210,7 +210,7 @@ func (o *IdentityApplianceUnitDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -220,15 +220,15 @@ func (o *IdentityApplianceUnitDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -242,7 +242,7 @@ func (o *IdentityApplianceUnitDTO) SetName(v string) {
 
 // GetProviders returns the Providers field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetProviders() []ProviderDTO {
-	if o == nil || o.Providers == nil {
+	if o == nil || isNil(o.Providers) {
 		var ret []ProviderDTO
 		return ret
 	}
@@ -252,15 +252,15 @@ func (o *IdentityApplianceUnitDTO) GetProviders() []ProviderDTO {
 // GetProvidersOk returns a tuple with the Providers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetProvidersOk() ([]ProviderDTO, bool) {
-	if o == nil || o.Providers == nil {
-		return nil, false
+	if o == nil || isNil(o.Providers) {
+    return nil, false
 	}
 	return o.Providers, true
 }
 
 // HasProviders returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasProviders() bool {
-	if o != nil && o.Providers != nil {
+	if o != nil && !isNil(o.Providers) {
 		return true
 	}
 
@@ -274,7 +274,7 @@ func (o *IdentityApplianceUnitDTO) SetProviders(v []ProviderDTO) {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -284,15 +284,15 @@ func (o *IdentityApplianceUnitDTO) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -306,7 +306,7 @@ func (o *IdentityApplianceUnitDTO) SetType(v string) {
 
 // GetVersion returns the Version field value if set, zero value otherwise.
 func (o *IdentityApplianceUnitDTO) GetVersion() string {
-	if o == nil || o.Version == nil {
+	if o == nil || isNil(o.Version) {
 		var ret string
 		return ret
 	}
@@ -316,15 +316,15 @@ func (o *IdentityApplianceUnitDTO) GetVersion() string {
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceUnitDTO) GetVersionOk() (*string, bool) {
-	if o == nil || o.Version == nil {
-		return nil, false
+	if o == nil || isNil(o.Version) {
+    return nil, false
 	}
 	return o.Version, true
 }
 
 // HasVersion returns a boolean if a field has been set.
 func (o *IdentityApplianceUnitDTO) HasVersion() bool {
-	if o != nil && o.Version != nil {
+	if o != nil && !isNil(o.Version) {
 		return true
 	}
 
@@ -338,31 +338,31 @@ func (o *IdentityApplianceUnitDTO) SetVersion(v string) {
 
 func (o IdentityApplianceUnitDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.BundleName != nil {
+	if !isNil(o.BundleName) {
 		toSerialize["bundleName"] = o.BundleName
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Group != nil {
+	if !isNil(o.Group) {
 		toSerialize["group"] = o.Group
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Providers != nil {
+	if !isNil(o.Providers) {
 		toSerialize["providers"] = o.Providers
 	}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
-	if o.Version != nil {
+	if !isNil(o.Version) {
 		toSerialize["version"] = o.Version
 	}
 

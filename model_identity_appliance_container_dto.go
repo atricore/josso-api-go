@@ -44,7 +44,7 @@ func NewIdentityApplianceContainerDTOWithDefaults() *IdentityApplianceContainerD
 
 // GetAppliance returns the Appliance field value if set, zero value otherwise.
 func (o *IdentityApplianceContainerDTO) GetAppliance() IdentityApplianceDTO {
-	if o == nil || o.Appliance == nil {
+	if o == nil || isNil(o.Appliance) {
 		var ret IdentityApplianceDTO
 		return ret
 	}
@@ -54,15 +54,15 @@ func (o *IdentityApplianceContainerDTO) GetAppliance() IdentityApplianceDTO {
 // GetApplianceOk returns a tuple with the Appliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceContainerDTO) GetApplianceOk() (*IdentityApplianceDTO, bool) {
-	if o == nil || o.Appliance == nil {
-		return nil, false
+	if o == nil || isNil(o.Appliance) {
+    return nil, false
 	}
 	return o.Appliance, true
 }
 
 // HasAppliance returns a boolean if a field has been set.
 func (o *IdentityApplianceContainerDTO) HasAppliance() bool {
-	if o != nil && o.Appliance != nil {
+	if o != nil && !isNil(o.Appliance) {
 		return true
 	}
 
@@ -76,7 +76,7 @@ func (o *IdentityApplianceContainerDTO) SetAppliance(v IdentityApplianceDTO) {
 
 // GetIdSources returns the IdSources field value if set, zero value otherwise.
 func (o *IdentityApplianceContainerDTO) GetIdSources() []string {
-	if o == nil || o.IdSources == nil {
+	if o == nil || isNil(o.IdSources) {
 		var ret []string
 		return ret
 	}
@@ -86,15 +86,15 @@ func (o *IdentityApplianceContainerDTO) GetIdSources() []string {
 // GetIdSourcesOk returns a tuple with the IdSources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceContainerDTO) GetIdSourcesOk() ([]string, bool) {
-	if o == nil || o.IdSources == nil {
-		return nil, false
+	if o == nil || isNil(o.IdSources) {
+    return nil, false
 	}
 	return o.IdSources, true
 }
 
 // HasIdSources returns a boolean if a field has been set.
 func (o *IdentityApplianceContainerDTO) HasIdSources() bool {
-	if o != nil && o.IdSources != nil {
+	if o != nil && !isNil(o.IdSources) {
 		return true
 	}
 
@@ -108,7 +108,7 @@ func (o *IdentityApplianceContainerDTO) SetIdSources(v []string) {
 
 // GetProviders returns the Providers field value if set, zero value otherwise.
 func (o *IdentityApplianceContainerDTO) GetProviders() []string {
-	if o == nil || o.Providers == nil {
+	if o == nil || isNil(o.Providers) {
 		var ret []string
 		return ret
 	}
@@ -118,15 +118,15 @@ func (o *IdentityApplianceContainerDTO) GetProviders() []string {
 // GetProvidersOk returns a tuple with the Providers field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceContainerDTO) GetProvidersOk() ([]string, bool) {
-	if o == nil || o.Providers == nil {
-		return nil, false
+	if o == nil || isNil(o.Providers) {
+    return nil, false
 	}
 	return o.Providers, true
 }
 
 // HasProviders returns a boolean if a field has been set.
 func (o *IdentityApplianceContainerDTO) HasProviders() bool {
-	if o != nil && o.Providers != nil {
+	if o != nil && !isNil(o.Providers) {
 		return true
 	}
 
@@ -140,13 +140,13 @@ func (o *IdentityApplianceContainerDTO) SetProviders(v []string) {
 
 func (o IdentityApplianceContainerDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Appliance != nil {
+	if !isNil(o.Appliance) {
 		toSerialize["appliance"] = o.Appliance
 	}
-	if o.IdSources != nil {
+	if !isNil(o.IdSources) {
 		toSerialize["idSources"] = o.IdSources
 	}
-	if o.Providers != nil {
+	if !isNil(o.Providers) {
 		toSerialize["providers"] = o.Providers
 	}
 

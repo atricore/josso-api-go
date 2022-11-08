@@ -67,7 +67,7 @@ func NewDbIdentitySourceDTOWithDefaults() *DbIdentitySourceDTO {
 
 // GetAcquireIncrement returns the AcquireIncrement field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetAcquireIncrement() int32 {
-	if o == nil || o.AcquireIncrement == nil {
+	if o == nil || isNil(o.AcquireIncrement) {
 		var ret int32
 		return ret
 	}
@@ -77,15 +77,15 @@ func (o *DbIdentitySourceDTO) GetAcquireIncrement() int32 {
 // GetAcquireIncrementOk returns a tuple with the AcquireIncrement field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetAcquireIncrementOk() (*int32, bool) {
-	if o == nil || o.AcquireIncrement == nil {
-		return nil, false
+	if o == nil || isNil(o.AcquireIncrement) {
+    return nil, false
 	}
 	return o.AcquireIncrement, true
 }
 
 // HasAcquireIncrement returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasAcquireIncrement() bool {
-	if o != nil && o.AcquireIncrement != nil {
+	if o != nil && !isNil(o.AcquireIncrement) {
 		return true
 	}
 
@@ -99,7 +99,7 @@ func (o *DbIdentitySourceDTO) SetAcquireIncrement(v int32) {
 
 // GetAdmin returns the Admin field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetAdmin() string {
-	if o == nil || o.Admin == nil {
+	if o == nil || isNil(o.Admin) {
 		var ret string
 		return ret
 	}
@@ -109,15 +109,15 @@ func (o *DbIdentitySourceDTO) GetAdmin() string {
 // GetAdminOk returns a tuple with the Admin field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetAdminOk() (*string, bool) {
-	if o == nil || o.Admin == nil {
-		return nil, false
+	if o == nil || isNil(o.Admin) {
+    return nil, false
 	}
 	return o.Admin, true
 }
 
 // HasAdmin returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasAdmin() bool {
-	if o != nil && o.Admin != nil {
+	if o != nil && !isNil(o.Admin) {
 		return true
 	}
 
@@ -131,7 +131,7 @@ func (o *DbIdentitySourceDTO) SetAdmin(v string) {
 
 // GetConnectionUrl returns the ConnectionUrl field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetConnectionUrl() string {
-	if o == nil || o.ConnectionUrl == nil {
+	if o == nil || isNil(o.ConnectionUrl) {
 		var ret string
 		return ret
 	}
@@ -141,15 +141,15 @@ func (o *DbIdentitySourceDTO) GetConnectionUrl() string {
 // GetConnectionUrlOk returns a tuple with the ConnectionUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetConnectionUrlOk() (*string, bool) {
-	if o == nil || o.ConnectionUrl == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionUrl) {
+    return nil, false
 	}
 	return o.ConnectionUrl, true
 }
 
 // HasConnectionUrl returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasConnectionUrl() bool {
-	if o != nil && o.ConnectionUrl != nil {
+	if o != nil && !isNil(o.ConnectionUrl) {
 		return true
 	}
 
@@ -163,7 +163,7 @@ func (o *DbIdentitySourceDTO) SetConnectionUrl(v string) {
 
 // GetCredentialsQueryString returns the CredentialsQueryString field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetCredentialsQueryString() string {
-	if o == nil || o.CredentialsQueryString == nil {
+	if o == nil || isNil(o.CredentialsQueryString) {
 		var ret string
 		return ret
 	}
@@ -173,15 +173,15 @@ func (o *DbIdentitySourceDTO) GetCredentialsQueryString() string {
 // GetCredentialsQueryStringOk returns a tuple with the CredentialsQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetCredentialsQueryStringOk() (*string, bool) {
-	if o == nil || o.CredentialsQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.CredentialsQueryString) {
+    return nil, false
 	}
 	return o.CredentialsQueryString, true
 }
 
 // HasCredentialsQueryString returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasCredentialsQueryString() bool {
-	if o != nil && o.CredentialsQueryString != nil {
+	if o != nil && !isNil(o.CredentialsQueryString) {
 		return true
 	}
 
@@ -195,7 +195,7 @@ func (o *DbIdentitySourceDTO) SetCredentialsQueryString(v string) {
 
 // GetCustomClass returns the CustomClass field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetCustomClass() CustomClassDTO {
-	if o == nil || o.CustomClass == nil {
+	if o == nil || isNil(o.CustomClass) {
 		var ret CustomClassDTO
 		return ret
 	}
@@ -205,15 +205,15 @@ func (o *DbIdentitySourceDTO) GetCustomClass() CustomClassDTO {
 // GetCustomClassOk returns a tuple with the CustomClass field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetCustomClassOk() (*CustomClassDTO, bool) {
-	if o == nil || o.CustomClass == nil {
-		return nil, false
+	if o == nil || isNil(o.CustomClass) {
+    return nil, false
 	}
 	return o.CustomClass, true
 }
 
 // HasCustomClass returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasCustomClass() bool {
-	if o != nil && o.CustomClass != nil {
+	if o != nil && !isNil(o.CustomClass) {
 		return true
 	}
 
@@ -227,7 +227,7 @@ func (o *DbIdentitySourceDTO) SetCustomClass(v CustomClassDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -237,15 +237,15 @@ func (o *DbIdentitySourceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -259,7 +259,7 @@ func (o *DbIdentitySourceDTO) SetDescription(v string) {
 
 // GetDriver returns the Driver field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetDriver() ResourceDTO {
-	if o == nil || o.Driver == nil {
+	if o == nil || isNil(o.Driver) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -269,15 +269,15 @@ func (o *DbIdentitySourceDTO) GetDriver() ResourceDTO {
 // GetDriverOk returns a tuple with the Driver field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetDriverOk() (*ResourceDTO, bool) {
-	if o == nil || o.Driver == nil {
-		return nil, false
+	if o == nil || isNil(o.Driver) {
+    return nil, false
 	}
 	return o.Driver, true
 }
 
 // HasDriver returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasDriver() bool {
-	if o != nil && o.Driver != nil {
+	if o != nil && !isNil(o.Driver) {
 		return true
 	}
 
@@ -291,7 +291,7 @@ func (o *DbIdentitySourceDTO) SetDriver(v ResourceDTO) {
 
 // GetDriverName returns the DriverName field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetDriverName() string {
-	if o == nil || o.DriverName == nil {
+	if o == nil || isNil(o.DriverName) {
 		var ret string
 		return ret
 	}
@@ -301,15 +301,15 @@ func (o *DbIdentitySourceDTO) GetDriverName() string {
 // GetDriverNameOk returns a tuple with the DriverName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetDriverNameOk() (*string, bool) {
-	if o == nil || o.DriverName == nil {
-		return nil, false
+	if o == nil || isNil(o.DriverName) {
+    return nil, false
 	}
 	return o.DriverName, true
 }
 
 // HasDriverName returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasDriverName() bool {
-	if o != nil && o.DriverName != nil {
+	if o != nil && !isNil(o.DriverName) {
 		return true
 	}
 
@@ -323,7 +323,7 @@ func (o *DbIdentitySourceDTO) SetDriverName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -333,15 +333,15 @@ func (o *DbIdentitySourceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -355,7 +355,7 @@ func (o *DbIdentitySourceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -365,15 +365,15 @@ func (o *DbIdentitySourceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -387,7 +387,7 @@ func (o *DbIdentitySourceDTO) SetId(v int64) {
 
 // GetIdleConnectionTestPeriod returns the IdleConnectionTestPeriod field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetIdleConnectionTestPeriod() int32 {
-	if o == nil || o.IdleConnectionTestPeriod == nil {
+	if o == nil || isNil(o.IdleConnectionTestPeriod) {
 		var ret int32
 		return ret
 	}
@@ -397,15 +397,15 @@ func (o *DbIdentitySourceDTO) GetIdleConnectionTestPeriod() int32 {
 // GetIdleConnectionTestPeriodOk returns a tuple with the IdleConnectionTestPeriod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetIdleConnectionTestPeriodOk() (*int32, bool) {
-	if o == nil || o.IdleConnectionTestPeriod == nil {
-		return nil, false
+	if o == nil || isNil(o.IdleConnectionTestPeriod) {
+    return nil, false
 	}
 	return o.IdleConnectionTestPeriod, true
 }
 
 // HasIdleConnectionTestPeriod returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasIdleConnectionTestPeriod() bool {
-	if o != nil && o.IdleConnectionTestPeriod != nil {
+	if o != nil && !isNil(o.IdleConnectionTestPeriod) {
 		return true
 	}
 
@@ -419,7 +419,7 @@ func (o *DbIdentitySourceDTO) SetIdleConnectionTestPeriod(v int32) {
 
 // GetInitialPoolSize returns the InitialPoolSize field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetInitialPoolSize() int32 {
-	if o == nil || o.InitialPoolSize == nil {
+	if o == nil || isNil(o.InitialPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -429,15 +429,15 @@ func (o *DbIdentitySourceDTO) GetInitialPoolSize() int32 {
 // GetInitialPoolSizeOk returns a tuple with the InitialPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetInitialPoolSizeOk() (*int32, bool) {
-	if o == nil || o.InitialPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.InitialPoolSize) {
+    return nil, false
 	}
 	return o.InitialPoolSize, true
 }
 
 // HasInitialPoolSize returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasInitialPoolSize() bool {
-	if o != nil && o.InitialPoolSize != nil {
+	if o != nil && !isNil(o.InitialPoolSize) {
 		return true
 	}
 
@@ -451,7 +451,7 @@ func (o *DbIdentitySourceDTO) SetInitialPoolSize(v int32) {
 
 // GetMaxIdleTime returns the MaxIdleTime field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetMaxIdleTime() int32 {
-	if o == nil || o.MaxIdleTime == nil {
+	if o == nil || isNil(o.MaxIdleTime) {
 		var ret int32
 		return ret
 	}
@@ -461,15 +461,15 @@ func (o *DbIdentitySourceDTO) GetMaxIdleTime() int32 {
 // GetMaxIdleTimeOk returns a tuple with the MaxIdleTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetMaxIdleTimeOk() (*int32, bool) {
-	if o == nil || o.MaxIdleTime == nil {
-		return nil, false
+	if o == nil || isNil(o.MaxIdleTime) {
+    return nil, false
 	}
 	return o.MaxIdleTime, true
 }
 
 // HasMaxIdleTime returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasMaxIdleTime() bool {
-	if o != nil && o.MaxIdleTime != nil {
+	if o != nil && !isNil(o.MaxIdleTime) {
 		return true
 	}
 
@@ -483,7 +483,7 @@ func (o *DbIdentitySourceDTO) SetMaxIdleTime(v int32) {
 
 // GetMaxPoolSize returns the MaxPoolSize field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetMaxPoolSize() int32 {
-	if o == nil || o.MaxPoolSize == nil {
+	if o == nil || isNil(o.MaxPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -493,15 +493,15 @@ func (o *DbIdentitySourceDTO) GetMaxPoolSize() int32 {
 // GetMaxPoolSizeOk returns a tuple with the MaxPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetMaxPoolSizeOk() (*int32, bool) {
-	if o == nil || o.MaxPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.MaxPoolSize) {
+    return nil, false
 	}
 	return o.MaxPoolSize, true
 }
 
 // HasMaxPoolSize returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasMaxPoolSize() bool {
-	if o != nil && o.MaxPoolSize != nil {
+	if o != nil && !isNil(o.MaxPoolSize) {
 		return true
 	}
 
@@ -515,7 +515,7 @@ func (o *DbIdentitySourceDTO) SetMaxPoolSize(v int32) {
 
 // GetMinPoolSize returns the MinPoolSize field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetMinPoolSize() int32 {
-	if o == nil || o.MinPoolSize == nil {
+	if o == nil || isNil(o.MinPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -525,15 +525,15 @@ func (o *DbIdentitySourceDTO) GetMinPoolSize() int32 {
 // GetMinPoolSizeOk returns a tuple with the MinPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetMinPoolSizeOk() (*int32, bool) {
-	if o == nil || o.MinPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.MinPoolSize) {
+    return nil, false
 	}
 	return o.MinPoolSize, true
 }
 
 // HasMinPoolSize returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasMinPoolSize() bool {
-	if o != nil && o.MinPoolSize != nil {
+	if o != nil && !isNil(o.MinPoolSize) {
 		return true
 	}
 
@@ -547,7 +547,7 @@ func (o *DbIdentitySourceDTO) SetMinPoolSize(v int32) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -557,15 +557,15 @@ func (o *DbIdentitySourceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -579,7 +579,7 @@ func (o *DbIdentitySourceDTO) SetName(v string) {
 
 // GetPassword returns the Password field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetPassword() string {
-	if o == nil || o.Password == nil {
+	if o == nil || isNil(o.Password) {
 		var ret string
 		return ret
 	}
@@ -589,15 +589,15 @@ func (o *DbIdentitySourceDTO) GetPassword() string {
 // GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
-		return nil, false
+	if o == nil || isNil(o.Password) {
+    return nil, false
 	}
 	return o.Password, true
 }
 
 // HasPassword returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasPassword() bool {
-	if o != nil && o.Password != nil {
+	if o != nil && !isNil(o.Password) {
 		return true
 	}
 
@@ -611,7 +611,7 @@ func (o *DbIdentitySourceDTO) SetPassword(v string) {
 
 // GetPooledDatasource returns the PooledDatasource field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetPooledDatasource() bool {
-	if o == nil || o.PooledDatasource == nil {
+	if o == nil || isNil(o.PooledDatasource) {
 		var ret bool
 		return ret
 	}
@@ -621,15 +621,15 @@ func (o *DbIdentitySourceDTO) GetPooledDatasource() bool {
 // GetPooledDatasourceOk returns a tuple with the PooledDatasource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetPooledDatasourceOk() (*bool, bool) {
-	if o == nil || o.PooledDatasource == nil {
-		return nil, false
+	if o == nil || isNil(o.PooledDatasource) {
+    return nil, false
 	}
 	return o.PooledDatasource, true
 }
 
 // HasPooledDatasource returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasPooledDatasource() bool {
-	if o != nil && o.PooledDatasource != nil {
+	if o != nil && !isNil(o.PooledDatasource) {
 		return true
 	}
 
@@ -643,7 +643,7 @@ func (o *DbIdentitySourceDTO) SetPooledDatasource(v bool) {
 
 // GetRelayCredentialQueryString returns the RelayCredentialQueryString field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetRelayCredentialQueryString() string {
-	if o == nil || o.RelayCredentialQueryString == nil {
+	if o == nil || isNil(o.RelayCredentialQueryString) {
 		var ret string
 		return ret
 	}
@@ -653,15 +653,15 @@ func (o *DbIdentitySourceDTO) GetRelayCredentialQueryString() string {
 // GetRelayCredentialQueryStringOk returns a tuple with the RelayCredentialQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetRelayCredentialQueryStringOk() (*string, bool) {
-	if o == nil || o.RelayCredentialQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.RelayCredentialQueryString) {
+    return nil, false
 	}
 	return o.RelayCredentialQueryString, true
 }
 
 // HasRelayCredentialQueryString returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasRelayCredentialQueryString() bool {
-	if o != nil && o.RelayCredentialQueryString != nil {
+	if o != nil && !isNil(o.RelayCredentialQueryString) {
 		return true
 	}
 
@@ -675,7 +675,7 @@ func (o *DbIdentitySourceDTO) SetRelayCredentialQueryString(v string) {
 
 // GetResetCredentialDml returns the ResetCredentialDml field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetResetCredentialDml() string {
-	if o == nil || o.ResetCredentialDml == nil {
+	if o == nil || isNil(o.ResetCredentialDml) {
 		var ret string
 		return ret
 	}
@@ -685,15 +685,15 @@ func (o *DbIdentitySourceDTO) GetResetCredentialDml() string {
 // GetResetCredentialDmlOk returns a tuple with the ResetCredentialDml field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetResetCredentialDmlOk() (*string, bool) {
-	if o == nil || o.ResetCredentialDml == nil {
-		return nil, false
+	if o == nil || isNil(o.ResetCredentialDml) {
+    return nil, false
 	}
 	return o.ResetCredentialDml, true
 }
 
 // HasResetCredentialDml returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasResetCredentialDml() bool {
-	if o != nil && o.ResetCredentialDml != nil {
+	if o != nil && !isNil(o.ResetCredentialDml) {
 		return true
 	}
 
@@ -707,7 +707,7 @@ func (o *DbIdentitySourceDTO) SetResetCredentialDml(v string) {
 
 // GetRolesQueryString returns the RolesQueryString field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetRolesQueryString() string {
-	if o == nil || o.RolesQueryString == nil {
+	if o == nil || isNil(o.RolesQueryString) {
 		var ret string
 		return ret
 	}
@@ -717,15 +717,15 @@ func (o *DbIdentitySourceDTO) GetRolesQueryString() string {
 // GetRolesQueryStringOk returns a tuple with the RolesQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetRolesQueryStringOk() (*string, bool) {
-	if o == nil || o.RolesQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.RolesQueryString) {
+    return nil, false
 	}
 	return o.RolesQueryString, true
 }
 
 // HasRolesQueryString returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasRolesQueryString() bool {
-	if o != nil && o.RolesQueryString != nil {
+	if o != nil && !isNil(o.RolesQueryString) {
 		return true
 	}
 
@@ -739,7 +739,7 @@ func (o *DbIdentitySourceDTO) SetRolesQueryString(v string) {
 
 // GetUseColumnNamesAsPropertyNames returns the UseColumnNamesAsPropertyNames field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetUseColumnNamesAsPropertyNames() bool {
-	if o == nil || o.UseColumnNamesAsPropertyNames == nil {
+	if o == nil || isNil(o.UseColumnNamesAsPropertyNames) {
 		var ret bool
 		return ret
 	}
@@ -749,15 +749,15 @@ func (o *DbIdentitySourceDTO) GetUseColumnNamesAsPropertyNames() bool {
 // GetUseColumnNamesAsPropertyNamesOk returns a tuple with the UseColumnNamesAsPropertyNames field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetUseColumnNamesAsPropertyNamesOk() (*bool, bool) {
-	if o == nil || o.UseColumnNamesAsPropertyNames == nil {
-		return nil, false
+	if o == nil || isNil(o.UseColumnNamesAsPropertyNames) {
+    return nil, false
 	}
 	return o.UseColumnNamesAsPropertyNames, true
 }
 
 // HasUseColumnNamesAsPropertyNames returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasUseColumnNamesAsPropertyNames() bool {
-	if o != nil && o.UseColumnNamesAsPropertyNames != nil {
+	if o != nil && !isNil(o.UseColumnNamesAsPropertyNames) {
 		return true
 	}
 
@@ -771,7 +771,7 @@ func (o *DbIdentitySourceDTO) SetUseColumnNamesAsPropertyNames(v bool) {
 
 // GetUserPropertiesQueryString returns the UserPropertiesQueryString field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetUserPropertiesQueryString() string {
-	if o == nil || o.UserPropertiesQueryString == nil {
+	if o == nil || isNil(o.UserPropertiesQueryString) {
 		var ret string
 		return ret
 	}
@@ -781,15 +781,15 @@ func (o *DbIdentitySourceDTO) GetUserPropertiesQueryString() string {
 // GetUserPropertiesQueryStringOk returns a tuple with the UserPropertiesQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetUserPropertiesQueryStringOk() (*string, bool) {
-	if o == nil || o.UserPropertiesQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.UserPropertiesQueryString) {
+    return nil, false
 	}
 	return o.UserPropertiesQueryString, true
 }
 
 // HasUserPropertiesQueryString returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasUserPropertiesQueryString() bool {
-	if o != nil && o.UserPropertiesQueryString != nil {
+	if o != nil && !isNil(o.UserPropertiesQueryString) {
 		return true
 	}
 
@@ -803,7 +803,7 @@ func (o *DbIdentitySourceDTO) SetUserPropertiesQueryString(v string) {
 
 // GetUserQueryString returns the UserQueryString field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetUserQueryString() string {
-	if o == nil || o.UserQueryString == nil {
+	if o == nil || isNil(o.UserQueryString) {
 		var ret string
 		return ret
 	}
@@ -813,15 +813,15 @@ func (o *DbIdentitySourceDTO) GetUserQueryString() string {
 // GetUserQueryStringOk returns a tuple with the UserQueryString field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetUserQueryStringOk() (*string, bool) {
-	if o == nil || o.UserQueryString == nil {
-		return nil, false
+	if o == nil || isNil(o.UserQueryString) {
+    return nil, false
 	}
 	return o.UserQueryString, true
 }
 
 // HasUserQueryString returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasUserQueryString() bool {
-	if o != nil && o.UserQueryString != nil {
+	if o != nil && !isNil(o.UserQueryString) {
 		return true
 	}
 
@@ -835,7 +835,7 @@ func (o *DbIdentitySourceDTO) SetUserQueryString(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -845,15 +845,15 @@ func (o *DbIdentitySourceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -867,7 +867,7 @@ func (o *DbIdentitySourceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *DbIdentitySourceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -877,15 +877,15 @@ func (o *DbIdentitySourceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentitySourceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *DbIdentitySourceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -899,82 +899,82 @@ func (o *DbIdentitySourceDTO) SetY(v float64) {
 
 func (o DbIdentitySourceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AcquireIncrement != nil {
+	if !isNil(o.AcquireIncrement) {
 		toSerialize["acquireIncrement"] = o.AcquireIncrement
 	}
-	if o.Admin != nil {
+	if !isNil(o.Admin) {
 		toSerialize["admin"] = o.Admin
 	}
-	if o.ConnectionUrl != nil {
+	if !isNil(o.ConnectionUrl) {
 		toSerialize["connectionUrl"] = o.ConnectionUrl
 	}
-	if o.CredentialsQueryString != nil {
+	if !isNil(o.CredentialsQueryString) {
 		toSerialize["credentialsQueryString"] = o.CredentialsQueryString
 	}
-	if o.CustomClass != nil {
+	if !isNil(o.CustomClass) {
 		toSerialize["customClass"] = o.CustomClass
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.Driver != nil {
+	if !isNil(o.Driver) {
 		toSerialize["driver"] = o.Driver
 	}
-	if o.DriverName != nil {
+	if !isNil(o.DriverName) {
 		toSerialize["driverName"] = o.DriverName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdleConnectionTestPeriod != nil {
+	if !isNil(o.IdleConnectionTestPeriod) {
 		toSerialize["idleConnectionTestPeriod"] = o.IdleConnectionTestPeriod
 	}
-	if o.InitialPoolSize != nil {
+	if !isNil(o.InitialPoolSize) {
 		toSerialize["initialPoolSize"] = o.InitialPoolSize
 	}
-	if o.MaxIdleTime != nil {
+	if !isNil(o.MaxIdleTime) {
 		toSerialize["maxIdleTime"] = o.MaxIdleTime
 	}
-	if o.MaxPoolSize != nil {
+	if !isNil(o.MaxPoolSize) {
 		toSerialize["maxPoolSize"] = o.MaxPoolSize
 	}
-	if o.MinPoolSize != nil {
+	if !isNil(o.MinPoolSize) {
 		toSerialize["minPoolSize"] = o.MinPoolSize
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Password != nil {
+	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
 	}
-	if o.PooledDatasource != nil {
+	if !isNil(o.PooledDatasource) {
 		toSerialize["pooledDatasource"] = o.PooledDatasource
 	}
-	if o.RelayCredentialQueryString != nil {
+	if !isNil(o.RelayCredentialQueryString) {
 		toSerialize["relayCredentialQueryString"] = o.RelayCredentialQueryString
 	}
-	if o.ResetCredentialDml != nil {
+	if !isNil(o.ResetCredentialDml) {
 		toSerialize["resetCredentialDml"] = o.ResetCredentialDml
 	}
-	if o.RolesQueryString != nil {
+	if !isNil(o.RolesQueryString) {
 		toSerialize["rolesQueryString"] = o.RolesQueryString
 	}
-	if o.UseColumnNamesAsPropertyNames != nil {
+	if !isNil(o.UseColumnNamesAsPropertyNames) {
 		toSerialize["useColumnNamesAsPropertyNames"] = o.UseColumnNamesAsPropertyNames
 	}
-	if o.UserPropertiesQueryString != nil {
+	if !isNil(o.UserPropertiesQueryString) {
 		toSerialize["userPropertiesQueryString"] = o.UserPropertiesQueryString
 	}
-	if o.UserQueryString != nil {
+	if !isNil(o.UserQueryString) {
 		toSerialize["userQueryString"] = o.UserQueryString
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

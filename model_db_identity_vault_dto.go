@@ -63,7 +63,7 @@ func NewDbIdentityVaultDTOWithDefaults() *DbIdentityVaultDTO {
 
 // GetAcquireIncrement returns the AcquireIncrement field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetAcquireIncrement() int32 {
-	if o == nil || o.AcquireIncrement == nil {
+	if o == nil || isNil(o.AcquireIncrement) {
 		var ret int32
 		return ret
 	}
@@ -73,15 +73,15 @@ func (o *DbIdentityVaultDTO) GetAcquireIncrement() int32 {
 // GetAcquireIncrementOk returns a tuple with the AcquireIncrement field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetAcquireIncrementOk() (*int32, bool) {
-	if o == nil || o.AcquireIncrement == nil {
-		return nil, false
+	if o == nil || isNil(o.AcquireIncrement) {
+    return nil, false
 	}
 	return o.AcquireIncrement, true
 }
 
 // HasAcquireIncrement returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasAcquireIncrement() bool {
-	if o != nil && o.AcquireIncrement != nil {
+	if o != nil && !isNil(o.AcquireIncrement) {
 		return true
 	}
 
@@ -95,7 +95,7 @@ func (o *DbIdentityVaultDTO) SetAcquireIncrement(v int32) {
 
 // GetConnectionUrl returns the ConnectionUrl field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetConnectionUrl() string {
-	if o == nil || o.ConnectionUrl == nil {
+	if o == nil || isNil(o.ConnectionUrl) {
 		var ret string
 		return ret
 	}
@@ -105,15 +105,15 @@ func (o *DbIdentityVaultDTO) GetConnectionUrl() string {
 // GetConnectionUrlOk returns a tuple with the ConnectionUrl field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetConnectionUrlOk() (*string, bool) {
-	if o == nil || o.ConnectionUrl == nil {
-		return nil, false
+	if o == nil || isNil(o.ConnectionUrl) {
+    return nil, false
 	}
 	return o.ConnectionUrl, true
 }
 
 // HasConnectionUrl returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasConnectionUrl() bool {
-	if o != nil && o.ConnectionUrl != nil {
+	if o != nil && !isNil(o.ConnectionUrl) {
 		return true
 	}
 
@@ -127,7 +127,7 @@ func (o *DbIdentityVaultDTO) SetConnectionUrl(v string) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -137,15 +137,15 @@ func (o *DbIdentityVaultDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -159,7 +159,7 @@ func (o *DbIdentityVaultDTO) SetDescription(v string) {
 
 // GetDriverName returns the DriverName field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetDriverName() string {
-	if o == nil || o.DriverName == nil {
+	if o == nil || isNil(o.DriverName) {
 		var ret string
 		return ret
 	}
@@ -169,15 +169,15 @@ func (o *DbIdentityVaultDTO) GetDriverName() string {
 // GetDriverNameOk returns a tuple with the DriverName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetDriverNameOk() (*string, bool) {
-	if o == nil || o.DriverName == nil {
-		return nil, false
+	if o == nil || isNil(o.DriverName) {
+    return nil, false
 	}
 	return o.DriverName, true
 }
 
 // HasDriverName returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasDriverName() bool {
-	if o != nil && o.DriverName != nil {
+	if o != nil && !isNil(o.DriverName) {
 		return true
 	}
 
@@ -191,7 +191,7 @@ func (o *DbIdentityVaultDTO) SetDriverName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -201,15 +201,15 @@ func (o *DbIdentityVaultDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -223,7 +223,7 @@ func (o *DbIdentityVaultDTO) SetElementId(v string) {
 
 // GetExternalDB returns the ExternalDB field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetExternalDB() bool {
-	if o == nil || o.ExternalDB == nil {
+	if o == nil || isNil(o.ExternalDB) {
 		var ret bool
 		return ret
 	}
@@ -233,15 +233,15 @@ func (o *DbIdentityVaultDTO) GetExternalDB() bool {
 // GetExternalDBOk returns a tuple with the ExternalDB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetExternalDBOk() (*bool, bool) {
-	if o == nil || o.ExternalDB == nil {
-		return nil, false
+	if o == nil || isNil(o.ExternalDB) {
+    return nil, false
 	}
 	return o.ExternalDB, true
 }
 
 // HasExternalDB returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasExternalDB() bool {
-	if o != nil && o.ExternalDB != nil {
+	if o != nil && !isNil(o.ExternalDB) {
 		return true
 	}
 
@@ -255,7 +255,7 @@ func (o *DbIdentityVaultDTO) SetExternalDB(v bool) {
 
 // GetHashAlgorithm returns the HashAlgorithm field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetHashAlgorithm() string {
-	if o == nil || o.HashAlgorithm == nil {
+	if o == nil || isNil(o.HashAlgorithm) {
 		var ret string
 		return ret
 	}
@@ -265,15 +265,15 @@ func (o *DbIdentityVaultDTO) GetHashAlgorithm() string {
 // GetHashAlgorithmOk returns a tuple with the HashAlgorithm field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetHashAlgorithmOk() (*string, bool) {
-	if o == nil || o.HashAlgorithm == nil {
-		return nil, false
+	if o == nil || isNil(o.HashAlgorithm) {
+    return nil, false
 	}
 	return o.HashAlgorithm, true
 }
 
 // HasHashAlgorithm returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasHashAlgorithm() bool {
-	if o != nil && o.HashAlgorithm != nil {
+	if o != nil && !isNil(o.HashAlgorithm) {
 		return true
 	}
 
@@ -287,7 +287,7 @@ func (o *DbIdentityVaultDTO) SetHashAlgorithm(v string) {
 
 // GetHashEncoding returns the HashEncoding field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetHashEncoding() string {
-	if o == nil || o.HashEncoding == nil {
+	if o == nil || isNil(o.HashEncoding) {
 		var ret string
 		return ret
 	}
@@ -297,15 +297,15 @@ func (o *DbIdentityVaultDTO) GetHashEncoding() string {
 // GetHashEncodingOk returns a tuple with the HashEncoding field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetHashEncodingOk() (*string, bool) {
-	if o == nil || o.HashEncoding == nil {
-		return nil, false
+	if o == nil || isNil(o.HashEncoding) {
+    return nil, false
 	}
 	return o.HashEncoding, true
 }
 
 // HasHashEncoding returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasHashEncoding() bool {
-	if o != nil && o.HashEncoding != nil {
+	if o != nil && !isNil(o.HashEncoding) {
 		return true
 	}
 
@@ -319,7 +319,7 @@ func (o *DbIdentityVaultDTO) SetHashEncoding(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -329,15 +329,15 @@ func (o *DbIdentityVaultDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -351,7 +351,7 @@ func (o *DbIdentityVaultDTO) SetId(v int64) {
 
 // GetIdleConnectionTestPeriod returns the IdleConnectionTestPeriod field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetIdleConnectionTestPeriod() int32 {
-	if o == nil || o.IdleConnectionTestPeriod == nil {
+	if o == nil || isNil(o.IdleConnectionTestPeriod) {
 		var ret int32
 		return ret
 	}
@@ -361,15 +361,15 @@ func (o *DbIdentityVaultDTO) GetIdleConnectionTestPeriod() int32 {
 // GetIdleConnectionTestPeriodOk returns a tuple with the IdleConnectionTestPeriod field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetIdleConnectionTestPeriodOk() (*int32, bool) {
-	if o == nil || o.IdleConnectionTestPeriod == nil {
-		return nil, false
+	if o == nil || isNil(o.IdleConnectionTestPeriod) {
+    return nil, false
 	}
 	return o.IdleConnectionTestPeriod, true
 }
 
 // HasIdleConnectionTestPeriod returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasIdleConnectionTestPeriod() bool {
-	if o != nil && o.IdleConnectionTestPeriod != nil {
+	if o != nil && !isNil(o.IdleConnectionTestPeriod) {
 		return true
 	}
 
@@ -383,7 +383,7 @@ func (o *DbIdentityVaultDTO) SetIdleConnectionTestPeriod(v int32) {
 
 // GetInitialPoolSize returns the InitialPoolSize field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetInitialPoolSize() int32 {
-	if o == nil || o.InitialPoolSize == nil {
+	if o == nil || isNil(o.InitialPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -393,15 +393,15 @@ func (o *DbIdentityVaultDTO) GetInitialPoolSize() int32 {
 // GetInitialPoolSizeOk returns a tuple with the InitialPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetInitialPoolSizeOk() (*int32, bool) {
-	if o == nil || o.InitialPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.InitialPoolSize) {
+    return nil, false
 	}
 	return o.InitialPoolSize, true
 }
 
 // HasInitialPoolSize returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasInitialPoolSize() bool {
-	if o != nil && o.InitialPoolSize != nil {
+	if o != nil && !isNil(o.InitialPoolSize) {
 		return true
 	}
 
@@ -415,7 +415,7 @@ func (o *DbIdentityVaultDTO) SetInitialPoolSize(v int32) {
 
 // GetMaxIdleTime returns the MaxIdleTime field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetMaxIdleTime() int32 {
-	if o == nil || o.MaxIdleTime == nil {
+	if o == nil || isNil(o.MaxIdleTime) {
 		var ret int32
 		return ret
 	}
@@ -425,15 +425,15 @@ func (o *DbIdentityVaultDTO) GetMaxIdleTime() int32 {
 // GetMaxIdleTimeOk returns a tuple with the MaxIdleTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetMaxIdleTimeOk() (*int32, bool) {
-	if o == nil || o.MaxIdleTime == nil {
-		return nil, false
+	if o == nil || isNil(o.MaxIdleTime) {
+    return nil, false
 	}
 	return o.MaxIdleTime, true
 }
 
 // HasMaxIdleTime returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasMaxIdleTime() bool {
-	if o != nil && o.MaxIdleTime != nil {
+	if o != nil && !isNil(o.MaxIdleTime) {
 		return true
 	}
 
@@ -447,7 +447,7 @@ func (o *DbIdentityVaultDTO) SetMaxIdleTime(v int32) {
 
 // GetMaxPoolSize returns the MaxPoolSize field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetMaxPoolSize() int32 {
-	if o == nil || o.MaxPoolSize == nil {
+	if o == nil || isNil(o.MaxPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -457,15 +457,15 @@ func (o *DbIdentityVaultDTO) GetMaxPoolSize() int32 {
 // GetMaxPoolSizeOk returns a tuple with the MaxPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetMaxPoolSizeOk() (*int32, bool) {
-	if o == nil || o.MaxPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.MaxPoolSize) {
+    return nil, false
 	}
 	return o.MaxPoolSize, true
 }
 
 // HasMaxPoolSize returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasMaxPoolSize() bool {
-	if o != nil && o.MaxPoolSize != nil {
+	if o != nil && !isNil(o.MaxPoolSize) {
 		return true
 	}
 
@@ -479,7 +479,7 @@ func (o *DbIdentityVaultDTO) SetMaxPoolSize(v int32) {
 
 // GetMinPoolSize returns the MinPoolSize field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetMinPoolSize() int32 {
-	if o == nil || o.MinPoolSize == nil {
+	if o == nil || isNil(o.MinPoolSize) {
 		var ret int32
 		return ret
 	}
@@ -489,15 +489,15 @@ func (o *DbIdentityVaultDTO) GetMinPoolSize() int32 {
 // GetMinPoolSizeOk returns a tuple with the MinPoolSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetMinPoolSizeOk() (*int32, bool) {
-	if o == nil || o.MinPoolSize == nil {
-		return nil, false
+	if o == nil || isNil(o.MinPoolSize) {
+    return nil, false
 	}
 	return o.MinPoolSize, true
 }
 
 // HasMinPoolSize returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasMinPoolSize() bool {
-	if o != nil && o.MinPoolSize != nil {
+	if o != nil && !isNil(o.MinPoolSize) {
 		return true
 	}
 
@@ -511,7 +511,7 @@ func (o *DbIdentityVaultDTO) SetMinPoolSize(v int32) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -521,15 +521,15 @@ func (o *DbIdentityVaultDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -543,7 +543,7 @@ func (o *DbIdentityVaultDTO) SetName(v string) {
 
 // GetPassword returns the Password field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetPassword() string {
-	if o == nil || o.Password == nil {
+	if o == nil || isNil(o.Password) {
 		var ret string
 		return ret
 	}
@@ -553,15 +553,15 @@ func (o *DbIdentityVaultDTO) GetPassword() string {
 // GetPasswordOk returns a tuple with the Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetPasswordOk() (*string, bool) {
-	if o == nil || o.Password == nil {
-		return nil, false
+	if o == nil || isNil(o.Password) {
+    return nil, false
 	}
 	return o.Password, true
 }
 
 // HasPassword returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasPassword() bool {
-	if o != nil && o.Password != nil {
+	if o != nil && !isNil(o.Password) {
 		return true
 	}
 
@@ -575,7 +575,7 @@ func (o *DbIdentityVaultDTO) SetPassword(v string) {
 
 // GetPooledDatasource returns the PooledDatasource field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetPooledDatasource() bool {
-	if o == nil || o.PooledDatasource == nil {
+	if o == nil || isNil(o.PooledDatasource) {
 		var ret bool
 		return ret
 	}
@@ -585,15 +585,15 @@ func (o *DbIdentityVaultDTO) GetPooledDatasource() bool {
 // GetPooledDatasourceOk returns a tuple with the PooledDatasource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetPooledDatasourceOk() (*bool, bool) {
-	if o == nil || o.PooledDatasource == nil {
-		return nil, false
+	if o == nil || isNil(o.PooledDatasource) {
+    return nil, false
 	}
 	return o.PooledDatasource, true
 }
 
 // HasPooledDatasource returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasPooledDatasource() bool {
-	if o != nil && o.PooledDatasource != nil {
+	if o != nil && !isNil(o.PooledDatasource) {
 		return true
 	}
 
@@ -607,7 +607,7 @@ func (o *DbIdentityVaultDTO) SetPooledDatasource(v bool) {
 
 // GetSaltLength returns the SaltLength field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetSaltLength() int32 {
-	if o == nil || o.SaltLength == nil {
+	if o == nil || isNil(o.SaltLength) {
 		var ret int32
 		return ret
 	}
@@ -617,15 +617,15 @@ func (o *DbIdentityVaultDTO) GetSaltLength() int32 {
 // GetSaltLengthOk returns a tuple with the SaltLength field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetSaltLengthOk() (*int32, bool) {
-	if o == nil || o.SaltLength == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltLength) {
+    return nil, false
 	}
 	return o.SaltLength, true
 }
 
 // HasSaltLength returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasSaltLength() bool {
-	if o != nil && o.SaltLength != nil {
+	if o != nil && !isNil(o.SaltLength) {
 		return true
 	}
 
@@ -639,7 +639,7 @@ func (o *DbIdentityVaultDTO) SetSaltLength(v int32) {
 
 // GetSaltValue returns the SaltValue field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetSaltValue() string {
-	if o == nil || o.SaltValue == nil {
+	if o == nil || isNil(o.SaltValue) {
 		var ret string
 		return ret
 	}
@@ -649,15 +649,15 @@ func (o *DbIdentityVaultDTO) GetSaltValue() string {
 // GetSaltValueOk returns a tuple with the SaltValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetSaltValueOk() (*string, bool) {
-	if o == nil || o.SaltValue == nil {
-		return nil, false
+	if o == nil || isNil(o.SaltValue) {
+    return nil, false
 	}
 	return o.SaltValue, true
 }
 
 // HasSaltValue returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasSaltValue() bool {
-	if o != nil && o.SaltValue != nil {
+	if o != nil && !isNil(o.SaltValue) {
 		return true
 	}
 
@@ -671,7 +671,7 @@ func (o *DbIdentityVaultDTO) SetSaltValue(v string) {
 
 // GetUsername returns the Username field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetUsername() string {
-	if o == nil || o.Username == nil {
+	if o == nil || isNil(o.Username) {
 		var ret string
 		return ret
 	}
@@ -681,15 +681,15 @@ func (o *DbIdentityVaultDTO) GetUsername() string {
 // GetUsernameOk returns a tuple with the Username field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetUsernameOk() (*string, bool) {
-	if o == nil || o.Username == nil {
-		return nil, false
+	if o == nil || isNil(o.Username) {
+    return nil, false
 	}
 	return o.Username, true
 }
 
 // HasUsername returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasUsername() bool {
-	if o != nil && o.Username != nil {
+	if o != nil && !isNil(o.Username) {
 		return true
 	}
 
@@ -703,7 +703,7 @@ func (o *DbIdentityVaultDTO) SetUsername(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -713,15 +713,15 @@ func (o *DbIdentityVaultDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -735,7 +735,7 @@ func (o *DbIdentityVaultDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *DbIdentityVaultDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -745,15 +745,15 @@ func (o *DbIdentityVaultDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *DbIdentityVaultDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *DbIdentityVaultDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -767,70 +767,70 @@ func (o *DbIdentityVaultDTO) SetY(v float64) {
 
 func (o DbIdentityVaultDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AcquireIncrement != nil {
+	if !isNil(o.AcquireIncrement) {
 		toSerialize["acquireIncrement"] = o.AcquireIncrement
 	}
-	if o.ConnectionUrl != nil {
+	if !isNil(o.ConnectionUrl) {
 		toSerialize["connectionUrl"] = o.ConnectionUrl
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DriverName != nil {
+	if !isNil(o.DriverName) {
 		toSerialize["driverName"] = o.DriverName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.ExternalDB != nil {
+	if !isNil(o.ExternalDB) {
 		toSerialize["externalDB"] = o.ExternalDB
 	}
-	if o.HashAlgorithm != nil {
+	if !isNil(o.HashAlgorithm) {
 		toSerialize["hashAlgorithm"] = o.HashAlgorithm
 	}
-	if o.HashEncoding != nil {
+	if !isNil(o.HashEncoding) {
 		toSerialize["hashEncoding"] = o.HashEncoding
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdleConnectionTestPeriod != nil {
+	if !isNil(o.IdleConnectionTestPeriod) {
 		toSerialize["idleConnectionTestPeriod"] = o.IdleConnectionTestPeriod
 	}
-	if o.InitialPoolSize != nil {
+	if !isNil(o.InitialPoolSize) {
 		toSerialize["initialPoolSize"] = o.InitialPoolSize
 	}
-	if o.MaxIdleTime != nil {
+	if !isNil(o.MaxIdleTime) {
 		toSerialize["maxIdleTime"] = o.MaxIdleTime
 	}
-	if o.MaxPoolSize != nil {
+	if !isNil(o.MaxPoolSize) {
 		toSerialize["maxPoolSize"] = o.MaxPoolSize
 	}
-	if o.MinPoolSize != nil {
+	if !isNil(o.MinPoolSize) {
 		toSerialize["minPoolSize"] = o.MinPoolSize
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Password != nil {
+	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
 	}
-	if o.PooledDatasource != nil {
+	if !isNil(o.PooledDatasource) {
 		toSerialize["pooledDatasource"] = o.PooledDatasource
 	}
-	if o.SaltLength != nil {
+	if !isNil(o.SaltLength) {
 		toSerialize["saltLength"] = o.SaltLength
 	}
-	if o.SaltValue != nil {
+	if !isNil(o.SaltValue) {
 		toSerialize["saltValue"] = o.SaltValue
 	}
-	if o.Username != nil {
+	if !isNil(o.Username) {
 		toSerialize["username"] = o.Username
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

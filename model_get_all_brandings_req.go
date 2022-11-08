@@ -42,7 +42,7 @@ func NewGetAllBrandingsReqWithDefaults() *GetAllBrandingsReq {
 
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *GetAllBrandingsReq) GetType() string {
-	if o == nil || o.Type == nil {
+	if o == nil || isNil(o.Type) {
 		var ret string
 		return ret
 	}
@@ -52,15 +52,15 @@ func (o *GetAllBrandingsReq) GetType() string {
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetAllBrandingsReq) GetTypeOk() (*string, bool) {
-	if o == nil || o.Type == nil {
-		return nil, false
+	if o == nil || isNil(o.Type) {
+    return nil, false
 	}
 	return o.Type, true
 }
 
 // HasType returns a boolean if a field has been set.
 func (o *GetAllBrandingsReq) HasType() bool {
-	if o != nil && o.Type != nil {
+	if o != nil && !isNil(o.Type) {
 		return true
 	}
 
@@ -74,7 +74,7 @@ func (o *GetAllBrandingsReq) SetType(v string) {
 
 func (o GetAllBrandingsReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Type != nil {
+	if !isNil(o.Type) {
 		toSerialize["type"] = o.Type
 	}
 

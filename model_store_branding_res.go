@@ -43,7 +43,7 @@ func NewStoreBrandingResWithDefaults() *StoreBrandingRes {
 
 // GetBranding returns the Branding field value if set, zero value otherwise.
 func (o *StoreBrandingRes) GetBranding() CustomBrandingDefinitionDTO {
-	if o == nil || o.Branding == nil {
+	if o == nil || isNil(o.Branding) {
 		var ret CustomBrandingDefinitionDTO
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreBrandingRes) GetBranding() CustomBrandingDefinitionDTO {
 // GetBrandingOk returns a tuple with the Branding field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingRes) GetBrandingOk() (*CustomBrandingDefinitionDTO, bool) {
-	if o == nil || o.Branding == nil {
-		return nil, false
+	if o == nil || isNil(o.Branding) {
+    return nil, false
 	}
 	return o.Branding, true
 }
 
 // HasBranding returns a boolean if a field has been set.
 func (o *StoreBrandingRes) HasBranding() bool {
-	if o != nil && o.Branding != nil {
+	if o != nil && !isNil(o.Branding) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreBrandingRes) SetBranding(v CustomBrandingDefinitionDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *StoreBrandingRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreBrandingRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreBrandingRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *StoreBrandingRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreBrandingRes) SetError(v string) {
 
 func (o StoreBrandingRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Branding != nil {
+	if !isNil(o.Branding) {
 		toSerialize["branding"] = o.Branding
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
 

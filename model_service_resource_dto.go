@@ -49,7 +49,7 @@ func NewServiceResourceDTOWithDefaults() *ServiceResourceDTO {
 
 // GetActivation returns the Activation field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetActivation() ActivationDTO {
-	if o == nil || o.Activation == nil {
+	if o == nil || isNil(o.Activation) {
 		var ret ActivationDTO
 		return ret
 	}
@@ -59,15 +59,15 @@ func (o *ServiceResourceDTO) GetActivation() ActivationDTO {
 // GetActivationOk returns a tuple with the Activation field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetActivationOk() (*ActivationDTO, bool) {
-	if o == nil || o.Activation == nil {
-		return nil, false
+	if o == nil || isNil(o.Activation) {
+    return nil, false
 	}
 	return o.Activation, true
 }
 
 // HasActivation returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasActivation() bool {
-	if o != nil && o.Activation != nil {
+	if o != nil && !isNil(o.Activation) {
 		return true
 	}
 
@@ -81,7 +81,7 @@ func (o *ServiceResourceDTO) SetActivation(v ActivationDTO) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -91,15 +91,15 @@ func (o *ServiceResourceDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -113,7 +113,7 @@ func (o *ServiceResourceDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -123,15 +123,15 @@ func (o *ServiceResourceDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -145,7 +145,7 @@ func (o *ServiceResourceDTO) SetElementId(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -155,15 +155,15 @@ func (o *ServiceResourceDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -177,7 +177,7 @@ func (o *ServiceResourceDTO) SetId(v int64) {
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -187,15 +187,15 @@ func (o *ServiceResourceDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -209,7 +209,7 @@ func (o *ServiceResourceDTO) SetName(v string) {
 
 // GetServiceConnection returns the ServiceConnection field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetServiceConnection() ServiceConnectionDTO {
-	if o == nil || o.ServiceConnection == nil {
+	if o == nil || isNil(o.ServiceConnection) {
 		var ret ServiceConnectionDTO
 		return ret
 	}
@@ -219,15 +219,15 @@ func (o *ServiceResourceDTO) GetServiceConnection() ServiceConnectionDTO {
 // GetServiceConnectionOk returns a tuple with the ServiceConnection field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetServiceConnectionOk() (*ServiceConnectionDTO, bool) {
-	if o == nil || o.ServiceConnection == nil {
-		return nil, false
+	if o == nil || isNil(o.ServiceConnection) {
+    return nil, false
 	}
 	return o.ServiceConnection, true
 }
 
 // HasServiceConnection returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasServiceConnection() bool {
-	if o != nil && o.ServiceConnection != nil {
+	if o != nil && !isNil(o.ServiceConnection) {
 		return true
 	}
 
@@ -241,7 +241,7 @@ func (o *ServiceResourceDTO) SetServiceConnection(v ServiceConnectionDTO) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -251,15 +251,15 @@ func (o *ServiceResourceDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -273,7 +273,7 @@ func (o *ServiceResourceDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *ServiceResourceDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -283,15 +283,15 @@ func (o *ServiceResourceDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ServiceResourceDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *ServiceResourceDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -305,28 +305,28 @@ func (o *ServiceResourceDTO) SetY(v float64) {
 
 func (o ServiceResourceDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Activation != nil {
+	if !isNil(o.Activation) {
 		toSerialize["activation"] = o.Activation
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.ServiceConnection != nil {
+	if !isNil(o.ServiceConnection) {
 		toSerialize["serviceConnection"] = o.ServiceConnection
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

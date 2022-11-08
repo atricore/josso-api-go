@@ -45,7 +45,7 @@ func NewGetIdPResWithDefaults() *GetIdPRes {
 
 // GetConfig returns the Config field value if set, zero value otherwise.
 func (o *GetIdPRes) GetConfig() SamlR2IDPConfigDTO {
-	if o == nil || o.Config == nil {
+	if o == nil || isNil(o.Config) {
 		var ret SamlR2IDPConfigDTO
 		return ret
 	}
@@ -55,15 +55,15 @@ func (o *GetIdPRes) GetConfig() SamlR2IDPConfigDTO {
 // GetConfigOk returns a tuple with the Config field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdPRes) GetConfigOk() (*SamlR2IDPConfigDTO, bool) {
-	if o == nil || o.Config == nil {
-		return nil, false
+	if o == nil || isNil(o.Config) {
+    return nil, false
 	}
 	return o.Config, true
 }
 
 // HasConfig returns a boolean if a field has been set.
 func (o *GetIdPRes) HasConfig() bool {
-	if o != nil && o.Config != nil {
+	if o != nil && !isNil(o.Config) {
 		return true
 	}
 
@@ -77,7 +77,7 @@ func (o *GetIdPRes) SetConfig(v SamlR2IDPConfigDTO) {
 
 // GetError returns the Error field value if set, zero value otherwise.
 func (o *GetIdPRes) GetError() string {
-	if o == nil || o.Error == nil {
+	if o == nil || isNil(o.Error) {
 		var ret string
 		return ret
 	}
@@ -87,15 +87,15 @@ func (o *GetIdPRes) GetError() string {
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdPRes) GetErrorOk() (*string, bool) {
-	if o == nil || o.Error == nil {
-		return nil, false
+	if o == nil || isNil(o.Error) {
+    return nil, false
 	}
 	return o.Error, true
 }
 
 // HasError returns a boolean if a field has been set.
 func (o *GetIdPRes) HasError() bool {
-	if o != nil && o.Error != nil {
+	if o != nil && !isNil(o.Error) {
 		return true
 	}
 
@@ -109,7 +109,7 @@ func (o *GetIdPRes) SetError(v string) {
 
 // GetIdp returns the Idp field value if set, zero value otherwise.
 func (o *GetIdPRes) GetIdp() IdentityProviderDTO {
-	if o == nil || o.Idp == nil {
+	if o == nil || isNil(o.Idp) {
 		var ret IdentityProviderDTO
 		return ret
 	}
@@ -119,15 +119,15 @@ func (o *GetIdPRes) GetIdp() IdentityProviderDTO {
 // GetIdpOk returns a tuple with the Idp field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdPRes) GetIdpOk() (*IdentityProviderDTO, bool) {
-	if o == nil || o.Idp == nil {
-		return nil, false
+	if o == nil || isNil(o.Idp) {
+    return nil, false
 	}
 	return o.Idp, true
 }
 
 // HasIdp returns a boolean if a field has been set.
 func (o *GetIdPRes) HasIdp() bool {
-	if o != nil && o.Idp != nil {
+	if o != nil && !isNil(o.Idp) {
 		return true
 	}
 
@@ -141,7 +141,7 @@ func (o *GetIdPRes) SetIdp(v IdentityProviderDTO) {
 
 // GetValidationErrors returns the ValidationErrors field value if set, zero value otherwise.
 func (o *GetIdPRes) GetValidationErrors() []string {
-	if o == nil || o.ValidationErrors == nil {
+	if o == nil || isNil(o.ValidationErrors) {
 		var ret []string
 		return ret
 	}
@@ -151,15 +151,15 @@ func (o *GetIdPRes) GetValidationErrors() []string {
 // GetValidationErrorsOk returns a tuple with the ValidationErrors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *GetIdPRes) GetValidationErrorsOk() ([]string, bool) {
-	if o == nil || o.ValidationErrors == nil {
-		return nil, false
+	if o == nil || isNil(o.ValidationErrors) {
+    return nil, false
 	}
 	return o.ValidationErrors, true
 }
 
 // HasValidationErrors returns a boolean if a field has been set.
 func (o *GetIdPRes) HasValidationErrors() bool {
-	if o != nil && o.ValidationErrors != nil {
+	if o != nil && !isNil(o.ValidationErrors) {
 		return true
 	}
 
@@ -173,16 +173,16 @@ func (o *GetIdPRes) SetValidationErrors(v []string) {
 
 func (o GetIdPRes) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.Config != nil {
+	if !isNil(o.Config) {
 		toSerialize["config"] = o.Config
 	}
-	if o.Error != nil {
+	if !isNil(o.Error) {
 		toSerialize["error"] = o.Error
 	}
-	if o.Idp != nil {
+	if !isNil(o.Idp) {
 		toSerialize["idp"] = o.Idp
 	}
-	if o.ValidationErrors != nil {
+	if !isNil(o.ValidationErrors) {
 		toSerialize["validationErrors"] = o.ValidationErrors
 	}
 

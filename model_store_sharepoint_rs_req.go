@@ -43,7 +43,7 @@ func NewStoreSharepointRsReqWithDefaults() *StoreSharepointRsReq {
 
 // GetIdaName returns the IdaName field value if set, zero value otherwise.
 func (o *StoreSharepointRsReq) GetIdaName() string {
-	if o == nil || o.IdaName == nil {
+	if o == nil || isNil(o.IdaName) {
 		var ret string
 		return ret
 	}
@@ -53,15 +53,15 @@ func (o *StoreSharepointRsReq) GetIdaName() string {
 // GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreSharepointRsReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || o.IdaName == nil {
-		return nil, false
+	if o == nil || isNil(o.IdaName) {
+    return nil, false
 	}
 	return o.IdaName, true
 }
 
 // HasIdaName returns a boolean if a field has been set.
 func (o *StoreSharepointRsReq) HasIdaName() bool {
-	if o != nil && o.IdaName != nil {
+	if o != nil && !isNil(o.IdaName) {
 		return true
 	}
 
@@ -75,7 +75,7 @@ func (o *StoreSharepointRsReq) SetIdaName(v string) {
 
 // GetResource returns the Resource field value if set, zero value otherwise.
 func (o *StoreSharepointRsReq) GetResource() SharepointResourceDTO {
-	if o == nil || o.Resource == nil {
+	if o == nil || isNil(o.Resource) {
 		var ret SharepointResourceDTO
 		return ret
 	}
@@ -85,15 +85,15 @@ func (o *StoreSharepointRsReq) GetResource() SharepointResourceDTO {
 // GetResourceOk returns a tuple with the Resource field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StoreSharepointRsReq) GetResourceOk() (*SharepointResourceDTO, bool) {
-	if o == nil || o.Resource == nil {
-		return nil, false
+	if o == nil || isNil(o.Resource) {
+    return nil, false
 	}
 	return o.Resource, true
 }
 
 // HasResource returns a boolean if a field has been set.
 func (o *StoreSharepointRsReq) HasResource() bool {
-	if o != nil && o.Resource != nil {
+	if o != nil && !isNil(o.Resource) {
 		return true
 	}
 
@@ -107,10 +107,10 @@ func (o *StoreSharepointRsReq) SetResource(v SharepointResourceDTO) {
 
 func (o StoreSharepointRsReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.IdaName != nil {
+	if !isNil(o.IdaName) {
 		toSerialize["idaName"] = o.IdaName
 	}
-	if o.Resource != nil {
+	if !isNil(o.Resource) {
 		toSerialize["resource"] = o.Resource
 	}
 

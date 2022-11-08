@@ -68,7 +68,7 @@ func NewFacebookOpenIDConnectIdentityProviderDTOWithDefaults() *FacebookOpenIDCo
 
 // GetAccessTokenService returns the AccessTokenService field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAccessTokenService() LocationDTO {
-	if o == nil || o.AccessTokenService == nil {
+	if o == nil || isNil(o.AccessTokenService) {
 		var ret LocationDTO
 		return ret
 	}
@@ -78,15 +78,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAccessTokenService() Locat
 // GetAccessTokenServiceOk returns a tuple with the AccessTokenService field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAccessTokenServiceOk() (*LocationDTO, bool) {
-	if o == nil || o.AccessTokenService == nil {
-		return nil, false
+	if o == nil || isNil(o.AccessTokenService) {
+    return nil, false
 	}
 	return o.AccessTokenService, true
 }
 
 // HasAccessTokenService returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasAccessTokenService() bool {
-	if o != nil && o.AccessTokenService != nil {
+	if o != nil && !isNil(o.AccessTokenService) {
 		return true
 	}
 
@@ -100,7 +100,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetAccessTokenService(v Locat
 
 // GetActiveBindings returns the ActiveBindings field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveBindings() []string {
-	if o == nil || o.ActiveBindings == nil {
+	if o == nil || isNil(o.ActiveBindings) {
 		var ret []string
 		return ret
 	}
@@ -110,15 +110,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveBindings() []string 
 // GetActiveBindingsOk returns a tuple with the ActiveBindings field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveBindingsOk() ([]string, bool) {
-	if o == nil || o.ActiveBindings == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveBindings) {
+    return nil, false
 	}
 	return o.ActiveBindings, true
 }
 
 // HasActiveBindings returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasActiveBindings() bool {
-	if o != nil && o.ActiveBindings != nil {
+	if o != nil && !isNil(o.ActiveBindings) {
 		return true
 	}
 
@@ -132,7 +132,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetActiveBindings(v []string)
 
 // GetActiveProfiles returns the ActiveProfiles field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveProfiles() []string {
-	if o == nil || o.ActiveProfiles == nil {
+	if o == nil || isNil(o.ActiveProfiles) {
 		var ret []string
 		return ret
 	}
@@ -142,15 +142,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveProfiles() []string 
 // GetActiveProfilesOk returns a tuple with the ActiveProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetActiveProfilesOk() ([]string, bool) {
-	if o == nil || o.ActiveProfiles == nil {
-		return nil, false
+	if o == nil || isNil(o.ActiveProfiles) {
+    return nil, false
 	}
 	return o.ActiveProfiles, true
 }
 
 // HasActiveProfiles returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasActiveProfiles() bool {
-	if o != nil && o.ActiveProfiles != nil {
+	if o != nil && !isNil(o.ActiveProfiles) {
 		return true
 	}
 
@@ -164,7 +164,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetActiveProfiles(v []string)
 
 // GetAuthzTokenService returns the AuthzTokenService field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAuthzTokenService() LocationDTO {
-	if o == nil || o.AuthzTokenService == nil {
+	if o == nil || isNil(o.AuthzTokenService) {
 		var ret LocationDTO
 		return ret
 	}
@@ -174,15 +174,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAuthzTokenService() Locati
 // GetAuthzTokenServiceOk returns a tuple with the AuthzTokenService field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetAuthzTokenServiceOk() (*LocationDTO, bool) {
-	if o == nil || o.AuthzTokenService == nil {
-		return nil, false
+	if o == nil || isNil(o.AuthzTokenService) {
+    return nil, false
 	}
 	return o.AuthzTokenService, true
 }
 
 // HasAuthzTokenService returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasAuthzTokenService() bool {
-	if o != nil && o.AuthzTokenService != nil {
+	if o != nil && !isNil(o.AuthzTokenService) {
 		return true
 	}
 
@@ -196,7 +196,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetAuthzTokenService(v Locati
 
 // GetClientId returns the ClientId field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientId() string {
-	if o == nil || o.ClientId == nil {
+	if o == nil || isNil(o.ClientId) {
 		var ret string
 		return ret
 	}
@@ -206,15 +206,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientId() string {
 // GetClientIdOk returns a tuple with the ClientId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientIdOk() (*string, bool) {
-	if o == nil || o.ClientId == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientId) {
+    return nil, false
 	}
 	return o.ClientId, true
 }
 
 // HasClientId returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasClientId() bool {
-	if o != nil && o.ClientId != nil {
+	if o != nil && !isNil(o.ClientId) {
 		return true
 	}
 
@@ -228,7 +228,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetClientId(v string) {
 
 // GetClientSecret returns the ClientSecret field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientSecret() string {
-	if o == nil || o.ClientSecret == nil {
+	if o == nil || isNil(o.ClientSecret) {
 		var ret string
 		return ret
 	}
@@ -238,15 +238,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientSecret() string {
 // GetClientSecretOk returns a tuple with the ClientSecret field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetClientSecretOk() (*string, bool) {
-	if o == nil || o.ClientSecret == nil {
-		return nil, false
+	if o == nil || isNil(o.ClientSecret) {
+    return nil, false
 	}
 	return o.ClientSecret, true
 }
 
 // HasClientSecret returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasClientSecret() bool {
-	if o != nil && o.ClientSecret != nil {
+	if o != nil && !isNil(o.ClientSecret) {
 		return true
 	}
 
@@ -260,7 +260,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetClientSecret(v string) {
 
 // GetConfig returns the Config field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetConfig() ProviderConfigDTO {
-	if o == nil || o.Config == nil {
+	if o == nil || isNil(o.Config) {
 		var ret ProviderConfigDTO
 		return ret
 	}
@@ -270,15 +270,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetConfig() ProviderConfigDTO
 // GetConfigOk returns a tuple with the Config field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetConfigOk() (*ProviderConfigDTO, bool) {
-	if o == nil || o.Config == nil {
-		return nil, false
+	if o == nil || isNil(o.Config) {
+    return nil, false
 	}
 	return o.Config, true
 }
 
 // HasConfig returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasConfig() bool {
-	if o != nil && o.Config != nil {
+	if o != nil && !isNil(o.Config) {
 		return true
 	}
 
@@ -292,7 +292,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetConfig(v ProviderConfigDTO
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -302,15 +302,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -324,7 +324,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetDescription(v string) {
 
 // GetDisplayName returns the DisplayName field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDisplayName() string {
-	if o == nil || o.DisplayName == nil {
+	if o == nil || isNil(o.DisplayName) {
 		var ret string
 		return ret
 	}
@@ -334,15 +334,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDisplayName() string {
 // GetDisplayNameOk returns a tuple with the DisplayName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetDisplayNameOk() (*string, bool) {
-	if o == nil || o.DisplayName == nil {
-		return nil, false
+	if o == nil || isNil(o.DisplayName) {
+    return nil, false
 	}
 	return o.DisplayName, true
 }
 
 // HasDisplayName returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasDisplayName() bool {
-	if o != nil && o.DisplayName != nil {
+	if o != nil && !isNil(o.DisplayName) {
 		return true
 	}
 
@@ -356,7 +356,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetDisplayName(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -366,15 +366,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -388,7 +388,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetElementId(v string) {
 
 // GetFederatedConnectionsA returns the FederatedConnectionsA field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsA() []FederatedConnectionDTO {
-	if o == nil || o.FederatedConnectionsA == nil {
+	if o == nil || isNil(o.FederatedConnectionsA) {
 		var ret []FederatedConnectionDTO
 		return ret
 	}
@@ -398,15 +398,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsA() []
 // GetFederatedConnectionsAOk returns a tuple with the FederatedConnectionsA field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsAOk() ([]FederatedConnectionDTO, bool) {
-	if o == nil || o.FederatedConnectionsA == nil {
-		return nil, false
+	if o == nil || isNil(o.FederatedConnectionsA) {
+    return nil, false
 	}
 	return o.FederatedConnectionsA, true
 }
 
 // HasFederatedConnectionsA returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasFederatedConnectionsA() bool {
-	if o != nil && o.FederatedConnectionsA != nil {
+	if o != nil && !isNil(o.FederatedConnectionsA) {
 		return true
 	}
 
@@ -420,7 +420,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetFederatedConnectionsA(v []
 
 // GetFederatedConnectionsB returns the FederatedConnectionsB field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsB() []FederatedConnectionDTO {
-	if o == nil || o.FederatedConnectionsB == nil {
+	if o == nil || isNil(o.FederatedConnectionsB) {
 		var ret []FederatedConnectionDTO
 		return ret
 	}
@@ -430,15 +430,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsB() []
 // GetFederatedConnectionsBOk returns a tuple with the FederatedConnectionsB field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetFederatedConnectionsBOk() ([]FederatedConnectionDTO, bool) {
-	if o == nil || o.FederatedConnectionsB == nil {
-		return nil, false
+	if o == nil || isNil(o.FederatedConnectionsB) {
+    return nil, false
 	}
 	return o.FederatedConnectionsB, true
 }
 
 // HasFederatedConnectionsB returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasFederatedConnectionsB() bool {
-	if o != nil && o.FederatedConnectionsB != nil {
+	if o != nil && !isNil(o.FederatedConnectionsB) {
 		return true
 	}
 
@@ -452,7 +452,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetFederatedConnectionsB(v []
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -462,15 +462,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -484,7 +484,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetId(v int64) {
 
 // GetIdentityAppliance returns the IdentityAppliance field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityAppliance() IdentityApplianceDefinitionDTO {
-	if o == nil || o.IdentityAppliance == nil {
+	if o == nil || isNil(o.IdentityAppliance) {
 		var ret IdentityApplianceDefinitionDTO
 		return ret
 	}
@@ -494,15 +494,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityAppliance() Identi
 // GetIdentityApplianceOk returns a tuple with the IdentityAppliance field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityApplianceOk() (*IdentityApplianceDefinitionDTO, bool) {
-	if o == nil || o.IdentityAppliance == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityAppliance) {
+    return nil, false
 	}
 	return o.IdentityAppliance, true
 }
 
 // HasIdentityAppliance returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasIdentityAppliance() bool {
-	if o != nil && o.IdentityAppliance != nil {
+	if o != nil && !isNil(o.IdentityAppliance) {
 		return true
 	}
 
@@ -516,7 +516,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetIdentityAppliance(v Identi
 
 // GetIdentityLookups returns the IdentityLookups field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityLookups() []IdentityLookupDTO {
-	if o == nil || o.IdentityLookups == nil {
+	if o == nil || isNil(o.IdentityLookups) {
 		var ret []IdentityLookupDTO
 		return ret
 	}
@@ -526,15 +526,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityLookups() []Identi
 // GetIdentityLookupsOk returns a tuple with the IdentityLookups field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIdentityLookupsOk() ([]IdentityLookupDTO, bool) {
-	if o == nil || o.IdentityLookups == nil {
-		return nil, false
+	if o == nil || isNil(o.IdentityLookups) {
+    return nil, false
 	}
 	return o.IdentityLookups, true
 }
 
 // HasIdentityLookups returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasIdentityLookups() bool {
-	if o != nil && o.IdentityLookups != nil {
+	if o != nil && !isNil(o.IdentityLookups) {
 		return true
 	}
 
@@ -548,7 +548,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetIdentityLookups(v []Identi
 
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIsRemote() bool {
-	if o == nil || o.IsRemote == nil {
+	if o == nil || isNil(o.IsRemote) {
 		var ret bool
 		return ret
 	}
@@ -558,15 +558,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIsRemote() bool {
 // GetIsRemoteOk returns a tuple with the IsRemote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIsRemoteOk() (*bool, bool) {
-	if o == nil || o.IsRemote == nil {
-		return nil, false
+	if o == nil || isNil(o.IsRemote) {
+    return nil, false
 	}
 	return o.IsRemote, true
 }
 
 // HasIsRemote returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasIsRemote() bool {
-	if o != nil && o.IsRemote != nil {
+	if o != nil && !isNil(o.IsRemote) {
 		return true
 	}
 
@@ -580,7 +580,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetIsRemote(v bool) {
 
 // GetLocation returns the Location field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetLocation() LocationDTO {
-	if o == nil || o.Location == nil {
+	if o == nil || isNil(o.Location) {
 		var ret LocationDTO
 		return ret
 	}
@@ -590,15 +590,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetLocation() LocationDTO {
 // GetLocationOk returns a tuple with the Location field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetLocationOk() (*LocationDTO, bool) {
-	if o == nil || o.Location == nil {
-		return nil, false
+	if o == nil || isNil(o.Location) {
+    return nil, false
 	}
 	return o.Location, true
 }
 
 // HasLocation returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasLocation() bool {
-	if o != nil && o.Location != nil {
+	if o != nil && !isNil(o.Location) {
 		return true
 	}
 
@@ -612,7 +612,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetLocation(v LocationDTO) {
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMetadata() ResourceDTO {
-	if o == nil || o.Metadata == nil {
+	if o == nil || isNil(o.Metadata) {
 		var ret ResourceDTO
 		return ret
 	}
@@ -622,15 +622,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMetadata() ResourceDTO {
 // GetMetadataOk returns a tuple with the Metadata field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMetadataOk() (*ResourceDTO, bool) {
-	if o == nil || o.Metadata == nil {
-		return nil, false
+	if o == nil || isNil(o.Metadata) {
+    return nil, false
 	}
 	return o.Metadata, true
 }
 
 // HasMetadata returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasMetadata() bool {
-	if o != nil && o.Metadata != nil {
+	if o != nil && !isNil(o.Metadata) {
 		return true
 	}
 
@@ -644,7 +644,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetMetadata(v ResourceDTO) {
 
 // GetMobileAuthzTokenService returns the MobileAuthzTokenService field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMobileAuthzTokenService() LocationDTO {
-	if o == nil || o.MobileAuthzTokenService == nil {
+	if o == nil || isNil(o.MobileAuthzTokenService) {
 		var ret LocationDTO
 		return ret
 	}
@@ -654,15 +654,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMobileAuthzTokenService() 
 // GetMobileAuthzTokenServiceOk returns a tuple with the MobileAuthzTokenService field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetMobileAuthzTokenServiceOk() (*LocationDTO, bool) {
-	if o == nil || o.MobileAuthzTokenService == nil {
-		return nil, false
+	if o == nil || isNil(o.MobileAuthzTokenService) {
+    return nil, false
 	}
 	return o.MobileAuthzTokenService, true
 }
 
 // HasMobileAuthzTokenService returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasMobileAuthzTokenService() bool {
-	if o != nil && o.MobileAuthzTokenService != nil {
+	if o != nil && !isNil(o.MobileAuthzTokenService) {
 		return true
 	}
 
@@ -676,7 +676,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetMobileAuthzTokenService(v 
 
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetName() string {
-	if o == nil || o.Name == nil {
+	if o == nil || isNil(o.Name) {
 		var ret string
 		return ret
 	}
@@ -686,15 +686,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetName() string {
 // GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetNameOk() (*string, bool) {
-	if o == nil || o.Name == nil {
-		return nil, false
+	if o == nil || isNil(o.Name) {
+    return nil, false
 	}
 	return o.Name, true
 }
 
 // HasName returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasName() bool {
-	if o != nil && o.Name != nil {
+	if o != nil && !isNil(o.Name) {
 		return true
 	}
 
@@ -708,7 +708,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetName(v string) {
 
 // GetRemote returns the Remote field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRemote() bool {
-	if o == nil || o.Remote == nil {
+	if o == nil || isNil(o.Remote) {
 		var ret bool
 		return ret
 	}
@@ -718,15 +718,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRemote() bool {
 // GetRemoteOk returns a tuple with the Remote field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRemoteOk() (*bool, bool) {
-	if o == nil || o.Remote == nil {
-		return nil, false
+	if o == nil || isNil(o.Remote) {
+    return nil, false
 	}
 	return o.Remote, true
 }
 
 // HasRemote returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasRemote() bool {
-	if o != nil && o.Remote != nil {
+	if o != nil && !isNil(o.Remote) {
 		return true
 	}
 
@@ -740,7 +740,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetRemote(v bool) {
 
 // GetRole returns the Role field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRole() string {
-	if o == nil || o.Role == nil {
+	if o == nil || isNil(o.Role) {
 		var ret string
 		return ret
 	}
@@ -750,15 +750,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRole() string {
 // GetRoleOk returns a tuple with the Role field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetRoleOk() (*string, bool) {
-	if o == nil || o.Role == nil {
-		return nil, false
+	if o == nil || isNil(o.Role) {
+    return nil, false
 	}
 	return o.Role, true
 }
 
 // HasRole returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasRole() bool {
-	if o != nil && o.Role != nil {
+	if o != nil && !isNil(o.Role) {
 		return true
 	}
 
@@ -772,7 +772,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetRole(v string) {
 
 // GetScopes returns the Scopes field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetScopes() string {
-	if o == nil || o.Scopes == nil {
+	if o == nil || isNil(o.Scopes) {
 		var ret string
 		return ret
 	}
@@ -782,15 +782,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetScopes() string {
 // GetScopesOk returns a tuple with the Scopes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetScopesOk() (*string, bool) {
-	if o == nil || o.Scopes == nil {
-		return nil, false
+	if o == nil || isNil(o.Scopes) {
+    return nil, false
 	}
 	return o.Scopes, true
 }
 
 // HasScopes returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasScopes() bool {
-	if o != nil && o.Scopes != nil {
+	if o != nil && !isNil(o.Scopes) {
 		return true
 	}
 
@@ -804,7 +804,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetScopes(v string) {
 
 // GetServerKey returns the ServerKey field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetServerKey() string {
-	if o == nil || o.ServerKey == nil {
+	if o == nil || isNil(o.ServerKey) {
 		var ret string
 		return ret
 	}
@@ -814,15 +814,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetServerKey() string {
 // GetServerKeyOk returns a tuple with the ServerKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetServerKeyOk() (*string, bool) {
-	if o == nil || o.ServerKey == nil {
-		return nil, false
+	if o == nil || isNil(o.ServerKey) {
+    return nil, false
 	}
 	return o.ServerKey, true
 }
 
 // HasServerKey returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasServerKey() bool {
-	if o != nil && o.ServerKey != nil {
+	if o != nil && !isNil(o.ServerKey) {
 		return true
 	}
 
@@ -836,7 +836,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetServerKey(v string) {
 
 // GetUserFields returns the UserFields field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetUserFields() string {
-	if o == nil || o.UserFields == nil {
+	if o == nil || isNil(o.UserFields) {
 		var ret string
 		return ret
 	}
@@ -846,15 +846,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetUserFields() string {
 // GetUserFieldsOk returns a tuple with the UserFields field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetUserFieldsOk() (*string, bool) {
-	if o == nil || o.UserFields == nil {
-		return nil, false
+	if o == nil || isNil(o.UserFields) {
+    return nil, false
 	}
 	return o.UserFields, true
 }
 
 // HasUserFields returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasUserFields() bool {
-	if o != nil && o.UserFields != nil {
+	if o != nil && !isNil(o.UserFields) {
 		return true
 	}
 
@@ -868,7 +868,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetUserFields(v string) {
 
 // GetX returns the X field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetX() float64 {
-	if o == nil || o.X == nil {
+	if o == nil || isNil(o.X) {
 		var ret float64
 		return ret
 	}
@@ -878,15 +878,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetX() float64 {
 // GetXOk returns a tuple with the X field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetXOk() (*float64, bool) {
-	if o == nil || o.X == nil {
-		return nil, false
+	if o == nil || isNil(o.X) {
+    return nil, false
 	}
 	return o.X, true
 }
 
 // HasX returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasX() bool {
-	if o != nil && o.X != nil {
+	if o != nil && !isNil(o.X) {
 		return true
 	}
 
@@ -900,7 +900,7 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetX(v float64) {
 
 // GetY returns the Y field value if set, zero value otherwise.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetY() float64 {
-	if o == nil || o.Y == nil {
+	if o == nil || isNil(o.Y) {
 		var ret float64
 		return ret
 	}
@@ -910,15 +910,15 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) GetY() float64 {
 // GetYOk returns a tuple with the Y field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) GetYOk() (*float64, bool) {
-	if o == nil || o.Y == nil {
-		return nil, false
+	if o == nil || isNil(o.Y) {
+    return nil, false
 	}
 	return o.Y, true
 }
 
 // HasY returns a boolean if a field has been set.
 func (o *FacebookOpenIDConnectIdentityProviderDTO) HasY() bool {
-	if o != nil && o.Y != nil {
+	if o != nil && !isNil(o.Y) {
 		return true
 	}
 
@@ -932,85 +932,85 @@ func (o *FacebookOpenIDConnectIdentityProviderDTO) SetY(v float64) {
 
 func (o FacebookOpenIDConnectIdentityProviderDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.AccessTokenService != nil {
+	if !isNil(o.AccessTokenService) {
 		toSerialize["accessTokenService"] = o.AccessTokenService
 	}
-	if o.ActiveBindings != nil {
+	if !isNil(o.ActiveBindings) {
 		toSerialize["activeBindings"] = o.ActiveBindings
 	}
-	if o.ActiveProfiles != nil {
+	if !isNil(o.ActiveProfiles) {
 		toSerialize["activeProfiles"] = o.ActiveProfiles
 	}
-	if o.AuthzTokenService != nil {
+	if !isNil(o.AuthzTokenService) {
 		toSerialize["authzTokenService"] = o.AuthzTokenService
 	}
-	if o.ClientId != nil {
+	if !isNil(o.ClientId) {
 		toSerialize["clientId"] = o.ClientId
 	}
-	if o.ClientSecret != nil {
+	if !isNil(o.ClientSecret) {
 		toSerialize["clientSecret"] = o.ClientSecret
 	}
-	if o.Config != nil {
+	if !isNil(o.Config) {
 		toSerialize["config"] = o.Config
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.DisplayName != nil {
+	if !isNil(o.DisplayName) {
 		toSerialize["displayName"] = o.DisplayName
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.FederatedConnectionsA != nil {
+	if !isNil(o.FederatedConnectionsA) {
 		toSerialize["federatedConnectionsA"] = o.FederatedConnectionsA
 	}
-	if o.FederatedConnectionsB != nil {
+	if !isNil(o.FederatedConnectionsB) {
 		toSerialize["federatedConnectionsB"] = o.FederatedConnectionsB
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.IdentityAppliance != nil {
+	if !isNil(o.IdentityAppliance) {
 		toSerialize["identityAppliance"] = o.IdentityAppliance
 	}
-	if o.IdentityLookups != nil {
+	if !isNil(o.IdentityLookups) {
 		toSerialize["identityLookups"] = o.IdentityLookups
 	}
-	if o.IsRemote != nil {
+	if !isNil(o.IsRemote) {
 		toSerialize["isRemote"] = o.IsRemote
 	}
-	if o.Location != nil {
+	if !isNil(o.Location) {
 		toSerialize["location"] = o.Location
 	}
-	if o.Metadata != nil {
+	if !isNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
-	if o.MobileAuthzTokenService != nil {
+	if !isNil(o.MobileAuthzTokenService) {
 		toSerialize["mobileAuthzTokenService"] = o.MobileAuthzTokenService
 	}
-	if o.Name != nil {
+	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
-	if o.Remote != nil {
+	if !isNil(o.Remote) {
 		toSerialize["remote"] = o.Remote
 	}
-	if o.Role != nil {
+	if !isNil(o.Role) {
 		toSerialize["role"] = o.Role
 	}
-	if o.Scopes != nil {
+	if !isNil(o.Scopes) {
 		toSerialize["scopes"] = o.Scopes
 	}
-	if o.ServerKey != nil {
+	if !isNil(o.ServerKey) {
 		toSerialize["serverKey"] = o.ServerKey
 	}
-	if o.UserFields != nil {
+	if !isNil(o.UserFields) {
 		toSerialize["userFields"] = o.UserFields
 	}
-	if o.X != nil {
+	if !isNil(o.X) {
 		toSerialize["x"] = o.X
 	}
-	if o.Y != nil {
+	if !isNil(o.Y) {
 		toSerialize["y"] = o.Y
 	}
 

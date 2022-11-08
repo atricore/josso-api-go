@@ -51,7 +51,7 @@ func NewIdentityApplianceDeploymentDTOWithDefaults() *IdentityApplianceDeploymen
 
 // GetDeployedRevision returns the DeployedRevision field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetDeployedRevision() int32 {
-	if o == nil || o.DeployedRevision == nil {
+	if o == nil || isNil(o.DeployedRevision) {
 		var ret int32
 		return ret
 	}
@@ -61,15 +61,15 @@ func (o *IdentityApplianceDeploymentDTO) GetDeployedRevision() int32 {
 // GetDeployedRevisionOk returns a tuple with the DeployedRevision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetDeployedRevisionOk() (*int32, bool) {
-	if o == nil || o.DeployedRevision == nil {
-		return nil, false
+	if o == nil || isNil(o.DeployedRevision) {
+    return nil, false
 	}
 	return o.DeployedRevision, true
 }
 
 // HasDeployedRevision returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasDeployedRevision() bool {
-	if o != nil && o.DeployedRevision != nil {
+	if o != nil && !isNil(o.DeployedRevision) {
 		return true
 	}
 
@@ -83,7 +83,7 @@ func (o *IdentityApplianceDeploymentDTO) SetDeployedRevision(v int32) {
 
 // GetDeploymentTime returns the DeploymentTime field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetDeploymentTime() time.Time {
-	if o == nil || o.DeploymentTime == nil {
+	if o == nil || isNil(o.DeploymentTime) {
 		var ret time.Time
 		return ret
 	}
@@ -93,15 +93,15 @@ func (o *IdentityApplianceDeploymentDTO) GetDeploymentTime() time.Time {
 // GetDeploymentTimeOk returns a tuple with the DeploymentTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetDeploymentTimeOk() (*time.Time, bool) {
-	if o == nil || o.DeploymentTime == nil {
-		return nil, false
+	if o == nil || isNil(o.DeploymentTime) {
+    return nil, false
 	}
 	return o.DeploymentTime, true
 }
 
 // HasDeploymentTime returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasDeploymentTime() bool {
-	if o != nil && o.DeploymentTime != nil {
+	if o != nil && !isNil(o.DeploymentTime) {
 		return true
 	}
 
@@ -115,7 +115,7 @@ func (o *IdentityApplianceDeploymentDTO) SetDeploymentTime(v time.Time) {
 
 // GetDescription returns the Description field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetDescription() string {
-	if o == nil || o.Description == nil {
+	if o == nil || isNil(o.Description) {
 		var ret string
 		return ret
 	}
@@ -125,15 +125,15 @@ func (o *IdentityApplianceDeploymentDTO) GetDescription() string {
 // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetDescriptionOk() (*string, bool) {
-	if o == nil || o.Description == nil {
-		return nil, false
+	if o == nil || isNil(o.Description) {
+    return nil, false
 	}
 	return o.Description, true
 }
 
 // HasDescription returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasDescription() bool {
-	if o != nil && o.Description != nil {
+	if o != nil && !isNil(o.Description) {
 		return true
 	}
 
@@ -147,7 +147,7 @@ func (o *IdentityApplianceDeploymentDTO) SetDescription(v string) {
 
 // GetElementId returns the ElementId field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetElementId() string {
-	if o == nil || o.ElementId == nil {
+	if o == nil || isNil(o.ElementId) {
 		var ret string
 		return ret
 	}
@@ -157,15 +157,15 @@ func (o *IdentityApplianceDeploymentDTO) GetElementId() string {
 // GetElementIdOk returns a tuple with the ElementId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetElementIdOk() (*string, bool) {
-	if o == nil || o.ElementId == nil {
-		return nil, false
+	if o == nil || isNil(o.ElementId) {
+    return nil, false
 	}
 	return o.ElementId, true
 }
 
 // HasElementId returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasElementId() bool {
-	if o != nil && o.ElementId != nil {
+	if o != nil && !isNil(o.ElementId) {
 		return true
 	}
 
@@ -179,7 +179,7 @@ func (o *IdentityApplianceDeploymentDTO) SetElementId(v string) {
 
 // GetFeatureName returns the FeatureName field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetFeatureName() string {
-	if o == nil || o.FeatureName == nil {
+	if o == nil || isNil(o.FeatureName) {
 		var ret string
 		return ret
 	}
@@ -189,15 +189,15 @@ func (o *IdentityApplianceDeploymentDTO) GetFeatureName() string {
 // GetFeatureNameOk returns a tuple with the FeatureName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetFeatureNameOk() (*string, bool) {
-	if o == nil || o.FeatureName == nil {
-		return nil, false
+	if o == nil || isNil(o.FeatureName) {
+    return nil, false
 	}
 	return o.FeatureName, true
 }
 
 // HasFeatureName returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasFeatureName() bool {
-	if o != nil && o.FeatureName != nil {
+	if o != nil && !isNil(o.FeatureName) {
 		return true
 	}
 
@@ -211,7 +211,7 @@ func (o *IdentityApplianceDeploymentDTO) SetFeatureName(v string) {
 
 // GetFeatureUri returns the FeatureUri field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetFeatureUri() string {
-	if o == nil || o.FeatureUri == nil {
+	if o == nil || isNil(o.FeatureUri) {
 		var ret string
 		return ret
 	}
@@ -221,15 +221,15 @@ func (o *IdentityApplianceDeploymentDTO) GetFeatureUri() string {
 // GetFeatureUriOk returns a tuple with the FeatureUri field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetFeatureUriOk() (*string, bool) {
-	if o == nil || o.FeatureUri == nil {
-		return nil, false
+	if o == nil || isNil(o.FeatureUri) {
+    return nil, false
 	}
 	return o.FeatureUri, true
 }
 
 // HasFeatureUri returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasFeatureUri() bool {
-	if o != nil && o.FeatureUri != nil {
+	if o != nil && !isNil(o.FeatureUri) {
 		return true
 	}
 
@@ -243,7 +243,7 @@ func (o *IdentityApplianceDeploymentDTO) SetFeatureUri(v string) {
 
 // GetId returns the Id field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetId() int64 {
-	if o == nil || o.Id == nil {
+	if o == nil || isNil(o.Id) {
 		var ret int64
 		return ret
 	}
@@ -253,15 +253,15 @@ func (o *IdentityApplianceDeploymentDTO) GetId() int64 {
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetIdOk() (*int64, bool) {
-	if o == nil || o.Id == nil {
-		return nil, false
+	if o == nil || isNil(o.Id) {
+    return nil, false
 	}
 	return o.Id, true
 }
 
 // HasId returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasId() bool {
-	if o != nil && o.Id != nil {
+	if o != nil && !isNil(o.Id) {
 		return true
 	}
 
@@ -275,7 +275,7 @@ func (o *IdentityApplianceDeploymentDTO) SetId(v int64) {
 
 // GetIdaus returns the Idaus field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetIdaus() []IdentityApplianceUnitDTO {
-	if o == nil || o.Idaus == nil {
+	if o == nil || isNil(o.Idaus) {
 		var ret []IdentityApplianceUnitDTO
 		return ret
 	}
@@ -285,15 +285,15 @@ func (o *IdentityApplianceDeploymentDTO) GetIdaus() []IdentityApplianceUnitDTO {
 // GetIdausOk returns a tuple with the Idaus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetIdausOk() ([]IdentityApplianceUnitDTO, bool) {
-	if o == nil || o.Idaus == nil {
-		return nil, false
+	if o == nil || isNil(o.Idaus) {
+    return nil, false
 	}
 	return o.Idaus, true
 }
 
 // HasIdaus returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasIdaus() bool {
-	if o != nil && o.Idaus != nil {
+	if o != nil && !isNil(o.Idaus) {
 		return true
 	}
 
@@ -307,7 +307,7 @@ func (o *IdentityApplianceDeploymentDTO) SetIdaus(v []IdentityApplianceUnitDTO) 
 
 // GetState returns the State field value if set, zero value otherwise.
 func (o *IdentityApplianceDeploymentDTO) GetState() string {
-	if o == nil || o.State == nil {
+	if o == nil || isNil(o.State) {
 		var ret string
 		return ret
 	}
@@ -317,15 +317,15 @@ func (o *IdentityApplianceDeploymentDTO) GetState() string {
 // GetStateOk returns a tuple with the State field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IdentityApplianceDeploymentDTO) GetStateOk() (*string, bool) {
-	if o == nil || o.State == nil {
-		return nil, false
+	if o == nil || isNil(o.State) {
+    return nil, false
 	}
 	return o.State, true
 }
 
 // HasState returns a boolean if a field has been set.
 func (o *IdentityApplianceDeploymentDTO) HasState() bool {
-	if o != nil && o.State != nil {
+	if o != nil && !isNil(o.State) {
 		return true
 	}
 
@@ -339,31 +339,31 @@ func (o *IdentityApplianceDeploymentDTO) SetState(v string) {
 
 func (o IdentityApplianceDeploymentDTO) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if o.DeployedRevision != nil {
+	if !isNil(o.DeployedRevision) {
 		toSerialize["deployedRevision"] = o.DeployedRevision
 	}
-	if o.DeploymentTime != nil {
+	if !isNil(o.DeploymentTime) {
 		toSerialize["deploymentTime"] = o.DeploymentTime
 	}
-	if o.Description != nil {
+	if !isNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if o.ElementId != nil {
+	if !isNil(o.ElementId) {
 		toSerialize["elementId"] = o.ElementId
 	}
-	if o.FeatureName != nil {
+	if !isNil(o.FeatureName) {
 		toSerialize["featureName"] = o.FeatureName
 	}
-	if o.FeatureUri != nil {
+	if !isNil(o.FeatureUri) {
 		toSerialize["featureUri"] = o.FeatureUri
 	}
-	if o.Id != nil {
+	if !isNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
-	if o.Idaus != nil {
+	if !isNil(o.Idaus) {
 		toSerialize["idaus"] = o.Idaus
 	}
-	if o.State != nil {
+	if !isNil(o.State) {
 		toSerialize["state"] = o.State
 	}
 

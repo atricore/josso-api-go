@@ -39,6 +39,8 @@ docs/DirectoryAuthenticationServiceDTO.md
 docs/EmbeddedIdentityVaultDTO.md
 docs/EntitySelectionStrategyDTO.md
 docs/ExecutionEnvironmentDTO.md
+docs/ExportExecEnvCfgReq.md
+docs/ExportExecEnvCfgRes.md
 docs/ExtensionDTO.md
 docs/ExternalOpenIDConnectRelayingPartyDTO.md
 docs/ExternalSaml2ServiceProviderDTO.md
@@ -239,6 +241,8 @@ model_directory_authentication_service_dto.go
 model_embedded_identity_vault_dto.go
 model_entity_selection_strategy_dto.go
 model_execution_environment_dto.go
+model_export_exec_env_cfg_req.go
+model_export_exec_env_cfg_res.go
 model_extension_dto.go
 model_external_open_id_connect_relaying_party_dto.go
 model_external_saml2_service_provider_dto.go
@@ -404,4 +408,5 @@ model_virtual_saml2_service_provider_dto.go
 model_weblogic_execution_environment_dto.go
 model_windows_iis_execution_environment_dto.go
 response.go
+test/api_default_test.go
 utils.go
