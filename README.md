@@ -135,6 +135,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetExtSaml2Sps**](docs/DefaultApi.md#getextsaml2sps) | **Get** /iam-deploy/extsaml2sps | 
 *DefaultApi* | [**GetIdP**](docs/DefaultApi.md#getidp) | **Get** /iam-deploy/idp | 
 *DefaultApi* | [**GetIdPs**](docs/DefaultApi.md#getidps) | **Get** /iam-deploy/idps | 
+*DefaultApi* | [**GetIdSource**](docs/DefaultApi.md#getidsource) | **Get** /iam-deploy/idsource | 
+*DefaultApi* | [**GetIdSource1**](docs/DefaultApi.md#getidsource1) | **Get** /iam-deploy/idsources | 
 *DefaultApi* | [**GetIdSourceDb**](docs/DefaultApi.md#getidsourcedb) | **Get** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**GetIdSourceDbs**](docs/DefaultApi.md#getidsourcedbs) | **Get** /iam-deploy/idsourcedbs | 
 *DefaultApi* | [**GetIdSourceLdap**](docs/DefaultApi.md#getidsourceldap) | **Get** /iam-deploy/idsourceldap | 
@@ -266,6 +268,10 @@ Class | Method | HTTP request | Description
  - [GetIdSourceLdapReq](docs/GetIdSourceLdapReq.md)
  - [GetIdSourceLdapRes](docs/GetIdSourceLdapRes.md)
  - [GetIdSourceLdapsRes](docs/GetIdSourceLdapsRes.md)
+ - [GetIdSourceReq](docs/GetIdSourceReq.md)
+ - [GetIdSourceRes](docs/GetIdSourceRes.md)
+ - [GetIdSourcesReq](docs/GetIdSourcesReq.md)
+ - [GetIdSourcesRes](docs/GetIdSourcesRes.md)
  - [GetIdVaultReq](docs/GetIdVaultReq.md)
  - [GetIdVaultRes](docs/GetIdVaultRes.md)
  - [GetIdVaultsRes](docs/GetIdVaultsRes.md)
@@ -311,6 +317,7 @@ Class | Method | HTTP request | Description
  - [GetWeblogicExecEnvsRes](docs/GetWeblogicExecEnvsRes.md)
  - [GoogleOpenIDConnectIdentityProviderDTO](docs/GoogleOpenIDConnectIdentityProviderDTO.md)
  - [GroupDTO](docs/GroupDTO.md)
+ - [IdSourceContainerDTO](docs/IdSourceContainerDTO.md)
  - [IdentityApplianceContainerDTO](docs/IdentityApplianceContainerDTO.md)
  - [IdentityApplianceDTO](docs/IdentityApplianceDTO.md)
  - [IdentityApplianceDefinitionDTO](docs/IdentityApplianceDefinitionDTO.md)

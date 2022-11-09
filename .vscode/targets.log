@@ -6,12 +6,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Nov  7 16:12:28 2022
+# Make data base, printed on Wed Nov  9 12:58:48 2022
 
 # Variables
 
 # environment
-TMUX_PANE = %0
+TMUX_PANE = %1
 # environment
 JAVA_HOME = /usr/lib/jvm/java-8-openjdk
 # environment
@@ -29,7 +29,7 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CWD = /wa/git/go/src/josso-api-go
 # environment
-WINDOWID = 4194306
+WINDOWID = 106954754
 # environment
 DIRENV_WATCHES = eJxszsFKxDAQBuB3mXPZaU0zTXr3KHgXD2Pmty1kG2jirlR8d4-C-AAffC9f9KxtpZn4rrxsjZfCF-y3I1FHT8XadgXNg8gU_DiEoaPHz622SnM7PvDd_fq1XMF1KfupGSdfckmaua56gG07sN9Ycy53frC3yas6P_QeLiQHZ9FjFJXRHMRZgoUIp--AIAX0sY8iPnlLU7R_Y-Of2OtPAAAA__-vFUR0
 # environment
@@ -57,13 +57,13 @@ MAIL = /var/spool/mail/sgonzalez
 # environment
 XDG_DATA_DIRS = /home/sgonzalez/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /wa/git/go/src/jossoctl-go
+OLDPWD = /home/sgonzalez
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
 # environment
-ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1501.sock
+ALACRITTY_SOCKET = /run/user/1000/Alacritty-:0-1417.sock
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sgonzalez/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
@@ -83,7 +83,7 @@ MAKEFLAGS = pqrR
 # makefile
 CURDIR := /wa/git/go/src/josso-api-go
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 JPDA_OPTS = -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
 # automatic
@@ -105,11 +105,11 @@ MAKEFILE_LIST := Makefile
 # environment
 ZSH = /usr/share/oh-my-zsh/
 # environment
-VSCODE_PID = 6179
+VSCODE_PID = 81866
 # environment
 XDG_SESSION_TYPE = x11
 # environment
-TMUX = /tmp/tmux-1000/default,1678,0
+TMUX = /tmp/tmux-1000/default,1583,1
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -167,7 +167,7 @@ XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = 
 # environment
-ALACRITTY_LOG = /tmp/Alacritty-1501.log
+ALACRITTY_LOG = /tmp/Alacritty-1417.log
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
 # environment
@@ -259,7 +259,7 @@ is_vim = ps -o state= -o comm= -t '#{pane_tty}'     | grep -iqE '^[^TXZ ]+ +(\S+
 # default
 SUFFIXES := 
 # environment
-_P9K_TTY = /dev/pts/1
+_P9K_TTY = /dev/pts/3
 # environment
 VSCODE_CLI = 1
 # environment
@@ -274,7 +274,6 @@ TERM_PROGRAM_VERSION = 3.3a
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=9/167=5%
- 
 
 # Pattern-specific Variable Values
 
@@ -282,9 +281,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2065, inode 9188680): 260 files, no impossibilities.
+# . (device 2065, inode 9188680): 263 files, no impossibilities.
 
-# 260 files, no impossibilities in 1 directories.
+# 263 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -382,12 +381,12 @@ test:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 270 / storage = 7998 B / avg = 29 B
-# current buf: size = 8162 B / used = 7998 B / count = 270 / avg = 29 B
+# strcache buffers: 1 (0) / strings = 272 / storage = 8064 B / avg = 29 B
+# current buf: size = 8162 B / used = 8064 B / count = 272 / avg = 29 B
 
-# strcache performance: lookups = 286 / hit rate = 5%
+# strcache performance: lookups = 289 / hit rate = 5%
 # hash-table stats:
-# Load=270/8192=3%, Rehash=0, Collisions=7/286=2%
-# Finished Make data base on Mon Nov  7 16:12:28 2022
+# Load=272/8192=3%, Rehash=0, Collisions=7/289=2%
+# Finished Make data base on Wed Nov  9 12:58:48 2022
 
  

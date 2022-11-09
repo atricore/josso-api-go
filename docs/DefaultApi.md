@@ -60,6 +60,8 @@ Method | HTTP request | Description
 [**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
+[**GetIdSource**](DefaultApi.md#GetIdSource) | **Get** /iam-deploy/idsource | 
+[**GetIdSource1**](DefaultApi.md#GetIdSource1) | **Get** /iam-deploy/idsources | 
 [**GetIdSourceDb**](DefaultApi.md#GetIdSourceDb) | **Get** /iam-deploy/idsourcedb | 
 [**GetIdSourceDbs**](DefaultApi.md#GetIdSourceDbs) | **Get** /iam-deploy/idsourcedbs | 
 [**GetIdSourceLdap**](DefaultApi.md#GetIdSourceLdap) | **Get** /iam-deploy/idsourceldap | 
@@ -3692,6 +3694,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIdPsRes**](GetIdPsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdSource
+
+> GetIdSourceRes GetIdSource(ctx).GetIdSourceReq(getIdSourceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourceReq := *openapiclient.NewGetIdSourceReq() // GetIdSourceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSource(context.Background()).GetIdSourceReq(getIdSourceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSource``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSource`: GetIdSourceRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSource`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourceReq** | [**GetIdSourceReq**](GetIdSourceReq.md) |  | 
+
+### Return type
+
+[**GetIdSourceRes**](GetIdSourceRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdSource1
+
+> GetIdSourcesRes GetIdSource1(ctx).GetIdSourcesReq(getIdSourcesReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourcesReq := *openapiclient.NewGetIdSourcesReq() // GetIdSourcesReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSource1(context.Background()).GetIdSourcesReq(getIdSourcesReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSource1``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSource1`: GetIdSourcesRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSource1`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSource1Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourcesReq** | [**GetIdSourcesReq**](GetIdSourcesReq.md) |  | 
+
+### Return type
+
+[**GetIdSourcesRes**](GetIdSourcesRes.md)
 
 ### Authorization
 

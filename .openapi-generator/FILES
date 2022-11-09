@@ -73,6 +73,10 @@ docs/GetIdSourceDbsRes.md
 docs/GetIdSourceLdapReq.md
 docs/GetIdSourceLdapRes.md
 docs/GetIdSourceLdapsRes.md
+docs/GetIdSourceReq.md
+docs/GetIdSourceRes.md
+docs/GetIdSourcesReq.md
+docs/GetIdSourcesRes.md
 docs/GetIdVaultReq.md
 docs/GetIdVaultRes.md
 docs/GetIdVaultsRes.md
@@ -118,6 +122,7 @@ docs/GetWeblogicExecEnvRes.md
 docs/GetWeblogicExecEnvsRes.md
 docs/GoogleOpenIDConnectIdentityProviderDTO.md
 docs/GroupDTO.md
+docs/IdSourceContainerDTO.md
 docs/IdentityApplianceContainerDTO.md
 docs/IdentityApplianceDTO.md
 docs/IdentityApplianceDefinitionDTO.md
@@ -275,6 +280,10 @@ model_get_id_source_dbs_res.go
 model_get_id_source_ldap_req.go
 model_get_id_source_ldap_res.go
 model_get_id_source_ldaps_res.go
+model_get_id_source_req.go
+model_get_id_source_res.go
+model_get_id_sources_req.go
+model_get_id_sources_res.go
 model_get_id_vault_req.go
 model_get_id_vault_res.go
 model_get_id_vaults_res.go
@@ -320,6 +329,7 @@ model_get_weblogic_exec_env_res.go
 model_get_weblogic_exec_envs_res.go
 model_google_open_id_connect_identity_provider_dto.go
 model_group_dto.go
+model_id_source_container_dto.go
 model_identity_appliance_container_dto.go
 model_identity_appliance_definition_dto.go
 model_identity_appliance_deployment_dto.go
@@ -408,5 +418,4 @@ model_virtual_saml2_service_provider_dto.go
 model_weblogic_execution_environment_dto.go
 model_windows_iis_execution_environment_dto.go
 response.go
-test/api_default_test.go
 utils.go

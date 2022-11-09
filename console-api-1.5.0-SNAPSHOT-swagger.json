@@ -1350,6 +1350,32 @@
         }
       }
     },
+    "/iam-deploy/idsource" : {
+      "get" : {
+        "operationId" : "getIdSource",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdSourceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdSourceRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/idsourcedb" : {
       "get" : {
         "operationId" : "getIdSourceDb",
@@ -1591,6 +1617,32 @@
               "application/json" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/GetIdSourceLdapsRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/idsources" : {
+      "get" : {
+        "operationId" : "getIdSource_1",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetIdSourcesReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetIdSourcesRes"
                 }
               }
             }
@@ -4956,6 +5008,65 @@
           }
         }
       },
+      "GetIdSourceReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetIdSourceRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idSource" : {
+            "$ref" : "#/components/schemas/IdSourceContainerDTO"
+          },
+          "type" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetIdSourcesReq" : {
+        "type" : "object",
+        "properties" : {
+          "idaName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetIdSourcesRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "idSources" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/IdSourceContainerDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetIdVaultReq" : {
         "type" : "object",
         "properties" : {
@@ -5797,6 +5908,20 @@
             "type" : "string"
           },
           "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "IdSourceContainerDTO" : {
+        "type" : "object",
+        "properties" : {
+          "idSource" : {
+            "$ref" : "#/components/schemas/IdentitySourceDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "type" : {
             "type" : "string"
           }
         }
