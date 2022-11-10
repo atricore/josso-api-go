@@ -1626,7 +1626,7 @@
     },
     "/iam-deploy/idsources" : {
       "get" : {
-        "operationId" : "getIdSource_1",
+        "operationId" : "getIdSources",
         "requestBody" : {
           "content" : {
             "application/json" : {

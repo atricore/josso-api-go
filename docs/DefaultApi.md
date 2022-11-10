@@ -61,11 +61,11 @@ Method | HTTP request | Description
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
 [**GetIdPs**](DefaultApi.md#GetIdPs) | **Get** /iam-deploy/idps | 
 [**GetIdSource**](DefaultApi.md#GetIdSource) | **Get** /iam-deploy/idsource | 
-[**GetIdSource1**](DefaultApi.md#GetIdSource1) | **Get** /iam-deploy/idsources | 
 [**GetIdSourceDb**](DefaultApi.md#GetIdSourceDb) | **Get** /iam-deploy/idsourcedb | 
 [**GetIdSourceDbs**](DefaultApi.md#GetIdSourceDbs) | **Get** /iam-deploy/idsourcedbs | 
 [**GetIdSourceLdap**](DefaultApi.md#GetIdSourceLdap) | **Get** /iam-deploy/idsourceldap | 
 [**GetIdSourceLdaps**](DefaultApi.md#GetIdSourceLdaps) | **Get** /iam-deploy/idsourceldaps | 
+[**GetIdSources**](DefaultApi.md#GetIdSources) | **Get** /iam-deploy/idsources | 
 [**GetIdVault**](DefaultApi.md#GetIdVault) | **Get** /iam-deploy/idvault | 
 [**GetIdVaults**](DefaultApi.md#GetIdVaults) | **Get** /iam-deploy/idvaults | 
 [**GetIdpAzure**](DefaultApi.md#GetIdpAzure) | **Get** /iam-deploy/idp_azure | 
@@ -3773,70 +3773,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetIdSource1
-
-> GetIdSourcesRes GetIdSource1(ctx).GetIdSourcesReq(getIdSourcesReq).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    getIdSourcesReq := *openapiclient.NewGetIdSourcesReq() // GetIdSourcesReq |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.GetIdSource1(context.Background()).GetIdSourcesReq(getIdSourcesReq).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSource1``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetIdSource1`: GetIdSourcesRes
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSource1`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetIdSource1Request struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **getIdSourcesReq** | [**GetIdSourcesReq**](GetIdSourcesReq.md) |  | 
-
-### Return type
-
-[**GetIdSourcesRes**](GetIdSourcesRes.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## GetIdSourceDb
 
 > GetIdSourceDbRes GetIdSourceDb(ctx).GetIdSourceDbReq(getIdSourceDbReq).Execute()
@@ -4078,6 +4014,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIdSourceLdapsRes**](GetIdSourceLdapsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdSources
+
+> GetIdSourcesRes GetIdSources(ctx).GetIdSourcesReq(getIdSourcesReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdSourcesReq := *openapiclient.NewGetIdSourcesReq() // GetIdSourcesReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdSources(context.Background()).GetIdSourcesReq(getIdSourcesReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdSources``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdSources`: GetIdSourcesRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdSources`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdSourcesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdSourcesReq** | [**GetIdSourcesReq**](GetIdSourcesReq.md) |  | 
+
+### Return type
+
+[**GetIdSourcesRes**](GetIdSourcesRes.md)
 
 ### Authorization
 

@@ -136,11 +136,11 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetIdP**](docs/DefaultApi.md#getidp) | **Get** /iam-deploy/idp | 
 *DefaultApi* | [**GetIdPs**](docs/DefaultApi.md#getidps) | **Get** /iam-deploy/idps | 
 *DefaultApi* | [**GetIdSource**](docs/DefaultApi.md#getidsource) | **Get** /iam-deploy/idsource | 
-*DefaultApi* | [**GetIdSource1**](docs/DefaultApi.md#getidsource1) | **Get** /iam-deploy/idsources | 
 *DefaultApi* | [**GetIdSourceDb**](docs/DefaultApi.md#getidsourcedb) | **Get** /iam-deploy/idsourcedb | 
 *DefaultApi* | [**GetIdSourceDbs**](docs/DefaultApi.md#getidsourcedbs) | **Get** /iam-deploy/idsourcedbs | 
 *DefaultApi* | [**GetIdSourceLdap**](docs/DefaultApi.md#getidsourceldap) | **Get** /iam-deploy/idsourceldap | 
 *DefaultApi* | [**GetIdSourceLdaps**](docs/DefaultApi.md#getidsourceldaps) | **Get** /iam-deploy/idsourceldaps | 
+*DefaultApi* | [**GetIdSources**](docs/DefaultApi.md#getidsources) | **Get** /iam-deploy/idsources | 
 *DefaultApi* | [**GetIdVault**](docs/DefaultApi.md#getidvault) | **Get** /iam-deploy/idvault | 
 *DefaultApi* | [**GetIdVaults**](docs/DefaultApi.md#getidvaults) | **Get** /iam-deploy/idvaults | 
 *DefaultApi* | [**GetIdpAzure**](docs/DefaultApi.md#getidpazure) | **Get** /iam-deploy/idp_azure | 
