@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Destination** | Pointer to **string** |  | [optional] 
 **ExecEnvFolder** | Pointer to **string** |  | [optional] 
 **ExecEnvName** | Pointer to **string** |  | [optional] 
-**IdaName** | Pointer to **string** |  | [optional] 
+**IdOrName** | Pointer to **string** |  | [optional] 
 **Password** | Pointer to **string** |  | [optional] 
 **Reactivate** | Pointer to **bool** |  | [optional] 
 **Replace** | Pointer to **bool** |  | [optional] 
@@ -159,30 +159,30 @@ SetExecEnvName sets ExecEnvName field to given value.
 
 HasExecEnvName returns a boolean if a field has been set.
 
-### GetIdaName
+### GetIdOrName
 
-`func (o *ActivateExecEnvReq) GetIdaName() string`
+`func (o *ActivateExecEnvReq) GetIdOrName() string`
 
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
+GetIdOrName returns the IdOrName field if non-nil, zero value otherwise.
 
-### GetIdaNameOk
+### GetIdOrNameOk
 
-`func (o *ActivateExecEnvReq) GetIdaNameOk() (*string, bool)`
+`func (o *ActivateExecEnvReq) GetIdOrNameOk() (*string, bool)`
 
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
+GetIdOrNameOk returns a tuple with the IdOrName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdaName
+### SetIdOrName
 
-`func (o *ActivateExecEnvReq) SetIdaName(v string)`
+`func (o *ActivateExecEnvReq) SetIdOrName(v string)`
 
-SetIdaName sets IdaName field to given value.
+SetIdOrName sets IdOrName field to given value.
 
-### HasIdaName
+### HasIdOrName
 
-`func (o *ActivateExecEnvReq) HasIdaName() bool`
+`func (o *ActivateExecEnvReq) HasIdOrName() bool`
 
-HasIdaName returns a boolean if a field has been set.
+HasIdOrName returns a boolean if a field has been set.
 
 ### GetPassword
 

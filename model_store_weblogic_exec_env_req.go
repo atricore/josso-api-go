@@ -18,7 +18,7 @@ import (
 // StoreWeblogicExecEnvReq struct for StoreWeblogicExecEnvReq
 type StoreWeblogicExecEnvReq struct {
 	ExecEnv *WeblogicExecutionEnvironmentDTO `json:"execEnv,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -73,36 +73,36 @@ func (o *StoreWeblogicExecEnvReq) SetExecEnv(v WeblogicExecutionEnvironmentDTO) 
 	o.ExecEnv = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *StoreWeblogicExecEnvReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *StoreWeblogicExecEnvReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StoreWeblogicExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *StoreWeblogicExecEnvReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *StoreWeblogicExecEnvReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *StoreWeblogicExecEnvReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *StoreWeblogicExecEnvReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *StoreWeblogicExecEnvReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 func (o StoreWeblogicExecEnvReq) MarshalJSON() ([]byte, error) {
@@ -110,8 +110,8 @@ func (o StoreWeblogicExecEnvReq) MarshalJSON() ([]byte, error) {
 	if !isNil(o.ExecEnv) {
 		toSerialize["execEnv"] = o.ExecEnv
 	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -132,7 +132,7 @@ func (o *StoreWeblogicExecEnvReq) UnmarshalJSON(bytes []byte) (err error) {
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "execEnv")
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		o.AdditionalProperties = additionalProperties
 	}
 

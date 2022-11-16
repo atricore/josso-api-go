@@ -3002,7 +3002,7 @@
           "execEnvName" : {
             "type" : "string"
           },
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "password" : {
@@ -3491,9 +3491,6 @@
           },
           "idOrName" : {
             "type" : "string"
-          },
-          "idaName" : {
-            "type" : "string"
           }
         }
       },
@@ -3829,7 +3826,7 @@
       "DeleteReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4032,7 +4029,7 @@
       "ExportExecEnvCfgReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4656,9 +4653,6 @@
         "properties" : {
           "idOrName" : {
             "type" : "string"
-          },
-          "idaName" : {
-            "type" : "string"
           }
         }
       },
@@ -4770,7 +4764,7 @@
       "GetDbIdVaultReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4821,7 +4815,7 @@
       "GetExtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4872,7 +4866,7 @@
       "GetIdPReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4923,7 +4917,7 @@
       "GetIdSourceDbReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -4971,7 +4965,7 @@
       "GetIdSourceLdapReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5019,7 +5013,7 @@
       "GetIdSourceReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5050,7 +5044,7 @@
       "GetIdSourcesReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           }
         }
@@ -5078,7 +5072,7 @@
       "GetIdVaultReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5126,7 +5120,7 @@
       "GetIdpAzureReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5174,7 +5168,7 @@
       "GetIdpFacebookReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5222,7 +5216,7 @@
       "GetIdpGoogleReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5270,7 +5264,7 @@
       "GetIisExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5318,7 +5312,7 @@
       "GetIntSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5369,7 +5363,7 @@
       "GetJossoRsReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5417,7 +5411,7 @@
       "GetOidcRpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5465,7 +5459,7 @@
       "GetPhpExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5516,9 +5510,6 @@
           "idOrName" : {
             "type" : "string"
           },
-          "idaName" : {
-            "type" : "string"
-          },
           "name" : {
             "type" : "string"
           }
@@ -5564,7 +5555,7 @@
       "GetSharepointRsReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5612,7 +5603,7 @@
       "GetTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5689,7 +5680,7 @@
       "GetVirtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -5740,7 +5731,7 @@
       "GetWeblogicExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "name" : {
@@ -6645,7 +6636,7 @@
           "base64Json" : {
             "type" : "string"
           },
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "modify" : {
@@ -7581,7 +7572,7 @@
       "SetApplianceStateReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "state" : {
@@ -7659,7 +7650,7 @@
           "appliance" : {
             "$ref" : "#/components/schemas/IdentityApplianceDefinitionDTO"
           },
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           }
         }
@@ -7734,7 +7725,7 @@
           "dbIdVault" : {
             "$ref" : "#/components/schemas/DbIdentityVaultDTO"
           },
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           }
         }
@@ -7759,7 +7750,7 @@
       "StoreExtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "sp" : {
@@ -7787,7 +7778,7 @@
       "StoreIdPReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "idp" : {
@@ -7815,14 +7806,14 @@
       "StoreIdSourceDbReq" : {
         "type" : "object",
         "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
           "idSourceDb" : {
             "$ref" : "#/components/schemas/DbIdentitySourceDTO"
           },
           "idSourceLdap" : {
             "$ref" : "#/components/schemas/DbIdentitySourceDTO"
-          },
-          "idaName" : {
-            "type" : "string"
           }
         }
       },
@@ -7846,11 +7837,11 @@
       "StoreIdSourceLdapReq" : {
         "type" : "object",
         "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
           "idSourceLdap" : {
             "$ref" : "#/components/schemas/LdapIdentitySourceDTO"
-          },
-          "idaName" : {
-            "type" : "string"
           }
         }
       },
@@ -7874,11 +7865,11 @@
       "StoreIdVaultReq" : {
         "type" : "object",
         "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
           "idVault" : {
             "$ref" : "#/components/schemas/EmbeddedIdentityVaultDTO"
-          },
-          "idaName" : {
-            "type" : "string"
           }
         }
       },
@@ -7902,7 +7893,7 @@
       "StoreIdpAzureReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "idp" : {
@@ -7930,7 +7921,7 @@
       "StoreIdpFacebookReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "idp" : {
@@ -7958,7 +7949,7 @@
       "StoreIdpGoogleReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "idp" : {
@@ -7986,7 +7977,7 @@
       "StoreIisExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "iisExecEnv" : {
@@ -8014,7 +8005,7 @@
       "StoreIntSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "sp" : {
@@ -8042,7 +8033,7 @@
       "StoreJossoRsReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "resource" : {
@@ -8070,7 +8061,7 @@
       "StoreOidcRpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "oidcRp" : {
@@ -8098,7 +8089,7 @@
       "StorePhpExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "phpExecEnv" : {
@@ -8126,7 +8117,7 @@
       "StoreSharepointRsReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "resource" : {
@@ -8154,7 +8145,7 @@
       "StoreTomcatExecEnvReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "tomcatExecEnv" : {
@@ -8182,7 +8173,7 @@
       "StoreVirtSaml2SpReq" : {
         "type" : "object",
         "properties" : {
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           },
           "sp" : {
@@ -8213,7 +8204,7 @@
           "execEnv" : {
             "$ref" : "#/components/schemas/WeblogicExecutionEnvironmentDTO"
           },
-          "idaName" : {
+          "idOrName" : {
             "type" : "string"
           }
         }

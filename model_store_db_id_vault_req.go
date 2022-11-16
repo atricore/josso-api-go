@@ -18,7 +18,7 @@ import (
 // StoreDbIdVaultReq struct for StoreDbIdVaultReq
 type StoreDbIdVaultReq struct {
 	DbIdVault *DbIdentityVaultDTO `json:"dbIdVault,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -73,36 +73,36 @@ func (o *StoreDbIdVaultReq) SetDbIdVault(v DbIdentityVaultDTO) {
 	o.DbIdVault = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *StoreDbIdVaultReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *StoreDbIdVaultReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StoreDbIdVaultReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *StoreDbIdVaultReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *StoreDbIdVaultReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *StoreDbIdVaultReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *StoreDbIdVaultReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *StoreDbIdVaultReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 func (o StoreDbIdVaultReq) MarshalJSON() ([]byte, error) {
@@ -110,8 +110,8 @@ func (o StoreDbIdVaultReq) MarshalJSON() ([]byte, error) {
 	if !isNil(o.DbIdVault) {
 		toSerialize["dbIdVault"] = o.DbIdVault
 	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -132,7 +132,7 @@ func (o *StoreDbIdVaultReq) UnmarshalJSON(bytes []byte) (err error) {
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "dbIdVault")
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		o.AdditionalProperties = additionalProperties
 	}
 

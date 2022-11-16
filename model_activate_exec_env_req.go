@@ -22,7 +22,7 @@ type ActivateExecEnvReq struct {
 	Destination *string `json:"destination,omitempty"`
 	ExecEnvFolder *string `json:"execEnvFolder,omitempty"`
 	ExecEnvName *string `json:"execEnvName,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	Password *string `json:"password,omitempty"`
 	Reactivate *bool `json:"reactivate,omitempty"`
 	Replace *bool `json:"replace,omitempty"`
@@ -209,36 +209,36 @@ func (o *ActivateExecEnvReq) SetExecEnvName(v string) {
 	o.ExecEnvName = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *ActivateExecEnvReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *ActivateExecEnvReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ActivateExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *ActivateExecEnvReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *ActivateExecEnvReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *ActivateExecEnvReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *ActivateExecEnvReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *ActivateExecEnvReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 // GetPassword returns the Password field value if set, zero value otherwise.
@@ -386,8 +386,8 @@ func (o ActivateExecEnvReq) MarshalJSON() ([]byte, error) {
 	if !isNil(o.ExecEnvName) {
 		toSerialize["execEnvName"] = o.ExecEnvName
 	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 	if !isNil(o.Password) {
 		toSerialize["password"] = o.Password
@@ -424,7 +424,7 @@ func (o *ActivateExecEnvReq) UnmarshalJSON(bytes []byte) (err error) {
 		delete(additionalProperties, "destination")
 		delete(additionalProperties, "execEnvFolder")
 		delete(additionalProperties, "execEnvName")
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "password")
 		delete(additionalProperties, "reactivate")
 		delete(additionalProperties, "replace")

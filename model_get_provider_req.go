@@ -18,7 +18,6 @@ import (
 // GetProviderReq struct for GetProviderReq
 type GetProviderReq struct {
 	IdOrName *string `json:"idOrName,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
 	Name *string `json:"name,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -74,38 +73,6 @@ func (o *GetProviderReq) SetIdOrName(v string) {
 	o.IdOrName = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *GetProviderReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
-		var ret string
-		return ret
-	}
-	return *o.IdaName
-}
-
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetProviderReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
-    return nil, false
-	}
-	return o.IdaName, true
-}
-
-// HasIdaName returns a boolean if a field has been set.
-func (o *GetProviderReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
-		return true
-	}
-
-	return false
-}
-
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *GetProviderReq) SetIdaName(v string) {
-	o.IdaName = &v
-}
-
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *GetProviderReq) GetName() string {
 	if o == nil || isNil(o.Name) {
@@ -143,9 +110,6 @@ func (o GetProviderReq) MarshalJSON() ([]byte, error) {
 	if !isNil(o.IdOrName) {
 		toSerialize["idOrName"] = o.IdOrName
 	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
-	}
 	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
@@ -168,7 +132,6 @@ func (o *GetProviderReq) UnmarshalJSON(bytes []byte) (err error) {
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "idOrName")
-		delete(additionalProperties, "idaName")
 		delete(additionalProperties, "name")
 		o.AdditionalProperties = additionalProperties
 	}

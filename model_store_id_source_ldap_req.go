@@ -17,8 +17,8 @@ import (
 
 // StoreIdSourceLdapReq struct for StoreIdSourceLdapReq
 type StoreIdSourceLdapReq struct {
+	IdOrName *string `json:"idOrName,omitempty"`
 	IdSourceLdap *LdapIdentitySourceDTO `json:"idSourceLdap,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -39,6 +39,38 @@ func NewStoreIdSourceLdapReq() *StoreIdSourceLdapReq {
 func NewStoreIdSourceLdapReqWithDefaults() *StoreIdSourceLdapReq {
 	this := StoreIdSourceLdapReq{}
 	return &this
+}
+
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *StoreIdSourceLdapReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
+		var ret string
+		return ret
+	}
+	return *o.IdOrName
+}
+
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *StoreIdSourceLdapReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
+    return nil, false
+	}
+	return o.IdOrName, true
+}
+
+// HasIdOrName returns a boolean if a field has been set.
+func (o *StoreIdSourceLdapReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
+		return true
+	}
+
+	return false
+}
+
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *StoreIdSourceLdapReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 // GetIdSourceLdap returns the IdSourceLdap field value if set, zero value otherwise.
@@ -73,45 +105,13 @@ func (o *StoreIdSourceLdapReq) SetIdSourceLdap(v LdapIdentitySourceDTO) {
 	o.IdSourceLdap = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *StoreIdSourceLdapReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
-		var ret string
-		return ret
-	}
-	return *o.IdaName
-}
-
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *StoreIdSourceLdapReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
-    return nil, false
-	}
-	return o.IdaName, true
-}
-
-// HasIdaName returns a boolean if a field has been set.
-func (o *StoreIdSourceLdapReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
-		return true
-	}
-
-	return false
-}
-
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *StoreIdSourceLdapReq) SetIdaName(v string) {
-	o.IdaName = &v
-}
-
 func (o StoreIdSourceLdapReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
+	}
 	if !isNil(o.IdSourceLdap) {
 		toSerialize["idSourceLdap"] = o.IdSourceLdap
-	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -131,8 +131,8 @@ func (o *StoreIdSourceLdapReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "idSourceLdap")
-		delete(additionalProperties, "idaName")
 		o.AdditionalProperties = additionalProperties
 	}
 

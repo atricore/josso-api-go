@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdaName** | Pointer to **string** |  | [optional] 
+**IdOrName** | Pointer to **string** |  | [optional] 
 **Idp** | Pointer to [**FacebookOpenIDConnectIdentityProviderDTO**](FacebookOpenIDConnectIdentityProviderDTO.md) |  | [optional] 
 
 ## Methods
@@ -26,30 +26,30 @@ NewStoreIdpFacebookReqWithDefaults instantiates a new StoreIdpFacebookReq object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdaName
+### GetIdOrName
 
-`func (o *StoreIdpFacebookReq) GetIdaName() string`
+`func (o *StoreIdpFacebookReq) GetIdOrName() string`
 
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
+GetIdOrName returns the IdOrName field if non-nil, zero value otherwise.
 
-### GetIdaNameOk
+### GetIdOrNameOk
 
-`func (o *StoreIdpFacebookReq) GetIdaNameOk() (*string, bool)`
+`func (o *StoreIdpFacebookReq) GetIdOrNameOk() (*string, bool)`
 
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
+GetIdOrNameOk returns a tuple with the IdOrName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdaName
+### SetIdOrName
 
-`func (o *StoreIdpFacebookReq) SetIdaName(v string)`
+`func (o *StoreIdpFacebookReq) SetIdOrName(v string)`
 
-SetIdaName sets IdaName field to given value.
+SetIdOrName sets IdOrName field to given value.
 
-### HasIdaName
+### HasIdOrName
 
-`func (o *StoreIdpFacebookReq) HasIdaName() bool`
+`func (o *StoreIdpFacebookReq) HasIdOrName() bool`
 
-HasIdaName returns a boolean if a field has been set.
+HasIdOrName returns a boolean if a field has been set.
 
 ### GetIdp
 

@@ -17,7 +17,7 @@ import (
 
 // StoreIisExecEnvReq struct for StoreIisExecEnvReq
 type StoreIisExecEnvReq struct {
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	IisExecEnv *WindowsIISExecutionEnvironmentDTO `json:"iisExecEnv,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -41,36 +41,36 @@ func NewStoreIisExecEnvReqWithDefaults() *StoreIisExecEnvReq {
 	return &this
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *StoreIisExecEnvReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *StoreIisExecEnvReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StoreIisExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *StoreIisExecEnvReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *StoreIisExecEnvReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *StoreIisExecEnvReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *StoreIisExecEnvReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *StoreIisExecEnvReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 // GetIisExecEnv returns the IisExecEnv field value if set, zero value otherwise.
@@ -107,8 +107,8 @@ func (o *StoreIisExecEnvReq) SetIisExecEnv(v WindowsIISExecutionEnvironmentDTO) 
 
 func (o StoreIisExecEnvReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 	if !isNil(o.IisExecEnv) {
 		toSerialize["iisExecEnv"] = o.IisExecEnv
@@ -131,7 +131,7 @@ func (o *StoreIisExecEnvReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "iisExecEnv")
 		o.AdditionalProperties = additionalProperties
 	}

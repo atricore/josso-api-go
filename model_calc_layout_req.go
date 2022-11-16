@@ -19,7 +19,6 @@ import (
 type CalcLayoutReq struct {
 	Export *bool `json:"export,omitempty"`
 	IdOrName *string `json:"idOrName,omitempty"`
-	IdaName *string `json:"idaName,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -106,38 +105,6 @@ func (o *CalcLayoutReq) SetIdOrName(v string) {
 	o.IdOrName = &v
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *CalcLayoutReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
-		var ret string
-		return ret
-	}
-	return *o.IdaName
-}
-
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CalcLayoutReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
-    return nil, false
-	}
-	return o.IdaName, true
-}
-
-// HasIdaName returns a boolean if a field has been set.
-func (o *CalcLayoutReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
-		return true
-	}
-
-	return false
-}
-
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *CalcLayoutReq) SetIdaName(v string) {
-	o.IdaName = &v
-}
-
 func (o CalcLayoutReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if !isNil(o.Export) {
@@ -145,9 +112,6 @@ func (o CalcLayoutReq) MarshalJSON() ([]byte, error) {
 	}
 	if !isNil(o.IdOrName) {
 		toSerialize["idOrName"] = o.IdOrName
-	}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
 	}
 
 	for key, value := range o.AdditionalProperties {
@@ -169,7 +133,6 @@ func (o *CalcLayoutReq) UnmarshalJSON(bytes []byte) (err error) {
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
 		delete(additionalProperties, "export")
 		delete(additionalProperties, "idOrName")
-		delete(additionalProperties, "idaName")
 		o.AdditionalProperties = additionalProperties
 	}
 

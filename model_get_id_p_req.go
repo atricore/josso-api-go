@@ -17,7 +17,7 @@ import (
 
 // GetIdPReq struct for GetIdPReq
 type GetIdPReq struct {
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	Name *string `json:"name,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -41,36 +41,36 @@ func NewGetIdPReqWithDefaults() *GetIdPReq {
 	return &this
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *GetIdPReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *GetIdPReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetIdPReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *GetIdPReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *GetIdPReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *GetIdPReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *GetIdPReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *GetIdPReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
@@ -107,8 +107,8 @@ func (o *GetIdPReq) SetName(v string) {
 
 func (o GetIdPReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 	if !isNil(o.Name) {
 		toSerialize["name"] = o.Name
@@ -131,7 +131,7 @@ func (o *GetIdPReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "name")
 		o.AdditionalProperties = additionalProperties
 	}

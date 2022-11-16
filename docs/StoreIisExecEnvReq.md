@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdaName** | Pointer to **string** |  | [optional] 
+**IdOrName** | Pointer to **string** |  | [optional] 
 **IisExecEnv** | Pointer to [**WindowsIISExecutionEnvironmentDTO**](WindowsIISExecutionEnvironmentDTO.md) |  | [optional] 
 
 ## Methods
@@ -26,30 +26,30 @@ NewStoreIisExecEnvReqWithDefaults instantiates a new StoreIisExecEnvReq object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdaName
+### GetIdOrName
 
-`func (o *StoreIisExecEnvReq) GetIdaName() string`
+`func (o *StoreIisExecEnvReq) GetIdOrName() string`
 
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
+GetIdOrName returns the IdOrName field if non-nil, zero value otherwise.
 
-### GetIdaNameOk
+### GetIdOrNameOk
 
-`func (o *StoreIisExecEnvReq) GetIdaNameOk() (*string, bool)`
+`func (o *StoreIisExecEnvReq) GetIdOrNameOk() (*string, bool)`
 
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
+GetIdOrNameOk returns a tuple with the IdOrName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdaName
+### SetIdOrName
 
-`func (o *StoreIisExecEnvReq) SetIdaName(v string)`
+`func (o *StoreIisExecEnvReq) SetIdOrName(v string)`
 
-SetIdaName sets IdaName field to given value.
+SetIdOrName sets IdOrName field to given value.
 
-### HasIdaName
+### HasIdOrName
 
-`func (o *StoreIisExecEnvReq) HasIdaName() bool`
+`func (o *StoreIisExecEnvReq) HasIdOrName() bool`
 
-HasIdaName returns a boolean if a field has been set.
+HasIdOrName returns a boolean if a field has been set.
 
 ### GetIisExecEnv
 

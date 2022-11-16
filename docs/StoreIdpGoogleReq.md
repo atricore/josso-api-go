@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdaName** | Pointer to **string** |  | [optional] 
+**IdOrName** | Pointer to **string** |  | [optional] 
 **Idp** | Pointer to [**GoogleOpenIDConnectIdentityProviderDTO**](GoogleOpenIDConnectIdentityProviderDTO.md) |  | [optional] 
 
 ## Methods
@@ -26,30 +26,30 @@ NewStoreIdpGoogleReqWithDefaults instantiates a new StoreIdpGoogleReq object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdaName
+### GetIdOrName
 
-`func (o *StoreIdpGoogleReq) GetIdaName() string`
+`func (o *StoreIdpGoogleReq) GetIdOrName() string`
 
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
+GetIdOrName returns the IdOrName field if non-nil, zero value otherwise.
 
-### GetIdaNameOk
+### GetIdOrNameOk
 
-`func (o *StoreIdpGoogleReq) GetIdaNameOk() (*string, bool)`
+`func (o *StoreIdpGoogleReq) GetIdOrNameOk() (*string, bool)`
 
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
+GetIdOrNameOk returns a tuple with the IdOrName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdaName
+### SetIdOrName
 
-`func (o *StoreIdpGoogleReq) SetIdaName(v string)`
+`func (o *StoreIdpGoogleReq) SetIdOrName(v string)`
 
-SetIdaName sets IdaName field to given value.
+SetIdOrName sets IdOrName field to given value.
 
-### HasIdaName
+### HasIdOrName
 
-`func (o *StoreIdpGoogleReq) HasIdaName() bool`
+`func (o *StoreIdpGoogleReq) HasIdOrName() bool`
 
-HasIdaName returns a boolean if a field has been set.
+HasIdOrName returns a boolean if a field has been set.
 
 ### GetIdp
 

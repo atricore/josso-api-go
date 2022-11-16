@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Base64Json** | Pointer to **string** |  | [optional] 
-**IdaName** | Pointer to **string** |  | [optional] 
+**IdOrName** | Pointer to **string** |  | [optional] 
 **Modify** | Pointer to **bool** |  | [optional] 
 **NewDescription** | Pointer to **string** |  | [optional] 
 **NewLocation** | Pointer to **string** |  | [optional] 
@@ -56,30 +56,30 @@ SetBase64Json sets Base64Json field to given value.
 
 HasBase64Json returns a boolean if a field has been set.
 
-### GetIdaName
+### GetIdOrName
 
-`func (o *ImportApplianceReq) GetIdaName() string`
+`func (o *ImportApplianceReq) GetIdOrName() string`
 
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
+GetIdOrName returns the IdOrName field if non-nil, zero value otherwise.
 
-### GetIdaNameOk
+### GetIdOrNameOk
 
-`func (o *ImportApplianceReq) GetIdaNameOk() (*string, bool)`
+`func (o *ImportApplianceReq) GetIdOrNameOk() (*string, bool)`
 
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
+GetIdOrNameOk returns a tuple with the IdOrName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdaName
+### SetIdOrName
 
-`func (o *ImportApplianceReq) SetIdaName(v string)`
+`func (o *ImportApplianceReq) SetIdOrName(v string)`
 
-SetIdaName sets IdaName field to given value.
+SetIdOrName sets IdOrName field to given value.
 
-### HasIdaName
+### HasIdOrName
 
-`func (o *ImportApplianceReq) HasIdaName() bool`
+`func (o *ImportApplianceReq) HasIdOrName() bool`
 
-HasIdaName returns a boolean if a field has been set.
+HasIdOrName returns a boolean if a field has been set.
 
 ### GetModify
 

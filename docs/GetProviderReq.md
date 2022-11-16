@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IdOrName** | Pointer to **string** |  | [optional] 
-**IdaName** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -51,31 +50,6 @@ SetIdOrName sets IdOrName field to given value.
 `func (o *GetProviderReq) HasIdOrName() bool`
 
 HasIdOrName returns a boolean if a field has been set.
-
-### GetIdaName
-
-`func (o *GetProviderReq) GetIdaName() string`
-
-GetIdaName returns the IdaName field if non-nil, zero value otherwise.
-
-### GetIdaNameOk
-
-`func (o *GetProviderReq) GetIdaNameOk() (*string, bool)`
-
-GetIdaNameOk returns a tuple with the IdaName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdaName
-
-`func (o *GetProviderReq) SetIdaName(v string)`
-
-SetIdaName sets IdaName field to given value.
-
-### HasIdaName
-
-`func (o *GetProviderReq) HasIdaName() bool`
-
-HasIdaName returns a boolean if a field has been set.
 
 ### GetName
 

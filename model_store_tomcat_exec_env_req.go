@@ -17,7 +17,7 @@ import (
 
 // StoreTomcatExecEnvReq struct for StoreTomcatExecEnvReq
 type StoreTomcatExecEnvReq struct {
-	IdaName *string `json:"idaName,omitempty"`
+	IdOrName *string `json:"idOrName,omitempty"`
 	TomcatExecEnv *TomcatExecutionEnvironmentDTO `json:"tomcatExecEnv,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
@@ -41,36 +41,36 @@ func NewStoreTomcatExecEnvReqWithDefaults() *StoreTomcatExecEnvReq {
 	return &this
 }
 
-// GetIdaName returns the IdaName field value if set, zero value otherwise.
-func (o *StoreTomcatExecEnvReq) GetIdaName() string {
-	if o == nil || isNil(o.IdaName) {
+// GetIdOrName returns the IdOrName field value if set, zero value otherwise.
+func (o *StoreTomcatExecEnvReq) GetIdOrName() string {
+	if o == nil || isNil(o.IdOrName) {
 		var ret string
 		return ret
 	}
-	return *o.IdaName
+	return *o.IdOrName
 }
 
-// GetIdaNameOk returns a tuple with the IdaName field value if set, nil otherwise
+// GetIdOrNameOk returns a tuple with the IdOrName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *StoreTomcatExecEnvReq) GetIdaNameOk() (*string, bool) {
-	if o == nil || isNil(o.IdaName) {
+func (o *StoreTomcatExecEnvReq) GetIdOrNameOk() (*string, bool) {
+	if o == nil || isNil(o.IdOrName) {
     return nil, false
 	}
-	return o.IdaName, true
+	return o.IdOrName, true
 }
 
-// HasIdaName returns a boolean if a field has been set.
-func (o *StoreTomcatExecEnvReq) HasIdaName() bool {
-	if o != nil && !isNil(o.IdaName) {
+// HasIdOrName returns a boolean if a field has been set.
+func (o *StoreTomcatExecEnvReq) HasIdOrName() bool {
+	if o != nil && !isNil(o.IdOrName) {
 		return true
 	}
 
 	return false
 }
 
-// SetIdaName gets a reference to the given string and assigns it to the IdaName field.
-func (o *StoreTomcatExecEnvReq) SetIdaName(v string) {
-	o.IdaName = &v
+// SetIdOrName gets a reference to the given string and assigns it to the IdOrName field.
+func (o *StoreTomcatExecEnvReq) SetIdOrName(v string) {
+	o.IdOrName = &v
 }
 
 // GetTomcatExecEnv returns the TomcatExecEnv field value if set, zero value otherwise.
@@ -107,8 +107,8 @@ func (o *StoreTomcatExecEnvReq) SetTomcatExecEnv(v TomcatExecutionEnvironmentDTO
 
 func (o StoreTomcatExecEnvReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.IdaName) {
-		toSerialize["idaName"] = o.IdaName
+	if !isNil(o.IdOrName) {
+		toSerialize["idOrName"] = o.IdOrName
 	}
 	if !isNil(o.TomcatExecEnv) {
 		toSerialize["tomcatExecEnv"] = o.TomcatExecEnv
@@ -131,7 +131,7 @@ func (o *StoreTomcatExecEnvReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "idaName")
+		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "tomcatExecEnv")
 		o.AdditionalProperties = additionalProperties
 	}
