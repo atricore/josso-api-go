@@ -1,8 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/wa/git/go/src/josso-api-go'
-/opt/atricore/tools/openapi-generator-cli/openapi-generator-cli.sh generate -i ./console-api-1.5.0-SNAPSHOT-swagger.json -g go -o . --additional-properties=packageName=jossoappi --additional-properties=disallowAdditionalPropertiesIfNotPresent=false --git-repo-id=josso-api-go --git-user-id=atricore
-go mod tidy
-go mod vendor
-go install
-make: Leaving directory '/wa/git/go/src/josso-api-go'
- 
