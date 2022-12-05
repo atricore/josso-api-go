@@ -39,6 +39,8 @@ docs/DirectoryAuthenticationServiceDTO.md
 docs/EmbeddedIdentityVaultDTO.md
 docs/EntitySelectionStrategyDTO.md
 docs/ExecutionEnvironmentDTO.md
+docs/ExportApplianceReq.md
+docs/ExportApplianceRes.md
 docs/ExportExecEnvCfgReq.md
 docs/ExportExecEnvCfgRes.md
 docs/ExtensionDTO.md
@@ -246,6 +248,8 @@ model_directory_authentication_service_dto.go
 model_embedded_identity_vault_dto.go
 model_entity_selection_strategy_dto.go
 model_execution_environment_dto.go
+model_export_appliance_req.go
+model_export_appliance_res.go
 model_export_exec_env_cfg_req.go
 model_export_exec_env_cfg_res.go
 model_extension_dto.go

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Base64Json** | Pointer to **string** |  | [optional] 
+**Base64Value** | Pointer to **string** |  | [optional] 
+**Format** | Pointer to **string** |  | [optional] 
 **IdOrName** | Pointer to **string** |  | [optional] 
 **Modify** | Pointer to **bool** |  | [optional] 
 **NewDescription** | Pointer to **string** |  | [optional] 
@@ -31,30 +32,55 @@ NewImportApplianceReqWithDefaults instantiates a new ImportApplianceReq object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBase64Json
+### GetBase64Value
 
-`func (o *ImportApplianceReq) GetBase64Json() string`
+`func (o *ImportApplianceReq) GetBase64Value() string`
 
-GetBase64Json returns the Base64Json field if non-nil, zero value otherwise.
+GetBase64Value returns the Base64Value field if non-nil, zero value otherwise.
 
-### GetBase64JsonOk
+### GetBase64ValueOk
 
-`func (o *ImportApplianceReq) GetBase64JsonOk() (*string, bool)`
+`func (o *ImportApplianceReq) GetBase64ValueOk() (*string, bool)`
 
-GetBase64JsonOk returns a tuple with the Base64Json field if it's non-nil, zero value otherwise
+GetBase64ValueOk returns a tuple with the Base64Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBase64Json
+### SetBase64Value
 
-`func (o *ImportApplianceReq) SetBase64Json(v string)`
+`func (o *ImportApplianceReq) SetBase64Value(v string)`
 
-SetBase64Json sets Base64Json field to given value.
+SetBase64Value sets Base64Value field to given value.
 
-### HasBase64Json
+### HasBase64Value
 
-`func (o *ImportApplianceReq) HasBase64Json() bool`
+`func (o *ImportApplianceReq) HasBase64Value() bool`
 
-HasBase64Json returns a boolean if a field has been set.
+HasBase64Value returns a boolean if a field has been set.
+
+### GetFormat
+
+`func (o *ImportApplianceReq) GetFormat() string`
+
+GetFormat returns the Format field if non-nil, zero value otherwise.
+
+### GetFormatOk
+
+`func (o *ImportApplianceReq) GetFormatOk() (*string, bool)`
+
+GetFormatOk returns a tuple with the Format field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFormat
+
+`func (o *ImportApplianceReq) SetFormat(v string)`
+
+SetFormat sets Format field to given value.
+
+### HasFormat
+
+`func (o *ImportApplianceReq) HasFormat() bool`
+
+HasFormat returns a boolean if a field has been set.
 
 ### GetIdOrName
 

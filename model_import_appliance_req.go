@@ -17,7 +17,8 @@ import (
 
 // ImportApplianceReq struct for ImportApplianceReq
 type ImportApplianceReq struct {
-	Base64Json *string `json:"base64Json,omitempty"`
+	Base64Value *string `json:"base64Value,omitempty"`
+	Format *string `json:"format,omitempty"`
 	IdOrName *string `json:"idOrName,omitempty"`
 	Modify *bool `json:"modify,omitempty"`
 	NewDescription *string `json:"newDescription,omitempty"`
@@ -46,36 +47,68 @@ func NewImportApplianceReqWithDefaults() *ImportApplianceReq {
 	return &this
 }
 
-// GetBase64Json returns the Base64Json field value if set, zero value otherwise.
-func (o *ImportApplianceReq) GetBase64Json() string {
-	if o == nil || isNil(o.Base64Json) {
+// GetBase64Value returns the Base64Value field value if set, zero value otherwise.
+func (o *ImportApplianceReq) GetBase64Value() string {
+	if o == nil || isNil(o.Base64Value) {
 		var ret string
 		return ret
 	}
-	return *o.Base64Json
+	return *o.Base64Value
 }
 
-// GetBase64JsonOk returns a tuple with the Base64Json field value if set, nil otherwise
+// GetBase64ValueOk returns a tuple with the Base64Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ImportApplianceReq) GetBase64JsonOk() (*string, bool) {
-	if o == nil || isNil(o.Base64Json) {
+func (o *ImportApplianceReq) GetBase64ValueOk() (*string, bool) {
+	if o == nil || isNil(o.Base64Value) {
     return nil, false
 	}
-	return o.Base64Json, true
+	return o.Base64Value, true
 }
 
-// HasBase64Json returns a boolean if a field has been set.
-func (o *ImportApplianceReq) HasBase64Json() bool {
-	if o != nil && !isNil(o.Base64Json) {
+// HasBase64Value returns a boolean if a field has been set.
+func (o *ImportApplianceReq) HasBase64Value() bool {
+	if o != nil && !isNil(o.Base64Value) {
 		return true
 	}
 
 	return false
 }
 
-// SetBase64Json gets a reference to the given string and assigns it to the Base64Json field.
-func (o *ImportApplianceReq) SetBase64Json(v string) {
-	o.Base64Json = &v
+// SetBase64Value gets a reference to the given string and assigns it to the Base64Value field.
+func (o *ImportApplianceReq) SetBase64Value(v string) {
+	o.Base64Value = &v
+}
+
+// GetFormat returns the Format field value if set, zero value otherwise.
+func (o *ImportApplianceReq) GetFormat() string {
+	if o == nil || isNil(o.Format) {
+		var ret string
+		return ret
+	}
+	return *o.Format
+}
+
+// GetFormatOk returns a tuple with the Format field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ImportApplianceReq) GetFormatOk() (*string, bool) {
+	if o == nil || isNil(o.Format) {
+    return nil, false
+	}
+	return o.Format, true
+}
+
+// HasFormat returns a boolean if a field has been set.
+func (o *ImportApplianceReq) HasFormat() bool {
+	if o != nil && !isNil(o.Format) {
+		return true
+	}
+
+	return false
+}
+
+// SetFormat gets a reference to the given string and assigns it to the Format field.
+func (o *ImportApplianceReq) SetFormat(v string) {
+	o.Format = &v
 }
 
 // GetIdOrName returns the IdOrName field value if set, zero value otherwise.
@@ -272,8 +305,11 @@ func (o *ImportApplianceReq) SetNewNamespace(v string) {
 
 func (o ImportApplianceReq) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	if !isNil(o.Base64Json) {
-		toSerialize["base64Json"] = o.Base64Json
+	if !isNil(o.Base64Value) {
+		toSerialize["base64Value"] = o.Base64Value
+	}
+	if !isNil(o.Format) {
+		toSerialize["format"] = o.Format
 	}
 	if !isNil(o.IdOrName) {
 		toSerialize["idOrName"] = o.IdOrName
@@ -311,7 +347,8 @@ func (o *ImportApplianceReq) UnmarshalJSON(bytes []byte) (err error) {
 	additionalProperties := make(map[string]interface{})
 
 	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
-		delete(additionalProperties, "base64Json")
+		delete(additionalProperties, "base64Value")
+		delete(additionalProperties, "format")
 		delete(additionalProperties, "idOrName")
 		delete(additionalProperties, "modify")
 		delete(additionalProperties, "newDescription")
