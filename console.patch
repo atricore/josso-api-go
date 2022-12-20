@@ -1,2 +1,67 @@
 --- console-api-1.5.0-SNAPSHOT-swagger.json	2022-12-05 17:21:13.747840375 -0500
-+++ console-api-1.5.0-SNAPSHOT-swagger.json.new	2022-12-05 17:20:23.760556973 -0500
++++ console-api-1.5.0-SNAPSHOT-swagger.json.new	2022-12-19 19:20:47.216212949 -0500
+@@ -46,6 +46,32 @@
+         }
+       }
+     },
++    "/iam-authn/version" : {
++      "get" : {
++        "operationId" : "version",
++        "requestBody" : {
++          "content" : {
++            "application/json" : {
++              "schema" : {
++                "$ref" : "#/components/schemas/ServerVersionRequest"
++              }
++            }
++          }
++        },
++        "responses" : {
++          "default" : {
++            "description" : "default response",
++            "content" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ServerVersionResponse"
++                }
++              }
++            }
++          }
++        }
++      }
++    },
+     "/iam-branding/branding" : {
+       "get" : {
+         "operationId" : "getBranding",
+@@ -7547,6 +7578,31 @@
+           }
+         }
+       },
++      "ServerVersionRequest" : {
++        "type" : "object",
++        "properties" : {
++          "server" : {
++            "$ref" : "#/components/schemas/ServerContext"
++          }
++        }
++      },
++      "ServerVersionResponse" : {
++        "type" : "object",
++        "properties" : {
++          "server" : {
++            "$ref" : "#/components/schemas/ServerContext"
++          },
++          "validationErrors" : {
++            "type" : "array",
++            "items" : {
++              "type" : "string"
++            }
++          },
++          "version" : {
++            "type" : "string"
++          }
++        }
++      },
+       "ServiceConnectionDTO" : {
+         "type" : "object",
+         "properties" : {

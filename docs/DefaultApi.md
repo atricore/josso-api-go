@@ -123,6 +123,7 @@ Method | HTTP request | Description
 [**UpdateVirtSaml2Sp**](DefaultApi.md#UpdateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
 [**UpdateWeblogicExecEnv**](DefaultApi.md#UpdateWeblogicExecEnv) | **Put** /iam-deploy/weblogicexecenv | 
 [**ValidateAppliance**](DefaultApi.md#ValidateAppliance) | **Get** /iam-deploy/appliance/validate | 
+[**Version**](DefaultApi.md#Version) | **Get** /iam-authn/version | 
 
 
 
@@ -7722,6 +7723,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetApplianceStateRes**](GetApplianceStateRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## Version
+
+> ServerVersionResponse Version(ctx).ServerVersionRequest(serverVersionRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serverVersionRequest := *openapiclient.NewServerVersionRequest() // ServerVersionRequest |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.Version(context.Background()).ServerVersionRequest(serverVersionRequest).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.Version``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `Version`: ServerVersionResponse
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.Version`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiVersionRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serverVersionRequest** | [**ServerVersionRequest**](ServerVersionRequest.md) |  | 
+
+### Return type
+
+[**ServerVersionResponse**](ServerVersionResponse.md)
 
 ### Authorization
 

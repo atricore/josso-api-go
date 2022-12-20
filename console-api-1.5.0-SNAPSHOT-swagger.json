@@ -46,6 +46,32 @@
         }
       }
     },
+    "/iam-authn/version" : {
+      "get" : {
+        "operationId" : "version",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ServerVersionRequest"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ServerVersionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-branding/branding" : {
       "get" : {
         "operationId" : "getBranding",
@@ -7543,6 +7569,31 @@
             "type" : "string"
           },
           "serverId" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ServerVersionRequest" : {
+        "type" : "object",
+        "properties" : {
+          "server" : {
+            "$ref" : "#/components/schemas/ServerContext"
+          }
+        }
+      },
+      "ServerVersionResponse" : {
+        "type" : "object",
+        "properties" : {
+          "server" : {
+            "$ref" : "#/components/schemas/ServerContext"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "version" : {
             "type" : "string"
           }
         }

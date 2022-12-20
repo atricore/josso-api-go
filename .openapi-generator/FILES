@@ -158,6 +158,8 @@ docs/ResourceDTO.md
 docs/SamlR2IDPConfigDTO.md
 docs/SamlR2SPConfigDTO.md
 docs/ServerContext.md
+docs/ServerVersionRequest.md
+docs/ServerVersionResponse.md
 docs/ServiceConnectionDTO.md
 docs/ServiceResourceDTO.md
 docs/SessionManagerFactoryDTO.md
@@ -367,6 +369,8 @@ model_resource_dto.go
 model_saml_r2_idp_config_dto.go
 model_saml_r2_sp_config_dto.go
 model_server_context.go
+model_server_version_request.go
+model_server_version_response.go
 model_service_connection_dto.go
 model_service_resource_dto.go
 model_session_manager_factory_dto.go

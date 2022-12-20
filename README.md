@@ -198,6 +198,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateVirtSaml2Sp**](docs/DefaultApi.md#updatevirtsaml2sp) | **Put** /iam-deploy/virtsaml2sp | 
 *DefaultApi* | [**UpdateWeblogicExecEnv**](docs/DefaultApi.md#updateweblogicexecenv) | **Put** /iam-deploy/weblogicexecenv | 
 *DefaultApi* | [**ValidateAppliance**](docs/DefaultApi.md#validateappliance) | **Get** /iam-deploy/appliance/validate | 
+*DefaultApi* | [**Version**](docs/DefaultApi.md#version) | **Get** /iam-authn/version | 
 
 
 ## Documentation For Models
@@ -354,6 +355,8 @@ Class | Method | HTTP request | Description
  - [SamlR2IDPConfigDTO](docs/SamlR2IDPConfigDTO.md)
  - [SamlR2SPConfigDTO](docs/SamlR2SPConfigDTO.md)
  - [ServerContext](docs/ServerContext.md)
+ - [ServerVersionRequest](docs/ServerVersionRequest.md)
+ - [ServerVersionResponse](docs/ServerVersionResponse.md)
  - [ServiceConnectionDTO](docs/ServiceConnectionDTO.md)
  - [ServiceResourceDTO](docs/ServiceResourceDTO.md)
  - [SessionManagerFactoryDTO](docs/SessionManagerFactoryDTO.md)

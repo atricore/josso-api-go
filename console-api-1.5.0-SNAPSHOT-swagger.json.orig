@@ -372,6 +372,32 @@
         }
       }
     },
+    "/iam-deploy/appliance/export" : {
+      "get" : {
+        "operationId" : "exportAppliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ExportApplianceReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ExportApplianceRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/appliance/import" : {
       "post" : {
         "operationId" : "importAppliance",
@@ -4019,6 +4045,34 @@
           "y" : {
             "type" : "number",
             "format" : "double"
+          }
+        }
+      },
+      "ExportApplianceReq" : {
+        "type" : "object",
+        "properties" : {
+          "format" : {
+            "type" : "string"
+          },
+          "idOrName" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ExportApplianceRes" : {
+        "type" : "object",
+        "properties" : {
+          "base64value" : {
+            "type" : "string"
+          },
+          "error" : {
+            "type" : "string"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           }
         }
       },
