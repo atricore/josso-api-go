@@ -109,6 +109,9 @@ docs/GetPhpExecEnvsRes.md
 docs/GetProviderReq.md
 docs/GetProviderRes.md
 docs/GetProvidersRes.md
+docs/GetSelfSvcRsReq.md
+docs/GetSelfSvcRsRes.md
+docs/GetSelfSvcRssRes.md
 docs/GetSharepointRsReq.md
 docs/GetSharepointRsRes.md
 docs/GetSharepointRssRes.md
@@ -157,6 +160,7 @@ docs/RefreshBrandingsRes.md
 docs/ResourceDTO.md
 docs/SamlR2IDPConfigDTO.md
 docs/SamlR2SPConfigDTO.md
+docs/SelfServicesResourceDTO.md
 docs/ServerContext.md
 docs/ServerVersionRequest.md
 docs/ServerVersionResponse.md
@@ -197,6 +201,8 @@ docs/StoreOidcRpReq.md
 docs/StoreOidcRpRes.md
 docs/StorePhpExecEnvReq.md
 docs/StorePhpExecEnvRes.md
+docs/StoreSelfSvcRsReq.md
+docs/StoreSelfSvcRsRes.md
 docs/StoreSharepointRsReq.md
 docs/StoreSharepointRsRes.md
 docs/StoreTomcatExecEnvReq.md
@@ -320,6 +326,9 @@ model_get_php_exec_envs_res.go
 model_get_provider_req.go
 model_get_provider_res.go
 model_get_providers_res.go
+model_get_self_svc_rs_req.go
+model_get_self_svc_rs_res.go
+model_get_self_svc_rss_res.go
 model_get_sharepoint_rs_req.go
 model_get_sharepoint_rs_res.go
 model_get_sharepoint_rss_res.go
@@ -368,6 +377,7 @@ model_refresh_brandings_res.go
 model_resource_dto.go
 model_saml_r2_idp_config_dto.go
 model_saml_r2_sp_config_dto.go
+model_self_services_resource_dto.go
 model_server_context.go
 model_server_version_request.go
 model_server_version_response.go
@@ -408,6 +418,8 @@ model_store_oidc_rp_req.go
 model_store_oidc_rp_res.go
 model_store_php_exec_env_req.go
 model_store_php_exec_env_res.go
+model_store_self_svc_rs_req.go
+model_store_self_svc_rs_res.go
 model_store_sharepoint_rs_req.go
 model_store_sharepoint_rs_res.go
 model_store_tomcat_exec_env_req.go

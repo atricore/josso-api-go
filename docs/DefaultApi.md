@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
 [**CreatePhpExecEnv**](DefaultApi.md#CreatePhpExecEnv) | **Post** /iam-deploy/phpexecenv | 
+[**CreateSelfSvcs**](DefaultApi.md#CreateSelfSvcs) | **Post** /iam-deploy/selfsvc | 
 [**CreateSharepointRs**](DefaultApi.md#CreateSharepointRs) | **Post** /iam-deploy/sharepointrs | 
 [**CreateTomcatExecEnv**](DefaultApi.md#CreateTomcatExecEnv) | **Post** /iam-deploy/tomcatexecenv | 
 [**CreateVirtSaml2Sp**](DefaultApi.md#CreateVirtSaml2Sp) | **Post** /iam-deploy/virtsaml2sp | 
@@ -42,6 +43,7 @@ Method | HTTP request | Description
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
 [**DeletePhpExecEnv**](DefaultApi.md#DeletePhpExecEnv) | **Delete** /iam-deploy/phpexecenv | 
+[**DeleteSelfSvcs**](DefaultApi.md#DeleteSelfSvcs) | **Delete** /iam-deploy/selfsvc | 
 [**DeleteSharepointRs**](DefaultApi.md#DeleteSharepointRs) | **Delete** /iam-deploy/sharepointrs | 
 [**DeleteTomcatExecEnv**](DefaultApi.md#DeleteTomcatExecEnv) | **Delete** /iam-deploy/tomcatexecenv | 
 [**DeleteVirtSaml2Sp**](DefaultApi.md#DeleteVirtSaml2Sp) | **Delete** /iam-deploy/virtsaml2sp | 
@@ -87,6 +89,8 @@ Method | HTTP request | Description
 [**GetPhpExecEnvs**](DefaultApi.md#GetPhpExecEnvs) | **Get** /iam-deploy/phpexecenvs | 
 [**GetProvider**](DefaultApi.md#GetProvider) | **Get** /iam-deploy/provider | 
 [**GetProviders**](DefaultApi.md#GetProviders) | **Get** /iam-deploy/providers | 
+[**GetSelfSvcs**](DefaultApi.md#GetSelfSvcs) | **Get** /iam-deploy/selfsvc | 
+[**GetSelfSvcss**](DefaultApi.md#GetSelfSvcss) | **Get** /iam-deploy/selfsvcs | 
 [**GetSharepointRs**](DefaultApi.md#GetSharepointRs) | **Get** /iam-deploy/sharepointrs | 
 [**GetSharepointRss**](DefaultApi.md#GetSharepointRss) | **Get** /iam-deploy/sharepointrss | 
 [**GetTomcatExecEnv**](DefaultApi.md#GetTomcatExecEnv) | **Get** /iam-deploy/tomcatexecenv | 
@@ -118,6 +122,7 @@ Method | HTTP request | Description
 [**UpdateJossoRs**](DefaultApi.md#UpdateJossoRs) | **Put** /iam-deploy/jossors | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 [**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
+[**UpdateSelfSvcs**](DefaultApi.md#UpdateSelfSvcs) | **Put** /iam-deploy/selfsvc | 
 [**UpdateSharepointRs**](DefaultApi.md#UpdateSharepointRs) | **Put** /iam-deploy/sharepointrs | 
 [**UpdateTomcatExecEnv**](DefaultApi.md#UpdateTomcatExecEnv) | **Put** /iam-deploy/tomcatexecenv | 
 [**UpdateVirtSaml2Sp**](DefaultApi.md#UpdateVirtSaml2Sp) | **Put** /iam-deploy/virtsaml2sp | 
@@ -1264,6 +1269,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateSelfSvcs
+
+> StoreSelfSvcRsRes CreateSelfSvcs(ctx).StoreSelfSvcRsReq(storeSelfSvcRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeSelfSvcRsReq := *openapiclient.NewStoreSelfSvcRsReq() // StoreSelfSvcRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateSelfSvcs(context.Background()).StoreSelfSvcRsReq(storeSelfSvcRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateSelfSvcs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateSelfSvcs`: StoreSelfSvcRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateSelfSvcs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateSelfSvcsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeSelfSvcRsReq** | [**StoreSelfSvcRsReq**](StoreSelfSvcRsReq.md) |  | 
+
+### Return type
+
+[**StoreSelfSvcRsRes**](StoreSelfSvcRsRes.md)
 
 ### Authorization
 
@@ -2535,6 +2604,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeletePhpExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteSelfSvcs
+
+> DeleteRes DeleteSelfSvcs(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteSelfSvcs(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteSelfSvcs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteSelfSvcs`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteSelfSvcs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteSelfSvcsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -5439,6 +5572,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetSelfSvcs
+
+> GetSelfSvcRsRes GetSelfSvcs(ctx).GetSelfSvcRsReq(getSelfSvcRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getSelfSvcRsReq := *openapiclient.NewGetSelfSvcRsReq() // GetSelfSvcRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetSelfSvcs(context.Background()).GetSelfSvcRsReq(getSelfSvcRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetSelfSvcs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSelfSvcs`: GetSelfSvcRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetSelfSvcs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSelfSvcsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getSelfSvcRsReq** | [**GetSelfSvcRsReq**](GetSelfSvcRsReq.md) |  | 
+
+### Return type
+
+[**GetSelfSvcRsRes**](GetSelfSvcRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetSelfSvcss
+
+> GetSelfSvcRssRes GetSelfSvcss(ctx).GetSelfSvcRsReq(getSelfSvcRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getSelfSvcRsReq := *openapiclient.NewGetSelfSvcRsReq() // GetSelfSvcRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetSelfSvcss(context.Background()).GetSelfSvcRsReq(getSelfSvcRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetSelfSvcss``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetSelfSvcss`: GetSelfSvcRssRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetSelfSvcss`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetSelfSvcssRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getSelfSvcRsReq** | [**GetSelfSvcRsReq**](GetSelfSvcRsReq.md) |  | 
+
+### Return type
+
+[**GetSelfSvcRssRes**](GetSelfSvcRssRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetSharepointRs
 
 > GetSharepointRsRes GetSharepointRs(ctx).GetSharepointRsReq(getSharepointRsReq).Execute()
@@ -7403,6 +7664,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StorePhpExecEnvRes**](StorePhpExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateSelfSvcs
+
+> StoreSelfSvcRsRes UpdateSelfSvcs(ctx).StoreSelfSvcRsReq(storeSelfSvcRsReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeSelfSvcRsReq := *openapiclient.NewStoreSelfSvcRsReq() // StoreSelfSvcRsReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateSelfSvcs(context.Background()).StoreSelfSvcRsReq(storeSelfSvcRsReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateSelfSvcs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateSelfSvcs`: StoreSelfSvcRsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateSelfSvcs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateSelfSvcsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeSelfSvcRsReq** | [**StoreSelfSvcRsReq**](StoreSelfSvcRsReq.md) |  | 
+
+### Return type
+
+[**StoreSelfSvcRsRes**](StoreSelfSvcRsRes.md)
 
 ### Authorization
 

@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**CreateJossoRs**](docs/DefaultApi.md#createjossors) | **Post** /iam-deploy/jossors | 
 *DefaultApi* | [**CreateOidcRp**](docs/DefaultApi.md#createoidcrp) | **Post** /iam-deploy/oidcrp | 
 *DefaultApi* | [**CreatePhpExecEnv**](docs/DefaultApi.md#createphpexecenv) | **Post** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**CreateSelfSvcs**](docs/DefaultApi.md#createselfsvcs) | **Post** /iam-deploy/selfsvc | 
 *DefaultApi* | [**CreateSharepointRs**](docs/DefaultApi.md#createsharepointrs) | **Post** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**CreateTomcatExecEnv**](docs/DefaultApi.md#createtomcatexecenv) | **Post** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**CreateVirtSaml2Sp**](docs/DefaultApi.md#createvirtsaml2sp) | **Post** /iam-deploy/virtsaml2sp | 
@@ -117,6 +118,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**DeleteJossoRs**](docs/DefaultApi.md#deletejossors) | **Delete** /iam-deploy/jossors | 
 *DefaultApi* | [**DeleteOidcRp**](docs/DefaultApi.md#deleteoidcrp) | **Delete** /iam-deploy/oidcrp | 
 *DefaultApi* | [**DeletePhpExecEnv**](docs/DefaultApi.md#deletephpexecenv) | **Delete** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**DeleteSelfSvcs**](docs/DefaultApi.md#deleteselfsvcs) | **Delete** /iam-deploy/selfsvc | 
 *DefaultApi* | [**DeleteSharepointRs**](docs/DefaultApi.md#deletesharepointrs) | **Delete** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**DeleteTomcatExecEnv**](docs/DefaultApi.md#deletetomcatexecenv) | **Delete** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**DeleteVirtSaml2Sp**](docs/DefaultApi.md#deletevirtsaml2sp) | **Delete** /iam-deploy/virtsaml2sp | 
@@ -162,6 +164,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetPhpExecEnvs**](docs/DefaultApi.md#getphpexecenvs) | **Get** /iam-deploy/phpexecenvs | 
 *DefaultApi* | [**GetProvider**](docs/DefaultApi.md#getprovider) | **Get** /iam-deploy/provider | 
 *DefaultApi* | [**GetProviders**](docs/DefaultApi.md#getproviders) | **Get** /iam-deploy/providers | 
+*DefaultApi* | [**GetSelfSvcs**](docs/DefaultApi.md#getselfsvcs) | **Get** /iam-deploy/selfsvc | 
+*DefaultApi* | [**GetSelfSvcss**](docs/DefaultApi.md#getselfsvcss) | **Get** /iam-deploy/selfsvcs | 
 *DefaultApi* | [**GetSharepointRs**](docs/DefaultApi.md#getsharepointrs) | **Get** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**GetSharepointRss**](docs/DefaultApi.md#getsharepointrss) | **Get** /iam-deploy/sharepointrss | 
 *DefaultApi* | [**GetTomcatExecEnv**](docs/DefaultApi.md#gettomcatexecenv) | **Get** /iam-deploy/tomcatexecenv | 
@@ -193,6 +197,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateJossoRs**](docs/DefaultApi.md#updatejossors) | **Put** /iam-deploy/jossors | 
 *DefaultApi* | [**UpdateOidcRp**](docs/DefaultApi.md#updateoidcrp) | **Put** /iam-deploy/oidcrp | 
 *DefaultApi* | [**UpdatePhpExecEnv**](docs/DefaultApi.md#updatephpexecenv) | **Put** /iam-deploy/phpexecenv | 
+*DefaultApi* | [**UpdateSelfSvcs**](docs/DefaultApi.md#updateselfsvcs) | **Put** /iam-deploy/selfsvc | 
 *DefaultApi* | [**UpdateSharepointRs**](docs/DefaultApi.md#updatesharepointrs) | **Put** /iam-deploy/sharepointrs | 
 *DefaultApi* | [**UpdateTomcatExecEnv**](docs/DefaultApi.md#updatetomcatexecenv) | **Put** /iam-deploy/tomcatexecenv | 
 *DefaultApi* | [**UpdateVirtSaml2Sp**](docs/DefaultApi.md#updatevirtsaml2sp) | **Put** /iam-deploy/virtsaml2sp | 
@@ -306,6 +311,9 @@ Class | Method | HTTP request | Description
  - [GetProviderReq](docs/GetProviderReq.md)
  - [GetProviderRes](docs/GetProviderRes.md)
  - [GetProvidersRes](docs/GetProvidersRes.md)
+ - [GetSelfSvcRsReq](docs/GetSelfSvcRsReq.md)
+ - [GetSelfSvcRsRes](docs/GetSelfSvcRsRes.md)
+ - [GetSelfSvcRssRes](docs/GetSelfSvcRssRes.md)
  - [GetSharepointRsReq](docs/GetSharepointRsReq.md)
  - [GetSharepointRsRes](docs/GetSharepointRsRes.md)
  - [GetSharepointRssRes](docs/GetSharepointRssRes.md)
@@ -354,6 +362,7 @@ Class | Method | HTTP request | Description
  - [ResourceDTO](docs/ResourceDTO.md)
  - [SamlR2IDPConfigDTO](docs/SamlR2IDPConfigDTO.md)
  - [SamlR2SPConfigDTO](docs/SamlR2SPConfigDTO.md)
+ - [SelfServicesResourceDTO](docs/SelfServicesResourceDTO.md)
  - [ServerContext](docs/ServerContext.md)
  - [ServerVersionRequest](docs/ServerVersionRequest.md)
  - [ServerVersionResponse](docs/ServerVersionResponse.md)
@@ -394,6 +403,8 @@ Class | Method | HTTP request | Description
  - [StoreOidcRpRes](docs/StoreOidcRpRes.md)
  - [StorePhpExecEnvReq](docs/StorePhpExecEnvReq.md)
  - [StorePhpExecEnvRes](docs/StorePhpExecEnvRes.md)
+ - [StoreSelfSvcRsReq](docs/StoreSelfSvcRsReq.md)
+ - [StoreSelfSvcRsRes](docs/StoreSelfSvcRsRes.md)
  - [StoreSharepointRsReq](docs/StoreSharepointRsReq.md)
  - [StoreSharepointRsRes](docs/StoreSharepointRsRes.md)
  - [StoreTomcatExecEnvReq](docs/StoreTomcatExecEnvReq.md)

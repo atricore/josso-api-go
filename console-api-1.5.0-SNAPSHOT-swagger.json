@@ -2515,6 +2515,130 @@
         }
       }
     },
+    "/iam-deploy/selfsvc" : {
+      "get" : {
+        "operationId" : "getSelfSvcs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetSelfSvcRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetSelfSvcRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "updateSelfSvcs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreSelfSvcRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreSelfSvcRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "createSelfSvcs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/StoreSelfSvcRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/StoreSelfSvcRsRes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "deleteSelfSvcs",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/DeleteReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/DeleteRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iam-deploy/selfsvcs" : {
+      "get" : {
+        "operationId" : "getSelfSvcss",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetSelfSvcRsReq"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetSelfSvcRssRes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/iam-deploy/sharepointrs" : {
       "get" : {
         "operationId" : "getSharepointRs",
@@ -5624,6 +5748,54 @@
           }
         }
       },
+      "GetSelfSvcRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetSelfSvcRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SelfServicesResourceDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "GetSelfSvcRssRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resources" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/SelfServicesResourceDTO"
+            }
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
       "GetSharepointRsReq" : {
         "type" : "object",
         "properties" : {
@@ -7559,6 +7731,44 @@
           }
         }
       },
+      "SelfServicesResourceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "activation" : {
+            "$ref" : "#/components/schemas/ActivationDTO"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "location" : {
+            "$ref" : "#/components/schemas/LocationDTO"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "secret" : {
+            "type" : "string"
+          },
+          "serviceConnection" : {
+            "$ref" : "#/components/schemas/ServiceConnectionDTO"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
+          }
+        }
+      },
       "ServerContext" : {
         "type" : "object",
         "properties" : {
@@ -8204,6 +8414,34 @@
           },
           "phpExecEnv" : {
             "$ref" : "#/components/schemas/PHPExecutionEnvironmentDTO"
+          },
+          "validationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "StoreSelfSvcRsReq" : {
+        "type" : "object",
+        "properties" : {
+          "idOrName" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SelfServicesResourceDTO"
+          }
+        }
+      },
+      "StoreSelfSvcRsRes" : {
+        "type" : "object",
+        "properties" : {
+          "error" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "$ref" : "#/components/schemas/SelfServicesResourceDTO"
           },
           "validationErrors" : {
             "type" : "array",
