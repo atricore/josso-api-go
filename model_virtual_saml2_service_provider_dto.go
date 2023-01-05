@@ -55,6 +55,7 @@ type VirtualSaml2ServiceProviderDTO struct {
 	OidcAccessTokenTimeToLive *int32 `json:"oidcAccessTokenTimeToLive,omitempty"`
 	OidcAuthzCodeTimeToLive *int32 `json:"oidcAuthzCodeTimeToLive,omitempty"`
 	OidcIdTokenTimeToLive *int32 `json:"oidcIdTokenTimeToLive,omitempty"`
+	OidcIncludeUserClaimsInAccessToken *bool `json:"oidcIncludeUserClaimsInAccessToken,omitempty"`
 	OpenIdEnabled *bool `json:"openIdEnabled,omitempty"`
 	Remote *bool `json:"remote,omitempty"`
 	Role *string `json:"role,omitempty"`
@@ -1309,6 +1310,38 @@ func (o *VirtualSaml2ServiceProviderDTO) SetOidcIdTokenTimeToLive(v int32) {
 	o.OidcIdTokenTimeToLive = &v
 }
 
+// GetOidcIncludeUserClaimsInAccessToken returns the OidcIncludeUserClaimsInAccessToken field value if set, zero value otherwise.
+func (o *VirtualSaml2ServiceProviderDTO) GetOidcIncludeUserClaimsInAccessToken() bool {
+	if o == nil || isNil(o.OidcIncludeUserClaimsInAccessToken) {
+		var ret bool
+		return ret
+	}
+	return *o.OidcIncludeUserClaimsInAccessToken
+}
+
+// GetOidcIncludeUserClaimsInAccessTokenOk returns a tuple with the OidcIncludeUserClaimsInAccessToken field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VirtualSaml2ServiceProviderDTO) GetOidcIncludeUserClaimsInAccessTokenOk() (*bool, bool) {
+	if o == nil || isNil(o.OidcIncludeUserClaimsInAccessToken) {
+    return nil, false
+	}
+	return o.OidcIncludeUserClaimsInAccessToken, true
+}
+
+// HasOidcIncludeUserClaimsInAccessToken returns a boolean if a field has been set.
+func (o *VirtualSaml2ServiceProviderDTO) HasOidcIncludeUserClaimsInAccessToken() bool {
+	if o != nil && !isNil(o.OidcIncludeUserClaimsInAccessToken) {
+		return true
+	}
+
+	return false
+}
+
+// SetOidcIncludeUserClaimsInAccessToken gets a reference to the given bool and assigns it to the OidcIncludeUserClaimsInAccessToken field.
+func (o *VirtualSaml2ServiceProviderDTO) SetOidcIncludeUserClaimsInAccessToken(v bool) {
+	o.OidcIncludeUserClaimsInAccessToken = &v
+}
+
 // GetOpenIdEnabled returns the OpenIdEnabled field value if set, zero value otherwise.
 func (o *VirtualSaml2ServiceProviderDTO) GetOpenIdEnabled() bool {
 	if o == nil || isNil(o.OpenIdEnabled) {
@@ -1937,6 +1970,9 @@ func (o VirtualSaml2ServiceProviderDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.OidcIdTokenTimeToLive) {
 		toSerialize["oidcIdTokenTimeToLive"] = o.OidcIdTokenTimeToLive
 	}
+	if !isNil(o.OidcIncludeUserClaimsInAccessToken) {
+		toSerialize["oidcIncludeUserClaimsInAccessToken"] = o.OidcIncludeUserClaimsInAccessToken
+	}
 	if !isNil(o.OpenIdEnabled) {
 		toSerialize["openIdEnabled"] = o.OpenIdEnabled
 	}
@@ -2041,6 +2077,7 @@ func (o *VirtualSaml2ServiceProviderDTO) UnmarshalJSON(bytes []byte) (err error)
 		delete(additionalProperties, "oidcAccessTokenTimeToLive")
 		delete(additionalProperties, "oidcAuthzCodeTimeToLive")
 		delete(additionalProperties, "oidcIdTokenTimeToLive")
+		delete(additionalProperties, "oidcIncludeUserClaimsInAccessToken")
 		delete(additionalProperties, "openIdEnabled")
 		delete(additionalProperties, "remote")
 		delete(additionalProperties, "role")

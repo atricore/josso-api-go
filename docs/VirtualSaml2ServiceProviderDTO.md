@@ -42,6 +42,7 @@ Name | Type | Description | Notes
 **OidcAccessTokenTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcAuthzCodeTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcIdTokenTimeToLive** | Pointer to **int32** |  | [optional] 
+**OidcIncludeUserClaimsInAccessToken** | Pointer to **bool** |  | [optional] 
 **OpenIdEnabled** | Pointer to **bool** |  | [optional] 
 **Remote** | Pointer to **bool** |  | [optional] 
 **Role** | Pointer to **string** |  | [optional] 
@@ -1027,6 +1028,31 @@ SetOidcIdTokenTimeToLive sets OidcIdTokenTimeToLive field to given value.
 `func (o *VirtualSaml2ServiceProviderDTO) HasOidcIdTokenTimeToLive() bool`
 
 HasOidcIdTokenTimeToLive returns a boolean if a field has been set.
+
+### GetOidcIncludeUserClaimsInAccessToken
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetOidcIncludeUserClaimsInAccessToken() bool`
+
+GetOidcIncludeUserClaimsInAccessToken returns the OidcIncludeUserClaimsInAccessToken field if non-nil, zero value otherwise.
+
+### GetOidcIncludeUserClaimsInAccessTokenOk
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetOidcIncludeUserClaimsInAccessTokenOk() (*bool, bool)`
+
+GetOidcIncludeUserClaimsInAccessTokenOk returns a tuple with the OidcIncludeUserClaimsInAccessToken field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOidcIncludeUserClaimsInAccessToken
+
+`func (o *VirtualSaml2ServiceProviderDTO) SetOidcIncludeUserClaimsInAccessToken(v bool)`
+
+SetOidcIncludeUserClaimsInAccessToken sets OidcIncludeUserClaimsInAccessToken field to given value.
+
+### HasOidcIncludeUserClaimsInAccessToken
+
+`func (o *VirtualSaml2ServiceProviderDTO) HasOidcIncludeUserClaimsInAccessToken() bool`
+
+HasOidcIncludeUserClaimsInAccessToken returns a boolean if a field has been set.
 
 ### GetOpenIdEnabled
 

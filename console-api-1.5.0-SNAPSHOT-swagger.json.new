@@ -6768,6 +6768,9 @@
             "type" : "integer",
             "format" : "int32"
           },
+          "oidcIncludeUserClaimsInAccessToken" : {
+            "type" : "boolean"
+          },
           "openIdEnabled" : {
             "type" : "boolean"
           },
@@ -9021,6 +9024,9 @@
           "oidcIdTokenTimeToLive" : {
             "type" : "integer",
             "format" : "int32"
+          },
+          "oidcIncludeUserClaimsInAccessToken" : {
+            "type" : "boolean"
           },
           "openIdEnabled" : {
             "type" : "boolean"
