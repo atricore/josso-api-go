@@ -3615,31 +3615,6 @@
           }
         }
       },
-      "BrandingDefinitionDTO" : {
-        "type" : "object",
-        "properties" : {
-          "defaultLocale" : {
-            "type" : "string"
-          },
-          "description" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer",
-            "format" : "int64"
-          },
-          "name" : {
-            "type" : "string"
-          },
-          "type" : {
-            "type" : "string",
-            "enum" : [ "BUILT_IN", "CUSTOM" ]
-          },
-          "webBrandingId" : {
-            "type" : "string"
-          }
-        }
-      },
       "BuiltInAttributeProfileDTO" : {
         "type" : "object",
         "properties" : {
@@ -3684,6 +3659,63 @@
             "items" : {
               "type" : "string"
             }
+          }
+        }
+      },
+      "CustomAuthnServiceDTO" : {
+        "type" : "object",
+        "properties" : {
+          "authnCtxClass" : {
+            "type" : "string"
+          },
+          "authnMechanismType" : {
+            "type" : "string"
+          },
+          "customClass" : {
+            "$ref" : "#/components/schemas/CustomClassDTO"
+          },
+          "delegatedAuthentications" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "displayName" : {
+            "type" : "string"
+          },
+          "elementId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "preAuthnClaimCollectorConfig" : {
+            "type" : "string"
+          },
+          "preAuthnClaimCollectorType" : {
+            "type" : "string"
+          },
+          "preAuthnServiceURL" : {
+            "type" : "string"
+          },
+          "useCredentialStore" : {
+            "type" : "boolean"
+          },
+          "x" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "y" : {
+            "type" : "number",
+            "format" : "double"
           }
         }
       },
@@ -4807,7 +4839,7 @@
           "brandings" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/components/schemas/BrandingDefinitionDTO"
+              "$ref" : "#/components/schemas/CustomBrandingDefinitionDTO"
             }
           },
           "error" : {
@@ -5914,6 +5946,9 @@
           },
           "builtInAttributeProfile" : {
             "$ref" : "#/components/schemas/BuiltInAttributeProfileDTO"
+          },
+          "customAuthSvc" : {
+            "$ref" : "#/components/schemas/CustomAuthnServiceDTO"
           },
           "directoryAuthnSvc" : {
             "$ref" : "#/components/schemas/DirectoryAuthenticationServiceDTO"

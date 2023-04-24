@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **BasicAuthnMechanism** | Pointer to [**BasicAuthenticationDTO**](BasicAuthenticationDTO.md) |  | [optional] 
 **BindAuthn** | Pointer to [**BindAuthenticationDTO**](BindAuthenticationDTO.md) |  | [optional] 
 **BuiltInAttributeProfile** | Pointer to [**BuiltInAttributeProfileDTO**](BuiltInAttributeProfileDTO.md) |  | [optional] 
+**CustomAuthSvc** | Pointer to [**CustomAuthnServiceDTO**](CustomAuthnServiceDTO.md) |  | [optional] 
 **DirectoryAuthnSvc** | Pointer to [**DirectoryAuthenticationServiceDTO**](DirectoryAuthenticationServiceDTO.md) |  | [optional] 
 **Idpc** | Pointer to [**IdentityProviderChannelDTO**](IdentityProviderChannelDTO.md) |  | [optional] 
 **Spc** | Pointer to [**InternalSaml2ServiceProviderChannelDTO**](InternalSaml2ServiceProviderChannelDTO.md) |  | [optional] 
@@ -131,6 +132,31 @@ SetBuiltInAttributeProfile sets BuiltInAttributeProfile field to given value.
 `func (o *GetTypesRes) HasBuiltInAttributeProfile() bool`
 
 HasBuiltInAttributeProfile returns a boolean if a field has been set.
+
+### GetCustomAuthSvc
+
+`func (o *GetTypesRes) GetCustomAuthSvc() CustomAuthnServiceDTO`
+
+GetCustomAuthSvc returns the CustomAuthSvc field if non-nil, zero value otherwise.
+
+### GetCustomAuthSvcOk
+
+`func (o *GetTypesRes) GetCustomAuthSvcOk() (*CustomAuthnServiceDTO, bool)`
+
+GetCustomAuthSvcOk returns a tuple with the CustomAuthSvc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomAuthSvc
+
+`func (o *GetTypesRes) SetCustomAuthSvc(v CustomAuthnServiceDTO)`
+
+SetCustomAuthSvc sets CustomAuthSvc field to given value.
+
+### HasCustomAuthSvc
+
+`func (o *GetTypesRes) HasCustomAuthSvc() bool`
+
+HasCustomAuthSvc returns a boolean if a field has been set.
 
 ### GetDirectoryAuthnSvc
 

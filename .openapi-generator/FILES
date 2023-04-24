@@ -20,10 +20,10 @@ docs/AuthenticationServiceDTO.md
 docs/AzureOpenIDConnectIdentityProviderDTO.md
 docs/BasicAuthenticationDTO.md
 docs/BindAuthenticationDTO.md
-docs/BrandingDefinitionDTO.md
 docs/BuiltInAttributeProfileDTO.md
 docs/CalcLayoutReq.md
 docs/CalcLayoutRes.md
+docs/CustomAuthnServiceDTO.md
 docs/CustomBrandingDefinitionDTO.md
 docs/CustomClassDTO.md
 docs/CustomClassPropertyDTO.md
@@ -238,10 +238,10 @@ model_authentication_service_dto.go
 model_azure_open_id_connect_identity_provider_dto.go
 model_basic_authentication_dto.go
 model_bind_authentication_dto.go
-model_branding_definition_dto.go
 model_built_in_attribute_profile_dto.go
 model_calc_layout_req.go
 model_calc_layout_res.go
+model_custom_authn_service_dto.go
 model_custom_branding_definition_dto.go
 model_custom_class_dto.go
 model_custom_class_property_dto.go

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Brandings** | Pointer to [**[]BrandingDefinitionDTO**](BrandingDefinitionDTO.md) |  | [optional] 
+**Brandings** | Pointer to [**[]CustomBrandingDefinitionDTO**](CustomBrandingDefinitionDTO.md) |  | [optional] 
 **Error** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetBrandings
 
-`func (o *GetAllBrandingsRes) GetBrandings() []BrandingDefinitionDTO`
+`func (o *GetAllBrandingsRes) GetBrandings() []CustomBrandingDefinitionDTO`
 
 GetBrandings returns the Brandings field if non-nil, zero value otherwise.
 
 ### GetBrandingsOk
 
-`func (o *GetAllBrandingsRes) GetBrandingsOk() (*[]BrandingDefinitionDTO, bool)`
+`func (o *GetAllBrandingsRes) GetBrandingsOk() (*[]CustomBrandingDefinitionDTO, bool)`
 
 GetBrandingsOk returns a tuple with the Brandings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBrandings
 
-`func (o *GetAllBrandingsRes) SetBrandings(v []BrandingDefinitionDTO)`
+`func (o *GetAllBrandingsRes) SetBrandings(v []CustomBrandingDefinitionDTO)`
 
 SetBrandings sets Brandings field to given value.
 
