@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Appliance** | Pointer to [**IdentityApplianceDTO**](IdentityApplianceDTO.md) |  | [optional] 
+**ExecEnvs** | Pointer to **[]string** |  | [optional] 
 **IdSources** | Pointer to **[]string** |  | [optional] 
 **Providers** | Pointer to **[]string** |  | [optional] 
 
@@ -51,6 +52,31 @@ SetAppliance sets Appliance field to given value.
 `func (o *IdentityApplianceContainerDTO) HasAppliance() bool`
 
 HasAppliance returns a boolean if a field has been set.
+
+### GetExecEnvs
+
+`func (o *IdentityApplianceContainerDTO) GetExecEnvs() []string`
+
+GetExecEnvs returns the ExecEnvs field if non-nil, zero value otherwise.
+
+### GetExecEnvsOk
+
+`func (o *IdentityApplianceContainerDTO) GetExecEnvsOk() (*[]string, bool)`
+
+GetExecEnvsOk returns a tuple with the ExecEnvs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExecEnvs
+
+`func (o *IdentityApplianceContainerDTO) SetExecEnvs(v []string)`
+
+SetExecEnvs sets ExecEnvs field to given value.
+
+### HasExecEnvs
+
+`func (o *IdentityApplianceContainerDTO) HasExecEnvs() bool`
+
+HasExecEnvs returns a boolean if a field has been set.
 
 ### GetIdSources
 

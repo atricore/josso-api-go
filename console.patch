@@ -1,76 +1,15 @@
---- console-api-1.5.0-SNAPSHOT-swagger.json	2023-03-03 15:37:03.593379737 -0500
-+++ console-api-1.5.0-SNAPSHOT-swagger.json.new	2023-04-01 10:40:34.600767974 -0400
-@@ -3662,6 +3662,63 @@
-           }
-         }
-       },
-+      "CustomAuthnServiceDTO" : {
-+        "type" : "object",
-+        "properties" : {
-+          "authnCtxClass" : {
-+            "type" : "string"
-+          },
-+          "authnMechanismType" : {
-+            "type" : "string"
-+          },
-+          "customClass" : {
-+            "$ref" : "#/components/schemas/CustomClassDTO"
-+          },
-+          "delegatedAuthentications" : {
-+            "uniqueItems" : true,
+--- console-api-1.5.0-SNAPSHOT-swagger.json	2023-06-02 10:31:57.113717622 -0400
++++ console-api-1.5.0-SNAPSHOT-swagger.json.new	2023-06-02 12:38:00.187008182 -0400
+@@ -6330,6 +6338,12 @@
+           "appliance" : {
+             "$ref" : "#/components/schemas/IdentityApplianceDTO"
+           },
++          "execEnvs" : {
 +            "type" : "array",
 +            "items" : {
-+              "$ref" : "#/components/schemas/DelegatedAuthenticationDTO"
++              "type" : "string"
 +            }
 +          },
-+          "description" : {
-+            "type" : "string"
-+          },
-+          "displayName" : {
-+            "type" : "string"
-+          },
-+          "elementId" : {
-+            "type" : "string"
-+          },
-+          "id" : {
-+            "type" : "integer",
-+            "format" : "int64"
-+          },
-+          "name" : {
-+            "type" : "string"
-+          },
-+          "preAuthnClaimCollectorConfig" : {
-+            "type" : "string"
-+          },
-+          "preAuthnClaimCollectorType" : {
-+            "type" : "string"
-+          },
-+          "preAuthnServiceURL" : {
-+            "type" : "string"
-+          },
-+          "useCredentialStore" : {
-+            "type" : "boolean"
-+          },
-+          "x" : {
-+            "type" : "number",
-+            "format" : "double"
-+          },
-+          "y" : {
-+            "type" : "number",
-+            "format" : "double"
-+          }
-+        }
-+      },
-       "CustomBrandingDefinitionDTO" : {
-         "type" : "object",
-         "properties" : {
-@@ -5882,6 +5947,9 @@
-           "builtInAttributeProfile" : {
-             "$ref" : "#/components/schemas/BuiltInAttributeProfileDTO"
-           },
-+          "customAuthSvc" : {
-+            "$ref" : "#/components/schemas/CustomAuthnServiceDTO"
-+          },
-           "directoryAuthnSvc" : {
-             "$ref" : "#/components/schemas/DirectoryAuthenticationServiceDTO"
-           },
+           "idSources" : {
+             "type" : "array",
+             "items" : {

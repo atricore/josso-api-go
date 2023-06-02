@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **FederatedProvider** | Pointer to [**FederatedProviderDTO**](FederatedProviderDTO.md) |  | [optional] 
 **Location** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
+**ServiceResource** | Pointer to [**ServiceResourceDTO**](ServiceResourceDTO.md) |  | [optional] 
+**ServiceResourceType** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -102,6 +104,56 @@ SetName sets Name field to given value.
 `func (o *ProviderContainerDTO) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetServiceResource
+
+`func (o *ProviderContainerDTO) GetServiceResource() ServiceResourceDTO`
+
+GetServiceResource returns the ServiceResource field if non-nil, zero value otherwise.
+
+### GetServiceResourceOk
+
+`func (o *ProviderContainerDTO) GetServiceResourceOk() (*ServiceResourceDTO, bool)`
+
+GetServiceResourceOk returns a tuple with the ServiceResource field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServiceResource
+
+`func (o *ProviderContainerDTO) SetServiceResource(v ServiceResourceDTO)`
+
+SetServiceResource sets ServiceResource field to given value.
+
+### HasServiceResource
+
+`func (o *ProviderContainerDTO) HasServiceResource() bool`
+
+HasServiceResource returns a boolean if a field has been set.
+
+### GetServiceResourceType
+
+`func (o *ProviderContainerDTO) GetServiceResourceType() string`
+
+GetServiceResourceType returns the ServiceResourceType field if non-nil, zero value otherwise.
+
+### GetServiceResourceTypeOk
+
+`func (o *ProviderContainerDTO) GetServiceResourceTypeOk() (*string, bool)`
+
+GetServiceResourceTypeOk returns a tuple with the ServiceResourceType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServiceResourceType
+
+`func (o *ProviderContainerDTO) SetServiceResourceType(v string)`
+
+SetServiceResourceType sets ServiceResourceType field to given value.
+
+### HasServiceResourceType
+
+`func (o *ProviderContainerDTO) HasServiceResourceType() bool`
+
+HasServiceResourceType returns a boolean if a field has been set.
 
 ### GetType
 

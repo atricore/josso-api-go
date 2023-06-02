@@ -59,6 +59,8 @@ Method | HTTP request | Description
 [**GetBranding**](DefaultApi.md#GetBranding) | **Get** /iam-branding/branding | 
 [**GetDbIdVault**](DefaultApi.md#GetDbIdVault) | **Get** /iam-deploy/dbidvault | 
 [**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvaults | 
+[**GetExecEnv**](DefaultApi.md#GetExecEnv) | **Get** /iam-deploy/execenv | 
+[**GetExecEnvs**](DefaultApi.md#GetExecEnvs) | **Get** /iam-deploy/execenvs | 
 [**GetExtSaml2Sp**](DefaultApi.md#GetExtSaml2Sp) | **Get** /iam-deploy/extsaml2sp | 
 [**GetExtSaml2Sps**](DefaultApi.md#GetExtSaml2Sps) | **Get** /iam-deploy/extsaml2sps | 
 [**GetIdP**](DefaultApi.md#GetIdP) | **Get** /iam-deploy/idp | 
@@ -3637,6 +3639,134 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetDbIdVaultsRes**](GetDbIdVaultsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetExecEnv
+
+> GetExecEnvRes GetExecEnv(ctx).GetExecEnvReq(getExecEnvReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getExecEnvReq := *openapiclient.NewGetExecEnvReq() // GetExecEnvReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetExecEnv(context.Background()).GetExecEnvReq(getExecEnvReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExecEnv``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetExecEnv`: GetExecEnvRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetExecEnv`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetExecEnvRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getExecEnvReq** | [**GetExecEnvReq**](GetExecEnvReq.md) |  | 
+
+### Return type
+
+[**GetExecEnvRes**](GetExecEnvRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetExecEnvs
+
+> GetExecEnvsRes GetExecEnvs(ctx).GetApplianceReq(getApplianceReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getApplianceReq := *openapiclient.NewGetApplianceReq() // GetApplianceReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetExecEnvs(context.Background()).GetApplianceReq(getApplianceReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetExecEnvs``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetExecEnvs`: GetExecEnvsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetExecEnvs`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetExecEnvsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getApplianceReq** | [**GetApplianceReq**](GetApplianceReq.md) |  | 
+
+### Return type
+
+[**GetExecEnvsRes**](GetExecEnvsRes.md)
 
 ### Authorization
 

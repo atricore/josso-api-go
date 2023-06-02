@@ -38,6 +38,7 @@ docs/DeleteRes.md
 docs/DirectoryAuthenticationServiceDTO.md
 docs/EmbeddedIdentityVaultDTO.md
 docs/EntitySelectionStrategyDTO.md
+docs/ExecEnvContainerDTO.md
 docs/ExecutionEnvironmentDTO.md
 docs/ExportApplianceReq.md
 docs/ExportApplianceRes.md
@@ -63,6 +64,9 @@ docs/GetBrandingRes.md
 docs/GetDbIdVaultReq.md
 docs/GetDbIdVaultRes.md
 docs/GetDbIdVaultsRes.md
+docs/GetExecEnvReq.md
+docs/GetExecEnvRes.md
+docs/GetExecEnvsRes.md
 docs/GetExtSaml2SpReq.md
 docs/GetExtSaml2SpRes.md
 docs/GetExtSaml2SpsRes.md
@@ -255,6 +259,7 @@ model_delete_res.go
 model_directory_authentication_service_dto.go
 model_embedded_identity_vault_dto.go
 model_entity_selection_strategy_dto.go
+model_exec_env_container_dto.go
 model_execution_environment_dto.go
 model_export_appliance_req.go
 model_export_appliance_res.go
@@ -280,6 +285,9 @@ model_get_branding_res.go
 model_get_db_id_vault_req.go
 model_get_db_id_vault_res.go
 model_get_db_id_vaults_res.go
+model_get_exec_env_req.go
+model_get_exec_env_res.go
+model_get_exec_envs_res.go
 model_get_ext_saml2_sp_req.go
 model_get_ext_saml2_sp_res.go
 model_get_ext_saml2_sps_res.go
