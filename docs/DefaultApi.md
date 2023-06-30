@@ -57,6 +57,7 @@ Method | HTTP request | Description
 [**GetApplianceState**](DefaultApi.md#GetApplianceState) | **Get** /iam-deploy/appliance/state | 
 [**GetAppliances**](DefaultApi.md#GetAppliances) | **Get** /iam-deploy/appliances | 
 [**GetBranding**](DefaultApi.md#GetBranding) | **Get** /iam-branding/branding | 
+[**GetBundles**](DefaultApi.md#GetBundles) | **Get** /iam-deploy/server/bundles | 
 [**GetDbIdVault**](DefaultApi.md#GetDbIdVault) | **Get** /iam-deploy/dbidvault | 
 [**GetDbIdVaults**](DefaultApi.md#GetDbIdVaults) | **Get** /iam-deploy/dbidvaults | 
 [**GetExecEnv**](DefaultApi.md#GetExecEnv) | **Get** /iam-deploy/execenv | 
@@ -3511,6 +3512,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetBrandingRes**](GetBrandingRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetBundles
+
+> GetBundlesRes GetBundles(ctx).GetBundlesReq(getBundlesReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getBundlesReq := *openapiclient.NewGetBundlesReq() // GetBundlesReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetBundles(context.Background()).GetBundlesReq(getBundlesReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetBundles``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetBundles`: GetBundlesRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetBundles`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetBundlesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getBundlesReq** | [**GetBundlesReq**](GetBundlesReq.md) |  | 
+
+### Return type
+
+[**GetBundlesRes**](GetBundlesRes.md)
 
 ### Authorization
 

@@ -21,6 +21,7 @@ docs/AzureOpenIDConnectIdentityProviderDTO.md
 docs/BasicAuthenticationDTO.md
 docs/BindAuthenticationDTO.md
 docs/BuiltInAttributeProfileDTO.md
+docs/BundleDescr.md
 docs/CalcLayoutReq.md
 docs/CalcLayoutRes.md
 docs/CustomAuthnServiceDTO.md
@@ -61,6 +62,8 @@ docs/GetApplianceStateRes.md
 docs/GetAppliancesRes.md
 docs/GetBrandingReq.md
 docs/GetBrandingRes.md
+docs/GetBundlesReq.md
+docs/GetBundlesRes.md
 docs/GetDbIdVaultReq.md
 docs/GetDbIdVaultRes.md
 docs/GetDbIdVaultsRes.md
@@ -243,6 +246,7 @@ model_azure_open_id_connect_identity_provider_dto.go
 model_basic_authentication_dto.go
 model_bind_authentication_dto.go
 model_built_in_attribute_profile_dto.go
+model_bundle_descr.go
 model_calc_layout_req.go
 model_calc_layout_res.go
 model_custom_authn_service_dto.go
@@ -282,6 +286,8 @@ model_get_appliance_state_res.go
 model_get_appliances_res.go
 model_get_branding_req.go
 model_get_branding_res.go
+model_get_bundles_req.go
+model_get_bundles_res.go
 model_get_db_id_vault_req.go
 model_get_db_id_vault_res.go
 model_get_db_id_vaults_res.go
