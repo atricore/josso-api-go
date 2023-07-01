@@ -82,6 +82,7 @@ Method | HTTP request | Description
 [**GetIdpGoogles**](DefaultApi.md#GetIdpGoogles) | **Get** /iam-deploy/idp_googles | 
 [**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
 [**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
+[**GetInfo**](DefaultApi.md#GetInfo) | **Get** /iam-deploy/server/info | 
 [**GetIntSaml2Sp**](DefaultApi.md#GetIntSaml2Sp) | **Get** /iam-deploy/intsaml2sp | 
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetJossoRs**](DefaultApi.md#GetJossoRs) | **Get** /iam-deploy/jossors | 
@@ -5112,6 +5113,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetIisExecEnvsRes**](GetIisExecEnvsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetInfo
+
+> GetServerInfoRes GetInfo(ctx).GetServerInfoReq(getServerInfoReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getServerInfoReq := *openapiclient.NewGetServerInfoReq() // GetServerInfoReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetInfo(context.Background()).GetServerInfoReq(getServerInfoReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetInfo``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetInfo`: GetServerInfoRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetInfo`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetInfoRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getServerInfoReq** | [**GetServerInfoReq**](GetServerInfoReq.md) |  | 
+
+### Return type
+
+[**GetServerInfoRes**](GetServerInfoRes.md)
 
 ### Authorization
 

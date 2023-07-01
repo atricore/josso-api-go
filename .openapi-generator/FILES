@@ -119,6 +119,8 @@ docs/GetProvidersRes.md
 docs/GetSelfSvcRsReq.md
 docs/GetSelfSvcRsRes.md
 docs/GetSelfSvcRssRes.md
+docs/GetServerInfoReq.md
+docs/GetServerInfoRes.md
 docs/GetSharepointRsReq.md
 docs/GetSharepointRsRes.md
 docs/GetSharepointRssRes.md
@@ -343,6 +345,8 @@ model_get_providers_res.go
 model_get_self_svc_rs_req.go
 model_get_self_svc_rs_res.go
 model_get_self_svc_rss_res.go
+model_get_server_info_req.go
+model_get_server_info_res.go
 model_get_sharepoint_rs_req.go
 model_get_sharepoint_rs_res.go
 model_get_sharepoint_rss_res.go
