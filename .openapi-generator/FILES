@@ -47,6 +47,7 @@ docs/ExportExecEnvCfgReq.md
 docs/ExportExecEnvCfgRes.md
 docs/ExtensionDTO.md
 docs/ExternalOpenIDConnectRelayingPartyDTO.md
+docs/ExternalSaml2IdentityProviderDTO.md
 docs/ExternalSaml2ServiceProviderDTO.md
 docs/FacebookOpenIDConnectIdentityProviderDTO.md
 docs/FederatedChannelDTO.md
@@ -75,6 +76,9 @@ docs/GetExtSaml2SpRes.md
 docs/GetExtSaml2SpsRes.md
 docs/GetIdPReq.md
 docs/GetIdPRes.md
+docs/GetIdPSaml2Req.md
+docs/GetIdPSaml2Res.md
+docs/GetIdPSaml2sRes.md
 docs/GetIdPsRes.md
 docs/GetIdSourceDbReq.md
 docs/GetIdSourceDbRes.md
@@ -188,6 +192,8 @@ docs/StoreExtSaml2SpReq.md
 docs/StoreExtSaml2SpRes.md
 docs/StoreIdPReq.md
 docs/StoreIdPRes.md
+docs/StoreIdPSaml2Req.md
+docs/StoreIdPSaml2Res.md
 docs/StoreIdSourceDbReq.md
 docs/StoreIdSourceDbRes.md
 docs/StoreIdSourceLdapReq.md
@@ -273,6 +279,7 @@ model_export_exec_env_cfg_req.go
 model_export_exec_env_cfg_res.go
 model_extension_dto.go
 model_external_open_id_connect_relaying_party_dto.go
+model_external_saml2_identity_provider_dto.go
 model_external_saml2_service_provider_dto.go
 model_facebook_open_id_connect_identity_provider_dto.go
 model_federated_channel_dto.go
@@ -301,6 +308,9 @@ model_get_ext_saml2_sp_res.go
 model_get_ext_saml2_sps_res.go
 model_get_id_p_req.go
 model_get_id_p_res.go
+model_get_id_p_saml2_req.go
+model_get_id_p_saml2_res.go
+model_get_id_p_saml2s_res.go
 model_get_id_ps_res.go
 model_get_id_source_db_req.go
 model_get_id_source_db_res.go
@@ -414,6 +424,8 @@ model_store_ext_saml2_sp_req.go
 model_store_ext_saml2_sp_res.go
 model_store_id_p_req.go
 model_store_id_p_res.go
+model_store_id_p_saml2_req.go
+model_store_id_p_saml2_res.go
 model_store_id_source_db_req.go
 model_store_id_source_db_res.go
 model_store_id_source_ldap_req.go

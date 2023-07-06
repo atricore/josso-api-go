@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**CreateIdpAzure**](DefaultApi.md#CreateIdpAzure) | **Post** /iam-deploy/idp_azure | 
 [**CreateIdpFacebook**](DefaultApi.md#CreateIdpFacebook) | **Post** /iam-deploy/idp_fb | 
 [**CreateIdpGoogle**](DefaultApi.md#CreateIdpGoogle) | **Post** /iam-deploy/idp_google | 
+[**CreateIdpSaml2**](DefaultApi.md#CreateIdpSaml2) | **Post** /iam-deploy/idp_saml2 | 
 [**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
@@ -38,6 +39,7 @@ Method | HTTP request | Description
 [**DeleteIdpAzure**](DefaultApi.md#DeleteIdpAzure) | **Delete** /iam-deploy/idp_azure | 
 [**DeleteIdpFacebook**](DefaultApi.md#DeleteIdpFacebook) | **Delete** /iam-deploy/idp_fb | 
 [**DeleteIdpGoogle**](DefaultApi.md#DeleteIdpGoogle) | **Delete** /iam-deploy/idp_google | 
+[**DeleteIdpSaml2**](DefaultApi.md#DeleteIdpSaml2) | **Delete** /iam-deploy/idp_saml2 | 
 [**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
@@ -80,6 +82,8 @@ Method | HTTP request | Description
 [**GetIdpFacebooks**](DefaultApi.md#GetIdpFacebooks) | **Get** /iam-deploy/idp_fbs | 
 [**GetIdpGoogle**](DefaultApi.md#GetIdpGoogle) | **Get** /iam-deploy/idp_google | 
 [**GetIdpGoogles**](DefaultApi.md#GetIdpGoogles) | **Get** /iam-deploy/idp_googles | 
+[**GetIdpSaml2**](DefaultApi.md#GetIdpSaml2) | **Get** /iam-deploy/idp_saml2 | 
+[**GetIdpSaml2s**](DefaultApi.md#GetIdpSaml2s) | **Get** /iam-deploy/idp_saml2s | 
 [**GetIisExecEnv**](DefaultApi.md#GetIisExecEnv) | **Get** /iam-deploy/iisexecenv | 
 [**GetIisExecEnvs**](DefaultApi.md#GetIisExecEnvs) | **Get** /iam-deploy/iisexecenvs | 
 [**GetInfo**](DefaultApi.md#GetInfo) | **Get** /iam-deploy/server/info | 
@@ -121,6 +125,7 @@ Method | HTTP request | Description
 [**UpdateIdpAzure**](DefaultApi.md#UpdateIdpAzure) | **Put** /iam-deploy/idp_azure | 
 [**UpdateIdpFacebook**](DefaultApi.md#UpdateIdpFacebook) | **Put** /iam-deploy/idp_fb | 
 [**UpdateIdpGoogle**](DefaultApi.md#UpdateIdpGoogle) | **Put** /iam-deploy/idp_google | 
+[**UpdateIdpSaml2**](DefaultApi.md#UpdateIdpSaml2) | **Put** /iam-deploy/idp_saml2 | 
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateJossoRs**](DefaultApi.md#UpdateJossoRs) | **Put** /iam-deploy/jossors | 
@@ -953,6 +958,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdpGoogleRes**](StoreIdpGoogleRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateIdpSaml2
+
+> StoreIdPSaml2Res CreateIdpSaml2(ctx).StoreIdPSaml2Req(storeIdPSaml2Req).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdPSaml2Req := *openapiclient.NewStoreIdPSaml2Req() // StoreIdPSaml2Req |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateIdpSaml2(context.Background()).StoreIdPSaml2Req(storeIdPSaml2Req).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateIdpSaml2``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateIdpSaml2`: StoreIdPSaml2Res
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateIdpSaml2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateIdpSaml2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdPSaml2Req** | [**StoreIdPSaml2Req**](StoreIdPSaml2Req.md) |  | 
+
+### Return type
+
+[**StoreIdPSaml2Res**](StoreIdPSaml2Res.md)
 
 ### Authorization
 
@@ -2288,6 +2357,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteIdpGoogleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteIdpSaml2
+
+> DeleteRes DeleteIdpSaml2(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteIdpSaml2(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteIdpSaml2``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteIdpSaml2`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteIdpSaml2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteIdpSaml2Request struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -5000,6 +5133,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetIdpSaml2
+
+> GetIdPSaml2Res GetIdpSaml2(ctx).GetIdPSaml2Req(getIdPSaml2Req).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdPSaml2Req := *openapiclient.NewGetIdPSaml2Req() // GetIdPSaml2Req |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpSaml2(context.Background()).GetIdPSaml2Req(getIdPSaml2Req).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpSaml2``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpSaml2`: GetIdPSaml2Res
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpSaml2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpSaml2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdPSaml2Req** | [**GetIdPSaml2Req**](GetIdPSaml2Req.md) |  | 
+
+### Return type
+
+[**GetIdPSaml2Res**](GetIdPSaml2Res.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetIdpSaml2s
+
+> GetIdPSaml2sRes GetIdpSaml2s(ctx).GetIdPSaml2Req(getIdPSaml2Req).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getIdPSaml2Req := *openapiclient.NewGetIdPSaml2Req() // GetIdPSaml2Req |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetIdpSaml2s(context.Background()).GetIdPSaml2Req(getIdPSaml2Req).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIdpSaml2s``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetIdpSaml2s`: GetIdPSaml2sRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIdpSaml2s`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetIdpSaml2sRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getIdPSaml2Req** | [**GetIdPSaml2Req**](GetIdPSaml2Req.md) |  | 
+
+### Return type
+
+[**GetIdPSaml2sRes**](GetIdPSaml2sRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetIisExecEnv
 
 > GetIisExecEnvRes GetIisExecEnv(ctx).GetIisExecEnvReq(getIisExecEnvReq).Execute()
@@ -7604,6 +7865,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreIdpGoogleRes**](StoreIdpGoogleRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateIdpSaml2
+
+> StoreIdPSaml2Res UpdateIdpSaml2(ctx).StoreIdPSaml2Req(storeIdPSaml2Req).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeIdPSaml2Req := *openapiclient.NewStoreIdPSaml2Req() // StoreIdPSaml2Req |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateIdpSaml2(context.Background()).StoreIdPSaml2Req(storeIdPSaml2Req).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateIdpSaml2``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateIdpSaml2`: StoreIdPSaml2Res
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateIdpSaml2`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateIdpSaml2Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeIdPSaml2Req** | [**StoreIdPSaml2Req**](StoreIdPSaml2Req.md) |  | 
+
+### Return type
+
+[**StoreIdPSaml2Res**](StoreIdPSaml2Res.md)
 
 ### Authorization
 
