@@ -12,9 +12,10 @@ package jossoappi
 import (
 	openapiclient "api"
 	"context"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func Test_jossoappi_DefaultApiService(t *testing.T) {
