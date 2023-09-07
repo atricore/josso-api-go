@@ -18,9 +18,22 @@
 
     in
     {
-     devShells = forEachSupportedSystem ({ pkgs, prevs }: {
+      devShells = forEachSupportedSystem ({ pkgs, prevs }: {
         default = pkgs.mkShell {
-          packages = with pkgs; [ go gnumake prevs.openapi-generator-cli ];
+          packages = with pkgs; [
+            go
+            gotools
+            gopls
+            go-outline
+            gocode
+            gopkgs
+            gocode-gomod
+            godef
+            golint
+            gofumpt
+            gnumake
+            prevs.openapi-generator-cli
+          ];
         };
       });
     };
