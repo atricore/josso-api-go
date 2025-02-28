@@ -30,7 +30,6 @@ Name | Type | Description | Notes
 **IdentityConfirmationOAuth2ClientId** | Pointer to **string** |  | [optional] 
 **IdentityConfirmationOAuth2ClientSecret** | Pointer to **string** |  | [optional] 
 **IdentityConfirmationPolicy** | Pointer to [**ExtensionDTO**](ExtensionDTO.md) |  | [optional] 
-**IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
 **IgnoreRequestedNameIDPolicy** | Pointer to **bool** |  | [optional] 
 **IsRemote** | Pointer to **bool** |  | [optional] 
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
@@ -49,6 +48,7 @@ Name | Type | Description | Notes
 **OidcAuthzCodeTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcIdTokenTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcIncludeUserClaimsInAccessToken** | Pointer to **bool** |  | [optional] 
+**OidcRefreshTokenTimeToLive** | Pointer to **int32** |  | [optional] 
 **OpenIdEnabled** | Pointer to **bool** |  | [optional] 
 **PwdlessAuthnEnabled** | Pointer to **bool** |  | [optional] 
 **PwdlessAuthnFrom** | Pointer to **string** |  | [optional] 
@@ -66,6 +66,7 @@ Name | Type | Description | Notes
 **UserDashboardBranding** | Pointer to **string** |  | [optional] 
 **WantAuthnRequestsSigned** | Pointer to **bool** |  | [optional] 
 **WantSignedRequests** | Pointer to **bool** |  | [optional] 
+**IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
 **X** | Pointer to **float64** |  | [optional] 
 **Y** | Pointer to **float64** |  | [optional] 
 
@@ -738,31 +739,6 @@ SetIdentityConfirmationPolicy sets IdentityConfirmationPolicy field to given val
 
 HasIdentityConfirmationPolicy returns a boolean if a field has been set.
 
-### GetIdentityLookups
-
-`func (o *IdentityProviderDTO) GetIdentityLookups() []IdentityLookupDTO`
-
-GetIdentityLookups returns the IdentityLookups field if non-nil, zero value otherwise.
-
-### GetIdentityLookupsOk
-
-`func (o *IdentityProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool)`
-
-GetIdentityLookupsOk returns a tuple with the IdentityLookups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdentityLookups
-
-`func (o *IdentityProviderDTO) SetIdentityLookups(v []IdentityLookupDTO)`
-
-SetIdentityLookups sets IdentityLookups field to given value.
-
-### HasIdentityLookups
-
-`func (o *IdentityProviderDTO) HasIdentityLookups() bool`
-
-HasIdentityLookups returns a boolean if a field has been set.
-
 ### GetIgnoreRequestedNameIDPolicy
 
 `func (o *IdentityProviderDTO) GetIgnoreRequestedNameIDPolicy() bool`
@@ -1213,6 +1189,31 @@ SetOidcIncludeUserClaimsInAccessToken sets OidcIncludeUserClaimsInAccessToken fi
 
 HasOidcIncludeUserClaimsInAccessToken returns a boolean if a field has been set.
 
+### GetOidcRefreshTokenTimeToLive
+
+`func (o *IdentityProviderDTO) GetOidcRefreshTokenTimeToLive() int32`
+
+GetOidcRefreshTokenTimeToLive returns the OidcRefreshTokenTimeToLive field if non-nil, zero value otherwise.
+
+### GetOidcRefreshTokenTimeToLiveOk
+
+`func (o *IdentityProviderDTO) GetOidcRefreshTokenTimeToLiveOk() (*int32, bool)`
+
+GetOidcRefreshTokenTimeToLiveOk returns a tuple with the OidcRefreshTokenTimeToLive field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOidcRefreshTokenTimeToLive
+
+`func (o *IdentityProviderDTO) SetOidcRefreshTokenTimeToLive(v int32)`
+
+SetOidcRefreshTokenTimeToLive sets OidcRefreshTokenTimeToLive field to given value.
+
+### HasOidcRefreshTokenTimeToLive
+
+`func (o *IdentityProviderDTO) HasOidcRefreshTokenTimeToLive() bool`
+
+HasOidcRefreshTokenTimeToLive returns a boolean if a field has been set.
+
 ### GetOpenIdEnabled
 
 `func (o *IdentityProviderDTO) GetOpenIdEnabled() bool`
@@ -1637,6 +1638,31 @@ SetWantSignedRequests sets WantSignedRequests field to given value.
 `func (o *IdentityProviderDTO) HasWantSignedRequests() bool`
 
 HasWantSignedRequests returns a boolean if a field has been set.
+
+### GetIdentityLookups
+
+`func (o *IdentityProviderDTO) GetIdentityLookups() []IdentityLookupDTO`
+
+GetIdentityLookups returns the IdentityLookups field if non-nil, zero value otherwise.
+
+### GetIdentityLookupsOk
+
+`func (o *IdentityProviderDTO) GetIdentityLookupsOk() (*[]IdentityLookupDTO, bool)`
+
+GetIdentityLookupsOk returns a tuple with the IdentityLookups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentityLookups
+
+`func (o *IdentityProviderDTO) SetIdentityLookups(v []IdentityLookupDTO)`
+
+SetIdentityLookups sets IdentityLookups field to given value.
+
+### HasIdentityLookups
+
+`func (o *IdentityProviderDTO) HasIdentityLookups() bool`
+
+HasIdentityLookups returns a boolean if a field has been set.
 
 ### GetX
 
