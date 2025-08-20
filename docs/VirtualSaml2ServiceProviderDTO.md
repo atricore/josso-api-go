@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **OidcAuthzCodeTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcIdTokenTimeToLive** | Pointer to **int32** |  | [optional] 
 **OidcIncludeUserClaimsInAccessToken** | Pointer to **bool** |  | [optional] 
+**OidcRefreshTokenTimeToLive** | Pointer to **int32** |  | [optional] 
 **OpenIdEnabled** | Pointer to **bool** |  | [optional] 
 **Remote** | Pointer to **bool** |  | [optional] 
 **Role** | Pointer to **string** |  | [optional] 
@@ -1053,6 +1054,31 @@ SetOidcIncludeUserClaimsInAccessToken sets OidcIncludeUserClaimsInAccessToken fi
 `func (o *VirtualSaml2ServiceProviderDTO) HasOidcIncludeUserClaimsInAccessToken() bool`
 
 HasOidcIncludeUserClaimsInAccessToken returns a boolean if a field has been set.
+
+### GetOidcRefreshTokenTimeToLive
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetOidcRefreshTokenTimeToLive() int32`
+
+GetOidcRefreshTokenTimeToLive returns the OidcRefreshTokenTimeToLive field if non-nil, zero value otherwise.
+
+### GetOidcRefreshTokenTimeToLiveOk
+
+`func (o *VirtualSaml2ServiceProviderDTO) GetOidcRefreshTokenTimeToLiveOk() (*int32, bool)`
+
+GetOidcRefreshTokenTimeToLiveOk returns a tuple with the OidcRefreshTokenTimeToLive field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOidcRefreshTokenTimeToLive
+
+`func (o *VirtualSaml2ServiceProviderDTO) SetOidcRefreshTokenTimeToLive(v int32)`
+
+SetOidcRefreshTokenTimeToLive sets OidcRefreshTokenTimeToLive field to given value.
+
+### HasOidcRefreshTokenTimeToLive
+
+`func (o *VirtualSaml2ServiceProviderDTO) HasOidcRefreshTokenTimeToLive() bool`
+
+HasOidcRefreshTokenTimeToLive returns a boolean if a field has been set.
 
 ### GetOpenIdEnabled
 

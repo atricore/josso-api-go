@@ -3,7 +3,7 @@
 
   # Define the specific nixpkgs commit as an input for openapi-generator-cli 6.2.1
   inputs.prev.url = "github:NixOS/nixpkgs/1732ee9120e43c1df33a33004315741d0173d0b2";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
   # Define the outputs
   outputs = { self, prev, nixpkgs }:
@@ -24,7 +24,6 @@
             gotools
             gopls
             go-outline
-            gocode
             gopkgs
             gocode-gomod
             godef
