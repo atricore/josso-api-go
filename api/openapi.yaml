@@ -41060,6 +41060,7 @@ components:
           uri: uri
           locationAsString: locationAsString
         remote: true
+        issuer: issuer
         accessTokenService:
           elementId: elementId
           protocol: protocol
@@ -46898,6 +46899,8 @@ components:
             $ref: '#/components/schemas/IdentityLookupDTO'
           type: array
           uniqueItems: true
+        issuer:
+          type: string
         loadMetadata:
           type: boolean
         isRemote:
@@ -177982,6 +177985,7 @@ components:
             uri: uri
             locationAsString: locationAsString
           remote: true
+          issuer: issuer
           accessTokenService:
             elementId: elementId
             protocol: protocol
@@ -183790,6 +183794,7 @@ components:
             uri: uri
             locationAsString: locationAsString
           remote: true
+          issuer: issuer
           accessTokenService:
             elementId: elementId
             protocol: protocol
@@ -189577,6 +189582,7 @@ components:
             uri: uri
             locationAsString: locationAsString
           remote: true
+          issuer: issuer
           accessTokenService:
             elementId: elementId
             protocol: protocol
@@ -373020,6 +373026,7 @@ components:
             uri: uri
             locationAsString: locationAsString
           remote: true
+          issuer: issuer
           accessTokenService:
             elementId: elementId
             protocol: protocol
@@ -378817,6 +378824,7 @@ components:
             uri: uri
             locationAsString: locationAsString
           remote: true
+          issuer: issuer
           accessTokenService:
             elementId: elementId
             protocol: protocol
