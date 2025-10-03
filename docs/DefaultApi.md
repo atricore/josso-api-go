@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**CreateIisExecEnv**](DefaultApi.md#CreateIisExecEnv) | **Post** /iam-deploy/iisexecenv | 
 [**CreateIntSaml2Sp**](DefaultApi.md#CreateIntSaml2Sp) | **Post** /iam-deploy/intsaml2sp | 
 [**CreateJossoRs**](DefaultApi.md#CreateJossoRs) | **Post** /iam-deploy/jossors | 
+[**CreateOidcIdp**](DefaultApi.md#CreateOidcIdp) | **Post** /iam-deploy/idp_oidc | 
 [**CreateOidcRp**](DefaultApi.md#CreateOidcRp) | **Post** /iam-deploy/oidcrp | 
 [**CreatePhpExecEnv**](DefaultApi.md#CreatePhpExecEnv) | **Post** /iam-deploy/phpexecenv | 
 [**CreateSelfSvcs**](DefaultApi.md#CreateSelfSvcs) | **Post** /iam-deploy/selfsvc | 
@@ -43,6 +44,7 @@ Method | HTTP request | Description
 [**DeleteIisExecEnv**](DefaultApi.md#DeleteIisExecEnv) | **Delete** /iam-deploy/iisexecenv | 
 [**DeleteIntSaml2Sp**](DefaultApi.md#DeleteIntSaml2Sp) | **Delete** /iam-deploy/intsaml2sp | 
 [**DeleteJossoRs**](DefaultApi.md#DeleteJossoRs) | **Delete** /iam-deploy/jossors | 
+[**DeleteOidcIdp**](DefaultApi.md#DeleteOidcIdp) | **Delete** /iam-deploy/idp_oidc | 
 [**DeleteOidcRp**](DefaultApi.md#DeleteOidcRp) | **Delete** /iam-deploy/oidcrp | 
 [**DeletePhpExecEnv**](DefaultApi.md#DeletePhpExecEnv) | **Delete** /iam-deploy/phpexecenv | 
 [**DeleteSelfSvcs**](DefaultApi.md#DeleteSelfSvcs) | **Delete** /iam-deploy/selfsvc | 
@@ -91,6 +93,8 @@ Method | HTTP request | Description
 [**GetIntSaml2Sps**](DefaultApi.md#GetIntSaml2Sps) | **Get** /iam-deploy/intsaml2sps | 
 [**GetJossoRs**](DefaultApi.md#GetJossoRs) | **Get** /iam-deploy/jossors | 
 [**GetJossoRss**](DefaultApi.md#GetJossoRss) | **Get** /iam-deploy/jossorss | 
+[**GetOidcIdp**](DefaultApi.md#GetOidcIdp) | **Get** /iam-deploy/idp_oidc | 
+[**GetOidcIdps**](DefaultApi.md#GetOidcIdps) | **Get** /iam-deploy/idp_oidcs | 
 [**GetOidcRp**](DefaultApi.md#GetOidcRp) | **Get** /iam-deploy/oidcrp | 
 [**GetOidcRps**](DefaultApi.md#GetOidcRps) | **Get** /iam-deploy/oidcrps | 
 [**GetPhpExecEnv**](DefaultApi.md#GetPhpExecEnv) | **Get** /iam-deploy/phpexecenv | 
@@ -129,6 +133,7 @@ Method | HTTP request | Description
 [**UpdateIisExecEnv**](DefaultApi.md#UpdateIisExecEnv) | **Put** /iam-deploy/iisexecenv | 
 [**UpdateIntSaml2Sp**](DefaultApi.md#UpdateIntSaml2Sp) | **Put** /iam-deploy/intsaml2sp | 
 [**UpdateJossoRs**](DefaultApi.md#UpdateJossoRs) | **Put** /iam-deploy/jossors | 
+[**UpdateOidcIdp**](DefaultApi.md#UpdateOidcIdp) | **Put** /iam-deploy/idp_oidc | 
 [**UpdateOidcRp**](DefaultApi.md#UpdateOidcRp) | **Put** /iam-deploy/oidcrp | 
 [**UpdatePhpExecEnv**](DefaultApi.md#UpdatePhpExecEnv) | **Put** /iam-deploy/phpexecenv | 
 [**UpdateSelfSvcs**](DefaultApi.md#UpdateSelfSvcs) | **Put** /iam-deploy/selfsvc | 
@@ -1214,6 +1219,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreJossoRsRes**](StoreJossoRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateOidcIdp
+
+> StoreOidcIdpRes CreateOidcIdp(ctx).StoreOidcIdpReq(storeOidcIdpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeOidcIdpReq := *openapiclient.NewStoreOidcIdpReq() // StoreOidcIdpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.CreateOidcIdp(context.Background()).StoreOidcIdpReq(storeOidcIdpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.CreateOidcIdp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateOidcIdp`: StoreOidcIdpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.CreateOidcIdp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateOidcIdpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeOidcIdpReq** | [**StoreOidcIdpReq**](StoreOidcIdpReq.md) |  | 
+
+### Return type
+
+[**StoreOidcIdpRes**](StoreOidcIdpRes.md)
 
 ### Authorization
 
@@ -2613,6 +2682,70 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteJossoRsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteReq** | [**DeleteReq**](DeleteReq.md) |  | 
+
+### Return type
+
+[**DeleteRes**](DeleteRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteOidcIdp
+
+> DeleteRes DeleteOidcIdp(ctx).DeleteReq(deleteReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    deleteReq := *openapiclient.NewDeleteReq() // DeleteReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.DeleteOidcIdp(context.Background()).DeleteReq(deleteReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.DeleteOidcIdp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DeleteOidcIdp`: DeleteRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.DeleteOidcIdp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteOidcIdpRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -5709,6 +5842,134 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetOidcIdp
+
+> GetOidcIdpRes GetOidcIdp(ctx).GetOidcIdpReq(getOidcIdpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getOidcIdpReq := *openapiclient.NewGetOidcIdpReq() // GetOidcIdpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetOidcIdp(context.Background()).GetOidcIdpReq(getOidcIdpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetOidcIdp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOidcIdp`: GetOidcIdpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetOidcIdp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOidcIdpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getOidcIdpReq** | [**GetOidcIdpReq**](GetOidcIdpReq.md) |  | 
+
+### Return type
+
+[**GetOidcIdpRes**](GetOidcIdpRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOidcIdps
+
+> GetOidcIdpsRes GetOidcIdps(ctx).GetOidcIdpReq(getOidcIdpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    getOidcIdpReq := *openapiclient.NewGetOidcIdpReq() // GetOidcIdpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.GetOidcIdps(context.Background()).GetOidcIdpReq(getOidcIdpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetOidcIdps``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOidcIdps`: GetOidcIdpsRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetOidcIdps`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOidcIdpsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getOidcIdpReq** | [**GetOidcIdpReq**](GetOidcIdpReq.md) |  | 
+
+### Return type
+
+[**GetOidcIdpsRes**](GetOidcIdpsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetOidcRp
 
 > GetOidcRpRes GetOidcRp(ctx).GetOidcRpReq(getOidcRpReq).Execute()
@@ -8121,6 +8382,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StoreJossoRsRes**](StoreJossoRsRes.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateOidcIdp
+
+> StoreOidcIdpRes UpdateOidcIdp(ctx).StoreOidcIdpReq(storeOidcIdpReq).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    storeOidcIdpReq := *openapiclient.NewStoreOidcIdpReq() // StoreOidcIdpReq |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DefaultApi.UpdateOidcIdp(context.Background()).StoreOidcIdpReq(storeOidcIdpReq).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.UpdateOidcIdp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateOidcIdp`: StoreOidcIdpRes
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.UpdateOidcIdp`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateOidcIdpRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeOidcIdpReq** | [**StoreOidcIdpReq**](StoreOidcIdpReq.md) |  | 
+
+### Return type
+
+[**StoreOidcIdpRes**](StoreOidcIdpRes.md)
 
 ### Authorization
 

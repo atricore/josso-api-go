@@ -63,5 +63,11 @@ Remove changes to CustomBarandingDefinitionDTO, StoreBrandingReq, GetBrandingRes
 ## Apply the patch
 
 ```sh
-patch console-api-1.5.0-SNAPSHOT-swagger.json < console.patch
+patch console-api-1.5.3-SNAPSHOT-swagger.json < console.patch
+```
+
+## Generate the Code
+
+```sh
+make
 ```
