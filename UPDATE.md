@@ -53,7 +53,7 @@ Copy latest file to a new file if version differs
 ## Generate patch file
 
 ```sh
-diff -u console-api-1.5.3-SNAPSHOT-swagger.json console-api-1.5.3-SNAPSHOT-swagger.json.new > console.patch
+diff -u console-api-1.5.3-SNAPSHOT-swagger.json console-api-1.5.3-SNAPSHOT-swagger-new.json > console.patch
 ```
 
 ## Remove all changes to abobe mentioned types
