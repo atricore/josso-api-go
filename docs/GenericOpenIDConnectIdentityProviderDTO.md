@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **int64** |  | [optional] 
 **IdentityAppliance** | Pointer to [**IdentityApplianceDefinitionDTO**](IdentityApplianceDefinitionDTO.md) |  | [optional] 
 **IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
+**LoadMetadata** | Pointer to **bool** |  | [optional] 
 **IsRemote** | Pointer to **bool** |  | [optional] 
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
 **Metadata** | Pointer to [**ResourceDTO**](ResourceDTO.md) |  | [optional] 
@@ -425,6 +426,31 @@ SetIdentityLookups sets IdentityLookups field to given value.
 `func (o *GenericOpenIDConnectIdentityProviderDTO) HasIdentityLookups() bool`
 
 HasIdentityLookups returns a boolean if a field has been set.
+
+### GetLoadMetadata
+
+`func (o *GenericOpenIDConnectIdentityProviderDTO) GetLoadMetadata() bool`
+
+GetLoadMetadata returns the LoadMetadata field if non-nil, zero value otherwise.
+
+### GetLoadMetadataOk
+
+`func (o *GenericOpenIDConnectIdentityProviderDTO) GetLoadMetadataOk() (*bool, bool)`
+
+GetLoadMetadataOk returns a tuple with the LoadMetadata field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoadMetadata
+
+`func (o *GenericOpenIDConnectIdentityProviderDTO) SetLoadMetadata(v bool)`
+
+SetLoadMetadata sets LoadMetadata field to given value.
+
+### HasLoadMetadata
+
+`func (o *GenericOpenIDConnectIdentityProviderDTO) HasLoadMetadata() bool`
+
+HasLoadMetadata returns a boolean if a field has been set.
 
 ### GetIsRemote
 

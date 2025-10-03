@@ -32,6 +32,7 @@ type GenericOpenIDConnectIdentityProviderDTO struct {
 	Id *int64 `json:"id,omitempty"`
 	IdentityAppliance *IdentityApplianceDefinitionDTO `json:"identityAppliance,omitempty"`
 	IdentityLookups []IdentityLookupDTO `json:"identityLookups,omitempty"`
+	LoadMetadata *bool `json:"loadMetadata,omitempty"`
 	IsRemote *bool `json:"isRemote,omitempty"`
 	Location *LocationDTO `json:"location,omitempty"`
 	Metadata *ResourceDTO `json:"metadata,omitempty"`
@@ -546,6 +547,38 @@ func (o *GenericOpenIDConnectIdentityProviderDTO) SetIdentityLookups(v []Identit
 	o.IdentityLookups = v
 }
 
+// GetLoadMetadata returns the LoadMetadata field value if set, zero value otherwise.
+func (o *GenericOpenIDConnectIdentityProviderDTO) GetLoadMetadata() bool {
+	if o == nil || isNil(o.LoadMetadata) {
+		var ret bool
+		return ret
+	}
+	return *o.LoadMetadata
+}
+
+// GetLoadMetadataOk returns a tuple with the LoadMetadata field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GenericOpenIDConnectIdentityProviderDTO) GetLoadMetadataOk() (*bool, bool) {
+	if o == nil || isNil(o.LoadMetadata) {
+    return nil, false
+	}
+	return o.LoadMetadata, true
+}
+
+// HasLoadMetadata returns a boolean if a field has been set.
+func (o *GenericOpenIDConnectIdentityProviderDTO) HasLoadMetadata() bool {
+	if o != nil && !isNil(o.LoadMetadata) {
+		return true
+	}
+
+	return false
+}
+
+// SetLoadMetadata gets a reference to the given bool and assigns it to the LoadMetadata field.
+func (o *GenericOpenIDConnectIdentityProviderDTO) SetLoadMetadata(v bool) {
+	o.LoadMetadata = &v
+}
+
 // GetIsRemote returns the IsRemote field value if set, zero value otherwise.
 func (o *GenericOpenIDConnectIdentityProviderDTO) GetIsRemote() bool {
 	if o == nil || isNil(o.IsRemote) {
@@ -977,6 +1010,9 @@ func (o GenericOpenIDConnectIdentityProviderDTO) MarshalJSON() ([]byte, error) {
 	if !isNil(o.IdentityLookups) {
 		toSerialize["identityLookups"] = o.IdentityLookups
 	}
+	if !isNil(o.LoadMetadata) {
+		toSerialize["loadMetadata"] = o.LoadMetadata
+	}
 	if !isNil(o.IsRemote) {
 		toSerialize["isRemote"] = o.IsRemote
 	}
@@ -1046,6 +1082,7 @@ func (o *GenericOpenIDConnectIdentityProviderDTO) UnmarshalJSON(bytes []byte) (e
 		delete(additionalProperties, "id")
 		delete(additionalProperties, "identityAppliance")
 		delete(additionalProperties, "identityLookups")
+		delete(additionalProperties, "loadMetadata")
 		delete(additionalProperties, "isRemote")
 		delete(additionalProperties, "location")
 		delete(additionalProperties, "metadata")
