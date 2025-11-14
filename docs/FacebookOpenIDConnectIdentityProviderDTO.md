@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **IdentityAppliance** | Pointer to [**IdentityApplianceDefinitionDTO**](IdentityApplianceDefinitionDTO.md) |  | [optional] 
 **IdentityLookups** | Pointer to [**[]IdentityLookupDTO**](IdentityLookupDTO.md) |  | [optional] 
 **IsRemote** | Pointer to **bool** |  | [optional] 
+**Issuer** | Pointer to **string** |  | [optional] 
 **Location** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
 **Metadata** | Pointer to [**ResourceDTO**](ResourceDTO.md) |  | [optional] 
 **MobileAuthzTokenService** | Pointer to [**LocationDTO**](LocationDTO.md) |  | [optional] 
@@ -450,6 +451,31 @@ SetIsRemote sets IsRemote field to given value.
 `func (o *FacebookOpenIDConnectIdentityProviderDTO) HasIsRemote() bool`
 
 HasIsRemote returns a boolean if a field has been set.
+
+### GetIssuer
+
+`func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIssuer() string`
+
+GetIssuer returns the Issuer field if non-nil, zero value otherwise.
+
+### GetIssuerOk
+
+`func (o *FacebookOpenIDConnectIdentityProviderDTO) GetIssuerOk() (*string, bool)`
+
+GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIssuer
+
+`func (o *FacebookOpenIDConnectIdentityProviderDTO) SetIssuer(v string)`
+
+SetIssuer sets Issuer field to given value.
+
+### HasIssuer
+
+`func (o *FacebookOpenIDConnectIdentityProviderDTO) HasIssuer() bool`
+
+HasIssuer returns a boolean if a field has been set.
 
 ### GetLocation
 

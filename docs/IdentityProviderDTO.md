@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **Oauth2Clients** | Pointer to [**[]OAuth2ClientDTO**](OAuth2ClientDTO.md) |  | [optional] 
 **Oauth2ClientsConfig** | Pointer to **string** |  | [optional] 
 **Oauth2Enabled** | Pointer to **bool** |  | [optional] 
+**Oauth2IncludeClaims** | Pointer to **bool** |  | [optional] 
 **Oauth2Key** | Pointer to **string** |  | [optional] 
 **Oauth2RememberMeTokenValidity** | Pointer to **int64** |  | [optional] 
 **Oauth2TokenValidity** | Pointer to **int64** |  | [optional] 
@@ -1013,6 +1014,31 @@ SetOauth2Enabled sets Oauth2Enabled field to given value.
 `func (o *IdentityProviderDTO) HasOauth2Enabled() bool`
 
 HasOauth2Enabled returns a boolean if a field has been set.
+
+### GetOauth2IncludeClaims
+
+`func (o *IdentityProviderDTO) GetOauth2IncludeClaims() bool`
+
+GetOauth2IncludeClaims returns the Oauth2IncludeClaims field if non-nil, zero value otherwise.
+
+### GetOauth2IncludeClaimsOk
+
+`func (o *IdentityProviderDTO) GetOauth2IncludeClaimsOk() (*bool, bool)`
+
+GetOauth2IncludeClaimsOk returns a tuple with the Oauth2IncludeClaims field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOauth2IncludeClaims
+
+`func (o *IdentityProviderDTO) SetOauth2IncludeClaims(v bool)`
+
+SetOauth2IncludeClaims sets Oauth2IncludeClaims field to given value.
+
+### HasOauth2IncludeClaims
+
+`func (o *IdentityProviderDTO) HasOauth2IncludeClaims() bool`
+
+HasOauth2IncludeClaims returns a boolean if a field has been set.
 
 ### GetOauth2Key
 
